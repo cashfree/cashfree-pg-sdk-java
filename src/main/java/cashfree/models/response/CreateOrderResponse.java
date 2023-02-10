@@ -45,6 +45,9 @@ public class CreateOrderResponse {
 
     @JsonProperty("order_token")
     String orderToken;
+   
+    @JsonProperty("payment_session_id")
+    String paymentSessionId;
 
     @JsonProperty("order_status")
     String orderStatus;
