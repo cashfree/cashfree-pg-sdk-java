@@ -1,0 +1,6 @@
+/gradle.properties
+/build
+/.github
+/.idea
+/.gradle
+/.openapi-generator-ignore

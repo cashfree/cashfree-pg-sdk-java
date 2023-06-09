@@ -1,0 +1,100 @@
+apply plugin: 'maven-publish'
+apply plugin: 'signing'
+
+task sourcesJar(type: Jar) {
+    archiveClassifier.set('sources')
+    if (project.plugins.findPlugin("com.android.library")) {
+        // For Android libraries
+        from android.sourceSets.main.java.srcDirs
+        from android.sourceSets.main.kotlin.srcDirs
+    } else {
+        // For pure Kotlin libraries, in case you have them
+        from sourceSets.main.java.srcDirs
+    }
+}
+
+task packageJavadoc(type: Jar) {
+    archiveClassifier.set('javadoc')
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives sourcesJar
+    archives packageJavadoc
+}
+
+group = PUBLISH_GROUP_ID
+version = PUBLISH_VERSION
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                // The coordinates of the library, being set from variables that
+                // we'll set up later
+                groupId PUBLISH_GROUP_ID
+                artifactId PUBLISH_ARTIFACT_ID
+                version PUBLISH_VERSION
+
+                // Two artifacts, the `aar` (or `jar`) and the sources
+                if (project.plugins.findPlugin("com.android.library")) {
+                    from components.release
+                } else {
+                    from components.java
+                }
+
+                artifact sourcesJar
+                artifact packageJavadoc
+
+                // Mostly self-explanatory metadata
+                pom {
+                    name = PUBLISH_ARTIFACT_ID
+                    description = 'Cashfree Payments, PG Java SDK'
+                    url = 'https://github.com/cashfree/cashfree-pg-sdk-java'
+                    licenses {
+                        license {
+                            name = 'Apache License'
+                            url = 'https://github.com/cashfree/cashfree-pg-sdk-java/blob/master/LICENSE.md'
+                        }
+                    }
+                    developers {
+                        developer {
+                            id = 'cashfree'
+                            name = 'Cashfree Payments'
+                            email = 'developers@cashfree.com'
+                        }
+                        // Add all other devs here...
+                    }
+
+                    // Version control info - if you're using GitHub, follow the
+                    // format as seen here
+                    scm {
+                        connection = 'scm:git:github.com/cashfree/cashfree-pg-sdk-java.git'
+                        developerConnection = 'scm:git:ssh://github.com/cashfree/cashfree-pg-sdk-java.git'
+                        url = 'https://github.com/cashfree/cashfree-pg-sdk-java'
+                    }
+                }
+            }
+        }
+        repositories {
+            maven {
+                name = "AwsS3"
+
+                url "s3://maven.cashfree.com/development"
+                credentials(AwsCredentials) {
+                    accessKey rootProject.ext["aws.access.key"]
+                    secretKey rootProject.ext["aws.secret.key"]
+                }
+            }
+        }
+    }
+}
+
+signing {
+    useInMemoryPgpKeys(
+            rootProject.ext["signing.keyId"],
+            rootProject.ext["signing.key"],
+            rootProject.ext["signing.password"],
+    )
+    sign publishing.publications
+}
