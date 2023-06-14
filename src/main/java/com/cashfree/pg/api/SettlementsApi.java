@@ -19,6 +19,7 @@ import com.cashfree.pg.ApiException;
 import com.cashfree.pg.ApiResponse;
 import com.cashfree.pg.Configuration;
 import com.cashfree.pg.Pair;
+import com.cashfree.pg.gatewayinterface.CFConstants;
 import com.cashfree.pg.model.CFSettlementsEntity;
 import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
@@ -164,6 +165,7 @@ public class SettlementsApi {
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
+        localVarHeaderParams.put(CFConstants.XPLATFORM, CFConstants.PLATFORM);
 
         String[] localVarAuthNames = new String[] {};
         return localVarApiClient.buildCall(

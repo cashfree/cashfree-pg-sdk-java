@@ -88,12 +88,12 @@ public class CFSettlementsEntity {
     public static final String SERIALIZED_NAME_SETTLEMENT_ID = "settlement_id";
 
     @SerializedName(SERIALIZED_NAME_SETTLEMENT_ID)
-    private Integer settlementId;
+    private long settlementId;
 
     public static final String SERIALIZED_NAME_TRANSFER_ID = "transfer_id";
 
     @SerializedName(SERIALIZED_NAME_TRANSFER_ID)
-    private Integer transferId;
+    private long transferId;
 
     public static final String SERIALIZED_NAME_TRANSFER_TIME = "transfer_time";
 
@@ -307,7 +307,7 @@ public class CFSettlementsEntity {
         this.settlementAmount = settlementAmount;
     }
 
-    public CFSettlementsEntity settlementId(Integer settlementId) {
+    public CFSettlementsEntity settlementId(long settlementId) {
 
         this.settlementId = settlementId;
         return this;
@@ -319,15 +319,15 @@ public class CFSettlementsEntity {
      * @return settlementId
      */
     @javax.annotation.Nullable
-    public Integer getSettlementId() {
+    public long getSettlementId() {
         return settlementId;
     }
 
-    public void setSettlementId(Integer settlementId) {
+    public void setSettlementId(long settlementId) {
         this.settlementId = settlementId;
     }
 
-    public CFSettlementsEntity transferId(Integer transferId) {
+    public CFSettlementsEntity transferId(long transferId) {
 
         this.transferId = transferId;
         return this;
@@ -339,11 +339,11 @@ public class CFSettlementsEntity {
      * @return transferId
      */
     @javax.annotation.Nullable
-    public Integer getTransferId() {
+    public long getTransferId() {
         return transferId;
     }
 
-    public void setTransferId(Integer transferId) {
+    public void setTransferId(long transferId) {
         this.transferId = transferId;
     }
 

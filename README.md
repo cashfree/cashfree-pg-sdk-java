@@ -1,7 +1,7 @@
 # cashfree-pg-sdk-java
 
 New Payment Gateway APIs
-- API version: 2.0.1
+- API version: 2.1.1
 
 
 ## Requirements
