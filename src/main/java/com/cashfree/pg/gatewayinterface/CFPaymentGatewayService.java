@@ -15,6 +15,8 @@ import com.cashfree.pg.model.CFRefund;
 import com.cashfree.pg.model.CFRefundRequest;
 import java.util.List;
 import java.util.Objects;
+
+import io.sentry.Sentry;
 import org.jetbrains.annotations.NotNull;
 
 @SuppressWarnings("unused")
@@ -71,17 +73,27 @@ public class CFPaymentGatewayService {
             throw new ApiException(configCheckFailed, unauthorisedHTTPCode, checkConfigError);
         }
         String url = this.getEnvironmentUrl(cfConfig.getEnvironment());
-        OrdersApiInstance.setCustomBaseUrl(url);
-        result =
-                OrdersApiInstance.createOrderWithHttpInfo(
-                        cfConfig.getClientId(),
-                        cfConfig.getClientSecret(),
-                        cfConfig.getApiVersion(),
-                        null,
-                        cfHeaders.getIdempotencyKey(),
-                        cfHeaders.getRequestID(),
-                        CFCreateOrderRequest);
-        return result;
+
+        // Sentry
+        setupSentry(cfConfig.getEnvironment().toString());
+        // Sentry
+
+        try {
+            OrdersApiInstance.setCustomBaseUrl(url);
+            result =
+                    OrdersApiInstance.createOrderWithHttpInfo(
+                            cfConfig.getClientId(),
+                            cfConfig.getClientSecret(),
+                            cfConfig.getApiVersion(),
+                            null,
+                            cfHeaders.getIdempotencyKey(),
+                            cfHeaders.getRequestID(),
+                            CFCreateOrderRequest);
+            return result;
+        } catch (ApiException e) {
+            Sentry.captureException(e);
+            throw e;
+        }
     }
 
     @SuppressWarnings("unused")
@@ -94,11 +106,20 @@ public class CFPaymentGatewayService {
             throw new ApiException(configCheckFailed, unauthorisedHTTPCode, checkConfigError);
         }
         String url = this.getEnvironmentUrl(cfConfig.getEnvironment());
-        OrdersApiInstance.setCustomBaseUrl(url);
-        result =
-                OrdersApiInstance.orderPayWithHttpInfo(
-                        cfConfig.getClientId(), cfConfig.getClientSecret(), orderPayRequest);
-        return result;
+
+        // Sentry
+        setupSentry(cfConfig.getEnvironment().toString());
+        // Sentry
+        try {
+            OrdersApiInstance.setCustomBaseUrl(url);
+            result =
+                    OrdersApiInstance.orderPayWithHttpInfo(
+                            cfConfig.getClientId(), cfConfig.getClientSecret(), orderPayRequest);
+            return result;
+        } catch (ApiException e) {
+            Sentry.captureException(e);
+            throw e;
+        }
     }
 
     @SuppressWarnings("unused")
@@ -110,17 +131,27 @@ public class CFPaymentGatewayService {
             throw new ApiException(configCheckFailed, unauthorisedHTTPCode, checkConfigError);
         }
         String url = this.getEnvironmentUrl(cfConfig.getEnvironment());
-        OrdersApiInstance.setCustomBaseUrl(url);
-        result =
-                OrdersApiInstance.getOrderWithHttpInfo(
-                        cfConfig.getClientId(),
-                        cfConfig.getClientSecret(),
-                        orderId,
-                        cfConfig.getApiVersion(),
-                        null,
-                        cfHeaders.getIdempotencyKey(),
-                        cfHeaders.getRequestID());
-        return result;
+
+        // Sentry
+        setupSentry(cfConfig.getEnvironment().toString());
+        // Sentry
+
+        try {
+            OrdersApiInstance.setCustomBaseUrl(url);
+            result =
+                    OrdersApiInstance.getOrderWithHttpInfo(
+                            cfConfig.getClientId(),
+                            cfConfig.getClientSecret(),
+                            orderId,
+                            cfConfig.getApiVersion(),
+                            null,
+                            cfHeaders.getIdempotencyKey(),
+                            cfHeaders.getRequestID());
+            return result;
+        } catch (ApiException e) {
+            Sentry.captureException(e);
+            throw e;
+        }
     }
 
     @SuppressWarnings("unused")
@@ -132,22 +163,32 @@ public class CFPaymentGatewayService {
             throw new ApiException(configCheckFailed, unauthorisedHTTPCode, checkConfigError);
         }
         String url = this.getEnvironmentUrl(cfConfig.getEnvironment());
-        PaymentsApiInstance.setCustomBaseUrl(url);
-        result =
-                PaymentsApiInstance.getPaymentsfororderWithHttpInfo(
-                        cfConfig.getClientId(),
-                        cfConfig.getClientSecret(),
-                        orderId,
-                        cfConfig.getApiVersion(),
-                        null,
-                        cfHeaders.getIdempotencyKey(),
-                        cfHeaders.getRequestID());
-        return result;
+
+        // Sentry
+        setupSentry(cfConfig.getEnvironment().toString());
+        // Sentry
+
+        try {
+            PaymentsApiInstance.setCustomBaseUrl(url);
+            result =
+                    PaymentsApiInstance.getPaymentsfororderWithHttpInfo(
+                            cfConfig.getClientId(),
+                            cfConfig.getClientSecret(),
+                            orderId,
+                            cfConfig.getApiVersion(),
+                            null,
+                            cfHeaders.getIdempotencyKey(),
+                            cfHeaders.getRequestID());
+            return result;
+        } catch (ApiException e) {
+            Sentry.captureException(e);
+            throw e;
+        }
     }
 
     @SuppressWarnings("unused")
     public ApiResponse<CFPaymentsEntity> getPaymentById(
-            CFConfig cfConfig, CFHeaders cfHeaders, String orderId, Integer paymentId)
+            CFConfig cfConfig, CFHeaders cfHeaders, String orderId, long paymentId)
             throws ApiException {
         ApiResponse<CFPaymentsEntity> result;
         CFError checkConfigError = checkConfig(cfConfig);
@@ -155,18 +196,28 @@ public class CFPaymentGatewayService {
             throw new ApiException(configCheckFailed, unauthorisedHTTPCode, checkConfigError);
         }
         String url = this.getEnvironmentUrl(cfConfig.getEnvironment());
-        PaymentsApiInstance.setCustomBaseUrl(url);
-        result =
-                PaymentsApiInstance.getPaymentbyIdWithHttpInfo(
-                        cfConfig.getClientId(),
-                        cfConfig.getClientSecret(),
-                        orderId,
-                        paymentId,
-                        cfConfig.getApiVersion(),
-                        null,
-                        cfHeaders.getIdempotencyKey(),
-                        cfHeaders.getRequestID());
-        return result;
+
+        // Sentry
+        setupSentry(cfConfig.getEnvironment().toString());
+        // Sentry
+
+        try {
+            PaymentsApiInstance.setCustomBaseUrl(url);
+            result =
+                    PaymentsApiInstance.getPaymentbyIdWithHttpInfo(
+                            cfConfig.getClientId(),
+                            cfConfig.getClientSecret(),
+                            orderId,
+                            paymentId,
+                            cfConfig.getApiVersion(),
+                            null,
+                            cfHeaders.getIdempotencyKey(),
+                            cfHeaders.getRequestID());
+            return result;
+        } catch (ApiException e) {
+            Sentry.captureException(e);
+            throw e;
+        }
     }
 
     @SuppressWarnings("unused")
@@ -179,19 +230,28 @@ public class CFPaymentGatewayService {
             throw new ApiException(configCheckFailed, unauthorisedHTTPCode, checkConfigError);
         }
         String url = this.getEnvironmentUrl(cfConfig.getEnvironment());
-        System.out.println("comes till here");
-        RefundsApiInstance.setCustomBaseUrl(url);
-        result =
-                RefundsApiInstance.createrefundWithHttpInfo(
-                        cfConfig.getClientId(),
-                        cfConfig.getClientSecret(),
-                        orderId,
-                        cfConfig.getApiVersion(),
-                        null,
-                        cfHeaders.getIdempotencyKey(),
-                        cfHeaders.getRequestID(),
-                        refundRequest);
-        return result;
+
+        // Sentry
+        setupSentry(cfConfig.getEnvironment().toString());
+        // Sentry
+
+        try {
+            RefundsApiInstance.setCustomBaseUrl(url);
+            result =
+                    RefundsApiInstance.createrefundWithHttpInfo(
+                            cfConfig.getClientId(),
+                            cfConfig.getClientSecret(),
+                            orderId,
+                            cfConfig.getApiVersion(),
+                            null,
+                            cfHeaders.getIdempotencyKey(),
+                            cfHeaders.getRequestID(),
+                            refundRequest);
+            return result;
+        } catch (ApiException e) {
+            Sentry.captureException(e);
+            throw e;
+        }
     }
 
     @SuppressWarnings("unused")
@@ -203,14 +263,24 @@ public class CFPaymentGatewayService {
             throw new ApiException(configCheckFailed, unauthorisedHTTPCode, checkConfigError);
         }
         String url = this.getEnvironmentUrl(cfConfig.getEnvironment());
-        RefundsApiInstance.setCustomBaseUrl(url);
-        result =
-                RefundsApiInstance.getallrefundsfororderWithHttpInfo(
-                        cfConfig.getClientId(),
-                        cfConfig.getClientSecret(),
-                        orderId,
-                        cfConfig.getApiVersion());
-        return result;
+
+        // Sentry
+        setupSentry(cfConfig.getEnvironment().toString());
+        // Sentry
+
+        try {
+            RefundsApiInstance.setCustomBaseUrl(url);
+            result =
+                    RefundsApiInstance.getallrefundsfororderWithHttpInfo(
+                            cfConfig.getClientId(),
+                            cfConfig.getClientSecret(),
+                            orderId,
+                            cfConfig.getApiVersion());
+            return result;
+        } catch (ApiException e) {
+            Sentry.captureException(e);
+            throw e;
+        }
     }
 
     @SuppressWarnings("unused")
@@ -223,17 +293,39 @@ public class CFPaymentGatewayService {
             throw new ApiException(configCheckFailed, unauthorisedHTTPCode, checkConfigError);
         }
         String url = this.getEnvironmentUrl(cfConfig.getEnvironment());
-        RefundsApiInstance.setCustomBaseUrl(url);
-        result =
-                RefundsApiInstance.getRefundWithHttpInfo(
-                        cfConfig.getClientId(),
-                        cfConfig.getClientSecret(),
-                        orderId,
-                        refundId,
-                        cfConfig.getApiVersion(),
-                        null,
-                        cfHeaders.getIdempotencyKey(),
-                        cfHeaders.getRequestID());
-        return result;
+
+        // Sentry
+        setupSentry(cfConfig.getEnvironment().toString());
+        // Sentry
+
+        try {
+            RefundsApiInstance.setCustomBaseUrl(url);
+            result =
+                    RefundsApiInstance.getRefundWithHttpInfo(
+                            cfConfig.getClientId(),
+                            cfConfig.getClientSecret(),
+                            orderId,
+                            refundId,
+                            cfConfig.getApiVersion(),
+                            null,
+                            cfHeaders.getIdempotencyKey(),
+                            cfHeaders.getRequestID());
+            return result;
+        } catch (ApiException e) {
+            Sentry.captureException(e);
+            throw e;
+        }
+    }
+
+    private void setupSentry(String environment) {
+        Sentry.init(options -> {
+            options.setDsn("https://d1f58421862d450ba8d97466dfe24f4f@o330525.ingest.sentry.io/4505344844300288");
+            options.setTracesSampleRate(1.0);
+            options.setEnableTracing(true);
+            options.setAttachStacktrace(true);
+            options.setRelease(CFConstants.VERSION);
+            options.setEnvironment(environment);
+            options.setDebug(true);
+        });
     }
 }

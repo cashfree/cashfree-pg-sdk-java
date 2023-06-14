@@ -40,7 +40,7 @@ public class CFLinkCancelledResponse {
     public static final String SERIALIZED_NAME_CF_LINK_ID = "cf_link_id";
 
     @SerializedName(SERIALIZED_NAME_CF_LINK_ID)
-    private Integer cfLinkId;
+    private long cfLinkId;
 
     public static final String SERIALIZED_NAME_LINK_ID = "link_id";
 
@@ -125,7 +125,7 @@ public class CFLinkCancelledResponse {
 
     public CFLinkCancelledResponse() {}
 
-    public CFLinkCancelledResponse cfLinkId(Integer cfLinkId) {
+    public CFLinkCancelledResponse cfLinkId(long cfLinkId) {
 
         this.cfLinkId = cfLinkId;
         return this;
@@ -137,11 +137,11 @@ public class CFLinkCancelledResponse {
      * @return cfLinkId
      */
     @javax.annotation.Nullable
-    public Integer getCfLinkId() {
+    public long getCfLinkId() {
         return cfLinkId;
     }
 
-    public void setCfLinkId(Integer cfLinkId) {
+    public void setCfLinkId(long cfLinkId) {
         this.cfLinkId = cfLinkId;
     }
 

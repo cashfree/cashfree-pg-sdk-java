@@ -41,7 +41,7 @@ public class CFOrderPayResponse {
     public static final String SERIALIZED_NAME_CF_PAYMENT_ID = "cf_payment_id";
 
     @SerializedName(SERIALIZED_NAME_CF_PAYMENT_ID)
-    private Integer cfPaymentId;
+    private long cfPaymentId;
 
     public static final String SERIALIZED_NAME_PAYMENT_AMOUNT = "payment_amount";
 
@@ -228,7 +228,7 @@ public class CFOrderPayResponse {
 
     public CFOrderPayResponse() {}
 
-    public CFOrderPayResponse cfPaymentId(Integer cfPaymentId) {
+    public CFOrderPayResponse cfPaymentId(long cfPaymentId) {
 
         this.cfPaymentId = cfPaymentId;
         return this;
@@ -240,11 +240,11 @@ public class CFOrderPayResponse {
      * @return cfPaymentId
      */
     @javax.annotation.Nullable
-    public Integer getCfPaymentId() {
+    public long getCfPaymentId() {
         return cfPaymentId;
     }
 
-    public void setCfPaymentId(Integer cfPaymentId) {
+    public void setCfPaymentId(long cfPaymentId) {
         this.cfPaymentId = cfPaymentId;
     }
 
