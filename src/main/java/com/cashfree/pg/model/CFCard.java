@@ -44,6 +44,10 @@ public class CFCard {
 
     @SerializedName(SERIALIZED_NAME_CARD_NUMBER)
     private String cardNumber;
+    public static final String SERIALIZED_NAME_CARD_NETWORK = "card_network";
+
+    @SerializedName(SERIALIZED_NAME_CARD_NETWORK)
+    private String cardNetwork;
 
     public static final String SERIALIZED_NAME_CARD_HOLDER_NAME = "card_holder_name";
 
@@ -90,66 +94,10 @@ public class CFCard {
     @SerializedName(SERIALIZED_NAME_CARD_ALIAS)
     private String cardAlias;
 
-    /**
-     * One of [\&quot;Kotak\&quot;, \&quot;ICICI\&quot;, \&quot;RBL\&quot;, \&quot;BOB\&quot;,
-     * \&quot;Standard Chartered\&quot;]. Card bank name, required for EMI payments. This is the
-     * bank user has selected for EMI
-     */
-    @JsonAdapter(CardBankNameEnum.Adapter.class)
-    public enum CardBankNameEnum {
-        KOTAK("Kotak"),
-
-        ICICI("ICICI"),
-
-        RBL("RBL"),
-
-        BOB("BOB"),
-
-        STANDARD_CHARTERED("Standard Chartered");
-
-        private String value;
-
-        CardBankNameEnum(String value) {
-            this.value = value;
-        }
-
-        public String getValue() {
-            return value;
-        }
-
-        @Override
-        public String toString() {
-            return String.valueOf(value);
-        }
-
-        public static CardBankNameEnum fromValue(String value) {
-            for (CardBankNameEnum b : CardBankNameEnum.values()) {
-                if (b.value.equals(value)) {
-                    return b;
-                }
-            }
-            throw new IllegalArgumentException("Unexpected value '" + value + "'");
-        }
-
-        public static class Adapter extends TypeAdapter<CardBankNameEnum> {
-            @Override
-            public void write(final JsonWriter jsonWriter, final CardBankNameEnum enumeration)
-                    throws IOException {
-                jsonWriter.value(enumeration.getValue());
-            }
-
-            @Override
-            public CardBankNameEnum read(final JsonReader jsonReader) throws IOException {
-                String value = jsonReader.nextString();
-                return CardBankNameEnum.fromValue(value);
-            }
-        }
-    }
-
     public static final String SERIALIZED_NAME_CARD_BANK_NAME = "card_bank_name";
 
     @SerializedName(SERIALIZED_NAME_CARD_BANK_NAME)
-    private CardBankNameEnum cardBankName;
+    private String cardBankName;
 
     public static final String SERIALIZED_NAME_EMI_TENURE = "emi_tenure";
 
@@ -197,6 +145,27 @@ public class CFCard {
 
     public void setCardNumber(String cardNumber) {
         this.cardNumber = cardNumber;
+    }
+
+    public CFCard cardNetwork(String cardNumber) {
+
+        this.cardNetwork = cardNetwork;
+        return this;
+    }
+
+    /**
+     * Customer card number for plain card transactions. Token pan number for tokenized card
+     * transactions.
+     *
+     * @return cardNumber
+     */
+    @javax.annotation.Nonnull
+    public String getCardNetwork() {
+        return cardNetwork;
+    }
+
+    public void setcardNetwork(String cardNetwork) {
+        this.cardNetwork = cardNetwork;
     }
 
     public CFCard cardHolderName(String cardHolderName) {
@@ -381,7 +350,7 @@ public class CFCard {
         this.cardAlias = cardAlias;
     }
 
-    public CFCard cardBankName(CardBankNameEnum cardBankName) {
+    public CFCard cardBankName(String cardBankName) {
 
         this.cardBankName = cardBankName;
         return this;
@@ -395,11 +364,11 @@ public class CFCard {
      * @return cardBankName
      */
     @javax.annotation.Nonnull
-    public CardBankNameEnum getCardBankName() {
+    public String getCardBankName() {
         return cardBankName;
     }
 
-    public void setCardBankName(CardBankNameEnum cardBankName) {
+    public void setCardBankName(String cardBankName) {
         this.cardBankName = cardBankName;
     }
 
@@ -444,7 +413,8 @@ public class CFCard {
                 && Objects.equals(this.cardDisplay, cfCard.cardDisplay)
                 && Objects.equals(this.cardAlias, cfCard.cardAlias)
                 && Objects.equals(this.cardBankName, cfCard.cardBankName)
-                && Objects.equals(this.emiTenure, cfCard.emiTenure);
+                && Objects.equals(this.emiTenure, cfCard.emiTenure)
+                && Objects.equals(this.cardNetwork, cfCard.cardNetwork);
     }
 
     @Override
@@ -452,6 +422,7 @@ public class CFCard {
         return Objects.hash(
                 channel,
                 cardNumber,
+                cardNetwork,
                 cardHolderName,
                 cardExpiryMm,
                 cardExpiryYy,
@@ -471,6 +442,7 @@ public class CFCard {
         sb.append("class CFCard {\n");
         sb.append("    channel: ").append(toIndentedString(channel)).append("\n");
         sb.append("    cardNumber: ").append(toIndentedString(cardNumber)).append("\n");
+        sb.append("    cardNetwork: ").append(toIndentedString(cardNetwork)).append("\n");
         sb.append("    cardHolderName: ").append(toIndentedString(cardHolderName)).append("\n");
         sb.append("    cardExpiryMm: ").append(toIndentedString(cardExpiryMm)).append("\n");
         sb.append("    cardExpiryYy: ").append(toIndentedString(cardExpiryYy)).append("\n");
@@ -505,6 +477,10 @@ public class CFCard {
         openapiFields = new HashSet<String>();
         openapiFields.add("channel");
         openapiFields.add("card_number");
+        openapiFields.add("card_network");
+        openapiFields.add("card_type");
+        openapiFields.add("card_country");
+        openapiFields.add("card_network_reference_id");
         openapiFields.add("card_holder_name");
         openapiFields.add("card_expiry_mm");
         openapiFields.add("card_expiry_yy");
@@ -519,19 +495,6 @@ public class CFCard {
 
         // a set of required properties/fields (JSON key names)
         openapiRequiredFields = new HashSet<String>();
-        openapiRequiredFields.add("channel");
-        openapiRequiredFields.add("card_number");
-        openapiRequiredFields.add("card_holder_name");
-        openapiRequiredFields.add("card_expiry_mm");
-        openapiRequiredFields.add("card_expiry_yy");
-        openapiRequiredFields.add("card_cvv");
-        openapiRequiredFields.add("instrument_id");
-        openapiRequiredFields.add("cryptogram");
-        openapiRequiredFields.add("token_requestor_id");
-        openapiRequiredFields.add("card_display");
-        openapiRequiredFields.add("card_alias");
-        openapiRequiredFields.add("card_bank_name");
-        openapiRequiredFields.add("emi_tenure");
     }
 
     /**
@@ -562,100 +525,6 @@ public class CFCard {
                                         + " properties. JSON: %s",
                                 entry.getKey(), jsonObj.toString()));
             }
-        }
-
-        // check to make sure all required properties/fields are present in the JSON string
-        for (String requiredField : CFCard.openapiRequiredFields) {
-            if (jsonObj.get(requiredField) == null) {
-                throw new IllegalArgumentException(
-                        String.format(
-                                "The required field `%s` is not found in the JSON string: %s",
-                                requiredField, jsonObj.toString()));
-            }
-        }
-        if (!jsonObj.get("channel").isJsonPrimitive()) {
-            throw new IllegalArgumentException(
-                    String.format(
-                            "Expected the field `channel` to be a primitive type in the JSON"
-                                    + " string but got `%s`",
-                            jsonObj.get("channel").toString()));
-        }
-        if (!jsonObj.get("card_number").isJsonPrimitive()) {
-            throw new IllegalArgumentException(
-                    String.format(
-                            "Expected the field `card_number` to be a primitive type in the JSON"
-                                    + " string but got `%s`",
-                            jsonObj.get("card_number").toString()));
-        }
-        if (!jsonObj.get("card_holder_name").isJsonPrimitive()) {
-            throw new IllegalArgumentException(
-                    String.format(
-                            "Expected the field `card_holder_name` to be a primitive type in the"
-                                    + " JSON string but got `%s`",
-                            jsonObj.get("card_holder_name").toString()));
-        }
-        if (!jsonObj.get("card_expiry_mm").isJsonPrimitive()) {
-            throw new IllegalArgumentException(
-                    String.format(
-                            "Expected the field `card_expiry_mm` to be a primitive type in the"
-                                    + " JSON string but got `%s`",
-                            jsonObj.get("card_expiry_mm").toString()));
-        }
-        if (!jsonObj.get("card_expiry_yy").isJsonPrimitive()) {
-            throw new IllegalArgumentException(
-                    String.format(
-                            "Expected the field `card_expiry_yy` to be a primitive type in the"
-                                    + " JSON string but got `%s`",
-                            jsonObj.get("card_expiry_yy").toString()));
-        }
-        if (!jsonObj.get("card_cvv").isJsonPrimitive()) {
-            throw new IllegalArgumentException(
-                    String.format(
-                            "Expected the field `card_cvv` to be a primitive type in the JSON"
-                                    + " string but got `%s`",
-                            jsonObj.get("card_cvv").toString()));
-        }
-        if (!jsonObj.get("instrument_id").isJsonPrimitive()) {
-            throw new IllegalArgumentException(
-                    String.format(
-                            "Expected the field `instrument_id` to be a primitive type in the JSON"
-                                    + " string but got `%s`",
-                            jsonObj.get("instrument_id").toString()));
-        }
-        if (!jsonObj.get("cryptogram").isJsonPrimitive()) {
-            throw new IllegalArgumentException(
-                    String.format(
-                            "Expected the field `cryptogram` to be a primitive type in the JSON"
-                                    + " string but got `%s`",
-                            jsonObj.get("cryptogram").toString()));
-        }
-        if (!jsonObj.get("token_requestor_id").isJsonPrimitive()) {
-            throw new IllegalArgumentException(
-                    String.format(
-                            "Expected the field `token_requestor_id` to be a primitive type in the"
-                                    + " JSON string but got `%s`",
-                            jsonObj.get("token_requestor_id").toString()));
-        }
-        if (!jsonObj.get("card_display").isJsonPrimitive()) {
-            throw new IllegalArgumentException(
-                    String.format(
-                            "Expected the field `card_display` to be a primitive type in the JSON"
-                                    + " string but got `%s`",
-                            jsonObj.get("card_display").toString()));
-        }
-        if (!jsonObj.get("card_alias").isJsonPrimitive()) {
-            throw new IllegalArgumentException(
-                    String.format(
-                            "Expected the field `card_alias` to be a primitive type in the JSON"
-                                    + " string but got `%s`",
-                            jsonObj.get("card_alias").toString()));
-        }
-        if (!jsonObj.get("card_bank_name").isJsonPrimitive()) {
-            throw new IllegalArgumentException(
-                    String.format(
-                            "Expected the field `card_bank_name` to be a primitive type in the"
-                                    + " JSON string but got `%s`",
-                            jsonObj.get("card_bank_name").toString()));
         }
     }
 

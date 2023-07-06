@@ -34,7 +34,7 @@ public class Example {
     String xClientId = "xClientId_example"; // String | 
     String xClientSecret = "xClientSecret_example"; // String | 
     String orderId = "orderId_example"; // String | 
-    Integer cfPaymentId = 56; // Integer | 
+    Long cfPaymentId = 56; // Long | 
     String xApiVersion = "2022-01-01"; // String | 
     Boolean xIdempotencyReplayed = false; // Boolean | 
     String xIdempotencyKey = "xIdempotencyKey_example"; // String | 
@@ -55,16 +55,16 @@ public class Example {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **xClientId** | **String**|  | |
-| **xClientSecret** | **String**|  | |
-| **orderId** | **String**|  | |
-| **cfPaymentId** | **Integer**|  | |
-| **xApiVersion** | **String**|  | [optional] [default to 2022-01-01] |
-| **xIdempotencyReplayed** | **Boolean**|  | [optional] [default to false] |
-| **xIdempotencyKey** | **String**|  | [optional] |
-| **xRequestId** | **String**|  | [optional] |
+| Name | Type        | Description  | Notes |
+|------------- |-------------| ------------- | -------------|
+| **xClientId** | **String**  |  | |
+| **xClientSecret** | **String**  |  | |
+| **orderId** | **String**  |  | |
+| **cfPaymentId** | **Long**    |  | |
+| **xApiVersion** | **String**  |  | [optional] [default to 2022-01-01] |
+| **xIdempotencyReplayed** | **Boolean** |  | [optional] [default to false] |
+| **xIdempotencyKey** | **String**  |  | [optional] |
+| **xRequestId** | **String**  |  | [optional] |
 
 ### Return type
 

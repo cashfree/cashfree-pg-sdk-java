@@ -147,7 +147,7 @@ public class CFPaymentGatewayService {
 
     @SuppressWarnings("unused")
     public ApiResponse<CFPaymentsEntity> getPaymentById(
-            CFConfig cfConfig, CFHeaders cfHeaders, String orderId, Integer paymentId)
+            CFConfig cfConfig, CFHeaders cfHeaders, String orderId, Long paymentId)
             throws ApiException {
         ApiResponse<CFPaymentsEntity> result;
         CFError checkConfigError = checkConfig(cfConfig);

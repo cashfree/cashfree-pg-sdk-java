@@ -4,3 +4,4 @@
 /.idea
 /.gradle
 /.openapi-generator-ignore
+/src/main/java/com/cashfree/pg/gatewayinterface/CfInterface.java

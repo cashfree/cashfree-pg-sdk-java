@@ -34,82 +34,102 @@ import java.util.Set;
         value = "org.openapitools.codegen.languages.JavaClientCodegen",
         date = "2023-03-16T14:01:52.135917+05:30[Asia/Kolkata]")
 public class CFPaymentsEntityNetbankingPayment {
-    public static final String SERIALIZED_NAME_CHANNEL = "channel";
+    public static final String SERIALIZED_NAME_NETBANKING = "netbanking";
 
-    @SerializedName(SERIALIZED_NAME_CHANNEL)
-    private String channel;
-
-    public static final String SERIALIZED_NAME_NETBANKING_BANK_CODE = "netbanking_bank_code";
-
-    @SerializedName(SERIALIZED_NAME_NETBANKING_BANK_CODE)
-    private String netbankingBankCode;
-
-    public static final String SERIALIZED_NAME_NETBANKING_BANK_NAME = "netbanking_bank_name";
-
-    @SerializedName(SERIALIZED_NAME_NETBANKING_BANK_NAME)
-    private String netbankingBankName;
+    @SerializedName(SERIALIZED_NAME_NETBANKING)
+    private CFNetbanking netbanking;
 
     public CFPaymentsEntityNetbankingPayment() {}
 
-    public CFPaymentsEntityNetbankingPayment channel(String channel) {
+    public CFPaymentsEntityNetbankingPayment netbanking(CFNetbanking netbanking) {
 
-        this.channel = channel;
+        this.netbanking = netbanking;
         return this;
     }
 
-    /**
-     * Get channel
-     *
-     * @return channel
-     */
     @javax.annotation.Nullable
-    public String getChannel() {
-        return channel;
+    public CFNetbanking getNetbanking() {
+        return netbanking;
     }
 
-    public void setChannel(String channel) {
-        this.channel = channel;
+    public void setNetbanking(CFNetbanking netbanking) {
+        this.netbanking = netbanking;
     }
 
-    public CFPaymentsEntityNetbankingPayment netbankingBankCode(String netbankingBankCode) {
-
-        this.netbankingBankCode = netbankingBankCode;
-        return this;
-    }
-
-    /**
-     * Get netbankingBankCode
-     *
-     * @return netbankingBankCode
-     */
-    @javax.annotation.Nullable
-    public String getNetbankingBankCode() {
-        return netbankingBankCode;
-    }
-
-    public void setNetbankingBankCode(String netbankingBankCode) {
-        this.netbankingBankCode = netbankingBankCode;
-    }
-
-    public CFPaymentsEntityNetbankingPayment netbankingBankName(String netbankingBankName) {
-
-        this.netbankingBankName = netbankingBankName;
-        return this;
-    }
-
-    /**
-     * Get netbankingBankName
-     *
-     * @return netbankingBankName
-     */
-    @javax.annotation.Nullable
-    public String getNetbankingBankName() {
-        return netbankingBankName;
-    }
-
-    public void setNetbankingBankName(String netbankingBankName) {
-        this.netbankingBankName = netbankingBankName;
-    }
+//    public static final String SERIALIZED_NAME_CHANNEL = "channel";
+//
+//    @SerializedName(SERIALIZED_NAME_CHANNEL)
+//    private String channel;
+//
+//    public static final String SERIALIZED_NAME_NETBANKING_BANK_CODE = "netbanking_bank_code";
+//
+//    @SerializedName(SERIALIZED_NAME_NETBANKING_BANK_CODE)
+//    private String netbankingBankCode;
+//
+//    public static final String SERIALIZED_NAME_NETBANKING_BANK_NAME = "netbanking_bank_name";
+//
+//    @SerializedName(SERIALIZED_NAME_NETBANKING_BANK_NAME)
+//    private String netbankingBankName;
+//
+//    public CFPaymentsEntityNetbankingPayment channel(String channel) {
+//
+//        this.channel = channel;
+//        return this;
+//    }
+//
+//    /**
+//     * Get channel
+//     *
+//     * @return channel
+//     */
+//    @javax.annotation.Nullable
+//    public String getChannel() {
+//        return channel;
+//    }
+//
+//    public void setChannel(String channel) {
+//        this.channel = channel;
+//    }
+//
+//    public CFPaymentsEntityNetbankingPayment netbankingBankCode(String netbankingBankCode) {
+//
+//        this.netbankingBankCode = netbankingBankCode;
+//        return this;
+//    }
+//
+//    /**
+//     * Get netbankingBankCode
+//     *
+//     * @return netbankingBankCode
+//     */
+//    @javax.annotation.Nullable
+//    public String getNetbankingBankCode() {
+//        return netbankingBankCode;
+//    }
+//
+//    public void setNetbankingBankCode(String netbankingBankCode) {
+//        this.netbankingBankCode = netbankingBankCode;
+//    }
+//
+//    public CFPaymentsEntityNetbankingPayment netbankingBankName(String netbankingBankName) {
+//
+//        this.netbankingBankName = netbankingBankName;
+//        return this;
+//    }
+//
+//    /**
+//     * Get netbankingBankName
+//     *
+//     * @return netbankingBankName
+//     */
+//    @javax.annotation.Nullable
+//    public String getNetbankingBankName() {
+//        return netbankingBankName;
+//    }
+//
+//    public void setNetbankingBankName(String netbankingBankName) {
+//        this.netbankingBankName = netbankingBankName;
+//    }
 
     @Override
     public boolean equals(Object o) {
@@ -119,33 +139,20 @@ public class CFPaymentsEntityNetbankingPayment {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        CFPaymentsEntityNetbankingPayment cfPaymentsEntityNetbankingPayment =
-                (CFPaymentsEntityNetbankingPayment) o;
-        return Objects.equals(this.channel, cfPaymentsEntityNetbankingPayment.channel)
-                && Objects.equals(
-                        this.netbankingBankCode,
-                        cfPaymentsEntityNetbankingPayment.netbankingBankCode)
-                && Objects.equals(
-                        this.netbankingBankName,
-                        cfPaymentsEntityNetbankingPayment.netbankingBankName);
+        CFPaymentsEntityNetbankingPayment cfPaymentsEntityNetbankingPayment = (CFPaymentsEntityNetbankingPayment) o;
+        return Objects.equals(this.netbanking, cfPaymentsEntityNetbankingPayment.netbanking);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(channel, netbankingBankCode, netbankingBankName);
+        return Objects.hash(netbanking);
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("class CFPaymentsEntityNetbankingPayment {\n");
-        sb.append("    channel: ").append(toIndentedString(channel)).append("\n");
-        sb.append("    netbankingBankCode: ")
-                .append(toIndentedString(netbankingBankCode))
-                .append("\n");
-        sb.append("    netbankingBankName: ")
-                .append(toIndentedString(netbankingBankName))
-                .append("\n");
+        sb.append("    netbanking: ").append(toIndentedString(netbanking)).append("\n");
         sb.append("}");
         return sb.toString();
     }
@@ -167,9 +174,7 @@ public class CFPaymentsEntityNetbankingPayment {
     static {
         // a set of all properties/fields (JSON key names)
         openapiFields = new HashSet<String>();
-        openapiFields.add("channel");
-        openapiFields.add("netbanking_bank_code");
-        openapiFields.add("netbanking_bank_name");
+        openapiFields.add("netbanking");
 
         // a set of required properties/fields (JSON key names)
         openapiRequiredFields = new HashSet<String>();
@@ -179,8 +184,7 @@ public class CFPaymentsEntityNetbankingPayment {
      * Validates the JSON Object and throws an exception if issues found
      *
      * @param jsonObj JSON Object
-     * @throws IOException if the JSON Object is invalid with respect to
-     *     CFPaymentsEntityNetbankingPayment
+     * @throws IOException if the JSON Object is invalid with respect to CFPaymentsEntityNetbankingPayment
      */
     public static void validateJsonObject(JsonObject jsonObj) throws IOException {
         if (jsonObj == null) {
@@ -188,10 +192,9 @@ public class CFPaymentsEntityNetbankingPayment {
                     .isEmpty()) { // has required fields but JSON object is null
                 throw new IllegalArgumentException(
                         String.format(
-                                "The required field(s) %s in CFPaymentsEntityNetbankingPayment is"
-                                        + " not found in the empty JSON string",
-                                CFPaymentsEntityNetbankingPayment.openapiRequiredFields
-                                        .toString()));
+                                "The required field(s) %s in CFPaymentsEntityNetbankingPayment is not"
+                                        + " found in the empty JSON string",
+                                CFPaymentsEntityNetbankingPayment.openapiRequiredFields.toString()));
             }
         }
 
@@ -202,35 +205,13 @@ public class CFPaymentsEntityNetbankingPayment {
                 throw new IllegalArgumentException(
                         String.format(
                                 "The field `%s` in the JSON string is not defined in the"
-                                    + " `CFPaymentsEntityNetbankingPayment` properties. JSON: %s",
+                                        + " `CFPaymentsEntityNetbankingPayment` properties. JSON: %s",
                                 entry.getKey(), jsonObj.toString()));
             }
         }
-        if ((jsonObj.get("channel") != null && !jsonObj.get("channel").isJsonNull())
-                && !jsonObj.get("channel").isJsonPrimitive()) {
-            throw new IllegalArgumentException(
-                    String.format(
-                            "Expected the field `channel` to be a primitive type in the JSON"
-                                    + " string but got `%s`",
-                            jsonObj.get("channel").toString()));
-        }
-        if ((jsonObj.get("netbanking_bank_code") != null
-                        && !jsonObj.get("netbanking_bank_code").isJsonNull())
-                && !jsonObj.get("netbanking_bank_code").isJsonPrimitive()) {
-            throw new IllegalArgumentException(
-                    String.format(
-                            "Expected the field `netbanking_bank_code` to be a primitive type in"
-                                    + " the JSON string but got `%s`",
-                            jsonObj.get("netbanking_bank_code").toString()));
-        }
-        if ((jsonObj.get("netbanking_bank_name") != null
-                        && !jsonObj.get("netbanking_bank_name").isJsonNull())
-                && !jsonObj.get("netbanking_bank_name").isJsonPrimitive()) {
-            throw new IllegalArgumentException(
-                    String.format(
-                            "Expected the field `netbanking_bank_name` to be a primitive type in"
-                                    + " the JSON string but got `%s`",
-                            jsonObj.get("netbanking_bank_name").toString()));
+        // validate the optional field `netbanking`
+        if (jsonObj.get("netbanking") != null && !jsonObj.get("netbanking").isJsonNull()) {
+            CFNetbanking.validateJsonObject(jsonObj.getAsJsonObject("netbanking"));
         }
     }
 
@@ -239,13 +220,12 @@ public class CFPaymentsEntityNetbankingPayment {
         @Override
         public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
             if (!CFPaymentsEntityNetbankingPayment.class.isAssignableFrom(type.getRawType())) {
-                return null; // this class only serializes 'CFPaymentsEntityNetbankingPayment' and
-                // its subtypes
+                return null; // this class only serializes 'CFPaymentsEntityNetbankingPayment' and its
+                // subtypes
             }
             final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
             final TypeAdapter<CFPaymentsEntityNetbankingPayment> thisAdapter =
-                    gson.getDelegateAdapter(
-                            this, TypeToken.get(CFPaymentsEntityNetbankingPayment.class));
+                    gson.getDelegateAdapter(this, TypeToken.get(CFPaymentsEntityNetbankingPayment.class));
 
             return (TypeAdapter<T>)
                     new TypeAdapter<CFPaymentsEntityNetbankingPayment>() {
@@ -257,8 +237,7 @@ public class CFPaymentsEntityNetbankingPayment {
                         }
 
                         @Override
-                        public CFPaymentsEntityNetbankingPayment read(JsonReader in)
-                                throws IOException {
+                        public CFPaymentsEntityNetbankingPayment read(JsonReader in) throws IOException {
                             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
                             validateJsonObject(jsonObj);
                             return thisAdapter.fromJsonTree(jsonObj);
@@ -272,8 +251,7 @@ public class CFPaymentsEntityNetbankingPayment {
      *
      * @param jsonString JSON string
      * @return An instance of CFPaymentsEntityNetbankingPayment
-     * @throws IOException if the JSON string is invalid with respect to
-     *     CFPaymentsEntityNetbankingPayment
+     * @throws IOException if the JSON string is invalid with respect to CFPaymentsEntityNetbankingPayment
      */
     public static CFPaymentsEntityNetbankingPayment fromJson(String jsonString) throws IOException {
         return JSON.getGson().fromJson(jsonString, CFPaymentsEntityNetbankingPayment.class);

@@ -68,7 +68,7 @@ public class CFCustomerDetails {
     public static final String SERIALIZED_NAME_CUSTOMER_BANK_CODE = "customer_bank_code";
 
     @SerializedName(SERIALIZED_NAME_CUSTOMER_BANK_CODE)
-    private Integer customerBankCode;
+    private Long customerBankCode;
 
     public CFCustomerDetails() {}
 
@@ -192,7 +192,7 @@ public class CFCustomerDetails {
         this.customerBankIfsc = customerBankIfsc;
     }
 
-    public CFCustomerDetails customerBankCode(Integer customerBankCode) {
+    public CFCustomerDetails customerBankCode(Long customerBankCode) {
 
         this.customerBankCode = customerBankCode;
         return this;
@@ -205,11 +205,11 @@ public class CFCustomerDetails {
      * @return customerBankCode
      */
     @javax.annotation.Nullable
-    public Integer getCustomerBankCode() {
+    public Long getCustomerBankCode() {
         return customerBankCode;
     }
 
-    public void setCustomerBankCode(Integer customerBankCode) {
+    public void setCustomerBankCode(Long customerBankCode) {
         this.customerBankCode = customerBankCode;
     }
 

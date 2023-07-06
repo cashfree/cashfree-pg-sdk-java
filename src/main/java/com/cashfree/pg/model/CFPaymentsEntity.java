@@ -39,7 +39,7 @@ public class CFPaymentsEntity {
     public static final String SERIALIZED_NAME_CF_PAYMENT_ID = "cf_payment_id";
 
     @SerializedName(SERIALIZED_NAME_CF_PAYMENT_ID)
-    private Integer cfPaymentId;
+    private Long cfPaymentId;
 
     public static final String SERIALIZED_NAME_ORDER_ID = "order_id";
 
@@ -193,7 +193,7 @@ public class CFPaymentsEntity {
 
     public CFPaymentsEntity() {}
 
-    public CFPaymentsEntity cfPaymentId(Integer cfPaymentId) {
+    public CFPaymentsEntity cfPaymentId(Long cfPaymentId) {
 
         this.cfPaymentId = cfPaymentId;
         return this;
@@ -205,11 +205,11 @@ public class CFPaymentsEntity {
      * @return cfPaymentId
      */
     @javax.annotation.Nullable
-    public Integer getCfPaymentId() {
+    public Long getCfPaymentId() {
         return cfPaymentId;
     }
 
-    public void setCfPaymentId(Integer cfPaymentId) {
+    public void setCfPaymentId(Long cfPaymentId) {
         this.cfPaymentId = cfPaymentId;
     }
 
