@@ -19,13 +19,11 @@ import com.cashfree.pg.ApiException;
 import com.cashfree.pg.ApiResponse;
 import com.cashfree.pg.Configuration;
 import com.cashfree.pg.Pair;
+import com.cashfree.pg.gatewayinterface.CFConstants;
 import com.cashfree.pg.model.CFPaymentsEntity;
 import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class PaymentsApi {
     private ApiClient localVarApiClient;
@@ -119,7 +117,7 @@ public class PaymentsApi {
                                 localVarApiClient.escapeString(orderId.toString()))
                         .replace(
                                 "{" + "cf_payment_id" + "}",
-                                localVarApiClient.escapeString(cfPaymentId.toString()));
+                                localVarApiClient.escapeString(cfPaymentId + ""));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -169,6 +167,7 @@ public class PaymentsApi {
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
+        localVarHeaderParams.put(CFConstants.XPLATFORM, CFConstants.PLATFORM);
 
         String[] localVarAuthNames = new String[] {};
         return localVarApiClient.buildCall(
@@ -190,7 +189,7 @@ public class PaymentsApi {
             String xClientId,
             String xClientSecret,
             String orderId,
-            Long cfPaymentId,
+            long cfPaymentId,
             String xApiVersion,
             Boolean xIdempotencyReplayed,
             String xIdempotencyKey,
@@ -218,7 +217,7 @@ public class PaymentsApi {
         }
 
         // verify the required parameter 'cfPaymentId' is set
-        if (cfPaymentId == null) {
+        if (Objects.isNull(cfPaymentId)) {
             throw new ApiException(
                     "Missing the required parameter 'cfPaymentId' when calling"
                             + " getPaymentbyId(Async)");
@@ -261,7 +260,7 @@ public class PaymentsApi {
             String xClientId,
             String xClientSecret,
             String orderId,
-            Long cfPaymentId,
+            long cfPaymentId,
             String xApiVersion,
             Boolean xIdempotencyReplayed,
             String xIdempotencyKey,
@@ -305,7 +304,7 @@ public class PaymentsApi {
             String xClientId,
             String xClientSecret,
             String orderId,
-            Long cfPaymentId,
+            long cfPaymentId,
             String xApiVersion,
             Boolean xIdempotencyReplayed,
             String xIdempotencyKey,
@@ -353,7 +352,7 @@ public class PaymentsApi {
             String xClientId,
             String xClientSecret,
             String orderId,
-            Long cfPaymentId,
+            long cfPaymentId,
             String xApiVersion,
             Boolean xIdempotencyReplayed,
             String xIdempotencyKey,
@@ -469,6 +468,7 @@ public class PaymentsApi {
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
+        localVarHeaderParams.put(CFConstants.XPLATFORM, CFConstants.PLATFORM);
 
         final String[] localVarContentTypes = {};
         final String localVarContentType =

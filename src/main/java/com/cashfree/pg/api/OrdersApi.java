@@ -19,6 +19,7 @@ import com.cashfree.pg.ApiException;
 import com.cashfree.pg.ApiResponse;
 import com.cashfree.pg.Configuration;
 import com.cashfree.pg.Pair;
+import com.cashfree.pg.gatewayinterface.CFConstants;
 import com.cashfree.pg.model.CFAuthorizationRequest;
 import com.cashfree.pg.model.CFOrder;
 import com.cashfree.pg.model.CFOrderPayRequest;
@@ -165,6 +166,7 @@ public class OrdersApi {
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
+        localVarHeaderParams.put(CFConstants.XPLATFORM, CFConstants.PLATFORM);
 
         String[] localVarAuthNames = new String[] {};
         return localVarApiClient.buildCall(
@@ -436,6 +438,7 @@ public class OrdersApi {
             localVarHeaderParams.put(
                     "x-request-id", localVarApiClient.parameterToString(xRequestId));
         }
+        localVarHeaderParams.put(CFConstants.XPLATFORM, CFConstants.PLATFORM);
 
         final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
@@ -703,6 +706,7 @@ public class OrdersApi {
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
+        localVarHeaderParams.put(CFConstants.XPLATFORM, CFConstants.PLATFORM);
 
         String[] localVarAuthNames = new String[] {};
         return localVarApiClient.buildCall(
@@ -919,6 +923,7 @@ public class OrdersApi {
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
+        localVarHeaderParams.put(CFConstants.XPLATFORM, CFConstants.PLATFORM);
 
         String[] localVarAuthNames = new String[] {};
         return localVarApiClient.buildCall(
