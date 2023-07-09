@@ -32,7 +32,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.cashfree.pg.java</groupId>
   <artifactId>api</artifactId>
-  <version>2.0.1</version>
+  <version>2.1.2</version>
   <scope>compile</scope>
 </dependency>
 ```
