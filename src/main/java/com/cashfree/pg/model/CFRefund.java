@@ -42,7 +42,7 @@ public class CFRefund {
     public static final String SERIALIZED_NAME_CF_PAYMENT_ID = "cf_payment_id";
 
     @SerializedName(SERIALIZED_NAME_CF_PAYMENT_ID)
-    private long cfPaymentId;
+    private Long cfPaymentId;
 
     public static final String SERIALIZED_NAME_CF_REFUND_ID = "cf_refund_id";
 
@@ -330,7 +330,7 @@ public class CFRefund {
 
     public CFRefund() {}
 
-    public CFRefund cfPaymentId(long cfPaymentId) {
+    public CFRefund cfPaymentId(Long cfPaymentId) {
 
         this.cfPaymentId = cfPaymentId;
         return this;
@@ -342,11 +342,11 @@ public class CFRefund {
      * @return cfPaymentId
      */
     @javax.annotation.Nullable
-    public long getCfPaymentId() {
+    public Long getCfPaymentId() {
         return cfPaymentId;
     }
 
-    public void setCfPaymentId(long cfPaymentId) {
+    public void setCfPaymentId(Long cfPaymentId) {
         this.cfPaymentId = cfPaymentId;
     }
 

@@ -43,7 +43,7 @@ public class CFOrder {
     public static final String SERIALIZED_NAME_CF_ORDER_ID = "cf_order_id";
 
     @SerializedName(SERIALIZED_NAME_CF_ORDER_ID)
-    private long cfOrderId;
+    private Long cfOrderId;
 
     public static final String SERIALIZED_NAME_CREATED_AT = "created_at";
 
@@ -142,7 +142,7 @@ public class CFOrder {
 
     public CFOrder() {}
 
-    public CFOrder cfOrderId(long cfOrderId) {
+    public CFOrder cfOrderId(Long cfOrderId) {
 
         this.cfOrderId = cfOrderId;
         return this;
@@ -154,11 +154,11 @@ public class CFOrder {
      * @return cfOrderId
      */
     @javax.annotation.Nullable
-    public long getCfOrderId() {
+    public Long getCfOrderId() {
         return cfOrderId;
     }
 
-    public void setCfOrderId(long cfOrderId) {
+    public void setCfOrderId(Long cfOrderId) {
         this.cfOrderId = cfOrderId;
     }
 

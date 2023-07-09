@@ -43,7 +43,7 @@ public class CFFetchAllSavedInstruments {
     public static final String SERIALIZED_NAME_AFA_REFERENCE = "afa_reference";
 
     @SerializedName(SERIALIZED_NAME_AFA_REFERENCE)
-    private Integer afaReference;
+    private Long afaReference;
 
     public static final String SERIALIZED_NAME_INSTRUMENT_ID = "instrument_id";
 
@@ -192,7 +192,7 @@ public class CFFetchAllSavedInstruments {
         this.customerId = customerId;
     }
 
-    public CFFetchAllSavedInstruments afaReference(Integer afaReference) {
+    public CFFetchAllSavedInstruments afaReference(Long afaReference) {
 
         this.afaReference = afaReference;
         return this;
@@ -204,11 +204,11 @@ public class CFFetchAllSavedInstruments {
      * @return afaReference
      */
     @javax.annotation.Nullable
-    public Integer getAfaReference() {
+    public Long getAfaReference() {
         return afaReference;
     }
 
-    public void setAfaReference(Integer afaReference) {
+    public void setAfaReference(Long afaReference) {
         this.afaReference = afaReference;
     }
 

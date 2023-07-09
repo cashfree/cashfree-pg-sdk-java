@@ -87,7 +87,7 @@ public class PaymentsApi {
             String xClientId,
             String xClientSecret,
             String orderId,
-            long cfPaymentId,
+            Long cfPaymentId,
             String xApiVersion,
             Boolean xIdempotencyReplayed,
             String xIdempotencyKey,

@@ -40,7 +40,7 @@ public class CFLink {
     public static final String SERIALIZED_NAME_CF_LINK_ID = "cf_link_id";
 
     @SerializedName(SERIALIZED_NAME_CF_LINK_ID)
-    private long cfLinkId;
+    private Long cfLinkId;
 
     public static final String SERIALIZED_NAME_LINK_ID = "link_id";
 
@@ -125,7 +125,7 @@ public class CFLink {
 
     public CFLink() {}
 
-    public CFLink cfLinkId(long cfLinkId) {
+    public CFLink cfLinkId(Long cfLinkId) {
 
         this.cfLinkId = cfLinkId;
         return this;
@@ -137,11 +137,11 @@ public class CFLink {
      * @return cfLinkId
      */
     @javax.annotation.Nullable
-    public long getCfLinkId() {
+    public Long getCfLinkId() {
         return cfLinkId;
     }
 
-    public void setCfLinkId(long cfLinkId) {
+    public void setCfLinkId(Long cfLinkId) {
         this.cfLinkId = cfLinkId;
     }
 
