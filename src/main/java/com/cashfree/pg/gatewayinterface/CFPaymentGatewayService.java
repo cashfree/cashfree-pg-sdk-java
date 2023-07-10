@@ -13,10 +13,9 @@ import com.cashfree.pg.model.CFOrderRequest;
 import com.cashfree.pg.model.CFPaymentsEntity;
 import com.cashfree.pg.model.CFRefund;
 import com.cashfree.pg.model.CFRefundRequest;
+import io.sentry.Sentry;
 import java.util.List;
 import java.util.Objects;
-
-import io.sentry.Sentry;
 import org.jetbrains.annotations.NotNull;
 
 @SuppressWarnings("unused")
@@ -318,14 +317,16 @@ public class CFPaymentGatewayService {
     }
 
     private void setupSentry(String environment) {
-        Sentry.init(options -> {
-            options.setDsn("https://d1f58421862d450ba8d97466dfe24f4f@o330525.ingest.sentry.io/4505344844300288");
-            options.setTracesSampleRate(1.0);
-            options.setEnableTracing(true);
-            options.setAttachStacktrace(true);
-            options.setRelease(CFConstants.VERSION);
-            options.setEnvironment(environment);
-            options.setDebug(true);
-        });
+        Sentry.init(
+                options -> {
+                    options.setDsn(
+                            "https://d1f58421862d450ba8d97466dfe24f4f@o330525.ingest.sentry.io/4505344844300288");
+                    options.setTracesSampleRate(1.0);
+                    options.setEnableTracing(true);
+                    options.setAttachStacktrace(true);
+                    options.setRelease(CFConstants.VERSION);
+                    options.setEnvironment(environment);
+                    options.setDebug(true);
+                });
     }
 }

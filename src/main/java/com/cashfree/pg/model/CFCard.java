@@ -19,7 +19,6 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.TypeAdapter;
 import com.google.gson.TypeAdapterFactory;
-import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
@@ -44,6 +43,7 @@ public class CFCard {
 
     @SerializedName(SERIALIZED_NAME_CARD_NUMBER)
     private String cardNumber;
+
     public static final String SERIALIZED_NAME_CARD_NETWORK = "card_network";
 
     @SerializedName(SERIALIZED_NAME_CARD_NETWORK)
