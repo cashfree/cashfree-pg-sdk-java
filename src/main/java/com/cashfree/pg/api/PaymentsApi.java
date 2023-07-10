@@ -167,7 +167,7 @@ public class PaymentsApi {
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
-        localVarHeaderParams.put(CFConstants.XPLATFORM, CFConstants.PLATFORM);
+        localVarHeaderParams.put(CFConstants.X_SDK_PLATFORM, CFConstants.PLATFORM);
 
         String[] localVarAuthNames = new String[] {};
         return localVarApiClient.buildCall(
@@ -468,7 +468,7 @@ public class PaymentsApi {
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
-        localVarHeaderParams.put(CFConstants.XPLATFORM, CFConstants.PLATFORM);
+        localVarHeaderParams.put(CFConstants.X_SDK_PLATFORM, CFConstants.PLATFORM);
 
         final String[] localVarContentTypes = {};
         final String localVarContentType =

@@ -146,7 +146,7 @@ public class PaymentLinksApi {
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
-        localVarHeaderParams.put(CFConstants.XPLATFORM, CFConstants.PLATFORM);
+        localVarHeaderParams.put(CFConstants.X_SDK_PLATFORM, CFConstants.PLATFORM);
 
         String[] localVarAuthNames = new String[] {};
         return localVarApiClient.buildCall(
@@ -365,7 +365,7 @@ public class PaymentLinksApi {
             localVarHeaderParams.put(
                     "x-request-id", localVarApiClient.parameterToString(xRequestId));
         }
-        localVarHeaderParams.put(CFConstants.XPLATFORM, CFConstants.PLATFORM);
+        localVarHeaderParams.put(CFConstants.X_SDK_PLATFORM, CFConstants.PLATFORM);
 
         final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
@@ -647,7 +647,7 @@ public class PaymentLinksApi {
             localVarHeaderParams.put(
                     "x-request-id", localVarApiClient.parameterToString(xRequestId));
         }
-        localVarHeaderParams.put(CFConstants.XPLATFORM, CFConstants.PLATFORM);
+        localVarHeaderParams.put(CFConstants.X_SDK_PLATFORM, CFConstants.PLATFORM);
 
         final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
@@ -934,7 +934,7 @@ public class PaymentLinksApi {
             localVarHeaderParams.put(
                     "x-request-id", localVarApiClient.parameterToString(xRequestId));
         }
-        localVarHeaderParams.put(CFConstants.XPLATFORM, CFConstants.PLATFORM);
+        localVarHeaderParams.put(CFConstants.X_SDK_PLATFORM, CFConstants.PLATFORM);
 
         final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
