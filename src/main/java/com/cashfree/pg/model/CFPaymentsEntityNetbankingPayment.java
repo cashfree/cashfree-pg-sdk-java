@@ -55,6 +55,7 @@ public class CFPaymentsEntityNetbankingPayment {
     public void setNetbanking(CFNetbanking netbanking) {
         this.netbanking = netbanking;
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -63,7 +64,8 @@ public class CFPaymentsEntityNetbankingPayment {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        CFPaymentsEntityNetbankingPayment cfPaymentsEntityNetbankingPayment = (CFPaymentsEntityNetbankingPayment) o;
+        CFPaymentsEntityNetbankingPayment cfPaymentsEntityNetbankingPayment =
+                (CFPaymentsEntityNetbankingPayment) o;
         return Objects.equals(this.netbanking, cfPaymentsEntityNetbankingPayment.netbanking);
     }
 
@@ -108,7 +110,8 @@ public class CFPaymentsEntityNetbankingPayment {
      * Validates the JSON Object and throws an exception if issues found
      *
      * @param jsonObj JSON Object
-     * @throws IOException if the JSON Object is invalid with respect to CFPaymentsEntityNetbankingPayment
+     * @throws IOException if the JSON Object is invalid with respect to
+     *     CFPaymentsEntityNetbankingPayment
      */
     public static void validateJsonObject(JsonObject jsonObj) throws IOException {
         if (jsonObj == null) {
@@ -116,9 +119,10 @@ public class CFPaymentsEntityNetbankingPayment {
                     .isEmpty()) { // has required fields but JSON object is null
                 throw new IllegalArgumentException(
                         String.format(
-                                "The required field(s) %s in CFPaymentsEntityNetbankingPayment is not"
-                                        + " found in the empty JSON string",
-                                CFPaymentsEntityNetbankingPayment.openapiRequiredFields.toString()));
+                                "The required field(s) %s in CFPaymentsEntityNetbankingPayment is"
+                                        + " not found in the empty JSON string",
+                                CFPaymentsEntityNetbankingPayment.openapiRequiredFields
+                                        .toString()));
             }
         }
 
@@ -129,7 +133,7 @@ public class CFPaymentsEntityNetbankingPayment {
                 throw new IllegalArgumentException(
                         String.format(
                                 "The field `%s` in the JSON string is not defined in the"
-                                        + " `CFPaymentsEntityNetbankingPayment` properties. JSON: %s",
+                                    + " `CFPaymentsEntityNetbankingPayment` properties. JSON: %s",
                                 entry.getKey(), jsonObj.toString()));
             }
         }
@@ -144,12 +148,14 @@ public class CFPaymentsEntityNetbankingPayment {
         @Override
         public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
             if (!CFPaymentsEntityNetbankingPayment.class.isAssignableFrom(type.getRawType())) {
-                return null; // this class only serializes 'CFPaymentsEntityNetbankingPayment' and its
+                return null; // this class only serializes 'CFPaymentsEntityNetbankingPayment' and
+                // its
                 // subtypes
             }
             final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
             final TypeAdapter<CFPaymentsEntityNetbankingPayment> thisAdapter =
-                    gson.getDelegateAdapter(this, TypeToken.get(CFPaymentsEntityNetbankingPayment.class));
+                    gson.getDelegateAdapter(
+                            this, TypeToken.get(CFPaymentsEntityNetbankingPayment.class));
 
             return (TypeAdapter<T>)
                     new TypeAdapter<CFPaymentsEntityNetbankingPayment>() {
@@ -161,7 +167,8 @@ public class CFPaymentsEntityNetbankingPayment {
                         }
 
                         @Override
-                        public CFPaymentsEntityNetbankingPayment read(JsonReader in) throws IOException {
+                        public CFPaymentsEntityNetbankingPayment read(JsonReader in)
+                                throws IOException {
                             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
                             validateJsonObject(jsonObj);
                             return thisAdapter.fromJsonTree(jsonObj);
@@ -175,7 +182,8 @@ public class CFPaymentsEntityNetbankingPayment {
      *
      * @param jsonString JSON string
      * @return An instance of CFPaymentsEntityNetbankingPayment
-     * @throws IOException if the JSON string is invalid with respect to CFPaymentsEntityNetbankingPayment
+     * @throws IOException if the JSON string is invalid with respect to
+     *     CFPaymentsEntityNetbankingPayment
      */
     public static CFPaymentsEntityNetbankingPayment fromJson(String jsonString) throws IOException {
         return JSON.getGson().fromJson(jsonString, CFPaymentsEntityNetbankingPayment.class);

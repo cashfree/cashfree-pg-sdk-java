@@ -81,7 +81,7 @@ public class RefundsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *    <table border="1"> <caption>Response Details</caption>
+     *     <table border="1"> <caption>Response Details</caption>
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
      * <tr><td> 200 </td><td> Refund created </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
      * <tr><td> 0 </td><td> Any bad or invalid request will lead to following error object </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
@@ -243,7 +243,7 @@ public class RefundsApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
      *     response body
      * @http.response.details
-     *    <table border="1"> <caption>Response Details</caption>
+     *     <table border="1"> <caption>Response Details</caption>
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
      * <tr><td> 200 </td><td> Refund created </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
      * <tr><td> 0 </td><td> Any bad or invalid request will lead to following error object </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
@@ -287,7 +287,7 @@ public class RefundsApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
      *     response body
      * @http.response.details
-     *    <table border="1"> <caption>Response Details</caption>
+     *     <table border="1"> <caption>Response Details</caption>
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
      * <tr><td> 200 </td><td> Refund created </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
      * <tr><td> 0 </td><td> Any bad or invalid request will lead to following error object </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
@@ -334,7 +334,7 @@ public class RefundsApi {
      * @throws ApiException If fail to process the API call, e.g. serializing the request body
      *     object
      * @http.response.details
-     *    <table border="1"> <caption>Response Details</caption>
+     *     <table border="1"> <caption>Response Details</caption>
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
      * <tr><td> 200 </td><td> Refund created </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
      * <tr><td> 0 </td><td> Any bad or invalid request will lead to following error object </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
@@ -382,7 +382,7 @@ public class RefundsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *    <table border="1"> <caption>Response Details</caption>
+     *     <table border="1"> <caption>Response Details</caption>
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
      * <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
      * <tr><td> 0 </td><td> Any bad or invalid request will lead to following error object </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
@@ -552,7 +552,7 @@ public class RefundsApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
      *     response body
      * @http.response.details
-     *    <table border="1"> <caption>Response Details</caption>
+     *     <table border="1"> <caption>Response Details</caption>
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
      * <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
      * <tr><td> 0 </td><td> Any bad or invalid request will lead to following error object </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
@@ -596,7 +596,7 @@ public class RefundsApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
      *     response body
      * @http.response.details
-     *    <table border="1"> <caption>Response Details</caption>
+     *     <table border="1"> <caption>Response Details</caption>
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
      * <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
      * <tr><td> 0 </td><td> Any bad or invalid request will lead to following error object </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
@@ -644,7 +644,7 @@ public class RefundsApi {
      * @throws ApiException If fail to process the API call, e.g. serializing the request body
      *     object
      * @http.response.details
-     *    <table border="1"> <caption>Response Details</caption>
+     *     <table border="1"> <caption>Response Details</caption>
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
      * <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
      * <tr><td> 0 </td><td> Any bad or invalid request will lead to following error object </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
@@ -688,7 +688,7 @@ public class RefundsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *    <table border="1"> <caption>Response Details</caption>
+     *     <table border="1"> <caption>Response Details</caption>
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
      * <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
      * <tr><td> 0 </td><td> Any bad or invalid request will lead to following error object </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
@@ -814,7 +814,7 @@ public class RefundsApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
      *     response body
      * @http.response.details
-     *    <table border="1"> <caption>Response Details</caption>
+     *     <table border="1"> <caption>Response Details</caption>
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
      * <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
      * <tr><td> 0 </td><td> Any bad or invalid request will lead to following error object </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
@@ -839,7 +839,7 @@ public class RefundsApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
      *     response body
      * @http.response.details
-     *    <table border="1"> <caption>Response Details</caption>
+     *     <table border="1"> <caption>Response Details</caption>
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
      * <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
      * <tr><td> 0 </td><td> Any bad or invalid request will lead to following error object </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
@@ -868,7 +868,7 @@ public class RefundsApi {
      * @throws ApiException If fail to process the API call, e.g. serializing the request body
      *     object
      * @http.response.details
-     *    <table border="1"> <caption>Response Details</caption>
+     *     <table border="1"> <caption>Response Details</caption>
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
      * <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
      * <tr><td> 0 </td><td> Any bad or invalid request will lead to following error object </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>

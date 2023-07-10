@@ -79,7 +79,7 @@ public class PaymentLinksApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *    <table border="1"> <caption>Response Details</caption>
+     *     <table border="1"> <caption>Response Details</caption>
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
      * <tr><td> 200 </td><td> Payment Link cancelled </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Cannot cancel Payment Link if status is not ACTIVE </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
@@ -207,7 +207,7 @@ public class PaymentLinksApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
      *     response body
      * @http.response.details
-     *    <table border="1"> <caption>Response Details</caption>
+     *     <table border="1"> <caption>Response Details</caption>
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
      * <tr><td> 200 </td><td> Payment Link cancelled </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Cannot cancel Payment Link if status is not ACTIVE </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
@@ -233,7 +233,7 @@ public class PaymentLinksApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
      *     response body
      * @http.response.details
-     *    <table border="1"> <caption>Response Details</caption>
+     *     <table border="1"> <caption>Response Details</caption>
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
      * <tr><td> 200 </td><td> Payment Link cancelled </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Cannot cancel Payment Link if status is not ACTIVE </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
@@ -262,7 +262,7 @@ public class PaymentLinksApi {
      * @throws ApiException If fail to process the API call, e.g. serializing the request body
      *     object
      * @http.response.details
-     *    <table border="1"> <caption>Response Details</caption>
+     *     <table border="1"> <caption>Response Details</caption>
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
      * <tr><td> 200 </td><td> Payment Link cancelled </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Cannot cancel Payment Link if status is not ACTIVE </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
@@ -297,7 +297,7 @@ public class PaymentLinksApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *    <table border="1"> <caption>Response Details</caption>
+     *     <table border="1"> <caption>Response Details</caption>
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
      * <tr><td> 200 </td><td> Payment Link created </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
      * </table>
@@ -446,7 +446,7 @@ public class PaymentLinksApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
      *     response body
      * @http.response.details
-     *    <table border="1"> <caption>Response Details</caption>
+     *     <table border="1"> <caption>Response Details</caption>
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
      * <tr><td> 200 </td><td> Payment Link created </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
      * </table>
@@ -487,7 +487,7 @@ public class PaymentLinksApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
      *     response body
      * @http.response.details
-     *    <table border="1"> <caption>Response Details</caption>
+     *     <table border="1"> <caption>Response Details</caption>
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
      * <tr><td> 200 </td><td> Payment Link created </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
      * </table>
@@ -531,7 +531,7 @@ public class PaymentLinksApi {
      * @throws ApiException If fail to process the API call, e.g. serializing the request body
      *     object
      * @http.response.details
-     *    <table border="1"> <caption>Response Details</caption>
+     *     <table border="1"> <caption>Response Details</caption>
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
      * <tr><td> 200 </td><td> Payment Link created </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
      * </table>
@@ -575,7 +575,7 @@ public class PaymentLinksApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *    <table border="1"> <caption>Response Details</caption>
+     *     <table border="1"> <caption>Response Details</caption>
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
      * <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
      * </table>
@@ -734,7 +734,7 @@ public class PaymentLinksApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
      *     response body
      * @http.response.details
-     *    <table border="1"> <caption>Response Details</caption>
+     *     <table border="1"> <caption>Response Details</caption>
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
      * <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
      * </table>
@@ -774,7 +774,7 @@ public class PaymentLinksApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
      *     response body
      * @http.response.details
-     *    <table border="1"> <caption>Response Details</caption>
+     *     <table border="1"> <caption>Response Details</caption>
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
      * <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
      * </table>
@@ -818,7 +818,7 @@ public class PaymentLinksApi {
      * @throws ApiException If fail to process the API call, e.g. serializing the request body
      *     object
      * @http.response.details
-     *    <table border="1"> <caption>Response Details</caption>
+     *     <table border="1"> <caption>Response Details</caption>
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
      * <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
      * </table>
@@ -862,7 +862,7 @@ public class PaymentLinksApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *    <table border="1"> <caption>Response Details</caption>
+     *     <table border="1"> <caption>Response Details</caption>
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
      * <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
      * </table>
@@ -1021,7 +1021,7 @@ public class PaymentLinksApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
      *     response body
      * @http.response.details
-     *    <table border="1"> <caption>Response Details</caption>
+     *     <table border="1"> <caption>Response Details</caption>
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
      * <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
      * </table>
@@ -1061,7 +1061,7 @@ public class PaymentLinksApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
      *     response body
      * @http.response.details
-     *    <table border="1"> <caption>Response Details</caption>
+     *     <table border="1"> <caption>Response Details</caption>
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
      * <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
      * </table>
@@ -1105,7 +1105,7 @@ public class PaymentLinksApi {
      * @throws ApiException If fail to process the API call, e.g. serializing the request body
      *     object
      * @http.response.details
-     *    <table border="1"> <caption>Response Details</caption>
+     *     <table border="1"> <caption>Response Details</caption>
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
      * <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
      * </table>
