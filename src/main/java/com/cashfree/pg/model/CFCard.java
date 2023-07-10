@@ -43,6 +43,10 @@ public class CFCard {
 
     @SerializedName(SERIALIZED_NAME_CARD_NUMBER)
     private String cardNumber;
+    public static final String SERIALIZED_NAME_CARD_NETWORK = "card_network";
+
+    @SerializedName(SERIALIZED_NAME_CARD_NETWORK)
+    private String cardNetwork;
 
     public static final String SERIALIZED_NAME_CARD_NETWORK = "card_network";
 

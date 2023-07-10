@@ -158,6 +158,7 @@ public class CFNetbanking {
             }
         }
 
+<<<<<<< HEAD
         //        Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
         //        // check to see if the JSON string contains additional fields
         //        for (Entry<String, JsonElement> entry : entries) {
@@ -169,6 +170,19 @@ public class CFNetbanking {
         //                                entry.getKey(), jsonObj.toString()));
         //            }
         //        }
+=======
+//        Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+//        // check to see if the JSON string contains additional fields
+//        for (Entry<String, JsonElement> entry : entries) {
+//            if (!CFNetbanking.openapiFields.contains(entry.getKey())) {
+//                throw new IllegalArgumentException(
+//                        String.format(
+//                                "The field `%s` in the JSON string is not defined in the"
+//                                        + " `CFNetbanking` properties. JSON: %s",
+//                                entry.getKey(), jsonObj.toString()));
+//            }
+//        }
+>>>>>>> b51ff1217b521dc769f50a3f86bd13f9048a74e2
 
         // check to make sure all required properties/fields are present in the JSON string
         for (String requiredField : CFNetbanking.openapiRequiredFields) {
