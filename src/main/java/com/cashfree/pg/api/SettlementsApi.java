@@ -165,7 +165,7 @@ public class SettlementsApi {
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
-        localVarHeaderParams.put(CFConstants.XPLATFORM, CFConstants.PLATFORM);
+        localVarHeaderParams.put(CFConstants.X_SDK_PLATFORM, CFConstants.PLATFORM);
 
         String[] localVarAuthNames = new String[] {};
         return localVarApiClient.buildCall(
