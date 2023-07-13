@@ -114,29 +114,6 @@ public class CFPaymentsEntityNetbankingPayment {
      *     CFPaymentsEntityNetbankingPayment
      */
     public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-        if (jsonObj == null) {
-            if (!CFPaymentsEntityNetbankingPayment.openapiRequiredFields
-                    .isEmpty()) { // has required fields but JSON object is null
-                throw new IllegalArgumentException(
-                        String.format(
-                                "The required field(s) %s in CFPaymentsEntityNetbankingPayment is"
-                                        + " not found in the empty JSON string",
-                                CFPaymentsEntityNetbankingPayment.openapiRequiredFields
-                                        .toString()));
-            }
-        }
-
-        Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-        // check to see if the JSON string contains additional fields
-        for (Entry<String, JsonElement> entry : entries) {
-            if (!CFPaymentsEntityNetbankingPayment.openapiFields.contains(entry.getKey())) {
-                throw new IllegalArgumentException(
-                        String.format(
-                                "The field `%s` in the JSON string is not defined in the"
-                                    + " `CFPaymentsEntityNetbankingPayment` properties. JSON: %s",
-                                entry.getKey(), jsonObj.toString()));
-            }
-        }
         // validate the optional field `netbanking`
         if (jsonObj.get("netbanking") != null && !jsonObj.get("netbanking").isJsonNull()) {
             CFNetbanking.validateJsonObject(jsonObj.getAsJsonObject("netbanking"));

@@ -317,7 +317,7 @@ public class CFPaymentsEntityMethod extends AbstractOpenApiSchema {
                                         e);
                             }
 
-                            if (match == 1) {
+                            if (match>0) {
                                 CFPaymentsEntityMethod ret = new CFPaymentsEntityMethod();
                                 ret.setActualInstance(actualAdapter.fromJsonTree(jsonObject));
                                 return ret;
@@ -603,19 +603,19 @@ public class CFPaymentsEntityMethod extends AbstractOpenApiSchema {
                             e.getMessage()));
             // continue to the next one
         }
-        if (validCount != 1) {
-            throw new IOException(
-                    String.format(
-                            "The JSON string is invalid for CFPaymentsEntityMethod with oneOf"
-                                + " schemas: CFPaymentsEntityAppPayment,"
-                                + " CFPaymentsEntityCardPayment,"
-                                + " CFPaymentsEntityCardlessEMIPayment,"
-                                + " CFPaymentsEntityNetbankingPayment,"
-                                + " CFPaymentsEntityPaylaterPayment, CFPaymentsEntityUPIPayment."
-                                + " %d class(es) match the result, expected 1. Detailed failure"
-                                + " message for oneOf schemas: %s. JSON: %s",
-                            validCount, errorMessages, jsonObj.toString()));
-        }
+//        if (validCount != 1) {
+//            throw new IOException(
+//                    String.format(
+//                            "The JSON string is invalid for CFPaymentsEntityMethod with oneOf"
+//                                + " schemas: CFPaymentsEntityAppPayment,"
+//                                + " CFPaymentsEntityCardPayment,"
+//                                + " CFPaymentsEntityCardlessEMIPayment,"
+//                                + " CFPaymentsEntityNetbankingPayment,"
+//                                + " CFPaymentsEntityPaylaterPayment, CFPaymentsEntityUPIPayment."
+//                                + " %d class(es) match the result, expected 1. Detailed failure"
+//                                + " message for oneOf schemas: %s. JSON: %s",
+//                            validCount, errorMessages, jsonObj.toString()));
+//        }
     }
 
     /**

@@ -131,17 +131,6 @@ public class CFPaymentsEntityCardPayment {
             }
         }
 
-        Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-        // check to see if the JSON string contains additional fields
-        for (Entry<String, JsonElement> entry : entries) {
-            if (!CFPaymentsEntityCardPayment.openapiFields.contains(entry.getKey())) {
-                throw new IllegalArgumentException(
-                        String.format(
-                                "The field `%s` in the JSON string is not defined in the"
-                                        + " `CFPaymentsEntityCardPayment` properties. JSON: %s",
-                                entry.getKey(), jsonObj.toString()));
-            }
-        }
         // validate the optional field `card`
         if (jsonObj.get("card") != null && !jsonObj.get("card").isJsonNull()) {
             CFCard.validateJsonObject(jsonObj.getAsJsonObject("card"));
