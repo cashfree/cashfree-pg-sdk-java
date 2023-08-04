@@ -28,19 +28,21 @@ public class CFPaymentGatewayService {
             401; // client request has not been completed because it lacks valid authentication
     // credentials for the requested resource
 
-    private CFError checkConfig(@NotNull CFConfig session) {
+    private CFError checkConfig(@NotNull CFConfig session, Boolean auth) {
         CFError cfError = new CFError("", "", "");
-        if (session.getClientId() == null) {
-            cfError.setMessage("xClientId is missing");
-            cfError.setCode("xClientId_missing");
-            cfError.setType("invalid_request");
-            return cfError;
-        }
-        if (session.getClientSecret() == null) {
-            cfError.setMessage("xClientSecret is missing");
-            cfError.setCode("xClientSecret_missing");
-            cfError.setType("invalid_request");
-            return cfError;
+        if (auth){
+            if (session.getClientId() == null) {
+                cfError.setMessage("xClientId is missing");
+                cfError.setCode("xClientId_missing");
+                cfError.setType("invalid_request");
+                return cfError;
+            }
+            if (session.getClientSecret() == null) {
+                cfError.setMessage("xClientSecret is missing");
+                cfError.setCode("xClientSecret_missing");
+                cfError.setType("invalid_request");
+                return cfError;
+            }
         }
         if (session.getApiVersion() == null) {
             cfError.setMessage("xApiVersion is missing");
@@ -67,7 +69,7 @@ public class CFPaymentGatewayService {
             CFConfig cfConfig, CFHeaders cfHeaders, CFOrderRequest CFCreateOrderRequest)
             throws ApiException {
         ApiResponse<CFOrder> result;
-        CFError checkConfigError = checkConfig(cfConfig);
+        CFError checkConfigError = checkConfig(cfConfig,true);
         if (Objects.nonNull(checkConfigError)) {
             throw new ApiException(configCheckFailed, unauthorisedHTTPCode, checkConfigError);
         }
@@ -100,7 +102,7 @@ public class CFPaymentGatewayService {
             CFConfig cfConfig, CFHeaders cfHeaders, CFOrderPayRequest orderPayRequest)
             throws ApiException {
         ApiResponse<CFOrderPayResponse> result;
-        CFError checkConfigError = checkConfig(cfConfig);
+        CFError checkConfigError = checkConfig(cfConfig,false);
         if (Objects.nonNull(checkConfigError)) {
             throw new ApiException(configCheckFailed, unauthorisedHTTPCode, checkConfigError);
         }
@@ -125,7 +127,7 @@ public class CFPaymentGatewayService {
     public ApiResponse<CFOrder> getOrder(CFConfig cfConfig, CFHeaders cfHeaders, String orderId)
             throws ApiException {
         ApiResponse<CFOrder> result;
-        CFError checkConfigError = checkConfig(cfConfig);
+        CFError checkConfigError = checkConfig(cfConfig,true);
         if (Objects.nonNull(checkConfigError)) {
             throw new ApiException(configCheckFailed, unauthorisedHTTPCode, checkConfigError);
         }
@@ -157,7 +159,7 @@ public class CFPaymentGatewayService {
     public ApiResponse<List<CFPaymentsEntity>> getAllPayments(
             CFConfig cfConfig, CFHeaders cfHeaders, String orderId) throws ApiException {
         ApiResponse<List<CFPaymentsEntity>> result;
-        CFError checkConfigError = checkConfig(cfConfig);
+        CFError checkConfigError = checkConfig(cfConfig,true);
         if (Objects.nonNull(checkConfigError)) {
             throw new ApiException(configCheckFailed, unauthorisedHTTPCode, checkConfigError);
         }
@@ -190,7 +192,7 @@ public class CFPaymentGatewayService {
             CFConfig cfConfig, CFHeaders cfHeaders, String orderId, long paymentId)
             throws ApiException {
         ApiResponse<CFPaymentsEntity> result;
-        CFError checkConfigError = checkConfig(cfConfig);
+        CFError checkConfigError = checkConfig(cfConfig,true);
         if (Objects.nonNull(checkConfigError)) {
             throw new ApiException(configCheckFailed, unauthorisedHTTPCode, checkConfigError);
         }
@@ -224,7 +226,7 @@ public class CFPaymentGatewayService {
             CFConfig cfConfig, CFHeaders cfHeaders, String orderId, CFRefundRequest refundRequest)
             throws ApiException {
         ApiResponse<CFRefund> result;
-        CFError checkConfigError = checkConfig(cfConfig);
+        CFError checkConfigError = checkConfig(cfConfig,true);
         if (Objects.nonNull(checkConfigError)) {
             throw new ApiException(configCheckFailed, unauthorisedHTTPCode, checkConfigError);
         }
@@ -257,7 +259,7 @@ public class CFPaymentGatewayService {
     public ApiResponse<List<CFRefund>> getAllRefunds(
             CFConfig cfConfig, CFHeaders cfHeaders, String orderId) throws ApiException {
         ApiResponse<List<CFRefund>> result;
-        CFError checkConfigError = checkConfig(cfConfig);
+        CFError checkConfigError = checkConfig(cfConfig,true);
         if (Objects.nonNull(checkConfigError)) {
             throw new ApiException(configCheckFailed, unauthorisedHTTPCode, checkConfigError);
         }
@@ -287,7 +289,7 @@ public class CFPaymentGatewayService {
             CFConfig cfConfig, CFHeaders cfHeaders, String orderId, String refundId)
             throws ApiException {
         ApiResponse<CFRefund> result;
-        CFError checkConfigError = checkConfig(cfConfig);
+        CFError checkConfigError = checkConfig(cfConfig,true);
         if (Objects.nonNull(checkConfigError)) {
             throw new ApiException(configCheckFailed, unauthorisedHTTPCode, checkConfigError);
         }

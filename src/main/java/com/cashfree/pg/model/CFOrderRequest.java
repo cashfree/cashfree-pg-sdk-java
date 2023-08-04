@@ -25,6 +25,7 @@ import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -47,7 +48,7 @@ public class CFOrderRequest {
     public static final String SERIALIZED_NAME_ORDER_AMOUNT = "order_amount";
 
     @SerializedName(SERIALIZED_NAME_ORDER_AMOUNT)
-    private Double orderAmount;
+    private BigDecimal orderAmount;
 
     public static final String SERIALIZED_NAME_ORDER_CURRENCY = "order_currency";
 
@@ -106,7 +107,7 @@ public class CFOrderRequest {
         this.orderId = orderId;
     }
 
-    public CFOrderRequest orderAmount(Double orderAmount) {
+    public CFOrderRequest orderAmount(BigDecimal orderAmount) {
 
         this.orderAmount = orderAmount;
         return this;
@@ -118,11 +119,11 @@ public class CFOrderRequest {
      * @return orderAmount
      */
     @javax.annotation.Nonnull
-    public Double getOrderAmount() {
+    public BigDecimal getOrderAmount() {
         return orderAmount;
     }
 
-    public void setOrderAmount(Double orderAmount) {
+    public void setOrderAmount(BigDecimal orderAmount) {
         this.orderAmount = orderAmount;
     }
 
