@@ -115,7 +115,7 @@ public class CFPaymentGatewayService {
             OrdersApiInstance.setCustomBaseUrl(url);
             result =
                     OrdersApiInstance.orderPayWithHttpInfo(
-                            cfConfig.getClientId(), cfConfig.getClientSecret(), orderPayRequest);
+                            cfConfig.getApiVersion(), cfHeaders.getRequestID(), orderPayRequest);
             return result;
         } catch (ApiException e) {
             Sentry.captureException(e);

@@ -23,7 +23,7 @@ apply from: "${rootDir}/publish-root.gradle"
 ext {
     PUBLISH_GROUP_ID = 'com.cashfree.pg.java'
     PUBLISH_ARTIFACT_ID = 'api'
-    PUBLISH_VERSION = '2.1.5'
+    PUBLISH_VERSION = '2.1.6'
 }
 apply from: "${rootProject.projectDir}/publish-module.gradle"
 
