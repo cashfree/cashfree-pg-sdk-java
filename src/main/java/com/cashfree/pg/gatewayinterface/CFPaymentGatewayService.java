@@ -43,12 +43,12 @@ public class CFPaymentGatewayService {
                 cfError.setType("invalid_request");
                 return cfError;
             }
-            if (session.getApiVersion() == null) {
-                cfError.setMessage("xApiVersion is missing");
-                cfError.setCode("xApiVersion_missing");
-                cfError.setType("invalid_request");
-                return cfError;
-            }
+        }
+        if (session.getApiVersion() == null) {
+            cfError.setMessage("xApiVersion is missing");
+            cfError.setCode("xApiVersion_missing");
+            cfError.setType("invalid_request");
+            return cfError;
         }
         if (session.getEnvironment() == null) {
             cfError.setMessage("environment is missing");
