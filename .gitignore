@@ -6,3 +6,4 @@
 /.openapi-generator-ignore
 /.DS_Store
 .DS_Store
+/src/main/java/com/cashfree/pg/gatewayinterface/newClass.java
