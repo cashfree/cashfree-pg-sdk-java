@@ -319,10 +319,9 @@ public class CFPaymentMethod extends AbstractOpenApiSchema {
 
                             throw new IOException(
                                     String.format(
-                                            "Failed deserialization for CFPaymentMethod: %d"
-                                                + " classes match result, expected 1. Detailed"
-                                                + " failure message for oneOf schemas: %s. JSON:"
-                                                + " %s",
+                                            "Failed deserialization for CFPaymentMethod: %d classes"
+                                                    + " match result, expected 1. Detailed failure"
+                                                    + " message for oneOf schemas: %s. JSON: %s",
                                             match, errorMessages, jsonObject.toString()));
                         }
                     }.nullSafe();
