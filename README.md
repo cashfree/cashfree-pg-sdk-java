@@ -1,7 +1,7 @@
 # cashfree-pg-sdk-java
 
 New Payment Gateway APIs
-- API version: 2.1.6
+- API version: 2.1.7
 
 
 ## Requirements
@@ -32,7 +32,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.cashfree.pg.java</groupId>
   <artifactId>api</artifactId>
-  <version>2.1.6</version>
+  <version>2.1.7</version>
   <scope>compile</scope>
 </dependency>
 ```
