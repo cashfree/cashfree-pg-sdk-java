@@ -701,18 +701,6 @@ public class CFOrder {
                                 CFOrder.openapiRequiredFields.toString()));
             }
         }
-
-        Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-        // check to see if the JSON string contains additional fields
-        for (Entry<String, JsonElement> entry : entries) {
-            if (!CFOrder.openapiFields.contains(entry.getKey())) {
-                throw new IllegalArgumentException(
-                        String.format(
-                                "The field `%s` in the JSON string is not defined in the `CFOrder`"
-                                        + " properties. JSON: %s",
-                                entry.getKey(), jsonObj.toString()));
-            }
-        }
         if ((jsonObj.get("created_at") != null && !jsonObj.get("created_at").isJsonNull())
                 && !jsonObj.get("created_at").isJsonPrimitive()) {
             throw new IllegalArgumentException(
