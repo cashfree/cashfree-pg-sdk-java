@@ -8,26 +8,48 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Set up Maven Central Repository
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up JDK
         uses: actions/setup-java@v2
         with:
-          java-version: 8
-          distribution: 'adopt'
-          server-id: ossrh
-          server-username: MAVEN_USERNAME
-          server-password: MAVEN_PASSWORD
-          gpg-private-key: ${{ secrets.OSSRH_GPG_SECRET_KEY_ID }}
-        
-      - name: Build with Maven
-        run: mvn clean package -B
-        
-      - name: Publish package
+          java-version: '11'
+
+      - name: Set up GPG
         run: |
-            mvn deploy -Dgpg.passphrase=${{ secrets.OSSRH_GPG_SECRET_KEY }}
+          echo "$OSSRH_GPG_SECRET_KEY" | gpg --import
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.OSSRH_GPG_SECRET_KEY }}
+          GPG_KEY_ID: ${{ secrets.OSSRH_GPG_SECRET_KEY_ID }}
+          GPG_KEY_PASSWORD: ${{ secrets.OSSRH_GPG_SECRET_KEY_PASSWORD }}
+
+      - name: Build and deploy
+        run: mvn clean deploy -Pgpg
         env:
           MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
+        
+      # - uses: actions/checkout@v2
+      # - name: Set up Maven Central Repository
+      #   uses: actions/setup-java@v2
+      #   with:
+      #     java-version: 8
+      #     distribution: 'adopt'
+      #     server-id: ossrh
+      #     server-username: MAVEN_USERNAME
+      #     server-password: MAVEN_PASSWORD
+      #     gpg-private-key: ${{ secrets.OSSRH_GPG_SECRET_KEY_ID }}
+        
+      # - name: Build with Maven
+      #   run: mvn clean package -B
+        
+      # - name: Publish package
+      #   run: |
+      #       mvn deploy -Dgpg.passphrase=${{ secrets.OSSRH_GPG_SECRET_KEY }}
+      #   env:
+      #     MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
+      #     MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
         
       # - uses: actions/checkout@v4
       # - name: Configure GPG Key
