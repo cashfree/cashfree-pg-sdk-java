@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Cashback detail boject
  */
 @Schema(description = "Cashback detail boject")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-22T08:56:39.020570Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-22T09:07:00.124382Z[Etc/UTC]")
 public class CashbackDetails {
   /**
    * Type of discount
