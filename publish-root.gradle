@@ -9,12 +9,12 @@ ext["aws.access.key"] = ''
 ext["aws.secret.key"] = ''
 
 // Use system environment variables
-ext["ossrhUsername"] = System.getenv('OSSRH_USERNAME')
-ext["ossrhPassword"] = System.getenv('OSSRH_PASSWORD')
-ext["sonatypeStagingProfileId"] = System.getenv('SONATYPE_STAGING_PROFILE_ID')
-ext["signing.keyId"] = System.getenv('SIGNING_KEY_ID')
-ext["signing.password"] = System.getenv('SIGNING_PASSWORD')
-ext["signing.key"] = System.getenv('SIGNING_KEY')
+ext["ossrhUsername"] = secrets.OSSRH_USERNAME
+ext["ossrhPassword"] = secrets.OSSRH_PASSWORD
+ext["sonatypeStagingProfileId"] = secrets.SONATYPE_STAGING_PROFILE_ID
+ext["signing.keyId"] = secrets.SIGNING_KEY_ID
+ext["signing.password"] = secrets.SIGNING_PASSWORD
+ext["signing.key"] = secrets.SIGNING_KEY
 
 // Set up Sonatype repository
 nexusPublishing {
