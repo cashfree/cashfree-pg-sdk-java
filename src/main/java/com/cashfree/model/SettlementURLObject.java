@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Settlement URL object
  */
 @Schema(description = "Settlement URL object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-22T08:56:39.020570Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-22T09:03:58.492968Z[Etc/UTC]")
 public class SettlementURLObject {
   public static final String SERIALIZED_NAME_URL = "url";
   @SerializedName(SERIALIZED_NAME_URL)

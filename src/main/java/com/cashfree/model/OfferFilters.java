@@ -55,7 +55,7 @@ import com.cashfree.JSON;
  * Filter for offers
  */
 @Schema(description = "Filter for offers")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-22T08:56:39.020570Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-22T09:03:58.492968Z[Etc/UTC]")
 public class OfferFilters {
   public static final String SERIALIZED_NAME_OFFER_TYPE = "offer_type";
   @SerializedName(SERIALIZED_NAME_OFFER_TYPE)

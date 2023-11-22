@@ -54,7 +54,7 @@ import com.cashfree.JSON;
  * Filter for Payment Methods
  */
 @Schema(description = "Filter for Payment Methods")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-22T08:56:39.020570Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-22T09:03:58.492968Z[Etc/UTC]")
 public class PaymentMethodsFilters {
   public static final String SERIALIZED_NAME_PAYMENT_METHODS = "payment_methods";
   @SerializedName(SERIALIZED_NAME_PAYMENT_METHODS)
