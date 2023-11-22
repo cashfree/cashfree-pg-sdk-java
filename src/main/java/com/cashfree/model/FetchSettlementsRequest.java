@@ -54,7 +54,7 @@ import com.cashfree.JSON;
  * Request to fetch settlement
  */
 @Schema(description = "Request to fetch settlement")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-22T08:56:39.020570Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-22T09:11:22.353637Z[Etc/UTC]")
 public class FetchSettlementsRequest {
   public static final String SERIALIZED_NAME_PAGINATION = "pagination";
   @SerializedName(SERIALIZED_NAME_PAGINATION)

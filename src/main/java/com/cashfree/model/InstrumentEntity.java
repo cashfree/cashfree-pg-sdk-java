@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * Saved card instrument object
  */
 @Schema(description = "Saved card instrument object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-22T08:56:39.020570Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-22T09:11:22.353637Z[Etc/UTC]")
 public class InstrumentEntity {
   public static final String SERIALIZED_NAME_CUSTOMER_ID = "customer_id";
   @SerializedName(SERIALIZED_NAME_CUSTOMER_ID)

@@ -2,7 +2,7 @@
 
 Cashfree Payment Gateway APIs
 - API version: 2022-09-01
-  - Build date: 2023-11-22T08:56:39.020570Z[Etc/UTC]
+  - Build date: 2023-11-22T09:11:22.353637Z[Etc/UTC]
 
 Cashfree's Payment Gateway APIs provide developers with a streamlined pathway to integrate advanced payment processing capabilities into their applications, platforms and websites.
 
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.cashfree</groupId>
   <artifactId>cashfree_pg</artifactId>
-  <version>3.0.0</version>
+  <version>3.0.1</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -57,7 +57,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.cashfree:cashfree_pg:3.0.0"
+     implementation "com.cashfree:cashfree_pg:3.0.1"
   }
 ```
 
@@ -71,7 +71,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/cashfree_pg-3.0.0.jar`
+* `target/cashfree_pg-3.0.1.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
