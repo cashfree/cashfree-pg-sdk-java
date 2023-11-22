@@ -23,7 +23,7 @@ apply from: "${rootDir}/publish-root.gradle"
 
 ext {
     PUBLISH_GROUP_ID = 'com.cashfree.pg.java'
-    PUBLISH_ARTIFACT_ID = 'cashfree_pg'
+    PUBLISH_ARTIFACT_ID = 'api'
     PUBLISH_VERSION = '3.0.2'
 }
 apply from: "${rootProject.projectDir}/publish-module.gradle"
@@ -41,7 +41,7 @@ targetCompatibility = JavaVersion.VERSION_1_8
 publishing {
     publications {
         maven(MavenPublication) {
-            artifactId = 'cashfree_pg'
+            artifactId = 'api'
             from components.java
         }
     }
