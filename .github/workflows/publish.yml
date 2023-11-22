@@ -19,7 +19,7 @@ jobs:
       - name: Build and publish with Gradle
         run: |
           ./gradlew assemble
-          ./gradlew :api:publishMavenPublicationToSonatypeRepository closeAndReleaseSonatypeStagingRepository
+          ./gradlew publishMavenPublicationToSonatypeRepository closeAndReleaseSonatypeStagingRepository
       # - name: Checkout code
       #   uses: actions/checkout@v2
 
