@@ -10,6 +10,9 @@ jobs:
     steps:
         - uses: actions/checkout@v2
 
+        - name: Setup Key
+          run: gpg --armor --export-secret-keys ${{ secrets.OSSRH_GPG_SECRET_KEY_ID }} > gpg_key.asc
+
         - name: Build with Maven
           run: mvn clean package -B
         
