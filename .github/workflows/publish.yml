@@ -8,34 +8,55 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+        - uses: actions/checkout@v2
 
-      - name: Set up JDK
-        uses: actions/setup-java@v2
-        with:
-          java-version: '11'
-          distribution: 'adopt'
-          server-id: ossrh
-          server-username: MAVEN_USERNAME
-          server-password: MAVEN_PASSWORD
+        - name: Build with Maven
+          run: mvn clean package -B
+        
+        - name: Set up Maven Central Repository
+          uses: actions/setup-java@v2
+          with:
+            java-version: 8
+            distribution: 'adopt'
+            server-id: ossrh
+            server-username: MAVEN_USERNAME
+            server-password: MAVEN_PASSWORD
+            gpg-private-key: ${{ secrets.OSSRH_GPG_SECRET_KEY_ID }}
+          
+        - name: Publish package
+          run: |
+              mvn deploy -Dgpg.passphrase=${{ secrets.OSSRH_GPG_SECRET_KEY }}
+          env:
+            MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
+            MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
+      # - name: Checkout code
+      #   uses: actions/checkout@v2
 
-      - name: Set up GPG
-        run: |
-          echo "$GPG_PRIVATE_KEY" | gpg --import
-        env:
-          GPG_PRIVATE_KEY: ${{ secrets.OSSRH_GPG_SECRET_KEY }}
-          GPG_KEY_ID: ${{ secrets.OSSRH_GPG_SECRET_KEY_ID }}
-          GPG_KEY_PASSWORD: ${{ secrets.OSSRH_GPG_SECRET_KEY_PASSWORD }}
+      # - name: Set up JDK
+      #   uses: actions/setup-java@v2
+      #   with:
+      #     java-version: '11'
+      #     distribution: 'adopt'
+      #     server-id: ossrh
+      #     server-username: MAVEN_USERNAME
+      #     server-password: MAVEN_PASSWORD
 
-      - name: Build and deploy
-        run: mvn clean deploy -Pgpg
-        env:
-          MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
-          MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
+      # - name: Set up GPG
+      #   run: |
+      #     echo "$GPG_PRIVATE_KEY" | gpg --import
+      #   env:
+      #     GPG_PRIVATE_KEY: ${{ secrets.OSSRH_GPG_SECRET_KEY }}
+      #     GPG_KEY_ID: ${{ secrets.OSSRH_GPG_SECRET_KEY_ID }}
+      #     GPG_KEY_PASSWORD: ${{ secrets.OSSRH_GPG_SECRET_KEY_PASSWORD }}
 
-      - name: Set up settings.xml
-        run: echo "<settings><servers><server><id>nexus-releases</id><username>${{ secrets.MAVEN_USERNAME }}</username><password>${{ secrets.MAVEN_PASSWORD }}</password></server></servers></settings>" > $HOME/.m2/settings.xml
+      # - name: Build and deploy
+      #   run: mvn clean deploy -Pgpg
+      #   env:
+      #     MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
+      #     MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
+
+      # - name: Set up settings.xml
+      #   run: echo "<settings><servers><server><id>nexus-releases</id><username>${{ secrets.MAVEN_USERNAME }}</username><password>${{ secrets.MAVEN_PASSWORD }}</password></server></servers></settings>" > $HOME/.m2/settings.xml
         
       # - name: Checkout code
       #   uses: actions/checkout@v1
