@@ -54,7 +54,7 @@ import com.cashfree.JSON;
  * Offer validation object
  */
 @Schema(description = "Offer validation object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-22T08:56:39.020570Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-22T09:13:46.373979Z[Etc/UTC]")
 public class OfferValidations {
   public static final String SERIALIZED_NAME_MIN_AMOUNT = "min_amount";
   @SerializedName(SERIALIZED_NAME_MIN_AMOUNT)
