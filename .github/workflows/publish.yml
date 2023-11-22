@@ -10,9 +10,6 @@ jobs:
     steps:
         - uses: actions/checkout@v2
 
-        - name: Setup Key
-          run: gpg --armor --export-secret-keys ${{ secrets.OSSRH_GPG_SECRET_KEY_ID }} > gpg_key.asc
-
         - name: Build with Maven
           run: mvn clean package -B
         
@@ -23,11 +20,11 @@ jobs:
             distribution: 'adopt'
             server-username: MAVEN_USERNAME
             server-password: MAVEN_PASSWORD
-            gpg-private-key: ${{ secrets.OSSRH_GPG_SECRET_KEY_ID }}
+            gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
           
         - name: Publish package
           run: |
-              mvn deploy -Dgpg.passphrase=${{ secrets.OSSRH_GPG_SECRET_KEY }}
+              mvn deploy -Dgpg.passphrase=${{ secrets.GPG_PASSPHRASE }}
           env:
             MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
             MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
