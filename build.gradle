@@ -3,30 +3,19 @@ apply plugin: 'eclipse'
 apply plugin: 'java'
 apply plugin: 'com.diffplug.spotless'
 
+group = 'com.cashfree.pg.java'
+version = '3.0.3'
 
 buildscript {
     repositories {
-        google()
         mavenCentral()
-        maven {
-            url "https://plugins.gradle.org/m2/"
-        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.+'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
         classpath 'com.diffplug.spotless:spotless-plugin-gradle:6.11.0'
-        classpath 'io.github.gradle-nexus:publish-plugin:1.1.0'
     }
 }
-apply plugin: 'io.github.gradle-nexus.publish-plugin'
-apply from: "${rootDir}/publish-root.gradle"
-
-ext {
-    PUBLISH_GROUP_ID = 'com.cashfree.pg.java'
-    PUBLISH_ARTIFACT_ID = 'api'
-    PUBLISH_VERSION = '3.0.2'
-}
-apply from: "${rootProject.projectDir}/publish-module.gradle"
 
 repositories {
     mavenCentral()
@@ -35,21 +24,81 @@ sourceSets {
     main.java.srcDirs = ['src/main/java']
 }
 
-sourceCompatibility = JavaVersion.VERSION_1_8
-targetCompatibility = JavaVersion.VERSION_1_8
+if(hasProperty('target') && target == 'android') {
 
-publishing {
-    publications {
-        maven(MavenPublication) {
-            artifactId = 'api'
-            from components.java
+    apply plugin: 'com.android.library'
+    apply plugin: 'com.github.dcendents.android-maven'
+
+    android {
+        compileSdkVersion 25
+        buildToolsVersion '25.0.2'
+        defaultConfig {
+            minSdkVersion 14
+            targetSdkVersion 25
+        }
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+
+        // Rename the aar correctly
+        libraryVariants.all { variant ->
+            variant.outputs.each { output ->
+                def outputFile = output.outputFile
+                if (outputFile != null && outputFile.name.endsWith('.aar')) {
+                    def fileName = "${project.name}-${variant.baseName}-${version}.aar"
+                    output.outputFile = new File(outputFile.parent, fileName)
+                }
+            }
+        }
+
+        dependencies {
+            provided "jakarta.annotation:jakarta.annotation-api:$jakarta_annotation_version"
         }
     }
-}
 
-task execute(type: JavaExec) {
-    main = System.getProperty('mainClass')
-    classpath = sourceSets.main.runtimeClasspath
+    afterEvaluate {
+        android.libraryVariants.all { variant ->
+            def task = project.tasks.create "jar${variant.name.capitalize()}", Jar
+            task.description = "Create jar artifact for ${variant.name}"
+            task.dependsOn variant.javaCompile
+            task.from variant.javaCompile.destinationDir
+            task.destinationDir = project.file("${project.buildDir}/outputs/jar")
+            task.archiveName = "${project.name}-${variant.baseName}-${version}.jar"
+            artifacts.add('archives', task)
+        }
+    }
+
+    task sourcesJar(type: Jar) {
+        from android.sourceSets.main.java.srcDirs
+        classifier = 'sources'
+    }
+
+    artifacts {
+        archives sourcesJar
+    }
+
+} else {
+
+    apply plugin: 'java'
+    apply plugin: 'maven-publish'
+
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+
+    publishing {
+        publications {
+            maven(MavenPublication) {
+               artifactId = 'cashfree_pg'
+               from components.java
+            }
+        }
+    }
+
+    task execute(type:JavaExec) {
+       main = System.getProperty('mainClass')
+       classpath = sourceSets.main.runtimeClasspath
+    }
 }
 
 ext {
@@ -66,19 +115,15 @@ dependencies {
     implementation 'javax.ws.rs:jsr311-api:1.1.1'
     implementation 'javax.ws.rs:javax.ws.rs-api:2.1.1'
     implementation 'org.openapitools:jackson-databind-nullable:0.2.6'
-    implementation 'com.fasterxml.jackson.core:jackson-core:2.14.2'
     implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.12.0'
-    implementation 'io.sentry:sentry:6.22.0'
     implementation "jakarta.annotation:jakarta.annotation-api:$jakarta_annotation_version"
-    compileOnly 'org.projectlombok:lombok:1.18.24'
-    annotationProcessor 'org.projectlombok:lombok:1.18.24'
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
-    testImplementation 'org.mockito:mockito-core:5.2.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.1'
+    testImplementation 'org.mockito:mockito-core:3.12.4'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.1'
 }
 
 javadoc {
-    options.tags = ["http.response.details:a:Http Response Details"]
+    options.tags = [ "http.response.details:a:Http Response Details" ]
 }
 
 // Use spotless plugin to automatically format code, remove unused import, etc
@@ -101,7 +146,7 @@ spotless {
         // don't need to set target, it is inferred from java
 
         // apply a specific flavor of google-java-format
-        googleJavaFormat('1.15.0').aosp().reflowLongStrings()
+        googleJavaFormat('1.8').aosp().reflowLongStrings()
 
         removeUnusedImports()
         importOrder()
@@ -121,4 +166,3 @@ test {
     }
 
 }
-

@@ -22,5 +22,3 @@ build
 api/
 src/main/java/com/cashfree/client/
 src/test/
-gradle.properties
-.idea/

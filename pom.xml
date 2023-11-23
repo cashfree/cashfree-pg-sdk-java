@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.cashfree</groupId>
+    <groupId>com.cashfree.pg.java</groupId>
     <artifactId>cashfree_pg</artifactId>
     <packaging>jar</packaging>
     <name>cashfree_pg</name>
-    <version>3.0.2</version>
+    <version>3.0.3</version>
     <url>https://github.com/cashfree/cashfree-pg-sdk-java</url>
     <description>Java Framework for Cashfree Payment Gateway.</description>
     <scm>
@@ -13,7 +13,6 @@
         <developerConnection>scm:git:git@github.com:cashfree/cashfree-pg-sdk-java.git</developerConnection>
         <url>git@github.com:cashfree/cashfree-pg-sdk-java.git</url>
     </scm>
-
     <distributionManagement>
         <repository>
         <id>ossrh</id>
