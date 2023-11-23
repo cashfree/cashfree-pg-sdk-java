@@ -1,158 +1,182 @@
-name: Publish package to the Maven Central Repository
+name: Build and Sign
+
 on:
   push:
     branches:
       - main
 
 jobs:
-  publish:
+  build:
     runs-on: ubuntu-latest
-    env:
-      OSSRH_TOKEN: ${{ secrets.OSSRH_TOKEN }}
-      OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
-      SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
-      SIGNING_KEY_ID: ${{ secrets.SIGNING_KEY_ID }}
-      SIGNING_PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
-      SONATYPE_STAGING_PROFILE_ID: ${{ secrets.SONATYPE_STAGING_PROFILE_ID }}
+
     steps:
-      - uses: actions/checkout@v1
-      - name: set up JDK 11
-        uses: actions/setup-java@v1
-        with:
-          java-version: 11
-      - name: "Permission to gradle File"
-        run: chmod +x gradlew
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      - name: Build and publish with Gradle
-        run: |
-          ./gradlew assemble
-          ./gradlew publishMavenPublicationToSonatypeRepository closeAndReleaseSonatypeStagingRepository
-      # - name: Checkout code
-      #   uses: actions/checkout@v2
+    - name: Set up JDK
+      uses: actions/setup-java@v2
+      with:
+        distribution: 'adopt'
+        java-version: '11'
 
-      # - name: Set up JDK
-      #   uses: actions/setup-java@v2
-      #   with:
-      #     java-version: '11'
-      #     distribution: 'adopt'
-      #     server-id: ossrh
-      #     server-username: MAVEN_USERNAME
-      #     server-password: MAVEN_PASSWORD
+    - name: Build project
+      run: ./gradlew build
 
-      # - name: Set up GPG
-      #   run: |
-      #     echo "$GPG_PRIVATE_KEY" | gpg --import
-      #   env:
-      #     GPG_PRIVATE_KEY: ${{ secrets.OSSRH_GPG_SECRET_KEY }}
-      #     GPG_KEY_ID: ${{ secrets.OSSRH_GPG_SECRET_KEY_ID }}
-      #     GPG_KEY_PASSWORD: ${{ secrets.OSSRH_GPG_SECRET_KEY_PASSWORD }}
+# name: Publish package to the Maven Central Repository
+# on:
+#   push:
+#     branches:
+#       - main
 
-      # - name: Build and deploy
-      #   run: mvn clean deploy -Pgpg
-      #   env:
-      #     MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
-      #     MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
+# jobs:
+#   publish:
+#     runs-on: ubuntu-latest
+#     env:
+#       OSSRH_TOKEN: ${{ secrets.OSSRH_TOKEN }}
+#       OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
+#       SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
+#       SIGNING_KEY_ID: ${{ secrets.SIGNING_KEY_ID }}
+#       SIGNING_PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
+#       SONATYPE_STAGING_PROFILE_ID: ${{ secrets.SONATYPE_STAGING_PROFILE_ID }}
+#     steps:
+#       - uses: actions/checkout@v1
+#       - name: set up JDK 11
+#         uses: actions/setup-java@v1
+#         with:
+#           java-version: 11
+#       - name: "Permission to gradle File"
+#         run: chmod +x gradlew
 
-      # - name: Set up settings.xml
-      #   run: echo "<settings><servers><server><id>nexus-releases</id><username>${{ secrets.MAVEN_USERNAME }}</username><password>${{ secrets.MAVEN_PASSWORD }}</password></server></servers></settings>" > $HOME/.m2/settings.xml
+#       - name: Build and publish with Gradle
+#         run: |
+#           ./gradlew assemble
+#           ./gradlew publishMavenPublicationToSonatypeRepository closeAndReleaseSonatypeStagingRepository
+#       # - name: Checkout code
+#       #   uses: actions/checkout@v2
+
+#       # - name: Set up JDK
+#       #   uses: actions/setup-java@v2
+#       #   with:
+#       #     java-version: '11'
+#       #     distribution: 'adopt'
+#       #     server-id: ossrh
+#       #     server-username: MAVEN_USERNAME
+#       #     server-password: MAVEN_PASSWORD
+
+#       # - name: Set up GPG
+#       #   run: |
+#       #     echo "$GPG_PRIVATE_KEY" | gpg --import
+#       #   env:
+#       #     GPG_PRIVATE_KEY: ${{ secrets.OSSRH_GPG_SECRET_KEY }}
+#       #     GPG_KEY_ID: ${{ secrets.OSSRH_GPG_SECRET_KEY_ID }}
+#       #     GPG_KEY_PASSWORD: ${{ secrets.OSSRH_GPG_SECRET_KEY_PASSWORD }}
+
+#       # - name: Build and deploy
+#       #   run: mvn clean deploy -Pgpg
+#       #   env:
+#       #     MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
+#       #     MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
+
+#       # - name: Set up settings.xml
+#       #   run: echo "<settings><servers><server><id>nexus-releases</id><username>${{ secrets.MAVEN_USERNAME }}</username><password>${{ secrets.MAVEN_PASSWORD }}</password></server></servers></settings>" > $HOME/.m2/settings.xml
         
-      # - name: Checkout code
-      #   uses: actions/checkout@v1
+#       # - name: Checkout code
+#       #   uses: actions/checkout@v1
 
-      # - name: set up JDK 11
-      #   uses: actions/setup-java@v1
-      #   with:
-          # java-version: 11
-          # distribution: 'temurin'
-          # server-id: ossrh
-          # server-username: MAVEN_USERNAME
-          # server-password: MAVEN_PASSWORD
-      #     gpg-private-key: ${{ secrets.OSSRH_GPG_SECRET_KEY }}
+#       # - name: set up JDK 11
+#       #   uses: actions/setup-java@v1
+#       #   with:
+#           # java-version: 11
+#           # distribution: 'temurin'
+#           # server-id: ossrh
+#           # server-username: MAVEN_USERNAME
+#           # server-password: MAVEN_PASSWORD
+#       #     gpg-private-key: ${{ secrets.OSSRH_GPG_SECRET_KEY }}
 
-      # - name: Set up GPG
-      #   run: |
-      #     echo "$OSSRH_GPG_SECRET_KEY" | gpg --import
-      #   env:
-      #     GPG_PRIVATE_KEY: ${{ secrets.OSSRH_GPG_SECRET_KEY }}
-      #     GPG_KEY_ID: ${{ secrets.OSSRH_GPG_SECRET_KEY_ID }}
-      #     GPG_KEY_PASSWORD: ${{ secrets.OSSRH_GPG_SECRET_KEY_PASSWORD }}
+#       # - name: Set up GPG
+#       #   run: |
+#       #     echo "$OSSRH_GPG_SECRET_KEY" | gpg --import
+#       #   env:
+#       #     GPG_PRIVATE_KEY: ${{ secrets.OSSRH_GPG_SECRET_KEY }}
+#       #     GPG_KEY_ID: ${{ secrets.OSSRH_GPG_SECRET_KEY_ID }}
+#       #     GPG_KEY_PASSWORD: ${{ secrets.OSSRH_GPG_SECRET_KEY_PASSWORD }}
 
-      # - name: Build and deploy
-      #   run: mvn clean deploy -Pgpg
-      #   env:
-      #     MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
-      #     MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
+#       # - name: Build and deploy
+#       #   run: mvn clean deploy -Pgpg
+#       #   env:
+#       #     MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
+#       #     MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
         
-      # - uses: actions/checkout@v2
-      # - name: Set up Maven Central Repository
-      #   uses: actions/setup-java@v2
-      #   with:
-      #     java-version: 8
-      #     distribution: 'adopt'
-      #     server-id: ossrh
-      #     server-username: MAVEN_USERNAME
-      #     server-password: MAVEN_PASSWORD
-      #     gpg-private-key: ${{ secrets.OSSRH_GPG_SECRET_KEY_ID }}
+#       # - uses: actions/checkout@v2
+#       # - name: Set up Maven Central Repository
+#       #   uses: actions/setup-java@v2
+#       #   with:
+#       #     java-version: 8
+#       #     distribution: 'adopt'
+#       #     server-id: ossrh
+#       #     server-username: MAVEN_USERNAME
+#       #     server-password: MAVEN_PASSWORD
+#       #     gpg-private-key: ${{ secrets.OSSRH_GPG_SECRET_KEY_ID }}
         
-      # - name: Build with Maven
-      #   run: mvn clean package -B
+#       # - name: Build with Maven
+#       #   run: mvn clean package -B
         
-      # - name: Publish package
-      #   run: |
-      #       mvn deploy -Dgpg.passphrase=${{ secrets.OSSRH_GPG_SECRET_KEY }}
-      #   env:
-      #     MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
-      #     MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
+#       # - name: Publish package
+#       #   run: |
+#       #       mvn deploy -Dgpg.passphrase=${{ secrets.OSSRH_GPG_SECRET_KEY }}
+#       #   env:
+#       #     MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
+#       #     MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
         
-      # - uses: actions/checkout@v4
-      # - name: Configure GPG Key
-      #   run: |
-      #     echo -n "$GPG_SIGNING_KEY" | base64 --decode | gpg --import
-      #   env:
-      #     GPG_SIGNING_KEY: ${{ secrets.OSSRH_GPG_SECRET_KEY }}
+#       # - uses: actions/checkout@v4
+#       # - name: Configure GPG Key
+#       #   run: |
+#       #     echo -n "$GPG_SIGNING_KEY" | base64 --decode | gpg --import
+#       #   env:
+#       #     GPG_SIGNING_KEY: ${{ secrets.OSSRH_GPG_SECRET_KEY }}
 
-      # - name: Set up Apache Maven Central
-      #   uses: actions/setup-java@v3
-      #   with: # running setup-java again overwrites the settings.xml
-      #     java-version: '11'
-      #     distribution: 'temurin'
-      #     server-id: ossrh # Value of the distributionManagement/repository/id field of the pom.xml
-      #     server-username: MAVEN_USERNAME # env variable for username in deploy
-      #     server-password: MAVEN_CENTRAL_TOKEN # env variable for token in deploy
-      #     gpg-private-key: MAVEN_GPG_KEY # Value of the GPG private key to import
-      #     gpg-passphrase: MAVEN_GPG_PASSPHRASE # env variable for GPG private key passphrase
+#       # - name: Set up Apache Maven Central
+#       #   uses: actions/setup-java@v3
+#       #   with: # running setup-java again overwrites the settings.xml
+#       #     java-version: '11'
+#       #     distribution: 'temurin'
+#       #     server-id: ossrh # Value of the distributionManagement/repository/id field of the pom.xml
+#       #     server-username: MAVEN_USERNAME # env variable for username in deploy
+#       #     server-password: MAVEN_CENTRAL_TOKEN # env variable for token in deploy
+#       #     gpg-private-key: MAVEN_GPG_KEY # Value of the GPG private key to import
+#       #     gpg-passphrase: MAVEN_GPG_PASSPHRASE # env variable for GPG private key passphrase
           
-      # - name: Build with Maven
-      #   run: mvn -B package --file pom.xml
+#       # - name: Build with Maven
+#       #   run: mvn -B package --file pom.xml
   
-      # - name: Publish to Apache Maven Central
-      #   run: mvn deploy
-      #   env:
-      #     MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
-      #     MAVEN_CENTRAL_TOKEN: ${{ secrets.OSSRH_TOKEN }}
-      #     MAVEN_GPG_PASSPHRASE: ${{ secrets.OSSRH_GPG_SECRET_KEY_PASSWORD }}
-      #     MAVEN_GPG_KEY: ${{ secrets.OSSRH_GPG_SECRET_KEY }}
+#       # - name: Publish to Apache Maven Central
+#       #   run: mvn deploy
+#       #   env:
+#       #     MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
+#       #     MAVEN_CENTRAL_TOKEN: ${{ secrets.OSSRH_TOKEN }}
+#       #     MAVEN_GPG_PASSPHRASE: ${{ secrets.OSSRH_GPG_SECRET_KEY_PASSWORD }}
+#       #     MAVEN_GPG_KEY: ${{ secrets.OSSRH_GPG_SECRET_KEY }}
 
         
       
-      # - name: Install gpg secret key
-      #   run: |
-      #     # Install gpg secret key
-      #     cat <(echo -e "${{ secrets.OSSRH_GPG_SECRET_KEY }}") | gpg --batch --import
-      #     # Verify gpg secret key
-      #     gpg --list-secret-keys --keyid-format LONG
+#       # - name: Install gpg secret key
+#       #   run: |
+#       #     # Install gpg secret key
+#       #     cat <(echo -e "${{ secrets.OSSRH_GPG_SECRET_KEY }}") | gpg --batch --import
+#       #     # Verify gpg secret key
+#       #     gpg --list-secret-keys --keyid-format LONG
           
-      # - name: Build with Maven
-      #   run: mvn -B package --file pom.xml
+#       # - name: Build with Maven
+#       #   run: mvn -B package --file pom.xml
         
-      # - name: Publish package
-      #   run: |
-      #     mvn \
-      #       --no-transfer-progress \
-      #       --batch-mode \
-      #       -Dgpg.passphrase=${{ secrets.OSSRH_GPG_SECRET_KEY_PASSWORD }} \
-      #       clean deploy
-      #   env:
-      #     MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
-      #     MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
+#       # - name: Publish package
+#       #   run: |
+#       #     mvn \
+#       #       --no-transfer-progress \
+#       #       --batch-mode \
+#       #       -Dgpg.passphrase=${{ secrets.OSSRH_GPG_SECRET_KEY_PASSWORD }} \
+#       #       clean deploy
+#       #   env:
+#       #     MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
+#       #     MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
 
