@@ -87,6 +87,23 @@ if(hasProperty('target') && target == 'android') {
     sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8
 
+
+
+    task sourcesJar(type: Jar) {
+        archiveClassifier.set('sources')
+        from sourceSets.main.java.srcDirs
+    }
+
+    task packageJavadoc(type: Jar) {
+        archiveClassifier.set('javadoc')
+        from javadoc.destinationDir
+    }
+
+    artifacts {
+        archives sourcesJar
+        archives packageJavadoc
+    }
+
     publishing {
         publications {
             maven(MavenPublication) {
