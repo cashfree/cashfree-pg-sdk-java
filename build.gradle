@@ -2,6 +2,8 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 apply plugin: 'java'
 apply plugin: 'com.diffplug.spotless'
+apply plugin: 'maven-publish'
+apply plugin: 'signing'
 
 group = 'com.cashfree.pg.java'
 version = '3.0.3'
