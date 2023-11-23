@@ -106,7 +106,7 @@ if(hasProperty('target') && target == 'android') {
 
     publishing {
         publications {
-            maven(MavenPublication) {
+            release(MavenPublication) {
 
                 groupId "com.cashfree.pg.java"
                 artifactId "cashfree_pg"
