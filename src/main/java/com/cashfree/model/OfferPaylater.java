@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * Offer object for paylater
  */
 @Schema(description = "Offer object for paylater")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-22T09:13:46.373979Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T07:31:22.472166Z[Etc/UTC]")
 public class OfferPaylater {
   public static final String SERIALIZED_NAME_PAYLATER = "paylater";
   @SerializedName(SERIALIZED_NAME_PAYLATER)

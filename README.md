@@ -18,9 +18,9 @@ Try out our interactive guides at [Cashfree Labs](https://labs.cashfree.com/) !
 ### Installation
 ```bash
 <dependency>
-  <groupId>com.cashfree</groupId>
+  <groupId>com.cashfree.pg.java</groupId>
   <artifactId>cashfree_pg</artifactId>
-  <version>3.0.2</version>
+  <version>3.0.3</version>
   <scope>compile</scope>
 </dependency>
 ```
