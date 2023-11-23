@@ -107,8 +107,44 @@ if(hasProperty('target') && target == 'android') {
     publishing {
         publications {
             maven(MavenPublication) {
-               artifactId = 'cashfree_pg'
-               from components.java
+
+                groupId "com.cashfree.pg.java"
+                artifactId "cashfree_pg"
+                version "3.0.3"
+
+                from components.java
+
+
+                artifact sourcesJar
+                artifact packageJavadoc
+
+                // Mostly self-explanatory metadata
+                pom {
+                    name = "cashfree_pg"
+                    description = 'Cashfree Payments, PG Java SDK'
+                    url = 'https://github.com/cashfree/cashfree-pg-sdk-java'
+                    licenses {
+                        license {
+                            name = 'Apache License'
+                            url = 'https://github.com/cashfree/cashfree-pg-sdk-java/blob/master/LICENSE.md'
+                        }
+                    }
+                    developers {
+                        developer {
+                            id = 'cashfree'
+                            name = 'Cashfree Payments'
+                            email = 'developers@cashfree.com'
+                        }
+                        // Add all other devs here...
+                    }
+
+                    // Version control info - if you're using GitHub, follow the
+                    // format as seen here
+                    scm {
+                        connection = 'scm:git:github.com/cashfree/cashfree-pg-sdk-java.git'
+                        developerConnection = 'scm:git:ssh://github.com/cashfree/cashfree-pg-sdk-java.git'
+                        url = 'https://github.com/cashfree/cashfree-pg-sdk-java'
+                    }
             }
         }
         repositories {
