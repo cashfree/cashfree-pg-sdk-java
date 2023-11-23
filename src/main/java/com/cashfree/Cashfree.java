@@ -89,6 +89,18 @@ public class Cashfree {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 502 </td><td> Bank related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
      */
     public okhttp3.Call pGEligibilityFetchCardlessEMICall(String xApiVersion, EligibilityFetchCardlessEMIRequest eligibilityFetchCardlessEMIRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
@@ -162,7 +174,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.3");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -204,6 +216,17 @@ public class Cashfree {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
      */
     public okhttp3.Call pGEligibilityFetchOffersCall(String xApiVersion, EligibilityFetchOffersRequest eligibilityFetchOffersRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
@@ -277,7 +300,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.3");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -319,7 +342,18 @@ public class Cashfree {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 502 </td><td> Bank related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
      */
     public okhttp3.Call pGEligibilityFetchPaylaterCall(String xApiVersion, EligibilityFetchPaylaterRequest eligibilityFetchPaylaterRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
@@ -393,7 +427,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.3");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -435,6 +469,18 @@ public class Cashfree {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 502 </td><td> Bank related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
      */
     public okhttp3.Call pGEligibilityFetchPaymentMethodsCall(String xApiVersion, EligibilityFetchPaymentMethodsRequest eligibilityFetchPaymentMethodsRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
@@ -508,7 +554,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.3");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -550,6 +596,17 @@ public class Cashfree {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
      */
     public okhttp3.Call pGCreateOfferCall(String xApiVersion, CreateOfferRequest createOfferRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
@@ -623,7 +680,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.3");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -665,6 +722,17 @@ public class Cashfree {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
      */
     public okhttp3.Call pGFetchOfferCall(String xApiVersion, String offerId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
@@ -738,7 +806,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.3");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -780,6 +848,17 @@ public class Cashfree {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
      */
     public okhttp3.Call pGCreateOrderCall(String xApiVersion, CreateOrderRequest createOrderRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
@@ -853,7 +932,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.3");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -895,6 +974,17 @@ public class Cashfree {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
      */
     public okhttp3.Call pGFetchOrderCall(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
@@ -968,7 +1058,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.3");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1010,6 +1100,17 @@ public class Cashfree {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
      */
     public okhttp3.Call pGCancelLinkCall(String xApiVersion, String linkId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
@@ -1083,7 +1184,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.3");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1125,6 +1226,17 @@ public class Cashfree {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
      */
     public okhttp3.Call pGCreateLinkCall(String xApiVersion, CreateLinkRequest createLinkRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
@@ -1198,7 +1310,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.3");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1240,6 +1352,18 @@ public class Cashfree {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 502 </td><td> Bank related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
      */
     public okhttp3.Call pGFetchLinkCall(String xApiVersion, String linkId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
@@ -1313,7 +1437,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.3");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1355,6 +1479,17 @@ public class Cashfree {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
      */
     public okhttp3.Call pGLinkFetchOrdersCall(String xApiVersion, String linkId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
@@ -1428,7 +1563,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.3");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1471,6 +1606,18 @@ public class Cashfree {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 502 </td><td> Bank related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
      */
     public okhttp3.Call pGAuthorizeOrderCall(String xApiVersion, String orderId, AuthorizeOrderRequest authorizeOrderRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
@@ -1545,7 +1692,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.3");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1593,6 +1740,18 @@ public class Cashfree {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 502 </td><td> Bank related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
      */
     public okhttp3.Call pGOrderAuthenticatePaymentCall(String xApiVersion, String cfPaymentId, OrderAuthenticatePaymentRequest orderAuthenticatePaymentRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
@@ -1667,7 +1826,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.3");
 
         String[] localVarAuthNames = new String[] {  };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1715,6 +1874,18 @@ public class Cashfree {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 502 </td><td> Bank related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
      */
     public okhttp3.Call pGOrderFetchPaymentCall(String xApiVersion, String orderId, String cfPaymentId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
@@ -1789,7 +1960,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.3");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1836,6 +2007,18 @@ public class Cashfree {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> List of payment enttity </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 502 </td><td> Bank related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
      */
     public okhttp3.Call pGOrderFetchPaymentsCall(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
@@ -1909,7 +2092,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.3");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1951,6 +2134,18 @@ public class Cashfree {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 502 </td><td> Bank related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
      */
     public okhttp3.Call pGPayOrderCall(String xApiVersion, PayOrderRequest payOrderRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
@@ -2024,7 +2219,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.3");
 
         String[] localVarAuthNames = new String[] {  };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2068,6 +2263,17 @@ public class Cashfree {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
      */
     public okhttp3.Call pGFetchReconCall(String xApiVersion, FetchReconRequest fetchReconRequest, String contentType, String xRequestId, UUID xIdempotencyKey, String accept, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
@@ -2149,7 +2355,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.3");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2192,6 +2398,18 @@ public class Cashfree {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Refund created </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 502 </td><td> Bank related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
      */
     public okhttp3.Call pGOrderCreateRefundCall(String xApiVersion, String orderId, OrderCreateRefundRequest orderCreateRefundRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
@@ -2266,7 +2484,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.3");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2314,6 +2532,18 @@ public class Cashfree {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 502 </td><td> Bank related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
      */
     public okhttp3.Call pGOrderFetchRefundCall(String xApiVersion, String orderId, String refundId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
@@ -2388,7 +2618,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.3");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2435,6 +2665,17 @@ public class Cashfree {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
      */
     public okhttp3.Call pGOrderFetchRefundsCall(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
@@ -2508,7 +2749,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.3");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2552,6 +2793,17 @@ public class Cashfree {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
      */
     public okhttp3.Call pGFetchSettlementsCall(String xApiVersion, FetchSettlementsRequest fetchSettlementsRequest, String contentType, String xRequestId, UUID xIdempotencyKey, String accept, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
@@ -2633,7 +2885,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.3");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2677,6 +2929,17 @@ public class Cashfree {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
      */
     public okhttp3.Call pGSettlementFetchReconCall(String xApiVersion, SettlementFetchReconRequest settlementFetchReconRequest, String contentType, String xRequestId, UUID xIdempotencyKey, String accept, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
@@ -2758,7 +3021,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.3");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2800,6 +3063,18 @@ public class Cashfree {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 502 </td><td> Bank related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
      */
     public okhttp3.Call pGOrderFetchSettlementCall(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
@@ -2873,7 +3148,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.3");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2915,6 +3190,17 @@ public class Cashfree {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Terminal created </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
      */
     public okhttp3.Call sposCreateTerminalCall(String xApiVersion, CreateTerminalRequest createTerminalRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
@@ -2988,7 +3274,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.3");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3030,6 +3316,17 @@ public class Cashfree {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Terminal Transaction created </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
      */
     public okhttp3.Call sposCreateTerminalTransactionCall(String xApiVersion, CreateTerminalTransactionRequest createTerminalTransactionRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
@@ -3103,7 +3400,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.3");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3145,6 +3442,17 @@ public class Cashfree {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
      */
     public okhttp3.Call sposFetchTerminalCall(String xApiVersion, String terminalPhoneNo, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
@@ -3218,7 +3526,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.3");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3261,6 +3569,17 @@ public class Cashfree {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Fetched Terminal QR Codes </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
      */
     public okhttp3.Call sposFetchTerminalQRCodesCall(String xApiVersion, String terminalPhoneNo, String cfTerminalId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
@@ -3341,7 +3660,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.3");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3389,6 +3708,18 @@ public class Cashfree {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 502 </td><td> Bank related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
      */
     public okhttp3.Call pGCustomerDeleteInstrumentCall(String xApiVersion, String customerId, String instrumentId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
@@ -3463,7 +3794,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.3");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3511,6 +3842,18 @@ public class Cashfree {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 502 </td><td> Bank related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
      */
     public okhttp3.Call pGCustomerFetchInstrumentCall(String xApiVersion, String customerId, String instrumentId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
@@ -3585,7 +3928,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.3");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3633,6 +3976,17 @@ public class Cashfree {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
      */
     public okhttp3.Call pGCustomerFetchInstrumentsCall(String xApiVersion, String customerId, String instrumentType, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
@@ -3710,7 +4064,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.3");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3758,6 +4112,18 @@ public class Cashfree {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 502 </td><td> Bank related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
      */
     public okhttp3.Call pGCustomerInstrumentsFetchCryptogramCall(String xApiVersion, String customerId, String instrumentId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
@@ -3832,7 +4198,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-3.0.3");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3968,7 +4334,7 @@ static class ApiClient {
         json = new JSON();
 
         // Set default User-Agent.
-        setUserAgent("OpenAPI-Generator/3.0.2/java");
+        setUserAgent("OpenAPI-Generator/3.0.3/java");
 
         authentications = new HashMap<String, Authentication>();
     }

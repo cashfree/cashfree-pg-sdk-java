@@ -56,7 +56,7 @@ import com.cashfree.JSON;
  * Settlement detailed recon response
  */
 @Schema(description = "Settlement detailed recon response")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-22T09:13:46.373979Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T07:35:58.661904Z[Etc/UTC]")
 public class ReconEntity {
   public static final String SERIALIZED_NAME_CURSOR = "cursor";
   @SerializedName(SERIALIZED_NAME_CURSOR)
