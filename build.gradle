@@ -145,18 +145,19 @@ if(hasProperty('target') && target == 'android') {
                         developerConnection = 'scm:git:ssh://github.com/cashfree/cashfree-pg-sdk-java.git'
                         url = 'https://github.com/cashfree/cashfree-pg-sdk-java'
                     }
+                }
             }
         }
-        repositories {
-            maven {
-              name = "OSSRH"
-              url = "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
-              credentials {
-                username = System.getenv("MAVEN_USERNAME")
-                password = System.getenv("MAVEN_PASSWORD")
-              }
+            repositories {
+                maven {
+                    name = "OSSRH"
+                    url = "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+                    credentials {
+                        username = System.getenv("MAVEN_USERNAME")
+                        password = System.getenv("MAVEN_PASSWORD")
+                    }
+                }
             }
-          }
     }
 
     signing {
