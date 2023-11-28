@@ -55,10 +55,10 @@ import com.cashfree.JSON;
  */
 @Schema(description = "Specify either the Settlement ID, Settlement UTR, or start date and end date to fetch the settlement details.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:37:25.496187Z[Etc/UTC]")
-public class FetchSettlementsRequestFilters {
+public class SettlementFetchReconRequestFilters {
   public static final String SERIALIZED_NAME_CF_SETTLEMENT_IDS = "cf_settlement_ids";
   @SerializedName(SERIALIZED_NAME_CF_SETTLEMENT_IDS)
-  private List<Long> cfSettlementIds;
+  private List<Integer> cfSettlementIds;
 
   public static final String SERIALIZED_NAME_SETTLEMENT_UTRS = "settlement_utrs";
   @SerializedName(SERIALIZED_NAME_SETTLEMENT_UTRS)
@@ -72,16 +72,16 @@ public class FetchSettlementsRequestFilters {
   @SerializedName(SERIALIZED_NAME_END_DATE)
   private String endDate;
 
-  public FetchSettlementsRequestFilters() {
+  public SettlementFetchReconRequestFilters() {
   }
 
-  public FetchSettlementsRequestFilters cfSettlementIds(List<Long> cfSettlementIds) {
+  public SettlementFetchReconRequestFilters cfSettlementIds(List<Integer> cfSettlementIds) {
     
     this.cfSettlementIds = cfSettlementIds;
     return this;
   }
 
-  public FetchSettlementsRequestFilters addCfSettlementIdsItem(Long cfSettlementIdsItem) {
+  public SettlementFetchReconRequestFilters addCfSettlementIdsItem(Integer cfSettlementIdsItem) {
     if (this.cfSettlementIds == null) {
       this.cfSettlementIds = new ArrayList<>();
     }
@@ -95,23 +95,23 @@ public class FetchSettlementsRequestFilters {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "List of settlement IDs for which you want the settlement reconciliation details.")
-  public List<Long> getCfSettlementIds() {
+  public List<Integer> getCfSettlementIds() {
     return cfSettlementIds;
   }
 
 
-  public void setCfSettlementIds(List<Long> cfSettlementIds) {
+  public void setCfSettlementIds(List<Integer> cfSettlementIds) {
     this.cfSettlementIds = cfSettlementIds;
   }
 
 
-  public FetchSettlementsRequestFilters settlementUtrs(List<String> settlementUtrs) {
+  public SettlementFetchReconRequestFilters settlementUtrs(List<String> settlementUtrs) {
     
     this.settlementUtrs = settlementUtrs;
     return this;
   }
 
-  public FetchSettlementsRequestFilters addSettlementUtrsItem(String settlementUtrsItem) {
+  public SettlementFetchReconRequestFilters addSettlementUtrsItem(String settlementUtrsItem) {
     if (this.settlementUtrs == null) {
       this.settlementUtrs = new ArrayList<>();
     }
@@ -135,7 +135,7 @@ public class FetchSettlementsRequestFilters {
   }
 
 
-  public FetchSettlementsRequestFilters startDate(String startDate) {
+  public SettlementFetchReconRequestFilters startDate(String startDate) {
     
     this.startDate = startDate;
     return this;
@@ -157,7 +157,7 @@ public class FetchSettlementsRequestFilters {
   }
 
 
-  public FetchSettlementsRequestFilters endDate(String endDate) {
+  public SettlementFetchReconRequestFilters endDate(String endDate) {
     
     this.endDate = endDate;
     return this;
@@ -188,11 +188,11 @@ public class FetchSettlementsRequestFilters {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    FetchSettlementsRequestFilters fetchSettlementsRequestFilters = (FetchSettlementsRequestFilters) o;
-    return Objects.equals(this.cfSettlementIds, fetchSettlementsRequestFilters.cfSettlementIds) &&
-        Objects.equals(this.settlementUtrs, fetchSettlementsRequestFilters.settlementUtrs) &&
-        Objects.equals(this.startDate, fetchSettlementsRequestFilters.startDate) &&
-        Objects.equals(this.endDate, fetchSettlementsRequestFilters.endDate);
+    SettlementFetchReconRequestFilters settlementFetchReconRequestFilters = (SettlementFetchReconRequestFilters) o;
+    return Objects.equals(this.cfSettlementIds, settlementFetchReconRequestFilters.cfSettlementIds) &&
+        Objects.equals(this.settlementUtrs, settlementFetchReconRequestFilters.settlementUtrs) &&
+        Objects.equals(this.startDate, settlementFetchReconRequestFilters.startDate) &&
+        Objects.equals(this.endDate, settlementFetchReconRequestFilters.endDate);
   }
 
   @Override
@@ -203,7 +203,7 @@ public class FetchSettlementsRequestFilters {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class FetchSettlementsRequestFilters {\n");
+    sb.append("class SettlementFetchReconRequestFilters {\n");
     sb.append("    cfSettlementIds: ").append(toIndentedString(cfSettlementIds)).append("\n");
     sb.append("    settlementUtrs: ").append(toIndentedString(settlementUtrs)).append("\n");
     sb.append("    startDate: ").append(toIndentedString(startDate)).append("\n");
@@ -243,7 +243,7 @@ public class FetchSettlementsRequestFilters {
   * Validates the JSON Element and throws an exception if issues found
   *
   * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to FetchSettlementsRequestFilters
+  * @throws IOException if the JSON Element is invalid with respect to SettlementFetchReconRequestFilters
   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
 
@@ -268,22 +268,22 @@ public class FetchSettlementsRequestFilters {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!FetchSettlementsRequestFilters.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'FetchSettlementsRequestFilters' and its subtypes
+       if (!SettlementFetchReconRequestFilters.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'SettlementFetchReconRequestFilters' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<FetchSettlementsRequestFilters> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(FetchSettlementsRequestFilters.class));
+       final TypeAdapter<SettlementFetchReconRequestFilters> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(SettlementFetchReconRequestFilters.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<FetchSettlementsRequestFilters>() {
+       return (TypeAdapter<T>) new TypeAdapter<SettlementFetchReconRequestFilters>() {
            @Override
-           public void write(JsonWriter out, FetchSettlementsRequestFilters value) throws IOException {
+           public void write(JsonWriter out, SettlementFetchReconRequestFilters value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public FetchSettlementsRequestFilters read(JsonReader in) throws IOException {
+           public SettlementFetchReconRequestFilters read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
              return thisAdapter.fromJsonTree(jsonElement);
@@ -294,18 +294,18 @@ public class FetchSettlementsRequestFilters {
   }
 
  /**
-  * Create an instance of FetchSettlementsRequestFilters given an JSON string
+  * Create an instance of SettlementFetchReconRequestFilters given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of FetchSettlementsRequestFilters
-  * @throws IOException if the JSON string is invalid with respect to FetchSettlementsRequestFilters
+  * @return An instance of SettlementFetchReconRequestFilters
+  * @throws IOException if the JSON string is invalid with respect to SettlementFetchReconRequestFilters
   */
-  public static FetchSettlementsRequestFilters fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, FetchSettlementsRequestFilters.class);
+  public static SettlementFetchReconRequestFilters fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, SettlementFetchReconRequestFilters.class);
   }
 
  /**
-  * Convert an instance of FetchSettlementsRequestFilters to an JSON string
+  * Convert an instance of SettlementFetchReconRequestFilters to an JSON string
   *
   * @return JSON string
   */

@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * Payment method for netbanking object
  */
 @Schema(description = "Payment method for netbanking object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T07:35:58.661904Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:37:25.496187Z[Etc/UTC]")
 public class NetBankingPaymentMethod {
   public static final String SERIALIZED_NAME_NETBANKING = "netbanking";
   @SerializedName(SERIALIZED_NAME_NETBANKING)
@@ -72,7 +72,7 @@ public class NetBankingPaymentMethod {
    * Get netbanking
    * @return netbanking
   **/
-  @javax.annotation.Nullable
+  @javax.annotation.Nonnull
   @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "")
   public Netbanking getNetbanking() {
     return netbanking;

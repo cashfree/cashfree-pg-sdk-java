@@ -53,11 +53,15 @@ import com.cashfree.JSON;
  * Payment Method Query Object
  */
 @Schema(description = "Payment Method Query Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T07:35:58.661904Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:37:25.496187Z[Etc/UTC]")
 public class PaymentMethodsQueries {
   public static final String SERIALIZED_NAME_AMOUNT = "amount";
   @SerializedName(SERIALIZED_NAME_AMOUNT)
   private BigDecimal amount;
+
+  public static final String SERIALIZED_NAME_ORDER_ID = "order_id";
+  @SerializedName(SERIALIZED_NAME_ORDER_ID)
+  private String orderId;
 
   public PaymentMethodsQueries() {
   }
@@ -85,6 +89,28 @@ public class PaymentMethodsQueries {
   }
 
 
+  public PaymentMethodsQueries orderId(String orderId) {
+    
+    this.orderId = orderId;
+    return this;
+  }
+
+   /**
+   * OrderId of the order. Either of &#x60;order_id&#x60; or &#x60;order_amount&#x60; is mandatory.
+   * @return orderId
+  **/
+  @javax.annotation.Nullable
+  @Schema(example = "order_413462PK1RI1IwYB1X69LgzUQWiSxYDF", requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "OrderId of the order. Either of `order_id` or `order_amount` is mandatory.")
+  public String getOrderId() {
+    return orderId;
+  }
+
+
+  public void setOrderId(String orderId) {
+    this.orderId = orderId;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -95,12 +121,13 @@ public class PaymentMethodsQueries {
       return false;
     }
     PaymentMethodsQueries paymentMethodsQueries = (PaymentMethodsQueries) o;
-    return Objects.equals(this.amount, paymentMethodsQueries.amount);
+    return Objects.equals(this.amount, paymentMethodsQueries.amount) &&
+        Objects.equals(this.orderId, paymentMethodsQueries.orderId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(amount);
+    return Objects.hash(amount, orderId);
   }
 
   @Override
@@ -108,6 +135,7 @@ public class PaymentMethodsQueries {
     StringBuilder sb = new StringBuilder();
     sb.append("class PaymentMethodsQueries {\n");
     sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
+    sb.append("    orderId: ").append(toIndentedString(orderId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -131,6 +159,7 @@ public class PaymentMethodsQueries {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("amount");
+    openapiFields.add("order_id");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -145,6 +174,9 @@ public class PaymentMethodsQueries {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("order_id") != null && !jsonObj.get("order_id").isJsonNull()) && !jsonObj.get("order_id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `order_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("order_id").toString()));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

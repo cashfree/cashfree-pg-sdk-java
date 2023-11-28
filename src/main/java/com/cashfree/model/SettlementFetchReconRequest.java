@@ -14,8 +14,8 @@
 package com.cashfree.model;
 
 import java.util.Objects;
-import com.cashfree.model.FetchSettlementsRequestFilters;
 import com.cashfree.model.FetchSettlementsRequestPagination;
+import com.cashfree.model.SettlementFetchReconRequestFilters;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -54,7 +54,7 @@ import com.cashfree.JSON;
  * Recon Request Object
  */
 @Schema(description = "Recon Request Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T07:35:58.661904Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:37:25.496187Z[Etc/UTC]")
 public class SettlementFetchReconRequest {
   public static final String SERIALIZED_NAME_PAGINATION = "pagination";
   @SerializedName(SERIALIZED_NAME_PAGINATION)
@@ -62,7 +62,7 @@ public class SettlementFetchReconRequest {
 
   public static final String SERIALIZED_NAME_FILTERS = "filters";
   @SerializedName(SERIALIZED_NAME_FILTERS)
-  private FetchSettlementsRequestFilters filters;
+  private SettlementFetchReconRequestFilters filters;
 
   public SettlementFetchReconRequest() {
   }
@@ -89,7 +89,7 @@ public class SettlementFetchReconRequest {
   }
 
 
-  public SettlementFetchReconRequest filters(FetchSettlementsRequestFilters filters) {
+  public SettlementFetchReconRequest filters(SettlementFetchReconRequestFilters filters) {
     
     this.filters = filters;
     return this;
@@ -101,12 +101,12 @@ public class SettlementFetchReconRequest {
   **/
   @javax.annotation.Nonnull
   @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "")
-  public FetchSettlementsRequestFilters getFilters() {
+  public SettlementFetchReconRequestFilters getFilters() {
     return filters;
   }
 
 
-  public void setFilters(FetchSettlementsRequestFilters filters) {
+  public void setFilters(SettlementFetchReconRequestFilters filters) {
     this.filters = filters;
   }
 
@@ -186,7 +186,7 @@ public class SettlementFetchReconRequest {
       // validate the required field `pagination`
       FetchSettlementsRequestPagination.validateJsonElement(jsonObj.get("pagination"));
       // validate the required field `filters`
-      FetchSettlementsRequestFilters.validateJsonElement(jsonObj.get("filters"));
+      SettlementFetchReconRequestFilters.validateJsonElement(jsonObj.get("filters"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

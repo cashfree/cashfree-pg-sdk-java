@@ -52,15 +52,15 @@ import com.cashfree.JSON;
  * Request body to create a terminal transaction
  */
 @Schema(description = "Request body to create a terminal transaction")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T07:35:58.661904Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:37:25.496187Z[Etc/UTC]")
 public class CreateTerminalTransactionRequest {
   public static final String SERIALIZED_NAME_CF_ORDER_ID = "cf_order_id";
   @SerializedName(SERIALIZED_NAME_CF_ORDER_ID)
-  private Integer cfOrderId;
+  private Long cfOrderId;
 
   public static final String SERIALIZED_NAME_CF_TERMINAL_ID = "cf_terminal_id";
   @SerializedName(SERIALIZED_NAME_CF_TERMINAL_ID)
-  private Integer cfTerminalId;
+  private Long cfTerminalId;
 
   public static final String SERIALIZED_NAME_PAYMENT_METHOD = "payment_method";
   @SerializedName(SERIALIZED_NAME_PAYMENT_METHOD)
@@ -73,7 +73,7 @@ public class CreateTerminalTransactionRequest {
   public CreateTerminalTransactionRequest() {
   }
 
-  public CreateTerminalTransactionRequest cfOrderId(Integer cfOrderId) {
+  public CreateTerminalTransactionRequest cfOrderId(Long cfOrderId) {
     
     this.cfOrderId = cfOrderId;
     return this;
@@ -85,17 +85,17 @@ public class CreateTerminalTransactionRequest {
   **/
   @javax.annotation.Nonnull
   @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "cashfree order ID that was returned while creating an order.")
-  public Integer getCfOrderId() {
+  public Long getCfOrderId() {
     return cfOrderId;
   }
 
 
-  public void setCfOrderId(Integer cfOrderId) {
+  public void setCfOrderId(Long cfOrderId) {
     this.cfOrderId = cfOrderId;
   }
 
 
-  public CreateTerminalTransactionRequest cfTerminalId(Integer cfTerminalId) {
+  public CreateTerminalTransactionRequest cfTerminalId(Long cfTerminalId) {
     
     this.cfTerminalId = cfTerminalId;
     return this;
@@ -107,12 +107,12 @@ public class CreateTerminalTransactionRequest {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "cashfree terminal id. this is a required parameter when you do not provide the terminal phone number.")
-  public Integer getCfTerminalId() {
+  public Long getCfTerminalId() {
     return cfTerminalId;
   }
 
 
-  public void setCfTerminalId(Integer cfTerminalId) {
+  public void setCfTerminalId(Long cfTerminalId) {
     this.cfTerminalId = cfTerminalId;
   }
 

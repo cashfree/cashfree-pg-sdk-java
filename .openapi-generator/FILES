@@ -125,6 +125,7 @@ docs/RefundsApi.md
 docs/SavedInstrumentMeta.md
 docs/SettlementEntity.md
 docs/SettlementFetchReconRequest.md
+docs/SettlementFetchReconRequestFilters.md
 docs/SettlementReconEntity.md
 docs/SettlementReconEntityDataInner.md
 docs/SettlementReconciliationApi.md
@@ -293,6 +294,7 @@ src/main/java/com/cashfree/model/RefundURLObject.java
 src/main/java/com/cashfree/model/SavedInstrumentMeta.java
 src/main/java/com/cashfree/model/SettlementEntity.java
 src/main/java/com/cashfree/model/SettlementFetchReconRequest.java
+src/main/java/com/cashfree/model/SettlementFetchReconRequestFilters.java
 src/main/java/com/cashfree/model/SettlementReconEntity.java
 src/main/java/com/cashfree/model/SettlementReconEntityDataInner.java
 src/main/java/com/cashfree/model/SettlementURLObject.java
@@ -429,6 +431,7 @@ src/test/java/com/cashfree/model/RefundSpeedTest.java
 src/test/java/com/cashfree/model/RefundURLObjectTest.java
 src/test/java/com/cashfree/model/SavedInstrumentMetaTest.java
 src/test/java/com/cashfree/model/SettlementEntityTest.java
+src/test/java/com/cashfree/model/SettlementFetchReconRequestFiltersTest.java
 src/test/java/com/cashfree/model/SettlementFetchReconRequestTest.java
 src/test/java/com/cashfree/model/SettlementReconEntityDataInnerTest.java
 src/test/java/com/cashfree/model/SettlementReconEntityTest.java
