@@ -58,6 +58,53 @@ public class JSON {
     @SuppressWarnings("unchecked")
     public static GsonBuilder createGson() {
         GsonFireBuilder fireBuilder = new GsonFireBuilder()
+                .registerTypeSelector(com.cashfree.model.OfferValidationsPaymentMethod.class, new TypeSelector<com.cashfree.model.OfferValidationsPaymentMethod>() {
+                    @Override
+                    public Class<? extends com.cashfree.model.OfferValidationsPaymentMethod> getClassForElement(JsonElement readElement) {
+                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
+                        classByDiscriminatorValue.put("OfferAll", com.cashfree.model.OfferAll.class);
+                        classByDiscriminatorValue.put("OfferCard", com.cashfree.model.OfferCard.class);
+                        classByDiscriminatorValue.put("OfferEMI", com.cashfree.model.OfferEMI.class);
+                        classByDiscriminatorValue.put("OfferNB", com.cashfree.model.OfferNB.class);
+                        classByDiscriminatorValue.put("OfferPaylater", com.cashfree.model.OfferPaylater.class);
+                        classByDiscriminatorValue.put("OfferUPI", com.cashfree.model.OfferUPI.class);
+                        classByDiscriminatorValue.put("OfferWallet", com.cashfree.model.OfferWallet.class);
+                        classByDiscriminatorValue.put("OfferValidations_payment_method", com.cashfree.model.OfferValidationsPaymentMethod.class);
+                        return getClassByDiscriminator(classByDiscriminatorValue,
+                                getDiscriminatorValue(readElement, "type"));
+                    }
+          })
+                .registerTypeSelector(com.cashfree.model.PayOrderRequestPaymentMethod.class, new TypeSelector<com.cashfree.model.PayOrderRequestPaymentMethod>() {
+                    @Override
+                    public Class<? extends com.cashfree.model.PayOrderRequestPaymentMethod> getClassForElement(JsonElement readElement) {
+                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
+                        classByDiscriminatorValue.put("AppPaymentMethod", com.cashfree.model.AppPaymentMethod.class);
+                        classByDiscriminatorValue.put("CardEMIPaymentMethod", com.cashfree.model.CardEMIPaymentMethod.class);
+                        classByDiscriminatorValue.put("CardPaymentMethod", com.cashfree.model.CardPaymentMethod.class);
+                        classByDiscriminatorValue.put("CardlessEMIPaymentMethod", com.cashfree.model.CardlessEMIPaymentMethod.class);
+                        classByDiscriminatorValue.put("NetBankingPaymentMethod", com.cashfree.model.NetBankingPaymentMethod.class);
+                        classByDiscriminatorValue.put("PaylaterPaymentMethod", com.cashfree.model.PaylaterPaymentMethod.class);
+                        classByDiscriminatorValue.put("UPIPaymentMethod", com.cashfree.model.UPIPaymentMethod.class);
+                        classByDiscriminatorValue.put("PayOrderRequest_payment_method", com.cashfree.model.PayOrderRequestPaymentMethod.class);
+                        return getClassByDiscriminator(classByDiscriminatorValue,
+                                getDiscriminatorValue(readElement, "type"));
+                    }
+          })
+                .registerTypeSelector(com.cashfree.model.PaymentMethodInPaymentsEntityPaymentMethod.class, new TypeSelector<com.cashfree.model.PaymentMethodInPaymentsEntityPaymentMethod>() {
+                    @Override
+                    public Class<? extends com.cashfree.model.PaymentMethodInPaymentsEntityPaymentMethod> getClassForElement(JsonElement readElement) {
+                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
+                        classByDiscriminatorValue.put("PaymentMethodAppInPaymentsEntity", com.cashfree.model.PaymentMethodAppInPaymentsEntity.class);
+                        classByDiscriminatorValue.put("PaymentMethodCardInPaymentsEntity", com.cashfree.model.PaymentMethodCardInPaymentsEntity.class);
+                        classByDiscriminatorValue.put("PaymentMethodCardlessEMIInPaymentsEntity", com.cashfree.model.PaymentMethodCardlessEMIInPaymentsEntity.class);
+                        classByDiscriminatorValue.put("PaymentMethodNetBankingInPaymentsEntity", com.cashfree.model.PaymentMethodNetBankingInPaymentsEntity.class);
+                        classByDiscriminatorValue.put("PaymentMethodPaylaterInPaymentsEntity", com.cashfree.model.PaymentMethodPaylaterInPaymentsEntity.class);
+                        classByDiscriminatorValue.put("PaymentMethodUPIInPaymentsEntity", com.cashfree.model.PaymentMethodUPIInPaymentsEntity.class);
+                        classByDiscriminatorValue.put("PaymentMethodInPaymentsEntity_payment_method", com.cashfree.model.PaymentMethodInPaymentsEntityPaymentMethod.class);
+                        return getClassByDiscriminator(classByDiscriminatorValue,
+                                getDiscriminatorValue(readElement, "type"));
+                    }
+          })
         ;
         GsonBuilder builder = fireBuilder.createGsonBuilder();
         return builder;

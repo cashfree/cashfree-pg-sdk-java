@@ -56,7 +56,7 @@ import com.cashfree.JSON;
  * Offer entity object
  */
 @Schema(description = "Offer entity object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T07:35:58.661904Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T12:35:07.527201Z[Etc/UTC]")
 public class OfferEntity {
   public static final String SERIALIZED_NAME_OFFER_ID = "offer_id";
   @SerializedName(SERIALIZED_NAME_OFFER_ID)

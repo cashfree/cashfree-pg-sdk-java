@@ -6,19 +6,16 @@ apply plugin: 'maven-publish'
 apply plugin: 'signing'
 
 group = 'com.cashfree.pg.java'
-version = '3.0.3'
+version = '3.0.5'
 
 buildscript {
     repositories {
         mavenCentral()
-        maven {
-            url = uri("https://plugins.gradle.org/m2/")
-        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.+'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
         classpath 'com.diffplug.spotless:spotless-plugin-gradle:6.11.0'
-        classpath 'io.github.gradle-nexus:publish-plugin:1.1.0'
     }
 }
 apply plugin: 'io.github.gradle-nexus.publish-plugin'
@@ -110,11 +107,12 @@ if(hasProperty('target') && target == 'android') {
 
     publishing {
         publications {
+
             release(MavenPublication) {
 
-                groupId "com.cashfree.pg.java"
-                artifactId "cashfree_pg"
-                version "3.0.3"
+                groupId 'com.cashfree.pg.java'
+                artifactId 'cashfree_pg'
+                version '3.0.5'
 
                 from components.java
 
@@ -124,7 +122,7 @@ if(hasProperty('target') && target == 'android') {
 
                 // Mostly self-explanatory metadata
                 pom {
-                    name = "cashfree_pg"
+                    name = 'cashfree_pg'
                     description = 'Cashfree Payments, PG Java SDK'
                     url = 'https://github.com/cashfree/cashfree-pg-sdk-java'
                     licenses {
@@ -152,7 +150,7 @@ if(hasProperty('target') && target == 'android') {
                 }
             }
         }
-            repositories {
+        repositories {
                 maven {
                     name = "OSSRH"
                     url = "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
