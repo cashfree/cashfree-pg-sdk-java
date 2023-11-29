@@ -58,11 +58,11 @@ import com.cashfree.JSON;
  * Payment link success creation response object
  */
 @Schema(description = "Payment link success creation response object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T07:35:58.661904Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:37:25.496187Z[Etc/UTC]")
 public class LinkEntity {
   public static final String SERIALIZED_NAME_CF_LINK_ID = "cf_link_id";
   @SerializedName(SERIALIZED_NAME_CF_LINK_ID)
-  private Integer cfLinkId;
+  private Long cfLinkId;
 
   public static final String SERIALIZED_NAME_LINK_ID = "link_id";
   @SerializedName(SERIALIZED_NAME_LINK_ID)
@@ -131,7 +131,7 @@ public class LinkEntity {
   public LinkEntity() {
   }
 
-  public LinkEntity cfLinkId(Integer cfLinkId) {
+  public LinkEntity cfLinkId(Long cfLinkId) {
     
     this.cfLinkId = cfLinkId;
     return this;
@@ -143,12 +143,12 @@ public class LinkEntity {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public Integer getCfLinkId() {
+  public Long getCfLinkId() {
     return cfLinkId;
   }
 
 
-  public void setCfLinkId(Integer cfLinkId) {
+  public void setCfLinkId(Long cfLinkId) {
     this.cfLinkId = cfLinkId;
   }
 

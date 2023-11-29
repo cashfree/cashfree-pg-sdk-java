@@ -65,7 +65,7 @@ import com.cashfree.JSON;
  * The complete order entity
  */
 @Schema(description = "The complete order entity")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T07:35:58.661904Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:37:25.496187Z[Etc/UTC]")
 public class OrderEntity {
   public static final String SERIALIZED_NAME_CF_ORDER_ID = "cf_order_id";
   @SerializedName(SERIALIZED_NAME_CF_ORDER_ID)

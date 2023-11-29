@@ -8,7 +8,7 @@ Payment link success creation response object
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**cfLinkId** | **Integer** |  |  [optional] |
+|**cfLinkId** | **Long** |  |  [optional] |
 |**linkId** | **String** |  |  [optional] |
 |**linkStatus** | **String** |  |  [optional] |
 |**linkCurrency** | **String** |  |  [optional] |

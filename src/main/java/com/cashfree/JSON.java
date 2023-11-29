@@ -204,6 +204,7 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.SavedInstrumentMeta.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.SettlementEntity.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.SettlementFetchReconRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.SettlementFetchReconRequestFilters.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.SettlementReconEntity.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.SettlementReconEntityDataInner.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.SettlementURLObject.CustomTypeAdapterFactory());

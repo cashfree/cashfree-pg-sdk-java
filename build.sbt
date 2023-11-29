@@ -2,7 +2,7 @@ lazy val root = (project in file(".")).
   settings(
     organization := "com.cashfree.pg.java",
     name := "cashfree_pg",
-    version := "3.0.3",
+    version := "3.0.5",
     scalaVersion := "2.11.4",
     scalacOptions ++= Seq("-feature"),
     javacOptions in compile ++= Seq("-Xlint:deprecation"),
