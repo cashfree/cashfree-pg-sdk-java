@@ -11,11 +11,15 @@ version = '3.0.5'
 buildscript {
     repositories {
         mavenCentral()
+        maven {
+            url = uri("https://plugins.gradle.org/m2/")
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.+'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
         classpath 'com.diffplug.spotless:spotless-plugin-gradle:6.11.0'
+        classpath 'io.github.gradle-nexus:publish-plugin:1.1.0'
     }
 }
 apply plugin: 'io.github.gradle-nexus.publish-plugin'
