@@ -70,7 +70,7 @@ import com.google.gson.JsonParseException;
 
 import com.cashfree.JSON;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:37:25.496187Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-14T10:44:30.379726Z[Etc/UTC]")
 public class OfferValidationsPaymentMethod extends AbstractOpenApiSchema {
     private static final Logger log = Logger.getLogger(OfferValidationsPaymentMethod.class.getName());
 

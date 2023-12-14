@@ -53,15 +53,15 @@ import com.cashfree.JSON;
  * Settlement entity object
  */
 @Schema(description = "Settlement entity object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:37:25.496187Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-14T10:44:30.379726Z[Etc/UTC]")
 public class SettlementEntity {
   public static final String SERIALIZED_NAME_CF_PAYMENT_ID = "cf_payment_id";
   @SerializedName(SERIALIZED_NAME_CF_PAYMENT_ID)
-  private Integer cfPaymentId;
+  private Long cfPaymentId;
 
   public static final String SERIALIZED_NAME_CF_SETTLEMENT_ID = "cf_settlement_id";
   @SerializedName(SERIALIZED_NAME_CF_SETTLEMENT_ID)
-  private Integer cfSettlementId;
+  private Long cfSettlementId;
 
   public static final String SERIALIZED_NAME_SETTLEMENT_CURRENCY = "settlement_currency";
   @SerializedName(SERIALIZED_NAME_SETTLEMENT_CURRENCY)
@@ -114,7 +114,7 @@ public class SettlementEntity {
   public SettlementEntity() {
   }
 
-  public SettlementEntity cfPaymentId(Integer cfPaymentId) {
+  public SettlementEntity cfPaymentId(Long cfPaymentId) {
     
     this.cfPaymentId = cfPaymentId;
     return this;
@@ -126,17 +126,17 @@ public class SettlementEntity {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public Integer getCfPaymentId() {
+  public Long getCfPaymentId() {
     return cfPaymentId;
   }
 
 
-  public void setCfPaymentId(Integer cfPaymentId) {
+  public void setCfPaymentId(Long cfPaymentId) {
     this.cfPaymentId = cfPaymentId;
   }
 
 
-  public SettlementEntity cfSettlementId(Integer cfSettlementId) {
+  public SettlementEntity cfSettlementId(Long cfSettlementId) {
     
     this.cfSettlementId = cfSettlementId;
     return this;
@@ -148,12 +148,12 @@ public class SettlementEntity {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public Integer getCfSettlementId() {
+  public Long getCfSettlementId() {
     return cfSettlementId;
   }
 
 
-  public void setCfSettlementId(Integer cfSettlementId) {
+  public void setCfSettlementId(Long cfSettlementId) {
     this.cfSettlementId = cfSettlementId;
   }
 

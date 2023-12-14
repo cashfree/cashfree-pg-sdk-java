@@ -11,6 +11,8 @@ Cashfree's PG API Documentation - https://docs.cashfree.com/reference/pg-new-api
 
 Learn and understand payment gateway workflows at Cashfree Payments [here](https://docs.cashfree.com/docs/payment-gateway)
 
+Try out our interactive guides at [Cashfree Dev Studio](https://www.cashfree.com/devstudio) !
+
 ## Getting Started
 
 ### Installation
@@ -18,7 +20,7 @@ Learn and understand payment gateway workflows at Cashfree Payments [here](https
 <dependency>
   <groupId>com.cashfree.pg.java</groupId>
   <artifactId>cashfree_pg</artifactId>
-  <version>3.0.5</version>
+  <version>3.0.6</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -41,7 +43,7 @@ Generate your API keys (x-client-id , x-client-secret) from [Cashfree Merchant D
 Create Order
 ```java
 CustomerDetails customerDetails = new CustomerDetails();
-customerDetails.setCustomerId("123");
+customerDetails.setCustomerId("walterwNrcMi");
 customerDetails.setCustomerPhone("9999999999");
 
 CreateOrderRequest request = new CreateOrderRequest();

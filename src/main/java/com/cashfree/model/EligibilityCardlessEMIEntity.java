@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * Carless EMI eligible entity
  */
 @Schema(description = "Carless EMI eligible entity")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:37:25.496187Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-14T10:44:30.379726Z[Etc/UTC]")
 public class EligibilityCardlessEMIEntity {
   public static final String SERIALIZED_NAME_ELIGIBILITY = "eligibility";
   @SerializedName(SERIALIZED_NAME_ELIGIBILITY)

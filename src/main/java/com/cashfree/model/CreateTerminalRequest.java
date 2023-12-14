@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * Request body to create a terminal
  */
 @Schema(description = "Request body to create a terminal")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:37:25.496187Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-14T10:44:30.379726Z[Etc/UTC]")
 public class CreateTerminalRequest {
   public static final String SERIALIZED_NAME_TERMINAL_ID = "terminal_id";
   @SerializedName(SERIALIZED_NAME_TERMINAL_ID)

@@ -58,11 +58,11 @@ import com.cashfree.JSON;
  * The refund entity
  */
 @Schema(description = "The refund entity")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:37:25.496187Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-14T10:44:30.379726Z[Etc/UTC]")
 public class RefundEntity {
   public static final String SERIALIZED_NAME_CF_PAYMENT_ID = "cf_payment_id";
   @SerializedName(SERIALIZED_NAME_CF_PAYMENT_ID)
-  private Integer cfPaymentId;
+  private Long cfPaymentId;
 
   public static final String SERIALIZED_NAME_CF_REFUND_ID = "cf_refund_id";
   @SerializedName(SERIALIZED_NAME_CF_REFUND_ID)
@@ -339,7 +339,7 @@ public class RefundEntity {
   public RefundEntity() {
   }
 
-  public RefundEntity cfPaymentId(Integer cfPaymentId) {
+  public RefundEntity cfPaymentId(Long cfPaymentId) {
     
     this.cfPaymentId = cfPaymentId;
     return this;
@@ -351,12 +351,12 @@ public class RefundEntity {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Cashfree Payments ID of the payment for which refund is initiated")
-  public Integer getCfPaymentId() {
+  public Long getCfPaymentId() {
     return cfPaymentId;
   }
 
 
-  public void setCfPaymentId(Integer cfPaymentId) {
+  public void setCfPaymentId(Long cfPaymentId) {
     this.cfPaymentId = cfPaymentId;
   }
 

@@ -53,7 +53,7 @@ import com.cashfree.JSON;
 /**
  * ReconEntityDataInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:37:25.496187Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-14T10:44:30.379726Z[Etc/UTC]")
 public class ReconEntityDataInner {
   public static final String SERIALIZED_NAME_EVENT_ID = "event_id";
   @SerializedName(SERIALIZED_NAME_EVENT_ID)
@@ -133,7 +133,7 @@ public class ReconEntityDataInner {
 
   public static final String SERIALIZED_NAME_CF_PAYMENT_ID = "cf_payment_id";
   @SerializedName(SERIALIZED_NAME_CF_PAYMENT_ID)
-  private Integer cfPaymentId;
+  private Long cfPaymentId;
 
   public static final String SERIALIZED_NAME_CF_SETTLEMENT_ID = "cf_settlement_id";
   @SerializedName(SERIALIZED_NAME_CF_SETTLEMENT_ID)
@@ -664,7 +664,7 @@ public class ReconEntityDataInner {
   }
 
 
-  public ReconEntityDataInner cfPaymentId(Integer cfPaymentId) {
+  public ReconEntityDataInner cfPaymentId(Long cfPaymentId) {
     
     this.cfPaymentId = cfPaymentId;
     return this;
@@ -676,12 +676,12 @@ public class ReconEntityDataInner {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Cashfree Payments unique ID to identify a payment.")
-  public Integer getCfPaymentId() {
+  public Long getCfPaymentId() {
     return cfPaymentId;
   }
 
 
-  public void setCfPaymentId(Integer cfPaymentId) {
+  public void setCfPaymentId(Long cfPaymentId) {
     this.cfPaymentId = cfPaymentId;
   }
 
