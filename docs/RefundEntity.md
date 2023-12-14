@@ -8,7 +8,7 @@ The refund entity
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**cfPaymentId** | **Integer** | Cashfree Payments ID of the payment for which refund is initiated |  [optional] |
+|**cfPaymentId** | **Long** | Cashfree Payments ID of the payment for which refund is initiated |  [optional] |
 |**cfRefundId** | **String** | Cashfree Payments ID for a refund |  [optional] |
 |**orderId** | **String** | Merchant’s order Id of the order for which refund is initiated |  [optional] |
 |**refundId** | **String** | Merchant’s refund ID of the refund |  [optional] |
