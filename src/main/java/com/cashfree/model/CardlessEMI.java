@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Request body for cardless emi payment method
  */
 @Schema(description = "Request body for cardless emi payment method")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:37:25.496187Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-14T11:03:55.081432Z[Etc/UTC]")
 public class CardlessEMI {
   public static final String SERIALIZED_NAME_CHANNEL = "channel";
   @SerializedName(SERIALIZED_NAME_CHANNEL)

@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * terminal metadata. required field for storefront.
  */
 @Schema(description = "terminal metadata. required field for storefront.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:37:25.496187Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-14T11:03:55.081432Z[Etc/UTC]")
 public class CreateTerminalRequestTerminalMeta {
   public static final String SERIALIZED_NAME_TERMINAL_OPERATOR = "terminal_operator";
   @SerializedName(SERIALIZED_NAME_TERMINAL_OPERATOR)

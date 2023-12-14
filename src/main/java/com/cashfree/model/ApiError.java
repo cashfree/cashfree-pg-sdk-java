@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Error at cashfree&#39;s server
  */
 @Schema(description = "Error at cashfree's server")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:37:25.496187Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-14T11:03:55.081432Z[Etc/UTC]")
 public class ApiError {
   public static final String SERIALIZED_NAME_MESSAGE = "message";
   @SerializedName(SERIALIZED_NAME_MESSAGE)

@@ -52,11 +52,11 @@ import com.cashfree.JSON;
  * Create terminal response object
  */
 @Schema(description = "Create terminal response object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:37:25.496187Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-14T11:03:55.081432Z[Etc/UTC]")
 public class TerminalTransactionEntity {
   public static final String SERIALIZED_NAME_CF_PAYMENT_ID = "cf_payment_id";
   @SerializedName(SERIALIZED_NAME_CF_PAYMENT_ID)
-  private Integer cfPaymentId;
+  private Long cfPaymentId;
 
   public static final String SERIALIZED_NAME_PAYMENT_AMOUNT = "payment_amount";
   @SerializedName(SERIALIZED_NAME_PAYMENT_AMOUNT)
@@ -81,7 +81,7 @@ public class TerminalTransactionEntity {
   public TerminalTransactionEntity() {
   }
 
-  public TerminalTransactionEntity cfPaymentId(Integer cfPaymentId) {
+  public TerminalTransactionEntity cfPaymentId(Long cfPaymentId) {
     
     this.cfPaymentId = cfPaymentId;
     return this;
@@ -93,12 +93,12 @@ public class TerminalTransactionEntity {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public Integer getCfPaymentId() {
+  public Long getCfPaymentId() {
     return cfPaymentId;
   }
 
 
-  public void setCfPaymentId(Integer cfPaymentId) {
+  public void setCfPaymentId(Long cfPaymentId) {
     this.cfPaymentId = cfPaymentId;
   }
 

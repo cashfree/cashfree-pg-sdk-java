@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * Complete object for the pay api that uses payment method objects
  */
 @Schema(description = "Complete object for the pay api that uses payment method objects")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:37:25.496187Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-14T11:03:55.081432Z[Etc/UTC]")
 public class PayOrderRequest {
   public static final String SERIALIZED_NAME_PAYMENT_SESSION_ID = "payment_session_id";
   @SerializedName(SERIALIZED_NAME_PAYMENT_SESSION_ID)
