@@ -19,7 +19,7 @@ Payment link success creation response object
 |**linkPurpose** | **String** |  |  [optional] |
 |**linkCreatedAt** | **String** |  |  [optional] |
 |**customerDetails** | [**LinkCustomerDetailsEntity**](LinkCustomerDetailsEntity.md) |  |  [optional] |
-|**linkMeta** | [**LinkMetaEntity**](LinkMetaEntity.md) |  |  [optional] |
+|**linkMeta** | **Map&lt;String, String&gt;** | Payment link meta information object. |  [optional] |
 |**linkUrl** | **String** |  |  [optional] |
 |**linkExpiryTime** | **String** |  |  [optional] |
 |**linkNotes** | **Map&lt;String, String&gt;** | Key-value pair that can be used to store additional information about the entity. Maximum 5 key-value pairs |  [optional] |

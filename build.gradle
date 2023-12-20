@@ -6,7 +6,7 @@ apply plugin: 'maven-publish'
 apply plugin: 'signing'
 
 group = 'com.cashfree.pg.java'
-version = '3.0.6'
+version = '3.0.8'
 
 buildscript {
     repositories {
@@ -116,7 +116,7 @@ if(hasProperty('target') && target == 'android') {
 
                 groupId 'com.cashfree.pg.java'
                 artifactId 'cashfree_pg'
-                version '3.0.6'
+                version '3.0.8'
 
                 from components.java
 
