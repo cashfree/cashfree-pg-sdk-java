@@ -13,9 +13,9 @@
 
 package com.cashfree;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-14T11:03:55.081432Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-20T08:54:48.139104Z[Etc/UTC]")
 class Configuration {
-    public static final String VERSION = "3.0.6";
+    public static final String VERSION = "3.0.8";
 
     private static Cashfree.ApiClient defaultApiClient = new Cashfree.ApiClient();
 

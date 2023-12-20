@@ -15,7 +15,6 @@ package com.cashfree.model;
 
 import java.util.Objects;
 import com.cashfree.model.LinkCustomerDetailsEntity;
-import com.cashfree.model.LinkMetaEntity;
 import com.cashfree.model.LinkNotifyEntity;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -58,7 +57,7 @@ import com.cashfree.JSON;
  * Payment link success creation response object
  */
 @Schema(description = "Payment link success creation response object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-14T11:03:55.081432Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-20T08:54:48.139104Z[Etc/UTC]")
 public class LinkEntity {
   public static final String SERIALIZED_NAME_CF_LINK_ID = "cf_link_id";
   @SerializedName(SERIALIZED_NAME_CF_LINK_ID)
@@ -106,7 +105,7 @@ public class LinkEntity {
 
   public static final String SERIALIZED_NAME_LINK_META = "link_meta";
   @SerializedName(SERIALIZED_NAME_LINK_META)
-  private LinkMetaEntity linkMeta;
+  private Map<String, String> linkMeta = new HashMap<>();
 
   public static final String SERIALIZED_NAME_LINK_URL = "link_url";
   @SerializedName(SERIALIZED_NAME_LINK_URL)
@@ -373,24 +372,32 @@ public class LinkEntity {
   }
 
 
-  public LinkEntity linkMeta(LinkMetaEntity linkMeta) {
+  public LinkEntity linkMeta(Map<String, String> linkMeta) {
     
     this.linkMeta = linkMeta;
     return this;
   }
 
+  public LinkEntity putLinkMetaItem(String key, String linkMetaItem) {
+    if (this.linkMeta == null) {
+      this.linkMeta = new HashMap<>();
+    }
+    this.linkMeta.put(key, linkMetaItem);
+    return this;
+  }
+
    /**
-   * Get linkMeta
+   * Payment link meta information object.
    * @return linkMeta
   **/
   @javax.annotation.Nullable
-  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public LinkMetaEntity getLinkMeta() {
+  @Schema(example = "{\"key_1\":\"value_1\",\"key_2\":\"value_2\"}", requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Payment link meta information object.")
+  public Map<String, String> getLinkMeta() {
     return linkMeta;
   }
 
 
-  public void setLinkMeta(LinkMetaEntity linkMeta) {
+  public void setLinkMeta(Map<String, String> linkMeta) {
     this.linkMeta = linkMeta;
   }
 
@@ -639,10 +646,6 @@ public class LinkEntity {
       // validate the optional field `customer_details`
       if (jsonObj.get("customer_details") != null && !jsonObj.get("customer_details").isJsonNull()) {
         LinkCustomerDetailsEntity.validateJsonElement(jsonObj.get("customer_details"));
-      }
-      // validate the optional field `link_meta`
-      if (jsonObj.get("link_meta") != null && !jsonObj.get("link_meta").isJsonNull()) {
-        LinkMetaEntity.validateJsonElement(jsonObj.get("link_meta"));
       }
       if ((jsonObj.get("link_url") != null && !jsonObj.get("link_url").isJsonNull()) && !jsonObj.get("link_url").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `link_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("link_url").toString()));

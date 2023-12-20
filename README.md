@@ -20,7 +20,7 @@ Try out our interactive guides at [Cashfree Dev Studio](https://www.cashfree.com
 <dependency>
   <groupId>com.cashfree.pg.java</groupId>
   <artifactId>cashfree_pg</artifactId>
-  <version>3.0.6</version>
+  <version>3.0.8</version>
   <scope>compile</scope>
 </dependency>
 ```
