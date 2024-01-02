@@ -14,9 +14,9 @@
 package com.cashfree.model;
 
 import java.util.Objects;
-import com.cashfree.model.CreateOrderRequestOrderMeta;
-import com.cashfree.model.CreateOrderRequestTerminal;
 import com.cashfree.model.CustomerDetails;
+import com.cashfree.model.OrderMeta;
+import com.cashfree.model.TerminalDetails;
 import com.cashfree.model.VendorSplit;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -30,7 +30,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -61,7 +60,7 @@ import com.cashfree.JSON;
  * Request body to create an order at cashfree
  */
 @Schema(description = "Request body to create an order at cashfree")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-20T08:54:48.139104Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-02T08:03:31.581397Z[Etc/UTC]")
 public class CreateOrderRequest {
   public static final String SERIALIZED_NAME_ORDER_ID = "order_id";
   @SerializedName(SERIALIZED_NAME_ORDER_ID)
@@ -81,11 +80,11 @@ public class CreateOrderRequest {
 
   public static final String SERIALIZED_NAME_TERMINAL = "terminal";
   @SerializedName(SERIALIZED_NAME_TERMINAL)
-  private CreateOrderRequestTerminal terminal;
+  private TerminalDetails terminal;
 
   public static final String SERIALIZED_NAME_ORDER_META = "order_meta";
   @SerializedName(SERIALIZED_NAME_ORDER_META)
-  private CreateOrderRequestOrderMeta orderMeta;
+  private OrderMeta orderMeta;
 
   public static final String SERIALIZED_NAME_ORDER_EXPIRY_TIME = "order_expiry_time";
   @SerializedName(SERIALIZED_NAME_ORDER_EXPIRY_TIME)
@@ -195,7 +194,7 @@ public class CreateOrderRequest {
   }
 
 
-  public CreateOrderRequest terminal(CreateOrderRequestTerminal terminal) {
+  public CreateOrderRequest terminal(TerminalDetails terminal) {
     
     this.terminal = terminal;
     return this;
@@ -207,17 +206,17 @@ public class CreateOrderRequest {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public CreateOrderRequestTerminal getTerminal() {
+  public TerminalDetails getTerminal() {
     return terminal;
   }
 
 
-  public void setTerminal(CreateOrderRequestTerminal terminal) {
+  public void setTerminal(TerminalDetails terminal) {
     this.terminal = terminal;
   }
 
 
-  public CreateOrderRequest orderMeta(CreateOrderRequestOrderMeta orderMeta) {
+  public CreateOrderRequest orderMeta(OrderMeta orderMeta) {
     
     this.orderMeta = orderMeta;
     return this;
@@ -229,12 +228,12 @@ public class CreateOrderRequest {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public CreateOrderRequestOrderMeta getOrderMeta() {
+  public OrderMeta getOrderMeta() {
     return orderMeta;
   }
 
 
-  public void setOrderMeta(CreateOrderRequestOrderMeta orderMeta) {
+  public void setOrderMeta(OrderMeta orderMeta) {
     this.orderMeta = orderMeta;
   }
 
@@ -365,20 +364,9 @@ public class CreateOrderRequest {
         Objects.equals(this.orderSplits, createOrderRequest.orderSplits);
   }
 
-  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
-  }
-
   @Override
   public int hashCode() {
     return Objects.hash(orderId, orderAmount, orderCurrency, customerDetails, terminal, orderMeta, orderExpiryTime, orderNote, orderTags, orderSplits);
-  }
-
-  private static <T> int hashCodeNullable(JsonNullable<T> a) {
-    if (a == null) {
-      return 1;
-    }
-    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -461,11 +449,11 @@ public class CreateOrderRequest {
       CustomerDetails.validateJsonElement(jsonObj.get("customer_details"));
       // validate the optional field `terminal`
       if (jsonObj.get("terminal") != null && !jsonObj.get("terminal").isJsonNull()) {
-        CreateOrderRequestTerminal.validateJsonElement(jsonObj.get("terminal"));
+        TerminalDetails.validateJsonElement(jsonObj.get("terminal"));
       }
       // validate the optional field `order_meta`
       if (jsonObj.get("order_meta") != null && !jsonObj.get("order_meta").isJsonNull()) {
-        CreateOrderRequestOrderMeta.validateJsonElement(jsonObj.get("order_meta"));
+        OrderMeta.validateJsonElement(jsonObj.get("order_meta"));
       }
       if ((jsonObj.get("order_expiry_time") != null && !jsonObj.get("order_expiry_time").isJsonNull()) && !jsonObj.get("order_expiry_time").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `order_expiry_time` to be a primitive type in the JSON string but got `%s`", jsonObj.get("order_expiry_time").toString()));
