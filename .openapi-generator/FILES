@@ -29,8 +29,6 @@ docs/CashbackDetails.md
 docs/CreateLinkRequest.md
 docs/CreateOfferRequest.md
 docs/CreateOrderRequest.md
-docs/CreateOrderRequestOrderMeta.md
-docs/CreateOrderRequestTerminal.md
 docs/CreateTerminalRequest.md
 docs/CreateTerminalRequestTerminalMeta.md
 docs/CreateTerminalTransactionRequest.md
@@ -205,8 +203,6 @@ src/main/java/com/cashfree/model/CashbackDetails.java
 src/main/java/com/cashfree/model/CreateLinkRequest.java
 src/main/java/com/cashfree/model/CreateOfferRequest.java
 src/main/java/com/cashfree/model/CreateOrderRequest.java
-src/main/java/com/cashfree/model/CreateOrderRequestOrderMeta.java
-src/main/java/com/cashfree/model/CreateOrderRequestTerminal.java
 src/main/java/com/cashfree/model/CreateTerminalRequest.java
 src/main/java/com/cashfree/model/CreateTerminalRequestTerminalMeta.java
 src/main/java/com/cashfree/model/CreateTerminalTransactionRequest.java
@@ -342,8 +338,6 @@ src/test/java/com/cashfree/model/CardlessEMITest.java
 src/test/java/com/cashfree/model/CashbackDetailsTest.java
 src/test/java/com/cashfree/model/CreateLinkRequestTest.java
 src/test/java/com/cashfree/model/CreateOfferRequestTest.java
-src/test/java/com/cashfree/model/CreateOrderRequestOrderMetaTest.java
-src/test/java/com/cashfree/model/CreateOrderRequestTerminalTest.java
 src/test/java/com/cashfree/model/CreateOrderRequestTest.java
 src/test/java/com/cashfree/model/CreateTerminalRequestTerminalMetaTest.java
 src/test/java/com/cashfree/model/CreateTerminalRequestTest.java

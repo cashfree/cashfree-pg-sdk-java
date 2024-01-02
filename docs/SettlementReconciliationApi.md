@@ -38,10 +38,10 @@ public class Example {
         FetchSettlementsRequest fetchSettlementsRequest = new FetchSettlementsRequest(); // FetchSettlementsRequest | Request Body to get the settlements
         String contentType = "application/json"; // String | application/json
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | Idempotency works by saving the resulting status code and body of the first request made for any given idempotency key, regardless of whether it succeeded or failed. Subsequent requests with the same key return the same result, including 500 errors.  Currently supported on all POST calls that uses x-client-id & x-client-secret. To use enable, pass x-idempotency-key in the request header. The value of this header must be unique to each operation you are trying to do. One example can be to use the same order_id that you pass while creating orders  
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.
         String accept = "application/json"; // String | application/json
         try {
-            SettlementEntity result = cashfree.PGFetchSettlements(xApiVersion, fetchSettlementsRequest, contentType, xRequestId, xIdempotencyKey, accept);
+            SettlementEntity result = cashfree.PGFetchSettlements(xApiVersion, fetchSettlementsRequest, contentType, xRequestId, xIdempotencyKey, acceptOkHttpClient httpClient);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SettlementReconciliationApi#PGFetchSettlements");
@@ -63,7 +63,7 @@ public class Example {
 | **fetchSettlementsRequest** | [**FetchSettlementsRequest**](FetchSettlementsRequest.md)| Request Body to get the settlements | |
 | **contentType** | **String**| application/json | [optional] |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| Idempotency works by saving the resulting status code and body of the first request made for any given idempotency key, regardless of whether it succeeded or failed. Subsequent requests with the same key return the same result, including 500 errors.  Currently supported on all POST calls that uses x-client-id &amp; x-client-secret. To use enable, pass x-idempotency-key in the request header. The value of this header must be unique to each operation you are trying to do. One example can be to use the same order_id that you pass while creating orders   | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. | [optional] |
 | **accept** | **String**| application/json | [optional] |
 
 ### Return type
@@ -122,10 +122,10 @@ public class Example {
         SettlementFetchReconRequest settlementFetchReconRequest = new SettlementFetchReconRequest(); // SettlementFetchReconRequest | Request Body for the settlement reconciliation
         String contentType = "application/json"; // String | application/json
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | Idempotency works by saving the resulting status code and body of the first request made for any given idempotency key, regardless of whether it succeeded or failed. Subsequent requests with the same key return the same result, including 500 errors.  Currently supported on all POST calls that uses x-client-id & x-client-secret. To use enable, pass x-idempotency-key in the request header. The value of this header must be unique to each operation you are trying to do. One example can be to use the same order_id that you pass while creating orders  
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.
         String accept = "application/json"; // String | application/json
         try {
-            SettlementReconEntity result = cashfree.PGSettlementFetchRecon(xApiVersion, settlementFetchReconRequest, contentType, xRequestId, xIdempotencyKey, accept);
+            SettlementReconEntity result = cashfree.PGSettlementFetchRecon(xApiVersion, settlementFetchReconRequest, contentType, xRequestId, xIdempotencyKey, acceptOkHttpClient httpClient);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SettlementReconciliationApi#PGSettlementFetchRecon");
@@ -147,7 +147,7 @@ public class Example {
 | **settlementFetchReconRequest** | [**SettlementFetchReconRequest**](SettlementFetchReconRequest.md)| Request Body for the settlement reconciliation | |
 | **contentType** | **String**| application/json | [optional] |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| Idempotency works by saving the resulting status code and body of the first request made for any given idempotency key, regardless of whether it succeeded or failed. Subsequent requests with the same key return the same result, including 500 errors.  Currently supported on all POST calls that uses x-client-id &amp; x-client-secret. To use enable, pass x-idempotency-key in the request header. The value of this header must be unique to each operation you are trying to do. One example can be to use the same order_id that you pass while creating orders   | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. | [optional] |
 | **accept** | **String**| application/json | [optional] |
 
 ### Return type

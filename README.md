@@ -16,12 +16,22 @@ Try out our interactive guides at [Cashfree Dev Studio](https://www.cashfree.com
 ## Getting Started
 
 ### Installation
+* Gradle Project
+```bash
+implementation `com.cashfree.pg.java:cashfree_pg:3.1.0`
+```
+* Maven Project
 ```bash
 <dependency>
   <groupId>com.cashfree.pg.java</groupId>
   <artifactId>cashfree_pg</artifactId>
-  <version>3.0.8</version>
+  <version>3.1.0</version>
   <scope>compile</scope>
+</dependency>
+<dependency>
+    <groupId>com.squareup.okhttp3</groupId>
+    <artifactId>okhttp</artifactId>
+    <version>4.10.0</version>
 </dependency>
 ```
 ### Configuration

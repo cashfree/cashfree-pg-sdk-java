@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * Complete payment method for UPI collect
  */
 @Schema(description = "Complete payment method for UPI collect")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-20T08:54:48.139104Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-02T07:42:15.850241Z[Etc/UTC]")
 public class UPIPaymentMethod {
   public static final String SERIALIZED_NAME_UPI = "upi";
   @SerializedName(SERIALIZED_NAME_UPI)

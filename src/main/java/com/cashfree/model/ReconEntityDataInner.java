@@ -23,7 +23,6 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.Arrays;
-import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -53,7 +52,7 @@ import com.cashfree.JSON;
 /**
  * ReconEntityDataInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-20T08:54:48.139104Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-02T07:42:15.850241Z[Etc/UTC]")
 public class ReconEntityDataInner {
   public static final String SERIALIZED_NAME_EVENT_ID = "event_id";
   @SerializedName(SERIALIZED_NAME_EVENT_ID)
@@ -1339,20 +1338,9 @@ public class ReconEntityDataInner {
         Objects.equals(this.remarks, reconEntityDataInner.remarks);
   }
 
-  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
-  }
-
   @Override
   public int hashCode() {
     return Objects.hash(eventId, eventType, eventSettlementAmount, eventAmount, saleType, eventStatus, entity, eventTime, eventCurrency, orderId, orderAmount, customerPhone, customerEmail, customerName, paymentAmount, paymentUtr, paymentTime, paymentServiceCharge, paymentServiceTax, cfPaymentId, cfSettlementId, settlementDate, settlementUtr, splitServiceCharge, splitServiceTax, vendorCommission, closedInFavorOf, disputeResolvedOn, disputeCategory, disputeNote, refundProcessedAt, refundArn, refundNote, refundId, adjustmentRemarks, adjustment, serviceTax, serviceCharge, amountSettled, paymentFrom, paymentTill, reason, settlementInitiatedOn, settlementType, settlementCharge, settlementTax, remarks);
-  }
-
-  private static <T> int hashCodeNullable(JsonNullable<T> a) {
-    if (a == null) {
-      return 1;
-    }
-    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
