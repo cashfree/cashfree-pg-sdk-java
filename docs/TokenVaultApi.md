@@ -40,9 +40,9 @@ public class Example {
         String customerId = "your-customer-id"; // String | Your Customer ID that you had sent during create order API `POST/orders`
         String instrumentId = "some-instrument-id"; // String | The instrument_id which needs to be deleted
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | Idempotency works by saving the resulting status code and body of the first request made for any given idempotency key, regardless of whether it succeeded or failed. Subsequent requests with the same key return the same result, including 500 errors.  Currently supported on all POST calls that uses x-client-id & x-client-secret. To use enable, pass x-idempotency-key in the request header. The value of this header must be unique to each operation you are trying to do. One example can be to use the same order_id that you pass while creating orders  
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.
         try {
-            InstrumentEntity result = cashfree.PGCustomerDeleteInstrument(xApiVersion, customerId, instrumentId, xRequestId, xIdempotencyKey);
+            InstrumentEntity result = cashfree.PGCustomerDeleteInstrument(xApiVersion, customerId, instrumentId, xRequestId, xIdempotencyKeyOkHttpClient httpClient);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling TokenVaultApi#PGCustomerDeleteInstrument");
@@ -64,7 +64,7 @@ public class Example {
 | **customerId** | **String**| Your Customer ID that you had sent during create order API &#x60;POST/orders&#x60; | |
 | **instrumentId** | **String**| The instrument_id which needs to be deleted | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| Idempotency works by saving the resulting status code and body of the first request made for any given idempotency key, regardless of whether it succeeded or failed. Subsequent requests with the same key return the same result, including 500 errors.  Currently supported on all POST calls that uses x-client-id &amp; x-client-secret. To use enable, pass x-idempotency-key in the request header. The value of this header must be unique to each operation you are trying to do. One example can be to use the same order_id that you pass while creating orders   | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. | [optional] |
 
 ### Return type
 
@@ -123,9 +123,9 @@ public class Example {
         String customerId = "your-customer-id"; // String | Your Customer ID that you had sent during create order API `POST/orders`
         String instrumentId = "some-instrument-id"; // String | The instrument_id of the saved instrument which needs to be queried
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | Idempotency works by saving the resulting status code and body of the first request made for any given idempotency key, regardless of whether it succeeded or failed. Subsequent requests with the same key return the same result, including 500 errors.  Currently supported on all POST calls that uses x-client-id & x-client-secret. To use enable, pass x-idempotency-key in the request header. The value of this header must be unique to each operation you are trying to do. One example can be to use the same order_id that you pass while creating orders  
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.
         try {
-            InstrumentEntity result = cashfree.PGCustomerFetchInstrument(xApiVersion, customerId, instrumentId, xRequestId, xIdempotencyKey);
+            InstrumentEntity result = cashfree.PGCustomerFetchInstrument(xApiVersion, customerId, instrumentId, xRequestId, xIdempotencyKeyOkHttpClient httpClient);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling TokenVaultApi#PGCustomerFetchInstrument");
@@ -147,7 +147,7 @@ public class Example {
 | **customerId** | **String**| Your Customer ID that you had sent during create order API &#x60;POST/orders&#x60; | |
 | **instrumentId** | **String**| The instrument_id of the saved instrument which needs to be queried | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| Idempotency works by saving the resulting status code and body of the first request made for any given idempotency key, regardless of whether it succeeded or failed. Subsequent requests with the same key return the same result, including 500 errors.  Currently supported on all POST calls that uses x-client-id &amp; x-client-secret. To use enable, pass x-idempotency-key in the request header. The value of this header must be unique to each operation you are trying to do. One example can be to use the same order_id that you pass while creating orders   | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. | [optional] |
 
 ### Return type
 
@@ -206,9 +206,9 @@ public class Example {
         String customerId = "your-customer-id"; // String | Your Customer ID that you had sent during create order API `POST/orders`
         String instrumentType = "card"; // String | Payment mode or type of saved instrument 
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | Idempotency works by saving the resulting status code and body of the first request made for any given idempotency key, regardless of whether it succeeded or failed. Subsequent requests with the same key return the same result, including 500 errors.  Currently supported on all POST calls that uses x-client-id & x-client-secret. To use enable, pass x-idempotency-key in the request header. The value of this header must be unique to each operation you are trying to do. One example can be to use the same order_id that you pass while creating orders  
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.
         try {
-            List<InstrumentEntity> result = cashfree.PGCustomerFetchInstruments(xApiVersion, customerId, instrumentType, xRequestId, xIdempotencyKey);
+            List<InstrumentEntity> result = cashfree.PGCustomerFetchInstruments(xApiVersion, customerId, instrumentType, xRequestId, xIdempotencyKeyOkHttpClient httpClient);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling TokenVaultApi#PGCustomerFetchInstruments");
@@ -230,7 +230,7 @@ public class Example {
 | **customerId** | **String**| Your Customer ID that you had sent during create order API &#x60;POST/orders&#x60; | |
 | **instrumentType** | **String**| Payment mode or type of saved instrument  | [enum: card] |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| Idempotency works by saving the resulting status code and body of the first request made for any given idempotency key, regardless of whether it succeeded or failed. Subsequent requests with the same key return the same result, including 500 errors.  Currently supported on all POST calls that uses x-client-id &amp; x-client-secret. To use enable, pass x-idempotency-key in the request header. The value of this header must be unique to each operation you are trying to do. One example can be to use the same order_id that you pass while creating orders   | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. | [optional] |
 
 ### Return type
 
@@ -288,9 +288,9 @@ public class Example {
         String customerId = "your-customer-id"; // String | Your Customer ID that you had sent during create order API `POST/orders`
         String instrumentId = "some-instrument-id"; // String | The instrument_id of the saved card instrument which needs to be queried
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | Idempotency works by saving the resulting status code and body of the first request made for any given idempotency key, regardless of whether it succeeded or failed. Subsequent requests with the same key return the same result, including 500 errors.  Currently supported on all POST calls that uses x-client-id & x-client-secret. To use enable, pass x-idempotency-key in the request header. The value of this header must be unique to each operation you are trying to do. One example can be to use the same order_id that you pass while creating orders  
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.
         try {
-            CryptogramEntity result = cashfree.PGCustomerInstrumentsFetchCryptogram(xApiVersion, customerId, instrumentId, xRequestId, xIdempotencyKey);
+            CryptogramEntity result = cashfree.PGCustomerInstrumentsFetchCryptogram(xApiVersion, customerId, instrumentId, xRequestId, xIdempotencyKeyOkHttpClient httpClient);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling TokenVaultApi#PGCustomerInstrumentsFetchCryptogram");
@@ -312,7 +312,7 @@ public class Example {
 | **customerId** | **String**| Your Customer ID that you had sent during create order API &#x60;POST/orders&#x60; | |
 | **instrumentId** | **String**| The instrument_id of the saved card instrument which needs to be queried | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| Idempotency works by saving the resulting status code and body of the first request made for any given idempotency key, regardless of whether it succeeded or failed. Subsequent requests with the same key return the same result, including 500 errors.  Currently supported on all POST calls that uses x-client-id &amp; x-client-secret. To use enable, pass x-idempotency-key in the request header. The value of this header must be unique to each operation you are trying to do. One example can be to use the same order_id that you pass while creating orders   | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. | [optional] |
 
 ### Return type
 

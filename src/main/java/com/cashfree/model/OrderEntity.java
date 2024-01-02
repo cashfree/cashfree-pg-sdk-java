@@ -34,7 +34,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -65,7 +64,7 @@ import com.cashfree.JSON;
  * The complete order entity
  */
 @Schema(description = "The complete order entity")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-20T08:54:48.139104Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-02T08:03:31.581397Z[Etc/UTC]")
 public class OrderEntity {
   public static final String SERIALIZED_NAME_CF_ORDER_ID = "cf_order_id";
   @SerializedName(SERIALIZED_NAME_CF_ORDER_ID)
@@ -133,7 +132,7 @@ public class OrderEntity {
 
   public static final String SERIALIZED_NAME_ORDER_TAGS = "order_tags";
   @SerializedName(SERIALIZED_NAME_ORDER_TAGS)
-  private Map<String, String> orderTags;
+  private Map<String, String> orderTags = new HashMap<>();
 
   public OrderEntity() {
   }
@@ -557,20 +556,9 @@ public class OrderEntity {
         Objects.equals(this.orderTags, orderEntity.orderTags);
   }
 
-  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
-  }
-
   @Override
   public int hashCode() {
     return Objects.hash(cfOrderId, orderId, entity, orderCurrency, orderAmount, orderStatus, paymentSessionId, orderExpiryTime, orderNote, createdAt, orderSplits, customerDetails, orderMeta, payments, settlements, refunds, orderTags);
-  }
-
-  private static <T> int hashCodeNullable(JsonNullable<T> a) {
-    if (a == null) {
-      return 1;
-    }
-    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override

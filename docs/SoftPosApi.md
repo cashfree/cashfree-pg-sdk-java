@@ -39,9 +39,9 @@ public class Example {
         String xApiVersion = "2022-09-01"; // String | API version to be used. Format is in YYYY-MM-DD
         CreateTerminalRequest createTerminalRequest = new CreateTerminalRequest(); // CreateTerminalRequest | Request Body to Create Terminal for SPOS
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | Idempotency works by saving the resulting status code and body of the first request made for any given idempotency key, regardless of whether it succeeded or failed. Subsequent requests with the same key return the same result, including 500 errors.  Currently supported on all POST calls that uses x-client-id & x-client-secret. To use enable, pass x-idempotency-key in the request header. The value of this header must be unique to each operation you are trying to do. One example can be to use the same order_id that you pass while creating orders  
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.
         try {
-            TerminalEntity result = cashfree.SposCreateTerminal(xApiVersion, createTerminalRequest, xRequestId, xIdempotencyKey);
+            TerminalEntity result = cashfree.SposCreateTerminal(xApiVersion, createTerminalRequest, xRequestId, xIdempotencyKeyOkHttpClient httpClient);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SoftPosApi#SposCreateTerminal");
@@ -62,7 +62,7 @@ public class Example {
 | **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2022-09-01] |
 | **createTerminalRequest** | [**CreateTerminalRequest**](CreateTerminalRequest.md)| Request Body to Create Terminal for SPOS | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| Idempotency works by saving the resulting status code and body of the first request made for any given idempotency key, regardless of whether it succeeded or failed. Subsequent requests with the same key return the same result, including 500 errors.  Currently supported on all POST calls that uses x-client-id &amp; x-client-secret. To use enable, pass x-idempotency-key in the request header. The value of this header must be unique to each operation you are trying to do. One example can be to use the same order_id that you pass while creating orders   | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. | [optional] |
 
 ### Return type
 
@@ -119,9 +119,9 @@ public class Example {
         String xApiVersion = "2022-09-01"; // String | API version to be used. Format is in YYYY-MM-DD
         CreateTerminalTransactionRequest createTerminalTransactionRequest = new CreateTerminalTransactionRequest(); // CreateTerminalTransactionRequest | Request body to create a terminal transaction
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | Idempotency works by saving the resulting status code and body of the first request made for any given idempotency key, regardless of whether it succeeded or failed. Subsequent requests with the same key return the same result, including 500 errors.  Currently supported on all POST calls that uses x-client-id & x-client-secret. To use enable, pass x-idempotency-key in the request header. The value of this header must be unique to each operation you are trying to do. One example can be to use the same order_id that you pass while creating orders  
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.
         try {
-            TerminalTransactionEntity result = cashfree.SposCreateTerminalTransaction(xApiVersion, createTerminalTransactionRequest, xRequestId, xIdempotencyKey);
+            TerminalTransactionEntity result = cashfree.SposCreateTerminalTransaction(xApiVersion, createTerminalTransactionRequest, xRequestId, xIdempotencyKeyOkHttpClient httpClient);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SoftPosApi#SposCreateTerminalTransaction");
@@ -142,7 +142,7 @@ public class Example {
 | **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2022-09-01] |
 | **createTerminalTransactionRequest** | [**CreateTerminalTransactionRequest**](CreateTerminalTransactionRequest.md)| Request body to create a terminal transaction | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| Idempotency works by saving the resulting status code and body of the first request made for any given idempotency key, regardless of whether it succeeded or failed. Subsequent requests with the same key return the same result, including 500 errors.  Currently supported on all POST calls that uses x-client-id &amp; x-client-secret. To use enable, pass x-idempotency-key in the request header. The value of this header must be unique to each operation you are trying to do. One example can be to use the same order_id that you pass while creating orders   | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. | [optional] |
 
 ### Return type
 
@@ -199,9 +199,9 @@ public class Example {
         String xApiVersion = "2022-09-01"; // String | API version to be used. Format is in YYYY-MM-DD
         String terminalPhoneNo = "6309291183"; // String | The terminal for which you want to view the order details.
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | Idempotency works by saving the resulting status code and body of the first request made for any given idempotency key, regardless of whether it succeeded or failed. Subsequent requests with the same key return the same result, including 500 errors.  Currently supported on all POST calls that uses x-client-id & x-client-secret. To use enable, pass x-idempotency-key in the request header. The value of this header must be unique to each operation you are trying to do. One example can be to use the same order_id that you pass while creating orders  
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.
         try {
-            TerminalEntity result = cashfree.SposFetchTerminal(xApiVersion, terminalPhoneNo, xRequestId, xIdempotencyKey);
+            TerminalEntity result = cashfree.SposFetchTerminal(xApiVersion, terminalPhoneNo, xRequestId, xIdempotencyKeyOkHttpClient httpClient);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SoftPosApi#SposFetchTerminal");
@@ -222,7 +222,7 @@ public class Example {
 | **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2022-09-01] |
 | **terminalPhoneNo** | **String**| The terminal for which you want to view the order details. | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| Idempotency works by saving the resulting status code and body of the first request made for any given idempotency key, regardless of whether it succeeded or failed. Subsequent requests with the same key return the same result, including 500 errors.  Currently supported on all POST calls that uses x-client-id &amp; x-client-secret. To use enable, pass x-idempotency-key in the request header. The value of this header must be unique to each operation you are trying to do. One example can be to use the same order_id that you pass while creating orders   | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. | [optional] |
 
 ### Return type
 
@@ -280,9 +280,9 @@ public class Example {
         String terminalPhoneNo = "9876543214"; // String | Phone number assigned to the terminal. Required if you are not providing the cf_terminal_id in the request.
         String cfTerminalId = "123344"; // String | Cashfree terminal id for which you want to get staticQRs. Required if you are not providing the terminal_phone_number in the request.
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | Idempotency works by saving the resulting status code and body of the first request made for any given idempotency key, regardless of whether it succeeded or failed. Subsequent requests with the same key return the same result, including 500 errors.  Currently supported on all POST calls that uses x-client-id & x-client-secret. To use enable, pass x-idempotency-key in the request header. The value of this header must be unique to each operation you are trying to do. One example can be to use the same order_id that you pass while creating orders  
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.
         try {
-            List<FetchTerminalQRCodesEntity> result = cashfree.SposFetchTerminalQRCodes(xApiVersion, terminalPhoneNo, cfTerminalId, xRequestId, xIdempotencyKey);
+            List<FetchTerminalQRCodesEntity> result = cashfree.SposFetchTerminalQRCodes(xApiVersion, terminalPhoneNo, cfTerminalId, xRequestId, xIdempotencyKeyOkHttpClient httpClient);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SoftPosApi#SposFetchTerminalQRCodes");
@@ -304,7 +304,7 @@ public class Example {
 | **terminalPhoneNo** | **String**| Phone number assigned to the terminal. Required if you are not providing the cf_terminal_id in the request. | |
 | **cfTerminalId** | **String**| Cashfree terminal id for which you want to get staticQRs. Required if you are not providing the terminal_phone_number in the request. | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| Idempotency works by saving the resulting status code and body of the first request made for any given idempotency key, regardless of whether it succeeded or failed. Subsequent requests with the same key return the same result, including 500 errors.  Currently supported on all POST calls that uses x-client-id &amp; x-client-secret. To use enable, pass x-idempotency-key in the request header. The value of this header must be unique to each operation you are trying to do. One example can be to use the same order_id that you pass while creating orders   | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. | [optional] |
 
 ### Return type
 

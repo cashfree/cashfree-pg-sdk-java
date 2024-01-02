@@ -39,9 +39,9 @@ public class Example {
         String xApiVersion = "2022-09-01"; // String | API version to be used. Format is in YYYY-MM-DD
         EligibilityFetchCardlessEMIRequest eligibilityFetchCardlessEMIRequest = new EligibilityFetchCardlessEMIRequest(); // EligibilityFetchCardlessEMIRequest | Request Body to get eligible cardless emi options for a customer and order
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | Idempotency works by saving the resulting status code and body of the first request made for any given idempotency key, regardless of whether it succeeded or failed. Subsequent requests with the same key return the same result, including 500 errors.  Currently supported on all POST calls that uses x-client-id & x-client-secret. To use enable, pass x-idempotency-key in the request header. The value of this header must be unique to each operation you are trying to do. One example can be to use the same order_id that you pass while creating orders  
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.
         try {
-            List<EligibilityCardlessEMIEntity> result = cashfree.PGEligibilityFetchCardlessEMI(xApiVersion, eligibilityFetchCardlessEMIRequest, xRequestId, xIdempotencyKey);
+            List<EligibilityCardlessEMIEntity> result = cashfree.PGEligibilityFetchCardlessEMI(xApiVersion, eligibilityFetchCardlessEMIRequest, xRequestId, xIdempotencyKeyOkHttpClient httpClient);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling EligibilityApi#PGEligibilityFetchCardlessEMI");
@@ -62,7 +62,7 @@ public class Example {
 | **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2022-09-01] |
 | **eligibilityFetchCardlessEMIRequest** | [**EligibilityFetchCardlessEMIRequest**](EligibilityFetchCardlessEMIRequest.md)| Request Body to get eligible cardless emi options for a customer and order | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| Idempotency works by saving the resulting status code and body of the first request made for any given idempotency key, regardless of whether it succeeded or failed. Subsequent requests with the same key return the same result, including 500 errors.  Currently supported on all POST calls that uses x-client-id &amp; x-client-secret. To use enable, pass x-idempotency-key in the request header. The value of this header must be unique to each operation you are trying to do. One example can be to use the same order_id that you pass while creating orders   | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. | [optional] |
 
 ### Return type
 
@@ -120,9 +120,9 @@ public class Example {
         String xApiVersion = "2022-09-01"; // String | API version to be used. Format is in YYYY-MM-DD
         EligibilityFetchOffersRequest eligibilityFetchOffersRequest = new EligibilityFetchOffersRequest(); // EligibilityFetchOffersRequest | Request Body to get eligible offers for a customer and order
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | Idempotency works by saving the resulting status code and body of the first request made for any given idempotency key, regardless of whether it succeeded or failed. Subsequent requests with the same key return the same result, including 500 errors.  Currently supported on all POST calls that uses x-client-id & x-client-secret. To use enable, pass x-idempotency-key in the request header. The value of this header must be unique to each operation you are trying to do. One example can be to use the same order_id that you pass while creating orders  
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.
         try {
-            List<EligibilityOfferEntity> result = cashfree.PGEligibilityFetchOffers(xApiVersion, eligibilityFetchOffersRequest, xRequestId, xIdempotencyKey);
+            List<EligibilityOfferEntity> result = cashfree.PGEligibilityFetchOffers(xApiVersion, eligibilityFetchOffersRequest, xRequestId, xIdempotencyKeyOkHttpClient httpClient);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling EligibilityApi#PGEligibilityFetchOffers");
@@ -143,7 +143,7 @@ public class Example {
 | **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2022-09-01] |
 | **eligibilityFetchOffersRequest** | [**EligibilityFetchOffersRequest**](EligibilityFetchOffersRequest.md)| Request Body to get eligible offers for a customer and order | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| Idempotency works by saving the resulting status code and body of the first request made for any given idempotency key, regardless of whether it succeeded or failed. Subsequent requests with the same key return the same result, including 500 errors.  Currently supported on all POST calls that uses x-client-id &amp; x-client-secret. To use enable, pass x-idempotency-key in the request header. The value of this header must be unique to each operation you are trying to do. One example can be to use the same order_id that you pass while creating orders   | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. | [optional] |
 
 ### Return type
 
@@ -200,9 +200,9 @@ public class Example {
         String xApiVersion = "2022-09-01"; // String | API version to be used. Format is in YYYY-MM-DD
         EligibilityFetchPaylaterRequest eligibilityFetchPaylaterRequest = new EligibilityFetchPaylaterRequest(); // EligibilityFetchPaylaterRequest | Request Body to get eligible paylater options for a customer and order
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | Idempotency works by saving the resulting status code and body of the first request made for any given idempotency key, regardless of whether it succeeded or failed. Subsequent requests with the same key return the same result, including 500 errors.  Currently supported on all POST calls that uses x-client-id & x-client-secret. To use enable, pass x-idempotency-key in the request header. The value of this header must be unique to each operation you are trying to do. One example can be to use the same order_id that you pass while creating orders  
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.
         try {
-            List<EligibilityPaylaterEntity> result = cashfree.PGEligibilityFetchPaylater(xApiVersion, eligibilityFetchPaylaterRequest, xRequestId, xIdempotencyKey);
+            List<EligibilityPaylaterEntity> result = cashfree.PGEligibilityFetchPaylater(xApiVersion, eligibilityFetchPaylaterRequest, xRequestId, xIdempotencyKeyOkHttpClient httpClient);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling EligibilityApi#PGEligibilityFetchPaylater");
@@ -223,7 +223,7 @@ public class Example {
 | **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2022-09-01] |
 | **eligibilityFetchPaylaterRequest** | [**EligibilityFetchPaylaterRequest**](EligibilityFetchPaylaterRequest.md)| Request Body to get eligible paylater options for a customer and order | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| Idempotency works by saving the resulting status code and body of the first request made for any given idempotency key, regardless of whether it succeeded or failed. Subsequent requests with the same key return the same result, including 500 errors.  Currently supported on all POST calls that uses x-client-id &amp; x-client-secret. To use enable, pass x-idempotency-key in the request header. The value of this header must be unique to each operation you are trying to do. One example can be to use the same order_id that you pass while creating orders   | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. | [optional] |
 
 ### Return type
 
@@ -281,9 +281,9 @@ public class Example {
         String xApiVersion = "2022-09-01"; // String | API version to be used. Format is in YYYY-MM-DD
         EligibilityFetchPaymentMethodsRequest eligibilityFetchPaymentMethodsRequest = new EligibilityFetchPaymentMethodsRequest(); // EligibilityFetchPaymentMethodsRequest | Request Body to get eligible payment methods for an account and order
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | Idempotency works by saving the resulting status code and body of the first request made for any given idempotency key, regardless of whether it succeeded or failed. Subsequent requests with the same key return the same result, including 500 errors.  Currently supported on all POST calls that uses x-client-id & x-client-secret. To use enable, pass x-idempotency-key in the request header. The value of this header must be unique to each operation you are trying to do. One example can be to use the same order_id that you pass while creating orders  
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.
         try {
-            List<EligibilityPaymentMethodsEntity> result = cashfree.PGEligibilityFetchPaymentMethods(xApiVersion, eligibilityFetchPaymentMethodsRequest, xRequestId, xIdempotencyKey);
+            List<EligibilityPaymentMethodsEntity> result = cashfree.PGEligibilityFetchPaymentMethods(xApiVersion, eligibilityFetchPaymentMethodsRequest, xRequestId, xIdempotencyKeyOkHttpClient httpClient);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling EligibilityApi#PGEligibilityFetchPaymentMethods");
@@ -304,7 +304,7 @@ public class Example {
 | **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2022-09-01] |
 | **eligibilityFetchPaymentMethodsRequest** | [**EligibilityFetchPaymentMethodsRequest**](EligibilityFetchPaymentMethodsRequest.md)| Request Body to get eligible payment methods for an account and order | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| Idempotency works by saving the resulting status code and body of the first request made for any given idempotency key, regardless of whether it succeeded or failed. Subsequent requests with the same key return the same result, including 500 errors.  Currently supported on all POST calls that uses x-client-id &amp; x-client-secret. To use enable, pass x-idempotency-key in the request header. The value of this header must be unique to each operation you are trying to do. One example can be to use the same order_id that you pass while creating orders   | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. | [optional] |
 
 ### Return type
 
