@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Error when rate limit is breached for your api
  */
 @Schema(description = "Error when rate limit is breached for your api")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-02T08:03:31.581397Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-09T14:02:06.288163Z[Etc/UTC]")
 public class RateLimitError {
   public static final String SERIALIZED_NAME_MESSAGE = "message";
   @SerializedName(SERIALIZED_NAME_MESSAGE)
