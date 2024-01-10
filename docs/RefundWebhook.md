@@ -8,7 +8,7 @@ refund webhook object
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**data** | [**PaymentWebhookDataEntity1**](PaymentWebhookDataEntity1.md) |  |  [optional] |
+|**data** | [**RefundWebhookDataEntity**](RefundWebhookDataEntity.md) |  |  [optional] |
 |**eventTime** | **String** |  |  [optional] |
 |**type** | **String** |  |  [optional] |
 

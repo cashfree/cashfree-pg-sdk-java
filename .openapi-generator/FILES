@@ -116,7 +116,6 @@ docs/PaymentURLObject.md
 docs/PaymentWebhook.md
 docs/PaymentWebhookCustomerEntity.md
 docs/PaymentWebhookDataEntity.md
-docs/PaymentWebhookDataEntity1.md
 docs/PaymentWebhookErrorEntity.md
 docs/PaymentWebhookGatewayDetailsEntity.md
 docs/PaymentWebhookOrderEntity.md
@@ -129,6 +128,7 @@ docs/RefundEntity.md
 docs/RefundSpeed.md
 docs/RefundURLObject.md
 docs/RefundWebhook.md
+docs/RefundWebhookDataEntity.md
 docs/RefundsApi.md
 docs/SavedInstrumentMeta.md
 docs/SettlementEntity.md
@@ -295,7 +295,6 @@ src/main/java/com/cashfree/model/PaymentURLObject.java
 src/main/java/com/cashfree/model/PaymentWebhook.java
 src/main/java/com/cashfree/model/PaymentWebhookCustomerEntity.java
 src/main/java/com/cashfree/model/PaymentWebhookDataEntity.java
-src/main/java/com/cashfree/model/PaymentWebhookDataEntity1.java
 src/main/java/com/cashfree/model/PaymentWebhookErrorEntity.java
 src/main/java/com/cashfree/model/PaymentWebhookGatewayDetailsEntity.java
 src/main/java/com/cashfree/model/PaymentWebhookOrderEntity.java
@@ -306,6 +305,7 @@ src/main/java/com/cashfree/model/RefundEntity.java
 src/main/java/com/cashfree/model/RefundSpeed.java
 src/main/java/com/cashfree/model/RefundURLObject.java
 src/main/java/com/cashfree/model/RefundWebhook.java
+src/main/java/com/cashfree/model/RefundWebhookDataEntity.java
 src/main/java/com/cashfree/model/SavedInstrumentMeta.java
 src/main/java/com/cashfree/model/SettlementEntity.java
 src/main/java/com/cashfree/model/SettlementFetchReconRequest.java
@@ -438,7 +438,6 @@ src/test/java/com/cashfree/model/PaymentMethodsQueriesTest.java
 src/test/java/com/cashfree/model/PaymentModeDetailsTest.java
 src/test/java/com/cashfree/model/PaymentURLObjectTest.java
 src/test/java/com/cashfree/model/PaymentWebhookCustomerEntityTest.java
-src/test/java/com/cashfree/model/PaymentWebhookDataEntity1Test.java
 src/test/java/com/cashfree/model/PaymentWebhookDataEntityTest.java
 src/test/java/com/cashfree/model/PaymentWebhookErrorEntityTest.java
 src/test/java/com/cashfree/model/PaymentWebhookGatewayDetailsEntityTest.java
@@ -450,6 +449,7 @@ src/test/java/com/cashfree/model/ReconEntityTest.java
 src/test/java/com/cashfree/model/RefundEntityTest.java
 src/test/java/com/cashfree/model/RefundSpeedTest.java
 src/test/java/com/cashfree/model/RefundURLObjectTest.java
+src/test/java/com/cashfree/model/RefundWebhookDataEntityTest.java
 src/test/java/com/cashfree/model/RefundWebhookTest.java
 src/test/java/com/cashfree/model/SavedInstrumentMetaTest.java
 src/test/java/com/cashfree/model/SettlementEntityTest.java

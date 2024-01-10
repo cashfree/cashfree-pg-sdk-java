@@ -14,7 +14,7 @@
 package com.cashfree.model;
 
 import java.util.Objects;
-import com.cashfree.model.PaymentMethodInPaymentsEntityPaymentMethod;
+import com.cashfree.model.RefundEntity;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -50,37 +50,37 @@ import java.util.Set;
 import com.cashfree.JSON;
 
 /**
- * payment methods all
+ * data entity in webhook
  */
-@Schema(description = "payment methods all")
+@Schema(description = "data entity in webhook")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-10T12:29:43.681871Z[Etc/UTC]")
-public class PaymentMethodInPaymentsEntity {
-  public static final String SERIALIZED_NAME_PAYMENT_METHOD = "payment_method";
-  @SerializedName(SERIALIZED_NAME_PAYMENT_METHOD)
-  private PaymentMethodInPaymentsEntityPaymentMethod paymentMethod;
+public class RefundWebhookDataEntity {
+  public static final String SERIALIZED_NAME_REFUND = "refund";
+  @SerializedName(SERIALIZED_NAME_REFUND)
+  private RefundEntity refund;
 
-  public PaymentMethodInPaymentsEntity() {
+  public RefundWebhookDataEntity() {
   }
 
-  public PaymentMethodInPaymentsEntity paymentMethod(PaymentMethodInPaymentsEntityPaymentMethod paymentMethod) {
+  public RefundWebhookDataEntity refund(RefundEntity refund) {
     
-    this.paymentMethod = paymentMethod;
+    this.refund = refund;
     return this;
   }
 
    /**
-   * Get paymentMethod
-   * @return paymentMethod
+   * Get refund
+   * @return refund
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public PaymentMethodInPaymentsEntityPaymentMethod getPaymentMethod() {
-    return paymentMethod;
+  public RefundEntity getRefund() {
+    return refund;
   }
 
 
-  public void setPaymentMethod(PaymentMethodInPaymentsEntityPaymentMethod paymentMethod) {
-    this.paymentMethod = paymentMethod;
+  public void setRefund(RefundEntity refund) {
+    this.refund = refund;
   }
 
 
@@ -93,20 +93,20 @@ public class PaymentMethodInPaymentsEntity {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PaymentMethodInPaymentsEntity paymentMethodInPaymentsEntity = (PaymentMethodInPaymentsEntity) o;
-    return Objects.equals(this.paymentMethod, paymentMethodInPaymentsEntity.paymentMethod);
+    RefundWebhookDataEntity refundWebhookDataEntity = (RefundWebhookDataEntity) o;
+    return Objects.equals(this.refund, refundWebhookDataEntity.refund);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(paymentMethod);
+    return Objects.hash(refund);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PaymentMethodInPaymentsEntity {\n");
-    sb.append("    paymentMethod: ").append(toIndentedString(paymentMethod)).append("\n");
+    sb.append("class RefundWebhookDataEntity {\n");
+    sb.append("    refund: ").append(toIndentedString(refund)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -129,7 +129,7 @@ public class PaymentMethodInPaymentsEntity {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("payment_method");
+    openapiFields.add("refund");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -139,14 +139,14 @@ public class PaymentMethodInPaymentsEntity {
   * Validates the JSON Element and throws an exception if issues found
   *
   * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to PaymentMethodInPaymentsEntity
+  * @throws IOException if the JSON Element is invalid with respect to RefundWebhookDataEntity
   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // validate the optional field `payment_method`
-      if (jsonObj.get("payment_method") != null && !jsonObj.get("payment_method").isJsonNull()) {
-        PaymentMethodInPaymentsEntityPaymentMethod.validateJsonElement(jsonObj.get("payment_method"));
+      // validate the optional field `refund`
+      if (jsonObj.get("refund") != null && !jsonObj.get("refund").isJsonNull()) {
+        RefundEntity.validateJsonElement(jsonObj.get("refund"));
       }
   }
 
@@ -154,22 +154,22 @@ public class PaymentMethodInPaymentsEntity {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!PaymentMethodInPaymentsEntity.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'PaymentMethodInPaymentsEntity' and its subtypes
+       if (!RefundWebhookDataEntity.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'RefundWebhookDataEntity' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<PaymentMethodInPaymentsEntity> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(PaymentMethodInPaymentsEntity.class));
+       final TypeAdapter<RefundWebhookDataEntity> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(RefundWebhookDataEntity.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<PaymentMethodInPaymentsEntity>() {
+       return (TypeAdapter<T>) new TypeAdapter<RefundWebhookDataEntity>() {
            @Override
-           public void write(JsonWriter out, PaymentMethodInPaymentsEntity value) throws IOException {
+           public void write(JsonWriter out, RefundWebhookDataEntity value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public PaymentMethodInPaymentsEntity read(JsonReader in) throws IOException {
+           public RefundWebhookDataEntity read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
              return thisAdapter.fromJsonTree(jsonElement);
@@ -180,18 +180,18 @@ public class PaymentMethodInPaymentsEntity {
   }
 
  /**
-  * Create an instance of PaymentMethodInPaymentsEntity given an JSON string
+  * Create an instance of RefundWebhookDataEntity given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of PaymentMethodInPaymentsEntity
-  * @throws IOException if the JSON string is invalid with respect to PaymentMethodInPaymentsEntity
+  * @return An instance of RefundWebhookDataEntity
+  * @throws IOException if the JSON string is invalid with respect to RefundWebhookDataEntity
   */
-  public static PaymentMethodInPaymentsEntity fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, PaymentMethodInPaymentsEntity.class);
+  public static RefundWebhookDataEntity fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, RefundWebhookDataEntity.class);
   }
 
  /**
-  * Convert an instance of PaymentMethodInPaymentsEntity to an JSON string
+  * Convert an instance of RefundWebhookDataEntity to an JSON string
   *
   * @return JSON string
   */
