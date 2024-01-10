@@ -14,7 +14,7 @@
 package com.cashfree.model;
 
 import java.util.Objects;
-import com.cashfree.model.PaymentWebhookDataEntity1;
+import com.cashfree.model.RefundWebhookDataEntity;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -53,11 +53,11 @@ import com.cashfree.JSON;
  * refund webhook object
  */
 @Schema(description = "refund webhook object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-09T14:02:06.288163Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-10T12:29:43.681871Z[Etc/UTC]")
 public class RefundWebhook {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
-  private PaymentWebhookDataEntity1 data;
+  private RefundWebhookDataEntity data;
 
   public static final String SERIALIZED_NAME_EVENT_TIME = "event_time";
   @SerializedName(SERIALIZED_NAME_EVENT_TIME)
@@ -70,7 +70,7 @@ public class RefundWebhook {
   public RefundWebhook() {
   }
 
-  public RefundWebhook data(PaymentWebhookDataEntity1 data) {
+  public RefundWebhook data(RefundWebhookDataEntity data) {
     
     this.data = data;
     return this;
@@ -82,12 +82,12 @@ public class RefundWebhook {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public PaymentWebhookDataEntity1 getData() {
+  public RefundWebhookDataEntity getData() {
     return data;
   }
 
 
-  public void setData(PaymentWebhookDataEntity1 data) {
+  public void setData(RefundWebhookDataEntity data) {
     this.data = data;
   }
 
@@ -204,7 +204,7 @@ public class RefundWebhook {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the optional field `data`
       if (jsonObj.get("data") != null && !jsonObj.get("data").isJsonNull()) {
-        PaymentWebhookDataEntity1.validateJsonElement(jsonObj.get("data"));
+        RefundWebhookDataEntity.validateJsonElement(jsonObj.get("data"));
       }
       if ((jsonObj.get("event_time") != null && !jsonObj.get("event_time").isJsonNull()) && !jsonObj.get("event_time").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `event_time` to be a primitive type in the JSON string but got `%s`", jsonObj.get("event_time").toString()));
