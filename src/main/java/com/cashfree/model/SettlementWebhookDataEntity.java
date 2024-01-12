@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * data entity in webhook
  */
 @Schema(description = "data entity in webhook")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-10T12:29:43.681871Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-12T09:50:28.064254Z[Etc/UTC]")
 public class SettlementWebhookDataEntity {
   public static final String SERIALIZED_NAME_SETTLEMENT = "settlement";
   @SerializedName(SERIALIZED_NAME_SETTLEMENT)
