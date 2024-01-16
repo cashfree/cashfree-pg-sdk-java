@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * Use to split order when cashfree&#39;s Easy Split is enabled for your account.
  */
 @Schema(description = "Use to split order when cashfree's Easy Split is enabled for your account.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-02T08:03:31.581397Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-12T09:50:28.064254Z[Etc/UTC]")
 public class VendorSplit {
   public static final String SERIALIZED_NAME_VENDOR_ID = "vendor_id";
   @SerializedName(SERIALIZED_NAME_VENDOR_ID)

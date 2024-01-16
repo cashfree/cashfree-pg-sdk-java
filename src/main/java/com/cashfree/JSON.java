@@ -144,6 +144,9 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.FetchTerminalQRCodesEntity.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.IdempotencyError.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.InstrumentEntity.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.InstrumentWebhook.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.InstrumentWebhookData.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.InstrumentWebhookDataEntity.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.LinkCustomerDetailsEntity.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.LinkEntity.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.LinkMetaEntity.CustomTypeAdapterFactory());
@@ -191,14 +194,21 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.PaymentMethodsFilters.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.PaymentMethodsQueries.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.PaymentModeDetails.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.PaymentSuccessWebhook.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.PaymentURLObject.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.PaymentWebhook.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.PaymentWebhookCustomerEntity.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.PaymentWebhookDataEntity.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.PaymentWebhookErrorEntity.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.PaymentWebhookGatewayDetailsEntity.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.PaymentWebhookOrderEntity.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.RateLimitError.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.ReconEntity.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.ReconEntityDataInner.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.RefundEntity.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.RefundSpeed.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.RefundURLObject.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.RefundWebhook.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.RefundWebhookDataEntity.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.SavedInstrumentMeta.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.SettlementEntity.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.SettlementFetchReconRequest.CustomTypeAdapterFactory());
@@ -206,6 +216,8 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.SettlementReconEntity.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.SettlementReconEntityDataInner.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.SettlementURLObject.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.SettlementWebhook.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.SettlementWebhookDataEntity.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.TerminalDetails.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.TerminalEntity.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.TerminalTransactionEntity.CustomTypeAdapterFactory());
@@ -213,9 +225,6 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.UPIPaymentMethod.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.Upi.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.VendorSplit.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.WHcustomerDetails.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.WHdata.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.WHorder.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.WalletOffer.CustomTypeAdapterFactory());
         gson = gsonBuilder.create();
     }

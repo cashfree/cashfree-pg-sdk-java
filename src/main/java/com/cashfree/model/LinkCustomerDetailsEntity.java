@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Payment link customer entity
  */
 @Schema(description = "Payment link customer entity")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-02T08:03:31.581397Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-12T09:50:28.064254Z[Etc/UTC]")
 public class LinkCustomerDetailsEntity {
   public static final String SERIALIZED_NAME_CUSTOMER_PHONE = "customer_phone";
   @SerializedName(SERIALIZED_NAME_CUSTOMER_PHONE)
