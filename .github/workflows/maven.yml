@@ -1,0 +1,30 @@
+name: Trigger Tests on Pull Request.
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+
+      - name: Gradlew permission
+        run: chmod +x gradlew
+
+      - name: Run Tests and Send code coverage report to coveralls.io
+        run: CLIENT_ID=$PG_CLIENT_ID SECRET_KEY=$PG_CLIENT_SECRET && ./gradlew test jacocoTestReport coveralls
+        env:
+          PG_CLIENT_ID: ${{ secrets.XCLIENTIDSANDBOX }}
+          PG_CLIENT_SECRET: ${{ secrets.XCLIENTSECRETSANDBOX }}
+          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+
