@@ -528,6 +528,8 @@ public class CashfreeTest {
     try {
       ApiResponse<LinkEntity> actual = cashfree.PGCreateLink(xApiVersion, createLinkRequest, null, null, null);
     } catch (ApiException e) {
+      System.out.println("e.getCode()");
+      System.out.println(e.getCode());
       assertEquals(400,e.getCode());
       assertEquals("{\"message\":\"link_id : is missing in the request. Value received: \",\"code\":\"link_id_missing\",\"type\":\"invalid_request_error\"}\n",e.getResponseBody());
     }
