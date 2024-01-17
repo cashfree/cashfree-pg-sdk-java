@@ -1,5 +1,5 @@
 # Cashfree PG Java SDK
-![GitHub](https://img.shields.io/github/license/cashfree/cashfree-pg-sdk-java) ![Discord](https://img.shields.io/discord/931125665669972018?label=discord) ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/cashfree/cashfree-pg-sdk-java/main) ![GitHub release (with filter)](https://img.shields.io/github/v/release/cashfree/cashfree-pg-sdk-java?label=latest) ![GitHub forks](https://img.shields.io/github/forks/cashfree/cashfree-pg-sdk-java)
+![GitHub](https://img.shields.io/github/license/cashfree/cashfree-pg-sdk-java) ![Discord](https://img.shields.io/discord/931125665669972018?label=discord) ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/cashfree/cashfree-pg-sdk-java/main) ![GitHub release (with filter)](https://img.shields.io/github/v/release/cashfree/cashfree-pg-sdk-java?label=latest) ![GitHub forks](https://img.shields.io/github/forks/cashfree/cashfree-pg-sdk-java) [![Coverage Status](https://coveralls.io/repos/github/cashfree/cashfree-pg-sdk-java/badge.svg?branch=main)](https://coveralls.io/github/cashfree/cashfree-pg-sdk-java?branch=main)
 
 The Cashfree PG Java SDK offers a convenient solution to access [Cashfree PG APIs](https://docs.cashfree.com/reference/pg-new-apis-endpoint) from a server-side Java  applications. 
 
