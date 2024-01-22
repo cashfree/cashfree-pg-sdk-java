@@ -8,7 +8,7 @@ Create terminal response object
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**cfPaymentId** | **Long** |  |  [optional] |
+|**cfPaymentId** | **String** |  |  [optional] |
 |**paymentAmount** | **Integer** |  |  [optional] |
 |**paymentMethod** | **String** |  |  [optional] |
 |**paymentUrl** | **String** |  |  [optional] |
