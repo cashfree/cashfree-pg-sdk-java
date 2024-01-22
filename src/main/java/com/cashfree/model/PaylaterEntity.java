@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Paylater Entity
  */
 @Schema(description = "Paylater Entity")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-22T13:03:12.873082Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-22T13:26:09.604683Z[Etc/UTC]")
 public class PaylaterEntity {
   public static final String SERIALIZED_NAME_PAYMENT_METHOD = "payment_method";
   @SerializedName(SERIALIZED_NAME_PAYMENT_METHOD)
