@@ -6,6 +6,7 @@ All URIs are relative to *https://sandbox.cashfree.com/pg*
 |------------- | ------------- | -------------|
 | [**PGCreateOrder**](OrdersApi.md#PGCreateOrder) | **POST** /orders | Create Order |
 | [**PGFetchOrder**](OrdersApi.md#PGFetchOrder) | **GET** /orders/{order_id} | Get Order |
+| [**PGTerminateOrder**](OrdersApi.md#PGTerminateOrder) | **PATCH** /orders/{order_id} | Terminate Order |
 
 
 
@@ -34,10 +35,10 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2022-09-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
         CreateOrderRequest createOrderRequest = new CreateOrderRequest(); // CreateOrderRequest | Request body to create an order at cashfree
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
         try {
             OrderEntity result = cashfree.PGCreateOrder(xApiVersion, createOrderRequest, xRequestId, xIdempotencyKeyOkHttpClient httpClient);
             System.out.println(result);
@@ -57,10 +58,10 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2022-09-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
 | **createOrderRequest** | [**CreateOrderRequest**](CreateOrderRequest.md)| Request body to create an order at cashfree | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
 
 ### Return type
 
@@ -114,10 +115,10 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2022-09-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
         String orderId = "your-order-id"; // String | The id which uniquely identifies your order
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
         try {
             OrderEntity result = cashfree.PGFetchOrder(xApiVersion, orderId, xRequestId, xIdempotencyKeyOkHttpClient httpClient);
             System.out.println(result);
@@ -137,10 +138,10 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2022-09-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
 | **orderId** | **String**| The id which uniquely identifies your order | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
 
 ### Return type
 
@@ -153,6 +154,88 @@ public class Example {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  |
+| **400** | Bad request error |  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  |
+| **401** | Authentication Error |  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  |
+| **404** | Resource Not found |  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  |
+| **409** | Resource already present |  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  |
+| **422** | Idempotency error |  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  |
+| **429** | Rate Limit Error |  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  |
+| **500** | API related Error |  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  |
+
+
+## PGTerminateOrder
+
+> OrderEntity PGTerminateOrder(xApiVersion, orderId, terminateOrderRequest, xRequestId, xIdempotencyKey)
+
+Terminate Order
+
+Use this API to terminate the order that was created at Cashfree&#39;s using the &#x60;order_id&#x60;.
+
+### Example
+
+```java
+// Import classes:
+import com.cashfree.*;
+import com.cashfree.models.*;
+
+
+public class Example {
+    public static void main(String[] args) {
+        
+        Cashfree.XClientId = "TEST32461bf279b7ab306cdae3b423";
+        Cashfree.XClientSecret = "TEST4a3236fe94e6b1e0e60b875639e2008695b977b2";
+        Cashfree.XEnvironment = Cashfree.SANDBOX;
+
+        Cashfree cashfree = new Cashfree();
+
+        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String orderId = "your-order-id"; // String | The id which uniquely identifies your order
+        TerminateOrderRequest terminateOrderRequest = new TerminateOrderRequest(); // TerminateOrderRequest | Request body to terminate an order at cashfree
+        String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
+        try {
+            OrderEntity result = cashfree.PGTerminateOrder(xApiVersion, orderId, terminateOrderRequest, xRequestId, xIdempotencyKeyOkHttpClient httpClient);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling OrdersApi#PGTerminateOrder");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
+| **orderId** | **String**| The id which uniquely identifies your order | |
+| **terminateOrderRequest** | [**TerminateOrderRequest**](TerminateOrderRequest.md)| Request body to terminate an order at cashfree | |
+| **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
+
+### Return type
+
+[**OrderEntity**](OrderEntity.md)
+
+### Authorization
+
+[XPartnerAPIKey](../README.md#XPartnerAPIKey), [XClientSecret](../README.md#XClientSecret), [XPartnerMerchantID](../README.md#XPartnerMerchantID), [XClientID](../README.md#XClientID), [XClientSignatureHeader](../README.md#XClientSignatureHeader)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 

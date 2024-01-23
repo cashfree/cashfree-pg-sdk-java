@@ -8,8 +8,8 @@ Settlement entity object
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**cfPaymentId** | **Long** |  |  [optional] |
-|**cfSettlementId** | **Long** |  |  [optional] |
+|**cfPaymentId** | **String** |  |  [optional] |
+|**cfSettlementId** | **String** |  |  [optional] |
 |**settlementCurrency** | **String** |  |  [optional] |
 |**orderId** | **String** |  |  [optional] |
 |**entity** | **String** |  |  [optional] |
