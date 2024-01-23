@@ -19,7 +19,7 @@ Request paramenters for link creation
 |**linkNotify** | [**LinkNotifyEntity**](LinkNotifyEntity.md) |  |  [optional] |
 |**linkAutoReminders** | **Boolean** | If \&quot;true\&quot;, reminders will be sent to customers for collecting payments. |  [optional] |
 |**linkNotes** | **Map&lt;String, String&gt;** | Key-value pair that can be used to store additional information about the entity. Maximum 5 key-value pairs |  [optional] |
-|**linkMeta** | [**LinkMetaResponseEntity**](LinkMetaResponseEntity.md) |  |  [optional] |
+|**linkMeta** | [**LinkMetaEntity**](LinkMetaEntity.md) |  |  [optional] |
 
 
 

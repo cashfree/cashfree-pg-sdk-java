@@ -14,8 +14,8 @@
 package com.cashfree.model;
 
 import java.util.Objects;
-import com.cashfree.model.CustomerDetails;
 import com.cashfree.model.OrderMeta;
+import com.cashfree.model.PaymentLinkCustomerDetails;
 import com.cashfree.model.PaymentURLObject;
 import com.cashfree.model.RefundURLObject;
 import com.cashfree.model.SettlementURLObject;
@@ -65,10 +65,14 @@ import com.cashfree.JSON;
  */
 @Schema(description = "The complete order entity")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-23T08:10:57.817367Z[Etc/UTC]")
-public class OrderEntity {
+public class PaymentLinkOrderEntity {
   public static final String SERIALIZED_NAME_CF_ORDER_ID = "cf_order_id";
   @SerializedName(SERIALIZED_NAME_CF_ORDER_ID)
   private Long cfOrderId;
+
+  public static final String SERIALIZED_NAME_LINK_ID = "link_id";
+  @SerializedName(SERIALIZED_NAME_LINK_ID)
+  private String linkId;
 
   public static final String SERIALIZED_NAME_ORDER_ID = "order_id";
   @SerializedName(SERIALIZED_NAME_ORDER_ID)
@@ -112,7 +116,7 @@ public class OrderEntity {
 
   public static final String SERIALIZED_NAME_CUSTOMER_DETAILS = "customer_details";
   @SerializedName(SERIALIZED_NAME_CUSTOMER_DETAILS)
-  private CustomerDetails customerDetails;
+  private PaymentLinkCustomerDetails customerDetails;
 
   public static final String SERIALIZED_NAME_ORDER_META = "order_meta";
   @SerializedName(SERIALIZED_NAME_ORDER_META)
@@ -134,10 +138,10 @@ public class OrderEntity {
   @SerializedName(SERIALIZED_NAME_ORDER_TAGS)
   private Map<String, String> orderTags = new HashMap<>();
 
-  public OrderEntity() {
+  public PaymentLinkOrderEntity() {
   }
 
-  public OrderEntity cfOrderId(Long cfOrderId) {
+  public PaymentLinkOrderEntity cfOrderId(Long cfOrderId) {
     
     this.cfOrderId = cfOrderId;
     return this;
@@ -159,7 +163,29 @@ public class OrderEntity {
   }
 
 
-  public OrderEntity orderId(String orderId) {
+  public PaymentLinkOrderEntity linkId(String linkId) {
+    
+    this.linkId = linkId;
+    return this;
+  }
+
+   /**
+   * link id of the order
+   * @return linkId
+  **/
+  @javax.annotation.Nullable
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "link id of the order")
+  public String getLinkId() {
+    return linkId;
+  }
+
+
+  public void setLinkId(String linkId) {
+    this.linkId = linkId;
+  }
+
+
+  public PaymentLinkOrderEntity orderId(String orderId) {
     
     this.orderId = orderId;
     return this;
@@ -181,7 +207,7 @@ public class OrderEntity {
   }
 
 
-  public OrderEntity entity(String entity) {
+  public PaymentLinkOrderEntity entity(String entity) {
     
     this.entity = entity;
     return this;
@@ -203,7 +229,7 @@ public class OrderEntity {
   }
 
 
-  public OrderEntity orderCurrency(String orderCurrency) {
+  public PaymentLinkOrderEntity orderCurrency(String orderCurrency) {
     
     this.orderCurrency = orderCurrency;
     return this;
@@ -225,7 +251,7 @@ public class OrderEntity {
   }
 
 
-  public OrderEntity orderAmount(BigDecimal orderAmount) {
+  public PaymentLinkOrderEntity orderAmount(BigDecimal orderAmount) {
     
     this.orderAmount = orderAmount;
     return this;
@@ -247,7 +273,7 @@ public class OrderEntity {
   }
 
 
-  public OrderEntity orderStatus(String orderStatus) {
+  public PaymentLinkOrderEntity orderStatus(String orderStatus) {
     
     this.orderStatus = orderStatus;
     return this;
@@ -269,7 +295,7 @@ public class OrderEntity {
   }
 
 
-  public OrderEntity paymentSessionId(String paymentSessionId) {
+  public PaymentLinkOrderEntity paymentSessionId(String paymentSessionId) {
     
     this.paymentSessionId = paymentSessionId;
     return this;
@@ -291,7 +317,7 @@ public class OrderEntity {
   }
 
 
-  public OrderEntity orderExpiryTime(OffsetDateTime orderExpiryTime) {
+  public PaymentLinkOrderEntity orderExpiryTime(OffsetDateTime orderExpiryTime) {
     
     this.orderExpiryTime = orderExpiryTime;
     return this;
@@ -313,7 +339,7 @@ public class OrderEntity {
   }
 
 
-  public OrderEntity orderNote(String orderNote) {
+  public PaymentLinkOrderEntity orderNote(String orderNote) {
     
     this.orderNote = orderNote;
     return this;
@@ -335,7 +361,7 @@ public class OrderEntity {
   }
 
 
-  public OrderEntity createdAt(OffsetDateTime createdAt) {
+  public PaymentLinkOrderEntity createdAt(OffsetDateTime createdAt) {
     
     this.createdAt = createdAt;
     return this;
@@ -357,13 +383,13 @@ public class OrderEntity {
   }
 
 
-  public OrderEntity orderSplits(List<VendorSplit> orderSplits) {
+  public PaymentLinkOrderEntity orderSplits(List<VendorSplit> orderSplits) {
     
     this.orderSplits = orderSplits;
     return this;
   }
 
-  public OrderEntity addOrderSplitsItem(VendorSplit orderSplitsItem) {
+  public PaymentLinkOrderEntity addOrderSplitsItem(VendorSplit orderSplitsItem) {
     if (this.orderSplits == null) {
       this.orderSplits = new ArrayList<>();
     }
@@ -387,7 +413,7 @@ public class OrderEntity {
   }
 
 
-  public OrderEntity customerDetails(CustomerDetails customerDetails) {
+  public PaymentLinkOrderEntity customerDetails(PaymentLinkCustomerDetails customerDetails) {
     
     this.customerDetails = customerDetails;
     return this;
@@ -399,17 +425,17 @@ public class OrderEntity {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public CustomerDetails getCustomerDetails() {
+  public PaymentLinkCustomerDetails getCustomerDetails() {
     return customerDetails;
   }
 
 
-  public void setCustomerDetails(CustomerDetails customerDetails) {
+  public void setCustomerDetails(PaymentLinkCustomerDetails customerDetails) {
     this.customerDetails = customerDetails;
   }
 
 
-  public OrderEntity orderMeta(OrderMeta orderMeta) {
+  public PaymentLinkOrderEntity orderMeta(OrderMeta orderMeta) {
     
     this.orderMeta = orderMeta;
     return this;
@@ -431,7 +457,7 @@ public class OrderEntity {
   }
 
 
-  public OrderEntity payments(PaymentURLObject payments) {
+  public PaymentLinkOrderEntity payments(PaymentURLObject payments) {
     
     this.payments = payments;
     return this;
@@ -453,7 +479,7 @@ public class OrderEntity {
   }
 
 
-  public OrderEntity settlements(SettlementURLObject settlements) {
+  public PaymentLinkOrderEntity settlements(SettlementURLObject settlements) {
     
     this.settlements = settlements;
     return this;
@@ -475,7 +501,7 @@ public class OrderEntity {
   }
 
 
-  public OrderEntity refunds(RefundURLObject refunds) {
+  public PaymentLinkOrderEntity refunds(RefundURLObject refunds) {
     
     this.refunds = refunds;
     return this;
@@ -497,13 +523,13 @@ public class OrderEntity {
   }
 
 
-  public OrderEntity orderTags(Map<String, String> orderTags) {
+  public PaymentLinkOrderEntity orderTags(Map<String, String> orderTags) {
     
     this.orderTags = orderTags;
     return this;
   }
 
-  public OrderEntity putOrderTagsItem(String key, String orderTagsItem) {
+  public PaymentLinkOrderEntity putOrderTagsItem(String key, String orderTagsItem) {
     if (this.orderTags == null) {
       this.orderTags = new HashMap<>();
     }
@@ -536,36 +562,38 @@ public class OrderEntity {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    OrderEntity orderEntity = (OrderEntity) o;
-    return Objects.equals(this.cfOrderId, orderEntity.cfOrderId) &&
-        Objects.equals(this.orderId, orderEntity.orderId) &&
-        Objects.equals(this.entity, orderEntity.entity) &&
-        Objects.equals(this.orderCurrency, orderEntity.orderCurrency) &&
-        Objects.equals(this.orderAmount, orderEntity.orderAmount) &&
-        Objects.equals(this.orderStatus, orderEntity.orderStatus) &&
-        Objects.equals(this.paymentSessionId, orderEntity.paymentSessionId) &&
-        Objects.equals(this.orderExpiryTime, orderEntity.orderExpiryTime) &&
-        Objects.equals(this.orderNote, orderEntity.orderNote) &&
-        Objects.equals(this.createdAt, orderEntity.createdAt) &&
-        Objects.equals(this.orderSplits, orderEntity.orderSplits) &&
-        Objects.equals(this.customerDetails, orderEntity.customerDetails) &&
-        Objects.equals(this.orderMeta, orderEntity.orderMeta) &&
-        Objects.equals(this.payments, orderEntity.payments) &&
-        Objects.equals(this.settlements, orderEntity.settlements) &&
-        Objects.equals(this.refunds, orderEntity.refunds) &&
-        Objects.equals(this.orderTags, orderEntity.orderTags);
+    PaymentLinkOrderEntity paymentLinkOrderEntity = (PaymentLinkOrderEntity) o;
+    return Objects.equals(this.cfOrderId, paymentLinkOrderEntity.cfOrderId) &&
+        Objects.equals(this.linkId, paymentLinkOrderEntity.linkId) &&
+        Objects.equals(this.orderId, paymentLinkOrderEntity.orderId) &&
+        Objects.equals(this.entity, paymentLinkOrderEntity.entity) &&
+        Objects.equals(this.orderCurrency, paymentLinkOrderEntity.orderCurrency) &&
+        Objects.equals(this.orderAmount, paymentLinkOrderEntity.orderAmount) &&
+        Objects.equals(this.orderStatus, paymentLinkOrderEntity.orderStatus) &&
+        Objects.equals(this.paymentSessionId, paymentLinkOrderEntity.paymentSessionId) &&
+        Objects.equals(this.orderExpiryTime, paymentLinkOrderEntity.orderExpiryTime) &&
+        Objects.equals(this.orderNote, paymentLinkOrderEntity.orderNote) &&
+        Objects.equals(this.createdAt, paymentLinkOrderEntity.createdAt) &&
+        Objects.equals(this.orderSplits, paymentLinkOrderEntity.orderSplits) &&
+        Objects.equals(this.customerDetails, paymentLinkOrderEntity.customerDetails) &&
+        Objects.equals(this.orderMeta, paymentLinkOrderEntity.orderMeta) &&
+        Objects.equals(this.payments, paymentLinkOrderEntity.payments) &&
+        Objects.equals(this.settlements, paymentLinkOrderEntity.settlements) &&
+        Objects.equals(this.refunds, paymentLinkOrderEntity.refunds) &&
+        Objects.equals(this.orderTags, paymentLinkOrderEntity.orderTags);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(cfOrderId, orderId, entity, orderCurrency, orderAmount, orderStatus, paymentSessionId, orderExpiryTime, orderNote, createdAt, orderSplits, customerDetails, orderMeta, payments, settlements, refunds, orderTags);
+    return Objects.hash(cfOrderId, linkId, orderId, entity, orderCurrency, orderAmount, orderStatus, paymentSessionId, orderExpiryTime, orderNote, createdAt, orderSplits, customerDetails, orderMeta, payments, settlements, refunds, orderTags);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class OrderEntity {\n");
+    sb.append("class PaymentLinkOrderEntity {\n");
     sb.append("    cfOrderId: ").append(toIndentedString(cfOrderId)).append("\n");
+    sb.append("    linkId: ").append(toIndentedString(linkId)).append("\n");
     sb.append("    orderId: ").append(toIndentedString(orderId)).append("\n");
     sb.append("    entity: ").append(toIndentedString(entity)).append("\n");
     sb.append("    orderCurrency: ").append(toIndentedString(orderCurrency)).append("\n");
@@ -605,6 +633,7 @@ public class OrderEntity {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("cf_order_id");
+    openapiFields.add("link_id");
     openapiFields.add("order_id");
     openapiFields.add("entity");
     openapiFields.add("order_currency");
@@ -630,11 +659,14 @@ public class OrderEntity {
   * Validates the JSON Element and throws an exception if issues found
   *
   * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to OrderEntity
+  * @throws IOException if the JSON Element is invalid with respect to PaymentLinkOrderEntity
   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("link_id") != null && !jsonObj.get("link_id").isJsonNull()) && !jsonObj.get("link_id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `link_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("link_id").toString()));
+      }
       if ((jsonObj.get("order_id") != null && !jsonObj.get("order_id").isJsonNull()) && !jsonObj.get("order_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `order_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("order_id").toString()));
       }
@@ -669,7 +701,7 @@ public class OrderEntity {
       }
       // validate the optional field `customer_details`
       if (jsonObj.get("customer_details") != null && !jsonObj.get("customer_details").isJsonNull()) {
-        CustomerDetails.validateJsonElement(jsonObj.get("customer_details"));
+        PaymentLinkCustomerDetails.validateJsonElement(jsonObj.get("customer_details"));
       }
       // validate the optional field `order_meta`
       if (jsonObj.get("order_meta") != null && !jsonObj.get("order_meta").isJsonNull()) {
@@ -693,22 +725,22 @@ public class OrderEntity {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!OrderEntity.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'OrderEntity' and its subtypes
+       if (!PaymentLinkOrderEntity.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'PaymentLinkOrderEntity' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<OrderEntity> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(OrderEntity.class));
+       final TypeAdapter<PaymentLinkOrderEntity> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(PaymentLinkOrderEntity.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<OrderEntity>() {
+       return (TypeAdapter<T>) new TypeAdapter<PaymentLinkOrderEntity>() {
            @Override
-           public void write(JsonWriter out, OrderEntity value) throws IOException {
+           public void write(JsonWriter out, PaymentLinkOrderEntity value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public OrderEntity read(JsonReader in) throws IOException {
+           public PaymentLinkOrderEntity read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
              return thisAdapter.fromJsonTree(jsonElement);
@@ -719,18 +751,18 @@ public class OrderEntity {
   }
 
  /**
-  * Create an instance of OrderEntity given an JSON string
+  * Create an instance of PaymentLinkOrderEntity given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of OrderEntity
-  * @throws IOException if the JSON string is invalid with respect to OrderEntity
+  * @return An instance of PaymentLinkOrderEntity
+  * @throws IOException if the JSON string is invalid with respect to PaymentLinkOrderEntity
   */
-  public static OrderEntity fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, OrderEntity.class);
+  public static PaymentLinkOrderEntity fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, PaymentLinkOrderEntity.class);
   }
 
  /**
-  * Convert an instance of OrderEntity to an JSON string
+  * Convert an instance of PaymentLinkOrderEntity to an JSON string
   *
   * @return JSON string
   */
