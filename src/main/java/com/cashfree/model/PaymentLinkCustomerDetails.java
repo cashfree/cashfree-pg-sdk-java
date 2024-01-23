@@ -54,7 +54,7 @@ import com.cashfree.JSON;
  */
 @Schema(description = "The customer details that are necessary. Note that you can pass dummy details if your use case does not require the customer details.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-23T08:10:57.817367Z[Etc/UTC]")
-public class CustomerDetails {
+public class PaymentLinkCustomerDetails {
   public static final String SERIALIZED_NAME_CUSTOMER_ID = "customer_id";
   @SerializedName(SERIALIZED_NAME_CUSTOMER_ID)
   private String customerId;
@@ -83,10 +83,10 @@ public class CustomerDetails {
   @SerializedName(SERIALIZED_NAME_CUSTOMER_BANK_CODE)
   private BigDecimal customerBankCode;
 
-  public CustomerDetails() {
+  public PaymentLinkCustomerDetails() {
   }
 
-  public CustomerDetails customerId(String customerId) {
+  public PaymentLinkCustomerDetails customerId(String customerId) {
     
     this.customerId = customerId;
     return this;
@@ -96,8 +96,8 @@ public class CustomerDetails {
    * A unique identifier for the customer. Use alphanumeric values only.
    * @return customerId
   **/
-  @javax.annotation.Nonnull
-  @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "A unique identifier for the customer. Use alphanumeric values only.")
+  @javax.annotation.Nullable
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "A unique identifier for the customer. Use alphanumeric values only.")
   public String getCustomerId() {
     return customerId;
   }
@@ -108,7 +108,7 @@ public class CustomerDetails {
   }
 
 
-  public CustomerDetails customerEmail(String customerEmail) {
+  public PaymentLinkCustomerDetails customerEmail(String customerEmail) {
     
     this.customerEmail = customerEmail;
     return this;
@@ -130,7 +130,7 @@ public class CustomerDetails {
   }
 
 
-  public CustomerDetails customerPhone(String customerPhone) {
+  public PaymentLinkCustomerDetails customerPhone(String customerPhone) {
     
     this.customerPhone = customerPhone;
     return this;
@@ -152,7 +152,7 @@ public class CustomerDetails {
   }
 
 
-  public CustomerDetails customerName(String customerName) {
+  public PaymentLinkCustomerDetails customerName(String customerName) {
     
     this.customerName = customerName;
     return this;
@@ -174,7 +174,7 @@ public class CustomerDetails {
   }
 
 
-  public CustomerDetails customerBankAccountNumber(String customerBankAccountNumber) {
+  public PaymentLinkCustomerDetails customerBankAccountNumber(String customerBankAccountNumber) {
     
     this.customerBankAccountNumber = customerBankAccountNumber;
     return this;
@@ -196,7 +196,7 @@ public class CustomerDetails {
   }
 
 
-  public CustomerDetails customerBankIfsc(String customerBankIfsc) {
+  public PaymentLinkCustomerDetails customerBankIfsc(String customerBankIfsc) {
     
     this.customerBankIfsc = customerBankIfsc;
     return this;
@@ -218,7 +218,7 @@ public class CustomerDetails {
   }
 
 
-  public CustomerDetails customerBankCode(BigDecimal customerBankCode) {
+  public PaymentLinkCustomerDetails customerBankCode(BigDecimal customerBankCode) {
     
     this.customerBankCode = customerBankCode;
     return this;
@@ -249,14 +249,14 @@ public class CustomerDetails {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CustomerDetails customerDetails = (CustomerDetails) o;
-    return Objects.equals(this.customerId, customerDetails.customerId) &&
-        Objects.equals(this.customerEmail, customerDetails.customerEmail) &&
-        Objects.equals(this.customerPhone, customerDetails.customerPhone) &&
-        Objects.equals(this.customerName, customerDetails.customerName) &&
-        Objects.equals(this.customerBankAccountNumber, customerDetails.customerBankAccountNumber) &&
-        Objects.equals(this.customerBankIfsc, customerDetails.customerBankIfsc) &&
-        Objects.equals(this.customerBankCode, customerDetails.customerBankCode);
+    PaymentLinkCustomerDetails paymentLinkCustomerDetails = (PaymentLinkCustomerDetails) o;
+    return Objects.equals(this.customerId, paymentLinkCustomerDetails.customerId) &&
+        Objects.equals(this.customerEmail, paymentLinkCustomerDetails.customerEmail) &&
+        Objects.equals(this.customerPhone, paymentLinkCustomerDetails.customerPhone) &&
+        Objects.equals(this.customerName, paymentLinkCustomerDetails.customerName) &&
+        Objects.equals(this.customerBankAccountNumber, paymentLinkCustomerDetails.customerBankAccountNumber) &&
+        Objects.equals(this.customerBankIfsc, paymentLinkCustomerDetails.customerBankIfsc) &&
+        Objects.equals(this.customerBankCode, paymentLinkCustomerDetails.customerBankCode);
   }
 
   @Override
@@ -267,7 +267,7 @@ public class CustomerDetails {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class CustomerDetails {\n");
+    sb.append("class PaymentLinkCustomerDetails {\n");
     sb.append("    customerId: ").append(toIndentedString(customerId)).append("\n");
     sb.append("    customerEmail: ").append(toIndentedString(customerEmail)).append("\n");
     sb.append("    customerPhone: ").append(toIndentedString(customerPhone)).append("\n");
@@ -307,7 +307,6 @@ public class CustomerDetails {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("customer_id");
     openapiRequiredFields.add("customer_phone");
   }
 
@@ -315,19 +314,19 @@ public class CustomerDetails {
   * Validates the JSON Element and throws an exception if issues found
   *
   * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to CustomerDetails
+  * @throws IOException if the JSON Element is invalid with respect to PaymentLinkCustomerDetails
   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
 
 
       // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : CustomerDetails.openapiRequiredFields) {
+      for (String requiredField : PaymentLinkCustomerDetails.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("customer_id").isJsonPrimitive()) {
+      if ((jsonObj.get("customer_id") != null && !jsonObj.get("customer_id").isJsonNull()) && !jsonObj.get("customer_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `customer_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("customer_id").toString()));
       }
       if ((jsonObj.get("customer_email") != null && !jsonObj.get("customer_email").isJsonNull()) && !jsonObj.get("customer_email").isJsonPrimitive()) {
@@ -351,22 +350,22 @@ public class CustomerDetails {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!CustomerDetails.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'CustomerDetails' and its subtypes
+       if (!PaymentLinkCustomerDetails.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'PaymentLinkCustomerDetails' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<CustomerDetails> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(CustomerDetails.class));
+       final TypeAdapter<PaymentLinkCustomerDetails> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(PaymentLinkCustomerDetails.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<CustomerDetails>() {
+       return (TypeAdapter<T>) new TypeAdapter<PaymentLinkCustomerDetails>() {
            @Override
-           public void write(JsonWriter out, CustomerDetails value) throws IOException {
+           public void write(JsonWriter out, PaymentLinkCustomerDetails value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public CustomerDetails read(JsonReader in) throws IOException {
+           public PaymentLinkCustomerDetails read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
              return thisAdapter.fromJsonTree(jsonElement);
@@ -377,18 +376,18 @@ public class CustomerDetails {
   }
 
  /**
-  * Create an instance of CustomerDetails given an JSON string
+  * Create an instance of PaymentLinkCustomerDetails given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of CustomerDetails
-  * @throws IOException if the JSON string is invalid with respect to CustomerDetails
+  * @return An instance of PaymentLinkCustomerDetails
+  * @throws IOException if the JSON string is invalid with respect to PaymentLinkCustomerDetails
   */
-  public static CustomerDetails fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, CustomerDetails.class);
+  public static PaymentLinkCustomerDetails fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, PaymentLinkCustomerDetails.class);
   }
 
  /**
-  * Convert an instance of CustomerDetails to an JSON string
+  * Convert an instance of PaymentLinkCustomerDetails to an JSON string
   *
   * @return JSON string
   */
