@@ -8,9 +8,7 @@ paylater payment method object for pay api
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**channel** | **String** |  |  [optional] |
-|**provider** | **String** |  |  [optional] |
-|**phone** | **String** |  |  [optional] |
+|**paylater** | [**PaymentMethodAppInPaymentsEntityApp**](PaymentMethodAppInPaymentsEntityApp.md) |  |  [optional] |
 
 
 
