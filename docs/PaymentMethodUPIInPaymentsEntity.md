@@ -8,8 +8,7 @@ UPI payment method for pay api
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**channel** | **String** |  |  |
-|**upiId** | **String** |  |  [optional] |
+|**upi** | [**PaymentMethodUPIInPaymentsEntityUpi**](PaymentMethodUPIInPaymentsEntityUpi.md) |  |  [optional] |
 
 
 

@@ -7,18 +7,13 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**channel** | **String** |  |  |
-|**cardNumber** | **String** |  |  [optional] |
-|**cardNetwork** | **String** |  |  [optional] |
-|**cardType** | **String** |  |  [optional] |
-|**cardCountry** | **String** |  |  [optional] |
-|**cardBankName** | **String** |  |  [optional] |
-|**cardNetworkReferenceId** | **String** |  |  [optional] |
-|**netbankingBankCode** | **Integer** |  |  |
-|**netbankingBankName** | **String** |  |  |
-|**upiId** | **String** |  |  [optional] |
-|**provider** | **String** |  |  [optional] |
-|**phone** | **String** |  |  [optional] |
+|**card** | [**PaymentMethodCardInPaymentsEntityCard**](PaymentMethodCardInPaymentsEntityCard.md) |  |  [optional] |
+|**netbanking** | [**PaymentMethodNetBankingInPaymentsEntityNetbanking**](PaymentMethodNetBankingInPaymentsEntityNetbanking.md) |  |  [optional] |
+|**upi** | [**PaymentMethodUPIInPaymentsEntityUpi**](PaymentMethodUPIInPaymentsEntityUpi.md) |  |  [optional] |
+|**app** | [**PaymentMethodAppInPaymentsEntityApp**](PaymentMethodAppInPaymentsEntityApp.md) |  |  [optional] |
+|**cardlessEmi** | [**PaymentMethodAppInPaymentsEntityApp**](PaymentMethodAppInPaymentsEntityApp.md) |  |  [optional] |
+|**paylater** | [**PaymentMethodAppInPaymentsEntityApp**](PaymentMethodAppInPaymentsEntityApp.md) |  |  [optional] |
+|**emi** | [**PaymentMethodCardEMIInPaymentsEntityEmi**](PaymentMethodCardEMIInPaymentsEntityEmi.md) |  |  [optional] |
 
 
 

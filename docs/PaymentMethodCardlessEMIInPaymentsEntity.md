@@ -8,9 +8,7 @@ payment method carless object in payment entity
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**channel** | **String** |  |  [optional] |
-|**provider** | **String** |  |  [optional] |
-|**phone** | **String** |  |  [optional] |
+|**cardlessEmi** | [**PaymentMethodAppInPaymentsEntityApp**](PaymentMethodAppInPaymentsEntityApp.md) |  |  [optional] |
 
 
 

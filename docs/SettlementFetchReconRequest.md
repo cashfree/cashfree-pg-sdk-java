@@ -9,7 +9,7 @@ Recon Request Object
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**pagination** | [**FetchSettlementsRequestPagination**](FetchSettlementsRequestPagination.md) |  |  |
-|**filters** | [**FetchSettlementsRequestFilters**](FetchSettlementsRequestFilters.md) |  |  |
+|**filters** | [**SettlementFetchReconRequestFilters**](SettlementFetchReconRequestFilters.md) |  |  |
 
 
 

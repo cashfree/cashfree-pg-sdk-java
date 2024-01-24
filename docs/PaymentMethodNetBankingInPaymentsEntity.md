@@ -8,9 +8,7 @@ netbanking payment method object for pay
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**channel** | **String** |  |  |
-|**netbankingBankCode** | **Integer** |  |  |
-|**netbankingBankName** | **String** |  |  |
+|**netbanking** | [**PaymentMethodNetBankingInPaymentsEntityNetbanking**](PaymentMethodNetBankingInPaymentsEntityNetbanking.md) |  |  [optional] |
 
 
 
