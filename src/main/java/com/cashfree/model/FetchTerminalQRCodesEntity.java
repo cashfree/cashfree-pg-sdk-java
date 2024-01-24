@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Fetch Static QR Codes using terminal ID or phone number
  */
 @Schema(description = "Fetch Static QR Codes using terminal ID or phone number")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-24T10:22:50.697282Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-24T11:29:19.497960Z[Etc/UTC]")
 public class FetchTerminalQRCodesEntity {
   public static final String SERIALIZED_NAME_BANK = "bank";
   @SerializedName(SERIALIZED_NAME_BANK)

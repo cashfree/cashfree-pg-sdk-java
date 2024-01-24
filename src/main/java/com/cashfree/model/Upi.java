@@ -54,7 +54,7 @@ import com.cashfree.JSON;
  * UPI collect payment method object
  */
 @Schema(description = "UPI collect payment method object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-24T10:22:50.697282Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-24T11:29:19.497960Z[Etc/UTC]")
 public class Upi {
   /**
    * Specify the channel through which the payment must be processed. Can be one of [\&quot;link\&quot;, \&quot;collect\&quot;, \&quot;qrcode\&quot;]

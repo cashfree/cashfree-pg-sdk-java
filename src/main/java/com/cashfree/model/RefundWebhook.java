@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * refund webhook object
  */
 @Schema(description = "refund webhook object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-24T10:22:50.697282Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-24T11:29:19.497960Z[Etc/UTC]")
 public class RefundWebhook {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)

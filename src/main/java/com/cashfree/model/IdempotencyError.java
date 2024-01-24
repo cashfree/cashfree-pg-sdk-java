@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Error when idempotency fails. Different request body with the same idempotent key
  */
 @Schema(description = "Error when idempotency fails. Different request body with the same idempotent key")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-24T10:22:50.697282Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-24T11:29:19.497960Z[Etc/UTC]")
 public class IdempotencyError {
   public static final String SERIALIZED_NAME_MESSAGE = "message";
   @SerializedName(SERIALIZED_NAME_MESSAGE)

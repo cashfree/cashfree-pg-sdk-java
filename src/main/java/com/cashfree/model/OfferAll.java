@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * returns all offers
  */
 @Schema(description = "returns all offers")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-24T10:22:50.697282Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-24T11:29:19.497960Z[Etc/UTC]")
 public class OfferAll {
   public static final String SERIALIZED_NAME_ALL = "all";
   @SerializedName(SERIALIZED_NAME_ALL)

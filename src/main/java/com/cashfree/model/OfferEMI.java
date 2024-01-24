@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * EMI offer object
  */
 @Schema(description = "EMI offer object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-24T10:22:50.697282Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-24T11:29:19.497960Z[Etc/UTC]")
 public class OfferEMI {
   public static final String SERIALIZED_NAME_EMI = "emi";
   @SerializedName(SERIALIZED_NAME_EMI)
