@@ -100,6 +100,7 @@ docs/PaylaterEntity.md
 docs/PaylaterOffer.md
 docs/PaylaterPaymentMethod.md
 docs/PaymentEntity.md
+docs/PaymentEntityPaymentMethod.md
 docs/PaymentLinkCustomerDetails.md
 docs/PaymentLinkOrderEntity.md
 docs/PaymentLinksApi.md
@@ -111,8 +112,6 @@ docs/PaymentMethodCardEMIInPaymentsEntityEmiEmiDetails.md
 docs/PaymentMethodCardInPaymentsEntity.md
 docs/PaymentMethodCardInPaymentsEntityCard.md
 docs/PaymentMethodCardlessEMIInPaymentsEntity.md
-docs/PaymentMethodInPaymentsEntity.md
-docs/PaymentMethodInPaymentsEntityPaymentMethod.md
 docs/PaymentMethodNetBankingInPaymentsEntity.md
 docs/PaymentMethodNetBankingInPaymentsEntityNetbanking.md
 docs/PaymentMethodPaylaterInPaymentsEntity.md
@@ -289,6 +288,7 @@ src/main/java/com/cashfree/model/PaylaterEntity.java
 src/main/java/com/cashfree/model/PaylaterOffer.java
 src/main/java/com/cashfree/model/PaylaterPaymentMethod.java
 src/main/java/com/cashfree/model/PaymentEntity.java
+src/main/java/com/cashfree/model/PaymentEntityPaymentMethod.java
 src/main/java/com/cashfree/model/PaymentLinkCustomerDetails.java
 src/main/java/com/cashfree/model/PaymentLinkOrderEntity.java
 src/main/java/com/cashfree/model/PaymentMethodAppInPaymentsEntity.java
@@ -299,8 +299,6 @@ src/main/java/com/cashfree/model/PaymentMethodCardEMIInPaymentsEntityEmiEmiDetai
 src/main/java/com/cashfree/model/PaymentMethodCardInPaymentsEntity.java
 src/main/java/com/cashfree/model/PaymentMethodCardInPaymentsEntityCard.java
 src/main/java/com/cashfree/model/PaymentMethodCardlessEMIInPaymentsEntity.java
-src/main/java/com/cashfree/model/PaymentMethodInPaymentsEntity.java
-src/main/java/com/cashfree/model/PaymentMethodInPaymentsEntityPaymentMethod.java
 src/main/java/com/cashfree/model/PaymentMethodNetBankingInPaymentsEntity.java
 src/main/java/com/cashfree/model/PaymentMethodNetBankingInPaymentsEntityNetbanking.java
 src/main/java/com/cashfree/model/PaymentMethodPaylaterInPaymentsEntity.java
@@ -442,6 +440,7 @@ src/test/java/com/cashfree/model/PaylaterEntityTest.java
 src/test/java/com/cashfree/model/PaylaterOfferTest.java
 src/test/java/com/cashfree/model/PaylaterPaymentMethodTest.java
 src/test/java/com/cashfree/model/PaylaterTest.java
+src/test/java/com/cashfree/model/PaymentEntityPaymentMethodTest.java
 src/test/java/com/cashfree/model/PaymentEntityTest.java
 src/test/java/com/cashfree/model/PaymentLinkCustomerDetailsTest.java
 src/test/java/com/cashfree/model/PaymentLinkOrderEntityTest.java
@@ -453,8 +452,6 @@ src/test/java/com/cashfree/model/PaymentMethodCardEMIInPaymentsEntityTest.java
 src/test/java/com/cashfree/model/PaymentMethodCardInPaymentsEntityCardTest.java
 src/test/java/com/cashfree/model/PaymentMethodCardInPaymentsEntityTest.java
 src/test/java/com/cashfree/model/PaymentMethodCardlessEMIInPaymentsEntityTest.java
-src/test/java/com/cashfree/model/PaymentMethodInPaymentsEntityPaymentMethodTest.java
-src/test/java/com/cashfree/model/PaymentMethodInPaymentsEntityTest.java
 src/test/java/com/cashfree/model/PaymentMethodNetBankingInPaymentsEntityNetbankingTest.java
 src/test/java/com/cashfree/model/PaymentMethodNetBankingInPaymentsEntityTest.java
 src/test/java/com/cashfree/model/PaymentMethodPaylaterInPaymentsEntityTest.java

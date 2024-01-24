@@ -16,7 +16,7 @@ package com.cashfree.model;
 import java.util.Objects;
 import com.cashfree.model.AuthorizationInPaymentsEntity;
 import com.cashfree.model.ErrorDetailsInPaymentsEntity;
-import com.cashfree.model.PaymentMethodInPaymentsEntity;
+import com.cashfree.model.PaymentEntityPaymentMethod;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -56,7 +56,7 @@ import com.cashfree.JSON;
  * payment entity full object
  */
 @Schema(description = "payment entity full object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-24T10:22:50.697282Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-24T11:43:43.900337Z[Etc/UTC]")
 public class PaymentEntity {
   public static final String SERIALIZED_NAME_CF_PAYMENT_ID = "cf_payment_id";
   @SerializedName(SERIALIZED_NAME_CF_PAYMENT_ID)
@@ -183,7 +183,7 @@ public class PaymentEntity {
 
   public static final String SERIALIZED_NAME_PAYMENT_METHOD = "payment_method";
   @SerializedName(SERIALIZED_NAME_PAYMENT_METHOD)
-  private PaymentMethodInPaymentsEntity paymentMethod;
+  private PaymentEntityPaymentMethod paymentMethod;
 
   public PaymentEntity() {
   }
@@ -540,7 +540,7 @@ public class PaymentEntity {
   }
 
 
-  public PaymentEntity paymentMethod(PaymentMethodInPaymentsEntity paymentMethod) {
+  public PaymentEntity paymentMethod(PaymentEntityPaymentMethod paymentMethod) {
     
     this.paymentMethod = paymentMethod;
     return this;
@@ -552,12 +552,12 @@ public class PaymentEntity {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public PaymentMethodInPaymentsEntity getPaymentMethod() {
+  public PaymentEntityPaymentMethod getPaymentMethod() {
     return paymentMethod;
   }
 
 
-  public void setPaymentMethod(PaymentMethodInPaymentsEntity paymentMethod) {
+  public void setPaymentMethod(PaymentEntityPaymentMethod paymentMethod) {
     this.paymentMethod = paymentMethod;
   }
 
@@ -710,7 +710,7 @@ public class PaymentEntity {
       }
       // validate the optional field `payment_method`
       if (jsonObj.get("payment_method") != null && !jsonObj.get("payment_method").isJsonNull()) {
-        PaymentMethodInPaymentsEntity.validateJsonElement(jsonObj.get("payment_method"));
+        PaymentEntityPaymentMethod.validateJsonElement(jsonObj.get("payment_method"));
       }
   }
 
