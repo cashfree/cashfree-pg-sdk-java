@@ -13,6 +13,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
+    - name: Get Latest Tag
+      uses: actions-ecosystem/action-get-latest-tag@v1
+      id: get-latest-tag
+
     - name: Set up JDK
       uses: actions/setup-java@v2
       with:
@@ -35,7 +39,20 @@ jobs:
         SIGNING_PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
         SONATYPE_STAGING_PROFILE_ID: ${{ secrets.SONATYPE_STAGING_PROFILE_ID }}
 
-      #   uses: gradle/gradle-build-action@749f47bda3e44aa060e82d7b3ef7e40d953bd629
-      # with:
-      #   arguments: publish
+    - name: Release
+      run: |
+        curl --location --request POST 'https://api.github.com/repos/cashfree/cashfree-pg-sdk-java/releases' \
+          --header 'Accept: application/vnd.github+json' \
+          --header "Authorization: Bearer ${{ secrets.TOKEN_GITHUB }}" \
+          --header 'X-GitHub-Api-Version: 2022-11-28' \
+          --header 'Content-Type: application/json' \
+          --data-raw '{
+              "tag_name": "${{ steps.get-latest-tag.outputs.tag }}",
+              "target_commitish": "main",
+              "name": "${{ steps.get-latest-tag.outputs.tag }}",
+              "body": "Release version ${{ steps.get-latest-tag.outputs.tag }}",
+              "draft": false,
+              "prerelease": false,
+              "generate_release_notes": false
+          }'
 
