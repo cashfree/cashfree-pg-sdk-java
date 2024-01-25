@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Offer object for UPI
  */
 @Schema(description = "Offer object for UPI")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:04:58.760654Z[Etc/UTC]")
 public class OfferUPI {
   public static final String SERIALIZED_NAME_UPI = "upi";
   @SerializedName(SERIALIZED_NAME_UPI)

@@ -54,7 +54,7 @@ import com.cashfree.JSON;
  * Recon object
  */
 @Schema(description = "Recon object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:04:58.760654Z[Etc/UTC]")
 public class FetchReconRequest {
   public static final String SERIALIZED_NAME_PAGINATION = "pagination";
   @SerializedName(SERIALIZED_NAME_PAGINATION)
@@ -184,9 +184,9 @@ public class FetchReconRequest {
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `pagination`
-      return FetchReconRequestPagination.validateJsonElement(jsonObj.get("pagination"));
+      FetchReconRequestPagination.validateJsonElement(jsonObj.get("pagination"));
       // validate the required field `filters`
-      return FetchReconRequestFilters.validateJsonElement(jsonObj.get("filters"));
+      FetchReconRequestFilters.validateJsonElement(jsonObj.get("filters"));
       return false;
   }
 

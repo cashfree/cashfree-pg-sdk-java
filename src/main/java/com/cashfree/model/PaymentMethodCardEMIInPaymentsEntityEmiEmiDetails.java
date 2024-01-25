@@ -52,7 +52,7 @@ import com.cashfree.JSON;
 /**
  * PaymentMethodCardEMIInPaymentsEntityEmiEmiDetails
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:04:58.760654Z[Etc/UTC]")
 public class PaymentMethodCardEMIInPaymentsEntityEmiEmiDetails {
   public static final String SERIALIZED_NAME_EMI_AMOUNT = "emi_amount";
   @SerializedName(SERIALIZED_NAME_EMI_AMOUNT)

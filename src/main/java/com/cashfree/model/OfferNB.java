@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * Offer object ofr NetBanking
  */
 @Schema(description = "Offer object ofr NetBanking")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:04:58.760654Z[Etc/UTC]")
 public class OfferNB {
   public static final String SERIALIZED_NAME_NETBANKING = "netbanking";
   @SerializedName(SERIALIZED_NAME_NETBANKING)
@@ -153,7 +153,7 @@ public class OfferNB {
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `netbanking`
-      return OfferNBNetbanking.validateJsonElement(jsonObj.get("netbanking"));
+      OfferNBNetbanking.validateJsonElement(jsonObj.get("netbanking"));
       return false;
   }
 

@@ -57,7 +57,7 @@ import com.cashfree.JSON;
  * Request paramenters for link creation
  */
 @Schema(description = "Request paramenters for link creation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:04:58.760654Z[Etc/UTC]")
 public class CreateLinkRequest {
   public static final String SERIALIZED_NAME_LINK_ID = "link_id";
   @SerializedName(SERIALIZED_NAME_LINK_ID)
@@ -497,7 +497,7 @@ public class CreateLinkRequest {
         throw new IllegalArgumentException(String.format("Expected the field `link_purpose` to be a primitive type in the JSON string but got `%s`", jsonObj.get("link_purpose").toString()));
       }
       // validate the required field `customer_details`
-      return LinkCustomerDetailsEntity.validateJsonElement(jsonObj.get("customer_details"));
+      LinkCustomerDetailsEntity.validateJsonElement(jsonObj.get("customer_details"));
       if ((jsonObj.get("link_expiry_time") != null && !jsonObj.get("link_expiry_time").isJsonNull()) && !jsonObj.get("link_expiry_time").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `link_expiry_time` to be a primitive type in the JSON string but got `%s`", jsonObj.get("link_expiry_time").toString()));
       }
