@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Invalid request received from client
  */
 @Schema(description = "Invalid request received from client")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:56:25.298979Z[Etc/UTC]")
 public class BadRequestError {
   public static final String SERIALIZED_NAME_MESSAGE = "message";
   @SerializedName(SERIALIZED_NAME_MESSAGE)

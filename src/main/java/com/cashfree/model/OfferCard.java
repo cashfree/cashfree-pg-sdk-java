@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * Offers related to cards
  */
 @Schema(description = "Offers related to cards")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:56:25.298979Z[Etc/UTC]")
 public class OfferCard {
   public static final String SERIALIZED_NAME_CARD = "card";
   @SerializedName(SERIALIZED_NAME_CARD)
@@ -153,7 +153,7 @@ public class OfferCard {
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `card`
-      return CardOffer.validateJsonElement(jsonObj.get("card"));
+      CardOffer.validateJsonElement(jsonObj.get("card"));
       return false;
   }
 

@@ -54,7 +54,7 @@ import com.cashfree.JSON;
  * Eligiblty API request
  */
 @Schema(description = "Eligiblty API request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:56:25.298979Z[Etc/UTC]")
 public class EligibilityFetchOffersRequest {
   public static final String SERIALIZED_NAME_QUERIES = "queries";
   @SerializedName(SERIALIZED_NAME_QUERIES)
@@ -183,7 +183,7 @@ public class EligibilityFetchOffersRequest {
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `queries`
-      return OfferQueries.validateJsonElement(jsonObj.get("queries"));
+      OfferQueries.validateJsonElement(jsonObj.get("queries"));
       // validate the optional field `filters`
       if (jsonObj.get("filters") != null && !jsonObj.get("filters").isJsonNull()) {
         OfferFilters.validateJsonElement(jsonObj.get("filters"));

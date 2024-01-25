@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * EMI offer object
  */
 @Schema(description = "EMI offer object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:56:25.298979Z[Etc/UTC]")
 public class OfferEMI {
   public static final String SERIALIZED_NAME_EMI = "emi";
   @SerializedName(SERIALIZED_NAME_EMI)
@@ -153,7 +153,7 @@ public class OfferEMI {
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `emi`
-      return EMIOffer.validateJsonElement(jsonObj.get("emi"));
+      EMIOffer.validateJsonElement(jsonObj.get("emi"));
       return false;
   }
 

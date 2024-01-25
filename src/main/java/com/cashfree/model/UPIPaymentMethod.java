@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * Complete payment method for UPI collect
  */
 @Schema(description = "Complete payment method for UPI collect")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:56:25.298979Z[Etc/UTC]")
 public class UPIPaymentMethod {
   public static final String SERIALIZED_NAME_UPI = "upi";
   @SerializedName(SERIALIZED_NAME_UPI)
@@ -153,7 +153,7 @@ public class UPIPaymentMethod {
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `upi`
-      return Upi.validateJsonElement(jsonObj.get("upi"));
+      Upi.validateJsonElement(jsonObj.get("upi"));
       return false;
   }
 

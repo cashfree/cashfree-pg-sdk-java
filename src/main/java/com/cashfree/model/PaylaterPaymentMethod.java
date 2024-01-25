@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * paylater payment method
  */
 @Schema(description = "paylater payment method")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:56:25.298979Z[Etc/UTC]")
 public class PaylaterPaymentMethod {
   public static final String SERIALIZED_NAME_PAYLATER = "paylater";
   @SerializedName(SERIALIZED_NAME_PAYLATER)
@@ -153,7 +153,7 @@ public class PaylaterPaymentMethod {
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `paylater`
-      return Paylater.validateJsonElement(jsonObj.get("paylater"));
+      Paylater.validateJsonElement(jsonObj.get("paylater"));
       return false;
   }
 
