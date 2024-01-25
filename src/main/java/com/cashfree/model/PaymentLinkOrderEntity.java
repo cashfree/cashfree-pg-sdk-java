@@ -64,7 +64,7 @@ import com.cashfree.JSON;
  * The complete order entity
  */
 @Schema(description = "The complete order entity")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-24T11:43:43.900337Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T07:39:27.472751Z[Etc/UTC]")
 public class PaymentLinkOrderEntity {
   public static final String SERIALIZED_NAME_CF_ORDER_ID = "cf_order_id";
   @SerializedName(SERIALIZED_NAME_CF_ORDER_ID)
@@ -702,22 +702,32 @@ public class PaymentLinkOrderEntity {
       // validate the optional field `customer_details`
       if (jsonObj.get("customer_details") != null && !jsonObj.get("customer_details").isJsonNull()) {
         PaymentLinkCustomerDetails.validateJsonElement(jsonObj.get("customer_details"));
+      } else {
+        throw new IOException();
       }
       // validate the optional field `order_meta`
       if (jsonObj.get("order_meta") != null && !jsonObj.get("order_meta").isJsonNull()) {
         OrderMeta.validateJsonElement(jsonObj.get("order_meta"));
+      } else {
+        throw new IOException();
       }
       // validate the optional field `payments`
       if (jsonObj.get("payments") != null && !jsonObj.get("payments").isJsonNull()) {
         PaymentURLObject.validateJsonElement(jsonObj.get("payments"));
+      } else {
+        throw new IOException();
       }
       // validate the optional field `settlements`
       if (jsonObj.get("settlements") != null && !jsonObj.get("settlements").isJsonNull()) {
         SettlementURLObject.validateJsonElement(jsonObj.get("settlements"));
+      } else {
+        throw new IOException();
       }
       // validate the optional field `refunds`
       if (jsonObj.get("refunds") != null && !jsonObj.get("refunds").isJsonNull()) {
         RefundURLObject.validateJsonElement(jsonObj.get("refunds"));
+      } else {
+        throw new IOException();
       }
   }
 

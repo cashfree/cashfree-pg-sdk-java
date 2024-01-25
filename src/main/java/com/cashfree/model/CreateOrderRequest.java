@@ -60,7 +60,7 @@ import com.cashfree.JSON;
  * Request body to create an order at cashfree
  */
 @Schema(description = "Request body to create an order at cashfree")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-24T11:43:43.900337Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T07:39:27.472751Z[Etc/UTC]")
 public class CreateOrderRequest {
   public static final String SERIALIZED_NAME_ORDER_ID = "order_id";
   @SerializedName(SERIALIZED_NAME_ORDER_ID)
@@ -450,10 +450,14 @@ public class CreateOrderRequest {
       // validate the optional field `terminal`
       if (jsonObj.get("terminal") != null && !jsonObj.get("terminal").isJsonNull()) {
         TerminalDetails.validateJsonElement(jsonObj.get("terminal"));
+      } else {
+        throw new IOException();
       }
       // validate the optional field `order_meta`
       if (jsonObj.get("order_meta") != null && !jsonObj.get("order_meta").isJsonNull()) {
         OrderMeta.validateJsonElement(jsonObj.get("order_meta"));
+      } else {
+        throw new IOException();
       }
       if ((jsonObj.get("order_expiry_time") != null && !jsonObj.get("order_expiry_time").isJsonNull()) && !jsonObj.get("order_expiry_time").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `order_expiry_time` to be a primitive type in the JSON string but got `%s`", jsonObj.get("order_expiry_time").toString()));

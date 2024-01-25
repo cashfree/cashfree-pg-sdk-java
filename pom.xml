@@ -5,7 +5,7 @@
     <artifactId>cashfree_pg</artifactId>
     <packaging>jar</packaging>
     <name>cashfree_pg</name>
-    <version>3.2.3</version>
+    <version>3.2.7</version>
     <url>https://github.com/cashfree/cashfree-pg-sdk-java</url>
     <description>Java Framework for Cashfree Payment Gateway.</description>
     <scm>
