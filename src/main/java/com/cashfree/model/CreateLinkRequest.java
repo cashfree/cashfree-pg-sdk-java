@@ -57,7 +57,7 @@ import com.cashfree.JSON;
  * Request paramenters for link creation
  */
 @Schema(description = "Request paramenters for link creation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T07:39:27.472751Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
 public class CreateLinkRequest {
   public static final String SERIALIZED_NAME_LINK_ID = "link_id";
   @SerializedName(SERIALIZED_NAME_LINK_ID)
@@ -504,14 +504,10 @@ public class CreateLinkRequest {
       // validate the optional field `link_notify`
       if (jsonObj.get("link_notify") != null && !jsonObj.get("link_notify").isJsonNull()) {
         LinkNotifyEntity.validateJsonElement(jsonObj.get("link_notify"));
-      } else {
-        throw new IOException();
       }
       // validate the optional field `link_meta`
       if (jsonObj.get("link_meta") != null && !jsonObj.get("link_meta").isJsonNull()) {
         LinkMetaEntity.validateJsonElement(jsonObj.get("link_meta"));
-      } else {
-        throw new IOException();
       }
   }
 

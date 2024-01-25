@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * Saved card instrument object
  */
 @Schema(description = "Saved card instrument object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T07:39:27.472751Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
 public class InstrumentEntity {
   public static final String SERIALIZED_NAME_CUSTOMER_ID = "customer_id";
   @SerializedName(SERIALIZED_NAME_CUSTOMER_ID)
@@ -499,8 +499,6 @@ public class InstrumentEntity {
       // validate the optional field `instrument_meta`
       if (jsonObj.get("instrument_meta") != null && !jsonObj.get("instrument_meta").isJsonNull()) {
         SavedInstrumentMeta.validateJsonElement(jsonObj.get("instrument_meta"));
-      } else {
-        throw new IOException();
       }
   }
 

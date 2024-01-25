@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * data entity in webhook
  */
 @Schema(description = "data entity in webhook")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T07:39:27.472751Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
 public class InstrumentWebhookDataEntity {
   public static final String SERIALIZED_NAME_INSTRUMENT = "instrument";
   @SerializedName(SERIALIZED_NAME_INSTRUMENT)
@@ -147,8 +147,6 @@ public class InstrumentWebhookDataEntity {
       // validate the optional field `instrument`
       if (jsonObj.get("instrument") != null && !jsonObj.get("instrument").isJsonNull()) {
         InstrumentEntity.validateJsonElement(jsonObj.get("instrument"));
-      } else {
-        throw new IOException();
       }
   }
 

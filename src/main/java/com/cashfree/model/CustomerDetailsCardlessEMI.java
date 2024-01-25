@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Details of the customer for whom eligibility is being checked.
  */
 @Schema(description = "Details of the customer for whom eligibility is being checked.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T07:39:27.472751Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
 public class CustomerDetailsCardlessEMI {
   public static final String SERIALIZED_NAME_CUSTOMER_PHONE = "customer_phone";
   @SerializedName(SERIALIZED_NAME_CUSTOMER_PHONE)

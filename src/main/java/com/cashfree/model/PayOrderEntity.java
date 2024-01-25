@@ -54,7 +54,7 @@ import com.cashfree.JSON;
  * Order Pay response once you create a transaction for that order
  */
 @Schema(description = "Order Pay response once you create a transaction for that order")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T07:39:27.472751Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
 public class PayOrderEntity {
   public static final String SERIALIZED_NAME_PAYMENT_AMOUNT = "payment_amount";
   @SerializedName(SERIALIZED_NAME_PAYMENT_AMOUNT)
@@ -467,8 +467,6 @@ public class PayOrderEntity {
       // validate the optional field `data`
       if (jsonObj.get("data") != null && !jsonObj.get("data").isJsonNull()) {
         OrderPayData.validateJsonElement(jsonObj.get("data"));
-      } else {
-        throw new IOException();
       }
   }
 

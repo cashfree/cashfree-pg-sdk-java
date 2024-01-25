@@ -57,7 +57,7 @@ import com.cashfree.JSON;
  * The refund entity
  */
 @Schema(description = "The refund entity")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T07:39:27.472751Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
 public class RefundEntity {
   public static final String SERIALIZED_NAME_CF_PAYMENT_ID = "cf_payment_id";
   @SerializedName(SERIALIZED_NAME_CF_PAYMENT_ID)
@@ -934,8 +934,6 @@ public class RefundEntity {
       // validate the optional field `refund_speed`
       if (jsonObj.get("refund_speed") != null && !jsonObj.get("refund_speed").isJsonNull()) {
         RefundSpeed.validateJsonElement(jsonObj.get("refund_speed"));
-      } else {
-        throw new IOException();
       }
   }
 
