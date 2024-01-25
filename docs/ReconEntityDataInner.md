@@ -26,8 +26,8 @@
 |**paymentTime** | **String** | Date and time when the payment was initiated. |  [optional] |
 |**paymentServiceCharge** | **BigDecimal** | Service charge applicable for the payment. |  [optional] |
 |**paymentServiceTax** | **BigDecimal** | Service tax applicable on the payment. |  [optional] |
-|**cfPaymentId** | **Long** | Cashfree Payments unique ID to identify a payment. |  [optional] |
-|**cfSettlementId** | **Integer** | Unique ID to identify the settlement. |  [optional] |
+|**cfPaymentId** | **String** | Cashfree Payments unique ID to identify a payment. |  [optional] |
+|**cfSettlementId** | **String** | Unique ID to identify the settlement. |  [optional] |
 |**settlementDate** | **String** | Date and time when the settlement was processed. |  [optional] |
 |**settlementUtr** | **String** | Unique transaction reference number of the settlement. |  [optional] |
 |**splitServiceCharge** | **BigDecimal** | Service charge that is applicable for splitting the payment. |  [optional] |
