@@ -55,7 +55,7 @@ import com.cashfree.JSON;
  * Settlement detailed recon response
  */
 @Schema(description = "Settlement detailed recon response")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
 public class ReconEntity {
   public static final String SERIALIZED_NAME_CURSOR = "cursor";
   @SerializedName(SERIALIZED_NAME_CURSOR)
@@ -209,7 +209,7 @@ public class ReconEntity {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to ReconEntity
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("cursor") != null && !jsonObj.get("cursor").isJsonNull()) && !jsonObj.get("cursor").isJsonPrimitive()) {
@@ -229,6 +229,7 @@ public class ReconEntity {
           };
         }
       }
+      return false;
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

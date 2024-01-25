@@ -54,7 +54,7 @@ import com.cashfree.JSON;
  * Filter for specific Payment Methods
  */
 @Schema(description = "Filter for specific Payment Methods")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
 public class PaymentMethodsFilters {
   public static final String SERIALIZED_NAME_PAYMENT_METHODS = "payment_methods";
   @SerializedName(SERIALIZED_NAME_PAYMENT_METHODS)
@@ -150,13 +150,14 @@ public class PaymentMethodsFilters {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to PaymentMethodsFilters
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the optional json data is an array if present
       if (jsonObj.get("payment_methods") != null && !jsonObj.get("payment_methods").isJsonNull() && !jsonObj.get("payment_methods").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `payment_methods` to be an array in the JSON string but got `%s`", jsonObj.get("payment_methods").toString()));
       }
+      return false;
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

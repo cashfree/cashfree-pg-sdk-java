@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * To fetch the next set of settlements, pass the cursor received in the response to the next API call.   To receive the data for the first time, pass the cursor as null.   Limit would be number of settlements that you want to receive.
  */
 @Schema(description = "To fetch the next set of settlements, pass the cursor received in the response to the next API call.   To receive the data for the first time, pass the cursor as null.   Limit would be number of settlements that you want to receive.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
 public class FetchReconRequestPagination {
   public static final String SERIALIZED_NAME_LIMIT = "limit";
   @SerializedName(SERIALIZED_NAME_LIMIT)
@@ -170,7 +170,7 @@ public class FetchReconRequestPagination {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to FetchReconRequestPagination
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
 
 
       // check to make sure all required properties/fields are present in the JSON string
@@ -183,6 +183,7 @@ public class FetchReconRequestPagination {
       if ((jsonObj.get("cursor") != null && !jsonObj.get("cursor").isJsonNull()) && !jsonObj.get("cursor").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `cursor` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cursor").toString()));
       }
+      return false;
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

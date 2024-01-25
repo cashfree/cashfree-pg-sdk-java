@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * How fast refund has to be proecessed
  */
 @Schema(description = "How fast refund has to be proecessed")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
 public class RefundSpeed {
   public static final String SERIALIZED_NAME_REQUESTED = "requested";
   @SerializedName(SERIALIZED_NAME_REQUESTED)
@@ -227,7 +227,7 @@ public class RefundSpeed {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to RefundSpeed
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("requested") != null && !jsonObj.get("requested").isJsonNull()) && !jsonObj.get("requested").isJsonPrimitive()) {
@@ -242,6 +242,7 @@ public class RefundSpeed {
       if ((jsonObj.get("message") != null && !jsonObj.get("message").isJsonNull()) && !jsonObj.get("message").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message").toString()));
       }
+      return false;
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

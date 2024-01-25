@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * payment method app object in payment entity
  */
 @Schema(description = "payment method app object in payment entity")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
 public class PaymentMethodAppInPaymentsEntity {
   public static final String SERIALIZED_NAME_APP = "app";
   @SerializedName(SERIALIZED_NAME_APP)
@@ -141,13 +141,15 @@ public class PaymentMethodAppInPaymentsEntity {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to PaymentMethodAppInPaymentsEntity
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the optional field `app`
       if (jsonObj.get("app") != null && !jsonObj.get("app").isJsonNull()) {
         PaymentMethodAppInPaymentsEntityApp.validateJsonElement(jsonObj.get("app"));
+        return true;
       }
+      return false;
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

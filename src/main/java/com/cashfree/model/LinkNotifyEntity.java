@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Payment link Notify Object for SMS and Email
  */
 @Schema(description = "Payment link Notify Object for SMS and Email")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
 public class LinkNotifyEntity {
   public static final String SERIALIZED_NAME_SEND_SMS = "send_sms";
   @SerializedName(SERIALIZED_NAME_SEND_SMS)
@@ -169,9 +169,10 @@ public class LinkNotifyEntity {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to LinkNotifyEntity
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      return false;
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

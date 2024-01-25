@@ -54,7 +54,7 @@ import com.cashfree.JSON;
  * Offer validation object
  */
 @Schema(description = "Offer validation object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
 public class OfferValidations {
   public static final String SERIALIZED_NAME_MIN_AMOUNT = "min_amount";
   @SerializedName(SERIALIZED_NAME_MIN_AMOUNT)
@@ -204,7 +204,7 @@ public class OfferValidations {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to OfferValidations
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
 
 
       // check to make sure all required properties/fields are present in the JSON string
@@ -215,7 +215,8 @@ public class OfferValidations {
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `payment_method`
-      OfferValidationsPaymentMethod.validateJsonElement(jsonObj.get("payment_method"));
+      return OfferValidationsPaymentMethod.validateJsonElement(jsonObj.get("payment_method"));
+      return false;
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

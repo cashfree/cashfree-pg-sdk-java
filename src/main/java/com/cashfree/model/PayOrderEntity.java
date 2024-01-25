@@ -54,7 +54,7 @@ import com.cashfree.JSON;
  * Order Pay response once you create a transaction for that order
  */
 @Schema(description = "Order Pay response once you create a transaction for that order")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
 public class PayOrderEntity {
   public static final String SERIALIZED_NAME_PAYMENT_AMOUNT = "payment_amount";
   @SerializedName(SERIALIZED_NAME_PAYMENT_AMOUNT)
@@ -452,7 +452,7 @@ public class PayOrderEntity {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to PayOrderEntity
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("payment_method") != null && !jsonObj.get("payment_method").isJsonNull()) && !jsonObj.get("payment_method").isJsonPrimitive()) {
@@ -467,7 +467,9 @@ public class PayOrderEntity {
       // validate the optional field `data`
       if (jsonObj.get("data") != null && !jsonObj.get("data").isJsonNull()) {
         OrderPayData.validateJsonElement(jsonObj.get("data"));
+        return true;
       }
+      return false;
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

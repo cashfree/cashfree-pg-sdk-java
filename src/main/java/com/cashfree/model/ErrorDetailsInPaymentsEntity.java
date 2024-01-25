@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * The error details are present only for failed payments
  */
 @Schema(description = "The error details are present only for failed payments")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
 public class ErrorDetailsInPaymentsEntity {
   public static final String SERIALIZED_NAME_ERROR_CODE = "error_code";
   @SerializedName(SERIALIZED_NAME_ERROR_CODE)
@@ -314,7 +314,7 @@ public class ErrorDetailsInPaymentsEntity {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to ErrorDetailsInPaymentsEntity
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("error_code") != null && !jsonObj.get("error_code").isJsonNull()) && !jsonObj.get("error_code").isJsonPrimitive()) {
@@ -338,6 +338,7 @@ public class ErrorDetailsInPaymentsEntity {
       if ((jsonObj.get("error_subcode_raw") != null && !jsonObj.get("error_subcode_raw").isJsonNull()) && !jsonObj.get("error_subcode_raw").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `error_subcode_raw` to be a primitive type in the JSON string but got `%s`", jsonObj.get("error_subcode_raw").toString()));
       }
+      return false;
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
