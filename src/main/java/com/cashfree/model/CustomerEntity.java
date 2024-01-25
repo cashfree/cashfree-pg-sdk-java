@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * The complete customer entity
  */
 @Schema(description = "The complete customer entity")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-23T08:48:11.064798Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:45:34.954572Z[Etc/UTC]")
 public class CustomerEntity {
   public static final String SERIALIZED_NAME_CUSTOMER_UID = "customer_uid";
   @SerializedName(SERIALIZED_NAME_CUSTOMER_UID)
@@ -242,6 +242,31 @@ public class CustomerEntity {
       if ((jsonObj.get("customer_name") != null && !jsonObj.get("customer_name").isJsonNull()) && !jsonObj.get("customer_name").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `customer_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("customer_name").toString()));
       }
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to CustomerEntity
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
+
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("customer_uid") != null && !jsonObj.get("customer_uid").isJsonNull()) && !jsonObj.get("customer_uid").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `customer_uid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("customer_uid").toString()));
+      }
+      if ((jsonObj.get("customer_phone") != null && !jsonObj.get("customer_phone").isJsonNull()) && !jsonObj.get("customer_phone").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `customer_phone` to be a primitive type in the JSON string but got `%s`", jsonObj.get("customer_phone").toString()));
+      }
+      if ((jsonObj.get("customer_email") != null && !jsonObj.get("customer_email").isJsonNull()) && !jsonObj.get("customer_email").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `customer_email` to be a primitive type in the JSON string but got `%s`", jsonObj.get("customer_email").toString()));
+      }
+      if ((jsonObj.get("customer_name") != null && !jsonObj.get("customer_name").isJsonNull()) && !jsonObj.get("customer_name").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `customer_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("customer_name").toString()));
+      }
+      return false;
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
