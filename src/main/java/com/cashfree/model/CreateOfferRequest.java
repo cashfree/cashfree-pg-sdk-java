@@ -56,7 +56,7 @@ import com.cashfree.JSON;
  * create offer backend request object
  */
 @Schema(description = "create offer backend request object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class CreateOfferRequest {
   public static final String SERIALIZED_NAME_OFFER_META = "offer_meta";
   @SerializedName(SERIALIZED_NAME_OFFER_META)
@@ -235,7 +235,7 @@ public class CreateOfferRequest {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to CreateOfferRequest
   */
-  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
 
 
       // check to make sure all required properties/fields are present in the JSON string
@@ -246,13 +246,40 @@ public class CreateOfferRequest {
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `offer_meta`
-      return OfferMeta.validateJsonElement(jsonObj.get("offer_meta"));
+      OfferMeta.validateJsonElement(jsonObj.get("offer_meta"));
       // validate the required field `offer_tnc`
-      return OfferTnc.validateJsonElement(jsonObj.get("offer_tnc"));
+      OfferTnc.validateJsonElement(jsonObj.get("offer_tnc"));
       // validate the required field `offer_details`
-      return OfferDetails.validateJsonElement(jsonObj.get("offer_details"));
+      OfferDetails.validateJsonElement(jsonObj.get("offer_details"));
       // validate the required field `offer_validations`
-      return OfferValidations.validateJsonElement(jsonObj.get("offer_validations"));
+      OfferValidations.validateJsonElement(jsonObj.get("offer_validations"));
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to CreateOfferRequest
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
+
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : CreateOfferRequest.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `offer_meta`
+      OfferMeta.validateJsonElement(jsonObj.get("offer_meta"));
+      // validate the required field `offer_tnc`
+      OfferTnc.validateJsonElement(jsonObj.get("offer_tnc"));
+      // validate the required field `offer_details`
+      OfferDetails.validateJsonElement(jsonObj.get("offer_details"));
+      // validate the required field `offer_validations`
+      OfferValidations.validateJsonElement(jsonObj.get("offer_validations"));
       return false;
   }
 

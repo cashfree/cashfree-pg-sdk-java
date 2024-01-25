@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * Request body to create a terminal
  */
 @Schema(description = "Request body to create a terminal")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class CreateTerminalRequest {
   public static final String SERIALIZED_NAME_TERMINAL_ID = "terminal_id";
   @SerializedName(SERIALIZED_NAME_TERMINAL_ID)
@@ -349,7 +349,51 @@ public class CreateTerminalRequest {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to CreateTerminalRequest
   */
-  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : CreateTerminalRequest.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("terminal_id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `terminal_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("terminal_id").toString()));
+      }
+      if (!jsonObj.get("terminal_phone_no").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `terminal_phone_no` to be a primitive type in the JSON string but got `%s`", jsonObj.get("terminal_phone_no").toString()));
+      }
+      if (!jsonObj.get("terminal_name").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `terminal_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("terminal_name").toString()));
+      }
+      if ((jsonObj.get("terminal_address") != null && !jsonObj.get("terminal_address").isJsonNull()) && !jsonObj.get("terminal_address").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `terminal_address` to be a primitive type in the JSON string but got `%s`", jsonObj.get("terminal_address").toString()));
+      }
+      if (!jsonObj.get("terminal_email").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `terminal_email` to be a primitive type in the JSON string but got `%s`", jsonObj.get("terminal_email").toString()));
+      }
+      if ((jsonObj.get("terminal_note") != null && !jsonObj.get("terminal_note").isJsonNull()) && !jsonObj.get("terminal_note").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `terminal_note` to be a primitive type in the JSON string but got `%s`", jsonObj.get("terminal_note").toString()));
+      }
+      if (!jsonObj.get("terminal_type").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `terminal_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("terminal_type").toString()));
+      }
+      // validate the optional field `terminal_meta`
+      if (jsonObj.get("terminal_meta") != null && !jsonObj.get("terminal_meta").isJsonNull()) {
+        CreateTerminalRequestTerminalMeta.validateJsonElement(jsonObj.get("terminal_meta"));
+      }
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to CreateTerminalRequest
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
 
 
       // check to make sure all required properties/fields are present in the JSON string

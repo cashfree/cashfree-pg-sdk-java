@@ -55,7 +55,7 @@ import com.cashfree.JSON;
  * create refund request object
  */
 @Schema(description = "create refund request object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class OrderCreateRefundRequest {
   public static final String SERIALIZED_NAME_REFUND_AMOUNT = "refund_amount";
   @SerializedName(SERIALIZED_NAME_REFUND_AMOUNT)
@@ -318,7 +318,49 @@ public class OrderCreateRefundRequest {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to OrderCreateRefundRequest
   */
-  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : OrderCreateRefundRequest.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("refund_id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `refund_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("refund_id").toString()));
+      }
+      if ((jsonObj.get("refund_note") != null && !jsonObj.get("refund_note").isJsonNull()) && !jsonObj.get("refund_note").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `refund_note` to be a primitive type in the JSON string but got `%s`", jsonObj.get("refund_note").toString()));
+      }
+      if ((jsonObj.get("refund_speed") != null && !jsonObj.get("refund_speed").isJsonNull()) && !jsonObj.get("refund_speed").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `refund_speed` to be a primitive type in the JSON string but got `%s`", jsonObj.get("refund_speed").toString()));
+      }
+      if (jsonObj.get("refund_splits") != null && !jsonObj.get("refund_splits").isJsonNull()) {
+        JsonArray jsonArrayrefundSplits = jsonObj.getAsJsonArray("refund_splits");
+        if (jsonArrayrefundSplits != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("refund_splits").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `refund_splits` to be an array in the JSON string but got `%s`", jsonObj.get("refund_splits").toString()));
+          }
+
+          // validate the optional field `refund_splits` (array)
+          for (int i = 0; i < jsonArrayrefundSplits.size(); i++) {
+            VendorSplit.validateJsonElement(jsonArrayrefundSplits.get(i));
+          };
+        }
+      }
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to OrderCreateRefundRequest
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
 
 
       // check to make sure all required properties/fields are present in the JSON string

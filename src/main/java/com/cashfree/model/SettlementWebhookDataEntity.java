@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * data entity in webhook
  */
 @Schema(description = "data entity in webhook")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class SettlementWebhookDataEntity {
   public static final String SERIALIZED_NAME_SETTLEMENT = "settlement";
   @SerializedName(SERIALIZED_NAME_SETTLEMENT)
@@ -141,7 +141,23 @@ public class SettlementWebhookDataEntity {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to SettlementWebhookDataEntity
   */
-  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the optional field `settlement`
+      if (jsonObj.get("settlement") != null && !jsonObj.get("settlement").isJsonNull()) {
+        SettlementEntity.validateJsonElement(jsonObj.get("settlement"));
+      }
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to SettlementWebhookDataEntity
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the optional field `settlement`

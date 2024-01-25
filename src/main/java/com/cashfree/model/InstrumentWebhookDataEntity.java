@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * data entity in webhook
  */
 @Schema(description = "data entity in webhook")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class InstrumentWebhookDataEntity {
   public static final String SERIALIZED_NAME_INSTRUMENT = "instrument";
   @SerializedName(SERIALIZED_NAME_INSTRUMENT)
@@ -141,7 +141,23 @@ public class InstrumentWebhookDataEntity {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to InstrumentWebhookDataEntity
   */
-  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the optional field `instrument`
+      if (jsonObj.get("instrument") != null && !jsonObj.get("instrument").isJsonNull()) {
+        InstrumentEntity.validateJsonElement(jsonObj.get("instrument"));
+      }
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to InstrumentWebhookDataEntity
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the optional field `instrument`

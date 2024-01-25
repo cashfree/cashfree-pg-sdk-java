@@ -54,7 +54,7 @@ import com.cashfree.JSON;
 /**
  * EligibilityPaymentMethodsEntityEntityDetails
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class EligibilityPaymentMethodsEntityEntityDetails {
   public static final String SERIALIZED_NAME_PAYMENT_METHOD_DETAILS = "payment_method_details";
   @SerializedName(SERIALIZED_NAME_PAYMENT_METHOD_DETAILS)
@@ -150,7 +150,33 @@ public class EligibilityPaymentMethodsEntityEntityDetails {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to EligibilityPaymentMethodsEntityEntityDetails
   */
-  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (jsonObj.get("payment_method_details") != null && !jsonObj.get("payment_method_details").isJsonNull()) {
+        JsonArray jsonArraypaymentMethodDetails = jsonObj.getAsJsonArray("payment_method_details");
+        if (jsonArraypaymentMethodDetails != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("payment_method_details").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `payment_method_details` to be an array in the JSON string but got `%s`", jsonObj.get("payment_method_details").toString()));
+          }
+
+          // validate the optional field `payment_method_details` (array)
+          for (int i = 0; i < jsonArraypaymentMethodDetails.size(); i++) {
+            PaymentModeDetails.validateJsonElement(jsonArraypaymentMethodDetails.get(i));
+          };
+        }
+      }
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to EligibilityPaymentMethodsEntityEntityDetails
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (jsonObj.get("payment_method_details") != null && !jsonObj.get("payment_method_details").isJsonNull()) {

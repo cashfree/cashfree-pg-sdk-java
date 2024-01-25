@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * netbanking payment method object for pay
  */
 @Schema(description = "netbanking payment method object for pay")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class PaymentMethodNetBankingInPaymentsEntity {
   public static final String SERIALIZED_NAME_NETBANKING = "netbanking";
   @SerializedName(SERIALIZED_NAME_NETBANKING)
@@ -141,7 +141,23 @@ public class PaymentMethodNetBankingInPaymentsEntity {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to PaymentMethodNetBankingInPaymentsEntity
   */
-  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the optional field `netbanking`
+      if (jsonObj.get("netbanking") != null && !jsonObj.get("netbanking").isJsonNull()) {
+        PaymentMethodNetBankingInPaymentsEntityNetbanking.validateJsonElement(jsonObj.get("netbanking"));
+      }
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to PaymentMethodNetBankingInPaymentsEntity
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the optional field `netbanking`

@@ -60,7 +60,7 @@ import com.cashfree.JSON;
  * Request body to create an order at cashfree
  */
 @Schema(description = "Request body to create an order at cashfree")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class CreateOrderRequest {
   public static final String SERIALIZED_NAME_ORDER_ID = "order_id";
   @SerializedName(SERIALIZED_NAME_ORDER_ID)
@@ -429,7 +429,7 @@ public class CreateOrderRequest {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to CreateOrderRequest
   */
-  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
 
 
       // check to make sure all required properties/fields are present in the JSON string
@@ -446,7 +446,62 @@ public class CreateOrderRequest {
         throw new IllegalArgumentException(String.format("Expected the field `order_currency` to be a primitive type in the JSON string but got `%s`", jsonObj.get("order_currency").toString()));
       }
       // validate the required field `customer_details`
-      return CustomerDetails.validateJsonElement(jsonObj.get("customer_details"));
+      CustomerDetails.validateJsonElement(jsonObj.get("customer_details"));
+      // validate the optional field `terminal`
+      if (jsonObj.get("terminal") != null && !jsonObj.get("terminal").isJsonNull()) {
+        TerminalDetails.validateJsonElement(jsonObj.get("terminal"));
+      }
+      // validate the optional field `order_meta`
+      if (jsonObj.get("order_meta") != null && !jsonObj.get("order_meta").isJsonNull()) {
+        OrderMeta.validateJsonElement(jsonObj.get("order_meta"));
+      }
+      if ((jsonObj.get("order_expiry_time") != null && !jsonObj.get("order_expiry_time").isJsonNull()) && !jsonObj.get("order_expiry_time").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `order_expiry_time` to be a primitive type in the JSON string but got `%s`", jsonObj.get("order_expiry_time").toString()));
+      }
+      if ((jsonObj.get("order_note") != null && !jsonObj.get("order_note").isJsonNull()) && !jsonObj.get("order_note").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `order_note` to be a primitive type in the JSON string but got `%s`", jsonObj.get("order_note").toString()));
+      }
+      if (jsonObj.get("order_splits") != null && !jsonObj.get("order_splits").isJsonNull()) {
+        JsonArray jsonArrayorderSplits = jsonObj.getAsJsonArray("order_splits");
+        if (jsonArrayorderSplits != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("order_splits").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `order_splits` to be an array in the JSON string but got `%s`", jsonObj.get("order_splits").toString()));
+          }
+
+          // validate the optional field `order_splits` (array)
+          for (int i = 0; i < jsonArrayorderSplits.size(); i++) {
+            VendorSplit.validateJsonElement(jsonArrayorderSplits.get(i));
+          };
+        }
+      }
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to CreateOrderRequest
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
+
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : CreateOrderRequest.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("order_id") != null && !jsonObj.get("order_id").isJsonNull()) && !jsonObj.get("order_id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `order_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("order_id").toString()));
+      }
+      if (!jsonObj.get("order_currency").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `order_currency` to be a primitive type in the JSON string but got `%s`", jsonObj.get("order_currency").toString()));
+      }
+      // validate the required field `customer_details`
+      CustomerDetails.validateJsonElement(jsonObj.get("customer_details"));
       // validate the optional field `terminal`
       if (jsonObj.get("terminal") != null && !jsonObj.get("terminal").isJsonNull()) {
         TerminalDetails.validateJsonElement(jsonObj.get("terminal"));

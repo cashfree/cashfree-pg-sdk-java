@@ -55,7 +55,7 @@ import com.cashfree.JSON;
  * cardless EMI object
  */
 @Schema(description = "cardless EMI object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class CardlessEMIEntity {
   public static final String SERIALIZED_NAME_PAYMENT_METHOD = "payment_method";
   @SerializedName(SERIALIZED_NAME_PAYMENT_METHOD)
@@ -180,7 +180,36 @@ public class CardlessEMIEntity {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to CardlessEMIEntity
   */
-  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("payment_method") != null && !jsonObj.get("payment_method").isJsonNull()) && !jsonObj.get("payment_method").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `payment_method` to be a primitive type in the JSON string but got `%s`", jsonObj.get("payment_method").toString()));
+      }
+      if (jsonObj.get("emi_plans") != null && !jsonObj.get("emi_plans").isJsonNull()) {
+        JsonArray jsonArrayemiPlans = jsonObj.getAsJsonArray("emi_plans");
+        if (jsonArrayemiPlans != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("emi_plans").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `emi_plans` to be an array in the JSON string but got `%s`", jsonObj.get("emi_plans").toString()));
+          }
+
+          // validate the optional field `emi_plans` (array)
+          for (int i = 0; i < jsonArrayemiPlans.size(); i++) {
+            EMIPlansArray.validateJsonElement(jsonArrayemiPlans.get(i));
+          };
+        }
+      }
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to CardlessEMIEntity
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("payment_method") != null && !jsonObj.get("payment_method").isJsonNull()) && !jsonObj.get("payment_method").isJsonPrimitive()) {

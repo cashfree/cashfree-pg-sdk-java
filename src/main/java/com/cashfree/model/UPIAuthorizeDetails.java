@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * object when you are using preauth in UPI in order pay
  */
 @Schema(description = "object when you are using preauth in UPI in order pay")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class UPIAuthorizeDetails {
   public static final String SERIALIZED_NAME_APPROVE_BY = "approve_by";
   @SerializedName(SERIALIZED_NAME_APPROVE_BY)
@@ -198,7 +198,28 @@ public class UPIAuthorizeDetails {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to UPIAuthorizeDetails
   */
-  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("approve_by") != null && !jsonObj.get("approve_by").isJsonNull()) && !jsonObj.get("approve_by").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `approve_by` to be a primitive type in the JSON string but got `%s`", jsonObj.get("approve_by").toString()));
+      }
+      if ((jsonObj.get("start_time") != null && !jsonObj.get("start_time").isJsonNull()) && !jsonObj.get("start_time").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `start_time` to be a primitive type in the JSON string but got `%s`", jsonObj.get("start_time").toString()));
+      }
+      if ((jsonObj.get("end_time") != null && !jsonObj.get("end_time").isJsonNull()) && !jsonObj.get("end_time").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `end_time` to be a primitive type in the JSON string but got `%s`", jsonObj.get("end_time").toString()));
+      }
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to UPIAuthorizeDetails
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("approve_by") != null && !jsonObj.get("approve_by").isJsonNull()) && !jsonObj.get("approve_by").isJsonPrimitive()) {

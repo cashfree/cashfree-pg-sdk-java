@@ -54,7 +54,7 @@ import com.cashfree.JSON;
  * Recon Request Object
  */
 @Schema(description = "Recon Request Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class SettlementFetchReconRequest {
   public static final String SERIALIZED_NAME_PAGINATION = "pagination";
   @SerializedName(SERIALIZED_NAME_PAGINATION)
@@ -173,7 +173,7 @@ public class SettlementFetchReconRequest {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to SettlementFetchReconRequest
   */
-  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
 
 
       // check to make sure all required properties/fields are present in the JSON string
@@ -184,9 +184,32 @@ public class SettlementFetchReconRequest {
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `pagination`
-      return FetchSettlementsRequestPagination.validateJsonElement(jsonObj.get("pagination"));
+      FetchSettlementsRequestPagination.validateJsonElement(jsonObj.get("pagination"));
       // validate the required field `filters`
-      return SettlementFetchReconRequestFilters.validateJsonElement(jsonObj.get("filters"));
+      SettlementFetchReconRequestFilters.validateJsonElement(jsonObj.get("filters"));
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to SettlementFetchReconRequest
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
+
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : SettlementFetchReconRequest.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `pagination`
+      FetchSettlementsRequestPagination.validateJsonElement(jsonObj.get("pagination"));
+      // validate the required field `filters`
+      SettlementFetchReconRequestFilters.validateJsonElement(jsonObj.get("filters"));
       return false;
   }
 

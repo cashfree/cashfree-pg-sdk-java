@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Use this if you are creating an order for cashfree&#39;s softPOS
  */
 @Schema(description = "Use this if you are creating an order for cashfree's softPOS")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class TerminalDetails {
   public static final String SERIALIZED_NAME_ADDED_ON = "added_on";
   @SerializedName(SERIALIZED_NAME_ADDED_ON)
@@ -404,7 +404,53 @@ public class TerminalDetails {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to TerminalDetails
   */
-  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : TerminalDetails.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("added_on") != null && !jsonObj.get("added_on").isJsonNull()) && !jsonObj.get("added_on").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `added_on` to be a primitive type in the JSON string but got `%s`", jsonObj.get("added_on").toString()));
+      }
+      if ((jsonObj.get("last_updated_on") != null && !jsonObj.get("last_updated_on").isJsonNull()) && !jsonObj.get("last_updated_on").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `last_updated_on` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_updated_on").toString()));
+      }
+      if ((jsonObj.get("terminal_address") != null && !jsonObj.get("terminal_address").isJsonNull()) && !jsonObj.get("terminal_address").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `terminal_address` to be a primitive type in the JSON string but got `%s`", jsonObj.get("terminal_address").toString()));
+      }
+      if (!jsonObj.get("terminal_id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `terminal_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("terminal_id").toString()));
+      }
+      if ((jsonObj.get("terminal_name") != null && !jsonObj.get("terminal_name").isJsonNull()) && !jsonObj.get("terminal_name").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `terminal_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("terminal_name").toString()));
+      }
+      if ((jsonObj.get("terminal_note") != null && !jsonObj.get("terminal_note").isJsonNull()) && !jsonObj.get("terminal_note").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `terminal_note` to be a primitive type in the JSON string but got `%s`", jsonObj.get("terminal_note").toString()));
+      }
+      if (!jsonObj.get("terminal_phone_no").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `terminal_phone_no` to be a primitive type in the JSON string but got `%s`", jsonObj.get("terminal_phone_no").toString()));
+      }
+      if ((jsonObj.get("terminal_status") != null && !jsonObj.get("terminal_status").isJsonNull()) && !jsonObj.get("terminal_status").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `terminal_status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("terminal_status").toString()));
+      }
+      if (!jsonObj.get("terminal_type").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `terminal_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("terminal_type").toString()));
+      }
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to TerminalDetails
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
 
 
       // check to make sure all required properties/fields are present in the JSON string

@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * eligibilty request for cardless
  */
 @Schema(description = "eligibilty request for cardless")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class EligibilityFetchCardlessEMIRequest {
   public static final String SERIALIZED_NAME_QUERIES = "queries";
   @SerializedName(SERIALIZED_NAME_QUERIES)
@@ -142,7 +142,7 @@ public class EligibilityFetchCardlessEMIRequest {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to EligibilityFetchCardlessEMIRequest
   */
-  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
 
 
       // check to make sure all required properties/fields are present in the JSON string
@@ -153,7 +153,28 @@ public class EligibilityFetchCardlessEMIRequest {
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `queries`
-      return CardlessEMIQueries.validateJsonElement(jsonObj.get("queries"));
+      CardlessEMIQueries.validateJsonElement(jsonObj.get("queries"));
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to EligibilityFetchCardlessEMIRequest
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
+
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : EligibilityFetchCardlessEMIRequest.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `queries`
+      CardlessEMIQueries.validateJsonElement(jsonObj.get("queries"));
       return false;
   }
 

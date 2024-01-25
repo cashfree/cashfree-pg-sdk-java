@@ -54,7 +54,7 @@ import com.cashfree.JSON;
  * UPI collect payment method object
  */
 @Schema(description = "UPI collect payment method object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class Upi {
   /**
    * Specify the channel through which the payment must be processed. Can be one of [\&quot;link\&quot;, \&quot;collect\&quot;, \&quot;qrcode\&quot;]
@@ -339,7 +339,36 @@ public class Upi {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to Upi
   */
-  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : Upi.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("channel").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `channel` to be a primitive type in the JSON string but got `%s`", jsonObj.get("channel").toString()));
+      }
+      if ((jsonObj.get("upi_id") != null && !jsonObj.get("upi_id").isJsonNull()) && !jsonObj.get("upi_id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `upi_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("upi_id").toString()));
+      }
+      // validate the optional field `authorization`
+      if (jsonObj.get("authorization") != null && !jsonObj.get("authorization").isJsonNull()) {
+        UPIAuthorizeDetails.validateJsonElement(jsonObj.get("authorization"));
+      }
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to Upi
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
 
 
       // check to make sure all required properties/fields are present in the JSON string

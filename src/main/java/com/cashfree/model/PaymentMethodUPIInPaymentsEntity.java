@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * UPI payment method for pay api
  */
 @Schema(description = "UPI payment method for pay api")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class PaymentMethodUPIInPaymentsEntity {
   public static final String SERIALIZED_NAME_UPI = "upi";
   @SerializedName(SERIALIZED_NAME_UPI)
@@ -141,7 +141,23 @@ public class PaymentMethodUPIInPaymentsEntity {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to PaymentMethodUPIInPaymentsEntity
   */
-  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the optional field `upi`
+      if (jsonObj.get("upi") != null && !jsonObj.get("upi").isJsonNull()) {
+        PaymentMethodUPIInPaymentsEntityUpi.validateJsonElement(jsonObj.get("upi"));
+      }
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to PaymentMethodUPIInPaymentsEntity
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the optional field `upi`

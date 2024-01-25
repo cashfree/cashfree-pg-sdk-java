@@ -57,7 +57,7 @@ import com.cashfree.JSON;
  * Request paramenters for link creation
  */
 @Schema(description = "Request paramenters for link creation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class CreateLinkRequest {
   public static final String SERIALIZED_NAME_LINK_ID = "link_id";
   @SerializedName(SERIALIZED_NAME_LINK_ID)
@@ -477,7 +477,7 @@ public class CreateLinkRequest {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to CreateLinkRequest
   */
-  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
 
 
       // check to make sure all required properties/fields are present in the JSON string
@@ -497,7 +497,48 @@ public class CreateLinkRequest {
         throw new IllegalArgumentException(String.format("Expected the field `link_purpose` to be a primitive type in the JSON string but got `%s`", jsonObj.get("link_purpose").toString()));
       }
       // validate the required field `customer_details`
-      return LinkCustomerDetailsEntity.validateJsonElement(jsonObj.get("customer_details"));
+      LinkCustomerDetailsEntity.validateJsonElement(jsonObj.get("customer_details"));
+      if ((jsonObj.get("link_expiry_time") != null && !jsonObj.get("link_expiry_time").isJsonNull()) && !jsonObj.get("link_expiry_time").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `link_expiry_time` to be a primitive type in the JSON string but got `%s`", jsonObj.get("link_expiry_time").toString()));
+      }
+      // validate the optional field `link_notify`
+      if (jsonObj.get("link_notify") != null && !jsonObj.get("link_notify").isJsonNull()) {
+        LinkNotifyEntity.validateJsonElement(jsonObj.get("link_notify"));
+      }
+      // validate the optional field `link_meta`
+      if (jsonObj.get("link_meta") != null && !jsonObj.get("link_meta").isJsonNull()) {
+        LinkMetaEntity.validateJsonElement(jsonObj.get("link_meta"));
+      }
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to CreateLinkRequest
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
+
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : CreateLinkRequest.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("link_id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `link_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("link_id").toString()));
+      }
+      if (!jsonObj.get("link_currency").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `link_currency` to be a primitive type in the JSON string but got `%s`", jsonObj.get("link_currency").toString()));
+      }
+      if (!jsonObj.get("link_purpose").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `link_purpose` to be a primitive type in the JSON string but got `%s`", jsonObj.get("link_purpose").toString()));
+      }
+      // validate the required field `customer_details`
+      LinkCustomerDetailsEntity.validateJsonElement(jsonObj.get("customer_details"));
       if ((jsonObj.get("link_expiry_time") != null && !jsonObj.get("link_expiry_time").isJsonNull()) && !jsonObj.get("link_expiry_time").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `link_expiry_time` to be a primitive type in the JSON string but got `%s`", jsonObj.get("link_expiry_time").toString()));
       }
