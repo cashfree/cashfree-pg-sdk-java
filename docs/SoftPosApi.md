@@ -5,7 +5,7 @@ All URIs are relative to *https://sandbox.cashfree.com/pg*
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
 | [**SposCreateTerminal**](SoftPosApi.md#SposCreateTerminal) | **POST** /terminal | Create Terminal |
-| [**SposCreateTerminalTransaction**](SoftPosApi.md#SposCreateTerminalTransaction) | **POST** /terminal/transactions | Create Terminal |
+| [**SposCreateTerminalTransaction**](SoftPosApi.md#SposCreateTerminalTransaction) | **POST** /terminal/transactions | Create Terminal Transaction |
 | [**SposFetchTerminal**](SoftPosApi.md#SposFetchTerminal) | **GET** /terminal/{terminal_phone_no} | Get terminal status using phone number |
 | [**SposFetchTerminalQRCodes**](SoftPosApi.md#SposFetchTerminalQRCodes) | **GET** /terminal/qrcodes | Fetch Terminal QR Codes |
 
@@ -36,10 +36,10 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2022-09-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
         CreateTerminalRequest createTerminalRequest = new CreateTerminalRequest(); // CreateTerminalRequest | Request Body to Create Terminal for SPOS
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
         try {
             TerminalEntity result = cashfree.SposCreateTerminal(xApiVersion, createTerminalRequest, xRequestId, xIdempotencyKeyOkHttpClient httpClient);
             System.out.println(result);
@@ -59,10 +59,10 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2022-09-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
 | **createTerminalRequest** | [**CreateTerminalRequest**](CreateTerminalRequest.md)| Request Body to Create Terminal for SPOS | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
 
 ### Return type
 
@@ -95,7 +95,7 @@ public class Example {
 
 > TerminalTransactionEntity SposCreateTerminalTransaction(xApiVersion, createTerminalTransactionRequest, xRequestId, xIdempotencyKey)
 
-Create Terminal
+Create Terminal Transaction
 
 Use this API to create a new terminal transaction. To use this API you should first create an order using the Create Order API. Also, you need to enter the terminal details while creating the order and pass the same terminal information while creating a transaction using the below mentioned API.
 
@@ -116,10 +116,10 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2022-09-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
         CreateTerminalTransactionRequest createTerminalTransactionRequest = new CreateTerminalTransactionRequest(); // CreateTerminalTransactionRequest | Request body to create a terminal transaction
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
         try {
             TerminalTransactionEntity result = cashfree.SposCreateTerminalTransaction(xApiVersion, createTerminalTransactionRequest, xRequestId, xIdempotencyKeyOkHttpClient httpClient);
             System.out.println(result);
@@ -139,10 +139,10 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2022-09-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
 | **createTerminalTransactionRequest** | [**CreateTerminalTransactionRequest**](CreateTerminalTransactionRequest.md)| Request body to create a terminal transaction | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
 
 ### Return type
 
@@ -196,10 +196,10 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2022-09-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
         String terminalPhoneNo = "6309291183"; // String | The terminal for which you want to view the order details.
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
         try {
             TerminalEntity result = cashfree.SposFetchTerminal(xApiVersion, terminalPhoneNo, xRequestId, xIdempotencyKeyOkHttpClient httpClient);
             System.out.println(result);
@@ -219,10 +219,10 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2022-09-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
 | **terminalPhoneNo** | **String**| The terminal for which you want to view the order details. | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
 
 ### Return type
 
@@ -276,11 +276,11 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2022-09-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
         String terminalPhoneNo = "9876543214"; // String | Phone number assigned to the terminal. Required if you are not providing the cf_terminal_id in the request.
         String cfTerminalId = "123344"; // String | Cashfree terminal id for which you want to get staticQRs. Required if you are not providing the terminal_phone_number in the request.
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
         try {
             List<FetchTerminalQRCodesEntity> result = cashfree.SposFetchTerminalQRCodes(xApiVersion, terminalPhoneNo, cfTerminalId, xRequestId, xIdempotencyKeyOkHttpClient httpClient);
             System.out.println(result);
@@ -300,11 +300,11 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2022-09-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
 | **terminalPhoneNo** | **String**| Phone number assigned to the terminal. Required if you are not providing the cf_terminal_id in the request. | |
 | **cfTerminalId** | **String**| Cashfree terminal id for which you want to get staticQRs. Required if you are not providing the terminal_phone_number in the request. | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
 
 ### Return type
 

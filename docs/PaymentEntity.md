@@ -8,7 +8,7 @@ payment entity full object
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**cfPaymentId** | **Long** |  |  [optional] |
+|**cfPaymentId** | **String** |  |  [optional] |
 |**orderId** | **String** |  |  [optional] |
 |**entity** | **String** |  |  [optional] |
 |**errorDetails** | [**ErrorDetailsInPaymentsEntity**](ErrorDetailsInPaymentsEntity.md) |  |  [optional] |
@@ -24,7 +24,7 @@ payment entity full object
 |**bankReference** | **String** |  |  [optional] |
 |**authId** | **String** |  |  [optional] |
 |**authorization** | [**AuthorizationInPaymentsEntity**](AuthorizationInPaymentsEntity.md) |  |  [optional] |
-|**paymentMethod** | [**PaymentEntityPaymentMethod**](PaymentEntityPaymentMethod.md) |  |  [optional] |
+|**paymentMethod** | **Object** | payment methods all |  [optional] |
 
 
 

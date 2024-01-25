@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Payment link meta information object
  */
 @Schema(description = "Payment link meta information object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-23T08:48:11.064798Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:57:28.709198Z[Etc/UTC]")
 public class LinkMetaResponseEntity {
   public static final String SERIALIZED_NAME_NOTIFY_URL = "notify_url";
   @SerializedName(SERIALIZED_NAME_NOTIFY_URL)
@@ -239,6 +239,28 @@ public class LinkMetaResponseEntity {
       if ((jsonObj.get("payment_methods") != null && !jsonObj.get("payment_methods").isJsonNull()) && !jsonObj.get("payment_methods").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `payment_methods` to be a primitive type in the JSON string but got `%s`", jsonObj.get("payment_methods").toString()));
       }
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to LinkMetaResponseEntity
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
+
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("notify_url") != null && !jsonObj.get("notify_url").isJsonNull()) && !jsonObj.get("notify_url").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `notify_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("notify_url").toString()));
+      }
+      if ((jsonObj.get("return_url") != null && !jsonObj.get("return_url").isJsonNull()) && !jsonObj.get("return_url").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `return_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("return_url").toString()));
+      }
+      if ((jsonObj.get("payment_methods") != null && !jsonObj.get("payment_methods").isJsonNull()) && !jsonObj.get("payment_methods").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `payment_methods` to be a primitive type in the JSON string but got `%s`", jsonObj.get("payment_methods").toString()));
+      }
+      return false;
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
