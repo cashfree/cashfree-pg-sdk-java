@@ -70,7 +70,7 @@ import com.google.gson.JsonParseException;
 
 import com.cashfree.JSON;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class OfferValidationsPaymentMethod extends AbstractOpenApiSchema {
     private static final Logger log = Logger.getLogger(OfferValidationsPaymentMethod.class.getName());
 
@@ -155,8 +155,9 @@ public class OfferValidationsPaymentMethod extends AbstractOpenApiSchema {
                     // deserialize OfferAll
                     try {
                       // validate the JSON object to see if any exception is thrown
-                      OfferAll.validateJsonElement(jsonElement);
-                      actualAdapter = adapterOfferAll;
+                      if(OfferAll.validateJsonElementForOneOf(jsonElement)) {
+                          actualAdapter = adapterOfferAll;
+                      }
                       match++;
                       log.log(Level.FINER, "Input data matches schema 'OfferAll'");
                     } catch (Exception e) {
@@ -167,8 +168,9 @@ public class OfferValidationsPaymentMethod extends AbstractOpenApiSchema {
                     // deserialize OfferCard
                     try {
                       // validate the JSON object to see if any exception is thrown
-                      OfferCard.validateJsonElement(jsonElement);
-                      actualAdapter = adapterOfferCard;
+                      if(OfferCard.validateJsonElementForOneOf(jsonElement)) {
+                          actualAdapter = adapterOfferCard;
+                      }
                       match++;
                       log.log(Level.FINER, "Input data matches schema 'OfferCard'");
                     } catch (Exception e) {
@@ -179,8 +181,9 @@ public class OfferValidationsPaymentMethod extends AbstractOpenApiSchema {
                     // deserialize OfferNB
                     try {
                       // validate the JSON object to see if any exception is thrown
-                      OfferNB.validateJsonElement(jsonElement);
-                      actualAdapter = adapterOfferNB;
+                      if(OfferNB.validateJsonElementForOneOf(jsonElement)) {
+                          actualAdapter = adapterOfferNB;
+                      }
                       match++;
                       log.log(Level.FINER, "Input data matches schema 'OfferNB'");
                     } catch (Exception e) {
@@ -191,8 +194,9 @@ public class OfferValidationsPaymentMethod extends AbstractOpenApiSchema {
                     // deserialize OfferWallet
                     try {
                       // validate the JSON object to see if any exception is thrown
-                      OfferWallet.validateJsonElement(jsonElement);
-                      actualAdapter = adapterOfferWallet;
+                      if(OfferWallet.validateJsonElementForOneOf(jsonElement)) {
+                          actualAdapter = adapterOfferWallet;
+                      }
                       match++;
                       log.log(Level.FINER, "Input data matches schema 'OfferWallet'");
                     } catch (Exception e) {
@@ -203,8 +207,9 @@ public class OfferValidationsPaymentMethod extends AbstractOpenApiSchema {
                     // deserialize OfferUPI
                     try {
                       // validate the JSON object to see if any exception is thrown
-                      OfferUPI.validateJsonElement(jsonElement);
-                      actualAdapter = adapterOfferUPI;
+                      if(OfferUPI.validateJsonElementForOneOf(jsonElement)) {
+                          actualAdapter = adapterOfferUPI;
+                      }
                       match++;
                       log.log(Level.FINER, "Input data matches schema 'OfferUPI'");
                     } catch (Exception e) {
@@ -215,8 +220,9 @@ public class OfferValidationsPaymentMethod extends AbstractOpenApiSchema {
                     // deserialize OfferPaylater
                     try {
                       // validate the JSON object to see if any exception is thrown
-                      OfferPaylater.validateJsonElement(jsonElement);
-                      actualAdapter = adapterOfferPaylater;
+                      if(OfferPaylater.validateJsonElementForOneOf(jsonElement)) {
+                          actualAdapter = adapterOfferPaylater;
+                      }
                       match++;
                       log.log(Level.FINER, "Input data matches schema 'OfferPaylater'");
                     } catch (Exception e) {
@@ -227,8 +233,9 @@ public class OfferValidationsPaymentMethod extends AbstractOpenApiSchema {
                     // deserialize OfferEMI
                     try {
                       // validate the JSON object to see if any exception is thrown
-                      OfferEMI.validateJsonElement(jsonElement);
-                      actualAdapter = adapterOfferEMI;
+                      if(OfferEMI.validateJsonElementForOneOf(jsonElement)) {
+                          actualAdapter = adapterOfferEMI;
+                      }
                       match++;
                       log.log(Level.FINER, "Input data matches schema 'OfferEMI'");
                     } catch (Exception e) {

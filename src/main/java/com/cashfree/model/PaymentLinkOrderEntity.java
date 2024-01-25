@@ -64,7 +64,7 @@ import com.cashfree.JSON;
  * The complete order entity
  */
 @Schema(description = "The complete order entity")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class PaymentLinkOrderEntity {
   public static final String SERIALIZED_NAME_CF_ORDER_ID = "cf_order_id";
   @SerializedName(SERIALIZED_NAME_CF_ORDER_ID)
@@ -661,7 +661,74 @@ public class PaymentLinkOrderEntity {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to PaymentLinkOrderEntity
   */
-  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("link_id") != null && !jsonObj.get("link_id").isJsonNull()) && !jsonObj.get("link_id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `link_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("link_id").toString()));
+      }
+      if ((jsonObj.get("order_id") != null && !jsonObj.get("order_id").isJsonNull()) && !jsonObj.get("order_id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `order_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("order_id").toString()));
+      }
+      if ((jsonObj.get("entity") != null && !jsonObj.get("entity").isJsonNull()) && !jsonObj.get("entity").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `entity` to be a primitive type in the JSON string but got `%s`", jsonObj.get("entity").toString()));
+      }
+      if ((jsonObj.get("order_currency") != null && !jsonObj.get("order_currency").isJsonNull()) && !jsonObj.get("order_currency").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `order_currency` to be a primitive type in the JSON string but got `%s`", jsonObj.get("order_currency").toString()));
+      }
+      if ((jsonObj.get("order_status") != null && !jsonObj.get("order_status").isJsonNull()) && !jsonObj.get("order_status").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `order_status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("order_status").toString()));
+      }
+      if ((jsonObj.get("payment_session_id") != null && !jsonObj.get("payment_session_id").isJsonNull()) && !jsonObj.get("payment_session_id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `payment_session_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("payment_session_id").toString()));
+      }
+      if ((jsonObj.get("order_note") != null && !jsonObj.get("order_note").isJsonNull()) && !jsonObj.get("order_note").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `order_note` to be a primitive type in the JSON string but got `%s`", jsonObj.get("order_note").toString()));
+      }
+      if (jsonObj.get("order_splits") != null && !jsonObj.get("order_splits").isJsonNull()) {
+        JsonArray jsonArrayorderSplits = jsonObj.getAsJsonArray("order_splits");
+        if (jsonArrayorderSplits != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("order_splits").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `order_splits` to be an array in the JSON string but got `%s`", jsonObj.get("order_splits").toString()));
+          }
+
+          // validate the optional field `order_splits` (array)
+          for (int i = 0; i < jsonArrayorderSplits.size(); i++) {
+            VendorSplit.validateJsonElement(jsonArrayorderSplits.get(i));
+          };
+        }
+      }
+      // validate the optional field `customer_details`
+      if (jsonObj.get("customer_details") != null && !jsonObj.get("customer_details").isJsonNull()) {
+        PaymentLinkCustomerDetails.validateJsonElement(jsonObj.get("customer_details"));
+      }
+      // validate the optional field `order_meta`
+      if (jsonObj.get("order_meta") != null && !jsonObj.get("order_meta").isJsonNull()) {
+        OrderMeta.validateJsonElement(jsonObj.get("order_meta"));
+      }
+      // validate the optional field `payments`
+      if (jsonObj.get("payments") != null && !jsonObj.get("payments").isJsonNull()) {
+        PaymentURLObject.validateJsonElement(jsonObj.get("payments"));
+      }
+      // validate the optional field `settlements`
+      if (jsonObj.get("settlements") != null && !jsonObj.get("settlements").isJsonNull()) {
+        SettlementURLObject.validateJsonElement(jsonObj.get("settlements"));
+      }
+      // validate the optional field `refunds`
+      if (jsonObj.get("refunds") != null && !jsonObj.get("refunds").isJsonNull()) {
+        RefundURLObject.validateJsonElement(jsonObj.get("refunds"));
+      }
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to PaymentLinkOrderEntity
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("link_id") != null && !jsonObj.get("link_id").isJsonNull()) && !jsonObj.get("link_id").isJsonPrimitive()) {

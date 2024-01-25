@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Card Payment method
  */
 @Schema(description = "Card Payment method")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class Card {
   /**
    * The channel for card payments can be \&quot;link\&quot; or \&quot;post\&quot;. Post is used for seamless OTP payments where merchant captures OTP on their own page.
@@ -673,7 +673,65 @@ public class Card {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to Card
   */
-  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : Card.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("channel").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `channel` to be a primitive type in the JSON string but got `%s`", jsonObj.get("channel").toString()));
+      }
+      if ((jsonObj.get("card_number") != null && !jsonObj.get("card_number").isJsonNull()) && !jsonObj.get("card_number").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `card_number` to be a primitive type in the JSON string but got `%s`", jsonObj.get("card_number").toString()));
+      }
+      if ((jsonObj.get("card_holder_name") != null && !jsonObj.get("card_holder_name").isJsonNull()) && !jsonObj.get("card_holder_name").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `card_holder_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("card_holder_name").toString()));
+      }
+      if ((jsonObj.get("card_expiry_mm") != null && !jsonObj.get("card_expiry_mm").isJsonNull()) && !jsonObj.get("card_expiry_mm").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `card_expiry_mm` to be a primitive type in the JSON string but got `%s`", jsonObj.get("card_expiry_mm").toString()));
+      }
+      if ((jsonObj.get("card_expiry_yy") != null && !jsonObj.get("card_expiry_yy").isJsonNull()) && !jsonObj.get("card_expiry_yy").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `card_expiry_yy` to be a primitive type in the JSON string but got `%s`", jsonObj.get("card_expiry_yy").toString()));
+      }
+      if ((jsonObj.get("card_cvv") != null && !jsonObj.get("card_cvv").isJsonNull()) && !jsonObj.get("card_cvv").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `card_cvv` to be a primitive type in the JSON string but got `%s`", jsonObj.get("card_cvv").toString()));
+      }
+      if ((jsonObj.get("instrument_id") != null && !jsonObj.get("instrument_id").isJsonNull()) && !jsonObj.get("instrument_id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `instrument_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("instrument_id").toString()));
+      }
+      if ((jsonObj.get("cryptogram") != null && !jsonObj.get("cryptogram").isJsonNull()) && !jsonObj.get("cryptogram").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `cryptogram` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cryptogram").toString()));
+      }
+      if ((jsonObj.get("token_requestor_id") != null && !jsonObj.get("token_requestor_id").isJsonNull()) && !jsonObj.get("token_requestor_id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `token_requestor_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("token_requestor_id").toString()));
+      }
+      if ((jsonObj.get("token_type") != null && !jsonObj.get("token_type").isJsonNull()) && !jsonObj.get("token_type").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `token_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("token_type").toString()));
+      }
+      if ((jsonObj.get("card_display") != null && !jsonObj.get("card_display").isJsonNull()) && !jsonObj.get("card_display").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `card_display` to be a primitive type in the JSON string but got `%s`", jsonObj.get("card_display").toString()));
+      }
+      if ((jsonObj.get("card_alias") != null && !jsonObj.get("card_alias").isJsonNull()) && !jsonObj.get("card_alias").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `card_alias` to be a primitive type in the JSON string but got `%s`", jsonObj.get("card_alias").toString()));
+      }
+      if ((jsonObj.get("card_bank_name") != null && !jsonObj.get("card_bank_name").isJsonNull()) && !jsonObj.get("card_bank_name").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `card_bank_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("card_bank_name").toString()));
+      }
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to Card
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
 
 
       // check to make sure all required properties/fields are present in the JSON string

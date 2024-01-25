@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * Saved card instrument object
  */
 @Schema(description = "Saved card instrument object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class InstrumentEntity {
   public static final String SERIALIZED_NAME_CUSTOMER_ID = "customer_id";
   @SerializedName(SERIALIZED_NAME_CUSTOMER_ID)
@@ -469,7 +469,47 @@ public class InstrumentEntity {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to InstrumentEntity
   */
-  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("customer_id") != null && !jsonObj.get("customer_id").isJsonNull()) && !jsonObj.get("customer_id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `customer_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("customer_id").toString()));
+      }
+      if ((jsonObj.get("afa_reference") != null && !jsonObj.get("afa_reference").isJsonNull()) && !jsonObj.get("afa_reference").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `afa_reference` to be a primitive type in the JSON string but got `%s`", jsonObj.get("afa_reference").toString()));
+      }
+      if ((jsonObj.get("instrument_id") != null && !jsonObj.get("instrument_id").isJsonNull()) && !jsonObj.get("instrument_id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `instrument_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("instrument_id").toString()));
+      }
+      if ((jsonObj.get("instrument_type") != null && !jsonObj.get("instrument_type").isJsonNull()) && !jsonObj.get("instrument_type").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `instrument_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("instrument_type").toString()));
+      }
+      if ((jsonObj.get("instrument_uid") != null && !jsonObj.get("instrument_uid").isJsonNull()) && !jsonObj.get("instrument_uid").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `instrument_uid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("instrument_uid").toString()));
+      }
+      if ((jsonObj.get("instrument_display") != null && !jsonObj.get("instrument_display").isJsonNull()) && !jsonObj.get("instrument_display").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `instrument_display` to be a primitive type in the JSON string but got `%s`", jsonObj.get("instrument_display").toString()));
+      }
+      if ((jsonObj.get("instrument_status") != null && !jsonObj.get("instrument_status").isJsonNull()) && !jsonObj.get("instrument_status").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `instrument_status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("instrument_status").toString()));
+      }
+      if ((jsonObj.get("created_at") != null && !jsonObj.get("created_at").isJsonNull()) && !jsonObj.get("created_at").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `created_at` to be a primitive type in the JSON string but got `%s`", jsonObj.get("created_at").toString()));
+      }
+      // validate the optional field `instrument_meta`
+      if (jsonObj.get("instrument_meta") != null && !jsonObj.get("instrument_meta").isJsonNull()) {
+        SavedInstrumentMeta.validateJsonElement(jsonObj.get("instrument_meta"));
+      }
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to InstrumentEntity
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("customer_id") != null && !jsonObj.get("customer_id").isJsonNull()) && !jsonObj.get("customer_id").isJsonPrimitive()) {

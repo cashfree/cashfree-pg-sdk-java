@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * error details present in the webhook
  */
 @Schema(description = "error details present in the webhook")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class PaymentWebhookErrorEntity {
   public static final String SERIALIZED_NAME_ERROR_CODE = "error_code";
   @SerializedName(SERIALIZED_NAME_ERROR_CODE)
@@ -285,7 +285,37 @@ public class PaymentWebhookErrorEntity {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to PaymentWebhookErrorEntity
   */
-  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("error_code") != null && !jsonObj.get("error_code").isJsonNull()) && !jsonObj.get("error_code").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `error_code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("error_code").toString()));
+      }
+      if ((jsonObj.get("error_description") != null && !jsonObj.get("error_description").isJsonNull()) && !jsonObj.get("error_description").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `error_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("error_description").toString()));
+      }
+      if ((jsonObj.get("error_reason") != null && !jsonObj.get("error_reason").isJsonNull()) && !jsonObj.get("error_reason").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `error_reason` to be a primitive type in the JSON string but got `%s`", jsonObj.get("error_reason").toString()));
+      }
+      if ((jsonObj.get("error_source") != null && !jsonObj.get("error_source").isJsonNull()) && !jsonObj.get("error_source").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `error_source` to be a primitive type in the JSON string but got `%s`", jsonObj.get("error_source").toString()));
+      }
+      if ((jsonObj.get("error_code_raw") != null && !jsonObj.get("error_code_raw").isJsonNull()) && !jsonObj.get("error_code_raw").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `error_code_raw` to be a primitive type in the JSON string but got `%s`", jsonObj.get("error_code_raw").toString()));
+      }
+      if ((jsonObj.get("error_description_raw") != null && !jsonObj.get("error_description_raw").isJsonNull()) && !jsonObj.get("error_description_raw").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `error_description_raw` to be a primitive type in the JSON string but got `%s`", jsonObj.get("error_description_raw").toString()));
+      }
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to PaymentWebhookErrorEntity
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("error_code") != null && !jsonObj.get("error_code").isJsonNull()) && !jsonObj.get("error_code").isJsonPrimitive()) {

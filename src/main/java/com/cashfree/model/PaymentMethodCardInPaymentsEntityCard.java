@@ -51,7 +51,7 @@ import com.cashfree.JSON;
 /**
  * PaymentMethodCardInPaymentsEntityCard
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class PaymentMethodCardInPaymentsEntityCard {
   public static final String SERIALIZED_NAME_CHANNEL = "channel";
   @SerializedName(SERIALIZED_NAME_CHANNEL)
@@ -313,7 +313,40 @@ public class PaymentMethodCardInPaymentsEntityCard {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to PaymentMethodCardInPaymentsEntityCard
   */
-  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("channel") != null && !jsonObj.get("channel").isJsonNull()) && !jsonObj.get("channel").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `channel` to be a primitive type in the JSON string but got `%s`", jsonObj.get("channel").toString()));
+      }
+      if ((jsonObj.get("card_number") != null && !jsonObj.get("card_number").isJsonNull()) && !jsonObj.get("card_number").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `card_number` to be a primitive type in the JSON string but got `%s`", jsonObj.get("card_number").toString()));
+      }
+      if ((jsonObj.get("card_network") != null && !jsonObj.get("card_network").isJsonNull()) && !jsonObj.get("card_network").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `card_network` to be a primitive type in the JSON string but got `%s`", jsonObj.get("card_network").toString()));
+      }
+      if ((jsonObj.get("card_type") != null && !jsonObj.get("card_type").isJsonNull()) && !jsonObj.get("card_type").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `card_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("card_type").toString()));
+      }
+      if ((jsonObj.get("card_country") != null && !jsonObj.get("card_country").isJsonNull()) && !jsonObj.get("card_country").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `card_country` to be a primitive type in the JSON string but got `%s`", jsonObj.get("card_country").toString()));
+      }
+      if ((jsonObj.get("card_bank_name") != null && !jsonObj.get("card_bank_name").isJsonNull()) && !jsonObj.get("card_bank_name").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `card_bank_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("card_bank_name").toString()));
+      }
+      if ((jsonObj.get("card_network_reference_id") != null && !jsonObj.get("card_network_reference_id").isJsonNull()) && !jsonObj.get("card_network_reference_id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `card_network_reference_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("card_network_reference_id").toString()));
+      }
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to PaymentMethodCardInPaymentsEntityCard
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("channel") != null && !jsonObj.get("channel").isJsonNull()) && !jsonObj.get("channel").isJsonPrimitive()) {

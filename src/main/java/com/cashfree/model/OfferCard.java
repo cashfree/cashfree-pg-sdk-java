@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * Offers related to cards
  */
 @Schema(description = "Offers related to cards")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class OfferCard {
   public static final String SERIALIZED_NAME_CARD = "card";
   @SerializedName(SERIALIZED_NAME_CARD)
@@ -142,7 +142,7 @@ public class OfferCard {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to OfferCard
   */
-  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
 
 
       // check to make sure all required properties/fields are present in the JSON string
@@ -153,7 +153,28 @@ public class OfferCard {
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `card`
-      return CardOffer.validateJsonElement(jsonObj.get("card"));
+      CardOffer.validateJsonElement(jsonObj.get("card"));
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to OfferCard
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
+
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : OfferCard.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `card`
+      CardOffer.validateJsonElement(jsonObj.get("card"));
       return false;
   }
 

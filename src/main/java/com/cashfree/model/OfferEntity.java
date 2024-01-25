@@ -56,7 +56,7 @@ import com.cashfree.JSON;
  * Offer entity object
  */
 @Schema(description = "Offer entity object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class OfferEntity {
   public static final String SERIALIZED_NAME_OFFER_ID = "offer_id";
   @SerializedName(SERIALIZED_NAME_OFFER_ID)
@@ -289,7 +289,41 @@ public class OfferEntity {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to OfferEntity
   */
-  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("offer_id") != null && !jsonObj.get("offer_id").isJsonNull()) && !jsonObj.get("offer_id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `offer_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("offer_id").toString()));
+      }
+      if ((jsonObj.get("offer_status") != null && !jsonObj.get("offer_status").isJsonNull()) && !jsonObj.get("offer_status").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `offer_status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("offer_status").toString()));
+      }
+      // validate the optional field `offer_meta`
+      if (jsonObj.get("offer_meta") != null && !jsonObj.get("offer_meta").isJsonNull()) {
+        OfferMeta.validateJsonElement(jsonObj.get("offer_meta"));
+      }
+      // validate the optional field `offer_tnc`
+      if (jsonObj.get("offer_tnc") != null && !jsonObj.get("offer_tnc").isJsonNull()) {
+        OfferTnc.validateJsonElement(jsonObj.get("offer_tnc"));
+      }
+      // validate the optional field `offer_details`
+      if (jsonObj.get("offer_details") != null && !jsonObj.get("offer_details").isJsonNull()) {
+        OfferDetails.validateJsonElement(jsonObj.get("offer_details"));
+      }
+      // validate the optional field `offer_validations`
+      if (jsonObj.get("offer_validations") != null && !jsonObj.get("offer_validations").isJsonNull()) {
+        OfferValidations.validateJsonElement(jsonObj.get("offer_validations"));
+      }
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to OfferEntity
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("offer_id") != null && !jsonObj.get("offer_id").isJsonNull()) && !jsonObj.get("offer_id").isJsonPrimitive()) {

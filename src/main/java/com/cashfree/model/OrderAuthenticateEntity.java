@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * This is the response shared when merchant inovkes the OTP submit or resend API
  */
 @Schema(description = "This is the response shared when merchant inovkes the OTP submit or resend API")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class OrderAuthenticateEntity {
   public static final String SERIALIZED_NAME_CF_PAYMENT_ID = "cf_payment_id";
   @SerializedName(SERIALIZED_NAME_CF_PAYMENT_ID)
@@ -326,7 +326,28 @@ public class OrderAuthenticateEntity {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to OrderAuthenticateEntity
   */
-  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("action") != null && !jsonObj.get("action").isJsonNull()) && !jsonObj.get("action").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `action` to be a primitive type in the JSON string but got `%s`", jsonObj.get("action").toString()));
+      }
+      if ((jsonObj.get("authenticate_status") != null && !jsonObj.get("authenticate_status").isJsonNull()) && !jsonObj.get("authenticate_status").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `authenticate_status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("authenticate_status").toString()));
+      }
+      if ((jsonObj.get("payment_message") != null && !jsonObj.get("payment_message").isJsonNull()) && !jsonObj.get("payment_message").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `payment_message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("payment_message").toString()));
+      }
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to OrderAuthenticateEntity
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("action") != null && !jsonObj.get("action").isJsonNull()) && !jsonObj.get("action").isJsonPrimitive()) {

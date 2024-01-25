@@ -70,7 +70,7 @@ import com.google.gson.JsonParseException;
 
 import com.cashfree.JSON;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class PaymentEntityPaymentMethod extends AbstractOpenApiSchema {
     private static final Logger log = Logger.getLogger(PaymentEntityPaymentMethod.class.getName());
 
@@ -155,8 +155,9 @@ public class PaymentEntityPaymentMethod extends AbstractOpenApiSchema {
                     // deserialize PaymentMethodCardInPaymentsEntity
                     try {
                       // validate the JSON object to see if any exception is thrown
-                      PaymentMethodCardInPaymentsEntity.validateJsonElement(jsonElement);
-                      actualAdapter = adapterPaymentMethodCardInPaymentsEntity;
+                      if(PaymentMethodCardInPaymentsEntity.validateJsonElementForOneOf(jsonElement)) {
+                          actualAdapter = adapterPaymentMethodCardInPaymentsEntity;
+                      }
                       match++;
                       log.log(Level.FINER, "Input data matches schema 'PaymentMethodCardInPaymentsEntity'");
                     } catch (Exception e) {
@@ -167,8 +168,9 @@ public class PaymentEntityPaymentMethod extends AbstractOpenApiSchema {
                     // deserialize PaymentMethodNetBankingInPaymentsEntity
                     try {
                       // validate the JSON object to see if any exception is thrown
-                      PaymentMethodNetBankingInPaymentsEntity.validateJsonElement(jsonElement);
-                      actualAdapter = adapterPaymentMethodNetBankingInPaymentsEntity;
+                      if(PaymentMethodNetBankingInPaymentsEntity.validateJsonElementForOneOf(jsonElement)) {
+                          actualAdapter = adapterPaymentMethodNetBankingInPaymentsEntity;
+                      }
                       match++;
                       log.log(Level.FINER, "Input data matches schema 'PaymentMethodNetBankingInPaymentsEntity'");
                     } catch (Exception e) {
@@ -179,8 +181,9 @@ public class PaymentEntityPaymentMethod extends AbstractOpenApiSchema {
                     // deserialize PaymentMethodUPIInPaymentsEntity
                     try {
                       // validate the JSON object to see if any exception is thrown
-                      PaymentMethodUPIInPaymentsEntity.validateJsonElement(jsonElement);
-                      actualAdapter = adapterPaymentMethodUPIInPaymentsEntity;
+                      if(PaymentMethodUPIInPaymentsEntity.validateJsonElementForOneOf(jsonElement)) {
+                          actualAdapter = adapterPaymentMethodUPIInPaymentsEntity;
+                      }
                       match++;
                       log.log(Level.FINER, "Input data matches schema 'PaymentMethodUPIInPaymentsEntity'");
                     } catch (Exception e) {
@@ -191,8 +194,9 @@ public class PaymentEntityPaymentMethod extends AbstractOpenApiSchema {
                     // deserialize PaymentMethodAppInPaymentsEntity
                     try {
                       // validate the JSON object to see if any exception is thrown
-                      PaymentMethodAppInPaymentsEntity.validateJsonElement(jsonElement);
-                      actualAdapter = adapterPaymentMethodAppInPaymentsEntity;
+                      if(PaymentMethodAppInPaymentsEntity.validateJsonElementForOneOf(jsonElement)) {
+                          actualAdapter = adapterPaymentMethodAppInPaymentsEntity;
+                      }
                       match++;
                       log.log(Level.FINER, "Input data matches schema 'PaymentMethodAppInPaymentsEntity'");
                     } catch (Exception e) {
@@ -203,8 +207,9 @@ public class PaymentEntityPaymentMethod extends AbstractOpenApiSchema {
                     // deserialize PaymentMethodCardlessEMIInPaymentsEntity
                     try {
                       // validate the JSON object to see if any exception is thrown
-                      PaymentMethodCardlessEMIInPaymentsEntity.validateJsonElement(jsonElement);
-                      actualAdapter = adapterPaymentMethodCardlessEMIInPaymentsEntity;
+                      if(PaymentMethodCardlessEMIInPaymentsEntity.validateJsonElementForOneOf(jsonElement)) {
+                          actualAdapter = adapterPaymentMethodCardlessEMIInPaymentsEntity;
+                      }
                       match++;
                       log.log(Level.FINER, "Input data matches schema 'PaymentMethodCardlessEMIInPaymentsEntity'");
                     } catch (Exception e) {
@@ -215,8 +220,9 @@ public class PaymentEntityPaymentMethod extends AbstractOpenApiSchema {
                     // deserialize PaymentMethodPaylaterInPaymentsEntity
                     try {
                       // validate the JSON object to see if any exception is thrown
-                      PaymentMethodPaylaterInPaymentsEntity.validateJsonElement(jsonElement);
-                      actualAdapter = adapterPaymentMethodPaylaterInPaymentsEntity;
+                      if(PaymentMethodPaylaterInPaymentsEntity.validateJsonElementForOneOf(jsonElement)) {
+                          actualAdapter = adapterPaymentMethodPaylaterInPaymentsEntity;
+                      }
                       match++;
                       log.log(Level.FINER, "Input data matches schema 'PaymentMethodPaylaterInPaymentsEntity'");
                     } catch (Exception e) {
@@ -227,8 +233,9 @@ public class PaymentEntityPaymentMethod extends AbstractOpenApiSchema {
                     // deserialize PaymentMethodCardEMIInPaymentsEntity
                     try {
                       // validate the JSON object to see if any exception is thrown
-                      PaymentMethodCardEMIInPaymentsEntity.validateJsonElement(jsonElement);
-                      actualAdapter = adapterPaymentMethodCardEMIInPaymentsEntity;
+                      if(PaymentMethodCardEMIInPaymentsEntity.validateJsonElementForOneOf(jsonElement)) {
+                          actualAdapter = adapterPaymentMethodCardEMIInPaymentsEntity;
+                      }
                       match++;
                       log.log(Level.FINER, "Input data matches schema 'PaymentMethodCardEMIInPaymentsEntity'");
                     } catch (Exception e) {

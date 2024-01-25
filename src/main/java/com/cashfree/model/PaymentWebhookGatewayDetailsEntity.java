@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * payment gatewat details present in the webhook response
  */
 @Schema(description = "payment gatewat details present in the webhook response")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class PaymentWebhookGatewayDetailsEntity {
   public static final String SERIALIZED_NAME_GATEWAY_NAME = "gateway_name";
   @SerializedName(SERIALIZED_NAME_GATEWAY_NAME)
@@ -256,7 +256,34 @@ public class PaymentWebhookGatewayDetailsEntity {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to PaymentWebhookGatewayDetailsEntity
   */
-  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("gateway_name") != null && !jsonObj.get("gateway_name").isJsonNull()) && !jsonObj.get("gateway_name").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `gateway_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("gateway_name").toString()));
+      }
+      if ((jsonObj.get("gateway_order_id") != null && !jsonObj.get("gateway_order_id").isJsonNull()) && !jsonObj.get("gateway_order_id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `gateway_order_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("gateway_order_id").toString()));
+      }
+      if ((jsonObj.get("gateway_payment_id") != null && !jsonObj.get("gateway_payment_id").isJsonNull()) && !jsonObj.get("gateway_payment_id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `gateway_payment_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("gateway_payment_id").toString()));
+      }
+      if ((jsonObj.get("gateway_status_code") != null && !jsonObj.get("gateway_status_code").isJsonNull()) && !jsonObj.get("gateway_status_code").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `gateway_status_code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("gateway_status_code").toString()));
+      }
+      if ((jsonObj.get("gateway_settlement") != null && !jsonObj.get("gateway_settlement").isJsonNull()) && !jsonObj.get("gateway_settlement").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `gateway_settlement` to be a primitive type in the JSON string but got `%s`", jsonObj.get("gateway_settlement").toString()));
+      }
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to PaymentWebhookGatewayDetailsEntity
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("gateway_name") != null && !jsonObj.get("gateway_name").isJsonNull()) && !jsonObj.get("gateway_name").isJsonPrimitive()) {

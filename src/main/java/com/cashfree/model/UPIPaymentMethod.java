@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * Complete payment method for UPI collect
  */
 @Schema(description = "Complete payment method for UPI collect")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class UPIPaymentMethod {
   public static final String SERIALIZED_NAME_UPI = "upi";
   @SerializedName(SERIALIZED_NAME_UPI)
@@ -142,7 +142,7 @@ public class UPIPaymentMethod {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to UPIPaymentMethod
   */
-  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
 
 
       // check to make sure all required properties/fields are present in the JSON string
@@ -153,7 +153,28 @@ public class UPIPaymentMethod {
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `upi`
-      return Upi.validateJsonElement(jsonObj.get("upi"));
+      Upi.validateJsonElement(jsonObj.get("upi"));
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to UPIPaymentMethod
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
+
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : UPIPaymentMethod.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `upi`
+      Upi.validateJsonElement(jsonObj.get("upi"));
       return false;
   }
 

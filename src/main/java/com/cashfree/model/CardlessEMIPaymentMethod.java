@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * cardless EMI payment method object
  */
 @Schema(description = "cardless EMI payment method object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class CardlessEMIPaymentMethod {
   public static final String SERIALIZED_NAME_CARDLESS_EMI = "cardless_emi";
   @SerializedName(SERIALIZED_NAME_CARDLESS_EMI)
@@ -142,7 +142,7 @@ public class CardlessEMIPaymentMethod {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to CardlessEMIPaymentMethod
   */
-  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
 
 
       // check to make sure all required properties/fields are present in the JSON string
@@ -153,7 +153,28 @@ public class CardlessEMIPaymentMethod {
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `cardless_emi`
-      return CardlessEMI.validateJsonElement(jsonObj.get("cardless_emi"));
+      CardlessEMI.validateJsonElement(jsonObj.get("cardless_emi"));
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to CardlessEMIPaymentMethod
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
+
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : CardlessEMIPaymentMethod.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `cardless_emi`
+      CardlessEMI.validateJsonElement(jsonObj.get("cardless_emi"));
       return false;
   }
 

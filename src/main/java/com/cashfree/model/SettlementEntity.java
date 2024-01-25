@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * Settlement entity object
  */
 @Schema(description = "Settlement entity object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class SettlementEntity {
   public static final String SERIALIZED_NAME_CF_PAYMENT_ID = "cf_payment_id";
   @SerializedName(SERIALIZED_NAME_CF_PAYMENT_ID)
@@ -518,7 +518,37 @@ public class SettlementEntity {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to SettlementEntity
   */
-  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("settlement_currency") != null && !jsonObj.get("settlement_currency").isJsonNull()) && !jsonObj.get("settlement_currency").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `settlement_currency` to be a primitive type in the JSON string but got `%s`", jsonObj.get("settlement_currency").toString()));
+      }
+      if ((jsonObj.get("order_id") != null && !jsonObj.get("order_id").isJsonNull()) && !jsonObj.get("order_id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `order_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("order_id").toString()));
+      }
+      if ((jsonObj.get("entity") != null && !jsonObj.get("entity").isJsonNull()) && !jsonObj.get("entity").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `entity` to be a primitive type in the JSON string but got `%s`", jsonObj.get("entity").toString()));
+      }
+      if ((jsonObj.get("payment_time") != null && !jsonObj.get("payment_time").isJsonNull()) && !jsonObj.get("payment_time").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `payment_time` to be a primitive type in the JSON string but got `%s`", jsonObj.get("payment_time").toString()));
+      }
+      if ((jsonObj.get("transfer_time") != null && !jsonObj.get("transfer_time").isJsonNull()) && !jsonObj.get("transfer_time").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `transfer_time` to be a primitive type in the JSON string but got `%s`", jsonObj.get("transfer_time").toString()));
+      }
+      if ((jsonObj.get("transfer_utr") != null && !jsonObj.get("transfer_utr").isJsonNull()) && !jsonObj.get("transfer_utr").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `transfer_utr` to be a primitive type in the JSON string but got `%s`", jsonObj.get("transfer_utr").toString()));
+      }
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to SettlementEntity
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("settlement_currency") != null && !jsonObj.get("settlement_currency").isJsonNull()) && !jsonObj.get("settlement_currency").isJsonPrimitive()) {

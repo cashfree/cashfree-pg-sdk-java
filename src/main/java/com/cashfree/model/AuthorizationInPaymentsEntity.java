@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * If preauth enabled for account you will get this body
  */
 @Schema(description = "If preauth enabled for account you will get this body")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class AuthorizationInPaymentsEntity {
   /**
    * One of CAPTURE or VOID
@@ -442,7 +442,40 @@ public class AuthorizationInPaymentsEntity {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to AuthorizationInPaymentsEntity
   */
-  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("action") != null && !jsonObj.get("action").isJsonNull()) && !jsonObj.get("action").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `action` to be a primitive type in the JSON string but got `%s`", jsonObj.get("action").toString()));
+      }
+      if ((jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) && !jsonObj.get("status").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
+      }
+      if ((jsonObj.get("start_time") != null && !jsonObj.get("start_time").isJsonNull()) && !jsonObj.get("start_time").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `start_time` to be a primitive type in the JSON string but got `%s`", jsonObj.get("start_time").toString()));
+      }
+      if ((jsonObj.get("end_time") != null && !jsonObj.get("end_time").isJsonNull()) && !jsonObj.get("end_time").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `end_time` to be a primitive type in the JSON string but got `%s`", jsonObj.get("end_time").toString()));
+      }
+      if ((jsonObj.get("approve_by") != null && !jsonObj.get("approve_by").isJsonNull()) && !jsonObj.get("approve_by").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `approve_by` to be a primitive type in the JSON string but got `%s`", jsonObj.get("approve_by").toString()));
+      }
+      if ((jsonObj.get("action_reference") != null && !jsonObj.get("action_reference").isJsonNull()) && !jsonObj.get("action_reference").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `action_reference` to be a primitive type in the JSON string but got `%s`", jsonObj.get("action_reference").toString()));
+      }
+      if ((jsonObj.get("action_time") != null && !jsonObj.get("action_time").isJsonNull()) && !jsonObj.get("action_time").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `action_time` to be a primitive type in the JSON string but got `%s`", jsonObj.get("action_time").toString()));
+      }
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to AuthorizationInPaymentsEntity
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("action") != null && !jsonObj.get("action").isJsonNull()) && !jsonObj.get("action").isJsonPrimitive()) {

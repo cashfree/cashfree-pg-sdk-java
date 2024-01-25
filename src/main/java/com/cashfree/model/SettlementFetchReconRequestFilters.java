@@ -54,7 +54,7 @@ import com.cashfree.JSON;
  * Specify either the Settlement ID, Settlement UTR, or start date and end date to fetch the settlement details.
  */
 @Schema(description = "Specify either the Settlement ID, Settlement UTR, or start date and end date to fetch the settlement details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class SettlementFetchReconRequestFilters {
   public static final String SERIALIZED_NAME_CF_SETTLEMENT_IDS = "cf_settlement_ids";
   @SerializedName(SERIALIZED_NAME_CF_SETTLEMENT_IDS)
@@ -245,7 +245,33 @@ public class SettlementFetchReconRequestFilters {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to SettlementFetchReconRequestFilters
   */
-  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("cf_settlement_ids") != null && !jsonObj.get("cf_settlement_ids").isJsonNull() && !jsonObj.get("cf_settlement_ids").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `cf_settlement_ids` to be an array in the JSON string but got `%s`", jsonObj.get("cf_settlement_ids").toString()));
+      }
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("settlement_utrs") != null && !jsonObj.get("settlement_utrs").isJsonNull() && !jsonObj.get("settlement_utrs").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `settlement_utrs` to be an array in the JSON string but got `%s`", jsonObj.get("settlement_utrs").toString()));
+      }
+      if ((jsonObj.get("start_date") != null && !jsonObj.get("start_date").isJsonNull()) && !jsonObj.get("start_date").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `start_date` to be a primitive type in the JSON string but got `%s`", jsonObj.get("start_date").toString()));
+      }
+      if ((jsonObj.get("end_date") != null && !jsonObj.get("end_date").isJsonNull()) && !jsonObj.get("end_date").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `end_date` to be a primitive type in the JSON string but got `%s`", jsonObj.get("end_date").toString()));
+      }
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to SettlementFetchReconRequestFilters
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the optional json data is an array if present

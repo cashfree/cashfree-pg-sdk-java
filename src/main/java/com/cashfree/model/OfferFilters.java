@@ -55,7 +55,7 @@ import com.cashfree.JSON;
  * Filter for offers
  */
 @Schema(description = "Filter for offers")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class OfferFilters {
   public static final String SERIALIZED_NAME_OFFER_TYPE = "offer_type";
   @SerializedName(SERIALIZED_NAME_OFFER_TYPE)
@@ -151,7 +151,23 @@ public class OfferFilters {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to OfferFilters
   */
-  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("offer_type") != null && !jsonObj.get("offer_type").isJsonNull() && !jsonObj.get("offer_type").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `offer_type` to be an array in the JSON string but got `%s`", jsonObj.get("offer_type").toString()));
+      }
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to OfferFilters
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the optional json data is an array if present

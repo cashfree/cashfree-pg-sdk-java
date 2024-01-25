@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Offer meta details object
  */
 @Schema(description = "Offer meta details object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class OfferMeta {
   public static final String SERIALIZED_NAME_OFFER_TITLE = "offer_title";
   @SerializedName(SERIALIZED_NAME_OFFER_TITLE)
@@ -261,7 +261,41 @@ public class OfferMeta {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to OfferMeta
   */
-  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : OfferMeta.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("offer_title").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `offer_title` to be a primitive type in the JSON string but got `%s`", jsonObj.get("offer_title").toString()));
+      }
+      if (!jsonObj.get("offer_description").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `offer_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("offer_description").toString()));
+      }
+      if (!jsonObj.get("offer_code").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `offer_code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("offer_code").toString()));
+      }
+      if (!jsonObj.get("offer_start_time").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `offer_start_time` to be a primitive type in the JSON string but got `%s`", jsonObj.get("offer_start_time").toString()));
+      }
+      if (!jsonObj.get("offer_end_time").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `offer_end_time` to be a primitive type in the JSON string but got `%s`", jsonObj.get("offer_end_time").toString()));
+      }
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to OfferMeta
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
 
 
       // check to make sure all required properties/fields are present in the JSON string

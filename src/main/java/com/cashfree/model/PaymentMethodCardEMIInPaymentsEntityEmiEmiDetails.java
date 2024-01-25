@@ -52,7 +52,7 @@ import com.cashfree.JSON;
 /**
  * PaymentMethodCardEMIInPaymentsEntityEmiEmiDetails
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class PaymentMethodCardEMIInPaymentsEntityEmiEmiDetails {
   public static final String SERIALIZED_NAME_EMI_AMOUNT = "emi_amount";
   @SerializedName(SERIALIZED_NAME_EMI_AMOUNT)
@@ -198,7 +198,19 @@ public class PaymentMethodCardEMIInPaymentsEntityEmiEmiDetails {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to PaymentMethodCardEMIInPaymentsEntityEmiEmiDetails
   */
-  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to PaymentMethodCardEMIInPaymentsEntityEmiEmiDetails
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       return false;

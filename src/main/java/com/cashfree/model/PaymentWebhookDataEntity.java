@@ -60,7 +60,7 @@ import com.cashfree.JSON;
  * data entity in webhook
  */
 @Schema(description = "data entity in webhook")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
 public class PaymentWebhookDataEntity {
   public static final String SERIALIZED_NAME_ORDER = "order";
   @SerializedName(SERIALIZED_NAME_ORDER)
@@ -301,7 +301,53 @@ public class PaymentWebhookDataEntity {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to PaymentWebhookDataEntity
   */
-  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the optional field `order`
+      if (jsonObj.get("order") != null && !jsonObj.get("order").isJsonNull()) {
+        PaymentWebhookOrderEntity.validateJsonElement(jsonObj.get("order"));
+      }
+      // validate the optional field `payment`
+      if (jsonObj.get("payment") != null && !jsonObj.get("payment").isJsonNull()) {
+        PaymentEntity.validateJsonElement(jsonObj.get("payment"));
+      }
+      // validate the optional field `customer_details`
+      if (jsonObj.get("customer_details") != null && !jsonObj.get("customer_details").isJsonNull()) {
+        PaymentWebhookCustomerEntity.validateJsonElement(jsonObj.get("customer_details"));
+      }
+      // validate the optional field `error_details`
+      if (jsonObj.get("error_details") != null && !jsonObj.get("error_details").isJsonNull()) {
+        PaymentWebhookErrorEntity.validateJsonElement(jsonObj.get("error_details"));
+      }
+      // validate the optional field `payment_gateway_details`
+      if (jsonObj.get("payment_gateway_details") != null && !jsonObj.get("payment_gateway_details").isJsonNull()) {
+        PaymentWebhookGatewayDetailsEntity.validateJsonElement(jsonObj.get("payment_gateway_details"));
+      }
+      if (jsonObj.get("payment_offers") != null && !jsonObj.get("payment_offers").isJsonNull()) {
+        JsonArray jsonArraypaymentOffers = jsonObj.getAsJsonArray("payment_offers");
+        if (jsonArraypaymentOffers != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("payment_offers").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `payment_offers` to be an array in the JSON string but got `%s`", jsonObj.get("payment_offers").toString()));
+          }
+
+          // validate the optional field `payment_offers` (array)
+          for (int i = 0; i < jsonArraypaymentOffers.size(); i++) {
+            OfferEntity.validateJsonElement(jsonArraypaymentOffers.get(i));
+          };
+        }
+      }
+  }
+
+
+  /**
+  * Validates the JSON Element and throws an exception if issues found
+  *
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to PaymentWebhookDataEntity
+  */
+  public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the optional field `order`
