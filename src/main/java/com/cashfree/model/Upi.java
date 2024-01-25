@@ -54,7 +54,7 @@ import com.cashfree.JSON;
  * UPI collect payment method object
  */
 @Schema(description = "UPI collect payment method object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T07:39:27.472751Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
 public class Upi {
   /**
    * Specify the channel through which the payment must be processed. Can be one of [\&quot;link\&quot;, \&quot;collect\&quot;, \&quot;qrcode\&quot;]
@@ -358,8 +358,6 @@ public class Upi {
       // validate the optional field `authorization`
       if (jsonObj.get("authorization") != null && !jsonObj.get("authorization").isJsonNull()) {
         UPIAuthorizeDetails.validateJsonElement(jsonObj.get("authorization"));
-      } else {
-        throw new IOException();
       }
   }
 

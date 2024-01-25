@@ -52,7 +52,7 @@ import com.cashfree.JSON;
 /**
  * InstrumentWebhookData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T07:39:27.472751Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
 public class InstrumentWebhookData {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
@@ -204,8 +204,6 @@ public class InstrumentWebhookData {
       // validate the optional field `data`
       if (jsonObj.get("data") != null && !jsonObj.get("data").isJsonNull()) {
         InstrumentWebhookDataEntity.validateJsonElement(jsonObj.get("data"));
-      } else {
-        throw new IOException();
       }
       if ((jsonObj.get("event_time") != null && !jsonObj.get("event_time").isJsonNull()) && !jsonObj.get("event_time").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `event_time` to be a primitive type in the JSON string but got `%s`", jsonObj.get("event_time").toString()));

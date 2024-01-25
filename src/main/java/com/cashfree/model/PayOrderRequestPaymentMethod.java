@@ -72,7 +72,7 @@ import com.google.gson.JsonParseException;
 
 import com.cashfree.JSON;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T07:39:27.472751Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
 public class PayOrderRequestPaymentMethod extends AbstractOpenApiSchema {
     private static final Logger log = Logger.getLogger(PayOrderRequestPaymentMethod.class.getName());
 
@@ -239,13 +239,13 @@ public class PayOrderRequestPaymentMethod extends AbstractOpenApiSchema {
                       log.log(Level.FINER, "Input data does not match schema 'PaylaterPaymentMethod'", e);
                     }
 
-                    if (match == 1) {
+                    // if (match == 1) {
                         PayOrderRequestPaymentMethod ret = new PayOrderRequestPaymentMethod();
                         ret.setActualInstance(actualAdapter.fromJsonTree(jsonElement));
                         return ret;
-                    }
+                    // }
 
-                    throw new IOException(String.format("Failed deserialization for PayOrderRequestPaymentMethod: %d classes match result, expected 1. Detailed failure message for oneOf schemas: %s. JSON: %s", match, errorMessages, jsonElement.toString()));
+                    // throw new IOException(String.format("Failed deserialization for PayOrderRequestPaymentMethod: %d classes match result, expected 1. Detailed failure message for oneOf schemas: %s. JSON: %s", match, errorMessages, jsonElement.toString()));
                 }
             }.nullSafe();
         }
@@ -503,9 +503,9 @@ public class PayOrderRequestPaymentMethod extends AbstractOpenApiSchema {
       errorMessages.add(String.format("Deserialization for PaylaterPaymentMethod failed with `%s`.", e.getMessage()));
       // continue to the next one
     }
-    if (validCount != 1) {
-      throw new IOException(String.format("The JSON string is invalid for PayOrderRequestPaymentMethod with oneOf schemas: AppPaymentMethod, CardEMIPaymentMethod, CardPaymentMethod, CardlessEMIPaymentMethod, NetBankingPaymentMethod, PaylaterPaymentMethod, UPIPaymentMethod. %d class(es) match the result, expected 1. Detailed failure message for oneOf schemas: %s. JSON: %s", validCount, errorMessages, jsonElement.toString()));
-    }
+    // if (validCount != 1) {
+    //  throw new IOException(String.format("The JSON string is invalid for PayOrderRequestPaymentMethod with oneOf schemas: AppPaymentMethod, CardEMIPaymentMethod, CardPaymentMethod, CardlessEMIPaymentMethod, NetBankingPaymentMethod, PaylaterPaymentMethod, UPIPaymentMethod. %d class(es) match the result, expected 1. Detailed failure message for oneOf schemas: %s. JSON: %s", validCount, errorMessages, jsonElement.toString()));
+    // }
   }
 
  /**

@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * Eligible offer object
  */
 @Schema(description = "Eligible offer object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T07:39:27.472751Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
 public class EligibilityOfferEntity {
   public static final String SERIALIZED_NAME_ELIGIBILITY = "eligibility";
   @SerializedName(SERIALIZED_NAME_ELIGIBILITY)
@@ -240,8 +240,6 @@ public class EligibilityOfferEntity {
       // validate the optional field `entity_details`
       if (jsonObj.get("entity_details") != null && !jsonObj.get("entity_details").isJsonNull()) {
         OfferEntity.validateJsonElement(jsonObj.get("entity_details"));
-      } else {
-        throw new IOException();
       }
   }
 
