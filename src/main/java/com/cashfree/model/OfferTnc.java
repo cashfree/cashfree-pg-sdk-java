@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Offer terms and condition object
  */
 @Schema(description = "Offer terms and condition object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
 public class OfferTnc {
   /**
    * TnC Type for the Offer. It can be either &#x60;text&#x60; or &#x60;link&#x60;
@@ -220,7 +220,7 @@ public class OfferTnc {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to OfferTnc
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
 
 
       // check to make sure all required properties/fields are present in the JSON string
@@ -236,6 +236,7 @@ public class OfferTnc {
       if (!jsonObj.get("offer_tnc_value").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `offer_tnc_value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("offer_tnc_value").toString()));
       }
+      return false;
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

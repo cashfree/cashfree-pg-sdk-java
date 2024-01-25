@@ -56,7 +56,7 @@ import com.cashfree.JSON;
  * payment entity full object
  */
 @Schema(description = "payment entity full object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
 public class PaymentEntity {
   public static final String SERIALIZED_NAME_CF_PAYMENT_ID = "cf_payment_id";
   @SerializedName(SERIALIZED_NAME_CF_PAYMENT_ID)
@@ -667,7 +667,7 @@ public class PaymentEntity {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to PaymentEntity
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("order_id") != null && !jsonObj.get("order_id").isJsonNull()) && !jsonObj.get("order_id").isJsonPrimitive()) {
@@ -679,6 +679,7 @@ public class PaymentEntity {
       // validate the optional field `error_details`
       if (jsonObj.get("error_details") != null && !jsonObj.get("error_details").isJsonNull()) {
         ErrorDetailsInPaymentsEntity.validateJsonElement(jsonObj.get("error_details"));
+        return true;
       }
       if ((jsonObj.get("payment_group") != null && !jsonObj.get("payment_group").isJsonNull()) && !jsonObj.get("payment_group").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `payment_group` to be a primitive type in the JSON string but got `%s`", jsonObj.get("payment_group").toString()));
@@ -707,11 +708,14 @@ public class PaymentEntity {
       // validate the optional field `authorization`
       if (jsonObj.get("authorization") != null && !jsonObj.get("authorization").isJsonNull()) {
         AuthorizationInPaymentsEntity.validateJsonElement(jsonObj.get("authorization"));
+        return true;
       }
       // validate the optional field `payment_method`
       if (jsonObj.get("payment_method") != null && !jsonObj.get("payment_method").isJsonNull()) {
         PaymentEntityPaymentMethod.validateJsonElement(jsonObj.get("payment_method"));
+        return true;
       }
+      return false;
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

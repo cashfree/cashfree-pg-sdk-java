@@ -54,7 +54,7 @@ import com.cashfree.JSON;
  * Offer details and type
  */
 @Schema(description = "Offer details and type")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
 public class OfferDetails {
   /**
    * Offer Type for the Offer.
@@ -254,7 +254,7 @@ public class OfferDetails {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to OfferDetails
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
 
 
       // check to make sure all required properties/fields are present in the JSON string
@@ -270,11 +270,14 @@ public class OfferDetails {
       // validate the optional field `discount_details`
       if (jsonObj.get("discount_details") != null && !jsonObj.get("discount_details").isJsonNull()) {
         DiscountDetails.validateJsonElement(jsonObj.get("discount_details"));
+        return true;
       }
       // validate the optional field `cashback_details`
       if (jsonObj.get("cashback_details") != null && !jsonObj.get("cashback_details").isJsonNull()) {
         CashbackDetails.validateJsonElement(jsonObj.get("cashback_details"));
+        return true;
       }
+      return false;
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

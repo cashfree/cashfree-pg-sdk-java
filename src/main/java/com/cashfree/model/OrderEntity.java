@@ -64,7 +64,7 @@ import com.cashfree.JSON;
  * The complete order entity
  */
 @Schema(description = "The complete order entity")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
 public class OrderEntity {
   public static final String SERIALIZED_NAME_CF_ORDER_ID = "cf_order_id";
   @SerializedName(SERIALIZED_NAME_CF_ORDER_ID)
@@ -632,7 +632,7 @@ public class OrderEntity {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to OrderEntity
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("order_id") != null && !jsonObj.get("order_id").isJsonNull()) && !jsonObj.get("order_id").isJsonPrimitive()) {
@@ -670,23 +670,29 @@ public class OrderEntity {
       // validate the optional field `customer_details`
       if (jsonObj.get("customer_details") != null && !jsonObj.get("customer_details").isJsonNull()) {
         CustomerDetails.validateJsonElement(jsonObj.get("customer_details"));
+        return true;
       }
       // validate the optional field `order_meta`
       if (jsonObj.get("order_meta") != null && !jsonObj.get("order_meta").isJsonNull()) {
         OrderMeta.validateJsonElement(jsonObj.get("order_meta"));
+        return true;
       }
       // validate the optional field `payments`
       if (jsonObj.get("payments") != null && !jsonObj.get("payments").isJsonNull()) {
         PaymentURLObject.validateJsonElement(jsonObj.get("payments"));
+        return true;
       }
       // validate the optional field `settlements`
       if (jsonObj.get("settlements") != null && !jsonObj.get("settlements").isJsonNull()) {
         SettlementURLObject.validateJsonElement(jsonObj.get("settlements"));
+        return true;
       }
       // validate the optional field `refunds`
       if (jsonObj.get("refunds") != null && !jsonObj.get("refunds").isJsonNull()) {
         RefundURLObject.validateJsonElement(jsonObj.get("refunds"));
+        return true;
       }
+      return false;
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

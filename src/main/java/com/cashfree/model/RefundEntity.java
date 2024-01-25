@@ -57,7 +57,7 @@ import com.cashfree.JSON;
  * The refund entity
  */
 @Schema(description = "The refund entity")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
 public class RefundEntity {
   public static final String SERIALIZED_NAME_CF_PAYMENT_ID = "cf_payment_id";
   @SerializedName(SERIALIZED_NAME_CF_PAYMENT_ID)
@@ -875,7 +875,7 @@ public class RefundEntity {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to RefundEntity
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("cf_refund_id") != null && !jsonObj.get("cf_refund_id").isJsonNull()) && !jsonObj.get("cf_refund_id").isJsonPrimitive()) {
@@ -934,7 +934,9 @@ public class RefundEntity {
       // validate the optional field `refund_speed`
       if (jsonObj.get("refund_speed") != null && !jsonObj.get("refund_speed").isJsonNull()) {
         RefundSpeed.validateJsonElement(jsonObj.get("refund_speed"));
+        return true;
       }
+      return false;
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

@@ -60,7 +60,7 @@ import com.cashfree.JSON;
  * Request body to create an order at cashfree
  */
 @Schema(description = "Request body to create an order at cashfree")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
 public class CreateOrderRequest {
   public static final String SERIALIZED_NAME_ORDER_ID = "order_id";
   @SerializedName(SERIALIZED_NAME_ORDER_ID)
@@ -429,7 +429,7 @@ public class CreateOrderRequest {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to CreateOrderRequest
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
 
 
       // check to make sure all required properties/fields are present in the JSON string
@@ -446,14 +446,16 @@ public class CreateOrderRequest {
         throw new IllegalArgumentException(String.format("Expected the field `order_currency` to be a primitive type in the JSON string but got `%s`", jsonObj.get("order_currency").toString()));
       }
       // validate the required field `customer_details`
-      CustomerDetails.validateJsonElement(jsonObj.get("customer_details"));
+      return CustomerDetails.validateJsonElement(jsonObj.get("customer_details"));
       // validate the optional field `terminal`
       if (jsonObj.get("terminal") != null && !jsonObj.get("terminal").isJsonNull()) {
         TerminalDetails.validateJsonElement(jsonObj.get("terminal"));
+        return true;
       }
       // validate the optional field `order_meta`
       if (jsonObj.get("order_meta") != null && !jsonObj.get("order_meta").isJsonNull()) {
         OrderMeta.validateJsonElement(jsonObj.get("order_meta"));
+        return true;
       }
       if ((jsonObj.get("order_expiry_time") != null && !jsonObj.get("order_expiry_time").isJsonNull()) && !jsonObj.get("order_expiry_time").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `order_expiry_time` to be a primitive type in the JSON string but got `%s`", jsonObj.get("order_expiry_time").toString()));
@@ -475,6 +477,7 @@ public class CreateOrderRequest {
           };
         }
       }
+      return false;
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

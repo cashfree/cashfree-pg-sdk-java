@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Crytogram Card object
  */
 @Schema(description = "Crytogram Card object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
 public class CryptogramEntity {
   public static final String SERIALIZED_NAME_INSTRUMENT_ID = "instrument_id";
   @SerializedName(SERIALIZED_NAME_INSTRUMENT_ID)
@@ -314,7 +314,7 @@ public class CryptogramEntity {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to CryptogramEntity
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("instrument_id") != null && !jsonObj.get("instrument_id").isJsonNull()) && !jsonObj.get("instrument_id").isJsonPrimitive()) {
@@ -338,6 +338,7 @@ public class CryptogramEntity {
       if ((jsonObj.get("card_display") != null && !jsonObj.get("card_display").isJsonNull()) && !jsonObj.get("card_display").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `card_display` to be a primitive type in the JSON string but got `%s`", jsonObj.get("card_display").toString()));
       }
+      return false;
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

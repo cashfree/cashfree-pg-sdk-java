@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * Settlement entity object
  */
 @Schema(description = "Settlement entity object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
 public class SettlementEntity {
   public static final String SERIALIZED_NAME_CF_PAYMENT_ID = "cf_payment_id";
   @SerializedName(SERIALIZED_NAME_CF_PAYMENT_ID)
@@ -518,7 +518,7 @@ public class SettlementEntity {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to SettlementEntity
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("settlement_currency") != null && !jsonObj.get("settlement_currency").isJsonNull()) && !jsonObj.get("settlement_currency").isJsonPrimitive()) {
@@ -539,6 +539,7 @@ public class SettlementEntity {
       if ((jsonObj.get("transfer_utr") != null && !jsonObj.get("transfer_utr").isJsonNull()) && !jsonObj.get("transfer_utr").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `transfer_utr` to be a primitive type in the JSON string but got `%s`", jsonObj.get("transfer_utr").toString()));
       }
+      return false;
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

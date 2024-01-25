@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * detils of the discount object of offer
  */
 @Schema(description = "detils of the discount object of offer")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
 public class DiscountDetails {
   /**
    * Type of discount
@@ -251,7 +251,7 @@ public class DiscountDetails {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to DiscountDetails
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
 
 
       // check to make sure all required properties/fields are present in the JSON string
@@ -264,6 +264,7 @@ public class DiscountDetails {
       if (!jsonObj.get("discount_type").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `discount_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("discount_type").toString()));
       }
+      return false;
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

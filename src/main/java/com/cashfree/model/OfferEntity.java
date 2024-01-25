@@ -56,7 +56,7 @@ import com.cashfree.JSON;
  * Offer entity object
  */
 @Schema(description = "Offer entity object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
 public class OfferEntity {
   public static final String SERIALIZED_NAME_OFFER_ID = "offer_id";
   @SerializedName(SERIALIZED_NAME_OFFER_ID)
@@ -289,7 +289,7 @@ public class OfferEntity {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to OfferEntity
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("offer_id") != null && !jsonObj.get("offer_id").isJsonNull()) && !jsonObj.get("offer_id").isJsonPrimitive()) {
@@ -301,19 +301,24 @@ public class OfferEntity {
       // validate the optional field `offer_meta`
       if (jsonObj.get("offer_meta") != null && !jsonObj.get("offer_meta").isJsonNull()) {
         OfferMeta.validateJsonElement(jsonObj.get("offer_meta"));
+        return true;
       }
       // validate the optional field `offer_tnc`
       if (jsonObj.get("offer_tnc") != null && !jsonObj.get("offer_tnc").isJsonNull()) {
         OfferTnc.validateJsonElement(jsonObj.get("offer_tnc"));
+        return true;
       }
       // validate the optional field `offer_details`
       if (jsonObj.get("offer_details") != null && !jsonObj.get("offer_details").isJsonNull()) {
         OfferDetails.validateJsonElement(jsonObj.get("offer_details"));
+        return true;
       }
       // validate the optional field `offer_validations`
       if (jsonObj.get("offer_validations") != null && !jsonObj.get("offer_validations").isJsonNull()) {
         OfferValidations.validateJsonElement(jsonObj.get("offer_validations"));
+        return true;
       }
+      return false;
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

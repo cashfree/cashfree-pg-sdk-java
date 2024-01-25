@@ -51,7 +51,7 @@ import com.cashfree.JSON;
 /**
  * PaymentMethodCardInPaymentsEntityCard
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
 public class PaymentMethodCardInPaymentsEntityCard {
   public static final String SERIALIZED_NAME_CHANNEL = "channel";
   @SerializedName(SERIALIZED_NAME_CHANNEL)
@@ -313,7 +313,7 @@ public class PaymentMethodCardInPaymentsEntityCard {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to PaymentMethodCardInPaymentsEntityCard
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("channel") != null && !jsonObj.get("channel").isJsonNull()) && !jsonObj.get("channel").isJsonPrimitive()) {
@@ -337,6 +337,7 @@ public class PaymentMethodCardInPaymentsEntityCard {
       if ((jsonObj.get("card_network_reference_id") != null && !jsonObj.get("card_network_reference_id").isJsonNull()) && !jsonObj.get("card_network_reference_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `card_network_reference_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("card_network_reference_id").toString()));
       }
+      return false;
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

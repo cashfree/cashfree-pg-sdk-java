@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * Offers related to cards
  */
 @Schema(description = "Offers related to cards")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
 public class OfferCard {
   public static final String SERIALIZED_NAME_CARD = "card";
   @SerializedName(SERIALIZED_NAME_CARD)
@@ -142,7 +142,7 @@ public class OfferCard {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to OfferCard
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
 
 
       // check to make sure all required properties/fields are present in the JSON string
@@ -153,7 +153,8 @@ public class OfferCard {
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `card`
-      CardOffer.validateJsonElement(jsonObj.get("card"));
+      return CardOffer.validateJsonElement(jsonObj.get("card"));
+      return false;
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

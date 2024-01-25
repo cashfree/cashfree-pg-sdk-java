@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * Optional meta details to control how the customer pays and how payment journey completes
  */
 @Schema(description = "Optional meta details to control how the customer pays and how payment journey completes")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
 public class OrderMeta {
   public static final String SERIALIZED_NAME_RETURN_URL = "return_url";
   @SerializedName(SERIALIZED_NAME_RETURN_URL)
@@ -210,7 +210,7 @@ public class OrderMeta {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to OrderMeta
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("return_url") != null && !jsonObj.get("return_url").isJsonNull()) && !jsonObj.get("return_url").isJsonPrimitive()) {
@@ -219,6 +219,7 @@ public class OrderMeta {
       if ((jsonObj.get("notify_url") != null && !jsonObj.get("notify_url").isJsonNull()) && !jsonObj.get("notify_url").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `notify_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("notify_url").toString()));
       }
+      return false;
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

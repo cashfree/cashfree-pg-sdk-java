@@ -57,7 +57,7 @@ import com.cashfree.JSON;
  * Request paramenters for link creation
  */
 @Schema(description = "Request paramenters for link creation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
 public class CreateLinkRequest {
   public static final String SERIALIZED_NAME_LINK_ID = "link_id";
   @SerializedName(SERIALIZED_NAME_LINK_ID)
@@ -477,7 +477,7 @@ public class CreateLinkRequest {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to CreateLinkRequest
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
 
 
       // check to make sure all required properties/fields are present in the JSON string
@@ -497,18 +497,21 @@ public class CreateLinkRequest {
         throw new IllegalArgumentException(String.format("Expected the field `link_purpose` to be a primitive type in the JSON string but got `%s`", jsonObj.get("link_purpose").toString()));
       }
       // validate the required field `customer_details`
-      LinkCustomerDetailsEntity.validateJsonElement(jsonObj.get("customer_details"));
+      return LinkCustomerDetailsEntity.validateJsonElement(jsonObj.get("customer_details"));
       if ((jsonObj.get("link_expiry_time") != null && !jsonObj.get("link_expiry_time").isJsonNull()) && !jsonObj.get("link_expiry_time").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `link_expiry_time` to be a primitive type in the JSON string but got `%s`", jsonObj.get("link_expiry_time").toString()));
       }
       // validate the optional field `link_notify`
       if (jsonObj.get("link_notify") != null && !jsonObj.get("link_notify").isJsonNull()) {
         LinkNotifyEntity.validateJsonElement(jsonObj.get("link_notify"));
+        return true;
       }
       // validate the optional field `link_meta`
       if (jsonObj.get("link_meta") != null && !jsonObj.get("link_meta").isJsonNull()) {
         LinkMetaEntity.validateJsonElement(jsonObj.get("link_meta"));
+        return true;
       }
+      return false;
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

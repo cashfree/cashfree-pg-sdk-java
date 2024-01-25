@@ -60,7 +60,7 @@ import com.cashfree.JSON;
  * data entity in webhook
  */
 @Schema(description = "data entity in webhook")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
 public class PaymentWebhookDataEntity {
   public static final String SERIALIZED_NAME_ORDER = "order";
   @SerializedName(SERIALIZED_NAME_ORDER)
@@ -301,28 +301,33 @@ public class PaymentWebhookDataEntity {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to PaymentWebhookDataEntity
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the optional field `order`
       if (jsonObj.get("order") != null && !jsonObj.get("order").isJsonNull()) {
         PaymentWebhookOrderEntity.validateJsonElement(jsonObj.get("order"));
+        return true;
       }
       // validate the optional field `payment`
       if (jsonObj.get("payment") != null && !jsonObj.get("payment").isJsonNull()) {
         PaymentEntity.validateJsonElement(jsonObj.get("payment"));
+        return true;
       }
       // validate the optional field `customer_details`
       if (jsonObj.get("customer_details") != null && !jsonObj.get("customer_details").isJsonNull()) {
         PaymentWebhookCustomerEntity.validateJsonElement(jsonObj.get("customer_details"));
+        return true;
       }
       // validate the optional field `error_details`
       if (jsonObj.get("error_details") != null && !jsonObj.get("error_details").isJsonNull()) {
         PaymentWebhookErrorEntity.validateJsonElement(jsonObj.get("error_details"));
+        return true;
       }
       // validate the optional field `payment_gateway_details`
       if (jsonObj.get("payment_gateway_details") != null && !jsonObj.get("payment_gateway_details").isJsonNull()) {
         PaymentWebhookGatewayDetailsEntity.validateJsonElement(jsonObj.get("payment_gateway_details"));
+        return true;
       }
       if (jsonObj.get("payment_offers") != null && !jsonObj.get("payment_offers").isJsonNull()) {
         JsonArray jsonArraypaymentOffers = jsonObj.getAsJsonArray("payment_offers");
@@ -338,6 +343,7 @@ public class PaymentWebhookDataEntity {
           };
         }
       }
+      return false;
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

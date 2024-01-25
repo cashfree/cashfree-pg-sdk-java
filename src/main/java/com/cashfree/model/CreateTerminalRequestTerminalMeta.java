@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * terminal metadata. required field for storefront.
  */
 @Schema(description = "terminal metadata. required field for storefront.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T08:17:34.437909Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
 public class CreateTerminalRequestTerminalMeta {
   public static final String SERIALIZED_NAME_TERMINAL_OPERATOR = "terminal_operator";
   @SerializedName(SERIALIZED_NAME_TERMINAL_OPERATOR)
@@ -140,12 +140,13 @@ public class CreateTerminalRequestTerminalMeta {
   * @param jsonElement JSON Element
   * @throws IOException if the JSON Element is invalid with respect to CreateTerminalRequestTerminalMeta
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+  public static boolean validateJsonElement(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("terminal_operator") != null && !jsonObj.get("terminal_operator").isJsonNull()) && !jsonObj.get("terminal_operator").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `terminal_operator` to be a primitive type in the JSON string but got `%s`", jsonObj.get("terminal_operator").toString()));
       }
+      return false;
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
