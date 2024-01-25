@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * payment method app object in payment entity
  */
 @Schema(description = "payment method app object in payment entity")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-24T11:43:43.900337Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T07:39:27.472751Z[Etc/UTC]")
 public class PaymentMethodAppInPaymentsEntity {
   public static final String SERIALIZED_NAME_APP = "app";
   @SerializedName(SERIALIZED_NAME_APP)
@@ -147,6 +147,8 @@ public class PaymentMethodAppInPaymentsEntity {
       // validate the optional field `app`
       if (jsonObj.get("app") != null && !jsonObj.get("app").isJsonNull()) {
         PaymentMethodAppInPaymentsEntityApp.validateJsonElement(jsonObj.get("app"));
+      } else {
+        throw new IOException();
       }
   }
 

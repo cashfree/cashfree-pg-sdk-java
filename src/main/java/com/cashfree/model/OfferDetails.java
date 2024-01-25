@@ -54,7 +54,7 @@ import com.cashfree.JSON;
  * Offer details and type
  */
 @Schema(description = "Offer details and type")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-24T11:43:43.900337Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T07:39:27.472751Z[Etc/UTC]")
 public class OfferDetails {
   /**
    * Offer Type for the Offer.
@@ -270,10 +270,14 @@ public class OfferDetails {
       // validate the optional field `discount_details`
       if (jsonObj.get("discount_details") != null && !jsonObj.get("discount_details").isJsonNull()) {
         DiscountDetails.validateJsonElement(jsonObj.get("discount_details"));
+      } else {
+        throw new IOException();
       }
       // validate the optional field `cashback_details`
       if (jsonObj.get("cashback_details") != null && !jsonObj.get("cashback_details").isJsonNull()) {
         CashbackDetails.validateJsonElement(jsonObj.get("cashback_details"));
+      } else {
+        throw new IOException();
       }
   }
 

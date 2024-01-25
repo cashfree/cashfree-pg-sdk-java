@@ -57,7 +57,7 @@ import com.cashfree.JSON;
  * Payment link success creation response object
  */
 @Schema(description = "Payment link success creation response object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-24T11:43:43.900337Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T07:39:27.472751Z[Etc/UTC]")
 public class LinkEntity {
   public static final String SERIALIZED_NAME_CF_LINK_ID = "cf_link_id";
   @SerializedName(SERIALIZED_NAME_CF_LINK_ID)
@@ -646,6 +646,8 @@ public class LinkEntity {
       // validate the optional field `customer_details`
       if (jsonObj.get("customer_details") != null && !jsonObj.get("customer_details").isJsonNull()) {
         LinkCustomerDetailsEntity.validateJsonElement(jsonObj.get("customer_details"));
+      } else {
+        throw new IOException();
       }
       if ((jsonObj.get("link_url") != null && !jsonObj.get("link_url").isJsonNull()) && !jsonObj.get("link_url").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `link_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("link_url").toString()));
@@ -656,6 +658,8 @@ public class LinkEntity {
       // validate the optional field `link_notify`
       if (jsonObj.get("link_notify") != null && !jsonObj.get("link_notify").isJsonNull()) {
         LinkNotifyEntity.validateJsonElement(jsonObj.get("link_notify"));
+      } else {
+        throw new IOException();
       }
   }
 

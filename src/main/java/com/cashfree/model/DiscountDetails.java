@@ -21,6 +21,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.Arrays;
 
 import com.google.gson.Gson;
@@ -52,7 +53,7 @@ import com.cashfree.JSON;
  * detils of the discount object of offer
  */
 @Schema(description = "detils of the discount object of offer")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-24T11:43:43.900337Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T07:39:27.472751Z[Etc/UTC]")
 public class DiscountDetails {
   /**
    * Type of discount
@@ -109,11 +110,11 @@ public class DiscountDetails {
 
   public static final String SERIALIZED_NAME_DISCOUNT_VALUE = "discount_value";
   @SerializedName(SERIALIZED_NAME_DISCOUNT_VALUE)
-  private String discountValue;
+  private BigDecimal discountValue;
 
   public static final String SERIALIZED_NAME_MAX_DISCOUNT_AMOUNT = "max_discount_amount";
   @SerializedName(SERIALIZED_NAME_MAX_DISCOUNT_AMOUNT)
-  private String maxDiscountAmount;
+  private BigDecimal maxDiscountAmount;
 
   public DiscountDetails() {
   }
@@ -140,7 +141,7 @@ public class DiscountDetails {
   }
 
 
-  public DiscountDetails discountValue(String discountValue) {
+  public DiscountDetails discountValue(BigDecimal discountValue) {
     
     this.discountValue = discountValue;
     return this;
@@ -152,17 +153,17 @@ public class DiscountDetails {
   **/
   @javax.annotation.Nonnull
   @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "Value of Discount.")
-  public String getDiscountValue() {
+  public BigDecimal getDiscountValue() {
     return discountValue;
   }
 
 
-  public void setDiscountValue(String discountValue) {
+  public void setDiscountValue(BigDecimal discountValue) {
     this.discountValue = discountValue;
   }
 
 
-  public DiscountDetails maxDiscountAmount(String maxDiscountAmount) {
+  public DiscountDetails maxDiscountAmount(BigDecimal maxDiscountAmount) {
     
     this.maxDiscountAmount = maxDiscountAmount;
     return this;
@@ -174,12 +175,12 @@ public class DiscountDetails {
   **/
   @javax.annotation.Nonnull
   @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "Maximum Value of Discount allowed.")
-  public String getMaxDiscountAmount() {
+  public BigDecimal getMaxDiscountAmount() {
     return maxDiscountAmount;
   }
 
 
-  public void setMaxDiscountAmount(String maxDiscountAmount) {
+  public void setMaxDiscountAmount(BigDecimal maxDiscountAmount) {
     this.maxDiscountAmount = maxDiscountAmount;
   }
 
@@ -262,12 +263,6 @@ public class DiscountDetails {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("discount_type").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `discount_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("discount_type").toString()));
-      }
-      if (!jsonObj.get("discount_value").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `discount_value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("discount_value").toString()));
-      }
-      if (!jsonObj.get("max_discount_amount").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `max_discount_amount` to be a primitive type in the JSON string but got `%s`", jsonObj.get("max_discount_amount").toString()));
       }
   }
 

@@ -56,7 +56,7 @@ import com.cashfree.JSON;
  * payment entity full object
  */
 @Schema(description = "payment entity full object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-24T11:43:43.900337Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T07:39:27.472751Z[Etc/UTC]")
 public class PaymentEntity {
   public static final String SERIALIZED_NAME_CF_PAYMENT_ID = "cf_payment_id";
   @SerializedName(SERIALIZED_NAME_CF_PAYMENT_ID)
@@ -679,6 +679,8 @@ public class PaymentEntity {
       // validate the optional field `error_details`
       if (jsonObj.get("error_details") != null && !jsonObj.get("error_details").isJsonNull()) {
         ErrorDetailsInPaymentsEntity.validateJsonElement(jsonObj.get("error_details"));
+      } else {
+        throw new IOException();
       }
       if ((jsonObj.get("payment_group") != null && !jsonObj.get("payment_group").isJsonNull()) && !jsonObj.get("payment_group").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `payment_group` to be a primitive type in the JSON string but got `%s`", jsonObj.get("payment_group").toString()));
@@ -707,10 +709,14 @@ public class PaymentEntity {
       // validate the optional field `authorization`
       if (jsonObj.get("authorization") != null && !jsonObj.get("authorization").isJsonNull()) {
         AuthorizationInPaymentsEntity.validateJsonElement(jsonObj.get("authorization"));
+      } else {
+        throw new IOException();
       }
       // validate the optional field `payment_method`
       if (jsonObj.get("payment_method") != null && !jsonObj.get("payment_method").isJsonNull()) {
         PaymentEntityPaymentMethod.validateJsonElement(jsonObj.get("payment_method"));
+      } else {
+        throw new IOException();
       }
   }
 

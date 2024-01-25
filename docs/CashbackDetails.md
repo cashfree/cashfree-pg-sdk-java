@@ -9,8 +9,8 @@ Cashback detail boject
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**cashbackType** | [**CashbackTypeEnum**](#CashbackTypeEnum) | Type of discount |  |
-|**cashbackValue** | **String** | Value of Discount. |  |
-|**maxCashbackAmount** | **String** | Maximum Value of Cashback allowed. |  |
+|**cashbackValue** | **BigDecimal** | Value of Discount. |  |
+|**maxCashbackAmount** | **BigDecimal** | Maximum Value of Cashback allowed. |  |
 
 
 

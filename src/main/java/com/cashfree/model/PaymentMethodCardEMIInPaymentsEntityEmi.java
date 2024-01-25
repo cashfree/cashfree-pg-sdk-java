@@ -53,7 +53,7 @@ import com.cashfree.JSON;
 /**
  * PaymentMethodCardEMIInPaymentsEntityEmi
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-24T11:43:43.900337Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T07:39:27.472751Z[Etc/UTC]")
 public class PaymentMethodCardEMIInPaymentsEntityEmi {
   public static final String SERIALIZED_NAME_CHANNEL = "channel";
   @SerializedName(SERIALIZED_NAME_CHANNEL)
@@ -400,6 +400,8 @@ public class PaymentMethodCardEMIInPaymentsEntityEmi {
       // validate the optional field `emi_details`
       if (jsonObj.get("emi_details") != null && !jsonObj.get("emi_details").isJsonNull()) {
         PaymentMethodCardEMIInPaymentsEntityEmiEmiDetails.validateJsonElement(jsonObj.get("emi_details"));
+      } else {
+        throw new IOException();
       }
   }
 

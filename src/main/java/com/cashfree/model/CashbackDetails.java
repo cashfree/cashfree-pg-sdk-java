@@ -21,6 +21,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.Arrays;
 
 import com.google.gson.Gson;
@@ -52,7 +53,7 @@ import com.cashfree.JSON;
  * Cashback detail boject
  */
 @Schema(description = "Cashback detail boject")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-24T11:43:43.900337Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T07:39:27.472751Z[Etc/UTC]")
 public class CashbackDetails {
   /**
    * Type of discount
@@ -109,11 +110,11 @@ public class CashbackDetails {
 
   public static final String SERIALIZED_NAME_CASHBACK_VALUE = "cashback_value";
   @SerializedName(SERIALIZED_NAME_CASHBACK_VALUE)
-  private String cashbackValue;
+  private BigDecimal cashbackValue;
 
   public static final String SERIALIZED_NAME_MAX_CASHBACK_AMOUNT = "max_cashback_amount";
   @SerializedName(SERIALIZED_NAME_MAX_CASHBACK_AMOUNT)
-  private String maxCashbackAmount;
+  private BigDecimal maxCashbackAmount;
 
   public CashbackDetails() {
   }
@@ -140,7 +141,7 @@ public class CashbackDetails {
   }
 
 
-  public CashbackDetails cashbackValue(String cashbackValue) {
+  public CashbackDetails cashbackValue(BigDecimal cashbackValue) {
     
     this.cashbackValue = cashbackValue;
     return this;
@@ -152,17 +153,17 @@ public class CashbackDetails {
   **/
   @javax.annotation.Nonnull
   @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "Value of Discount.")
-  public String getCashbackValue() {
+  public BigDecimal getCashbackValue() {
     return cashbackValue;
   }
 
 
-  public void setCashbackValue(String cashbackValue) {
+  public void setCashbackValue(BigDecimal cashbackValue) {
     this.cashbackValue = cashbackValue;
   }
 
 
-  public CashbackDetails maxCashbackAmount(String maxCashbackAmount) {
+  public CashbackDetails maxCashbackAmount(BigDecimal maxCashbackAmount) {
     
     this.maxCashbackAmount = maxCashbackAmount;
     return this;
@@ -174,12 +175,12 @@ public class CashbackDetails {
   **/
   @javax.annotation.Nonnull
   @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "Maximum Value of Cashback allowed.")
-  public String getMaxCashbackAmount() {
+  public BigDecimal getMaxCashbackAmount() {
     return maxCashbackAmount;
   }
 
 
-  public void setMaxCashbackAmount(String maxCashbackAmount) {
+  public void setMaxCashbackAmount(BigDecimal maxCashbackAmount) {
     this.maxCashbackAmount = maxCashbackAmount;
   }
 
@@ -262,12 +263,6 @@ public class CashbackDetails {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("cashback_type").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `cashback_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cashback_type").toString()));
-      }
-      if (!jsonObj.get("cashback_value").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `cashback_value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cashback_value").toString()));
-      }
-      if (!jsonObj.get("max_cashback_amount").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `max_cashback_amount` to be a primitive type in the JSON string but got `%s`", jsonObj.get("max_cashback_amount").toString()));
       }
   }
 

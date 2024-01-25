@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * UPI payment method for pay api
  */
 @Schema(description = "UPI payment method for pay api")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-24T11:43:43.900337Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T07:39:27.472751Z[Etc/UTC]")
 public class PaymentMethodUPIInPaymentsEntity {
   public static final String SERIALIZED_NAME_UPI = "upi";
   @SerializedName(SERIALIZED_NAME_UPI)
@@ -147,6 +147,8 @@ public class PaymentMethodUPIInPaymentsEntity {
       // validate the optional field `upi`
       if (jsonObj.get("upi") != null && !jsonObj.get("upi").isJsonNull()) {
         PaymentMethodUPIInPaymentsEntityUpi.validateJsonElement(jsonObj.get("upi"));
+      } else {
+        throw new IOException();
       }
   }
 

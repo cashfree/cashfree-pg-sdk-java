@@ -9,8 +9,8 @@ detils of the discount object of offer
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**discountType** | [**DiscountTypeEnum**](#DiscountTypeEnum) | Type of discount |  |
-|**discountValue** | **String** | Value of Discount. |  |
-|**maxDiscountAmount** | **String** | Maximum Value of Discount allowed. |  |
+|**discountValue** | **BigDecimal** | Value of Discount. |  |
+|**maxDiscountAmount** | **BigDecimal** | Maximum Value of Discount allowed. |  |
 
 
 
