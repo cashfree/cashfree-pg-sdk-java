@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * Instrument webhook object
  */
 @Schema(description = "Instrument webhook object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:46:48.718492Z[Etc/UTC]")
 public class InstrumentWebhook {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)

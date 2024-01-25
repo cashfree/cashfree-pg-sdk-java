@@ -60,7 +60,7 @@ import com.cashfree.JSON;
  * Request body to create an order at cashfree
  */
 @Schema(description = "Request body to create an order at cashfree")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:46:48.718492Z[Etc/UTC]")
 public class CreateOrderRequest {
   public static final String SERIALIZED_NAME_ORDER_ID = "order_id";
   @SerializedName(SERIALIZED_NAME_ORDER_ID)
@@ -446,7 +446,7 @@ public class CreateOrderRequest {
         throw new IllegalArgumentException(String.format("Expected the field `order_currency` to be a primitive type in the JSON string but got `%s`", jsonObj.get("order_currency").toString()));
       }
       // validate the required field `customer_details`
-      return CustomerDetails.validateJsonElement(jsonObj.get("customer_details"));
+      CustomerDetails.validateJsonElement(jsonObj.get("customer_details"));
       // validate the optional field `terminal`
       if (jsonObj.get("terminal") != null && !jsonObj.get("terminal").isJsonNull()) {
         TerminalDetails.validateJsonElement(jsonObj.get("terminal"));

@@ -56,7 +56,7 @@ import com.cashfree.JSON;
  * create offer backend request object
  */
 @Schema(description = "create offer backend request object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:46:48.718492Z[Etc/UTC]")
 public class CreateOfferRequest {
   public static final String SERIALIZED_NAME_OFFER_META = "offer_meta";
   @SerializedName(SERIALIZED_NAME_OFFER_META)
@@ -246,13 +246,13 @@ public class CreateOfferRequest {
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `offer_meta`
-      return OfferMeta.validateJsonElement(jsonObj.get("offer_meta"));
+      OfferMeta.validateJsonElement(jsonObj.get("offer_meta"));
       // validate the required field `offer_tnc`
-      return OfferTnc.validateJsonElement(jsonObj.get("offer_tnc"));
+      OfferTnc.validateJsonElement(jsonObj.get("offer_tnc"));
       // validate the required field `offer_details`
-      return OfferDetails.validateJsonElement(jsonObj.get("offer_details"));
+      OfferDetails.validateJsonElement(jsonObj.get("offer_details"));
       // validate the required field `offer_validations`
-      return OfferValidations.validateJsonElement(jsonObj.get("offer_validations"));
+      OfferValidations.validateJsonElement(jsonObj.get("offer_validations"));
       return false;
   }
 

@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Payment link meta information object
  */
 @Schema(description = "Payment link meta information object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:46:48.718492Z[Etc/UTC]")
 public class LinkMetaEntity {
   public static final String SERIALIZED_NAME_NOTIFY_URL = "notify_url";
   @SerializedName(SERIALIZED_NAME_NOTIFY_URL)

@@ -54,7 +54,7 @@ import com.cashfree.JSON;
  * Offer validation object
  */
 @Schema(description = "Offer validation object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:46:48.718492Z[Etc/UTC]")
 public class OfferValidations {
   public static final String SERIALIZED_NAME_MIN_AMOUNT = "min_amount";
   @SerializedName(SERIALIZED_NAME_MIN_AMOUNT)
@@ -215,7 +215,7 @@ public class OfferValidations {
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `payment_method`
-      return OfferValidationsPaymentMethod.validateJsonElement(jsonObj.get("payment_method"));
+      OfferValidationsPaymentMethod.validateJsonElement(jsonObj.get("payment_method"));
       return false;
   }
 

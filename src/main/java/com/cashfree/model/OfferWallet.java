@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * Offer object for wallet payment method
  */
 @Schema(description = "Offer object for wallet payment method")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:32:39.940911Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T09:46:48.718492Z[Etc/UTC]")
 public class OfferWallet {
   public static final String SERIALIZED_NAME_APP = "app";
   @SerializedName(SERIALIZED_NAME_APP)
@@ -153,7 +153,7 @@ public class OfferWallet {
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `app`
-      return WalletOffer.validateJsonElement(jsonObj.get("app"));
+      WalletOffer.validateJsonElement(jsonObj.get("app"));
       return false;
   }
 
