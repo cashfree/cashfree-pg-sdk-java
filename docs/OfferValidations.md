@@ -10,6 +10,7 @@ Offer validation object
 |------------ | ------------- | ------------- | -------------|
 |**minAmount** | **BigDecimal** | Minimum Amount for Offer to be Applicable |  [optional] |
 |**paymentMethod** | [**OfferValidationsPaymentMethod**](OfferValidationsPaymentMethod.md) |  |  |
+|**maxAllowed** | **BigDecimal** | Maximum amount of Offer that can be availed. |  |
 
 
 
