@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * URL to get refunds for order
  */
 @Schema(description = "URL to get refunds for order")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T10:20:28.542095Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-29T10:59:34.481190Z[Etc/UTC]")
 public class RefundURLObject {
   public static final String SERIALIZED_NAME_URL = "url";
   @SerializedName(SERIALIZED_NAME_URL)
