@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * The complete customer entity
  */
 @Schema(description = "The complete customer entity")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-25T11:04:40.311661Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T08:58:39.020852Z[Etc/UTC]")
 public class CustomerEntity {
   public static final String SERIALIZED_NAME_CUSTOMER_UID = "customer_uid";
   @SerializedName(SERIALIZED_NAME_CUSTOMER_UID)

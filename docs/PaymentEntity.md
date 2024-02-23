@@ -8,7 +8,7 @@ payment entity full object
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**cfPaymentId** | **Long** |  |  [optional] |
+|**cfPaymentId** | **String** |  |  [optional] |
 |**orderId** | **String** |  |  [optional] |
 |**entity** | **String** |  |  [optional] |
 |**errorDetails** | [**ErrorDetailsInPaymentsEntity**](ErrorDetailsInPaymentsEntity.md) |  |  [optional] |
