@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * The error details are present only for failed payments
  */
 @Schema(description = "The error details are present only for failed payments")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T08:58:39.020852Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-19T11:39:30.078127Z[Etc/UTC]")
 public class ErrorDetailsInPaymentsEntity {
   public static final String SERIALIZED_NAME_ERROR_CODE = "error_code";
   @SerializedName(SERIALIZED_NAME_ERROR_CODE)

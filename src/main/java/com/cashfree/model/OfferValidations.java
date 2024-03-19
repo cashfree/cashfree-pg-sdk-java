@@ -54,11 +54,15 @@ import com.cashfree.JSON;
  * Offer validation object
  */
 @Schema(description = "Offer validation object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T08:58:39.020852Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-19T11:39:30.078127Z[Etc/UTC]")
 public class OfferValidations {
   public static final String SERIALIZED_NAME_MIN_AMOUNT = "min_amount";
   @SerializedName(SERIALIZED_NAME_MIN_AMOUNT)
   private BigDecimal minAmount;
+
+  public static final String SERIALIZED_NAME_MAX_ALLOWED = "max_allowed";
+  @SerializedName(SERIALIZED_NAME_MAX_ALLOWED)
+  private BigDecimal maxAllowed;
 
   public static final String SERIALIZED_NAME_PAYMENT_METHOD = "payment_method";
   @SerializedName(SERIALIZED_NAME_PAYMENT_METHOD)
@@ -87,6 +91,29 @@ public class OfferValidations {
 
   public void setMinAmount(BigDecimal minAmount) {
     this.minAmount = minAmount;
+  }
+
+
+  public OfferValidations maxAllowed(BigDecimal maxAllowed) {
+    
+    this.maxAllowed = maxAllowed;
+    return this;
+  }
+
+   /**
+   * Maximum Amount for Offer to be Applicable
+   * minimum: 1
+   * @return maxAllowed
+  **/
+  @javax.annotation.Nonnull
+  @Schema(example = "1", requiredMode = Schema.RequiredMode.REQUIRED, description = "Maximum Amount for Offer to be Applicable")
+  public BigDecimal getMaxAllowed() {
+    return maxAllowed;
+  }
+
+
+  public void setMaxAllowed(BigDecimal maxAllowed) {
+    this.maxAllowed = maxAllowed;
   }
 
 
@@ -123,12 +150,13 @@ public class OfferValidations {
     }
     OfferValidations offerValidations = (OfferValidations) o;
     return Objects.equals(this.minAmount, offerValidations.minAmount) &&
+        Objects.equals(this.maxAllowed, offerValidations.maxAllowed) &&
         Objects.equals(this.paymentMethod, offerValidations.paymentMethod);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(minAmount, paymentMethod);
+    return Objects.hash(minAmount, maxAllowed, paymentMethod);
   }
 
   @Override
@@ -136,6 +164,7 @@ public class OfferValidations {
     StringBuilder sb = new StringBuilder();
     sb.append("class OfferValidations {\n");
     sb.append("    minAmount: ").append(toIndentedString(minAmount)).append("\n");
+    sb.append("    maxAllowed: ").append(toIndentedString(maxAllowed)).append("\n");
     sb.append("    paymentMethod: ").append(toIndentedString(paymentMethod)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -160,10 +189,12 @@ public class OfferValidations {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("min_amount");
+    openapiFields.add("max_allowed");
     openapiFields.add("payment_method");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("max_allowed");
     openapiRequiredFields.add("payment_method");
   }
 
