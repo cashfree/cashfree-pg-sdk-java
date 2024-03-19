@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * OTP to be submitted for headless/native OTP
  */
 @Schema(description = "OTP to be submitted for headless/native OTP")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-19T11:39:30.078127Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-19T12:21:26.755700Z[Etc/UTC]")
 public class OrderAuthenticatePaymentRequest {
   public static final String SERIALIZED_NAME_OTP = "otp";
   @SerializedName(SERIALIZED_NAME_OTP)

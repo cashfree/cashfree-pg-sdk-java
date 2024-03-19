@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Request to terminate an active order at Cashfree
  */
 @Schema(description = "Request to terminate an active order at Cashfree")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-19T11:39:30.078127Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-19T12:21:26.755700Z[Etc/UTC]")
 public class TerminateOrderRequest {
   public static final String SERIALIZED_NAME_ORDER_STATUS = "order_status";
   @SerializedName(SERIALIZED_NAME_ORDER_STATUS)

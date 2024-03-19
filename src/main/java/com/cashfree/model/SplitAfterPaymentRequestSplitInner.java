@@ -14,7 +14,6 @@
 package com.cashfree.model;
 
 import java.util.Objects;
-import com.cashfree.model.SplitAfterPaymentRequestSplitInnerTagsInner;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -23,9 +22,9 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -55,7 +54,7 @@ import com.cashfree.JSON;
 /**
  * SplitAfterPaymentRequestSplitInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-19T11:39:30.078127Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-19T12:21:26.755700Z[Etc/UTC]")
 public class SplitAfterPaymentRequestSplitInner {
   public static final String SERIALIZED_NAME_VENDOR_ID = "vendor_id";
   @SerializedName(SERIALIZED_NAME_VENDOR_ID)
@@ -71,7 +70,7 @@ public class SplitAfterPaymentRequestSplitInner {
 
   public static final String SERIALIZED_NAME_TAGS = "tags";
   @SerializedName(SERIALIZED_NAME_TAGS)
-  private List<SplitAfterPaymentRequestSplitInnerTagsInner> tags;
+  private Map<String, String> tags = new HashMap<>();
 
   public SplitAfterPaymentRequestSplitInner() {
   }
@@ -142,32 +141,32 @@ public class SplitAfterPaymentRequestSplitInner {
   }
 
 
-  public SplitAfterPaymentRequestSplitInner tags(List<SplitAfterPaymentRequestSplitInnerTagsInner> tags) {
+  public SplitAfterPaymentRequestSplitInner tags(Map<String, String> tags) {
     
     this.tags = tags;
     return this;
   }
 
-  public SplitAfterPaymentRequestSplitInner addTagsItem(SplitAfterPaymentRequestSplitInnerTagsInner tagsItem) {
+  public SplitAfterPaymentRequestSplitInner putTagsItem(String key, String tagsItem) {
     if (this.tags == null) {
-      this.tags = new ArrayList<>();
+      this.tags = new HashMap<>();
     }
-    this.tags.add(tagsItem);
+    this.tags.put(key, tagsItem);
     return this;
   }
 
    /**
-   * Provide additional data fields using tags. Sample data fields are mentioned below.
+   * Custom Tags in thr form of {\&quot;key\&quot;:\&quot;value\&quot;} which can be passed for an order. A maximum of 10 tags can be added
    * @return tags
   **/
   @javax.annotation.Nullable
-  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Provide additional data fields using tags. Sample data fields are mentioned below.")
-  public List<SplitAfterPaymentRequestSplitInnerTagsInner> getTags() {
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Custom Tags in thr form of {\"key\":\"value\"} which can be passed for an order. A maximum of 10 tags can be added")
+  public Map<String, String> getTags() {
     return tags;
   }
 
 
-  public void setTags(List<SplitAfterPaymentRequestSplitInnerTagsInner> tags) {
+  public void setTags(Map<String, String> tags) {
     this.tags = tags;
   }
 
@@ -244,20 +243,6 @@ public class SplitAfterPaymentRequestSplitInner {
       if ((jsonObj.get("vendor_id") != null && !jsonObj.get("vendor_id").isJsonNull()) && !jsonObj.get("vendor_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `vendor_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vendor_id").toString()));
       }
-      if (jsonObj.get("tags") != null && !jsonObj.get("tags").isJsonNull()) {
-        JsonArray jsonArraytags = jsonObj.getAsJsonArray("tags");
-        if (jsonArraytags != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("tags").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `tags` to be an array in the JSON string but got `%s`", jsonObj.get("tags").toString()));
-          }
-
-          // validate the optional field `tags` (array)
-          for (int i = 0; i < jsonArraytags.size(); i++) {
-            SplitAfterPaymentRequestSplitInnerTagsInner.validateJsonElement(jsonArraytags.get(i));
-          };
-        }
-      }
   }
 
 
@@ -272,20 +257,6 @@ public class SplitAfterPaymentRequestSplitInner {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("vendor_id") != null && !jsonObj.get("vendor_id").isJsonNull()) && !jsonObj.get("vendor_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `vendor_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vendor_id").toString()));
-      }
-      if (jsonObj.get("tags") != null && !jsonObj.get("tags").isJsonNull()) {
-        JsonArray jsonArraytags = jsonObj.getAsJsonArray("tags");
-        if (jsonArraytags != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("tags").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `tags` to be an array in the JSON string but got `%s`", jsonObj.get("tags").toString()));
-          }
-
-          // validate the optional field `tags` (array)
-          for (int i = 0; i < jsonArraytags.size(); i++) {
-            SplitAfterPaymentRequestSplitInnerTagsInner.validateJsonElement(jsonArraytags.get(i));
-          };
-        }
       }
       return false;
   }
