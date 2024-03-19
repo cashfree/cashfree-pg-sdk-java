@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Payment link Notify Object for SMS and Email
  */
 @Schema(description = "Payment link Notify Object for SMS and Email")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-19T11:39:30.078127Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-19T12:21:26.755700Z[Etc/UTC]")
 public class LinkNotifyEntity {
   public static final String SERIALIZED_NAME_SEND_SMS = "send_sms";
   @SerializedName(SERIALIZED_NAME_SEND_SMS)
