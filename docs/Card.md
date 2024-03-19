@@ -17,6 +17,7 @@ Card Payment method
 |**instrumentId** | **String** | instrument id of saved card. Required only to make payment using saved instrument. |  [optional] |
 |**cryptogram** | **String** | cryptogram received from card network. Required only for tokenized card transactions. |  [optional] |
 |**tokenRequestorId** | **String** | TRID issued by card networks. Required only for tokenized card transactions. |  [optional] |
+|**tokenReferenceId** | **String** | Token Reference Id provided by Diners for Guest Checkout Token.  Required only for Diners cards.  |  [optional] |
 |**tokenType** | [**TokenTypeEnum**](#TokenTypeEnum) |  |  [optional] |
 |**cardDisplay** | **String** | last 4 digits of original card number. Required only for tokenized card transactions. |  [optional] |
 |**cardAlias** | **String** | Card alias as returned by Cashfree Vault API. |  [optional] |

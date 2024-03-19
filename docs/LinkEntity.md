@@ -25,6 +25,7 @@ Payment link success creation response object
 |**linkNotes** | **Map&lt;String, String&gt;** | Key-value pair that can be used to store additional information about the entity. Maximum 5 key-value pairs |  [optional] |
 |**linkAutoReminders** | **Boolean** |  |  [optional] |
 |**linkNotify** | [**LinkNotifyEntity**](LinkNotifyEntity.md) |  |  [optional] |
+|**linkQrcode** | **String** | Base64 encoded string for payment link. You can scan with camera to open a link in the browser to complete the payment. |  [optional] |
 
 
 

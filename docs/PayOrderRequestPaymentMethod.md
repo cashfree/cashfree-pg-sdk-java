@@ -14,6 +14,7 @@
 |**emi** | [**CardEMI**](CardEMI.md) |  |  |
 |**cardlessEmi** | [**CardlessEMI**](CardlessEMI.md) |  |  |
 |**paylater** | [**Paylater**](Paylater.md) |  |  |
+|**banktransfer** | [**Banktransfer**](Banktransfer.md) |  |  |
 
 
 
