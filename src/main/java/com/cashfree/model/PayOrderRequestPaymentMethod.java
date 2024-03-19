@@ -16,6 +16,8 @@ package com.cashfree.model;
 import java.util.Objects;
 import com.cashfree.model.App;
 import com.cashfree.model.AppPaymentMethod;
+import com.cashfree.model.Banktransfer;
+import com.cashfree.model.BanktransferPaymentMethod;
 import com.cashfree.model.Card;
 import com.cashfree.model.CardEMI;
 import com.cashfree.model.CardEMIPaymentMethod;
@@ -72,7 +74,7 @@ import com.google.gson.JsonParseException;
 
 import com.cashfree.JSON;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T08:58:39.020852Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-19T10:54:45.822625Z[Etc/UTC]")
 public class PayOrderRequestPaymentMethod extends AbstractOpenApiSchema {
     private static final Logger log = Logger.getLogger(PayOrderRequestPaymentMethod.class.getName());
 
@@ -91,6 +93,7 @@ public class PayOrderRequestPaymentMethod extends AbstractOpenApiSchema {
             final TypeAdapter<CardEMIPaymentMethod> adapterCardEMIPaymentMethod = gson.getDelegateAdapter(this, TypeToken.get(CardEMIPaymentMethod.class));
             final TypeAdapter<CardlessEMIPaymentMethod> adapterCardlessEMIPaymentMethod = gson.getDelegateAdapter(this, TypeToken.get(CardlessEMIPaymentMethod.class));
             final TypeAdapter<PaylaterPaymentMethod> adapterPaylaterPaymentMethod = gson.getDelegateAdapter(this, TypeToken.get(PaylaterPaymentMethod.class));
+            final TypeAdapter<BanktransferPaymentMethod> adapterBanktransferPaymentMethod = gson.getDelegateAdapter(this, TypeToken.get(BanktransferPaymentMethod.class));
 
             return (TypeAdapter<T>) new TypeAdapter<PayOrderRequestPaymentMethod>() {
                 @Override
@@ -142,7 +145,13 @@ public class PayOrderRequestPaymentMethod extends AbstractOpenApiSchema {
                       elementAdapter.write(out, element);
                       return;
                     }
-                    throw new IOException("Failed to serialize as the type doesn't match oneOf schemas: AppPaymentMethod, CardEMIPaymentMethod, CardPaymentMethod, CardlessEMIPaymentMethod, NetBankingPaymentMethod, PaylaterPaymentMethod, UPIPaymentMethod");
+                    // check if the actual instance is of the type `BanktransferPaymentMethod`
+                    if (value.getActualInstance() instanceof BanktransferPaymentMethod) {
+                      JsonElement element = adapterBanktransferPaymentMethod.toJsonTree((BanktransferPaymentMethod)value.getActualInstance());
+                      elementAdapter.write(out, element);
+                      return;
+                    }
+                    throw new IOException("Failed to serialize as the type doesn't match oneOf schemas: AppPaymentMethod, BanktransferPaymentMethod, CardEMIPaymentMethod, CardPaymentMethod, CardlessEMIPaymentMethod, NetBankingPaymentMethod, PaylaterPaymentMethod, UPIPaymentMethod");
                 }
 
                 @Override
@@ -245,6 +254,19 @@ public class PayOrderRequestPaymentMethod extends AbstractOpenApiSchema {
                       errorMessages.add(String.format("Deserialization for PaylaterPaymentMethod failed with `%s`.", e.getMessage()));
                       log.log(Level.FINER, "Input data does not match schema 'PaylaterPaymentMethod'", e);
                     }
+                    // deserialize BanktransferPaymentMethod
+                    try {
+                      // validate the JSON object to see if any exception is thrown
+                      if(BanktransferPaymentMethod.validateJsonElementForOneOf(jsonElement)) {
+                          actualAdapter = adapterBanktransferPaymentMethod;
+                      }
+                      match++;
+                      log.log(Level.FINER, "Input data matches schema 'BanktransferPaymentMethod'");
+                    } catch (Exception e) {
+                      // deserialization failed, continue
+                      errorMessages.add(String.format("Deserialization for BanktransferPaymentMethod failed with `%s`.", e.getMessage()));
+                      log.log(Level.FINER, "Input data does not match schema 'BanktransferPaymentMethod'", e);
+                    }
 
                     // if (match == 1) {
                         PayOrderRequestPaymentMethod ret = new PayOrderRequestPaymentMethod();
@@ -266,6 +288,11 @@ public class PayOrderRequestPaymentMethod extends AbstractOpenApiSchema {
     }
 
     public PayOrderRequestPaymentMethod(AppPaymentMethod o) {
+        super("oneOf", Boolean.FALSE);
+        setActualInstance(o);
+    }
+
+    public PayOrderRequestPaymentMethod(BanktransferPaymentMethod o) {
         super("oneOf", Boolean.FALSE);
         setActualInstance(o);
     }
@@ -308,6 +335,7 @@ public class PayOrderRequestPaymentMethod extends AbstractOpenApiSchema {
         schemas.put("CardEMIPaymentMethod", CardEMIPaymentMethod.class);
         schemas.put("CardlessEMIPaymentMethod", CardlessEMIPaymentMethod.class);
         schemas.put("PaylaterPaymentMethod", PaylaterPaymentMethod.class);
+        schemas.put("BanktransferPaymentMethod", BanktransferPaymentMethod.class);
     }
 
     @Override
@@ -318,7 +346,7 @@ public class PayOrderRequestPaymentMethod extends AbstractOpenApiSchema {
     /**
      * Set the instance that matches the oneOf child schema, check
      * the instance parameter is valid against the oneOf child schemas:
-     * AppPaymentMethod, CardEMIPaymentMethod, CardPaymentMethod, CardlessEMIPaymentMethod, NetBankingPaymentMethod, PaylaterPaymentMethod, UPIPaymentMethod
+     * AppPaymentMethod, BanktransferPaymentMethod, CardEMIPaymentMethod, CardPaymentMethod, CardlessEMIPaymentMethod, NetBankingPaymentMethod, PaylaterPaymentMethod, UPIPaymentMethod
      *
      * It could be an instance of the 'oneOf' schemas.
      */
@@ -359,14 +387,19 @@ public class PayOrderRequestPaymentMethod extends AbstractOpenApiSchema {
             return;
         }
 
-        throw new RuntimeException("Invalid instance type. Must be AppPaymentMethod, CardEMIPaymentMethod, CardPaymentMethod, CardlessEMIPaymentMethod, NetBankingPaymentMethod, PaylaterPaymentMethod, UPIPaymentMethod");
+        if (instance instanceof BanktransferPaymentMethod) {
+            super.setActualInstance(instance);
+            return;
+        }
+
+        throw new RuntimeException("Invalid instance type. Must be AppPaymentMethod, BanktransferPaymentMethod, CardEMIPaymentMethod, CardPaymentMethod, CardlessEMIPaymentMethod, NetBankingPaymentMethod, PaylaterPaymentMethod, UPIPaymentMethod");
     }
 
     /**
      * Get the actual instance, which can be the following:
-     * AppPaymentMethod, CardEMIPaymentMethod, CardPaymentMethod, CardlessEMIPaymentMethod, NetBankingPaymentMethod, PaylaterPaymentMethod, UPIPaymentMethod
+     * AppPaymentMethod, BanktransferPaymentMethod, CardEMIPaymentMethod, CardPaymentMethod, CardlessEMIPaymentMethod, NetBankingPaymentMethod, PaylaterPaymentMethod, UPIPaymentMethod
      *
-     * @return The actual instance (AppPaymentMethod, CardEMIPaymentMethod, CardPaymentMethod, CardlessEMIPaymentMethod, NetBankingPaymentMethod, PaylaterPaymentMethod, UPIPaymentMethod)
+     * @return The actual instance (AppPaymentMethod, BanktransferPaymentMethod, CardEMIPaymentMethod, CardPaymentMethod, CardlessEMIPaymentMethod, NetBankingPaymentMethod, PaylaterPaymentMethod, UPIPaymentMethod)
      */
     @Override
     public Object getActualInstance() {
@@ -443,6 +476,16 @@ public class PayOrderRequestPaymentMethod extends AbstractOpenApiSchema {
     public PaylaterPaymentMethod getPaylaterPaymentMethod() throws ClassCastException {
         return (PaylaterPaymentMethod)super.getActualInstance();
     }
+    /**
+     * Get the actual instance of `BanktransferPaymentMethod`. If the actual instance is not `BanktransferPaymentMethod`,
+     * the ClassCastException will be thrown.
+     *
+     * @return The actual instance of `BanktransferPaymentMethod`
+     * @throws ClassCastException if the instance is not `BanktransferPaymentMethod`
+     */
+    public BanktransferPaymentMethod getBanktransferPaymentMethod() throws ClassCastException {
+        return (BanktransferPaymentMethod)super.getActualInstance();
+    }
 
  /**
   * Validates the JSON Element and throws an exception if issues found
@@ -510,8 +553,16 @@ public class PayOrderRequestPaymentMethod extends AbstractOpenApiSchema {
       errorMessages.add(String.format("Deserialization for PaylaterPaymentMethod failed with `%s`.", e.getMessage()));
       // continue to the next one
     }
+    // validate the json string with BanktransferPaymentMethod
+    try {
+      BanktransferPaymentMethod.validateJsonElement(jsonElement);
+      validCount++;
+    } catch (Exception e) {
+      errorMessages.add(String.format("Deserialization for BanktransferPaymentMethod failed with `%s`.", e.getMessage()));
+      // continue to the next one
+    }
     // if (validCount != 1) {
-    //  throw new IOException(String.format("The JSON string is invalid for PayOrderRequestPaymentMethod with oneOf schemas: AppPaymentMethod, CardEMIPaymentMethod, CardPaymentMethod, CardlessEMIPaymentMethod, NetBankingPaymentMethod, PaylaterPaymentMethod, UPIPaymentMethod. %d class(es) match the result, expected 1. Detailed failure message for oneOf schemas: %s. JSON: %s", validCount, errorMessages, jsonElement.toString()));
+    //  throw new IOException(String.format("The JSON string is invalid for PayOrderRequestPaymentMethod with oneOf schemas: AppPaymentMethod, BanktransferPaymentMethod, CardEMIPaymentMethod, CardPaymentMethod, CardlessEMIPaymentMethod, NetBankingPaymentMethod, PaylaterPaymentMethod, UPIPaymentMethod. %d class(es) match the result, expected 1. Detailed failure message for oneOf schemas: %s. JSON: %s", validCount, errorMessages, jsonElement.toString()));
     // }
   }
 

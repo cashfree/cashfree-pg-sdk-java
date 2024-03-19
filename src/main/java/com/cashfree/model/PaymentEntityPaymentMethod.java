@@ -16,6 +16,8 @@ package com.cashfree.model;
 import java.util.Objects;
 import com.cashfree.model.PaymentMethodAppInPaymentsEntity;
 import com.cashfree.model.PaymentMethodAppInPaymentsEntityApp;
+import com.cashfree.model.PaymentMethodBankTransferInPaymentsEntity;
+import com.cashfree.model.PaymentMethodBankTransferInPaymentsEntityBanktransfer;
 import com.cashfree.model.PaymentMethodCardEMIInPaymentsEntity;
 import com.cashfree.model.PaymentMethodCardEMIInPaymentsEntityEmi;
 import com.cashfree.model.PaymentMethodCardInPaymentsEntity;
@@ -70,7 +72,7 @@ import com.google.gson.JsonParseException;
 
 import com.cashfree.JSON;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T08:58:39.020852Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-19T10:54:45.822625Z[Etc/UTC]")
 public class PaymentEntityPaymentMethod extends AbstractOpenApiSchema {
     private static final Logger log = Logger.getLogger(PaymentEntityPaymentMethod.class.getName());
 
@@ -89,6 +91,7 @@ public class PaymentEntityPaymentMethod extends AbstractOpenApiSchema {
             final TypeAdapter<PaymentMethodCardlessEMIInPaymentsEntity> adapterPaymentMethodCardlessEMIInPaymentsEntity = gson.getDelegateAdapter(this, TypeToken.get(PaymentMethodCardlessEMIInPaymentsEntity.class));
             final TypeAdapter<PaymentMethodPaylaterInPaymentsEntity> adapterPaymentMethodPaylaterInPaymentsEntity = gson.getDelegateAdapter(this, TypeToken.get(PaymentMethodPaylaterInPaymentsEntity.class));
             final TypeAdapter<PaymentMethodCardEMIInPaymentsEntity> adapterPaymentMethodCardEMIInPaymentsEntity = gson.getDelegateAdapter(this, TypeToken.get(PaymentMethodCardEMIInPaymentsEntity.class));
+            final TypeAdapter<PaymentMethodBankTransferInPaymentsEntity> adapterPaymentMethodBankTransferInPaymentsEntity = gson.getDelegateAdapter(this, TypeToken.get(PaymentMethodBankTransferInPaymentsEntity.class));
 
             return (TypeAdapter<T>) new TypeAdapter<PaymentEntityPaymentMethod>() {
                 @Override
@@ -140,7 +143,13 @@ public class PaymentEntityPaymentMethod extends AbstractOpenApiSchema {
                       elementAdapter.write(out, element);
                       return;
                     }
-                    throw new IOException("Failed to serialize as the type doesn't match oneOf schemas: PaymentMethodAppInPaymentsEntity, PaymentMethodCardEMIInPaymentsEntity, PaymentMethodCardInPaymentsEntity, PaymentMethodCardlessEMIInPaymentsEntity, PaymentMethodNetBankingInPaymentsEntity, PaymentMethodPaylaterInPaymentsEntity, PaymentMethodUPIInPaymentsEntity");
+                    // check if the actual instance is of the type `PaymentMethodBankTransferInPaymentsEntity`
+                    if (value.getActualInstance() instanceof PaymentMethodBankTransferInPaymentsEntity) {
+                      JsonElement element = adapterPaymentMethodBankTransferInPaymentsEntity.toJsonTree((PaymentMethodBankTransferInPaymentsEntity)value.getActualInstance());
+                      elementAdapter.write(out, element);
+                      return;
+                    }
+                    throw new IOException("Failed to serialize as the type doesn't match oneOf schemas: PaymentMethodAppInPaymentsEntity, PaymentMethodBankTransferInPaymentsEntity, PaymentMethodCardEMIInPaymentsEntity, PaymentMethodCardInPaymentsEntity, PaymentMethodCardlessEMIInPaymentsEntity, PaymentMethodNetBankingInPaymentsEntity, PaymentMethodPaylaterInPaymentsEntity, PaymentMethodUPIInPaymentsEntity");
                 }
 
                 @Override
@@ -243,6 +252,19 @@ public class PaymentEntityPaymentMethod extends AbstractOpenApiSchema {
                       errorMessages.add(String.format("Deserialization for PaymentMethodCardEMIInPaymentsEntity failed with `%s`.", e.getMessage()));
                       log.log(Level.FINER, "Input data does not match schema 'PaymentMethodCardEMIInPaymentsEntity'", e);
                     }
+                    // deserialize PaymentMethodBankTransferInPaymentsEntity
+                    try {
+                      // validate the JSON object to see if any exception is thrown
+                      if(PaymentMethodBankTransferInPaymentsEntity.validateJsonElementForOneOf(jsonElement)) {
+                          actualAdapter = adapterPaymentMethodBankTransferInPaymentsEntity;
+                      }
+                      match++;
+                      log.log(Level.FINER, "Input data matches schema 'PaymentMethodBankTransferInPaymentsEntity'");
+                    } catch (Exception e) {
+                      // deserialization failed, continue
+                      errorMessages.add(String.format("Deserialization for PaymentMethodBankTransferInPaymentsEntity failed with `%s`.", e.getMessage()));
+                      log.log(Level.FINER, "Input data does not match schema 'PaymentMethodBankTransferInPaymentsEntity'", e);
+                    }
 
                     // if (match == 1) {
                         PaymentEntityPaymentMethod ret = new PaymentEntityPaymentMethod();
@@ -264,6 +286,11 @@ public class PaymentEntityPaymentMethod extends AbstractOpenApiSchema {
     }
 
     public PaymentEntityPaymentMethod(PaymentMethodAppInPaymentsEntity o) {
+        super("oneOf", Boolean.FALSE);
+        setActualInstance(o);
+    }
+
+    public PaymentEntityPaymentMethod(PaymentMethodBankTransferInPaymentsEntity o) {
         super("oneOf", Boolean.FALSE);
         setActualInstance(o);
     }
@@ -306,6 +333,7 @@ public class PaymentEntityPaymentMethod extends AbstractOpenApiSchema {
         schemas.put("PaymentMethodCardlessEMIInPaymentsEntity", PaymentMethodCardlessEMIInPaymentsEntity.class);
         schemas.put("PaymentMethodPaylaterInPaymentsEntity", PaymentMethodPaylaterInPaymentsEntity.class);
         schemas.put("PaymentMethodCardEMIInPaymentsEntity", PaymentMethodCardEMIInPaymentsEntity.class);
+        schemas.put("PaymentMethodBankTransferInPaymentsEntity", PaymentMethodBankTransferInPaymentsEntity.class);
     }
 
     @Override
@@ -316,7 +344,7 @@ public class PaymentEntityPaymentMethod extends AbstractOpenApiSchema {
     /**
      * Set the instance that matches the oneOf child schema, check
      * the instance parameter is valid against the oneOf child schemas:
-     * PaymentMethodAppInPaymentsEntity, PaymentMethodCardEMIInPaymentsEntity, PaymentMethodCardInPaymentsEntity, PaymentMethodCardlessEMIInPaymentsEntity, PaymentMethodNetBankingInPaymentsEntity, PaymentMethodPaylaterInPaymentsEntity, PaymentMethodUPIInPaymentsEntity
+     * PaymentMethodAppInPaymentsEntity, PaymentMethodBankTransferInPaymentsEntity, PaymentMethodCardEMIInPaymentsEntity, PaymentMethodCardInPaymentsEntity, PaymentMethodCardlessEMIInPaymentsEntity, PaymentMethodNetBankingInPaymentsEntity, PaymentMethodPaylaterInPaymentsEntity, PaymentMethodUPIInPaymentsEntity
      *
      * It could be an instance of the 'oneOf' schemas.
      */
@@ -357,14 +385,19 @@ public class PaymentEntityPaymentMethod extends AbstractOpenApiSchema {
             return;
         }
 
-        throw new RuntimeException("Invalid instance type. Must be PaymentMethodAppInPaymentsEntity, PaymentMethodCardEMIInPaymentsEntity, PaymentMethodCardInPaymentsEntity, PaymentMethodCardlessEMIInPaymentsEntity, PaymentMethodNetBankingInPaymentsEntity, PaymentMethodPaylaterInPaymentsEntity, PaymentMethodUPIInPaymentsEntity");
+        if (instance instanceof PaymentMethodBankTransferInPaymentsEntity) {
+            super.setActualInstance(instance);
+            return;
+        }
+
+        throw new RuntimeException("Invalid instance type. Must be PaymentMethodAppInPaymentsEntity, PaymentMethodBankTransferInPaymentsEntity, PaymentMethodCardEMIInPaymentsEntity, PaymentMethodCardInPaymentsEntity, PaymentMethodCardlessEMIInPaymentsEntity, PaymentMethodNetBankingInPaymentsEntity, PaymentMethodPaylaterInPaymentsEntity, PaymentMethodUPIInPaymentsEntity");
     }
 
     /**
      * Get the actual instance, which can be the following:
-     * PaymentMethodAppInPaymentsEntity, PaymentMethodCardEMIInPaymentsEntity, PaymentMethodCardInPaymentsEntity, PaymentMethodCardlessEMIInPaymentsEntity, PaymentMethodNetBankingInPaymentsEntity, PaymentMethodPaylaterInPaymentsEntity, PaymentMethodUPIInPaymentsEntity
+     * PaymentMethodAppInPaymentsEntity, PaymentMethodBankTransferInPaymentsEntity, PaymentMethodCardEMIInPaymentsEntity, PaymentMethodCardInPaymentsEntity, PaymentMethodCardlessEMIInPaymentsEntity, PaymentMethodNetBankingInPaymentsEntity, PaymentMethodPaylaterInPaymentsEntity, PaymentMethodUPIInPaymentsEntity
      *
-     * @return The actual instance (PaymentMethodAppInPaymentsEntity, PaymentMethodCardEMIInPaymentsEntity, PaymentMethodCardInPaymentsEntity, PaymentMethodCardlessEMIInPaymentsEntity, PaymentMethodNetBankingInPaymentsEntity, PaymentMethodPaylaterInPaymentsEntity, PaymentMethodUPIInPaymentsEntity)
+     * @return The actual instance (PaymentMethodAppInPaymentsEntity, PaymentMethodBankTransferInPaymentsEntity, PaymentMethodCardEMIInPaymentsEntity, PaymentMethodCardInPaymentsEntity, PaymentMethodCardlessEMIInPaymentsEntity, PaymentMethodNetBankingInPaymentsEntity, PaymentMethodPaylaterInPaymentsEntity, PaymentMethodUPIInPaymentsEntity)
      */
     @Override
     public Object getActualInstance() {
@@ -441,6 +474,16 @@ public class PaymentEntityPaymentMethod extends AbstractOpenApiSchema {
     public PaymentMethodCardEMIInPaymentsEntity getPaymentMethodCardEMIInPaymentsEntity() throws ClassCastException {
         return (PaymentMethodCardEMIInPaymentsEntity)super.getActualInstance();
     }
+    /**
+     * Get the actual instance of `PaymentMethodBankTransferInPaymentsEntity`. If the actual instance is not `PaymentMethodBankTransferInPaymentsEntity`,
+     * the ClassCastException will be thrown.
+     *
+     * @return The actual instance of `PaymentMethodBankTransferInPaymentsEntity`
+     * @throws ClassCastException if the instance is not `PaymentMethodBankTransferInPaymentsEntity`
+     */
+    public PaymentMethodBankTransferInPaymentsEntity getPaymentMethodBankTransferInPaymentsEntity() throws ClassCastException {
+        return (PaymentMethodBankTransferInPaymentsEntity)super.getActualInstance();
+    }
 
  /**
   * Validates the JSON Element and throws an exception if issues found
@@ -508,8 +551,16 @@ public class PaymentEntityPaymentMethod extends AbstractOpenApiSchema {
       errorMessages.add(String.format("Deserialization for PaymentMethodCardEMIInPaymentsEntity failed with `%s`.", e.getMessage()));
       // continue to the next one
     }
+    // validate the json string with PaymentMethodBankTransferInPaymentsEntity
+    try {
+      PaymentMethodBankTransferInPaymentsEntity.validateJsonElement(jsonElement);
+      validCount++;
+    } catch (Exception e) {
+      errorMessages.add(String.format("Deserialization for PaymentMethodBankTransferInPaymentsEntity failed with `%s`.", e.getMessage()));
+      // continue to the next one
+    }
     // if (validCount != 1) {
-    //  throw new IOException(String.format("The JSON string is invalid for PaymentEntityPaymentMethod with oneOf schemas: PaymentMethodAppInPaymentsEntity, PaymentMethodCardEMIInPaymentsEntity, PaymentMethodCardInPaymentsEntity, PaymentMethodCardlessEMIInPaymentsEntity, PaymentMethodNetBankingInPaymentsEntity, PaymentMethodPaylaterInPaymentsEntity, PaymentMethodUPIInPaymentsEntity. %d class(es) match the result, expected 1. Detailed failure message for oneOf schemas: %s. JSON: %s", validCount, errorMessages, jsonElement.toString()));
+    //  throw new IOException(String.format("The JSON string is invalid for PaymentEntityPaymentMethod with oneOf schemas: PaymentMethodAppInPaymentsEntity, PaymentMethodBankTransferInPaymentsEntity, PaymentMethodCardEMIInPaymentsEntity, PaymentMethodCardInPaymentsEntity, PaymentMethodCardlessEMIInPaymentsEntity, PaymentMethodNetBankingInPaymentsEntity, PaymentMethodPaylaterInPaymentsEntity, PaymentMethodUPIInPaymentsEntity. %d class(es) match the result, expected 1. Detailed failure message for oneOf schemas: %s. JSON: %s", validCount, errorMessages, jsonElement.toString()));
     // }
   }
 

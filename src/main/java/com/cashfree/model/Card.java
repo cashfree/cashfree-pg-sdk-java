@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Card Payment method
  */
 @Schema(description = "Card Payment method")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T08:58:39.020852Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-19T10:54:45.822625Z[Etc/UTC]")
 public class Card {
   /**
    * The channel for card payments can be \&quot;link\&quot; or \&quot;post\&quot;. Post is used for seamless OTP payments where merchant captures OTP on their own page.
@@ -138,6 +138,10 @@ public class Card {
   public static final String SERIALIZED_NAME_TOKEN_REQUESTOR_ID = "token_requestor_id";
   @SerializedName(SERIALIZED_NAME_TOKEN_REQUESTOR_ID)
   private String tokenRequestorId;
+
+  public static final String SERIALIZED_NAME_TOKEN_REFERENCE_ID = "token_reference_id";
+  @SerializedName(SERIALIZED_NAME_TOKEN_REFERENCE_ID)
+  private String tokenReferenceId;
 
   /**
    * Gets or Sets tokenType
@@ -466,6 +470,28 @@ public class Card {
   }
 
 
+  public Card tokenReferenceId(String tokenReferenceId) {
+    
+    this.tokenReferenceId = tokenReferenceId;
+    return this;
+  }
+
+   /**
+   * Token Reference Id provided by Diners for Guest Checkout Token.  Required only for Diners cards. 
+   * @return tokenReferenceId
+  **/
+  @javax.annotation.Nullable
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Token Reference Id provided by Diners for Guest Checkout Token.  Required only for Diners cards. ")
+  public String getTokenReferenceId() {
+    return tokenReferenceId;
+  }
+
+
+  public void setTokenReferenceId(String tokenReferenceId) {
+    this.tokenReferenceId = tokenReferenceId;
+  }
+
+
   public Card tokenType(TokenTypeEnum tokenType) {
     
     this.tokenType = tokenType;
@@ -595,6 +621,7 @@ public class Card {
         Objects.equals(this.instrumentId, card.instrumentId) &&
         Objects.equals(this.cryptogram, card.cryptogram) &&
         Objects.equals(this.tokenRequestorId, card.tokenRequestorId) &&
+        Objects.equals(this.tokenReferenceId, card.tokenReferenceId) &&
         Objects.equals(this.tokenType, card.tokenType) &&
         Objects.equals(this.cardDisplay, card.cardDisplay) &&
         Objects.equals(this.cardAlias, card.cardAlias) &&
@@ -604,7 +631,7 @@ public class Card {
 
   @Override
   public int hashCode() {
-    return Objects.hash(channel, cardNumber, cardHolderName, cardExpiryMm, cardExpiryYy, cardCvv, instrumentId, cryptogram, tokenRequestorId, tokenType, cardDisplay, cardAlias, cardBankName, emiTenure);
+    return Objects.hash(channel, cardNumber, cardHolderName, cardExpiryMm, cardExpiryYy, cardCvv, instrumentId, cryptogram, tokenRequestorId, tokenReferenceId, tokenType, cardDisplay, cardAlias, cardBankName, emiTenure);
   }
 
   @Override
@@ -620,6 +647,7 @@ public class Card {
     sb.append("    instrumentId: ").append(toIndentedString(instrumentId)).append("\n");
     sb.append("    cryptogram: ").append(toIndentedString(cryptogram)).append("\n");
     sb.append("    tokenRequestorId: ").append(toIndentedString(tokenRequestorId)).append("\n");
+    sb.append("    tokenReferenceId: ").append(toIndentedString(tokenReferenceId)).append("\n");
     sb.append("    tokenType: ").append(toIndentedString(tokenType)).append("\n");
     sb.append("    cardDisplay: ").append(toIndentedString(cardDisplay)).append("\n");
     sb.append("    cardAlias: ").append(toIndentedString(cardAlias)).append("\n");
@@ -656,6 +684,7 @@ public class Card {
     openapiFields.add("instrument_id");
     openapiFields.add("cryptogram");
     openapiFields.add("token_requestor_id");
+    openapiFields.add("token_reference_id");
     openapiFields.add("token_type");
     openapiFields.add("card_display");
     openapiFields.add("card_alias");
@@ -709,6 +738,9 @@ public class Card {
       }
       if ((jsonObj.get("token_requestor_id") != null && !jsonObj.get("token_requestor_id").isJsonNull()) && !jsonObj.get("token_requestor_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `token_requestor_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("token_requestor_id").toString()));
+      }
+      if ((jsonObj.get("token_reference_id") != null && !jsonObj.get("token_reference_id").isJsonNull()) && !jsonObj.get("token_reference_id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `token_reference_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("token_reference_id").toString()));
       }
       if ((jsonObj.get("token_type") != null && !jsonObj.get("token_type").isJsonNull()) && !jsonObj.get("token_type").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `token_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("token_type").toString()));
@@ -767,6 +799,9 @@ public class Card {
       }
       if ((jsonObj.get("token_requestor_id") != null && !jsonObj.get("token_requestor_id").isJsonNull()) && !jsonObj.get("token_requestor_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `token_requestor_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("token_requestor_id").toString()));
+      }
+      if ((jsonObj.get("token_reference_id") != null && !jsonObj.get("token_reference_id").isJsonNull()) && !jsonObj.get("token_reference_id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `token_reference_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("token_reference_id").toString()));
       }
       if ((jsonObj.get("token_type") != null && !jsonObj.get("token_type").isJsonNull()) && !jsonObj.get("token_type").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `token_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("token_type").toString()));

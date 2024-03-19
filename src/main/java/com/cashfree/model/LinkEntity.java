@@ -58,7 +58,7 @@ import com.cashfree.JSON;
  * Payment link success creation response object
  */
 @Schema(description = "Payment link success creation response object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-23T08:58:39.020852Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-19T10:54:45.822625Z[Etc/UTC]")
 public class LinkEntity {
   public static final String SERIALIZED_NAME_CF_LINK_ID = "cf_link_id";
   @SerializedName(SERIALIZED_NAME_CF_LINK_ID)
@@ -127,6 +127,10 @@ public class LinkEntity {
   public static final String SERIALIZED_NAME_LINK_NOTIFY = "link_notify";
   @SerializedName(SERIALIZED_NAME_LINK_NOTIFY)
   private LinkNotifyEntity linkNotify;
+
+  public static final String SERIALIZED_NAME_LINK_QRCODE = "link_qrcode";
+  @SerializedName(SERIALIZED_NAME_LINK_QRCODE)
+  private String linkQrcode;
 
   public LinkEntity() {
   }
@@ -513,6 +517,28 @@ public class LinkEntity {
   }
 
 
+  public LinkEntity linkQrcode(String linkQrcode) {
+    
+    this.linkQrcode = linkQrcode;
+    return this;
+  }
+
+   /**
+   * Base64 encoded string for payment link. You can scan with camera to open a link in the browser to complete the payment.
+   * @return linkQrcode
+  **/
+  @javax.annotation.Nullable
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Base64 encoded string for payment link. You can scan with camera to open a link in the browser to complete the payment.")
+  public String getLinkQrcode() {
+    return linkQrcode;
+  }
+
+
+  public void setLinkQrcode(String linkQrcode) {
+    this.linkQrcode = linkQrcode;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -539,12 +565,13 @@ public class LinkEntity {
         Objects.equals(this.linkExpiryTime, linkEntity.linkExpiryTime) &&
         Objects.equals(this.linkNotes, linkEntity.linkNotes) &&
         Objects.equals(this.linkAutoReminders, linkEntity.linkAutoReminders) &&
-        Objects.equals(this.linkNotify, linkEntity.linkNotify);
+        Objects.equals(this.linkNotify, linkEntity.linkNotify) &&
+        Objects.equals(this.linkQrcode, linkEntity.linkQrcode);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(cfLinkId, linkId, linkStatus, linkCurrency, linkAmount, linkAmountPaid, linkPartialPayments, linkMinimumPartialAmount, linkPurpose, linkCreatedAt, customerDetails, linkMeta, linkUrl, linkExpiryTime, linkNotes, linkAutoReminders, linkNotify);
+    return Objects.hash(cfLinkId, linkId, linkStatus, linkCurrency, linkAmount, linkAmountPaid, linkPartialPayments, linkMinimumPartialAmount, linkPurpose, linkCreatedAt, customerDetails, linkMeta, linkUrl, linkExpiryTime, linkNotes, linkAutoReminders, linkNotify, linkQrcode);
   }
 
   @Override
@@ -568,6 +595,7 @@ public class LinkEntity {
     sb.append("    linkNotes: ").append(toIndentedString(linkNotes)).append("\n");
     sb.append("    linkAutoReminders: ").append(toIndentedString(linkAutoReminders)).append("\n");
     sb.append("    linkNotify: ").append(toIndentedString(linkNotify)).append("\n");
+    sb.append("    linkQrcode: ").append(toIndentedString(linkQrcode)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -607,6 +635,7 @@ public class LinkEntity {
     openapiFields.add("link_notes");
     openapiFields.add("link_auto_reminders");
     openapiFields.add("link_notify");
+    openapiFields.add("link_qrcode");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -656,6 +685,9 @@ public class LinkEntity {
       // validate the optional field `link_notify`
       if (jsonObj.get("link_notify") != null && !jsonObj.get("link_notify").isJsonNull()) {
         LinkNotifyEntity.validateJsonElement(jsonObj.get("link_notify"));
+      }
+      if ((jsonObj.get("link_qrcode") != null && !jsonObj.get("link_qrcode").isJsonNull()) && !jsonObj.get("link_qrcode").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `link_qrcode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("link_qrcode").toString()));
       }
   }
 
@@ -707,6 +739,9 @@ public class LinkEntity {
       if (jsonObj.get("link_notify") != null && !jsonObj.get("link_notify").isJsonNull()) {
         LinkNotifyEntity.validateJsonElement(jsonObj.get("link_notify"));
         return true;
+      }
+      if ((jsonObj.get("link_qrcode") != null && !jsonObj.get("link_qrcode").isJsonNull()) && !jsonObj.get("link_qrcode").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `link_qrcode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("link_qrcode").toString()));
       }
       return false;
   }
