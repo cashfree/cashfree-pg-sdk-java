@@ -17,6 +17,7 @@ import java.util.Objects;
 import com.cashfree.model.LinkCustomerDetailsEntity;
 import com.cashfree.model.LinkMetaResponseEntity;
 import com.cashfree.model.LinkNotifyEntity;
+import com.cashfree.model.VendorSplit;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -25,8 +26,10 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import com.google.gson.Gson;
@@ -58,7 +61,7 @@ import com.cashfree.JSON;
  * Payment link success creation response object
  */
 @Schema(description = "Payment link success creation response object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-19T12:21:26.755700Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-01T10:27:27.461284Z[Etc/UTC]")
 public class LinkEntity {
   public static final String SERIALIZED_NAME_CF_LINK_ID = "cf_link_id";
   @SerializedName(SERIALIZED_NAME_CF_LINK_ID)
@@ -131,6 +134,10 @@ public class LinkEntity {
   public static final String SERIALIZED_NAME_LINK_QRCODE = "link_qrcode";
   @SerializedName(SERIALIZED_NAME_LINK_QRCODE)
   private String linkQrcode;
+
+  public static final String SERIALIZED_NAME_ORDER_SPLITS = "order_splits";
+  @SerializedName(SERIALIZED_NAME_ORDER_SPLITS)
+  private List<VendorSplit> orderSplits;
 
   public LinkEntity() {
   }
@@ -539,6 +546,36 @@ public class LinkEntity {
   }
 
 
+  public LinkEntity orderSplits(List<VendorSplit> orderSplits) {
+    
+    this.orderSplits = orderSplits;
+    return this;
+  }
+
+  public LinkEntity addOrderSplitsItem(VendorSplit orderSplitsItem) {
+    if (this.orderSplits == null) {
+      this.orderSplits = new ArrayList<>();
+    }
+    this.orderSplits.add(orderSplitsItem);
+    return this;
+  }
+
+   /**
+   * Get orderSplits
+   * @return orderSplits
+  **/
+  @javax.annotation.Nullable
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
+  public List<VendorSplit> getOrderSplits() {
+    return orderSplits;
+  }
+
+
+  public void setOrderSplits(List<VendorSplit> orderSplits) {
+    this.orderSplits = orderSplits;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -566,12 +603,13 @@ public class LinkEntity {
         Objects.equals(this.linkNotes, linkEntity.linkNotes) &&
         Objects.equals(this.linkAutoReminders, linkEntity.linkAutoReminders) &&
         Objects.equals(this.linkNotify, linkEntity.linkNotify) &&
-        Objects.equals(this.linkQrcode, linkEntity.linkQrcode);
+        Objects.equals(this.linkQrcode, linkEntity.linkQrcode) &&
+        Objects.equals(this.orderSplits, linkEntity.orderSplits);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(cfLinkId, linkId, linkStatus, linkCurrency, linkAmount, linkAmountPaid, linkPartialPayments, linkMinimumPartialAmount, linkPurpose, linkCreatedAt, customerDetails, linkMeta, linkUrl, linkExpiryTime, linkNotes, linkAutoReminders, linkNotify, linkQrcode);
+    return Objects.hash(cfLinkId, linkId, linkStatus, linkCurrency, linkAmount, linkAmountPaid, linkPartialPayments, linkMinimumPartialAmount, linkPurpose, linkCreatedAt, customerDetails, linkMeta, linkUrl, linkExpiryTime, linkNotes, linkAutoReminders, linkNotify, linkQrcode, orderSplits);
   }
 
   @Override
@@ -596,6 +634,7 @@ public class LinkEntity {
     sb.append("    linkAutoReminders: ").append(toIndentedString(linkAutoReminders)).append("\n");
     sb.append("    linkNotify: ").append(toIndentedString(linkNotify)).append("\n");
     sb.append("    linkQrcode: ").append(toIndentedString(linkQrcode)).append("\n");
+    sb.append("    orderSplits: ").append(toIndentedString(orderSplits)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -636,6 +675,7 @@ public class LinkEntity {
     openapiFields.add("link_auto_reminders");
     openapiFields.add("link_notify");
     openapiFields.add("link_qrcode");
+    openapiFields.add("order_splits");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -688,6 +728,20 @@ public class LinkEntity {
       }
       if ((jsonObj.get("link_qrcode") != null && !jsonObj.get("link_qrcode").isJsonNull()) && !jsonObj.get("link_qrcode").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `link_qrcode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("link_qrcode").toString()));
+      }
+      if (jsonObj.get("order_splits") != null && !jsonObj.get("order_splits").isJsonNull()) {
+        JsonArray jsonArrayorderSplits = jsonObj.getAsJsonArray("order_splits");
+        if (jsonArrayorderSplits != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("order_splits").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `order_splits` to be an array in the JSON string but got `%s`", jsonObj.get("order_splits").toString()));
+          }
+
+          // validate the optional field `order_splits` (array)
+          for (int i = 0; i < jsonArrayorderSplits.size(); i++) {
+            VendorSplit.validateJsonElement(jsonArrayorderSplits.get(i));
+          };
+        }
       }
   }
 
@@ -742,6 +796,20 @@ public class LinkEntity {
       }
       if ((jsonObj.get("link_qrcode") != null && !jsonObj.get("link_qrcode").isJsonNull()) && !jsonObj.get("link_qrcode").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `link_qrcode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("link_qrcode").toString()));
+      }
+      if (jsonObj.get("order_splits") != null && !jsonObj.get("order_splits").isJsonNull()) {
+        JsonArray jsonArrayorderSplits = jsonObj.getAsJsonArray("order_splits");
+        if (jsonArrayorderSplits != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("order_splits").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `order_splits` to be an array in the JSON string but got `%s`", jsonObj.get("order_splits").toString()));
+          }
+
+          // validate the optional field `order_splits` (array)
+          for (int i = 0; i < jsonArrayorderSplits.size(); i++) {
+            VendorSplit.validateJsonElement(jsonArrayorderSplits.get(i));
+          };
+        }
       }
       return false;
   }

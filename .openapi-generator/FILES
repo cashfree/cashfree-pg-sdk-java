@@ -197,7 +197,6 @@ docs/Upi.md
 docs/UpiDetails.md
 docs/UploadTerminalDocs.md
 docs/UploadTerminalDocsEntity.md
-docs/UploadVendorDocsRequest.md
 docs/UploadVendorDocumentsResponse.md
 docs/VendorBalance.md
 docs/VendorBalanceTransferCharges.md
@@ -425,7 +424,6 @@ src/main/java/com/cashfree/model/Upi.java
 src/main/java/com/cashfree/model/UpiDetails.java
 src/main/java/com/cashfree/model/UploadTerminalDocs.java
 src/main/java/com/cashfree/model/UploadTerminalDocsEntity.java
-src/main/java/com/cashfree/model/UploadVendorDocsRequest.java
 src/main/java/com/cashfree/model/UploadVendorDocumentsResponse.java
 src/main/java/com/cashfree/model/VendorBalance.java
 src/main/java/com/cashfree/model/VendorBalanceTransferCharges.java
@@ -626,7 +624,6 @@ src/test/java/com/cashfree/model/UpiDetailsTest.java
 src/test/java/com/cashfree/model/UpiTest.java
 src/test/java/com/cashfree/model/UploadTerminalDocsEntityTest.java
 src/test/java/com/cashfree/model/UploadTerminalDocsTest.java
-src/test/java/com/cashfree/model/UploadVendorDocsRequestTest.java
 src/test/java/com/cashfree/model/UploadVendorDocumentsResponseTest.java
 src/test/java/com/cashfree/model/VendorBalanceTest.java
 src/test/java/com/cashfree/model/VendorBalanceTransferChargesTest.java

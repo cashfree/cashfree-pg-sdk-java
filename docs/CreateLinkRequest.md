@@ -20,6 +20,7 @@ Request paramenters for link creation
 |**linkAutoReminders** | **Boolean** | If \&quot;true\&quot;, reminders will be sent to customers for collecting payments. |  [optional] |
 |**linkNotes** | **Map&lt;String, String&gt;** | Key-value pair that can be used to store additional information about the entity. Maximum 5 key-value pairs |  [optional] |
 |**linkMeta** | [**LinkMetaResponseEntity**](LinkMetaResponseEntity.md) |  |  [optional] |
+|**orderSplits** | [**List&lt;VendorSplit&gt;**](VendorSplit.md) | If you have Easy split enabled in your Cashfree account then you can use this option to split the order amount. |  [optional] |
 
 
 

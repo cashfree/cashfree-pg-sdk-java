@@ -54,7 +54,7 @@ import com.cashfree.JSON;
  * Specify either the Settlement ID, Settlement UTR, or start date and end date to fetch the settlement details.
  */
 @Schema(description = "Specify either the Settlement ID, Settlement UTR, or start date and end date to fetch the settlement details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-19T12:21:26.755700Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-01T10:27:27.461284Z[Etc/UTC]")
 public class FetchSettlementsRequestFilters {
   public static final String SERIALIZED_NAME_CF_SETTLEMENT_IDS = "cf_settlement_ids";
   @SerializedName(SERIALIZED_NAME_CF_SETTLEMENT_IDS)

@@ -270,7 +270,6 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.UpiDetails.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.UploadTerminalDocs.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.UploadTerminalDocsEntity.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.UploadVendorDocsRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.UploadVendorDocumentsResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.VendorBalance.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.VendorBalanceTransferCharges.CustomTypeAdapterFactory());
