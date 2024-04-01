@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * The card payment object is used to make payment using either plain card number, saved card instrument id or using cryptogram 
  */
 @Schema(description = "The card payment object is used to make payment using either plain card number, saved card instrument id or using cryptogram ")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-19T12:21:26.755700Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-01T10:13:36.975496Z[Etc/UTC]")
 public class CardPaymentMethod {
   public static final String SERIALIZED_NAME_CARD = "card";
   @SerializedName(SERIALIZED_NAME_CARD)

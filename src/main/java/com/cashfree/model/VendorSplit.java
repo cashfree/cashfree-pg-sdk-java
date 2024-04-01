@@ -23,6 +23,8 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -53,7 +55,7 @@ import com.cashfree.JSON;
  * Use to split order when cashfree&#39;s Easy Split is enabled for your account.
  */
 @Schema(description = "Use to split order when cashfree's Easy Split is enabled for your account.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-19T12:21:26.755700Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-01T10:13:36.975496Z[Etc/UTC]")
 public class VendorSplit {
   public static final String SERIALIZED_NAME_VENDOR_ID = "vendor_id";
   @SerializedName(SERIALIZED_NAME_VENDOR_ID)
@@ -66,6 +68,10 @@ public class VendorSplit {
   public static final String SERIALIZED_NAME_PERCENTAGE = "percentage";
   @SerializedName(SERIALIZED_NAME_PERCENTAGE)
   private BigDecimal percentage;
+
+  public static final String SERIALIZED_NAME_TAGS = "tags";
+  @SerializedName(SERIALIZED_NAME_TAGS)
+  private Map<String, Object> tags = new HashMap<>();
 
   public VendorSplit() {
   }
@@ -80,8 +86,8 @@ public class VendorSplit {
    * Vendor id created in Cashfree system
    * @return vendorId
   **/
-  @javax.annotation.Nullable
-  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Vendor id created in Cashfree system")
+  @javax.annotation.Nonnull
+  @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "Vendor id created in Cashfree system")
   public String getVendorId() {
     return vendorId;
   }
@@ -136,6 +142,36 @@ public class VendorSplit {
   }
 
 
+  public VendorSplit tags(Map<String, Object> tags) {
+    
+    this.tags = tags;
+    return this;
+  }
+
+  public VendorSplit putTagsItem(String key, Object tagsItem) {
+    if (this.tags == null) {
+      this.tags = new HashMap<>();
+    }
+    this.tags.put(key, tagsItem);
+    return this;
+  }
+
+   /**
+   * Custom Tags in thr form of {\&quot;key\&quot;:\&quot;value\&quot;} which can be passed for an order. A maximum of 10 tags can be added
+   * @return tags
+  **/
+  @javax.annotation.Nullable
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Custom Tags in thr form of {\"key\":\"value\"} which can be passed for an order. A maximum of 10 tags can be added")
+  public Map<String, Object> getTags() {
+    return tags;
+  }
+
+
+  public void setTags(Map<String, Object> tags) {
+    this.tags = tags;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -148,12 +184,13 @@ public class VendorSplit {
     VendorSplit vendorSplit = (VendorSplit) o;
     return Objects.equals(this.vendorId, vendorSplit.vendorId) &&
         Objects.equals(this.amount, vendorSplit.amount) &&
-        Objects.equals(this.percentage, vendorSplit.percentage);
+        Objects.equals(this.percentage, vendorSplit.percentage) &&
+        Objects.equals(this.tags, vendorSplit.tags);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(vendorId, amount, percentage);
+    return Objects.hash(vendorId, amount, percentage, tags);
   }
 
   @Override
@@ -163,6 +200,7 @@ public class VendorSplit {
     sb.append("    vendorId: ").append(toIndentedString(vendorId)).append("\n");
     sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
     sb.append("    percentage: ").append(toIndentedString(percentage)).append("\n");
+    sb.append("    tags: ").append(toIndentedString(tags)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -188,9 +226,11 @@ public class VendorSplit {
     openapiFields.add("vendor_id");
     openapiFields.add("amount");
     openapiFields.add("percentage");
+    openapiFields.add("tags");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("vendor_id");
   }
 
  /**
@@ -201,8 +241,15 @@ public class VendorSplit {
   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
 
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : VendorSplit.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if ((jsonObj.get("vendor_id") != null && !jsonObj.get("vendor_id").isJsonNull()) && !jsonObj.get("vendor_id").isJsonPrimitive()) {
+      if (!jsonObj.get("vendor_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `vendor_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vendor_id").toString()));
       }
   }
@@ -216,8 +263,15 @@ public class VendorSplit {
   */
   public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
 
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : VendorSplit.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if ((jsonObj.get("vendor_id") != null && !jsonObj.get("vendor_id").isJsonNull()) && !jsonObj.get("vendor_id").isJsonPrimitive()) {
+      if (!jsonObj.get("vendor_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `vendor_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vendor_id").toString()));
       }
       return false;

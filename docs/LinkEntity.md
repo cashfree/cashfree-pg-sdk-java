@@ -26,6 +26,7 @@ Payment link success creation response object
 |**linkAutoReminders** | **Boolean** |  |  [optional] |
 |**linkNotify** | [**LinkNotifyEntity**](LinkNotifyEntity.md) |  |  [optional] |
 |**linkQrcode** | **String** | Base64 encoded string for payment link. You can scan with camera to open a link in the browser to complete the payment. |  [optional] |
+|**orderSplits** | [**List&lt;VendorSplit&gt;**](VendorSplit.md) |  |  [optional] |
 
 
 

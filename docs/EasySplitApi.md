@@ -13,6 +13,7 @@ All URIs are relative to *https://sandbox.cashfree.com/pg*
 | [**PGESGetVendorsDocs**](EasySplitApi.md#PGESGetVendorsDocs) | **GET** /easy-split/vendor-docs/{vendor_id} | Get Vendor All Documents Status |
 | [**PGESOrderRecon**](EasySplitApi.md#PGESOrderRecon) | **POST** /split/order/vendor/recon | Get Split and Settlement Details by OrderID v2.0 |
 | [**PGESUpdateVendors**](EasySplitApi.md#PGESUpdateVendors) | **PATCH** /easy-split/vendors/{vendor_id} | Update vendor Details |
+| [**PGESUploadVendorsDocs**](EasySplitApi.md#PGESUploadVendorsDocs) | **POST** /easy-split/vendor-docs/{vendor_id} | Upload Vendor Docs |
 | [**PGOrderSplitAfterPayment**](EasySplitApi.md#PGOrderSplitAfterPayment) | **POST** /easy-split/orders/{order_id}/split | Split After Payment |
 | [**PGOrderStaticSplit**](EasySplitApi.md#PGOrderStaticSplit) | **POST** /easy-split/static-split | Create Static Split Configuration |
 
@@ -691,6 +692,82 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | Update Vendor Success Response. |  -  |
 | **400** | Update Vendor Failure Response. |  -  |
+
+
+## PGESUploadVendorsDocs
+
+> UploadVendorDocumentsResponse PGESUploadVendorsDocs(xApiVersion, vendorId, docType, docValue, _file)
+
+Upload Vendor Docs
+
+Use this API to upload KYC documents of a specific vendor.
+
+### Example
+
+```java
+// Import classes:
+import com.cashfree.*;
+import com.cashfree.models.*;
+
+
+public class Example {
+    public static void main(String[] args) {
+        
+        Cashfree.XClientId = "TEST32461bf279b7ab306cdae3b423";
+        Cashfree.XClientSecret = "TEST4a3236fe94e6b1e0e60b875639e2008695b977b2";
+        Cashfree.XEnvironment = Cashfree.SANDBOX;
+
+        Cashfree cashfree = new Cashfree();
+
+        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String vendorId = "your-vendor-id"; // String | The id which uniquely identifies your vendor.
+        String docType = "docType_example"; // String | Mention the type of the document you are uploading. Possible values: UIDAI_FRONT, UIDAI_BACK, UIDAI_NUMBER, DL, DL_NUMBER, PASSPORT_FRONT, PASSPORT_BACK, PASSPORT_NUMBER, VOTER_ID, VOTER_ID_NUMBER, PAN, PAN_NUMBER, GST, GSTIN_NUMBER, CIN, CIN_NUMBER, NBFC_CERTIFICATE. If the doc type ends with a number you should add the doc value else upload the doc file.
+        String docValue = "docValue_example"; // String | Enter the display name of the uploaded file.
+        File _file = new File("/path/to/file"); // File | Select the document that should be uploaded or provide the path of that file. You cannot upload a file that is more than 2MB in size.
+        try {
+            UploadVendorDocumentsResponse result = cashfree.PGESUploadVendorsDocs(xApiVersion, vendorId, docType, docValue, _fileOkHttpClient httpClient);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling EasySplitApi#PGESUploadVendorsDocs");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
+| **vendorId** | **String**| The id which uniquely identifies your vendor. | |
+| **docType** | **String**| Mention the type of the document you are uploading. Possible values: UIDAI_FRONT, UIDAI_BACK, UIDAI_NUMBER, DL, DL_NUMBER, PASSPORT_FRONT, PASSPORT_BACK, PASSPORT_NUMBER, VOTER_ID, VOTER_ID_NUMBER, PAN, PAN_NUMBER, GST, GSTIN_NUMBER, CIN, CIN_NUMBER, NBFC_CERTIFICATE. If the doc type ends with a number you should add the doc value else upload the doc file. | [optional] |
+| **docValue** | **String**| Enter the display name of the uploaded file. | [optional] |
+| **_file** | **File**| Select the document that should be uploaded or provide the path of that file. You cannot upload a file that is more than 2MB in size. | [optional] |
+
+### Return type
+
+[**UploadVendorDocumentsResponse**](UploadVendorDocumentsResponse.md)
+
+### Authorization
+
+[XPartnerAPIKey](../README.md#XPartnerAPIKey), [XClientSecret](../README.md#XClientSecret), [XPartnerMerchantID](../README.md#XPartnerMerchantID), [XClientID](../README.md#XClientID), [XClientSignatureHeader](../README.md#XClientSignatureHeader)
+
+### HTTP request headers
+
+- **Content-Type**: multipart/form-data
+- **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Upload Vendor Docs Success Response. |  -  |
+| **400** | Upload Vendor Docs Failure Response. |  -  |
 
 
 ## PGOrderSplitAfterPayment

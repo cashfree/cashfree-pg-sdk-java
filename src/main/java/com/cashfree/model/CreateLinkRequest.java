@@ -17,6 +17,7 @@ import java.util.Objects;
 import com.cashfree.model.LinkCustomerDetailsEntity;
 import com.cashfree.model.LinkMetaResponseEntity;
 import com.cashfree.model.LinkNotifyEntity;
+import com.cashfree.model.VendorSplit;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -24,8 +25,10 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import com.google.gson.Gson;
@@ -57,7 +60,7 @@ import com.cashfree.JSON;
  * Request paramenters for link creation
  */
 @Schema(description = "Request paramenters for link creation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-19T12:21:26.755700Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-01T10:13:36.975496Z[Etc/UTC]")
 public class CreateLinkRequest {
   public static final String SERIALIZED_NAME_LINK_ID = "link_id";
   @SerializedName(SERIALIZED_NAME_LINK_ID)
@@ -106,6 +109,10 @@ public class CreateLinkRequest {
   public static final String SERIALIZED_NAME_LINK_META = "link_meta";
   @SerializedName(SERIALIZED_NAME_LINK_META)
   private LinkMetaResponseEntity linkMeta;
+
+  public static final String SERIALIZED_NAME_ORDER_SPLITS = "order_splits";
+  @SerializedName(SERIALIZED_NAME_ORDER_SPLITS)
+  private List<VendorSplit> orderSplits;
 
   public CreateLinkRequest() {
   }
@@ -382,6 +389,36 @@ public class CreateLinkRequest {
   }
 
 
+  public CreateLinkRequest orderSplits(List<VendorSplit> orderSplits) {
+    
+    this.orderSplits = orderSplits;
+    return this;
+  }
+
+  public CreateLinkRequest addOrderSplitsItem(VendorSplit orderSplitsItem) {
+    if (this.orderSplits == null) {
+      this.orderSplits = new ArrayList<>();
+    }
+    this.orderSplits.add(orderSplitsItem);
+    return this;
+  }
+
+   /**
+   * If you have Easy split enabled in your Cashfree account then you can use this option to split the order amount.
+   * @return orderSplits
+  **/
+  @javax.annotation.Nullable
+  @Schema(example = "[{\"amount\":10,\"vendor\":\"john\"}]", requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "If you have Easy split enabled in your Cashfree account then you can use this option to split the order amount.")
+  public List<VendorSplit> getOrderSplits() {
+    return orderSplits;
+  }
+
+
+  public void setOrderSplits(List<VendorSplit> orderSplits) {
+    this.orderSplits = orderSplits;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -403,12 +440,13 @@ public class CreateLinkRequest {
         Objects.equals(this.linkNotify, createLinkRequest.linkNotify) &&
         Objects.equals(this.linkAutoReminders, createLinkRequest.linkAutoReminders) &&
         Objects.equals(this.linkNotes, createLinkRequest.linkNotes) &&
-        Objects.equals(this.linkMeta, createLinkRequest.linkMeta);
+        Objects.equals(this.linkMeta, createLinkRequest.linkMeta) &&
+        Objects.equals(this.orderSplits, createLinkRequest.orderSplits);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(linkId, linkAmount, linkCurrency, linkPurpose, customerDetails, linkPartialPayments, linkMinimumPartialAmount, linkExpiryTime, linkNotify, linkAutoReminders, linkNotes, linkMeta);
+    return Objects.hash(linkId, linkAmount, linkCurrency, linkPurpose, customerDetails, linkPartialPayments, linkMinimumPartialAmount, linkExpiryTime, linkNotify, linkAutoReminders, linkNotes, linkMeta, orderSplits);
   }
 
   @Override
@@ -427,6 +465,7 @@ public class CreateLinkRequest {
     sb.append("    linkAutoReminders: ").append(toIndentedString(linkAutoReminders)).append("\n");
     sb.append("    linkNotes: ").append(toIndentedString(linkNotes)).append("\n");
     sb.append("    linkMeta: ").append(toIndentedString(linkMeta)).append("\n");
+    sb.append("    orderSplits: ").append(toIndentedString(orderSplits)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -461,6 +500,7 @@ public class CreateLinkRequest {
     openapiFields.add("link_auto_reminders");
     openapiFields.add("link_notes");
     openapiFields.add("link_meta");
+    openapiFields.add("order_splits");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -509,6 +549,20 @@ public class CreateLinkRequest {
       if (jsonObj.get("link_meta") != null && !jsonObj.get("link_meta").isJsonNull()) {
         LinkMetaResponseEntity.validateJsonElement(jsonObj.get("link_meta"));
       }
+      if (jsonObj.get("order_splits") != null && !jsonObj.get("order_splits").isJsonNull()) {
+        JsonArray jsonArrayorderSplits = jsonObj.getAsJsonArray("order_splits");
+        if (jsonArrayorderSplits != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("order_splits").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `order_splits` to be an array in the JSON string but got `%s`", jsonObj.get("order_splits").toString()));
+          }
+
+          // validate the optional field `order_splits` (array)
+          for (int i = 0; i < jsonArrayorderSplits.size(); i++) {
+            VendorSplit.validateJsonElement(jsonArrayorderSplits.get(i));
+          };
+        }
+      }
   }
 
 
@@ -551,6 +605,20 @@ public class CreateLinkRequest {
       if (jsonObj.get("link_meta") != null && !jsonObj.get("link_meta").isJsonNull()) {
         LinkMetaResponseEntity.validateJsonElement(jsonObj.get("link_meta"));
         return true;
+      }
+      if (jsonObj.get("order_splits") != null && !jsonObj.get("order_splits").isJsonNull()) {
+        JsonArray jsonArrayorderSplits = jsonObj.getAsJsonArray("order_splits");
+        if (jsonArrayorderSplits != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("order_splits").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `order_splits` to be an array in the JSON string but got `%s`", jsonObj.get("order_splits").toString()));
+          }
+
+          // validate the optional field `order_splits` (array)
+          for (int i = 0; i < jsonArrayorderSplits.size(); i++) {
+            VendorSplit.validateJsonElement(jsonArrayorderSplits.get(i));
+          };
+        }
       }
       return false;
   }
