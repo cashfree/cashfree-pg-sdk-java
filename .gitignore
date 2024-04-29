@@ -22,3 +22,5 @@ build
 api/
 src/main/java/com/cashfree/client/
 src/test/
+.idea/
+.DS_STORE
