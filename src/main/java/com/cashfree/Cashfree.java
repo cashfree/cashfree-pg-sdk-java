@@ -158,27 +158,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -199,7 +199,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -280,27 +280,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -321,7 +321,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -400,27 +400,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -441,7 +441,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -517,27 +517,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -557,7 +557,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -642,27 +642,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -682,7 +682,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -762,27 +762,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -802,7 +802,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -887,27 +887,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -927,7 +927,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1012,27 +1012,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -1052,7 +1052,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1133,27 +1133,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -1174,7 +1174,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1250,27 +1250,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -1291,7 +1291,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1386,27 +1386,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -1427,7 +1427,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1510,27 +1510,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -1551,7 +1551,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1630,27 +1630,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -1671,7 +1671,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1752,27 +1752,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -1793,7 +1793,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1878,27 +1878,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -1919,7 +1919,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2005,27 +2005,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -2046,7 +2046,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2132,27 +2132,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -2173,7 +2173,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2258,27 +2258,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -2299,7 +2299,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2385,27 +2385,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -2425,7 +2425,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2510,27 +2510,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -2551,7 +2551,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2637,27 +2637,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -2677,7 +2677,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2764,27 +2764,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -2805,7 +2805,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2896,27 +2896,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -2936,7 +2936,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3021,27 +3021,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -3062,7 +3062,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3149,27 +3149,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -3189,7 +3189,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3275,27 +3275,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -3315,7 +3315,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3403,27 +3403,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -3444,7 +3444,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3537,27 +3537,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -3578,7 +3578,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] {  };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3672,27 +3672,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -3712,7 +3712,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3804,27 +3804,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -3844,7 +3844,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3930,27 +3930,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -3971,7 +3971,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] {  };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4066,27 +4066,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -4107,7 +4107,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4195,27 +4195,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -4236,7 +4236,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4330,27 +4330,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -4370,7 +4370,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4461,27 +4461,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -4501,7 +4501,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4596,27 +4596,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -4637,7 +4637,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4732,27 +4732,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -4773,7 +4773,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4860,27 +4860,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -4900,7 +4900,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4985,27 +4985,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -5026,7 +5026,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5111,27 +5111,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -5152,7 +5152,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5238,27 +5238,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -5278,7 +5278,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5372,27 +5372,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -5412,7 +5412,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5508,27 +5508,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -5548,7 +5548,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5640,27 +5640,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -5681,7 +5681,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5773,27 +5773,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -5814,7 +5814,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5906,27 +5906,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -5947,7 +5947,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6041,27 +6041,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -6081,7 +6081,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6175,27 +6175,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -6215,7 +6215,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6311,27 +6311,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -6351,7 +6351,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6445,27 +6445,27 @@ public class Cashfree {
         }
 
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
             XClientSecret.setApiKey(Cashfree.XClientSecret);
         }
 
-        if(Cashfree.XClientSecret != null) {
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
             XClientID.setApiKey(Cashfree.XClientId);
         }
 
-        if(Cashfree.XClientSignature != null) {
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
             XClientSignature.setApiKey(Cashfree.XClientSignature);
         }
 
-        if(Cashfree.XPartnerAPIKey != null) {
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
             XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
         }
 
-        if(Cashfree.XPartnerMerchantID != null) {
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
             XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
         }
@@ -6485,7 +6485,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.1.4");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6621,7 +6621,7 @@ static class ApiClient {
         json = new JSON();
 
         // Set default User-Agent.
-        setUserAgent("OpenAPI-Generator/4.1.2/java");
+        setUserAgent("OpenAPI-Generator/4.1.4/java");
 
         authentications = new HashMap<String, Authentication>();
     }
