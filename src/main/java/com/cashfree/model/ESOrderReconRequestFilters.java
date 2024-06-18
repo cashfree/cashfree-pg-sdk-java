@@ -54,7 +54,7 @@ import com.cashfree.JSON;
  * Provide the filter object details.
  */
 @Schema(description = "Provide the filter object details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-01T10:27:27.461284Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-06-18T13:25:41.657534Z[Etc/UTC]")
 public class ESOrderReconRequestFilters {
   public static final String SERIALIZED_NAME_START_DATE = "start_date";
   @SerializedName(SERIALIZED_NAME_START_DATE)

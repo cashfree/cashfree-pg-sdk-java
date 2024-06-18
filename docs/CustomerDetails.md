@@ -8,7 +8,7 @@ The customer details that are necessary. Note that you can pass dummy details if
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**customerId** | **String** | A unique identifier for the customer. Use alphanumeric values only. |  |
+|**customerId** | **String** | A unique identifier for the customer. Use alphanumeric values only. |  [optional] |
 |**customerEmail** | **String** | Customer email address. |  [optional] |
 |**customerPhone** | **String** | Customer phone number. |  |
 |**customerName** | **String** | Name of the customer. |  [optional] |

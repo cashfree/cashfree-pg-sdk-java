@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * duplicate request
  */
 @Schema(description = "duplicate request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-01T10:27:27.461284Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-06-18T13:25:41.657534Z[Etc/UTC]")
 public class ApiError409 {
   public static final String SERIALIZED_NAME_MESSAGE = "message";
   @SerializedName(SERIALIZED_NAME_MESSAGE)

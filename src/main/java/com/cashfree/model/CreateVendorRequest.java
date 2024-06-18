@@ -58,7 +58,7 @@ import com.cashfree.JSON;
  * Create Vendor Request
  */
 @Schema(description = "Create Vendor Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-01T10:27:27.461284Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-06-18T13:25:41.657534Z[Etc/UTC]")
 public class CreateVendorRequest {
   public static final String SERIALIZED_NAME_VENDOR_ID = "vendor_id";
   @SerializedName(SERIALIZED_NAME_VENDOR_ID)
