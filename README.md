@@ -80,4 +80,4 @@ try {
 
 ## Licence
 
-Apache Licensed. See [LICENSE.md](LICENSE.md) for more details
+Apache Licensed. See [LICENSE.md](LICENSE.md) for more details.
