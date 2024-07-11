@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Card Payment method
  */
 @Schema(description = "Card Payment method")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-06-18T13:25:41.657534Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-11T13:19:53.679604Z[Etc/UTC]")
 public class Card {
   /**
    * The channel for card payments can be \&quot;link\&quot; or \&quot;post\&quot;. Post is used for seamless OTP payments where merchant captures OTP on their own page.
@@ -477,11 +477,11 @@ public class Card {
   }
 
    /**
-   * Token Reference Id provided by Diners for Guest Checkout Token.  Required only for Diners cards. 
+   * Token Reference Id provided by Diners for Guest Checkout Token.  Required only for Diners cards.
    * @return tokenReferenceId
   **/
   @javax.annotation.Nullable
-  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Token Reference Id provided by Diners for Guest Checkout Token.  Required only for Diners cards. ")
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Token Reference Id provided by Diners for Guest Checkout Token.  Required only for Diners cards.")
   public String getTokenReferenceId() {
     return tokenReferenceId;
   }

@@ -58,7 +58,7 @@ import com.cashfree.JSON;
  * Create Vendor Request
  */
 @Schema(description = "Create Vendor Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-06-18T13:25:41.657534Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-11T13:19:53.679604Z[Etc/UTC]")
 public class CreateVendorRequest {
   public static final String SERIALIZED_NAME_VENDOR_ID = "vendor_id";
   @SerializedName(SERIALIZED_NAME_VENDOR_ID)
@@ -268,11 +268,11 @@ public class CreateVendorRequest {
   }
 
    /**
-   * Specify the settlement cycle to be updated. View the settlement cycle details from the \&quot;Settlement Cycles Supported\&quot; table. If no schedule option is configured, the settlement cycle ID \&quot;1\&quot; will be in effect. Select \&quot;8\&quot; or \&quot;9\&quot; if you want to schedule instant vendor settlements.
+   * Specify the settlement cycle to be updated. View the settlement cycle details from the \&quot;Settlement Cycles Supported\&quot; table.  If no schedule option is configured, the settlement cycle ID \&quot;1\&quot; will be in effect. Select \&quot;8\&quot; or \&quot;9\&quot; if you want to schedule instant vendor settlements.
    * @return scheduleOption
   **/
   @javax.annotation.Nullable
-  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Specify the settlement cycle to be updated. View the settlement cycle details from the \"Settlement Cycles Supported\" table. If no schedule option is configured, the settlement cycle ID \"1\" will be in effect. Select \"8\" or \"9\" if you want to schedule instant vendor settlements.")
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Specify the settlement cycle to be updated. View the settlement cycle details from the \"Settlement Cycles Supported\" table.  If no schedule option is configured, the settlement cycle ID \"1\" will be in effect. Select \"8\" or \"9\" if you want to schedule instant vendor settlements.")
   public BigDecimal getScheduleOption() {
     return scheduleOption;
   }

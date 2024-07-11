@@ -19,7 +19,7 @@ The complete order entity
 |**orderNote** | **String** | Additional note for order |  [optional] |
 |**createdAt** | **OffsetDateTime** | When the order was created at cashfree&#39;s server |  [optional] |
 |**orderSplits** | [**List&lt;VendorSplit&gt;**](VendorSplit.md) |  |  [optional] |
-|**customerDetails** | [**CustomerDetails**](CustomerDetails.md) |  |  [optional] |
+|**customerDetails** | [**CustomerDetailsResponse**](CustomerDetailsResponse.md) |  |  [optional] |
 |**orderMeta** | [**OrderMeta**](OrderMeta.md) |  |  [optional] |
 |**orderTags** | **Map&lt;String, String&gt;** | Custom Tags in thr form of {\&quot;key\&quot;:\&quot;value\&quot;} which can be passed for an order. A maximum of 10 tags can be added |  [optional] |
 

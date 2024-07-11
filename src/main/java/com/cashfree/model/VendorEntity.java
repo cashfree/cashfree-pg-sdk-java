@@ -16,7 +16,7 @@ package com.cashfree.model;
 import java.util.Objects;
 import com.cashfree.model.BankDetails;
 import com.cashfree.model.ScheduleOption;
-import com.cashfree.model.VendorEntityRelatedDocsInner;
+import com.cashfree.model.UpdateVendorResponseRelatedDocsInner;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -57,7 +57,7 @@ import com.cashfree.JSON;
  * Vendor entity object
  */
 @Schema(description = "Vendor entity object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-06-18T13:25:41.657534Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-11T13:19:53.679604Z[Etc/UTC]")
 public class VendorEntity {
   public static final String SERIALIZED_NAME_EMAIL = "email";
   @SerializedName(SERIALIZED_NAME_EMAIL)
@@ -111,9 +111,13 @@ public class VendorEntity {
   @SerializedName(SERIALIZED_NAME_BUSINESS_TYPE)
   private String businessType;
 
+  public static final String SERIALIZED_NAME_REMARKS = "remarks";
+  @SerializedName(SERIALIZED_NAME_REMARKS)
+  private String remarks;
+
   public static final String SERIALIZED_NAME_RELATED_DOCS = "related_docs";
   @SerializedName(SERIALIZED_NAME_RELATED_DOCS)
-  private List<VendorEntityRelatedDocsInner> relatedDocs;
+  private List<UpdateVendorResponseRelatedDocsInner> relatedDocs;
 
   public VendorEntity() {
   }
@@ -420,13 +424,35 @@ public class VendorEntity {
   }
 
 
-  public VendorEntity relatedDocs(List<VendorEntityRelatedDocsInner> relatedDocs) {
+  public VendorEntity remarks(String remarks) {
+    
+    this.remarks = remarks;
+    return this;
+  }
+
+   /**
+   * Get remarks
+   * @return remarks
+  **/
+  @javax.annotation.Nullable
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
+  public String getRemarks() {
+    return remarks;
+  }
+
+
+  public void setRemarks(String remarks) {
+    this.remarks = remarks;
+  }
+
+
+  public VendorEntity relatedDocs(List<UpdateVendorResponseRelatedDocsInner> relatedDocs) {
     
     this.relatedDocs = relatedDocs;
     return this;
   }
 
-  public VendorEntity addRelatedDocsItem(VendorEntityRelatedDocsInner relatedDocsItem) {
+  public VendorEntity addRelatedDocsItem(UpdateVendorResponseRelatedDocsInner relatedDocsItem) {
     if (this.relatedDocs == null) {
       this.relatedDocs = new ArrayList<>();
     }
@@ -440,12 +466,12 @@ public class VendorEntity {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public List<VendorEntityRelatedDocsInner> getRelatedDocs() {
+  public List<UpdateVendorResponseRelatedDocsInner> getRelatedDocs() {
     return relatedDocs;
   }
 
 
-  public void setRelatedDocs(List<VendorEntityRelatedDocsInner> relatedDocs) {
+  public void setRelatedDocs(List<UpdateVendorResponseRelatedDocsInner> relatedDocs) {
     this.relatedDocs = relatedDocs;
   }
 
@@ -473,12 +499,13 @@ public class VendorEntity {
         Objects.equals(this.vendorType, vendorEntity.vendorType) &&
         Objects.equals(this.accountType, vendorEntity.accountType) &&
         Objects.equals(this.businessType, vendorEntity.businessType) &&
+        Objects.equals(this.remarks, vendorEntity.remarks) &&
         Objects.equals(this.relatedDocs, vendorEntity.relatedDocs);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(email, status, phone, name, vendorId, addedOn, updatedOn, bank, upi, scheduleOption, vendorType, accountType, businessType, relatedDocs);
+    return Objects.hash(email, status, phone, name, vendorId, addedOn, updatedOn, bank, upi, scheduleOption, vendorType, accountType, businessType, remarks, relatedDocs);
   }
 
   @Override
@@ -498,6 +525,7 @@ public class VendorEntity {
     sb.append("    vendorType: ").append(toIndentedString(vendorType)).append("\n");
     sb.append("    accountType: ").append(toIndentedString(accountType)).append("\n");
     sb.append("    businessType: ").append(toIndentedString(businessType)).append("\n");
+    sb.append("    remarks: ").append(toIndentedString(remarks)).append("\n");
     sb.append("    relatedDocs: ").append(toIndentedString(relatedDocs)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -534,6 +562,7 @@ public class VendorEntity {
     openapiFields.add("vendor_type");
     openapiFields.add("account_type");
     openapiFields.add("business_type");
+    openapiFields.add("remarks");
     openapiFields.add("related_docs");
 
     // a set of required properties/fields (JSON key names)
@@ -610,6 +639,9 @@ public class VendorEntity {
       if ((jsonObj.get("business_type") != null && !jsonObj.get("business_type").isJsonNull()) && !jsonObj.get("business_type").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `business_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("business_type").toString()));
       }
+      if ((jsonObj.get("remarks") != null && !jsonObj.get("remarks").isJsonNull()) && !jsonObj.get("remarks").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `remarks` to be a primitive type in the JSON string but got `%s`", jsonObj.get("remarks").toString()));
+      }
       if (jsonObj.get("related_docs") != null && !jsonObj.get("related_docs").isJsonNull()) {
         JsonArray jsonArrayrelatedDocs = jsonObj.getAsJsonArray("related_docs");
         if (jsonArrayrelatedDocs != null) {
@@ -620,7 +652,7 @@ public class VendorEntity {
 
           // validate the optional field `related_docs` (array)
           for (int i = 0; i < jsonArrayrelatedDocs.size(); i++) {
-            VendorEntityRelatedDocsInner.validateJsonElement(jsonArrayrelatedDocs.get(i));
+            UpdateVendorResponseRelatedDocsInner.validateJsonElement(jsonArrayrelatedDocs.get(i));
           };
         }
       }
@@ -697,6 +729,9 @@ public class VendorEntity {
       if ((jsonObj.get("business_type") != null && !jsonObj.get("business_type").isJsonNull()) && !jsonObj.get("business_type").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `business_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("business_type").toString()));
       }
+      if ((jsonObj.get("remarks") != null && !jsonObj.get("remarks").isJsonNull()) && !jsonObj.get("remarks").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `remarks` to be a primitive type in the JSON string but got `%s`", jsonObj.get("remarks").toString()));
+      }
       if (jsonObj.get("related_docs") != null && !jsonObj.get("related_docs").isJsonNull()) {
         JsonArray jsonArrayrelatedDocs = jsonObj.getAsJsonArray("related_docs");
         if (jsonArrayrelatedDocs != null) {
@@ -707,7 +742,7 @@ public class VendorEntity {
 
           // validate the optional field `related_docs` (array)
           for (int i = 0; i < jsonArrayrelatedDocs.size(); i++) {
-            VendorEntityRelatedDocsInner.validateJsonElement(jsonArrayrelatedDocs.get(i));
+            UpdateVendorResponseRelatedDocsInner.validateJsonElement(jsonArrayrelatedDocs.get(i));
           };
         }
       }

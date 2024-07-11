@@ -14,7 +14,7 @@
 package com.cashfree.model;
 
 import java.util.Objects;
-import com.cashfree.model.CustomerDetails;
+import com.cashfree.model.CustomerDetailsResponse;
 import com.cashfree.model.OrderMeta;
 import com.cashfree.model.VendorSplit;
 import com.google.gson.TypeAdapter;
@@ -61,7 +61,7 @@ import com.cashfree.JSON;
  * The complete order entity
  */
 @Schema(description = "The complete order entity")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-06-18T13:25:41.657534Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-11T13:19:53.679604Z[Etc/UTC]")
 public class OrderEntity {
   public static final String SERIALIZED_NAME_CF_ORDER_ID = "cf_order_id";
   @SerializedName(SERIALIZED_NAME_CF_ORDER_ID)
@@ -109,7 +109,7 @@ public class OrderEntity {
 
   public static final String SERIALIZED_NAME_CUSTOMER_DETAILS = "customer_details";
   @SerializedName(SERIALIZED_NAME_CUSTOMER_DETAILS)
-  private CustomerDetails customerDetails;
+  private CustomerDetailsResponse customerDetails;
 
   public static final String SERIALIZED_NAME_ORDER_META = "order_meta";
   @SerializedName(SERIALIZED_NAME_ORDER_META)
@@ -372,7 +372,7 @@ public class OrderEntity {
   }
 
 
-  public OrderEntity customerDetails(CustomerDetails customerDetails) {
+  public OrderEntity customerDetails(CustomerDetailsResponse customerDetails) {
     
     this.customerDetails = customerDetails;
     return this;
@@ -384,12 +384,12 @@ public class OrderEntity {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public CustomerDetails getCustomerDetails() {
+  public CustomerDetailsResponse getCustomerDetails() {
     return customerDetails;
   }
 
 
-  public void setCustomerDetails(CustomerDetails customerDetails) {
+  public void setCustomerDetails(CustomerDetailsResponse customerDetails) {
     this.customerDetails = customerDetails;
   }
 
@@ -582,7 +582,7 @@ public class OrderEntity {
       }
       // validate the optional field `customer_details`
       if (jsonObj.get("customer_details") != null && !jsonObj.get("customer_details").isJsonNull()) {
-        CustomerDetails.validateJsonElement(jsonObj.get("customer_details"));
+        CustomerDetailsResponse.validateJsonElement(jsonObj.get("customer_details"));
       }
       // validate the optional field `order_meta`
       if (jsonObj.get("order_meta") != null && !jsonObj.get("order_meta").isJsonNull()) {
@@ -637,7 +637,7 @@ public class OrderEntity {
       }
       // validate the optional field `customer_details`
       if (jsonObj.get("customer_details") != null && !jsonObj.get("customer_details").isJsonNull()) {
-        CustomerDetails.validateJsonElement(jsonObj.get("customer_details"));
+        CustomerDetailsResponse.validateJsonElement(jsonObj.get("customer_details"));
         return true;
       }
       // validate the optional field `order_meta`
