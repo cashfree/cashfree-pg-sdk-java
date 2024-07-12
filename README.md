@@ -18,14 +18,14 @@ Try out our interactive guides at [Cashfree Dev Studio](https://www.cashfree.com
 ### Installation
 * Gradle Project
 ```bash
-implementation `com.cashfree.pg.java:cashfree_pg:4.1.4`
+implementation `com.cashfree.pg.java:cashfree_pg:4.2.0`
 ```
 * Maven Project
 ```bash
 <dependency>
   <groupId>com.cashfree.pg.java</groupId>
   <artifactId>cashfree_pg</artifactId>
-  <version>4.1.4</version>
+  <version>4.2.0</version>
   <scope>compile</scope>
 </dependency>
 <dependency>
@@ -80,4 +80,4 @@ try {
 
 ## Licence
 
-Apache Licensed. See [LICENSE.md](LICENSE.md) for more details.
+Apache Licensed. See [LICENSE.md](LICENSE.md) for more details

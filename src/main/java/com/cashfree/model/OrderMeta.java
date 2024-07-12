@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * Optional meta details to control how the customer pays and how payment journey completes
  */
 @Schema(description = "Optional meta details to control how the customer pays and how payment journey completes")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-06-18T13:25:41.657534Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-12T09:19:49.697679Z[Etc/UTC]")
 public class OrderMeta {
   public static final String SERIALIZED_NAME_RETURN_URL = "return_url";
   @SerializedName(SERIALIZED_NAME_RETURN_URL)
@@ -77,11 +77,11 @@ public class OrderMeta {
   }
 
    /**
-   * The URL to which user will be redirected to after the payment on bank OTP page. Maximum length: 250. We suggest to keep context of order_id in your return_url so that you can identify the order when customer lands on your page. Example of return_url format could be https://example.com/return?order_id&#x3D;myOrderId
+   * The URL to which user will be redirected to after the payment on bank OTP page. Maximum length: 250. We suggest to keep context of order_id in your return_url so that you can identify the order when customer lands on your page. Example of return_url format could be https://www.cashfree.com/devstudio/thankyou
    * @return returnUrl
   **/
   @javax.annotation.Nullable
-  @Schema(example = "https://example.com/return?order_id=myOrderId", requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "The URL to which user will be redirected to after the payment on bank OTP page. Maximum length: 250. We suggest to keep context of order_id in your return_url so that you can identify the order when customer lands on your page. Example of return_url format could be https://example.com/return?order_id=myOrderId")
+  @Schema(example = "https://www.cashfree.com/devstudio/thankyou", requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "The URL to which user will be redirected to after the payment on bank OTP page. Maximum length: 250. We suggest to keep context of order_id in your return_url so that you can identify the order when customer lands on your page. Example of return_url format could be https://www.cashfree.com/devstudio/thankyou")
   public String getReturnUrl() {
     return returnUrl;
   }

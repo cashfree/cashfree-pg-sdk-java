@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Request body to create a terminal transaction
  */
 @Schema(description = "Request body to create a terminal transaction")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-06-18T13:25:41.657534Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-12T09:19:49.697679Z[Etc/UTC]")
 public class CreateTerminalTransactionRequest {
   public static final String SERIALIZED_NAME_CF_ORDER_ID = "cf_order_id";
   @SerializedName(SERIALIZED_NAME_CF_ORDER_ID)
@@ -69,6 +69,10 @@ public class CreateTerminalTransactionRequest {
   public static final String SERIALIZED_NAME_TERMINAL_PHONE_NO = "terminal_phone_no";
   @SerializedName(SERIALIZED_NAME_TERMINAL_PHONE_NO)
   private String terminalPhoneNo;
+
+  public static final String SERIALIZED_NAME_ADD_INVOICE = "add_invoice";
+  @SerializedName(SERIALIZED_NAME_ADD_INVOICE)
+  private Boolean addInvoice;
 
   public CreateTerminalTransactionRequest() {
   }
@@ -161,6 +165,28 @@ public class CreateTerminalTransactionRequest {
   }
 
 
+  public CreateTerminalTransactionRequest addInvoice(Boolean addInvoice) {
+    
+    this.addInvoice = addInvoice;
+    return this;
+  }
+
+   /**
+   * make it true to have request be sent to create a Dynamic GST QR Code.
+   * @return addInvoice
+  **/
+  @javax.annotation.Nullable
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "make it true to have request be sent to create a Dynamic GST QR Code.")
+  public Boolean getAddInvoice() {
+    return addInvoice;
+  }
+
+
+  public void setAddInvoice(Boolean addInvoice) {
+    this.addInvoice = addInvoice;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -174,12 +200,13 @@ public class CreateTerminalTransactionRequest {
     return Objects.equals(this.cfOrderId, createTerminalTransactionRequest.cfOrderId) &&
         Objects.equals(this.cfTerminalId, createTerminalTransactionRequest.cfTerminalId) &&
         Objects.equals(this.paymentMethod, createTerminalTransactionRequest.paymentMethod) &&
-        Objects.equals(this.terminalPhoneNo, createTerminalTransactionRequest.terminalPhoneNo);
+        Objects.equals(this.terminalPhoneNo, createTerminalTransactionRequest.terminalPhoneNo) &&
+        Objects.equals(this.addInvoice, createTerminalTransactionRequest.addInvoice);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(cfOrderId, cfTerminalId, paymentMethod, terminalPhoneNo);
+    return Objects.hash(cfOrderId, cfTerminalId, paymentMethod, terminalPhoneNo, addInvoice);
   }
 
   @Override
@@ -190,6 +217,7 @@ public class CreateTerminalTransactionRequest {
     sb.append("    cfTerminalId: ").append(toIndentedString(cfTerminalId)).append("\n");
     sb.append("    paymentMethod: ").append(toIndentedString(paymentMethod)).append("\n");
     sb.append("    terminalPhoneNo: ").append(toIndentedString(terminalPhoneNo)).append("\n");
+    sb.append("    addInvoice: ").append(toIndentedString(addInvoice)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -216,6 +244,7 @@ public class CreateTerminalTransactionRequest {
     openapiFields.add("cf_terminal_id");
     openapiFields.add("payment_method");
     openapiFields.add("terminal_phone_no");
+    openapiFields.add("add_invoice");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();

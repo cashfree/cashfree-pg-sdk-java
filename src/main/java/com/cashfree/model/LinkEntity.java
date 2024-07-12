@@ -61,7 +61,7 @@ import com.cashfree.JSON;
  * Payment link success creation response object
  */
 @Schema(description = "Payment link success creation response object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-06-18T13:25:41.657534Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-12T09:19:49.697679Z[Etc/UTC]")
 public class LinkEntity {
   public static final String SERIALIZED_NAME_CF_LINK_ID = "cf_link_id";
   @SerializedName(SERIALIZED_NAME_CF_LINK_ID)
