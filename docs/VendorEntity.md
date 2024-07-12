@@ -21,7 +21,8 @@ Vendor entity object
 |**vendorType** | **String** |  |  [optional] |
 |**accountType** | **String** |  |  [optional] |
 |**businessType** | **String** |  |  [optional] |
-|**relatedDocs** | [**List&lt;VendorEntityRelatedDocsInner&gt;**](VendorEntityRelatedDocsInner.md) |  |  [optional] |
+|**remarks** | **String** |  |  [optional] |
+|**relatedDocs** | [**List&lt;UpdateVendorResponseRelatedDocsInner&gt;**](UpdateVendorResponseRelatedDocsInner.md) |  |  [optional] |
 
 
 

@@ -2,13 +2,13 @@
 
 # CustomerDetails
 
-The customer details that are necessary. Note that you can pass dummy details if your use case does not require the customer details.
+The customer details that are necessary.
 
 ## Properties
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**customerId** | **String** | A unique identifier for the customer. Use alphanumeric values only. |  [optional] |
+|**customerId** | **String** | A unique identifier for the customer. Use alphanumeric values only. |  |
 |**customerEmail** | **String** | Customer email address. |  [optional] |
 |**customerPhone** | **String** | Customer phone number. |  |
 |**customerName** | **String** | Name of the customer. |  [optional] |

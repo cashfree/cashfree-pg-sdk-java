@@ -24,7 +24,7 @@ Update Vendor Response
 |**kycDetails** | [**List&lt;KycDetails&gt;**](KycDetails.md) |  |  [optional] |
 |**dashboardAccess** | **Boolean** |  |  [optional] |
 |**bankDetails** | **String** |  |  [optional] |
-|**relatedDocs** | [**List&lt;VendorEntityRelatedDocsInner&gt;**](VendorEntityRelatedDocsInner.md) |  |  [optional] |
+|**relatedDocs** | [**List&lt;UpdateVendorResponseRelatedDocsInner&gt;**](UpdateVendorResponseRelatedDocsInner.md) |  |  [optional] |
 
 
 

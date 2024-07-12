@@ -14,7 +14,7 @@
 package com.cashfree.model;
 
 import java.util.Objects;
-import com.cashfree.model.VendorEntityRelatedDocsInner;
+import com.cashfree.model.UpdateVendorResponseRelatedDocsInner;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -55,22 +55,22 @@ import com.cashfree.JSON;
  * Get Vendor Documents
  */
 @Schema(description = "Get Vendor Documents")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-06-18T13:25:41.657534Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-12T09:19:49.697679Z[Etc/UTC]")
 public class VendorDocumentsResponse {
   public static final String SERIALIZED_NAME_DOCUMENTS = "documents";
   @SerializedName(SERIALIZED_NAME_DOCUMENTS)
-  private List<VendorEntityRelatedDocsInner> documents;
+  private List<UpdateVendorResponseRelatedDocsInner> documents;
 
   public VendorDocumentsResponse() {
   }
 
-  public VendorDocumentsResponse documents(List<VendorEntityRelatedDocsInner> documents) {
+  public VendorDocumentsResponse documents(List<UpdateVendorResponseRelatedDocsInner> documents) {
     
     this.documents = documents;
     return this;
   }
 
-  public VendorDocumentsResponse addDocumentsItem(VendorEntityRelatedDocsInner documentsItem) {
+  public VendorDocumentsResponse addDocumentsItem(UpdateVendorResponseRelatedDocsInner documentsItem) {
     if (this.documents == null) {
       this.documents = new ArrayList<>();
     }
@@ -84,12 +84,12 @@ public class VendorDocumentsResponse {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public List<VendorEntityRelatedDocsInner> getDocuments() {
+  public List<UpdateVendorResponseRelatedDocsInner> getDocuments() {
     return documents;
   }
 
 
-  public void setDocuments(List<VendorEntityRelatedDocsInner> documents) {
+  public void setDocuments(List<UpdateVendorResponseRelatedDocsInner> documents) {
     this.documents = documents;
   }
 
@@ -164,7 +164,7 @@ public class VendorDocumentsResponse {
 
           // validate the optional field `documents` (array)
           for (int i = 0; i < jsonArraydocuments.size(); i++) {
-            VendorEntityRelatedDocsInner.validateJsonElement(jsonArraydocuments.get(i));
+            UpdateVendorResponseRelatedDocsInner.validateJsonElement(jsonArraydocuments.get(i));
           };
         }
       }
@@ -190,7 +190,7 @@ public class VendorDocumentsResponse {
 
           // validate the optional field `documents` (array)
           for (int i = 0; i < jsonArraydocuments.size(); i++) {
-            VendorEntityRelatedDocsInner.validateJsonElement(jsonArraydocuments.get(i));
+            UpdateVendorResponseRelatedDocsInner.validateJsonElement(jsonArraydocuments.get(i));
           };
         }
       }
