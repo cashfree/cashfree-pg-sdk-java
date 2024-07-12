@@ -50,10 +50,10 @@ import java.util.Set;
 import com.cashfree.JSON;
 
 /**
- * The customer details that are necessary. Note that you can pass dummy details if your use case does not require the customer details.
+ * The customer details that are necessary.
  */
-@Schema(description = "The customer details that are necessary. Note that you can pass dummy details if your use case does not require the customer details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-06-18T13:25:41.657534Z[Etc/UTC]")
+@Schema(description = "The customer details that are necessary.")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-12T08:35:35.237610Z[Etc/UTC]")
 public class CustomerDetails {
   public static final String SERIALIZED_NAME_CUSTOMER_ID = "customer_id";
   @SerializedName(SERIALIZED_NAME_CUSTOMER_ID)
@@ -100,8 +100,8 @@ public class CustomerDetails {
    * A unique identifier for the customer. Use alphanumeric values only.
    * @return customerId
   **/
-  @javax.annotation.Nullable
-  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "A unique identifier for the customer. Use alphanumeric values only.")
+  @javax.annotation.Nonnull
+  @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "A unique identifier for the customer. Use alphanumeric values only.")
   public String getCustomerId() {
     return customerId;
   }
@@ -336,6 +336,7 @@ public class CustomerDetails {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("customer_id");
     openapiRequiredFields.add("customer_phone");
   }
 
@@ -355,7 +356,7 @@ public class CustomerDetails {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if ((jsonObj.get("customer_id") != null && !jsonObj.get("customer_id").isJsonNull()) && !jsonObj.get("customer_id").isJsonPrimitive()) {
+      if (!jsonObj.get("customer_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `customer_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("customer_id").toString()));
       }
       if ((jsonObj.get("customer_email") != null && !jsonObj.get("customer_email").isJsonNull()) && !jsonObj.get("customer_email").isJsonPrimitive()) {
@@ -395,7 +396,7 @@ public class CustomerDetails {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if ((jsonObj.get("customer_id") != null && !jsonObj.get("customer_id").isJsonNull()) && !jsonObj.get("customer_id").isJsonPrimitive()) {
+      if (!jsonObj.get("customer_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `customer_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("customer_id").toString()));
       }
       if ((jsonObj.get("customer_email") != null && !jsonObj.get("customer_email").isJsonNull()) && !jsonObj.get("customer_email").isJsonPrimitive()) {

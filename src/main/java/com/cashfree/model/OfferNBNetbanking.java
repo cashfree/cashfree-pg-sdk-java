@@ -51,7 +51,7 @@ import com.cashfree.JSON;
 /**
  * OfferNBNetbanking
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-06-18T13:25:41.657534Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-12T08:35:35.237610Z[Etc/UTC]")
 public class OfferNBNetbanking {
   public static final String SERIALIZED_NAME_BANK_NAME = "bank_name";
   @SerializedName(SERIALIZED_NAME_BANK_NAME)

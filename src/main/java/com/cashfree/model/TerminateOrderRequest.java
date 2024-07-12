@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Request to terminate an active order at Cashfree
  */
 @Schema(description = "Request to terminate an active order at Cashfree")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-06-18T13:25:41.657534Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-12T08:35:35.237610Z[Etc/UTC]")
 public class TerminateOrderRequest {
   public static final String SERIALIZED_NAME_ORDER_STATUS = "order_status";
   @SerializedName(SERIALIZED_NAME_ORDER_STATUS)
@@ -68,11 +68,11 @@ public class TerminateOrderRequest {
   }
 
    /**
-   * To terminate an order, pass order_status as \&quot;TERMINATE\&quot;. Please note, order might not be terminated - confirm with the order_status in response. \&quot;TERMINATION_REQUESTED\&quot; states that the request is recieved and we are working on it. If the order terminates successfully, status will change to \&quot;TERMINATED\&quot;. Incase there&#39;s any active transaction which moved to success - order might not get terminated.
+   * To terminate an order, pass order_status as \&quot;TERMINATED\&quot;. Please note, order might not be terminated - confirm with the order_status in response. \&quot;TERMINATION_REQUESTED\&quot; states that the request is recieved and we are working on it. If the order terminates successfully, status will change to \&quot;TERMINATED\&quot;. Incase there&#39;s any active transaction which moved to success - order might not get terminated.
    * @return orderStatus
   **/
   @javax.annotation.Nonnull
-  @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "To terminate an order, pass order_status as \"TERMINATE\". Please note, order might not be terminated - confirm with the order_status in response. \"TERMINATION_REQUESTED\" states that the request is recieved and we are working on it. If the order terminates successfully, status will change to \"TERMINATED\". Incase there's any active transaction which moved to success - order might not get terminated.")
+  @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "To terminate an order, pass order_status as \"TERMINATED\". Please note, order might not be terminated - confirm with the order_status in response. \"TERMINATION_REQUESTED\" states that the request is recieved and we are working on it. If the order terminates successfully, status will change to \"TERMINATED\". Incase there's any active transaction which moved to success - order might not get terminated.")
   public String getOrderStatus() {
     return orderStatus;
   }

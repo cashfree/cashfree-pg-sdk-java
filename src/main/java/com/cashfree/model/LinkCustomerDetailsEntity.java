@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Payment link customer entity
  */
 @Schema(description = "Payment link customer entity")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-06-18T13:25:41.657534Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-12T08:35:35.237610Z[Etc/UTC]")
 public class LinkCustomerDetailsEntity {
   public static final String SERIALIZED_NAME_CUSTOMER_PHONE = "customer_phone";
   @SerializedName(SERIALIZED_NAME_CUSTOMER_PHONE)
@@ -65,6 +65,141 @@ public class LinkCustomerDetailsEntity {
   public static final String SERIALIZED_NAME_CUSTOMER_NAME = "customer_name";
   @SerializedName(SERIALIZED_NAME_CUSTOMER_NAME)
   private String customerName;
+
+  public static final String SERIALIZED_NAME_CUSTOMER_BANK_ACCOUNT_NUMBER = "customer_bank_account_number";
+  @SerializedName(SERIALIZED_NAME_CUSTOMER_BANK_ACCOUNT_NUMBER)
+  private String customerBankAccountNumber;
+
+  public static final String SERIALIZED_NAME_CUSTOMER_BANK_IFSC = "customer_bank_ifsc";
+  @SerializedName(SERIALIZED_NAME_CUSTOMER_BANK_IFSC)
+  private String customerBankIfsc;
+
+  /**
+   * Customer Bank Code
+   */
+  @JsonAdapter(CustomerBankCodeEnum.Adapter.class)
+  public enum CustomerBankCodeEnum {
+    NUMBER_3003(3003),
+    
+    NUMBER_3005(3005),
+    
+    NUMBER_3006(3006),
+    
+    NUMBER_3010(3010),
+    
+    NUMBER_3012(3012),
+    
+    NUMBER_3016(3016),
+    
+    NUMBER_3019(3019),
+    
+    NUMBER_3020(3020),
+    
+    NUMBER_3021(3021),
+    
+    NUMBER_3022(3022),
+    
+    NUMBER_3023(3023),
+    
+    NUMBER_3024(3024),
+    
+    NUMBER_3026(3026),
+    
+    NUMBER_3027(3027),
+    
+    NUMBER_3028(3028),
+    
+    NUMBER_3029(3029),
+    
+    NUMBER_3030(3030),
+    
+    NUMBER_3031(3031),
+    
+    NUMBER_3032(3032),
+    
+    NUMBER_3033(3033),
+    
+    NUMBER_3038(3038),
+    
+    NUMBER_3039(3039),
+    
+    NUMBER_3040(3040),
+    
+    NUMBER_3042(3042),
+    
+    NUMBER_3044(3044),
+    
+    NUMBER_3054(3054),
+    
+    NUMBER_3055(3055),
+    
+    NUMBER_3058(3058),
+    
+    NUMBER_3086(3086),
+    
+    NUMBER_3087(3087),
+    
+    NUMBER_3088(3088),
+    
+    NUMBER_3089(3089),
+    
+    NUMBER_3090(3090),
+    
+    NUMBER_3091(3091),
+    
+    NUMBER_3092(3092),
+    
+    NUMBER_3098(3098),
+    
+    NUMBER_3115(3115),
+    
+    NUMBER_3117(3117),
+    
+    NUMBER_7001(7001),
+    
+    NUMBER_unknown_default_open_api(11184809);
+
+    private Integer value;
+
+    CustomerBankCodeEnum(Integer value) {
+      this.value = value;
+    }
+
+    public Integer getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static CustomerBankCodeEnum fromValue(Integer value) {
+      for (CustomerBankCodeEnum b : CustomerBankCodeEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return NUMBER_unknown_default_open_api;
+    }
+
+    public static class Adapter extends TypeAdapter<CustomerBankCodeEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final CustomerBankCodeEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public CustomerBankCodeEnum read(final JsonReader jsonReader) throws IOException {
+        Integer value =  jsonReader.nextInt();
+        return CustomerBankCodeEnum.fromValue(value);
+      }
+    }
+  }
+
+  public static final String SERIALIZED_NAME_CUSTOMER_BANK_CODE = "customer_bank_code";
+  @SerializedName(SERIALIZED_NAME_CUSTOMER_BANK_CODE)
+  private CustomerBankCodeEnum customerBankCode;
 
   public LinkCustomerDetailsEntity() {
   }
@@ -135,6 +270,72 @@ public class LinkCustomerDetailsEntity {
   }
 
 
+  public LinkCustomerDetailsEntity customerBankAccountNumber(String customerBankAccountNumber) {
+    
+    this.customerBankAccountNumber = customerBankAccountNumber;
+    return this;
+  }
+
+   /**
+   * Customer Bank Account Number
+   * @return customerBankAccountNumber
+  **/
+  @javax.annotation.Nullable
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Customer Bank Account Number")
+  public String getCustomerBankAccountNumber() {
+    return customerBankAccountNumber;
+  }
+
+
+  public void setCustomerBankAccountNumber(String customerBankAccountNumber) {
+    this.customerBankAccountNumber = customerBankAccountNumber;
+  }
+
+
+  public LinkCustomerDetailsEntity customerBankIfsc(String customerBankIfsc) {
+    
+    this.customerBankIfsc = customerBankIfsc;
+    return this;
+  }
+
+   /**
+   * Customer Bank Ifsc
+   * @return customerBankIfsc
+  **/
+  @javax.annotation.Nullable
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Customer Bank Ifsc")
+  public String getCustomerBankIfsc() {
+    return customerBankIfsc;
+  }
+
+
+  public void setCustomerBankIfsc(String customerBankIfsc) {
+    this.customerBankIfsc = customerBankIfsc;
+  }
+
+
+  public LinkCustomerDetailsEntity customerBankCode(CustomerBankCodeEnum customerBankCode) {
+    
+    this.customerBankCode = customerBankCode;
+    return this;
+  }
+
+   /**
+   * Customer Bank Code
+   * @return customerBankCode
+  **/
+  @javax.annotation.Nullable
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Customer Bank Code")
+  public CustomerBankCodeEnum getCustomerBankCode() {
+    return customerBankCode;
+  }
+
+
+  public void setCustomerBankCode(CustomerBankCodeEnum customerBankCode) {
+    this.customerBankCode = customerBankCode;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -147,12 +348,15 @@ public class LinkCustomerDetailsEntity {
     LinkCustomerDetailsEntity linkCustomerDetailsEntity = (LinkCustomerDetailsEntity) o;
     return Objects.equals(this.customerPhone, linkCustomerDetailsEntity.customerPhone) &&
         Objects.equals(this.customerEmail, linkCustomerDetailsEntity.customerEmail) &&
-        Objects.equals(this.customerName, linkCustomerDetailsEntity.customerName);
+        Objects.equals(this.customerName, linkCustomerDetailsEntity.customerName) &&
+        Objects.equals(this.customerBankAccountNumber, linkCustomerDetailsEntity.customerBankAccountNumber) &&
+        Objects.equals(this.customerBankIfsc, linkCustomerDetailsEntity.customerBankIfsc) &&
+        Objects.equals(this.customerBankCode, linkCustomerDetailsEntity.customerBankCode);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(customerPhone, customerEmail, customerName);
+    return Objects.hash(customerPhone, customerEmail, customerName, customerBankAccountNumber, customerBankIfsc, customerBankCode);
   }
 
   @Override
@@ -162,6 +366,9 @@ public class LinkCustomerDetailsEntity {
     sb.append("    customerPhone: ").append(toIndentedString(customerPhone)).append("\n");
     sb.append("    customerEmail: ").append(toIndentedString(customerEmail)).append("\n");
     sb.append("    customerName: ").append(toIndentedString(customerName)).append("\n");
+    sb.append("    customerBankAccountNumber: ").append(toIndentedString(customerBankAccountNumber)).append("\n");
+    sb.append("    customerBankIfsc: ").append(toIndentedString(customerBankIfsc)).append("\n");
+    sb.append("    customerBankCode: ").append(toIndentedString(customerBankCode)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -187,6 +394,9 @@ public class LinkCustomerDetailsEntity {
     openapiFields.add("customer_phone");
     openapiFields.add("customer_email");
     openapiFields.add("customer_name");
+    openapiFields.add("customer_bank_account_number");
+    openapiFields.add("customer_bank_ifsc");
+    openapiFields.add("customer_bank_code");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -218,6 +428,12 @@ public class LinkCustomerDetailsEntity {
       if ((jsonObj.get("customer_name") != null && !jsonObj.get("customer_name").isJsonNull()) && !jsonObj.get("customer_name").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `customer_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("customer_name").toString()));
       }
+      if ((jsonObj.get("customer_bank_account_number") != null && !jsonObj.get("customer_bank_account_number").isJsonNull()) && !jsonObj.get("customer_bank_account_number").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `customer_bank_account_number` to be a primitive type in the JSON string but got `%s`", jsonObj.get("customer_bank_account_number").toString()));
+      }
+      if ((jsonObj.get("customer_bank_ifsc") != null && !jsonObj.get("customer_bank_ifsc").isJsonNull()) && !jsonObj.get("customer_bank_ifsc").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `customer_bank_ifsc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("customer_bank_ifsc").toString()));
+      }
   }
 
 
@@ -245,6 +461,12 @@ public class LinkCustomerDetailsEntity {
       }
       if ((jsonObj.get("customer_name") != null && !jsonObj.get("customer_name").isJsonNull()) && !jsonObj.get("customer_name").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `customer_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("customer_name").toString()));
+      }
+      if ((jsonObj.get("customer_bank_account_number") != null && !jsonObj.get("customer_bank_account_number").isJsonNull()) && !jsonObj.get("customer_bank_account_number").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `customer_bank_account_number` to be a primitive type in the JSON string but got `%s`", jsonObj.get("customer_bank_account_number").toString()));
+      }
+      if ((jsonObj.get("customer_bank_ifsc") != null && !jsonObj.get("customer_bank_ifsc").isJsonNull()) && !jsonObj.get("customer_bank_ifsc").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `customer_bank_ifsc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("customer_bank_ifsc").toString()));
       }
       return false;
   }
