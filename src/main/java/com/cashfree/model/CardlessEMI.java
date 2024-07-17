@@ -52,14 +52,14 @@ import com.cashfree.JSON;
  * Request body for cardless emi payment method
  */
 @Schema(description = "Request body for cardless emi payment method")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-12T09:19:49.697679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-17T08:43:25.672141Z[Etc/UTC]")
 public class CardlessEMI {
   public static final String SERIALIZED_NAME_CHANNEL = "channel";
   @SerializedName(SERIALIZED_NAME_CHANNEL)
   private String channel;
 
   /**
-   * One of [&#x60;flexmoney&#x60;, &#x60;zestmoney&#x60;, &#x60;hdfc&#x60;, &#x60;icici&#x60;, &#x60;cashe&#x60;, &#x60;idfc&#x60;, &#x60;kotak&#x60;, &#x60;snapmint&#x60;, &#x60;bharatx&#x60;]
+   * One of [&#x60;flexmoney&#x60;, &#x60;zestmoney&#x60;, &#x60;hdfc&#x60;, &#x60;icici&#x60;, &#x60;cashe&#x60;, &#x60;idfc&#x60;, &#x60;kotak&#x60;]
    */
   @JsonAdapter(ProviderEnum.Adapter.class)
   public enum ProviderEnum {
@@ -76,10 +76,6 @@ public class CardlessEMI {
     IDFC("idfc"),
     
     KOTAK("kotak"),
-    
-    SNAPMINT("snapmint"),
-    
-    BHARATX("bharatx"),
     
     UNKNOWN_DEFAULT_OPEN_API("unknown_default_open_api");
 
@@ -165,11 +161,11 @@ public class CardlessEMI {
   }
 
    /**
-   * One of [&#x60;flexmoney&#x60;, &#x60;zestmoney&#x60;, &#x60;hdfc&#x60;, &#x60;icici&#x60;, &#x60;cashe&#x60;, &#x60;idfc&#x60;, &#x60;kotak&#x60;, &#x60;snapmint&#x60;, &#x60;bharatx&#x60;]
+   * One of [&#x60;flexmoney&#x60;, &#x60;zestmoney&#x60;, &#x60;hdfc&#x60;, &#x60;icici&#x60;, &#x60;cashe&#x60;, &#x60;idfc&#x60;, &#x60;kotak&#x60;]
    * @return provider
   **/
   @javax.annotation.Nullable
-  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "One of [`flexmoney`, `zestmoney`, `hdfc`, `icici`, `cashe`, `idfc`, `kotak`, `snapmint`, `bharatx`]")
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "One of [`flexmoney`, `zestmoney`, `hdfc`, `icici`, `cashe`, `idfc`, `kotak`]")
   public ProviderEnum getProvider() {
     return provider;
   }

@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * simulate payment request object
  */
 @Schema(description = "simulate payment request object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-12T09:19:49.697679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-17T08:43:25.672141Z[Etc/UTC]")
 public class SimulateRequest {
   /**
    * Entity type should be PAYMENTS only.
@@ -108,7 +108,7 @@ public class SimulateRequest {
 
   public static final String SERIALIZED_NAME_ENTITY_ID = "entity_id";
   @SerializedName(SERIALIZED_NAME_ENTITY_ID)
-  private String entityId;
+  private Long entityId;
 
   public static final String SERIALIZED_NAME_ENTITY_SIMULATION = "entity_simulation";
   @SerializedName(SERIALIZED_NAME_ENTITY_SIMULATION)
@@ -139,7 +139,7 @@ public class SimulateRequest {
   }
 
 
-  public SimulateRequest entityId(String entityId) {
+  public SimulateRequest entityId(Long entityId) {
     
     this.entityId = entityId;
     return this;
@@ -151,12 +151,12 @@ public class SimulateRequest {
   **/
   @javax.annotation.Nonnull
   @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "In case of Entity type is PAYMENTS, entity_id will be transactionId")
-  public String getEntityId() {
+  public Long getEntityId() {
     return entityId;
   }
 
 
-  public void setEntityId(String entityId) {
+  public void setEntityId(Long entityId) {
     this.entityId = entityId;
   }
 
@@ -262,9 +262,6 @@ public class SimulateRequest {
       if (!jsonObj.get("entity").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `entity` to be a primitive type in the JSON string but got `%s`", jsonObj.get("entity").toString()));
       }
-      if (!jsonObj.get("entity_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `entity_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("entity_id").toString()));
-      }
       // validate the required field `entity_simulation`
       EntitySimulationRequest.validateJsonElement(jsonObj.get("entity_simulation"));
   }
@@ -288,9 +285,6 @@ public class SimulateRequest {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("entity").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `entity` to be a primitive type in the JSON string but got `%s`", jsonObj.get("entity").toString()));
-      }
-      if (!jsonObj.get("entity_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `entity_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("entity_id").toString()));
       }
       // validate the required field `entity_simulation`
       EntitySimulationRequest.validateJsonElement(jsonObj.get("entity_simulation"));
