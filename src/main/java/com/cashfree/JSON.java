@@ -145,7 +145,6 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.CryptogramEntity.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.CustomerDetails.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.CustomerDetailsCardlessEMI.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.CustomerDetailsResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.CustomerEntity.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.DiscountDetails.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.model.EMIOffer.CustomTypeAdapterFactory());

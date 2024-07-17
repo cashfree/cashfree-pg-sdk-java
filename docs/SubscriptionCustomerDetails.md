@@ -11,7 +11,7 @@ Subscription customer details.
 |**customerName** | **String** | Name of the customer. |  [optional] |
 |**customerEmail** | **String** | Email of the customer. |  |
 |**customerPhone** | **String** | Phone number of the customer. |  |
-|**customerBankAccountHolderName** | **String** | Bank holder name of the customer. |  [optional] |
+|**customerBankHolderName** | **String** | Bank holder name of the customer. |  [optional] |
 |**customerBankAccountNumber** | **String** | Bank account number of the customer. |  [optional] |
 |**customerBankIfsc** | **String** | IFSC code of the customer. |  [optional] |
 |**customerBankCode** | **String** | Bank code of the customer. |  [optional] |

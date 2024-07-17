@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * The request to be passed for the create subscription payment API.
  */
 @Schema(description = "The request to be passed for the create subscription payment API.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-12T09:19:49.697679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-17T08:23:32.334006Z[Etc/UTC]")
 public class CreateSubscriptionPaymentRequest {
   public static final String SERIALIZED_NAME_SUBSCRIPTION_ID = "subscription_id";
   @SerializedName(SERIALIZED_NAME_SUBSCRIPTION_ID)
@@ -85,7 +85,7 @@ public class CreateSubscriptionPaymentRequest {
 
   public static final String SERIALIZED_NAME_PAYMENT_METHOD = "payment_method";
   @SerializedName(SERIALIZED_NAME_PAYMENT_METHOD)
-  private Object paymentMethod;
+  private String paymentMethod;
 
   public CreateSubscriptionPaymentRequest() {
   }
@@ -163,11 +163,11 @@ public class CreateSubscriptionPaymentRequest {
   }
 
    /**
-   * The charge amount of the payment. Required in case of charge.
+   * The charge amount of the payment. Requried in case of charge.
    * @return paymentAmount
   **/
   @javax.annotation.Nullable
-  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "The charge amount of the payment. Required in case of charge.")
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "The charge amount of the payment. Requried in case of charge.")
   public BigDecimal getPaymentAmount() {
     return paymentAmount;
   }
@@ -244,24 +244,24 @@ public class CreateSubscriptionPaymentRequest {
   }
 
 
-  public CreateSubscriptionPaymentRequest paymentMethod(Object paymentMethod) {
+  public CreateSubscriptionPaymentRequest paymentMethod(String paymentMethod) {
     
     this.paymentMethod = paymentMethod;
     return this;
   }
 
    /**
-   * Payment method. Can be one of [\&quot;upi\&quot;, \&quot;enach\&quot;, \&quot;pnach\&quot;, \&quot;card\&quot;]
+   * Payment method. Can be upi or card or enach or pnach.
    * @return paymentMethod
   **/
   @javax.annotation.Nullable
-  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Payment method. Can be one of [\"upi\", \"enach\", \"pnach\", \"card\"]")
-  public Object getPaymentMethod() {
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Payment method. Can be upi or card or enach or pnach.")
+  public String getPaymentMethod() {
     return paymentMethod;
   }
 
 
-  public void setPaymentMethod(Object paymentMethod) {
+  public void setPaymentMethod(String paymentMethod) {
     this.paymentMethod = paymentMethod;
   }
 
@@ -375,6 +375,9 @@ public class CreateSubscriptionPaymentRequest {
       if (!jsonObj.get("payment_type").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `payment_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("payment_type").toString()));
       }
+      if ((jsonObj.get("payment_method") != null && !jsonObj.get("payment_method").isJsonNull()) && !jsonObj.get("payment_method").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `payment_method` to be a primitive type in the JSON string but got `%s`", jsonObj.get("payment_method").toString()));
+      }
   }
 
 
@@ -411,6 +414,9 @@ public class CreateSubscriptionPaymentRequest {
       }
       if (!jsonObj.get("payment_type").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `payment_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("payment_type").toString()));
+      }
+      if ((jsonObj.get("payment_method") != null && !jsonObj.get("payment_method").isJsonNull()) && !jsonObj.get("payment_method").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `payment_method` to be a primitive type in the JSON string but got `%s`", jsonObj.get("payment_method").toString()));
       }
       return false;
   }

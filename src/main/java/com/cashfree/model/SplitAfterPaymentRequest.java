@@ -55,7 +55,7 @@ import com.cashfree.JSON;
  * Split After Payment Request
  */
 @Schema(description = "Split After Payment Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-12T09:19:49.697679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-17T08:23:32.334006Z[Etc/UTC]")
 public class SplitAfterPaymentRequest {
   public static final String SERIALIZED_NAME_SPLIT = "split";
   @SerializedName(SERIALIZED_NAME_SPLIT)

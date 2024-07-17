@@ -2,7 +2,7 @@
 
 # CustomerDetails
 
-The customer details that are necessary.
+The customer details that are necessary. Note that you can pass dummy details if your use case does not require the customer details.
 
 ## Properties
 

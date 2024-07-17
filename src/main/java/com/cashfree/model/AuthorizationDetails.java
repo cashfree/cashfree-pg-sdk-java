@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * Details of the authorization done for the subscription. Returned in Get subscription and auth payments.
  */
 @Schema(description = "Details of the authorization done for the subscription. Returned in Get subscription and auth payments.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-12T09:19:49.697679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-17T08:23:32.334006Z[Etc/UTC]")
 public class AuthorizationDetails {
   public static final String SERIALIZED_NAME_AUTHORIZATION_AMOUNT = "authorization_amount";
   @SerializedName(SERIALIZED_NAME_AUTHORIZATION_AMOUNT)

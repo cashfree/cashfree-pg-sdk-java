@@ -58,7 +58,6 @@ docs/CreateVendorResponse.md
 docs/CryptogramEntity.md
 docs/CustomerDetails.md
 docs/CustomerDetailsCardlessEMI.md
-docs/CustomerDetailsResponse.md
 docs/CustomerEntity.md
 docs/CustomersApi.md
 docs/DiscountDetails.md
@@ -341,7 +340,6 @@ src/main/java/com/cashfree/model/CreateVendorResponse.java
 src/main/java/com/cashfree/model/CryptogramEntity.java
 src/main/java/com/cashfree/model/CustomerDetails.java
 src/main/java/com/cashfree/model/CustomerDetailsCardlessEMI.java
-src/main/java/com/cashfree/model/CustomerDetailsResponse.java
 src/main/java/com/cashfree/model/CustomerEntity.java
 src/main/java/com/cashfree/model/DiscountDetails.java
 src/main/java/com/cashfree/model/EMIOffer.java
@@ -581,7 +579,6 @@ src/test/java/com/cashfree/model/CreateVendorRequestTest.java
 src/test/java/com/cashfree/model/CreateVendorResponseTest.java
 src/test/java/com/cashfree/model/CryptogramEntityTest.java
 src/test/java/com/cashfree/model/CustomerDetailsCardlessEMITest.java
-src/test/java/com/cashfree/model/CustomerDetailsResponseTest.java
 src/test/java/com/cashfree/model/CustomerDetailsTest.java
 src/test/java/com/cashfree/model/CustomerEntityTest.java
 src/test/java/com/cashfree/model/DiscountDetailsTest.java

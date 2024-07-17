@@ -10,7 +10,7 @@ Simulation response object
 |------------ | ------------- | ------------- | -------------|
 |**simulationId** | **String** |  |  [optional] |
 |**entity** | **String** |  |  [optional] |
-|**entityId** | **String** |  |  [optional] |
+|**entityId** | **Long** |  |  [optional] |
 |**entitySimulation** | [**EntitySimulationResponse**](EntitySimulationResponse.md) |  |  [optional] |
 
 

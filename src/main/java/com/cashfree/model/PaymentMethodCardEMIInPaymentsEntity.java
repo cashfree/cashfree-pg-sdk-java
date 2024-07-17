@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * payment method card emi object in payment entity
  */
 @Schema(description = "payment method card emi object in payment entity")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-12T09:19:49.697679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-17T08:23:32.334006Z[Etc/UTC]")
 public class PaymentMethodCardEMIInPaymentsEntity {
   public static final String SERIALIZED_NAME_EMI = "emi";
   @SerializedName(SERIALIZED_NAME_EMI)

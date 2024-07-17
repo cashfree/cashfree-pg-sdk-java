@@ -54,7 +54,7 @@ import com.cashfree.JSON;
  * Offer details and type
  */
 @Schema(description = "Offer details and type")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-12T09:19:49.697679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-17T08:23:32.334006Z[Etc/UTC]")
 public class OfferDetails {
   /**
    * Offer Type for the Offer.
