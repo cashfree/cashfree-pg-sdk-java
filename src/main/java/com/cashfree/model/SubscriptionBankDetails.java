@@ -54,7 +54,7 @@ import com.cashfree.JSON;
  * Bank details object
  */
 @Schema(description = "Bank details object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-17T09:00:37.237094Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-17T09:16:46.389568Z[Etc/UTC]")
 public class SubscriptionBankDetails {
   public static final String SERIALIZED_NAME_BANK_ID = "bank_id";
   @SerializedName(SERIALIZED_NAME_BANK_ID)

@@ -14,10 +14,10 @@
 package com.cashfree.model;
 
 import java.util.Objects;
-import com.cashfree.model.CARD;
-import com.cashfree.model.ENACH;
-import com.cashfree.model.PNACH;
-import com.cashfree.model.UPI;
+import com.cashfree.model.CreateSubscriptionPaymentRequestCard;
+import com.cashfree.model.CreateSubscriptionPaymentRequestEnack;
+import com.cashfree.model.CreateSubscriptionPaymentRequestPnach;
+import com.cashfree.model.CreateSubscriptonPaymentRequestUpi;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -62,7 +62,7 @@ import com.google.gson.JsonParseException;
 
 import com.cashfree.JSON;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-17T09:00:37.237094Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-17T09:16:46.389568Z[Etc/UTC]")
 public class CreateSubscriptionPaymentRequestPaymentMethod extends AbstractOpenApiSchema {
     private static final Logger log = Logger.getLogger(CreateSubscriptionPaymentRequestPaymentMethod.class.getName());
 
@@ -74,10 +74,10 @@ public class CreateSubscriptionPaymentRequestPaymentMethod extends AbstractOpenA
                 return null; // this class only serializes 'CreateSubscriptionPaymentRequestPaymentMethod' and its subtypes
             }
             final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-            final TypeAdapter<UPI> adapterUPI = gson.getDelegateAdapter(this, TypeToken.get(UPI.class));
-            final TypeAdapter<ENACH> adapterENACH = gson.getDelegateAdapter(this, TypeToken.get(ENACH.class));
-            final TypeAdapter<PNACH> adapterPNACH = gson.getDelegateAdapter(this, TypeToken.get(PNACH.class));
-            final TypeAdapter<CARD> adapterCARD = gson.getDelegateAdapter(this, TypeToken.get(CARD.class));
+            final TypeAdapter<CreateSubscriptonPaymentRequestUpi> adapterCreateSubscriptonPaymentRequestUpi = gson.getDelegateAdapter(this, TypeToken.get(CreateSubscriptonPaymentRequestUpi.class));
+            final TypeAdapter<CreateSubscriptionPaymentRequestEnack> adapterCreateSubscriptionPaymentRequestEnack = gson.getDelegateAdapter(this, TypeToken.get(CreateSubscriptionPaymentRequestEnack.class));
+            final TypeAdapter<CreateSubscriptionPaymentRequestPnach> adapterCreateSubscriptionPaymentRequestPnach = gson.getDelegateAdapter(this, TypeToken.get(CreateSubscriptionPaymentRequestPnach.class));
+            final TypeAdapter<CreateSubscriptionPaymentRequestCard> adapterCreateSubscriptionPaymentRequestCard = gson.getDelegateAdapter(this, TypeToken.get(CreateSubscriptionPaymentRequestCard.class));
 
             return (TypeAdapter<T>) new TypeAdapter<CreateSubscriptionPaymentRequestPaymentMethod>() {
                 @Override
@@ -87,31 +87,31 @@ public class CreateSubscriptionPaymentRequestPaymentMethod extends AbstractOpenA
                         return;
                     }
 
-                    // check if the actual instance is of the type `UPI`
-                    if (value.getActualInstance() instanceof UPI) {
-                      JsonElement element = adapterUPI.toJsonTree((UPI)value.getActualInstance());
+                    // check if the actual instance is of the type `CreateSubscriptonPaymentRequestUpi`
+                    if (value.getActualInstance() instanceof CreateSubscriptonPaymentRequestUpi) {
+                      JsonElement element = adapterCreateSubscriptonPaymentRequestUpi.toJsonTree((CreateSubscriptonPaymentRequestUpi)value.getActualInstance());
                       elementAdapter.write(out, element);
                       return;
                     }
-                    // check if the actual instance is of the type `ENACH`
-                    if (value.getActualInstance() instanceof ENACH) {
-                      JsonElement element = adapterENACH.toJsonTree((ENACH)value.getActualInstance());
+                    // check if the actual instance is of the type `CreateSubscriptionPaymentRequestEnack`
+                    if (value.getActualInstance() instanceof CreateSubscriptionPaymentRequestEnack) {
+                      JsonElement element = adapterCreateSubscriptionPaymentRequestEnack.toJsonTree((CreateSubscriptionPaymentRequestEnack)value.getActualInstance());
                       elementAdapter.write(out, element);
                       return;
                     }
-                    // check if the actual instance is of the type `PNACH`
-                    if (value.getActualInstance() instanceof PNACH) {
-                      JsonElement element = adapterPNACH.toJsonTree((PNACH)value.getActualInstance());
+                    // check if the actual instance is of the type `CreateSubscriptionPaymentRequestPnach`
+                    if (value.getActualInstance() instanceof CreateSubscriptionPaymentRequestPnach) {
+                      JsonElement element = adapterCreateSubscriptionPaymentRequestPnach.toJsonTree((CreateSubscriptionPaymentRequestPnach)value.getActualInstance());
                       elementAdapter.write(out, element);
                       return;
                     }
-                    // check if the actual instance is of the type `CARD`
-                    if (value.getActualInstance() instanceof CARD) {
-                      JsonElement element = adapterCARD.toJsonTree((CARD)value.getActualInstance());
+                    // check if the actual instance is of the type `CreateSubscriptionPaymentRequestCard`
+                    if (value.getActualInstance() instanceof CreateSubscriptionPaymentRequestCard) {
+                      JsonElement element = adapterCreateSubscriptionPaymentRequestCard.toJsonTree((CreateSubscriptionPaymentRequestCard)value.getActualInstance());
                       elementAdapter.write(out, element);
                       return;
                     }
-                    throw new IOException("Failed to serialize as the type doesn't match oneOf schemas: CARD, ENACH, PNACH, UPI");
+                    throw new IOException("Failed to serialize as the type doesn't match oneOf schemas: CreateSubscriptionPaymentRequestCard, CreateSubscriptionPaymentRequestEnack, CreateSubscriptionPaymentRequestPnach, CreateSubscriptonPaymentRequestUpi");
                 }
 
                 @Override
@@ -123,57 +123,57 @@ public class CreateSubscriptionPaymentRequestPaymentMethod extends AbstractOpenA
                     ArrayList<String> errorMessages = new ArrayList<>();
                     TypeAdapter actualAdapter = elementAdapter;
 
-                    // deserialize UPI
+                    // deserialize CreateSubscriptonPaymentRequestUpi
                     try {
                       // validate the JSON object to see if any exception is thrown
-                      if(UPI.validateJsonElementForOneOf(jsonElement)) {
-                          actualAdapter = adapterUPI;
+                      if(CreateSubscriptonPaymentRequestUpi.validateJsonElementForOneOf(jsonElement)) {
+                          actualAdapter = adapterCreateSubscriptonPaymentRequestUpi;
                       }
                       match++;
-                      log.log(Level.FINER, "Input data matches schema 'UPI'");
+                      log.log(Level.FINER, "Input data matches schema 'CreateSubscriptonPaymentRequestUpi'");
                     } catch (Exception e) {
                       // deserialization failed, continue
-                      errorMessages.add(String.format("Deserialization for UPI failed with `%s`.", e.getMessage()));
-                      log.log(Level.FINER, "Input data does not match schema 'UPI'", e);
+                      errorMessages.add(String.format("Deserialization for CreateSubscriptonPaymentRequestUpi failed with `%s`.", e.getMessage()));
+                      log.log(Level.FINER, "Input data does not match schema 'CreateSubscriptonPaymentRequestUpi'", e);
                     }
-                    // deserialize ENACH
+                    // deserialize CreateSubscriptionPaymentRequestEnack
                     try {
                       // validate the JSON object to see if any exception is thrown
-                      if(ENACH.validateJsonElementForOneOf(jsonElement)) {
-                          actualAdapter = adapterENACH;
+                      if(CreateSubscriptionPaymentRequestEnack.validateJsonElementForOneOf(jsonElement)) {
+                          actualAdapter = adapterCreateSubscriptionPaymentRequestEnack;
                       }
                       match++;
-                      log.log(Level.FINER, "Input data matches schema 'ENACH'");
+                      log.log(Level.FINER, "Input data matches schema 'CreateSubscriptionPaymentRequestEnack'");
                     } catch (Exception e) {
                       // deserialization failed, continue
-                      errorMessages.add(String.format("Deserialization for ENACH failed with `%s`.", e.getMessage()));
-                      log.log(Level.FINER, "Input data does not match schema 'ENACH'", e);
+                      errorMessages.add(String.format("Deserialization for CreateSubscriptionPaymentRequestEnack failed with `%s`.", e.getMessage()));
+                      log.log(Level.FINER, "Input data does not match schema 'CreateSubscriptionPaymentRequestEnack'", e);
                     }
-                    // deserialize PNACH
+                    // deserialize CreateSubscriptionPaymentRequestPnach
                     try {
                       // validate the JSON object to see if any exception is thrown
-                      if(PNACH.validateJsonElementForOneOf(jsonElement)) {
-                          actualAdapter = adapterPNACH;
+                      if(CreateSubscriptionPaymentRequestPnach.validateJsonElementForOneOf(jsonElement)) {
+                          actualAdapter = adapterCreateSubscriptionPaymentRequestPnach;
                       }
                       match++;
-                      log.log(Level.FINER, "Input data matches schema 'PNACH'");
+                      log.log(Level.FINER, "Input data matches schema 'CreateSubscriptionPaymentRequestPnach'");
                     } catch (Exception e) {
                       // deserialization failed, continue
-                      errorMessages.add(String.format("Deserialization for PNACH failed with `%s`.", e.getMessage()));
-                      log.log(Level.FINER, "Input data does not match schema 'PNACH'", e);
+                      errorMessages.add(String.format("Deserialization for CreateSubscriptionPaymentRequestPnach failed with `%s`.", e.getMessage()));
+                      log.log(Level.FINER, "Input data does not match schema 'CreateSubscriptionPaymentRequestPnach'", e);
                     }
-                    // deserialize CARD
+                    // deserialize CreateSubscriptionPaymentRequestCard
                     try {
                       // validate the JSON object to see if any exception is thrown
-                      if(CARD.validateJsonElementForOneOf(jsonElement)) {
-                          actualAdapter = adapterCARD;
+                      if(CreateSubscriptionPaymentRequestCard.validateJsonElementForOneOf(jsonElement)) {
+                          actualAdapter = adapterCreateSubscriptionPaymentRequestCard;
                       }
                       match++;
-                      log.log(Level.FINER, "Input data matches schema 'CARD'");
+                      log.log(Level.FINER, "Input data matches schema 'CreateSubscriptionPaymentRequestCard'");
                     } catch (Exception e) {
                       // deserialization failed, continue
-                      errorMessages.add(String.format("Deserialization for CARD failed with `%s`.", e.getMessage()));
-                      log.log(Level.FINER, "Input data does not match schema 'CARD'", e);
+                      errorMessages.add(String.format("Deserialization for CreateSubscriptionPaymentRequestCard failed with `%s`.", e.getMessage()));
+                      log.log(Level.FINER, "Input data does not match schema 'CreateSubscriptionPaymentRequestCard'", e);
                     }
 
                     // if (match == 1) {
@@ -195,31 +195,31 @@ public class CreateSubscriptionPaymentRequestPaymentMethod extends AbstractOpenA
         super("oneOf", Boolean.FALSE);
     }
 
-    public CreateSubscriptionPaymentRequestPaymentMethod(CARD o) {
+    public CreateSubscriptionPaymentRequestPaymentMethod(CreateSubscriptionPaymentRequestCard o) {
         super("oneOf", Boolean.FALSE);
         setActualInstance(o);
     }
 
-    public CreateSubscriptionPaymentRequestPaymentMethod(ENACH o) {
+    public CreateSubscriptionPaymentRequestPaymentMethod(CreateSubscriptionPaymentRequestEnack o) {
         super("oneOf", Boolean.FALSE);
         setActualInstance(o);
     }
 
-    public CreateSubscriptionPaymentRequestPaymentMethod(PNACH o) {
+    public CreateSubscriptionPaymentRequestPaymentMethod(CreateSubscriptionPaymentRequestPnach o) {
         super("oneOf", Boolean.FALSE);
         setActualInstance(o);
     }
 
-    public CreateSubscriptionPaymentRequestPaymentMethod(UPI o) {
+    public CreateSubscriptionPaymentRequestPaymentMethod(CreateSubscriptonPaymentRequestUpi o) {
         super("oneOf", Boolean.FALSE);
         setActualInstance(o);
     }
 
     static {
-        schemas.put("UPI", UPI.class);
-        schemas.put("ENACH", ENACH.class);
-        schemas.put("PNACH", PNACH.class);
-        schemas.put("CARD", CARD.class);
+        schemas.put("CreateSubscriptonPaymentRequestUpi", CreateSubscriptonPaymentRequestUpi.class);
+        schemas.put("CreateSubscriptionPaymentRequestEnack", CreateSubscriptionPaymentRequestEnack.class);
+        schemas.put("CreateSubscriptionPaymentRequestPnach", CreateSubscriptionPaymentRequestPnach.class);
+        schemas.put("CreateSubscriptionPaymentRequestCard", CreateSubscriptionPaymentRequestCard.class);
     }
 
     @Override
@@ -230,40 +230,40 @@ public class CreateSubscriptionPaymentRequestPaymentMethod extends AbstractOpenA
     /**
      * Set the instance that matches the oneOf child schema, check
      * the instance parameter is valid against the oneOf child schemas:
-     * CARD, ENACH, PNACH, UPI
+     * CreateSubscriptionPaymentRequestCard, CreateSubscriptionPaymentRequestEnack, CreateSubscriptionPaymentRequestPnach, CreateSubscriptonPaymentRequestUpi
      *
      * It could be an instance of the 'oneOf' schemas.
      */
     @Override
     public void setActualInstance(Object instance) {
-        if (instance instanceof UPI) {
+        if (instance instanceof CreateSubscriptonPaymentRequestUpi) {
             super.setActualInstance(instance);
             return;
         }
 
-        if (instance instanceof ENACH) {
+        if (instance instanceof CreateSubscriptionPaymentRequestEnack) {
             super.setActualInstance(instance);
             return;
         }
 
-        if (instance instanceof PNACH) {
+        if (instance instanceof CreateSubscriptionPaymentRequestPnach) {
             super.setActualInstance(instance);
             return;
         }
 
-        if (instance instanceof CARD) {
+        if (instance instanceof CreateSubscriptionPaymentRequestCard) {
             super.setActualInstance(instance);
             return;
         }
 
-        throw new RuntimeException("Invalid instance type. Must be CARD, ENACH, PNACH, UPI");
+        throw new RuntimeException("Invalid instance type. Must be CreateSubscriptionPaymentRequestCard, CreateSubscriptionPaymentRequestEnack, CreateSubscriptionPaymentRequestPnach, CreateSubscriptonPaymentRequestUpi");
     }
 
     /**
      * Get the actual instance, which can be the following:
-     * CARD, ENACH, PNACH, UPI
+     * CreateSubscriptionPaymentRequestCard, CreateSubscriptionPaymentRequestEnack, CreateSubscriptionPaymentRequestPnach, CreateSubscriptonPaymentRequestUpi
      *
-     * @return The actual instance (CARD, ENACH, PNACH, UPI)
+     * @return The actual instance (CreateSubscriptionPaymentRequestCard, CreateSubscriptionPaymentRequestEnack, CreateSubscriptionPaymentRequestPnach, CreateSubscriptonPaymentRequestUpi)
      */
     @Override
     public Object getActualInstance() {
@@ -271,44 +271,44 @@ public class CreateSubscriptionPaymentRequestPaymentMethod extends AbstractOpenA
     }
 
     /**
-     * Get the actual instance of `UPI`. If the actual instance is not `UPI`,
+     * Get the actual instance of `CreateSubscriptonPaymentRequestUpi`. If the actual instance is not `CreateSubscriptonPaymentRequestUpi`,
      * the ClassCastException will be thrown.
      *
-     * @return The actual instance of `UPI`
-     * @throws ClassCastException if the instance is not `UPI`
+     * @return The actual instance of `CreateSubscriptonPaymentRequestUpi`
+     * @throws ClassCastException if the instance is not `CreateSubscriptonPaymentRequestUpi`
      */
-    public UPI getUPI() throws ClassCastException {
-        return (UPI)super.getActualInstance();
+    public CreateSubscriptonPaymentRequestUpi getCreateSubscriptonPaymentRequestUpi() throws ClassCastException {
+        return (CreateSubscriptonPaymentRequestUpi)super.getActualInstance();
     }
     /**
-     * Get the actual instance of `ENACH`. If the actual instance is not `ENACH`,
+     * Get the actual instance of `CreateSubscriptionPaymentRequestEnack`. If the actual instance is not `CreateSubscriptionPaymentRequestEnack`,
      * the ClassCastException will be thrown.
      *
-     * @return The actual instance of `ENACH`
-     * @throws ClassCastException if the instance is not `ENACH`
+     * @return The actual instance of `CreateSubscriptionPaymentRequestEnack`
+     * @throws ClassCastException if the instance is not `CreateSubscriptionPaymentRequestEnack`
      */
-    public ENACH getENACH() throws ClassCastException {
-        return (ENACH)super.getActualInstance();
+    public CreateSubscriptionPaymentRequestEnack getCreateSubscriptionPaymentRequestEnack() throws ClassCastException {
+        return (CreateSubscriptionPaymentRequestEnack)super.getActualInstance();
     }
     /**
-     * Get the actual instance of `PNACH`. If the actual instance is not `PNACH`,
+     * Get the actual instance of `CreateSubscriptionPaymentRequestPnach`. If the actual instance is not `CreateSubscriptionPaymentRequestPnach`,
      * the ClassCastException will be thrown.
      *
-     * @return The actual instance of `PNACH`
-     * @throws ClassCastException if the instance is not `PNACH`
+     * @return The actual instance of `CreateSubscriptionPaymentRequestPnach`
+     * @throws ClassCastException if the instance is not `CreateSubscriptionPaymentRequestPnach`
      */
-    public PNACH getPNACH() throws ClassCastException {
-        return (PNACH)super.getActualInstance();
+    public CreateSubscriptionPaymentRequestPnach getCreateSubscriptionPaymentRequestPnach() throws ClassCastException {
+        return (CreateSubscriptionPaymentRequestPnach)super.getActualInstance();
     }
     /**
-     * Get the actual instance of `CARD`. If the actual instance is not `CARD`,
+     * Get the actual instance of `CreateSubscriptionPaymentRequestCard`. If the actual instance is not `CreateSubscriptionPaymentRequestCard`,
      * the ClassCastException will be thrown.
      *
-     * @return The actual instance of `CARD`
-     * @throws ClassCastException if the instance is not `CARD`
+     * @return The actual instance of `CreateSubscriptionPaymentRequestCard`
+     * @throws ClassCastException if the instance is not `CreateSubscriptionPaymentRequestCard`
      */
-    public CARD getCARD() throws ClassCastException {
-        return (CARD)super.getActualInstance();
+    public CreateSubscriptionPaymentRequestCard getCreateSubscriptionPaymentRequestCard() throws ClassCastException {
+        return (CreateSubscriptionPaymentRequestCard)super.getActualInstance();
     }
 
  /**
@@ -321,40 +321,40 @@ public class CreateSubscriptionPaymentRequestPaymentMethod extends AbstractOpenA
     // validate oneOf schemas one by one
     int validCount = 0;
     ArrayList<String> errorMessages = new ArrayList<>();
-    // validate the json string with UPI
+    // validate the json string with CreateSubscriptonPaymentRequestUpi
     try {
-      UPI.validateJsonElement(jsonElement);
+      CreateSubscriptonPaymentRequestUpi.validateJsonElement(jsonElement);
       validCount++;
     } catch (Exception e) {
-      errorMessages.add(String.format("Deserialization for UPI failed with `%s`.", e.getMessage()));
+      errorMessages.add(String.format("Deserialization for CreateSubscriptonPaymentRequestUpi failed with `%s`.", e.getMessage()));
       // continue to the next one
     }
-    // validate the json string with ENACH
+    // validate the json string with CreateSubscriptionPaymentRequestEnack
     try {
-      ENACH.validateJsonElement(jsonElement);
+      CreateSubscriptionPaymentRequestEnack.validateJsonElement(jsonElement);
       validCount++;
     } catch (Exception e) {
-      errorMessages.add(String.format("Deserialization for ENACH failed with `%s`.", e.getMessage()));
+      errorMessages.add(String.format("Deserialization for CreateSubscriptionPaymentRequestEnack failed with `%s`.", e.getMessage()));
       // continue to the next one
     }
-    // validate the json string with PNACH
+    // validate the json string with CreateSubscriptionPaymentRequestPnach
     try {
-      PNACH.validateJsonElement(jsonElement);
+      CreateSubscriptionPaymentRequestPnach.validateJsonElement(jsonElement);
       validCount++;
     } catch (Exception e) {
-      errorMessages.add(String.format("Deserialization for PNACH failed with `%s`.", e.getMessage()));
+      errorMessages.add(String.format("Deserialization for CreateSubscriptionPaymentRequestPnach failed with `%s`.", e.getMessage()));
       // continue to the next one
     }
-    // validate the json string with CARD
+    // validate the json string with CreateSubscriptionPaymentRequestCard
     try {
-      CARD.validateJsonElement(jsonElement);
+      CreateSubscriptionPaymentRequestCard.validateJsonElement(jsonElement);
       validCount++;
     } catch (Exception e) {
-      errorMessages.add(String.format("Deserialization for CARD failed with `%s`.", e.getMessage()));
+      errorMessages.add(String.format("Deserialization for CreateSubscriptionPaymentRequestCard failed with `%s`.", e.getMessage()));
       // continue to the next one
     }
     // if (validCount != 1) {
-    //  throw new IOException(String.format("The JSON string is invalid for CreateSubscriptionPaymentRequestPaymentMethod with oneOf schemas: CARD, ENACH, PNACH, UPI. %d class(es) match the result, expected 1. Detailed failure message for oneOf schemas: %s. JSON: %s", validCount, errorMessages, jsonElement.toString()));
+    //  throw new IOException(String.format("The JSON string is invalid for CreateSubscriptionPaymentRequestPaymentMethod with oneOf schemas: CreateSubscriptionPaymentRequestCard, CreateSubscriptionPaymentRequestEnack, CreateSubscriptionPaymentRequestPnach, CreateSubscriptonPaymentRequestUpi. %d class(es) match the result, expected 1. Detailed failure message for oneOf schemas: %s. JSON: %s", validCount, errorMessages, jsonElement.toString()));
     // }
   }
 
