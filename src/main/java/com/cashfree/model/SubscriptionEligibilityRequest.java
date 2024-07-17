@@ -54,7 +54,7 @@ import com.cashfree.JSON;
  * Request body to fetch subscription eligibile payment method details.
  */
 @Schema(description = "Request body to fetch subscription eligibile payment method details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-12T09:19:49.697679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-17T09:00:37.237094Z[Etc/UTC]")
 public class SubscriptionEligibilityRequest {
   public static final String SERIALIZED_NAME_QUERIES = "queries";
   @SerializedName(SERIALIZED_NAME_QUERIES)

@@ -15,7 +15,7 @@ The request to be passed for the create subscription payment API.
 |**paymentScheduleDate** | **String** | The date on which the payment is scheduled to be processed. Required for UPI and CARD payment modes. |  [optional] |
 |**paymentRemarks** | **String** | Payment remarks. |  [optional] |
 |**paymentType** | **String** | Payment type. Can be AUTH or CHARGE. |  |
-|**paymentMethod** | **Object** | Payment method. Can be one of [\&quot;upi\&quot;, \&quot;enach\&quot;, \&quot;pnach\&quot;, \&quot;card\&quot;] |  [optional] |
+|**paymentMethod** | [**CreateSubscriptionPaymentRequestPaymentMethod**](CreateSubscriptionPaymentRequestPaymentMethod.md) |  |  [optional] |
 
 
 

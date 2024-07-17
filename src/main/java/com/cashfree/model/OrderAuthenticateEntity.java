@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * This is the response shared when merchant inovkes the OTP submit or resend API
  */
 @Schema(description = "This is the response shared when merchant inovkes the OTP submit or resend API")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-12T09:19:49.697679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-17T09:00:37.237094Z[Etc/UTC]")
 public class OrderAuthenticateEntity {
   public static final String SERIALIZED_NAME_CF_PAYMENT_ID = "cf_payment_id";
   @SerializedName(SERIALIZED_NAME_CF_PAYMENT_ID)

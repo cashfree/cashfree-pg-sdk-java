@@ -13,7 +13,7 @@ The response returned in Get, Create or Manage Subscription Payment APIs.
 |**cfSubscriptionId** | **String** | Cashfree subscription reference number |  [optional] |
 |**cfTxnId** | **String** | Cashfree subscription payment transaction ID |  [optional] |
 |**cfOrderId** | **String** | Cashfree subscription payment order ID |  [optional] |
-|**failureDetails** | [**CreateSubscriptionPaymentAuthResponseFailureDetails**](CreateSubscriptionPaymentAuthResponseFailureDetails.md) |  |  [optional] |
+|**failureDetails** | [**SubscriptionPaymentEntityFailureDetails**](SubscriptionPaymentEntityFailureDetails.md) |  |  [optional] |
 |**paymentAmount** | **BigDecimal** | The charge amount of the payment. |  [optional] |
 |**paymentId** | **String** | A unique ID passed by merchant for identifying the transaction. |  [optional] |
 |**paymentInitiatedDate** | **String** | The date on which the payment was initiated. |  [optional] |

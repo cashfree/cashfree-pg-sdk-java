@@ -17,7 +17,7 @@ import java.util.Objects;
 import com.cashfree.model.BankDetails;
 import com.cashfree.model.KycDetails;
 import com.cashfree.model.ScheduleOption;
-import com.cashfree.model.UpdateVendorResponseRelatedDocsInner;
+import com.cashfree.model.VendorEntityRelatedDocsInner;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -59,7 +59,7 @@ import com.cashfree.JSON;
  * Update Vendor Response
  */
 @Schema(description = "Update Vendor Response")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-12T09:19:49.697679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-17T09:00:37.237094Z[Etc/UTC]")
 public class UpdateVendorResponse {
   public static final String SERIALIZED_NAME_EMAIL = "email";
   @SerializedName(SERIALIZED_NAME_EMAIL)
@@ -127,7 +127,7 @@ public class UpdateVendorResponse {
 
   public static final String SERIALIZED_NAME_RELATED_DOCS = "related_docs";
   @SerializedName(SERIALIZED_NAME_RELATED_DOCS)
-  private List<UpdateVendorResponseRelatedDocsInner> relatedDocs;
+  private List<VendorEntityRelatedDocsInner> relatedDocs;
 
   public UpdateVendorResponse() {
   }
@@ -508,13 +508,13 @@ public class UpdateVendorResponse {
   }
 
 
-  public UpdateVendorResponse relatedDocs(List<UpdateVendorResponseRelatedDocsInner> relatedDocs) {
+  public UpdateVendorResponse relatedDocs(List<VendorEntityRelatedDocsInner> relatedDocs) {
     
     this.relatedDocs = relatedDocs;
     return this;
   }
 
-  public UpdateVendorResponse addRelatedDocsItem(UpdateVendorResponseRelatedDocsInner relatedDocsItem) {
+  public UpdateVendorResponse addRelatedDocsItem(VendorEntityRelatedDocsInner relatedDocsItem) {
     if (this.relatedDocs == null) {
       this.relatedDocs = new ArrayList<>();
     }
@@ -528,12 +528,12 @@ public class UpdateVendorResponse {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public List<UpdateVendorResponseRelatedDocsInner> getRelatedDocs() {
+  public List<VendorEntityRelatedDocsInner> getRelatedDocs() {
     return relatedDocs;
   }
 
 
-  public void setRelatedDocs(List<UpdateVendorResponseRelatedDocsInner> relatedDocs) {
+  public void setRelatedDocs(List<VendorEntityRelatedDocsInner> relatedDocs) {
     this.relatedDocs = relatedDocs;
   }
 
@@ -731,7 +731,7 @@ public class UpdateVendorResponse {
 
           // validate the optional field `related_docs` (array)
           for (int i = 0; i < jsonArrayrelatedDocs.size(); i++) {
-            UpdateVendorResponseRelatedDocsInner.validateJsonElement(jsonArrayrelatedDocs.get(i));
+            VendorEntityRelatedDocsInner.validateJsonElement(jsonArrayrelatedDocs.get(i));
           };
         }
       }
@@ -832,7 +832,7 @@ public class UpdateVendorResponse {
 
           // validate the optional field `related_docs` (array)
           for (int i = 0; i < jsonArrayrelatedDocs.size(); i++) {
-            UpdateVendorResponseRelatedDocsInner.validateJsonElement(jsonArrayrelatedDocs.get(i));
+            VendorEntityRelatedDocsInner.validateJsonElement(jsonArrayrelatedDocs.get(i));
           };
         }
       }

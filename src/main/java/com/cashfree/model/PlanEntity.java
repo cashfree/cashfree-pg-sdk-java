@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * The response returned for Get, Create and Manage Plan APIs
  */
 @Schema(description = "The response returned for Get, Create and Manage Plan APIs")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-12T09:19:49.697679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-17T09:00:37.237094Z[Etc/UTC]")
 public class PlanEntity {
   public static final String SERIALIZED_NAME_PLAN_CURRENCY = "plan_currency";
   @SerializedName(SERIALIZED_NAME_PLAN_CURRENCY)

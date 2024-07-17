@@ -51,7 +51,7 @@ import com.cashfree.JSON;
 /**
  * StaticSplitResponseSchemeInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-12T09:19:49.697679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-17T09:00:37.237094Z[Etc/UTC]")
 public class StaticSplitResponseSchemeInner {
   public static final String SERIALIZED_NAME_MERCHANT_VENDOR_ID = "merchantVendorId";
   @SerializedName(SERIALIZED_NAME_MERCHANT_VENDOR_ID)

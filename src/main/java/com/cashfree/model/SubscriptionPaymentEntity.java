@@ -15,7 +15,7 @@ package com.cashfree.model;
 
 import java.util.Objects;
 import com.cashfree.model.AuthorizationDetails;
-import com.cashfree.model.CreateSubscriptionPaymentAuthResponseFailureDetails;
+import com.cashfree.model.SubscriptionPaymentEntityFailureDetails;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -55,7 +55,7 @@ import com.cashfree.JSON;
  * The response returned in Get, Create or Manage Subscription Payment APIs.
  */
 @Schema(description = "The response returned in Get, Create or Manage Subscription Payment APIs.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-12T09:19:49.697679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-17T09:00:37.237094Z[Etc/UTC]")
 public class SubscriptionPaymentEntity {
   public static final String SERIALIZED_NAME_AUTHORIZATION_DETAILS = "authorization_details";
   @SerializedName(SERIALIZED_NAME_AUTHORIZATION_DETAILS)
@@ -79,7 +79,7 @@ public class SubscriptionPaymentEntity {
 
   public static final String SERIALIZED_NAME_FAILURE_DETAILS = "failure_details";
   @SerializedName(SERIALIZED_NAME_FAILURE_DETAILS)
-  private CreateSubscriptionPaymentAuthResponseFailureDetails failureDetails;
+  private SubscriptionPaymentEntityFailureDetails failureDetails;
 
   public static final String SERIALIZED_NAME_PAYMENT_AMOUNT = "payment_amount";
   @SerializedName(SERIALIZED_NAME_PAYMENT_AMOUNT)
@@ -230,7 +230,7 @@ public class SubscriptionPaymentEntity {
   }
 
 
-  public SubscriptionPaymentEntity failureDetails(CreateSubscriptionPaymentAuthResponseFailureDetails failureDetails) {
+  public SubscriptionPaymentEntity failureDetails(SubscriptionPaymentEntityFailureDetails failureDetails) {
     
     this.failureDetails = failureDetails;
     return this;
@@ -242,12 +242,12 @@ public class SubscriptionPaymentEntity {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public CreateSubscriptionPaymentAuthResponseFailureDetails getFailureDetails() {
+  public SubscriptionPaymentEntityFailureDetails getFailureDetails() {
     return failureDetails;
   }
 
 
-  public void setFailureDetails(CreateSubscriptionPaymentAuthResponseFailureDetails failureDetails) {
+  public void setFailureDetails(SubscriptionPaymentEntityFailureDetails failureDetails) {
     this.failureDetails = failureDetails;
   }
 
@@ -570,7 +570,7 @@ public class SubscriptionPaymentEntity {
       }
       // validate the optional field `failure_details`
       if (jsonObj.get("failure_details") != null && !jsonObj.get("failure_details").isJsonNull()) {
-        CreateSubscriptionPaymentAuthResponseFailureDetails.validateJsonElement(jsonObj.get("failure_details"));
+        SubscriptionPaymentEntityFailureDetails.validateJsonElement(jsonObj.get("failure_details"));
       }
       if ((jsonObj.get("payment_id") != null && !jsonObj.get("payment_id").isJsonNull()) && !jsonObj.get("payment_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `payment_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("payment_id").toString()));
@@ -624,7 +624,7 @@ public class SubscriptionPaymentEntity {
       }
       // validate the optional field `failure_details`
       if (jsonObj.get("failure_details") != null && !jsonObj.get("failure_details").isJsonNull()) {
-        CreateSubscriptionPaymentAuthResponseFailureDetails.validateJsonElement(jsonObj.get("failure_details"));
+        SubscriptionPaymentEntityFailureDetails.validateJsonElement(jsonObj.get("failure_details"));
         return true;
       }
       if ((jsonObj.get("payment_id") != null && !jsonObj.get("payment_id").isJsonNull()) && !jsonObj.get("payment_id").isJsonPrimitive()) {

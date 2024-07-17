@@ -22,7 +22,7 @@ Vendor entity object
 |**accountType** | **String** |  |  [optional] |
 |**businessType** | **String** |  |  [optional] |
 |**remarks** | **String** |  |  [optional] |
-|**relatedDocs** | [**List&lt;UpdateVendorResponseRelatedDocsInner&gt;**](UpdateVendorResponseRelatedDocsInner.md) |  |  [optional] |
+|**relatedDocs** | [**List&lt;VendorEntityRelatedDocsInner&gt;**](VendorEntityRelatedDocsInner.md) |  |  [optional] |
 
 
 
