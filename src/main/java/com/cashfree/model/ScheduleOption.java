@@ -52,7 +52,7 @@ import com.cashfree.JSON;
 /**
  * ScheduleOption
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-17T09:00:37.237094Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-17T09:16:46.389568Z[Etc/UTC]")
 public class ScheduleOption {
   public static final String SERIALIZED_NAME_SETTLEMENT_SCHEDULE_MESSAGE = "settlement_schedule_message";
   @SerializedName(SERIALIZED_NAME_SETTLEMENT_SCHEDULE_MESSAGE)

@@ -23,7 +23,6 @@ docs/BalanceDetails.md
 docs/BankDetails.md
 docs/Banktransfer.md
 docs/BanktransferPaymentMethod.md
-docs/CARD.md
 docs/Card.md
 docs/CardEMI.md
 docs/CardEMIPaymentMethod.md
@@ -43,13 +42,17 @@ docs/CreateOrderSettlementRequestBody.md
 docs/CreateOrderSettlementRequestBodyMetaData.md
 docs/CreatePlanRequest.md
 docs/CreateSubscriptionPaymentRequest.md
+docs/CreateSubscriptionPaymentRequestCard.md
+docs/CreateSubscriptionPaymentRequestEnack.md
 docs/CreateSubscriptionPaymentRequestPaymentMethod.md
+docs/CreateSubscriptionPaymentRequestPnach.md
 docs/CreateSubscriptionPaymentResponse.md
 docs/CreateSubscriptionRefundRequest.md
 docs/CreateSubscriptionRequest.md
 docs/CreateSubscriptionRequestAuthorizationDetails.md
 docs/CreateSubscriptionRequestPlanDetails.md
 docs/CreateSubscriptionRequestSubscriptionMeta.md
+docs/CreateSubscriptonPaymentRequestUpi.md
 docs/CreateTerminalRequest.md
 docs/CreateTerminalRequestTerminalMeta.md
 docs/CreateTerminalTransactionRequest.md
@@ -64,7 +67,6 @@ docs/CustomersApi.md
 docs/DiscountDetails.md
 docs/EMIOffer.md
 docs/EMIPlansArray.md
-docs/ENACH.md
 docs/ESOrderReconRequest.md
 docs/ESOrderReconRequestFilters.md
 docs/ESOrderReconRequestPagination.md
@@ -137,7 +139,6 @@ docs/OrderEntity.md
 docs/OrderMeta.md
 docs/OrderPayData.md
 docs/OrdersApi.md
-docs/PNACH.md
 docs/PayOrderEntity.md
 docs/PayOrderRequest.md
 docs/PayOrderRequestPaymentMethod.md
@@ -227,7 +228,6 @@ docs/TerminateOrderRequest.md
 docs/TokenVaultApi.md
 docs/TransferDetails.md
 docs/TransferDetailsTagsInner.md
-docs/UPI.md
 docs/UPIAuthorizeDetails.md
 docs/UPIPaymentMethod.md
 docs/UpdateTerminalEntity.md
@@ -309,7 +309,6 @@ src/main/java/com/cashfree/model/BalanceDetails.java
 src/main/java/com/cashfree/model/BankDetails.java
 src/main/java/com/cashfree/model/Banktransfer.java
 src/main/java/com/cashfree/model/BanktransferPaymentMethod.java
-src/main/java/com/cashfree/model/CARD.java
 src/main/java/com/cashfree/model/Card.java
 src/main/java/com/cashfree/model/CardEMI.java
 src/main/java/com/cashfree/model/CardEMIPaymentMethod.java
@@ -329,13 +328,17 @@ src/main/java/com/cashfree/model/CreateOrderSettlementRequestBody.java
 src/main/java/com/cashfree/model/CreateOrderSettlementRequestBodyMetaData.java
 src/main/java/com/cashfree/model/CreatePlanRequest.java
 src/main/java/com/cashfree/model/CreateSubscriptionPaymentRequest.java
+src/main/java/com/cashfree/model/CreateSubscriptionPaymentRequestCard.java
+src/main/java/com/cashfree/model/CreateSubscriptionPaymentRequestEnack.java
 src/main/java/com/cashfree/model/CreateSubscriptionPaymentRequestPaymentMethod.java
+src/main/java/com/cashfree/model/CreateSubscriptionPaymentRequestPnach.java
 src/main/java/com/cashfree/model/CreateSubscriptionPaymentResponse.java
 src/main/java/com/cashfree/model/CreateSubscriptionRefundRequest.java
 src/main/java/com/cashfree/model/CreateSubscriptionRequest.java
 src/main/java/com/cashfree/model/CreateSubscriptionRequestAuthorizationDetails.java
 src/main/java/com/cashfree/model/CreateSubscriptionRequestPlanDetails.java
 src/main/java/com/cashfree/model/CreateSubscriptionRequestSubscriptionMeta.java
+src/main/java/com/cashfree/model/CreateSubscriptonPaymentRequestUpi.java
 src/main/java/com/cashfree/model/CreateTerminalRequest.java
 src/main/java/com/cashfree/model/CreateTerminalRequestTerminalMeta.java
 src/main/java/com/cashfree/model/CreateTerminalTransactionRequest.java
@@ -349,7 +352,6 @@ src/main/java/com/cashfree/model/CustomerEntity.java
 src/main/java/com/cashfree/model/DiscountDetails.java
 src/main/java/com/cashfree/model/EMIOffer.java
 src/main/java/com/cashfree/model/EMIPlansArray.java
-src/main/java/com/cashfree/model/ENACH.java
 src/main/java/com/cashfree/model/ESOrderReconRequest.java
 src/main/java/com/cashfree/model/ESOrderReconRequestFilters.java
 src/main/java/com/cashfree/model/ESOrderReconRequestPagination.java
@@ -418,7 +420,6 @@ src/main/java/com/cashfree/model/OrderCreateRefundRequest.java
 src/main/java/com/cashfree/model/OrderEntity.java
 src/main/java/com/cashfree/model/OrderMeta.java
 src/main/java/com/cashfree/model/OrderPayData.java
-src/main/java/com/cashfree/model/PNACH.java
 src/main/java/com/cashfree/model/PayOrderEntity.java
 src/main/java/com/cashfree/model/PayOrderRequest.java
 src/main/java/com/cashfree/model/PayOrderRequestPaymentMethod.java
@@ -498,7 +499,6 @@ src/main/java/com/cashfree/model/TerminalTransactionEntity.java
 src/main/java/com/cashfree/model/TerminateOrderRequest.java
 src/main/java/com/cashfree/model/TransferDetails.java
 src/main/java/com/cashfree/model/TransferDetailsTagsInner.java
-src/main/java/com/cashfree/model/UPI.java
 src/main/java/com/cashfree/model/UPIAuthorizeDetails.java
 src/main/java/com/cashfree/model/UPIPaymentMethod.java
 src/main/java/com/cashfree/model/UpdateTerminalEntity.java
@@ -553,7 +553,6 @@ src/test/java/com/cashfree/model/BalanceDetailsTest.java
 src/test/java/com/cashfree/model/BankDetailsTest.java
 src/test/java/com/cashfree/model/BanktransferPaymentMethodTest.java
 src/test/java/com/cashfree/model/BanktransferTest.java
-src/test/java/com/cashfree/model/CARDTest.java
 src/test/java/com/cashfree/model/CardEMIPaymentMethodTest.java
 src/test/java/com/cashfree/model/CardEMITest.java
 src/test/java/com/cashfree/model/CardOfferTest.java
@@ -572,7 +571,10 @@ src/test/java/com/cashfree/model/CreateOrderRequestTest.java
 src/test/java/com/cashfree/model/CreateOrderSettlementRequestBodyMetaDataTest.java
 src/test/java/com/cashfree/model/CreateOrderSettlementRequestBodyTest.java
 src/test/java/com/cashfree/model/CreatePlanRequestTest.java
+src/test/java/com/cashfree/model/CreateSubscriptionPaymentRequestCardTest.java
+src/test/java/com/cashfree/model/CreateSubscriptionPaymentRequestEnackTest.java
 src/test/java/com/cashfree/model/CreateSubscriptionPaymentRequestPaymentMethodTest.java
+src/test/java/com/cashfree/model/CreateSubscriptionPaymentRequestPnachTest.java
 src/test/java/com/cashfree/model/CreateSubscriptionPaymentRequestTest.java
 src/test/java/com/cashfree/model/CreateSubscriptionPaymentResponseTest.java
 src/test/java/com/cashfree/model/CreateSubscriptionRefundRequestTest.java
@@ -580,6 +582,7 @@ src/test/java/com/cashfree/model/CreateSubscriptionRequestAuthorizationDetailsTe
 src/test/java/com/cashfree/model/CreateSubscriptionRequestPlanDetailsTest.java
 src/test/java/com/cashfree/model/CreateSubscriptionRequestSubscriptionMetaTest.java
 src/test/java/com/cashfree/model/CreateSubscriptionRequestTest.java
+src/test/java/com/cashfree/model/CreateSubscriptonPaymentRequestUpiTest.java
 src/test/java/com/cashfree/model/CreateTerminalRequestTerminalMetaTest.java
 src/test/java/com/cashfree/model/CreateTerminalRequestTest.java
 src/test/java/com/cashfree/model/CreateTerminalTransactionRequestTest.java
@@ -593,7 +596,6 @@ src/test/java/com/cashfree/model/CustomerEntityTest.java
 src/test/java/com/cashfree/model/DiscountDetailsTest.java
 src/test/java/com/cashfree/model/EMIOfferTest.java
 src/test/java/com/cashfree/model/EMIPlansArrayTest.java
-src/test/java/com/cashfree/model/ENACHTest.java
 src/test/java/com/cashfree/model/ESOrderReconRequestFiltersTest.java
 src/test/java/com/cashfree/model/ESOrderReconRequestPaginationTest.java
 src/test/java/com/cashfree/model/ESOrderReconRequestTest.java
@@ -662,7 +664,6 @@ src/test/java/com/cashfree/model/OrderCreateRefundRequestTest.java
 src/test/java/com/cashfree/model/OrderEntityTest.java
 src/test/java/com/cashfree/model/OrderMetaTest.java
 src/test/java/com/cashfree/model/OrderPayDataTest.java
-src/test/java/com/cashfree/model/PNACHTest.java
 src/test/java/com/cashfree/model/PayOrderEntityTest.java
 src/test/java/com/cashfree/model/PayOrderRequestPaymentMethodTest.java
 src/test/java/com/cashfree/model/PayOrderRequestTest.java
@@ -744,7 +745,6 @@ src/test/java/com/cashfree/model/TransferDetailsTagsInnerTest.java
 src/test/java/com/cashfree/model/TransferDetailsTest.java
 src/test/java/com/cashfree/model/UPIAuthorizeDetailsTest.java
 src/test/java/com/cashfree/model/UPIPaymentMethodTest.java
-src/test/java/com/cashfree/model/UPITest.java
 src/test/java/com/cashfree/model/UpdateTerminalEntityTest.java
 src/test/java/com/cashfree/model/UpdateTerminalRequestTerminalMetaTest.java
 src/test/java/com/cashfree/model/UpdateTerminalRequestTest.java

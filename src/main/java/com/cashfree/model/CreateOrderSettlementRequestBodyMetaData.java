@@ -52,7 +52,7 @@ import com.cashfree.JSON;
 /**
  * CreateOrderSettlementRequestBodyMetaData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-17T09:00:37.237094Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-17T09:16:46.389568Z[Etc/UTC]")
 public class CreateOrderSettlementRequestBodyMetaData {
   public static final String SERIALIZED_NAME_CBRIKS_ID = "cbriks_id";
   @SerializedName(SERIALIZED_NAME_CBRIKS_ID)
