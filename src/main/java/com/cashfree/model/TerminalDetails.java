@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Use this if you are creating an order for cashfree&#39;s softPOS
  */
 @Schema(description = "Use this if you are creating an order for cashfree's softPOS")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-12T09:19:49.697679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-17T08:49:56.545492Z[Etc/UTC]")
 public class TerminalDetails {
   public static final String SERIALIZED_NAME_ADDED_ON = "added_on";
   @SerializedName(SERIALIZED_NAME_ADDED_ON)

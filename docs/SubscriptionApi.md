@@ -4,19 +4,19 @@ All URIs are relative to *https://sandbox.cashfree.com/pg*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**SubsCreatePayment**](SubscriptionApi.md#SubsCreatePayment) | **POST** /subscriptions/pay | Raise a charge or create an auth. |
-| [**SubsCreatePlan**](SubscriptionApi.md#SubsCreatePlan) | **POST** /plans | Create a plan. |
-| [**SubsCreateRefund**](SubscriptionApi.md#SubsCreateRefund) | **POST** /subscriptions/{subscription_id}/refunds | Create a refund. |
-| [**SubsCreateSubscription**](SubscriptionApi.md#SubsCreateSubscription) | **POST** /subscriptions | Create Subscription |
+| [**SubsCreatePayment**](SubscriptionApi.md#SubsCreatePayment) | **POST** /pg/subscriptions/pay | Raise a charge or create an auth. |
+| [**SubsCreatePlan**](SubscriptionApi.md#SubsCreatePlan) | **POST** /pg/plans | Create a plan. |
+| [**SubsCreateRefund**](SubscriptionApi.md#SubsCreateRefund) | **POST** /pg/subscriptions/{subscription_id}/refunds | Create a refund. |
+| [**SubsCreateSubscription**](SubscriptionApi.md#SubsCreateSubscription) | **POST** /pg/subscriptions | Create Subscription |
 | [**SubsFetchPlan**](SubscriptionApi.md#SubsFetchPlan) | **GET** /pg/plans/{plan_id} | Fetch Plan |
-| [**SubsFetchSubscription**](SubscriptionApi.md#SubsFetchSubscription) | **GET** /subscriptions/{subscription_id} | Fetch Subscription |
-| [**SubsFetchSubscriptionPayment**](SubscriptionApi.md#SubsFetchSubscriptionPayment) | **GET** /subscriptions/{subscription_id}/payments/{payment_id} | Fetch details of a single payment. |
-| [**SubsFetchSubscriptionPayments**](SubscriptionApi.md#SubsFetchSubscriptionPayments) | **GET** /subscriptions/{subscription_id}/payments | Fetch details of all payments of a subscription. |
-| [**SubsFetchSubscriptionRefund**](SubscriptionApi.md#SubsFetchSubscriptionRefund) | **GET** /subscriptions/{subscription_id}/refunds/{refund_id} | Fetch details of a refund. |
-| [**SubsManageSubscription**](SubscriptionApi.md#SubsManageSubscription) | **POST** /subscriptions/{subscription_id}/manage | Manage a subscription. |
-| [**SubsManageSubscriptionPayment**](SubscriptionApi.md#SubsManageSubscriptionPayment) | **POST** /subscriptions/{subscription_id}/payments/{payment_id}/manage | Manage a single payment. |
-| [**SubscriptionDocumentUpload**](SubscriptionApi.md#SubscriptionDocumentUpload) | **POST** /subscriptions/pay/documents/{payment_id} | Upload Physical Nach for Physical Nach Authorization. |
-| [**SubscriptionEligibility**](SubscriptionApi.md#SubscriptionEligibility) | **POST** /subscriptions/eligibility/payment_methods | Get Eligible payment methods available for a subscription |
+| [**SubsFetchSubscription**](SubscriptionApi.md#SubsFetchSubscription) | **GET** /pg/subscriptions/{subscription_id} | Fetch Subscription |
+| [**SubsFetchSubscriptionPayment**](SubscriptionApi.md#SubsFetchSubscriptionPayment) | **GET** /pg/subscriptions/{subscription_id}/payments/{payment_id} | Fetch details of a single payment. |
+| [**SubsFetchSubscriptionPayments**](SubscriptionApi.md#SubsFetchSubscriptionPayments) | **GET** /pg/subscriptions/{subscription_id}/payments | Fetch details of all payments of a subscription. |
+| [**SubsFetchSubscriptionRefund**](SubscriptionApi.md#SubsFetchSubscriptionRefund) | **GET** /pg/subscriptions/{subscription_id}/refunds/{refund_id} | Fetch details of a refund. |
+| [**SubsManageSubscription**](SubscriptionApi.md#SubsManageSubscription) | **POST** /pg/subscriptions/{subscription_id}/manage | Manage a subscription. |
+| [**SubsManageSubscriptionPayment**](SubscriptionApi.md#SubsManageSubscriptionPayment) | **POST** /pg/subscriptions/{subscription_id}/payments/{payment_id}/manage | Manage a single payment. |
+| [**SubscriptionDocumentUpload**](SubscriptionApi.md#SubscriptionDocumentUpload) | **POST** /pg/subscriptions/pay/documents/{payment_id} | Upload Physical Nach for Physical Nach Authorization. |
+| [**SubscriptionEligibility**](SubscriptionApi.md#SubscriptionEligibility) | **POST** /pg/subscriptions/eligibility/payment_methods | Get Eligible payment methods available for a subscription |
 
 
 

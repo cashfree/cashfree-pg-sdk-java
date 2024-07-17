@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Subscription customer details.
  */
 @Schema(description = "Subscription customer details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-12T09:19:49.697679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-17T08:49:56.545492Z[Etc/UTC]")
 public class SubscriptionCustomerDetails {
   public static final String SERIALIZED_NAME_CUSTOMER_NAME = "customer_name";
   @SerializedName(SERIALIZED_NAME_CUSTOMER_NAME)
@@ -66,9 +66,9 @@ public class SubscriptionCustomerDetails {
   @SerializedName(SERIALIZED_NAME_CUSTOMER_PHONE)
   private String customerPhone;
 
-  public static final String SERIALIZED_NAME_CUSTOMER_BANK_ACCOUNT_HOLDER_NAME = "customer_bank_account_holder_name";
-  @SerializedName(SERIALIZED_NAME_CUSTOMER_BANK_ACCOUNT_HOLDER_NAME)
-  private String customerBankAccountHolderName;
+  public static final String SERIALIZED_NAME_CUSTOMER_BANK_HOLDER_NAME = "customer_bank_holder_name";
+  @SerializedName(SERIALIZED_NAME_CUSTOMER_BANK_HOLDER_NAME)
+  private String customerBankHolderName;
 
   public static final String SERIALIZED_NAME_CUSTOMER_BANK_ACCOUNT_NUMBER = "customer_bank_account_number";
   @SerializedName(SERIALIZED_NAME_CUSTOMER_BANK_ACCOUNT_NUMBER)
@@ -155,25 +155,25 @@ public class SubscriptionCustomerDetails {
   }
 
 
-  public SubscriptionCustomerDetails customerBankAccountHolderName(String customerBankAccountHolderName) {
+  public SubscriptionCustomerDetails customerBankHolderName(String customerBankHolderName) {
     
-    this.customerBankAccountHolderName = customerBankAccountHolderName;
+    this.customerBankHolderName = customerBankHolderName;
     return this;
   }
 
    /**
    * Bank holder name of the customer.
-   * @return customerBankAccountHolderName
+   * @return customerBankHolderName
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Bank holder name of the customer.")
-  public String getCustomerBankAccountHolderName() {
-    return customerBankAccountHolderName;
+  public String getCustomerBankHolderName() {
+    return customerBankHolderName;
   }
 
 
-  public void setCustomerBankAccountHolderName(String customerBankAccountHolderName) {
-    this.customerBankAccountHolderName = customerBankAccountHolderName;
+  public void setCustomerBankHolderName(String customerBankHolderName) {
+    this.customerBankHolderName = customerBankHolderName;
   }
 
 
@@ -278,7 +278,7 @@ public class SubscriptionCustomerDetails {
     return Objects.equals(this.customerName, subscriptionCustomerDetails.customerName) &&
         Objects.equals(this.customerEmail, subscriptionCustomerDetails.customerEmail) &&
         Objects.equals(this.customerPhone, subscriptionCustomerDetails.customerPhone) &&
-        Objects.equals(this.customerBankAccountHolderName, subscriptionCustomerDetails.customerBankAccountHolderName) &&
+        Objects.equals(this.customerBankHolderName, subscriptionCustomerDetails.customerBankHolderName) &&
         Objects.equals(this.customerBankAccountNumber, subscriptionCustomerDetails.customerBankAccountNumber) &&
         Objects.equals(this.customerBankIfsc, subscriptionCustomerDetails.customerBankIfsc) &&
         Objects.equals(this.customerBankCode, subscriptionCustomerDetails.customerBankCode) &&
@@ -287,7 +287,7 @@ public class SubscriptionCustomerDetails {
 
   @Override
   public int hashCode() {
-    return Objects.hash(customerName, customerEmail, customerPhone, customerBankAccountHolderName, customerBankAccountNumber, customerBankIfsc, customerBankCode, customerBankAccountType);
+    return Objects.hash(customerName, customerEmail, customerPhone, customerBankHolderName, customerBankAccountNumber, customerBankIfsc, customerBankCode, customerBankAccountType);
   }
 
   @Override
@@ -297,7 +297,7 @@ public class SubscriptionCustomerDetails {
     sb.append("    customerName: ").append(toIndentedString(customerName)).append("\n");
     sb.append("    customerEmail: ").append(toIndentedString(customerEmail)).append("\n");
     sb.append("    customerPhone: ").append(toIndentedString(customerPhone)).append("\n");
-    sb.append("    customerBankAccountHolderName: ").append(toIndentedString(customerBankAccountHolderName)).append("\n");
+    sb.append("    customerBankHolderName: ").append(toIndentedString(customerBankHolderName)).append("\n");
     sb.append("    customerBankAccountNumber: ").append(toIndentedString(customerBankAccountNumber)).append("\n");
     sb.append("    customerBankIfsc: ").append(toIndentedString(customerBankIfsc)).append("\n");
     sb.append("    customerBankCode: ").append(toIndentedString(customerBankCode)).append("\n");
@@ -327,7 +327,7 @@ public class SubscriptionCustomerDetails {
     openapiFields.add("customer_name");
     openapiFields.add("customer_email");
     openapiFields.add("customer_phone");
-    openapiFields.add("customer_bank_account_holder_name");
+    openapiFields.add("customer_bank_holder_name");
     openapiFields.add("customer_bank_account_number");
     openapiFields.add("customer_bank_ifsc");
     openapiFields.add("customer_bank_code");
@@ -364,8 +364,8 @@ public class SubscriptionCustomerDetails {
       if (!jsonObj.get("customer_phone").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `customer_phone` to be a primitive type in the JSON string but got `%s`", jsonObj.get("customer_phone").toString()));
       }
-      if ((jsonObj.get("customer_bank_account_holder_name") != null && !jsonObj.get("customer_bank_account_holder_name").isJsonNull()) && !jsonObj.get("customer_bank_account_holder_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `customer_bank_account_holder_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("customer_bank_account_holder_name").toString()));
+      if ((jsonObj.get("customer_bank_holder_name") != null && !jsonObj.get("customer_bank_holder_name").isJsonNull()) && !jsonObj.get("customer_bank_holder_name").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `customer_bank_holder_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("customer_bank_holder_name").toString()));
       }
       if ((jsonObj.get("customer_bank_account_number") != null && !jsonObj.get("customer_bank_account_number").isJsonNull()) && !jsonObj.get("customer_bank_account_number").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `customer_bank_account_number` to be a primitive type in the JSON string but got `%s`", jsonObj.get("customer_bank_account_number").toString()));
@@ -407,8 +407,8 @@ public class SubscriptionCustomerDetails {
       if (!jsonObj.get("customer_phone").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `customer_phone` to be a primitive type in the JSON string but got `%s`", jsonObj.get("customer_phone").toString()));
       }
-      if ((jsonObj.get("customer_bank_account_holder_name") != null && !jsonObj.get("customer_bank_account_holder_name").isJsonNull()) && !jsonObj.get("customer_bank_account_holder_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `customer_bank_account_holder_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("customer_bank_account_holder_name").toString()));
+      if ((jsonObj.get("customer_bank_holder_name") != null && !jsonObj.get("customer_bank_holder_name").isJsonNull()) && !jsonObj.get("customer_bank_holder_name").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `customer_bank_holder_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("customer_bank_holder_name").toString()));
       }
       if ((jsonObj.get("customer_bank_account_number") != null && !jsonObj.get("customer_bank_account_number").isJsonNull()) && !jsonObj.get("customer_bank_account_number").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `customer_bank_account_number` to be a primitive type in the JSON string but got `%s`", jsonObj.get("customer_bank_account_number").toString()));
