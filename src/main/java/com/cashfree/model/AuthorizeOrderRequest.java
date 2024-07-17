@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * Request to capture or void transaction
  */
 @Schema(description = "Request to capture or void transaction")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-12T09:19:49.697679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-17T09:00:37.237094Z[Etc/UTC]")
 public class AuthorizeOrderRequest {
   /**
    * Type of authorization to run. Can be one of &#39;CAPTURE&#39; , &#39;VOID&#39;

@@ -8,7 +8,7 @@ Get Vendor Documents
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**documents** | [**List&lt;UpdateVendorResponseRelatedDocsInner&gt;**](UpdateVendorResponseRelatedDocsInner.md) |  |  [optional] |
+|**documents** | [**List&lt;VendorEntityRelatedDocsInner&gt;**](VendorEntityRelatedDocsInner.md) |  |  [optional] |
 
 
 

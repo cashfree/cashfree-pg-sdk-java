@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Card instrument meta information
  */
 @Schema(description = "Card instrument meta information")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-12T09:19:49.697679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-17T09:00:37.237094Z[Etc/UTC]")
 public class SavedInstrumentMeta {
   public static final String SERIALIZED_NAME_CARD_NETWORK = "card_network";
   @SerializedName(SERIALIZED_NAME_CARD_NETWORK)

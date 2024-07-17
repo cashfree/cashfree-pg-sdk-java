@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * How fast refund has to be proecessed
  */
 @Schema(description = "How fast refund has to be proecessed")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-12T09:19:49.697679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-17T09:00:37.237094Z[Etc/UTC]")
 public class RefundSpeed {
   public static final String SERIALIZED_NAME_REQUESTED = "requested";
   @SerializedName(SERIALIZED_NAME_REQUESTED)

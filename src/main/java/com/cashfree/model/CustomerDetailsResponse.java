@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * The customer details that are necessary. Note that you can pass dummy details if your use case does not require the customer details.
  */
 @Schema(description = "The customer details that are necessary. Note that you can pass dummy details if your use case does not require the customer details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-12T09:19:49.697679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-17T09:00:37.237094Z[Etc/UTC]")
 public class CustomerDetailsResponse {
   public static final String SERIALIZED_NAME_CUSTOMER_ID = "customer_id";
   @SerializedName(SERIALIZED_NAME_CUSTOMER_ID)
@@ -251,11 +251,11 @@ public class CustomerDetailsResponse {
   }
 
    /**
-   * Customer identifier at Cashfree. You will get this when you create/get customer        
+   * Customer identifier at Cashfree. You will get this when you create/get customer
    * @return customerUid
   **/
   @javax.annotation.Nullable
-  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Customer identifier at Cashfree. You will get this when you create/get customer        ")
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Customer identifier at Cashfree. You will get this when you create/get customer")
   public String getCustomerUid() {
     return customerUid;
   }
