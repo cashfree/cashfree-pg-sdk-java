@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Offer terms and condition object
  */
 @Schema(description = "Offer terms and condition object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-17T09:16:46.389568Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-07T11:53:02.829012Z[Etc/UTC]")
 public class OfferTnc {
   /**
    * TnC Type for the Offer. It can be either &#x60;text&#x60; or &#x60;link&#x60;

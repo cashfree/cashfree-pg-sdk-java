@@ -19,7 +19,7 @@ Update terminal response
 |**terminalNote** | **String** |  |  [optional] |
 |**terminalPhoneNo** | **String** |  |  [optional] |
 |**terminalStatus** | **String** |  |  [optional] |
-|**terminalMeta** | **String** |  |  [optional] |
+|**terminalMeta** | [**CreateTerminalRequestTerminalMeta**](CreateTerminalRequestTerminalMeta.md) |  |  [optional] |
 
 
 
