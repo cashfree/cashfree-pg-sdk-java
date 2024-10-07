@@ -19,7 +19,7 @@ Create terminal response object
 |**terminalNote** | **String** |  |  [optional] |
 |**terminalPhoneNo** | **String** |  |  [optional] |
 |**terminalStatus** | **String** |  |  [optional] |
-|**terminalMeta** | **String** |  |  [optional] |
+|**terminalMeta** | [**CreateTerminalRequestTerminalMeta**](CreateTerminalRequestTerminalMeta.md) |  |  [optional] |
 
 
 

@@ -14,6 +14,7 @@
 package com.cashfree.model;
 
 import java.util.Objects;
+import com.cashfree.model.CreateTerminalRequestTerminalMeta;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -52,7 +53,7 @@ import com.cashfree.JSON;
  * Create terminal response object
  */
 @Schema(description = "Create terminal response object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-17T09:16:46.389568Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-07T11:53:02.829012Z[Etc/UTC]")
 public class TerminalEntity {
   public static final String SERIALIZED_NAME_ADDED_ON = "added_on";
   @SerializedName(SERIALIZED_NAME_ADDED_ON)
@@ -100,7 +101,7 @@ public class TerminalEntity {
 
   public static final String SERIALIZED_NAME_TERMINAL_META = "terminal_meta";
   @SerializedName(SERIALIZED_NAME_TERMINAL_META)
-  private String terminalMeta;
+  private CreateTerminalRequestTerminalMeta terminalMeta;
 
   public TerminalEntity() {
   }
@@ -347,7 +348,7 @@ public class TerminalEntity {
   }
 
 
-  public TerminalEntity terminalMeta(String terminalMeta) {
+  public TerminalEntity terminalMeta(CreateTerminalRequestTerminalMeta terminalMeta) {
     
     this.terminalMeta = terminalMeta;
     return this;
@@ -359,12 +360,12 @@ public class TerminalEntity {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public String getTerminalMeta() {
+  public CreateTerminalRequestTerminalMeta getTerminalMeta() {
     return terminalMeta;
   }
 
 
-  public void setTerminalMeta(String terminalMeta) {
+  public void setTerminalMeta(CreateTerminalRequestTerminalMeta terminalMeta) {
     this.terminalMeta = terminalMeta;
   }
 
@@ -492,8 +493,9 @@ public class TerminalEntity {
       if ((jsonObj.get("terminal_status") != null && !jsonObj.get("terminal_status").isJsonNull()) && !jsonObj.get("terminal_status").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `terminal_status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("terminal_status").toString()));
       }
-      if ((jsonObj.get("terminal_meta") != null && !jsonObj.get("terminal_meta").isJsonNull()) && !jsonObj.get("terminal_meta").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `terminal_meta` to be a primitive type in the JSON string but got `%s`", jsonObj.get("terminal_meta").toString()));
+      // validate the optional field `terminal_meta`
+      if (jsonObj.get("terminal_meta") != null && !jsonObj.get("terminal_meta").isJsonNull()) {
+        CreateTerminalRequestTerminalMeta.validateJsonElement(jsonObj.get("terminal_meta"));
       }
   }
 
@@ -537,8 +539,10 @@ public class TerminalEntity {
       if ((jsonObj.get("terminal_status") != null && !jsonObj.get("terminal_status").isJsonNull()) && !jsonObj.get("terminal_status").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `terminal_status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("terminal_status").toString()));
       }
-      if ((jsonObj.get("terminal_meta") != null && !jsonObj.get("terminal_meta").isJsonNull()) && !jsonObj.get("terminal_meta").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `terminal_meta` to be a primitive type in the JSON string but got `%s`", jsonObj.get("terminal_meta").toString()));
+      // validate the optional field `terminal_meta`
+      if (jsonObj.get("terminal_meta") != null && !jsonObj.get("terminal_meta").isJsonNull()) {
+        CreateTerminalRequestTerminalMeta.validateJsonElement(jsonObj.get("terminal_meta"));
+        return true;
       }
       return false;
   }
