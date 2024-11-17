@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * Offers related to cards
  */
 @Schema(description = "Offers related to cards")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-07T11:53:02.829012Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-17T14:57:47.426649Z[Etc/UTC]")
 public class OfferCard {
   public static final String SERIALIZED_NAME_CARD = "card";
   @SerializedName(SERIALIZED_NAME_CARD)

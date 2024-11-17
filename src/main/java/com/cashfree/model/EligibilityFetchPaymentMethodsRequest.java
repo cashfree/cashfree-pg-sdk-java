@@ -54,7 +54,7 @@ import com.cashfree.JSON;
  * eligibilty request to find eligible payment method
  */
 @Schema(description = "eligibilty request to find eligible payment method")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-07T11:53:02.829012Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-17T14:57:47.426649Z[Etc/UTC]")
 public class EligibilityFetchPaymentMethodsRequest {
   public static final String SERIALIZED_NAME_QUERIES = "queries";
   @SerializedName(SERIALIZED_NAME_QUERIES)

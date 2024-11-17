@@ -57,7 +57,7 @@ import com.cashfree.JSON;
  * The refund entity
  */
 @Schema(description = "The refund entity")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-07T11:53:02.829012Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-17T14:57:47.426649Z[Etc/UTC]")
 public class RefundEntity {
   public static final String SERIALIZED_NAME_CF_PAYMENT_ID = "cf_payment_id";
   @SerializedName(SERIALIZED_NAME_CF_PAYMENT_ID)
@@ -270,58 +270,9 @@ public class RefundEntity {
   @SerializedName(SERIALIZED_NAME_REFUND_TYPE)
   private RefundTypeEnum refundType;
 
-  /**
-   * Method or speed of processing refund
-   */
-  @JsonAdapter(RefundModeEnum.Adapter.class)
-  public enum RefundModeEnum {
-    STANDARD("STANDARD"),
-    
-    INSTANT("INSTANT"),
-    
-    UNKNOWN_DEFAULT_OPEN_API("unknown_default_open_api");
-
-    private String value;
-
-    RefundModeEnum(String value) {
-      this.value = value;
-    }
-
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static RefundModeEnum fromValue(String value) {
-      for (RefundModeEnum b : RefundModeEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return UNKNOWN_DEFAULT_OPEN_API;
-    }
-
-    public static class Adapter extends TypeAdapter<RefundModeEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final RefundModeEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public RefundModeEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return RefundModeEnum.fromValue(value);
-      }
-    }
-  }
-
   public static final String SERIALIZED_NAME_REFUND_MODE = "refund_mode";
   @SerializedName(SERIALIZED_NAME_REFUND_MODE)
-  private RefundModeEnum refundMode;
+  private String refundMode;
 
   public static final String SERIALIZED_NAME_CREATED_AT = "created_at";
   @SerializedName(SERIALIZED_NAME_CREATED_AT)
@@ -676,7 +627,7 @@ public class RefundEntity {
   }
 
 
-  public RefundEntity refundMode(RefundModeEnum refundMode) {
+  public RefundEntity refundMode(String refundMode) {
     
     this.refundMode = refundMode;
     return this;
@@ -688,12 +639,12 @@ public class RefundEntity {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Method or speed of processing refund")
-  public RefundModeEnum getRefundMode() {
+  public String getRefundMode() {
     return refundMode;
   }
 
 
-  public void setRefundMode(RefundModeEnum refundMode) {
+  public void setRefundMode(String refundMode) {
     this.refundMode = refundMode;
   }
 

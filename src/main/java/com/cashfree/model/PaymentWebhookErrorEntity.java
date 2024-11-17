@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * error details present in the webhook
  */
 @Schema(description = "error details present in the webhook")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-07T11:53:02.829012Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-17T14:57:47.426649Z[Etc/UTC]")
 public class PaymentWebhookErrorEntity {
   public static final String SERIALIZED_NAME_ERROR_CODE = "error_code";
   @SerializedName(SERIALIZED_NAME_ERROR_CODE)

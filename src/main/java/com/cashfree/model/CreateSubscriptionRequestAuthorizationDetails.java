@@ -52,7 +52,7 @@ import com.cashfree.JSON;
 /**
  * CreateSubscriptionRequestAuthorizationDetails
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-07T11:53:02.829012Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-17T14:57:47.426649Z[Etc/UTC]")
 public class CreateSubscriptionRequestAuthorizationDetails {
   public static final String SERIALIZED_NAME_AUTHORIZATION_AMOUNT = "authorization_amount";
   @SerializedName(SERIALIZED_NAME_AUTHORIZATION_AMOUNT)
