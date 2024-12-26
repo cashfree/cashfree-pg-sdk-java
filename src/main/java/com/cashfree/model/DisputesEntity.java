@@ -16,6 +16,7 @@ package com.cashfree.model;
 import java.util.Objects;
 import com.cashfree.model.CustomerDetailsInDisputesEntity;
 import com.cashfree.model.Evidence;
+import com.cashfree.model.EvidencesToContestDispute;
 import com.cashfree.model.OrderDetailsInDisputesEntity;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -57,7 +58,7 @@ import com.cashfree.JSON;
 /**
  * DisputesEntity
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-26T12:56:23.887789Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-26T13:33:59.432802Z[Etc/UTC]")
 public class DisputesEntity {
   public static final String SERIALIZED_NAME_DISPUTE_ID = "dispute_id";
   @SerializedName(SERIALIZED_NAME_DISPUTE_ID)
@@ -275,7 +276,7 @@ public class DisputesEntity {
 
   public static final String SERIALIZED_NAME_PREFERRED_EVIDENCE = "preferred_evidence";
   @SerializedName(SERIALIZED_NAME_PREFERRED_EVIDENCE)
-  private Object preferredEvidence = null;
+  private List<EvidencesToContestDispute> preferredEvidence;
 
   public static final String SERIALIZED_NAME_DISPUTE_EVIDENCE = "dispute_evidence";
   @SerializedName(SERIALIZED_NAME_DISPUTE_EVIDENCE)
@@ -534,7 +535,7 @@ public class DisputesEntity {
   }
 
 
-  public DisputesEntity preferredEvidence(Object preferredEvidence) {
+  public DisputesEntity preferredEvidence(List<EvidencesToContestDispute> preferredEvidence) {
     
     this.preferredEvidence = preferredEvidence;
     return this;
@@ -545,13 +546,13 @@ public class DisputesEntity {
    * @return preferredEvidence
   **/
   @javax.annotation.Nullable
-  @Schema(example = "{\"prefferred_evidence\":[{\"document_type\":\"Delivery/Service Proof\",\"document_description\":\"Proof that the cardholder/customer received the goods or services.\"},{\"document_type\":\"Statement of Service\",\"document_description\":\"Account Statement of wallet where funds were loaded by customer.\"}],\"items\":{\"$ref\":\"#/components/schemas/EvidencesToContestDispute\"}}", requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public Object getPreferredEvidence() {
+  @Schema(example = "{\"prefferred_evidence\":[{\"document_type\":\"Delivery/Service Proof\",\"document_description\":\"Proof that the cardholder/customer received the goods or services.\"},{\"document_type\":\"Statement of Service\",\"document_description\":\"Account Statement of wallet where funds were loaded by customer.\"}]}", requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
+  public List<EvidencesToContestDispute> getPreferredEvidence() {
     return preferredEvidence;
   }
 
 
-  public void setPreferredEvidence(Object preferredEvidence) {
+  public void setPreferredEvidence(List<EvidencesToContestDispute> preferredEvidence) {
     this.preferredEvidence = preferredEvidence;
   }
 

@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Request body to update terminal status.
  */
 @Schema(description = "Request body to update terminal status.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-26T12:56:23.887789Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-26T13:33:59.432802Z[Etc/UTC]")
 public class UpdateTerminalStatusRequest {
   public static final String SERIALIZED_NAME_TERMINAL_STATUS = "terminal_status";
   @SerializedName(SERIALIZED_NAME_TERMINAL_STATUS)

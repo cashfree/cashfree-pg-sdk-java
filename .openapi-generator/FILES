@@ -201,6 +201,7 @@ docs/PaymentWebhookOrderEntity.md
 docs/PaymentsApi.md
 docs/PgReconciliationApi.md
 docs/PlanEntity.md
+docs/PreferredEvidence.md
 docs/RateLimitError.md
 docs/ReconEntity.md
 docs/ReconEntityDataInner.md
@@ -513,6 +514,7 @@ src/main/java/com/cashfree/model/PaymentWebhookErrorEntity.java
 src/main/java/com/cashfree/model/PaymentWebhookGatewayDetailsEntity.java
 src/main/java/com/cashfree/model/PaymentWebhookOrderEntity.java
 src/main/java/com/cashfree/model/PlanEntity.java
+src/main/java/com/cashfree/model/PreferredEvidence.java
 src/main/java/com/cashfree/model/RateLimitError.java
 src/main/java/com/cashfree/model/ReconEntity.java
 src/main/java/com/cashfree/model/ReconEntityDataInner.java
@@ -791,6 +793,7 @@ src/test/java/com/cashfree/model/PaymentWebhookGatewayDetailsEntityTest.java
 src/test/java/com/cashfree/model/PaymentWebhookOrderEntityTest.java
 src/test/java/com/cashfree/model/PaymentWebhookTest.java
 src/test/java/com/cashfree/model/PlanEntityTest.java
+src/test/java/com/cashfree/model/PreferredEvidenceTest.java
 src/test/java/com/cashfree/model/RateLimitErrorTest.java
 src/test/java/com/cashfree/model/ReconEntityDataInnerTest.java
 src/test/java/com/cashfree/model/ReconEntityTest.java
