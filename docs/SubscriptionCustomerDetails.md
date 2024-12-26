@@ -14,7 +14,7 @@ Subscription customer details.
 |**customerBankAccountHolderName** | **String** | Bank holder name of the customer. |  [optional] |
 |**customerBankAccountNumber** | **String** | Bank account number of the customer. |  [optional] |
 |**customerBankIfsc** | **String** | IFSC code of the customer. |  [optional] |
-|**customerBankCode** | **String** | Bank code of the customer. |  [optional] |
+|**customerBankCode** | **String** | Bank code of the customer. Refer to https://www.npci.org.in/PDF/nach/live-members-e-mandates/Live-Banks-in-API-E-Mandate.pdf |  [optional] |
 |**customerBankAccountType** | **String** | Bank account type of the customer. |  [optional] |
 
 

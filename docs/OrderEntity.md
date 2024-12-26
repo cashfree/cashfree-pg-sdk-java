@@ -22,6 +22,7 @@ The complete order entity
 |**customerDetails** | [**CustomerDetailsResponse**](CustomerDetailsResponse.md) |  |  [optional] |
 |**orderMeta** | [**OrderMeta**](OrderMeta.md) |  |  [optional] |
 |**orderTags** | **Map&lt;String, String&gt;** | Custom Tags in thr form of {\&quot;key\&quot;:\&quot;value\&quot;} which can be passed for an order. A maximum of 10 tags can be added |  [optional] |
+|**cartDetails** | [**CartDetailsEntity**](CartDetailsEntity.md) |  |  [optional] |
 
 
 

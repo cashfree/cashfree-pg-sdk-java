@@ -53,14 +53,16 @@ import com.cashfree.JSON;
  * simulate payment request object
  */
 @Schema(description = "simulate payment request object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-07T11:53:02.829012Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-26T12:56:23.887789Z[Etc/UTC]")
 public class SimulateRequest {
   /**
-   * Entity type should be PAYMENTS only.
+   * Entity type should be PAYMENTS or SUBS_PAYMENTS only.
    */
   @JsonAdapter(EntityEnum.Adapter.class)
   public enum EntityEnum {
     PAYMENTS("PAYMENTS"),
+    
+    SUBS_PAYMENTS("SUBS_PAYMENTS"),
     
     UNKNOWN_DEFAULT_OPEN_API("unknown_default_open_api");
 
@@ -124,11 +126,11 @@ public class SimulateRequest {
   }
 
    /**
-   * Entity type should be PAYMENTS only.
+   * Entity type should be PAYMENTS or SUBS_PAYMENTS only.
    * @return entity
   **/
   @javax.annotation.Nonnull
-  @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "Entity type should be PAYMENTS only.")
+  @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "Entity type should be PAYMENTS or SUBS_PAYMENTS only.")
   public EntityEnum getEntity() {
     return entity;
   }
@@ -146,11 +148,11 @@ public class SimulateRequest {
   }
 
    /**
-   * In case of Entity type is PAYMENTS, entity_id will be transactionId
+   * If the entity type is PAYMENTS, the entity_id will be the transactionId. If the entity type is SUBS_PAYMENTS, the entity_id will be the merchantTxnId
    * @return entityId
   **/
   @javax.annotation.Nonnull
-  @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "In case of Entity type is PAYMENTS, entity_id will be transactionId")
+  @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "If the entity type is PAYMENTS, the entity_id will be the transactionId. If the entity type is SUBS_PAYMENTS, the entity_id will be the merchantTxnId")
   public String getEntityId() {
     return entityId;
   }

@@ -4,6 +4,7 @@ All URIs are relative to *https://sandbox.cashfree.com/pg*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
+| [**PGESCreateAdjustment**](EasySplitApi.md#PGESCreateAdjustment) | **POST** /easy-split/vendors/{vendor_id}/adjustment | Create Adjustment |
 | [**PGESCreateOnDemandTransfer**](EasySplitApi.md#PGESCreateOnDemandTransfer) | **POST** /easy-split/vendors/{vendor_id}/transfer | Create On Demand Transfer |
 | [**PGESCreateVendors**](EasySplitApi.md#PGESCreateVendors) | **POST** /easy-split/vendors | Create vendor |
 | [**PGESDownloadVendorsDocs**](EasySplitApi.md#PGESDownloadVendorsDocs) | **GET** /easy-split/vendor-docs/{vendor_id}/download/{doc_type} | Download Vendor Documents |
@@ -16,7 +17,84 @@ All URIs are relative to *https://sandbox.cashfree.com/pg*
 | [**PGESUploadVendorsDocs**](EasySplitApi.md#PGESUploadVendorsDocs) | **POST** /easy-split/vendor-docs/{vendor_id} | Upload Vendor Docs |
 | [**PGOrderSplitAfterPayment**](EasySplitApi.md#PGOrderSplitAfterPayment) | **POST** /easy-split/orders/{order_id}/split | Split After Payment |
 | [**PGOrderStaticSplit**](EasySplitApi.md#PGOrderStaticSplit) | **POST** /easy-split/static-split | Create Static Split Configuration |
+| [**PGSplitOrderRecon**](EasySplitApi.md#PGSplitOrderRecon) | **GET** /easy-split/orders/{order_id} | Get Split and Settlement Details by OrderID |
 
+
+
+## PGESCreateAdjustment
+
+> VendorAdjustmentSuccessResponse PGESCreateAdjustment(xApiVersion, vendorId, xRequestId, xIdempotencyKey, vendorAdjustmentRequest)
+
+Create Adjustment
+
+The Create Adjustment API will create a adjustment request either from vendor to the merchant or from merchant to the vendor.
+
+### Example
+
+```java
+// Import classes:
+import com.cashfree.*;
+import com.cashfree.models.*;
+
+
+public class Example {
+    public static void main(String[] args) {
+        
+        Cashfree.XClientId = "TEST32461bf279b7ab306cdae3b423";
+        Cashfree.XClientSecret = "TEST4a3236fe94e6b1e0e60b875639e2008695b977b2";
+        Cashfree.XEnvironment = Cashfree.SANDBOX;
+
+        Cashfree cashfree = new Cashfree();
+
+        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String vendorId = "your-vendor-id"; // String | The id which uniquely identifies your vendor.
+        String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
+        VendorAdjustmentRequest vendorAdjustmentRequest = new VendorAdjustmentRequest(); // VendorAdjustmentRequest | Vendor Adjustment Request Body.
+        try {
+            VendorAdjustmentSuccessResponse result = cashfree.PGESCreateAdjustment(xApiVersion, vendorId, xRequestId, xIdempotencyKey, vendorAdjustmentRequestOkHttpClient httpClient);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling EasySplitApi#PGESCreateAdjustment");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
+| **vendorId** | **String**| The id which uniquely identifies your vendor. | |
+| **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
+| **vendorAdjustmentRequest** | [**VendorAdjustmentRequest**](VendorAdjustmentRequest.md)| Vendor Adjustment Request Body. | [optional] |
+
+### Return type
+
+[**VendorAdjustmentSuccessResponse**](VendorAdjustmentSuccessResponse.md)
+
+### Authorization
+
+[XPartnerAPIKey](../README.md#XPartnerAPIKey), [XClientSecret](../README.md#XClientSecret), [XPartnerMerchantID](../README.md#XPartnerMerchantID), [XClientID](../README.md#XClientID), [XClientSignatureHeader](../README.md#XClientSignatureHeader)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Vendor Adjustment Success Response. |  -  |
+| **400** | Adjust Vendor Balance Failure Response. |  -  |
 
 
 ## PGESCreateOnDemandTransfer
@@ -924,4 +1002,78 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | Static Split Success Response. |  -  |
 | **400** | Static Split Failure Response. |  -  |
+
+
+## PGSplitOrderRecon
+
+> SplitOrderReconSuccessResponse PGSplitOrderRecon(xApiVersion, orderId, xRequestId, xIdempotencyKey)
+
+Get Split and Settlement Details by OrderID
+
+Use this API to get all the split details, settled and unsettled transactions details of each vendor who were part of a particular order by providing order Id or start date and end date.
+
+### Example
+
+```java
+// Import classes:
+import com.cashfree.*;
+import com.cashfree.models.*;
+
+
+public class Example {
+    public static void main(String[] args) {
+        
+        Cashfree.XClientId = "TEST32461bf279b7ab306cdae3b423";
+        Cashfree.XClientSecret = "TEST4a3236fe94e6b1e0e60b875639e2008695b977b2";
+        Cashfree.XEnvironment = Cashfree.SANDBOX;
+
+        Cashfree cashfree = new Cashfree();
+
+        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String orderId = "your-order-id"; // String | The id which uniquely identifies your order
+        String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
+        try {
+            SplitOrderReconSuccessResponse result = cashfree.PGSplitOrderRecon(xApiVersion, orderId, xRequestId, xIdempotencyKeyOkHttpClient httpClient);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling EasySplitApi#PGSplitOrderRecon");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
+| **orderId** | **String**| The id which uniquely identifies your order | |
+| **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
+
+### Return type
+
+[**SplitOrderReconSuccessResponse**](SplitOrderReconSuccessResponse.md)
+
+### Authorization
+
+[XPartnerAPIKey](../README.md#XPartnerAPIKey), [XClientSecret](../README.md#XClientSecret), [XPartnerMerchantID](../README.md#XPartnerMerchantID), [XClientID](../README.md#XClientID), [XClientSignatureHeader](../README.md#XClientSignatureHeader)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Get Split and Settlement Details by OrderID |  -  |
+| **404** | Split Order Recon Failure Response. |  -  |
 

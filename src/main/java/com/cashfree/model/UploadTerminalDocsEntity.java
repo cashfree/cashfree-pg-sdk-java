@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Upload the terminal documents.
  */
 @Schema(description = "Upload the terminal documents.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-07T11:53:02.829012Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-26T12:56:23.887789Z[Etc/UTC]")
 public class UploadTerminalDocsEntity {
   public static final String SERIALIZED_NAME_CF_TERMINAL_ID = "cf_terminal_id";
   @SerializedName(SERIALIZED_NAME_CF_TERMINAL_ID)

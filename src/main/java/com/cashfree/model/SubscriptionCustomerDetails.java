@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Subscription customer details.
  */
 @Schema(description = "Subscription customer details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-07T11:53:02.829012Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-26T12:56:23.887789Z[Etc/UTC]")
 public class SubscriptionCustomerDetails {
   public static final String SERIALIZED_NAME_CUSTOMER_NAME = "customer_name";
   @SerializedName(SERIALIZED_NAME_CUSTOMER_NAME)
@@ -228,11 +228,11 @@ public class SubscriptionCustomerDetails {
   }
 
    /**
-   * Bank code of the customer.
+   * Bank code of the customer. Refer to https://www.npci.org.in/PDF/nach/live-members-e-mandates/Live-Banks-in-API-E-Mandate.pdf
    * @return customerBankCode
   **/
   @javax.annotation.Nullable
-  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Bank code of the customer.")
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Bank code of the customer. Refer to https://www.npci.org.in/PDF/nach/live-members-e-mandates/Live-Banks-in-API-E-Mandate.pdf")
   public String getCustomerBankCode() {
     return customerBankCode;
   }

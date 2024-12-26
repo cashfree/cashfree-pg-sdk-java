@@ -17,6 +17,7 @@ The response returned for Get, Create or Manage Subscription APIs.
 |**subscriptionId** | **String** | A unique ID passed by merchant for identifying the subscription. |  [optional] |
 |**subscriptionMeta** | [**SubscriptionEntitySubscriptionMeta**](SubscriptionEntitySubscriptionMeta.md) |  |  [optional] |
 |**subscriptionNote** | **String** | Note for the subscription. |  [optional] |
+|**subscriptionSessionId** | **String** | Subscription Session Id. |  [optional] |
 |**subscriptionPaymentSplits** | [**List&lt;SubscriptionPaymentSplitItem&gt;**](SubscriptionPaymentSplitItem.md) | Payment splits for the subscription. |  [optional] |
 |**subscriptionStatus** | **String** | Status of the subscription. |  [optional] |
 |**subscriptionTags** | **Object** | Tags for the subscription. |  [optional] |

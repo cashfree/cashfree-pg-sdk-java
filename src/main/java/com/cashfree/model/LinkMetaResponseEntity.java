@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Payment link meta information object
  */
 @Schema(description = "Payment link meta information object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-07T11:53:02.829012Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-26T12:56:23.887789Z[Etc/UTC]")
 public class LinkMetaResponseEntity {
   public static final String SERIALIZED_NAME_NOTIFY_URL = "notify_url";
   @SerializedName(SERIALIZED_NAME_NOTIFY_URL)
@@ -60,7 +60,7 @@ public class LinkMetaResponseEntity {
 
   public static final String SERIALIZED_NAME_UPI_INTENT = "upi_intent";
   @SerializedName(SERIALIZED_NAME_UPI_INTENT)
-  private Boolean upiIntent;
+  private String upiIntent;
 
   public static final String SERIALIZED_NAME_RETURN_URL = "return_url";
   @SerializedName(SERIALIZED_NAME_RETURN_URL)
@@ -95,7 +95,7 @@ public class LinkMetaResponseEntity {
   }
 
 
-  public LinkMetaResponseEntity upiIntent(Boolean upiIntent) {
+  public LinkMetaResponseEntity upiIntent(String upiIntent) {
     
     this.upiIntent = upiIntent;
     return this;
@@ -107,12 +107,12 @@ public class LinkMetaResponseEntity {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "If \"true\", link will directly open UPI Intent flow on mobile, and normal link flow elsewhere")
-  public Boolean getUpiIntent() {
+  public String getUpiIntent() {
     return upiIntent;
   }
 
 
-  public void setUpiIntent(Boolean upiIntent) {
+  public void setUpiIntent(String upiIntent) {
     this.upiIntent = upiIntent;
   }
 
@@ -233,6 +233,9 @@ public class LinkMetaResponseEntity {
       if ((jsonObj.get("notify_url") != null && !jsonObj.get("notify_url").isJsonNull()) && !jsonObj.get("notify_url").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `notify_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("notify_url").toString()));
       }
+      if ((jsonObj.get("upi_intent") != null && !jsonObj.get("upi_intent").isJsonNull()) && !jsonObj.get("upi_intent").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `upi_intent` to be a primitive type in the JSON string but got `%s`", jsonObj.get("upi_intent").toString()));
+      }
       if ((jsonObj.get("return_url") != null && !jsonObj.get("return_url").isJsonNull()) && !jsonObj.get("return_url").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `return_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("return_url").toString()));
       }
@@ -253,6 +256,9 @@ public class LinkMetaResponseEntity {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("notify_url") != null && !jsonObj.get("notify_url").isJsonNull()) && !jsonObj.get("notify_url").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `notify_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("notify_url").toString()));
+      }
+      if ((jsonObj.get("upi_intent") != null && !jsonObj.get("upi_intent").isJsonNull()) && !jsonObj.get("upi_intent").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `upi_intent` to be a primitive type in the JSON string but got `%s`", jsonObj.get("upi_intent").toString()));
       }
       if ((jsonObj.get("return_url") != null && !jsonObj.get("return_url").isJsonNull()) && !jsonObj.get("return_url").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `return_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("return_url").toString()));

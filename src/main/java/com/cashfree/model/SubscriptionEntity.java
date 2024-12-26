@@ -59,7 +59,7 @@ import com.cashfree.JSON;
  * The response returned for Get, Create or Manage Subscription APIs.
  */
 @Schema(description = "The response returned for Get, Create or Manage Subscription APIs.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-07T11:53:02.829012Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-26T12:56:23.887789Z[Etc/UTC]")
 public class SubscriptionEntity {
   public static final String SERIALIZED_NAME_AUTHORISATION_DETAILS = "authorisation_details";
   @SerializedName(SERIALIZED_NAME_AUTHORISATION_DETAILS)
@@ -96,6 +96,10 @@ public class SubscriptionEntity {
   public static final String SERIALIZED_NAME_SUBSCRIPTION_NOTE = "subscription_note";
   @SerializedName(SERIALIZED_NAME_SUBSCRIPTION_NOTE)
   private String subscriptionNote;
+
+  public static final String SERIALIZED_NAME_SUBSCRIPTION_SESSION_ID = "subscription_session_id";
+  @SerializedName(SERIALIZED_NAME_SUBSCRIPTION_SESSION_ID)
+  private String subscriptionSessionId;
 
   public static final String SERIALIZED_NAME_SUBSCRIPTION_PAYMENT_SPLITS = "subscription_payment_splits";
   @SerializedName(SERIALIZED_NAME_SUBSCRIPTION_PAYMENT_SPLITS)
@@ -310,6 +314,28 @@ public class SubscriptionEntity {
   }
 
 
+  public SubscriptionEntity subscriptionSessionId(String subscriptionSessionId) {
+    
+    this.subscriptionSessionId = subscriptionSessionId;
+    return this;
+  }
+
+   /**
+   * Subscription Session Id.
+   * @return subscriptionSessionId
+  **/
+  @javax.annotation.Nullable
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Subscription Session Id.")
+  public String getSubscriptionSessionId() {
+    return subscriptionSessionId;
+  }
+
+
+  public void setSubscriptionSessionId(String subscriptionSessionId) {
+    this.subscriptionSessionId = subscriptionSessionId;
+  }
+
+
   public SubscriptionEntity subscriptionPaymentSplits(List<SubscriptionPaymentSplitItem> subscriptionPaymentSplits) {
     
     this.subscriptionPaymentSplits = subscriptionPaymentSplits;
@@ -403,6 +429,7 @@ public class SubscriptionEntity {
         Objects.equals(this.subscriptionId, subscriptionEntity.subscriptionId) &&
         Objects.equals(this.subscriptionMeta, subscriptionEntity.subscriptionMeta) &&
         Objects.equals(this.subscriptionNote, subscriptionEntity.subscriptionNote) &&
+        Objects.equals(this.subscriptionSessionId, subscriptionEntity.subscriptionSessionId) &&
         Objects.equals(this.subscriptionPaymentSplits, subscriptionEntity.subscriptionPaymentSplits) &&
         Objects.equals(this.subscriptionStatus, subscriptionEntity.subscriptionStatus) &&
         Objects.equals(this.subscriptionTags, subscriptionEntity.subscriptionTags);
@@ -410,7 +437,7 @@ public class SubscriptionEntity {
 
   @Override
   public int hashCode() {
-    return Objects.hash(authorisationDetails, cfSubscriptionId, customerDetails, planDetails, subscriptionExpiryTime, subscriptionFirstChargeTime, subscriptionId, subscriptionMeta, subscriptionNote, subscriptionPaymentSplits, subscriptionStatus, subscriptionTags);
+    return Objects.hash(authorisationDetails, cfSubscriptionId, customerDetails, planDetails, subscriptionExpiryTime, subscriptionFirstChargeTime, subscriptionId, subscriptionMeta, subscriptionNote, subscriptionSessionId, subscriptionPaymentSplits, subscriptionStatus, subscriptionTags);
   }
 
   @Override
@@ -426,6 +453,7 @@ public class SubscriptionEntity {
     sb.append("    subscriptionId: ").append(toIndentedString(subscriptionId)).append("\n");
     sb.append("    subscriptionMeta: ").append(toIndentedString(subscriptionMeta)).append("\n");
     sb.append("    subscriptionNote: ").append(toIndentedString(subscriptionNote)).append("\n");
+    sb.append("    subscriptionSessionId: ").append(toIndentedString(subscriptionSessionId)).append("\n");
     sb.append("    subscriptionPaymentSplits: ").append(toIndentedString(subscriptionPaymentSplits)).append("\n");
     sb.append("    subscriptionStatus: ").append(toIndentedString(subscriptionStatus)).append("\n");
     sb.append("    subscriptionTags: ").append(toIndentedString(subscriptionTags)).append("\n");
@@ -460,6 +488,7 @@ public class SubscriptionEntity {
     openapiFields.add("subscription_id");
     openapiFields.add("subscription_meta");
     openapiFields.add("subscription_note");
+    openapiFields.add("subscription_session_id");
     openapiFields.add("subscription_payment_splits");
     openapiFields.add("subscription_status");
     openapiFields.add("subscription_tags");
@@ -507,6 +536,9 @@ public class SubscriptionEntity {
       }
       if ((jsonObj.get("subscription_note") != null && !jsonObj.get("subscription_note").isJsonNull()) && !jsonObj.get("subscription_note").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `subscription_note` to be a primitive type in the JSON string but got `%s`", jsonObj.get("subscription_note").toString()));
+      }
+      if ((jsonObj.get("subscription_session_id") != null && !jsonObj.get("subscription_session_id").isJsonNull()) && !jsonObj.get("subscription_session_id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `subscription_session_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("subscription_session_id").toString()));
       }
       if (jsonObj.get("subscription_payment_splits") != null && !jsonObj.get("subscription_payment_splits").isJsonNull()) {
         JsonArray jsonArraysubscriptionPaymentSplits = jsonObj.getAsJsonArray("subscription_payment_splits");
@@ -571,6 +603,9 @@ public class SubscriptionEntity {
       }
       if ((jsonObj.get("subscription_note") != null && !jsonObj.get("subscription_note").isJsonNull()) && !jsonObj.get("subscription_note").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `subscription_note` to be a primitive type in the JSON string but got `%s`", jsonObj.get("subscription_note").toString()));
+      }
+      if ((jsonObj.get("subscription_session_id") != null && !jsonObj.get("subscription_session_id").isJsonNull()) && !jsonObj.get("subscription_session_id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `subscription_session_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("subscription_session_id").toString()));
       }
       if (jsonObj.get("subscription_payment_splits") != null && !jsonObj.get("subscription_payment_splits").isJsonNull()) {
         JsonArray jsonArraysubscriptionPaymentSplits = jsonObj.getAsJsonArray("subscription_payment_splits");

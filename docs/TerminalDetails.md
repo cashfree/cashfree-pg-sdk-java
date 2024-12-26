@@ -15,7 +15,7 @@ Use this if you are creating an order for cashfree's softPOS
 |**terminalId** | **String** | terminal id for merchant reference |  [optional] |
 |**terminalName** | **String** | name of terminal/agent/storefront |  [optional] |
 |**terminalNote** | **String** | note given by merchant while creating the terminal |  [optional] |
-|**terminalPhoneNo** | **String** | mobile num of the terminal/agent/storefront |  |
+|**terminalPhoneNo** | **String** | mobile num of the terminal/agent/storefront,This is a required parameter when you do not provide the cf_terminal_id. |  |
 |**terminalStatus** | **String** | status of terminal active/inactive |  [optional] |
 |**terminalType** | **String** | To identify the type of terminal product in use, in this case it is SPOS. |  |
 

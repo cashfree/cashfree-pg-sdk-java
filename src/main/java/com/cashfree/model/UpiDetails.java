@@ -51,7 +51,7 @@ import com.cashfree.JSON;
 /**
  * UpiDetails
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-07T11:53:02.829012Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-26T12:56:23.887789Z[Etc/UTC]")
 public class UpiDetails {
   public static final String SERIALIZED_NAME_VPA = "vpa";
   @SerializedName(SERIALIZED_NAME_VPA)

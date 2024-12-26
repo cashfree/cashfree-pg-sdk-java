@@ -14,6 +14,7 @@
 package com.cashfree.model;
 
 import java.util.Objects;
+import com.cashfree.model.CartDetails;
 import com.cashfree.model.CustomerDetails;
 import com.cashfree.model.OrderMeta;
 import com.cashfree.model.TerminalDetails;
@@ -60,7 +61,7 @@ import com.cashfree.JSON;
  * Request body to create an order at cashfree
  */
 @Schema(description = "Request body to create an order at cashfree")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-07T11:53:02.829012Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-26T12:56:23.887789Z[Etc/UTC]")
 public class CreateOrderRequest {
   public static final String SERIALIZED_NAME_ORDER_ID = "order_id";
   @SerializedName(SERIALIZED_NAME_ORDER_ID)
@@ -73,6 +74,10 @@ public class CreateOrderRequest {
   public static final String SERIALIZED_NAME_ORDER_CURRENCY = "order_currency";
   @SerializedName(SERIALIZED_NAME_ORDER_CURRENCY)
   private String orderCurrency;
+
+  public static final String SERIALIZED_NAME_CART_DETAILS = "cart_details";
+  @SerializedName(SERIALIZED_NAME_CART_DETAILS)
+  private CartDetails cartDetails;
 
   public static final String SERIALIZED_NAME_CUSTOMER_DETAILS = "customer_details";
   @SerializedName(SERIALIZED_NAME_CUSTOMER_DETAILS)
@@ -169,6 +174,28 @@ public class CreateOrderRequest {
 
   public void setOrderCurrency(String orderCurrency) {
     this.orderCurrency = orderCurrency;
+  }
+
+
+  public CreateOrderRequest cartDetails(CartDetails cartDetails) {
+    
+    this.cartDetails = cartDetails;
+    return this;
+  }
+
+   /**
+   * Get cartDetails
+   * @return cartDetails
+  **/
+  @javax.annotation.Nullable
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
+  public CartDetails getCartDetails() {
+    return cartDetails;
+  }
+
+
+  public void setCartDetails(CartDetails cartDetails) {
+    this.cartDetails = cartDetails;
   }
 
 
@@ -355,6 +382,7 @@ public class CreateOrderRequest {
     return Objects.equals(this.orderId, createOrderRequest.orderId) &&
         Objects.equals(this.orderAmount, createOrderRequest.orderAmount) &&
         Objects.equals(this.orderCurrency, createOrderRequest.orderCurrency) &&
+        Objects.equals(this.cartDetails, createOrderRequest.cartDetails) &&
         Objects.equals(this.customerDetails, createOrderRequest.customerDetails) &&
         Objects.equals(this.terminal, createOrderRequest.terminal) &&
         Objects.equals(this.orderMeta, createOrderRequest.orderMeta) &&
@@ -366,7 +394,7 @@ public class CreateOrderRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(orderId, orderAmount, orderCurrency, customerDetails, terminal, orderMeta, orderExpiryTime, orderNote, orderTags, orderSplits);
+    return Objects.hash(orderId, orderAmount, orderCurrency, cartDetails, customerDetails, terminal, orderMeta, orderExpiryTime, orderNote, orderTags, orderSplits);
   }
 
   @Override
@@ -376,6 +404,7 @@ public class CreateOrderRequest {
     sb.append("    orderId: ").append(toIndentedString(orderId)).append("\n");
     sb.append("    orderAmount: ").append(toIndentedString(orderAmount)).append("\n");
     sb.append("    orderCurrency: ").append(toIndentedString(orderCurrency)).append("\n");
+    sb.append("    cartDetails: ").append(toIndentedString(cartDetails)).append("\n");
     sb.append("    customerDetails: ").append(toIndentedString(customerDetails)).append("\n");
     sb.append("    terminal: ").append(toIndentedString(terminal)).append("\n");
     sb.append("    orderMeta: ").append(toIndentedString(orderMeta)).append("\n");
@@ -408,6 +437,7 @@ public class CreateOrderRequest {
     openapiFields.add("order_id");
     openapiFields.add("order_amount");
     openapiFields.add("order_currency");
+    openapiFields.add("cart_details");
     openapiFields.add("customer_details");
     openapiFields.add("terminal");
     openapiFields.add("order_meta");
@@ -444,6 +474,10 @@ public class CreateOrderRequest {
       }
       if (!jsonObj.get("order_currency").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `order_currency` to be a primitive type in the JSON string but got `%s`", jsonObj.get("order_currency").toString()));
+      }
+      // validate the optional field `cart_details`
+      if (jsonObj.get("cart_details") != null && !jsonObj.get("cart_details").isJsonNull()) {
+        CartDetails.validateJsonElement(jsonObj.get("cart_details"));
       }
       // validate the required field `customer_details`
       CustomerDetails.validateJsonElement(jsonObj.get("customer_details"));
@@ -499,6 +533,11 @@ public class CreateOrderRequest {
       }
       if (!jsonObj.get("order_currency").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `order_currency` to be a primitive type in the JSON string but got `%s`", jsonObj.get("order_currency").toString()));
+      }
+      // validate the optional field `cart_details`
+      if (jsonObj.get("cart_details") != null && !jsonObj.get("cart_details").isJsonNull()) {
+        CartDetails.validateJsonElement(jsonObj.get("cart_details"));
+        return true;
       }
       // validate the required field `customer_details`
       CustomerDetails.validateJsonElement(jsonObj.get("customer_details"));

@@ -15,7 +15,7 @@ All URIs are relative to *https://sandbox.cashfree.com/pg*
 | [**SubsFetchSubscriptionRefund**](SubscriptionApi.md#SubsFetchSubscriptionRefund) | **GET** /subscriptions/{subscription_id}/refunds/{refund_id} | Fetch details of a refund. |
 | [**SubsManageSubscription**](SubscriptionApi.md#SubsManageSubscription) | **POST** /subscriptions/{subscription_id}/manage | Manage a subscription. |
 | [**SubsManageSubscriptionPayment**](SubscriptionApi.md#SubsManageSubscriptionPayment) | **POST** /subscriptions/{subscription_id}/payments/{payment_id}/manage | Manage a single payment. |
-| [**SubscriptionDocumentUpload**](SubscriptionApi.md#SubscriptionDocumentUpload) | **POST** /subscriptions/pay/documents/{payment_id} | API to upload Physical Nach for Physical Nach Authorization. |
+| [**SubscriptionDocumentUpload**](SubscriptionApi.md#SubscriptionDocumentUpload) | **POST** /subscriptions/pay/documents/{payment_id} | API to upload file for Physical Nach Authorization. |
 | [**SubscriptionEligibility**](SubscriptionApi.md#SubscriptionEligibility) | **POST** /subscriptions/eligibility/payment_methods | API to get all the payment method details available for subscription payments. |
 
 
@@ -26,7 +26,7 @@ All URIs are relative to *https://sandbox.cashfree.com/pg*
 
 Raise a charge or create an auth.
 
-Use this API to create an auth or to raise a charge .
+Use this API to create an auth or to raise a charge.
 
 ### Example
 
@@ -900,9 +900,9 @@ public class Example {
 
 > UploadPnachImageResponse SubscriptionDocumentUpload(xApiVersion, paymentId, _file, paymentId2, action, xRequestId, xIdempotencyKey)
 
-API to upload Physical Nach for Physical Nach Authorization.
+API to upload file for Physical Nach Authorization.
 
-Use this API to upload Physical Nach for Physical Nach Authorization.
+Use this API to upload file for Physical Nach Authorization.
 
 ### Example
 

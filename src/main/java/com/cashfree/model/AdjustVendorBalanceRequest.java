@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * Adjust Vendor Balance Request
  */
 @Schema(description = "Adjust Vendor Balance Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-07T11:53:02.829012Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-26T12:56:23.887789Z[Etc/UTC]")
 public class AdjustVendorBalanceRequest {
   public static final String SERIALIZED_NAME_TRANSFER_FROM = "transfer_from";
   @SerializedName(SERIALIZED_NAME_TRANSFER_FROM)
