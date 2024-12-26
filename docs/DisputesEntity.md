@@ -18,7 +18,7 @@
 |**resolvedAt** | **String** | This is the time when the dispute case was closed. |  [optional] |
 |**disputeStatus** | [**DisputeStatusEnum**](#DisputeStatusEnum) |  |  [optional] |
 |**cfDisputeRemarks** | **String** |  |  [optional] |
-|**preferredEvidence** | **Object** |  |  [optional] |
+|**preferredEvidence** |  |  |  [optional] |
 |**disputeEvidence** |  |  |  [optional] |
 |**orderDetails** | [**OrderDetailsInDisputesEntity**](OrderDetailsInDisputesEntity.md) |  |  [optional] |
 |**customerDetails** | [**CustomerDetailsInDisputesEntity**](CustomerDetailsInDisputesEntity.md) |  |  [optional] |

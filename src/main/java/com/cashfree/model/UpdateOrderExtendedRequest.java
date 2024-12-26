@@ -56,7 +56,7 @@ import com.cashfree.JSON;
  * Request Body to Update extended data related to order
  */
 @Schema(description = "Request Body to Update extended data related to order")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-26T12:56:23.887789Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-26T13:33:59.432802Z[Etc/UTC]")
 public class UpdateOrderExtendedRequest {
   public static final String SERIALIZED_NAME_SHIPMENT_DETAILS = "shipment_details";
   @SerializedName(SERIALIZED_NAME_SHIPMENT_DETAILS)

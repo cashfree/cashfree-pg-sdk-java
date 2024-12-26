@@ -55,7 +55,7 @@ import com.cashfree.JSON;
  * The cart details that are necessary like shipping address, billing address and more.
  */
 @Schema(description = "The cart details that are necessary like shipping address, billing address and more.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-26T12:56:23.887789Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-26T13:33:59.432802Z[Etc/UTC]")
 public class ExtendedCartDetails {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)

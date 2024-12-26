@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Request body to demap soundbox vpa
  */
 @Schema(description = "Request body to demap soundbox vpa")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-26T12:56:23.887789Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-26T13:33:59.432802Z[Etc/UTC]")
 public class DemapSoundboxVpaRequest {
   public static final String SERIALIZED_NAME_CF_TERMINAL_ID = "cf_terminal_id";
   @SerializedName(SERIALIZED_NAME_CF_TERMINAL_ID)
