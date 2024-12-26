@@ -14,6 +14,7 @@
 package com.cashfree.model;
 
 import java.util.Objects;
+import com.cashfree.model.CartDetailsEntity;
 import com.cashfree.model.CustomerDetailsResponse;
 import com.cashfree.model.OrderMeta;
 import com.cashfree.model.VendorSplit;
@@ -61,7 +62,7 @@ import com.cashfree.JSON;
  * The complete order entity
  */
 @Schema(description = "The complete order entity")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-07T11:53:02.829012Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-26T12:56:23.887789Z[Etc/UTC]")
 public class OrderEntity {
   public static final String SERIALIZED_NAME_CF_ORDER_ID = "cf_order_id";
   @SerializedName(SERIALIZED_NAME_CF_ORDER_ID)
@@ -118,6 +119,10 @@ public class OrderEntity {
   public static final String SERIALIZED_NAME_ORDER_TAGS = "order_tags";
   @SerializedName(SERIALIZED_NAME_ORDER_TAGS)
   private Map<String, String> orderTags = new HashMap<>();
+
+  public static final String SERIALIZED_NAME_CART_DETAILS = "cart_details";
+  @SerializedName(SERIALIZED_NAME_CART_DETAILS)
+  private CartDetailsEntity cartDetails;
 
   public OrderEntity() {
   }
@@ -446,6 +451,28 @@ public class OrderEntity {
   }
 
 
+  public OrderEntity cartDetails(CartDetailsEntity cartDetails) {
+    
+    this.cartDetails = cartDetails;
+    return this;
+  }
+
+   /**
+   * Get cartDetails
+   * @return cartDetails
+  **/
+  @javax.annotation.Nullable
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
+  public CartDetailsEntity getCartDetails() {
+    return cartDetails;
+  }
+
+
+  public void setCartDetails(CartDetailsEntity cartDetails) {
+    this.cartDetails = cartDetails;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -469,12 +496,13 @@ public class OrderEntity {
         Objects.equals(this.orderSplits, orderEntity.orderSplits) &&
         Objects.equals(this.customerDetails, orderEntity.customerDetails) &&
         Objects.equals(this.orderMeta, orderEntity.orderMeta) &&
-        Objects.equals(this.orderTags, orderEntity.orderTags);
+        Objects.equals(this.orderTags, orderEntity.orderTags) &&
+        Objects.equals(this.cartDetails, orderEntity.cartDetails);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(cfOrderId, orderId, entity, orderCurrency, orderAmount, orderStatus, paymentSessionId, orderExpiryTime, orderNote, createdAt, orderSplits, customerDetails, orderMeta, orderTags);
+    return Objects.hash(cfOrderId, orderId, entity, orderCurrency, orderAmount, orderStatus, paymentSessionId, orderExpiryTime, orderNote, createdAt, orderSplits, customerDetails, orderMeta, orderTags, cartDetails);
   }
 
   @Override
@@ -495,6 +523,7 @@ public class OrderEntity {
     sb.append("    customerDetails: ").append(toIndentedString(customerDetails)).append("\n");
     sb.append("    orderMeta: ").append(toIndentedString(orderMeta)).append("\n");
     sb.append("    orderTags: ").append(toIndentedString(orderTags)).append("\n");
+    sb.append("    cartDetails: ").append(toIndentedString(cartDetails)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -531,6 +560,7 @@ public class OrderEntity {
     openapiFields.add("customer_details");
     openapiFields.add("order_meta");
     openapiFields.add("order_tags");
+    openapiFields.add("cart_details");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -588,6 +618,10 @@ public class OrderEntity {
       if (jsonObj.get("order_meta") != null && !jsonObj.get("order_meta").isJsonNull()) {
         OrderMeta.validateJsonElement(jsonObj.get("order_meta"));
       }
+      // validate the optional field `cart_details`
+      if (jsonObj.get("cart_details") != null && !jsonObj.get("cart_details").isJsonNull()) {
+        CartDetailsEntity.validateJsonElement(jsonObj.get("cart_details"));
+      }
   }
 
 
@@ -643,6 +677,11 @@ public class OrderEntity {
       // validate the optional field `order_meta`
       if (jsonObj.get("order_meta") != null && !jsonObj.get("order_meta").isJsonNull()) {
         OrderMeta.validateJsonElement(jsonObj.get("order_meta"));
+        return true;
+      }
+      // validate the optional field `cart_details`
+      if (jsonObj.get("cart_details") != null && !jsonObj.get("cart_details").isJsonNull()) {
+        CartDetailsEntity.validateJsonElement(jsonObj.get("cart_details"));
         return true;
       }
       return false;

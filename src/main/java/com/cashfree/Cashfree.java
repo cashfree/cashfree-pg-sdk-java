@@ -199,7 +199,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -227,6 +227,1044 @@ public class Cashfree {
         }
         okhttp3.Call localVarCall = pGCreateCustomerValidateBeforeCall(xApiVersion, createCustomerRequest, xRequestId, xIdempotencyKey, null);
         Type localVarReturnType = new TypeToken<CustomerEntity>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+
+    /**
+     * Build call for terminalCreateQRCodes
+     * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
+     * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
+     * @param createPartnerVpaRequest  (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+        <tr><td> 401 </td><td> Invalid Partner API Key </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call terminalCreateQRCodesCall(String xApiVersion, String xRequestId, UUID xIdempotencyKey, CreatePartnerVpaRequest createPartnerVpaRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = "https://sandbox.cashfree.com/pg";
+
+        if(Cashfree.XEnvironment == CFEnvironment.PRODUCTION) {
+            basePath = "https://api.cashfree.com/pg";
+        }
+
+        Object localVarPostBody = createPartnerVpaRequest;
+
+        // create path and map variables
+        String localVarPath = "/partners/merchant/qrcodes";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (xApiVersion != null) {
+            localVarHeaderParams.put("x-api-version", localVarApiClient.parameterToString(xApiVersion));
+        }
+
+        if (xRequestId != null) {
+            localVarHeaderParams.put("x-request-id", localVarApiClient.parameterToString(xRequestId));
+        }
+
+        if (xIdempotencyKey != null) {
+            localVarHeaderParams.put("x-idempotency-key", localVarApiClient.parameterToString(xIdempotencyKey));
+        }
+
+
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
+            ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
+            XClientSecret.setApiKey(Cashfree.XClientSecret);
+        }
+
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
+            ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
+            XClientID.setApiKey(Cashfree.XClientId);
+        }
+
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
+            ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
+            XClientSignature.setApiKey(Cashfree.XClientSignature);
+        }
+
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
+            ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
+            XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
+        }
+
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
+            ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
+            XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
+        }
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call terminalCreateQRCodesValidateBeforeCall(String xApiVersion, String xRequestId, UUID xIdempotencyKey, CreatePartnerVpaRequest createPartnerVpaRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'xApiVersion' is set
+        if (xApiVersion == null) {
+            throw new ApiException("Missing the required parameter 'xApiVersion' when calling TerminalCreateQRCodes(Async)");
+        }
+
+        return terminalCreateQRCodesCall(xApiVersion, xRequestId, xIdempotencyKey, createPartnerVpaRequest, _callback);
+
+    }
+
+    public ApiResponse<List<StaticQrResponseEntity>> TerminalCreateQRCodes(String xApiVersion, String xRequestId, UUID xIdempotencyKey, CreatePartnerVpaRequest createPartnerVpaRequest, OkHttpClient httpClient) throws ApiException {
+        if(httpClient != null) {
+            localVarApiClient.httpClient = httpClient;
+        }
+        okhttp3.Call localVarCall = terminalCreateQRCodesValidateBeforeCall(xApiVersion, xRequestId, xIdempotencyKey, createPartnerVpaRequest, null);
+        Type localVarReturnType = new TypeToken<List<StaticQrResponseEntity>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+
+    /**
+     * Build call for terminalGetQRCodes
+     * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
+     * @param status Status of pre-created Qr. (required)
+     * @param cfTerminalId Cashfree terminal id for which you want to get pre-generated staticQRs. (required)
+     * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+        <tr><td> 401 </td><td> Invalid Partner API Key </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call terminalGetQRCodesCall(String xApiVersion, String status, String cfTerminalId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
+        String basePath = "https://sandbox.cashfree.com/pg";
+
+        if(Cashfree.XEnvironment == CFEnvironment.PRODUCTION) {
+            basePath = "https://api.cashfree.com/pg";
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/partners/merchant/qrcodes";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (status != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("status", status));
+        }
+
+        if (cfTerminalId != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("cf_terminal_id", cfTerminalId));
+        }
+
+        if (xRequestId != null) {
+            localVarHeaderParams.put("x-request-id", localVarApiClient.parameterToString(xRequestId));
+        }
+
+        if (xIdempotencyKey != null) {
+            localVarHeaderParams.put("x-idempotency-key", localVarApiClient.parameterToString(xIdempotencyKey));
+        }
+
+        if (xApiVersion != null) {
+            localVarHeaderParams.put("x-api-version", localVarApiClient.parameterToString(xApiVersion));
+        }
+
+
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
+            ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
+            XClientSecret.setApiKey(Cashfree.XClientSecret);
+        }
+
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
+            ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
+            XClientID.setApiKey(Cashfree.XClientId);
+        }
+
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
+            ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
+            XClientSignature.setApiKey(Cashfree.XClientSignature);
+        }
+
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
+            ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
+            XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
+        }
+
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
+            ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
+            XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
+        }
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call terminalGetQRCodesValidateBeforeCall(String xApiVersion, String status, String cfTerminalId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'xApiVersion' is set
+        if (xApiVersion == null) {
+            throw new ApiException("Missing the required parameter 'xApiVersion' when calling TerminalGetQRCodes(Async)");
+        }
+
+        // verify the required parameter 'status' is set
+        if (status == null) {
+            throw new ApiException("Missing the required parameter 'status' when calling TerminalGetQRCodes(Async)");
+        }
+
+        // verify the required parameter 'cfTerminalId' is set
+        if (cfTerminalId == null) {
+            throw new ApiException("Missing the required parameter 'cfTerminalId' when calling TerminalGetQRCodes(Async)");
+        }
+
+        return terminalGetQRCodesCall(xApiVersion, status, cfTerminalId, xRequestId, xIdempotencyKey, _callback);
+
+    }
+
+    public ApiResponse<List<StaticQrResponseEntity>> TerminalGetQRCodes(String xApiVersion, String status, String cfTerminalId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        if(httpClient != null) {
+            localVarApiClient.httpClient = httpClient;
+        }
+        okhttp3.Call localVarCall = terminalGetQRCodesValidateBeforeCall(xApiVersion, status, cfTerminalId, xRequestId, xIdempotencyKey, null);
+        Type localVarReturnType = new TypeToken<List<StaticQrResponseEntity>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+
+    /**
+     * Build call for pGAcceptDisputeByID
+     * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
+     * @param disputeId  (required)
+     * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pGAcceptDisputeByIDCall(String xApiVersion, Integer disputeId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
+        String basePath = "https://sandbox.cashfree.com/pg";
+
+        if(Cashfree.XEnvironment == CFEnvironment.PRODUCTION) {
+            basePath = "https://api.cashfree.com/pg";
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/disputes/{dispute_id}/accept"
+            .replace("{" + "dispute_id" + "}", localVarApiClient.escapeString(disputeId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (xApiVersion != null) {
+            localVarHeaderParams.put("x-api-version", localVarApiClient.parameterToString(xApiVersion));
+        }
+
+        if (xRequestId != null) {
+            localVarHeaderParams.put("x-request-id", localVarApiClient.parameterToString(xRequestId));
+        }
+
+        if (xIdempotencyKey != null) {
+            localVarHeaderParams.put("x-idempotency-key", localVarApiClient.parameterToString(xIdempotencyKey));
+        }
+
+
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
+            ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
+            XClientSecret.setApiKey(Cashfree.XClientSecret);
+        }
+
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
+            ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
+            XClientID.setApiKey(Cashfree.XClientId);
+        }
+
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
+            ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
+            XClientSignature.setApiKey(Cashfree.XClientSignature);
+        }
+
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
+            ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
+            XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
+        }
+
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
+            ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
+            XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
+        }
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
+
+        String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call pGAcceptDisputeByIDValidateBeforeCall(String xApiVersion, Integer disputeId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'xApiVersion' is set
+        if (xApiVersion == null) {
+            throw new ApiException("Missing the required parameter 'xApiVersion' when calling PGAcceptDisputeByID(Async)");
+        }
+
+        // verify the required parameter 'disputeId' is set
+        if (disputeId == null) {
+            throw new ApiException("Missing the required parameter 'disputeId' when calling PGAcceptDisputeByID(Async)");
+        }
+
+        return pGAcceptDisputeByIDCall(xApiVersion, disputeId, xRequestId, xIdempotencyKey, _callback);
+
+    }
+
+    public ApiResponse<DisputesEntityMerchantAccepted> PGAcceptDisputeByID(String xApiVersion, Integer disputeId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        if(httpClient != null) {
+            localVarApiClient.httpClient = httpClient;
+        }
+        okhttp3.Call localVarCall = pGAcceptDisputeByIDValidateBeforeCall(xApiVersion, disputeId, xRequestId, xIdempotencyKey, null);
+        Type localVarReturnType = new TypeToken<DisputesEntityMerchantAccepted>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+
+    /**
+     * Build call for pGFetchDisputeByID
+     * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
+     * @param disputeId  (required)
+     * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pGFetchDisputeByIDCall(String xApiVersion, Integer disputeId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
+        String basePath = "https://sandbox.cashfree.com/pg";
+
+        if(Cashfree.XEnvironment == CFEnvironment.PRODUCTION) {
+            basePath = "https://api.cashfree.com/pg";
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/disputes/{dispute_id}"
+            .replace("{" + "dispute_id" + "}", localVarApiClient.escapeString(disputeId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (xApiVersion != null) {
+            localVarHeaderParams.put("x-api-version", localVarApiClient.parameterToString(xApiVersion));
+        }
+
+        if (xRequestId != null) {
+            localVarHeaderParams.put("x-request-id", localVarApiClient.parameterToString(xRequestId));
+        }
+
+        if (xIdempotencyKey != null) {
+            localVarHeaderParams.put("x-idempotency-key", localVarApiClient.parameterToString(xIdempotencyKey));
+        }
+
+
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
+            ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
+            XClientSecret.setApiKey(Cashfree.XClientSecret);
+        }
+
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
+            ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
+            XClientID.setApiKey(Cashfree.XClientId);
+        }
+
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
+            ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
+            XClientSignature.setApiKey(Cashfree.XClientSignature);
+        }
+
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
+            ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
+            XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
+        }
+
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
+            ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
+            XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
+        }
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
+
+        String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call pGFetchDisputeByIDValidateBeforeCall(String xApiVersion, Integer disputeId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'xApiVersion' is set
+        if (xApiVersion == null) {
+            throw new ApiException("Missing the required parameter 'xApiVersion' when calling PGFetchDisputeByID(Async)");
+        }
+
+        // verify the required parameter 'disputeId' is set
+        if (disputeId == null) {
+            throw new ApiException("Missing the required parameter 'disputeId' when calling PGFetchDisputeByID(Async)");
+        }
+
+        return pGFetchDisputeByIDCall(xApiVersion, disputeId, xRequestId, xIdempotencyKey, _callback);
+
+    }
+
+    public ApiResponse<DisputesEntity> PGFetchDisputeByID(String xApiVersion, Integer disputeId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        if(httpClient != null) {
+            localVarApiClient.httpClient = httpClient;
+        }
+        okhttp3.Call localVarCall = pGFetchDisputeByIDValidateBeforeCall(xApiVersion, disputeId, xRequestId, xIdempotencyKey, null);
+        Type localVarReturnType = new TypeToken<DisputesEntity>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+
+    /**
+     * Build call for pGFetchOrderDisputes
+     * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
+     * @param orderId  (required)
+     * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pGFetchOrderDisputesCall(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
+        String basePath = "https://sandbox.cashfree.com/pg";
+
+        if(Cashfree.XEnvironment == CFEnvironment.PRODUCTION) {
+            basePath = "https://api.cashfree.com/pg";
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/orders/{order_id}/disputes"
+            .replace("{" + "order_id" + "}", localVarApiClient.escapeString(orderId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (xApiVersion != null) {
+            localVarHeaderParams.put("x-api-version", localVarApiClient.parameterToString(xApiVersion));
+        }
+
+        if (xRequestId != null) {
+            localVarHeaderParams.put("x-request-id", localVarApiClient.parameterToString(xRequestId));
+        }
+
+        if (xIdempotencyKey != null) {
+            localVarHeaderParams.put("x-idempotency-key", localVarApiClient.parameterToString(xIdempotencyKey));
+        }
+
+
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
+            ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
+            XClientSecret.setApiKey(Cashfree.XClientSecret);
+        }
+
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
+            ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
+            XClientID.setApiKey(Cashfree.XClientId);
+        }
+
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
+            ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
+            XClientSignature.setApiKey(Cashfree.XClientSignature);
+        }
+
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
+            ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
+            XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
+        }
+
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
+            ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
+            XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
+        }
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
+
+        String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call pGFetchOrderDisputesValidateBeforeCall(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'xApiVersion' is set
+        if (xApiVersion == null) {
+            throw new ApiException("Missing the required parameter 'xApiVersion' when calling PGFetchOrderDisputes(Async)");
+        }
+
+        // verify the required parameter 'orderId' is set
+        if (orderId == null) {
+            throw new ApiException("Missing the required parameter 'orderId' when calling PGFetchOrderDisputes(Async)");
+        }
+
+        return pGFetchOrderDisputesCall(xApiVersion, orderId, xRequestId, xIdempotencyKey, _callback);
+
+    }
+
+    public ApiResponse<List<DisputesEntity>> PGFetchOrderDisputes(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        if(httpClient != null) {
+            localVarApiClient.httpClient = httpClient;
+        }
+        okhttp3.Call localVarCall = pGFetchOrderDisputesValidateBeforeCall(xApiVersion, orderId, xRequestId, xIdempotencyKey, null);
+        Type localVarReturnType = new TypeToken<List<DisputesEntity>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+
+    /**
+     * Build call for pGFetchPaymentDisputes
+     * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
+     * @param cfPaymentId  (required)
+     * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pGFetchPaymentDisputesCall(String xApiVersion, Integer cfPaymentId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
+        String basePath = "https://sandbox.cashfree.com/pg";
+
+        if(Cashfree.XEnvironment == CFEnvironment.PRODUCTION) {
+            basePath = "https://api.cashfree.com/pg";
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/payments/{cf_payment_id}/disputes"
+            .replace("{" + "cf_payment_id" + "}", localVarApiClient.escapeString(cfPaymentId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (xApiVersion != null) {
+            localVarHeaderParams.put("x-api-version", localVarApiClient.parameterToString(xApiVersion));
+        }
+
+        if (xRequestId != null) {
+            localVarHeaderParams.put("x-request-id", localVarApiClient.parameterToString(xRequestId));
+        }
+
+        if (xIdempotencyKey != null) {
+            localVarHeaderParams.put("x-idempotency-key", localVarApiClient.parameterToString(xIdempotencyKey));
+        }
+
+
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
+            ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
+            XClientSecret.setApiKey(Cashfree.XClientSecret);
+        }
+
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
+            ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
+            XClientID.setApiKey(Cashfree.XClientId);
+        }
+
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
+            ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
+            XClientSignature.setApiKey(Cashfree.XClientSignature);
+        }
+
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
+            ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
+            XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
+        }
+
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
+            ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
+            XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
+        }
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
+
+        String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call pGFetchPaymentDisputesValidateBeforeCall(String xApiVersion, Integer cfPaymentId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'xApiVersion' is set
+        if (xApiVersion == null) {
+            throw new ApiException("Missing the required parameter 'xApiVersion' when calling PGFetchPaymentDisputes(Async)");
+        }
+
+        // verify the required parameter 'cfPaymentId' is set
+        if (cfPaymentId == null) {
+            throw new ApiException("Missing the required parameter 'cfPaymentId' when calling PGFetchPaymentDisputes(Async)");
+        }
+
+        return pGFetchPaymentDisputesCall(xApiVersion, cfPaymentId, xRequestId, xIdempotencyKey, _callback);
+
+    }
+
+    public ApiResponse<List<DisputesEntity>> PGFetchPaymentDisputes(String xApiVersion, Integer cfPaymentId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        if(httpClient != null) {
+            localVarApiClient.httpClient = httpClient;
+        }
+        okhttp3.Call localVarCall = pGFetchPaymentDisputesValidateBeforeCall(xApiVersion, cfPaymentId, xRequestId, xIdempotencyKey, null);
+        Type localVarReturnType = new TypeToken<List<DisputesEntity>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+
+    /**
+     * Build call for pGUploadDisputesDocuments
+     * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
+     * @param disputeId  (required)
+     * @param _file File types supported are jpeg, jpg, png, pdf and maximum file size allowed is 20 MB. (required)
+     * @param docType Mention the type of the document you are uploading. Possible values :- Delivery/Service Proof, Shipping Proof, Statement of Service, Proof of Service Used, Cancellation of Service Proof, Refund Proof, Business model explanation, Extra Charges Declaration, Terms &amp; Conditions, Customer Withdrawal Letter, Certificate of Authenticity, Reseller Agreement. You can use get evidences to contest dispute API to fetch set of documents required to contest particular dispute. (required)
+     * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
+     * @param note  (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pGUploadDisputesDocumentsCall(String xApiVersion, Integer disputeId, String _file, String docType, String xRequestId, UUID xIdempotencyKey, String note, final ApiCallback _callback) throws ApiException {
+        String basePath = "https://sandbox.cashfree.com/pg";
+
+        if(Cashfree.XEnvironment == CFEnvironment.PRODUCTION) {
+            basePath = "https://api.cashfree.com/pg";
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/disputes/{dispute_id}/documents"
+            .replace("{" + "dispute_id" + "}", localVarApiClient.escapeString(disputeId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (_file != null) {
+            localVarFormParams.put("file", _file);
+        }
+
+        if (docType != null) {
+            localVarFormParams.put("doc_type", docType);
+        }
+
+        if (note != null) {
+            localVarFormParams.put("note", note);
+        }
+
+        if (xApiVersion != null) {
+            localVarHeaderParams.put("x-api-version", localVarApiClient.parameterToString(xApiVersion));
+        }
+
+        if (xRequestId != null) {
+            localVarHeaderParams.put("x-request-id", localVarApiClient.parameterToString(xRequestId));
+        }
+
+        if (xIdempotencyKey != null) {
+            localVarHeaderParams.put("x-idempotency-key", localVarApiClient.parameterToString(xIdempotencyKey));
+        }
+
+
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
+            ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
+            XClientSecret.setApiKey(Cashfree.XClientSecret);
+        }
+
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
+            ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
+            XClientID.setApiKey(Cashfree.XClientId);
+        }
+
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
+            ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
+            XClientSignature.setApiKey(Cashfree.XClientSignature);
+        }
+
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
+            ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
+            XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
+        }
+
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
+            ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
+            XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
+        }
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "multipart/form-data"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
+
+        String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call pGUploadDisputesDocumentsValidateBeforeCall(String xApiVersion, Integer disputeId, String _file, String docType, String xRequestId, UUID xIdempotencyKey, String note, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'xApiVersion' is set
+        if (xApiVersion == null) {
+            throw new ApiException("Missing the required parameter 'xApiVersion' when calling PGUploadDisputesDocuments(Async)");
+        }
+
+        // verify the required parameter 'disputeId' is set
+        if (disputeId == null) {
+            throw new ApiException("Missing the required parameter 'disputeId' when calling PGUploadDisputesDocuments(Async)");
+        }
+
+        // verify the required parameter '_file' is set
+        if (_file == null) {
+            throw new ApiException("Missing the required parameter '_file' when calling PGUploadDisputesDocuments(Async)");
+        }
+
+        // verify the required parameter 'docType' is set
+        if (docType == null) {
+            throw new ApiException("Missing the required parameter 'docType' when calling PGUploadDisputesDocuments(Async)");
+        }
+
+        return pGUploadDisputesDocumentsCall(xApiVersion, disputeId, _file, docType, xRequestId, xIdempotencyKey, note, _callback);
+
+    }
+
+    public ApiResponse<List<DisputesEntity>> PGUploadDisputesDocuments(String xApiVersion, Integer disputeId, String _file, String docType, String xRequestId, UUID xIdempotencyKey, String note, OkHttpClient httpClient) throws ApiException {
+        if(httpClient != null) {
+            localVarApiClient.httpClient = httpClient;
+        }
+        okhttp3.Call localVarCall = pGUploadDisputesDocumentsValidateBeforeCall(xApiVersion, disputeId, _file, docType, xRequestId, xIdempotencyKey, note, null);
+        Type localVarReturnType = new TypeToken<List<DisputesEntity>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+
+    /**
+     * Build call for pGESCreateAdjustment
+     * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
+     * @param vendorId The id which uniquely identifies your vendor. (required)
+     * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
+     * @param vendorAdjustmentRequest Vendor Adjustment Request Body. (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Vendor Adjustment Success Response. </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Adjust Vendor Balance Failure Response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pGESCreateAdjustmentCall(String xApiVersion, String vendorId, String xRequestId, UUID xIdempotencyKey, VendorAdjustmentRequest vendorAdjustmentRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = "https://sandbox.cashfree.com/pg";
+
+        if(Cashfree.XEnvironment == CFEnvironment.PRODUCTION) {
+            basePath = "https://api.cashfree.com/pg";
+        }
+
+        Object localVarPostBody = vendorAdjustmentRequest;
+
+        // create path and map variables
+        String localVarPath = "/easy-split/vendors/{vendor_id}/adjustment"
+            .replace("{" + "vendor_id" + "}", localVarApiClient.escapeString(vendorId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (xApiVersion != null) {
+            localVarHeaderParams.put("x-api-version", localVarApiClient.parameterToString(xApiVersion));
+        }
+
+        if (xRequestId != null) {
+            localVarHeaderParams.put("x-request-id", localVarApiClient.parameterToString(xRequestId));
+        }
+
+        if (xIdempotencyKey != null) {
+            localVarHeaderParams.put("x-idempotency-key", localVarApiClient.parameterToString(xIdempotencyKey));
+        }
+
+
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
+            ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
+            XClientSecret.setApiKey(Cashfree.XClientSecret);
+        }
+
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
+            ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
+            XClientID.setApiKey(Cashfree.XClientId);
+        }
+
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
+            ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
+            XClientSignature.setApiKey(Cashfree.XClientSignature);
+        }
+
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
+            ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
+            XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
+        }
+
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
+            ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
+            XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
+        }
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
+
+        String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call pGESCreateAdjustmentValidateBeforeCall(String xApiVersion, String vendorId, String xRequestId, UUID xIdempotencyKey, VendorAdjustmentRequest vendorAdjustmentRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'xApiVersion' is set
+        if (xApiVersion == null) {
+            throw new ApiException("Missing the required parameter 'xApiVersion' when calling PGESCreateAdjustment(Async)");
+        }
+
+        // verify the required parameter 'vendorId' is set
+        if (vendorId == null) {
+            throw new ApiException("Missing the required parameter 'vendorId' when calling PGESCreateAdjustment(Async)");
+        }
+
+        return pGESCreateAdjustmentCall(xApiVersion, vendorId, xRequestId, xIdempotencyKey, vendorAdjustmentRequest, _callback);
+
+    }
+
+    public ApiResponse<VendorAdjustmentSuccessResponse> PGESCreateAdjustment(String xApiVersion, String vendorId, String xRequestId, UUID xIdempotencyKey, VendorAdjustmentRequest vendorAdjustmentRequest, OkHttpClient httpClient) throws ApiException {
+        if(httpClient != null) {
+            localVarApiClient.httpClient = httpClient;
+        }
+        okhttp3.Call localVarCall = pGESCreateAdjustmentValidateBeforeCall(xApiVersion, vendorId, xRequestId, xIdempotencyKey, vendorAdjustmentRequest, null);
+        Type localVarReturnType = new TypeToken<VendorAdjustmentSuccessResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -321,7 +1359,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -441,7 +1479,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -557,7 +1595,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -682,7 +1720,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -802,7 +1840,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -927,7 +1965,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1052,7 +2090,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1174,7 +2212,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1291,7 +2329,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1427,7 +2465,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1551,7 +2589,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1671,7 +2709,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1694,6 +2732,126 @@ public class Cashfree {
         }
         okhttp3.Call localVarCall = pGOrderStaticSplitValidateBeforeCall(xApiVersion, xRequestId, xIdempotencyKey, staticSplitRequest, null);
         Type localVarReturnType = new TypeToken<StaticSplitResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+
+    /**
+     * Build call for pGSplitOrderRecon
+     * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
+     * @param orderId The id which uniquely identifies your order (required)
+     * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Get Split and Settlement Details by OrderID </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Split Order Recon Failure Response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pGSplitOrderReconCall(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
+        String basePath = "https://sandbox.cashfree.com/pg";
+
+        if(Cashfree.XEnvironment == CFEnvironment.PRODUCTION) {
+            basePath = "https://api.cashfree.com/pg";
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/easy-split/orders/{order_id}"
+            .replace("{" + "order_id" + "}", localVarApiClient.escapeString(orderId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (xApiVersion != null) {
+            localVarHeaderParams.put("x-api-version", localVarApiClient.parameterToString(xApiVersion));
+        }
+
+        if (xRequestId != null) {
+            localVarHeaderParams.put("x-request-id", localVarApiClient.parameterToString(xRequestId));
+        }
+
+        if (xIdempotencyKey != null) {
+            localVarHeaderParams.put("x-idempotency-key", localVarApiClient.parameterToString(xIdempotencyKey));
+        }
+
+
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
+            ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
+            XClientSecret.setApiKey(Cashfree.XClientSecret);
+        }
+
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
+            ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
+            XClientID.setApiKey(Cashfree.XClientId);
+        }
+
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
+            ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
+            XClientSignature.setApiKey(Cashfree.XClientSignature);
+        }
+
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
+            ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
+            XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
+        }
+
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
+            ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
+            XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
+        }
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
+
+        String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call pGSplitOrderReconValidateBeforeCall(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'xApiVersion' is set
+        if (xApiVersion == null) {
+            throw new ApiException("Missing the required parameter 'xApiVersion' when calling PGSplitOrderRecon(Async)");
+        }
+
+        // verify the required parameter 'orderId' is set
+        if (orderId == null) {
+            throw new ApiException("Missing the required parameter 'orderId' when calling PGSplitOrderRecon(Async)");
+        }
+
+        return pGSplitOrderReconCall(xApiVersion, orderId, xRequestId, xIdempotencyKey, _callback);
+
+    }
+
+    public ApiResponse<SplitOrderReconSuccessResponse> PGSplitOrderRecon(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        if(httpClient != null) {
+            localVarApiClient.httpClient = httpClient;
+        }
+        okhttp3.Call localVarCall = pGSplitOrderReconValidateBeforeCall(xApiVersion, orderId, xRequestId, xIdempotencyKey, null);
+        Type localVarReturnType = new TypeToken<SplitOrderReconSuccessResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1793,7 +2951,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1919,7 +3077,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2046,7 +3204,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2173,7 +3331,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2299,7 +3457,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2425,7 +3583,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2551,7 +3709,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2677,7 +3835,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2705,6 +3863,132 @@ public class Cashfree {
         }
         okhttp3.Call localVarCall = pGFetchOrderValidateBeforeCall(xApiVersion, orderId, xRequestId, xIdempotencyKey, null);
         Type localVarReturnType = new TypeToken<OrderEntity>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+
+    /**
+     * Build call for pGFetchOrderExtendedData
+     * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
+     * @param orderId The id which uniquely identifies your order (required)
+     * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pGFetchOrderExtendedDataCall(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
+        String basePath = "https://sandbox.cashfree.com/pg";
+
+        if(Cashfree.XEnvironment == CFEnvironment.PRODUCTION) {
+            basePath = "https://api.cashfree.com/pg";
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/orders/{order_id}/extended"
+            .replace("{" + "order_id" + "}", localVarApiClient.escapeString(orderId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (xApiVersion != null) {
+            localVarHeaderParams.put("x-api-version", localVarApiClient.parameterToString(xApiVersion));
+        }
+
+        if (xRequestId != null) {
+            localVarHeaderParams.put("x-request-id", localVarApiClient.parameterToString(xRequestId));
+        }
+
+        if (xIdempotencyKey != null) {
+            localVarHeaderParams.put("x-idempotency-key", localVarApiClient.parameterToString(xIdempotencyKey));
+        }
+
+
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
+            ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
+            XClientSecret.setApiKey(Cashfree.XClientSecret);
+        }
+
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
+            ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
+            XClientID.setApiKey(Cashfree.XClientId);
+        }
+
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
+            ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
+            XClientSignature.setApiKey(Cashfree.XClientSignature);
+        }
+
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
+            ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
+            XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
+        }
+
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
+            ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
+            XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
+        }
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
+
+        String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call pGFetchOrderExtendedDataValidateBeforeCall(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'xApiVersion' is set
+        if (xApiVersion == null) {
+            throw new ApiException("Missing the required parameter 'xApiVersion' when calling PGFetchOrderExtendedData(Async)");
+        }
+
+        // verify the required parameter 'orderId' is set
+        if (orderId == null) {
+            throw new ApiException("Missing the required parameter 'orderId' when calling PGFetchOrderExtendedData(Async)");
+        }
+
+        return pGFetchOrderExtendedDataCall(xApiVersion, orderId, xRequestId, xIdempotencyKey, _callback);
+
+    }
+
+    public ApiResponse<OrderExtendedDataEntity> PGFetchOrderExtendedData(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        if(httpClient != null) {
+            localVarApiClient.httpClient = httpClient;
+        }
+        okhttp3.Call localVarCall = pGFetchOrderExtendedDataValidateBeforeCall(xApiVersion, orderId, xRequestId, xIdempotencyKey, null);
+        Type localVarReturnType = new TypeToken<OrderExtendedDataEntity>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -2805,7 +4089,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2838,6 +4122,139 @@ public class Cashfree {
         }
         okhttp3.Call localVarCall = pGTerminateOrderValidateBeforeCall(xApiVersion, orderId, terminateOrderRequest, xRequestId, xIdempotencyKey, null);
         Type localVarReturnType = new TypeToken<OrderEntity>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+
+    /**
+     * Build call for pGUpdateOrderExtendedData
+     * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
+     * @param orderId The id which uniquely identifies your order (required)
+     * @param updateOrderExtendedRequest Request Body to Update extended data related to order (required)
+     * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call pGUpdateOrderExtendedDataCall(String xApiVersion, String orderId, UpdateOrderExtendedRequest updateOrderExtendedRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
+        String basePath = "https://sandbox.cashfree.com/pg";
+
+        if(Cashfree.XEnvironment == CFEnvironment.PRODUCTION) {
+            basePath = "https://api.cashfree.com/pg";
+        }
+
+        Object localVarPostBody = updateOrderExtendedRequest;
+
+        // create path and map variables
+        String localVarPath = "/orders/{order_id}/extended"
+            .replace("{" + "order_id" + "}", localVarApiClient.escapeString(orderId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (xApiVersion != null) {
+            localVarHeaderParams.put("x-api-version", localVarApiClient.parameterToString(xApiVersion));
+        }
+
+        if (xRequestId != null) {
+            localVarHeaderParams.put("x-request-id", localVarApiClient.parameterToString(xRequestId));
+        }
+
+        if (xIdempotencyKey != null) {
+            localVarHeaderParams.put("x-idempotency-key", localVarApiClient.parameterToString(xIdempotencyKey));
+        }
+
+
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
+            ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
+            XClientSecret.setApiKey(Cashfree.XClientSecret);
+        }
+
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
+            ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
+            XClientID.setApiKey(Cashfree.XClientId);
+        }
+
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
+            ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
+            XClientSignature.setApiKey(Cashfree.XClientSignature);
+        }
+
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
+            ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
+            XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
+        }
+
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
+            ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
+            XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
+        }
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
+
+        String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call pGUpdateOrderExtendedDataValidateBeforeCall(String xApiVersion, String orderId, UpdateOrderExtendedRequest updateOrderExtendedRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'xApiVersion' is set
+        if (xApiVersion == null) {
+            throw new ApiException("Missing the required parameter 'xApiVersion' when calling PGUpdateOrderExtendedData(Async)");
+        }
+
+        // verify the required parameter 'orderId' is set
+        if (orderId == null) {
+            throw new ApiException("Missing the required parameter 'orderId' when calling PGUpdateOrderExtendedData(Async)");
+        }
+
+        // verify the required parameter 'updateOrderExtendedRequest' is set
+        if (updateOrderExtendedRequest == null) {
+            throw new ApiException("Missing the required parameter 'updateOrderExtendedRequest' when calling PGUpdateOrderExtendedData(Async)");
+        }
+
+        return pGUpdateOrderExtendedDataCall(xApiVersion, orderId, updateOrderExtendedRequest, xRequestId, xIdempotencyKey, _callback);
+
+    }
+
+    public ApiResponse<UpdateOrderExtendedDataEntity> PGUpdateOrderExtendedData(String xApiVersion, String orderId, UpdateOrderExtendedRequest updateOrderExtendedRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        if(httpClient != null) {
+            localVarApiClient.httpClient = httpClient;
+        }
+        okhttp3.Call localVarCall = pGUpdateOrderExtendedDataValidateBeforeCall(xApiVersion, orderId, updateOrderExtendedRequest, xRequestId, xIdempotencyKey, null);
+        Type localVarReturnType = new TypeToken<UpdateOrderExtendedDataEntity>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -2936,7 +4353,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3062,7 +4479,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3189,7 +4606,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3320,7 +4737,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3449,7 +4866,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3583,7 +5000,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] {  };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3717,7 +5134,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3849,7 +5266,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3976,7 +5393,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] {  };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4112,7 +5529,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4241,7 +5658,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4375,7 +5792,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4506,7 +5923,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4642,7 +6059,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4778,7 +6195,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4901,7 +6318,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5023,7 +6440,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5147,7 +6564,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5271,7 +6688,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5397,7 +6814,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5523,7 +6940,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5551,6 +6968,132 @@ public class Cashfree {
         }
         okhttp3.Call localVarCall = sposCreateTerminalTransactionValidateBeforeCall(xApiVersion, createTerminalTransactionRequest, xRequestId, xIdempotencyKey, null);
         Type localVarReturnType = new TypeToken<TerminalTransactionEntity>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+
+    /**
+     * Build call for sposDemapSoundboxVpa
+     * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
+     * @param demapSoundboxVpaRequest Request body to demap soundbox vpa (required)
+     * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Soundbox vpa demapped Successfully </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call sposDemapSoundboxVpaCall(String xApiVersion, DemapSoundboxVpaRequest demapSoundboxVpaRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
+        String basePath = "https://sandbox.cashfree.com/pg";
+
+        if(Cashfree.XEnvironment == CFEnvironment.PRODUCTION) {
+            basePath = "https://api.cashfree.com/pg";
+        }
+
+        Object localVarPostBody = demapSoundboxVpaRequest;
+
+        // create path and map variables
+        String localVarPath = "/terminal/demap/soundbox";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (xApiVersion != null) {
+            localVarHeaderParams.put("x-api-version", localVarApiClient.parameterToString(xApiVersion));
+        }
+
+        if (xRequestId != null) {
+            localVarHeaderParams.put("x-request-id", localVarApiClient.parameterToString(xRequestId));
+        }
+
+        if (xIdempotencyKey != null) {
+            localVarHeaderParams.put("x-idempotency-key", localVarApiClient.parameterToString(xIdempotencyKey));
+        }
+
+
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
+            ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
+            XClientSecret.setApiKey(Cashfree.XClientSecret);
+        }
+
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
+            ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
+            XClientID.setApiKey(Cashfree.XClientId);
+        }
+
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
+            ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
+            XClientSignature.setApiKey(Cashfree.XClientSignature);
+        }
+
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
+            ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
+            XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
+        }
+
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
+            ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
+            XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
+        }
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
+
+        String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call sposDemapSoundboxVpaValidateBeforeCall(String xApiVersion, DemapSoundboxVpaRequest demapSoundboxVpaRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'xApiVersion' is set
+        if (xApiVersion == null) {
+            throw new ApiException("Missing the required parameter 'xApiVersion' when calling SposDemapSoundboxVpa(Async)");
+        }
+
+        // verify the required parameter 'demapSoundboxVpaRequest' is set
+        if (demapSoundboxVpaRequest == null) {
+            throw new ApiException("Missing the required parameter 'demapSoundboxVpaRequest' when calling SposDemapSoundboxVpa(Async)");
+        }
+
+        return sposDemapSoundboxVpaCall(xApiVersion, demapSoundboxVpaRequest, xRequestId, xIdempotencyKey, _callback);
+
+    }
+
+    public ApiResponse<List<SoundboxVpaEntity>> SposDemapSoundboxVpa(String xApiVersion, DemapSoundboxVpaRequest demapSoundboxVpaRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        if(httpClient != null) {
+            localVarApiClient.httpClient = httpClient;
+        }
+        okhttp3.Call localVarCall = sposDemapSoundboxVpaValidateBeforeCall(xApiVersion, demapSoundboxVpaRequest, xRequestId, xIdempotencyKey, null);
+        Type localVarReturnType = new TypeToken<List<SoundboxVpaEntity>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -5649,7 +7192,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5783,7 +7326,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5816,6 +7359,145 @@ public class Cashfree {
         }
         okhttp3.Call localVarCall = sposFetchTerminalQRCodesValidateBeforeCall(xApiVersion, terminalPhoneNo, cfTerminalId, xRequestId, xIdempotencyKey, null);
         Type localVarReturnType = new TypeToken<List<FetchTerminalQRCodesEntity>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+
+    /**
+     * Build call for sposFetchTerminalSoundboxVpa
+     * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
+     * @param deviceSerialNo Device Serial No assinged. Required if you are not providing the cf_terminal_id in the request. (required)
+     * @param cfTerminalId Cashfree terminal id for which you want to get Soundbox Vpa. Required if you are not providing the device_serial_no in the request. (required)
+     * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Fetched Terminal Soundbox Vpa </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call sposFetchTerminalSoundboxVpaCall(String xApiVersion, String deviceSerialNo, String cfTerminalId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
+        String basePath = "https://sandbox.cashfree.com/pg";
+
+        if(Cashfree.XEnvironment == CFEnvironment.PRODUCTION) {
+            basePath = "https://api.cashfree.com/pg";
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/terminal/soundbox/qrcodes";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (deviceSerialNo != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("device_serial_no", deviceSerialNo));
+        }
+
+        if (cfTerminalId != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("cf_terminal_id", cfTerminalId));
+        }
+
+        if (xApiVersion != null) {
+            localVarHeaderParams.put("x-api-version", localVarApiClient.parameterToString(xApiVersion));
+        }
+
+        if (xRequestId != null) {
+            localVarHeaderParams.put("x-request-id", localVarApiClient.parameterToString(xRequestId));
+        }
+
+        if (xIdempotencyKey != null) {
+            localVarHeaderParams.put("x-idempotency-key", localVarApiClient.parameterToString(xIdempotencyKey));
+        }
+
+
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
+            ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
+            XClientSecret.setApiKey(Cashfree.XClientSecret);
+        }
+
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
+            ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
+            XClientID.setApiKey(Cashfree.XClientId);
+        }
+
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
+            ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
+            XClientSignature.setApiKey(Cashfree.XClientSignature);
+        }
+
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
+            ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
+            XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
+        }
+
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
+            ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
+            XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
+        }
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
+
+        String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call sposFetchTerminalSoundboxVpaValidateBeforeCall(String xApiVersion, String deviceSerialNo, String cfTerminalId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'xApiVersion' is set
+        if (xApiVersion == null) {
+            throw new ApiException("Missing the required parameter 'xApiVersion' when calling SposFetchTerminalSoundboxVpa(Async)");
+        }
+
+        // verify the required parameter 'deviceSerialNo' is set
+        if (deviceSerialNo == null) {
+            throw new ApiException("Missing the required parameter 'deviceSerialNo' when calling SposFetchTerminalSoundboxVpa(Async)");
+        }
+
+        // verify the required parameter 'cfTerminalId' is set
+        if (cfTerminalId == null) {
+            throw new ApiException("Missing the required parameter 'cfTerminalId' when calling SposFetchTerminalSoundboxVpa(Async)");
+        }
+
+        return sposFetchTerminalSoundboxVpaCall(xApiVersion, deviceSerialNo, cfTerminalId, xRequestId, xIdempotencyKey, _callback);
+
+    }
+
+    public ApiResponse<List<SoundboxVpaEntity>> SposFetchTerminalSoundboxVpa(String xApiVersion, String deviceSerialNo, String cfTerminalId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        if(httpClient != null) {
+            localVarApiClient.httpClient = httpClient;
+        }
+        okhttp3.Call localVarCall = sposFetchTerminalSoundboxVpaValidateBeforeCall(xApiVersion, deviceSerialNo, cfTerminalId, xRequestId, xIdempotencyKey, null);
+        Type localVarReturnType = new TypeToken<List<SoundboxVpaEntity>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -5919,7 +7601,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5952,6 +7634,265 @@ public class Cashfree {
         }
         okhttp3.Call localVarCall = sposFetchTerminalTransactionValidateBeforeCall(xApiVersion, utr, cfTerminalId, xRequestId, xIdempotencyKey, null);
         Type localVarReturnType = new TypeToken<TerminalPaymentEntity>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+
+    /**
+     * Build call for sposOnboardSoundboxVpa
+     * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
+     * @param onboardSoundboxVpaRequest Request body to onboard soundbox vpa (required)
+     * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Soundbox vpa onboarded Successfully </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call sposOnboardSoundboxVpaCall(String xApiVersion, OnboardSoundboxVpaRequest onboardSoundboxVpaRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
+        String basePath = "https://sandbox.cashfree.com/pg";
+
+        if(Cashfree.XEnvironment == CFEnvironment.PRODUCTION) {
+            basePath = "https://api.cashfree.com/pg";
+        }
+
+        Object localVarPostBody = onboardSoundboxVpaRequest;
+
+        // create path and map variables
+        String localVarPath = "/terminal/soundbox";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (xApiVersion != null) {
+            localVarHeaderParams.put("x-api-version", localVarApiClient.parameterToString(xApiVersion));
+        }
+
+        if (xRequestId != null) {
+            localVarHeaderParams.put("x-request-id", localVarApiClient.parameterToString(xRequestId));
+        }
+
+        if (xIdempotencyKey != null) {
+            localVarHeaderParams.put("x-idempotency-key", localVarApiClient.parameterToString(xIdempotencyKey));
+        }
+
+
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
+            ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
+            XClientSecret.setApiKey(Cashfree.XClientSecret);
+        }
+
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
+            ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
+            XClientID.setApiKey(Cashfree.XClientId);
+        }
+
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
+            ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
+            XClientSignature.setApiKey(Cashfree.XClientSignature);
+        }
+
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
+            ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
+            XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
+        }
+
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
+            ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
+            XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
+        }
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
+
+        String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call sposOnboardSoundboxVpaValidateBeforeCall(String xApiVersion, OnboardSoundboxVpaRequest onboardSoundboxVpaRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'xApiVersion' is set
+        if (xApiVersion == null) {
+            throw new ApiException("Missing the required parameter 'xApiVersion' when calling SposOnboardSoundboxVpa(Async)");
+        }
+
+        // verify the required parameter 'onboardSoundboxVpaRequest' is set
+        if (onboardSoundboxVpaRequest == null) {
+            throw new ApiException("Missing the required parameter 'onboardSoundboxVpaRequest' when calling SposOnboardSoundboxVpa(Async)");
+        }
+
+        return sposOnboardSoundboxVpaCall(xApiVersion, onboardSoundboxVpaRequest, xRequestId, xIdempotencyKey, _callback);
+
+    }
+
+    public ApiResponse<SoundboxVpaEntity> SposOnboardSoundboxVpa(String xApiVersion, OnboardSoundboxVpaRequest onboardSoundboxVpaRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        if(httpClient != null) {
+            localVarApiClient.httpClient = httpClient;
+        }
+        okhttp3.Call localVarCall = sposOnboardSoundboxVpaValidateBeforeCall(xApiVersion, onboardSoundboxVpaRequest, xRequestId, xIdempotencyKey, null);
+        Type localVarReturnType = new TypeToken<SoundboxVpaEntity>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+
+    /**
+     * Build call for sposUpdateSoundboxVpa
+     * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
+     * @param cfTerminalId Provide the Cashfree terminal ID for which the details have to be updated. (required)
+     * @param updateSoundboxVpaRequest Request body to update soundbox vpa (required)
+     * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Soundbox vpa updated Successfully </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 409 </td><td> Resource already present </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 422 </td><td> Idempotency error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 429 </td><td> Rate Limit Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 500 </td><td> API related Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+     </table>
+     */
+    public okhttp3.Call sposUpdateSoundboxVpaCall(String xApiVersion, String cfTerminalId, UpdateSoundboxVpaRequest updateSoundboxVpaRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
+        String basePath = "https://sandbox.cashfree.com/pg";
+
+        if(Cashfree.XEnvironment == CFEnvironment.PRODUCTION) {
+            basePath = "https://api.cashfree.com/pg";
+        }
+
+        Object localVarPostBody = updateSoundboxVpaRequest;
+
+        // create path and map variables
+        String localVarPath = "/terminal/{cf_terminal_id}/soundbox"
+            .replace("{" + "cf_terminal_id" + "}", localVarApiClient.escapeString(cfTerminalId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (xApiVersion != null) {
+            localVarHeaderParams.put("x-api-version", localVarApiClient.parameterToString(xApiVersion));
+        }
+
+        if (xRequestId != null) {
+            localVarHeaderParams.put("x-request-id", localVarApiClient.parameterToString(xRequestId));
+        }
+
+        if (xIdempotencyKey != null) {
+            localVarHeaderParams.put("x-idempotency-key", localVarApiClient.parameterToString(xIdempotencyKey));
+        }
+
+
+        if(Cashfree.XClientSecret != null && !Cashfree.XClientSecret.isEmpty()) {
+            ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
+            XClientSecret.setApiKey(Cashfree.XClientSecret);
+        }
+
+        if(Cashfree.XClientId != null && !Cashfree.XClientId.isEmpty()) {
+            ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
+            XClientID.setApiKey(Cashfree.XClientId);
+        }
+
+        if(Cashfree.XClientSignature != null && !Cashfree.XClientSignature.isEmpty()) {
+            ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
+            XClientSignature.setApiKey(Cashfree.XClientSignature);
+        }
+
+        if(Cashfree.XPartnerAPIKey != null && !Cashfree.XPartnerAPIKey.isEmpty()) {
+            ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
+            XPartnerAPIKey.setApiKey(Cashfree.XPartnerAPIKey);
+        }
+
+        if(Cashfree.XPartnerMerchantID != null && !Cashfree.XPartnerMerchantID.isEmpty()) {
+            ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
+            XPartnerMerchantID.setApiKey(Cashfree.XPartnerMerchantID);
+        }
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
+
+        String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call sposUpdateSoundboxVpaValidateBeforeCall(String xApiVersion, String cfTerminalId, UpdateSoundboxVpaRequest updateSoundboxVpaRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'xApiVersion' is set
+        if (xApiVersion == null) {
+            throw new ApiException("Missing the required parameter 'xApiVersion' when calling SposUpdateSoundboxVpa(Async)");
+        }
+
+        // verify the required parameter 'cfTerminalId' is set
+        if (cfTerminalId == null) {
+            throw new ApiException("Missing the required parameter 'cfTerminalId' when calling SposUpdateSoundboxVpa(Async)");
+        }
+
+        // verify the required parameter 'updateSoundboxVpaRequest' is set
+        if (updateSoundboxVpaRequest == null) {
+            throw new ApiException("Missing the required parameter 'updateSoundboxVpaRequest' when calling SposUpdateSoundboxVpa(Async)");
+        }
+
+        return sposUpdateSoundboxVpaCall(xApiVersion, cfTerminalId, updateSoundboxVpaRequest, xRequestId, xIdempotencyKey, _callback);
+
+    }
+
+    public ApiResponse<SoundboxVpaEntity> SposUpdateSoundboxVpa(String xApiVersion, String cfTerminalId, UpdateSoundboxVpaRequest updateSoundboxVpaRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        if(httpClient != null) {
+            localVarApiClient.httpClient = httpClient;
+        }
+        okhttp3.Call localVarCall = sposUpdateSoundboxVpaValidateBeforeCall(xApiVersion, cfTerminalId, updateSoundboxVpaRequest, xRequestId, xIdempotencyKey, null);
+        Type localVarReturnType = new TypeToken<SoundboxVpaEntity>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -6052,7 +7993,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6185,7 +8126,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6318,7 +8259,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6448,7 +8389,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6573,7 +8514,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6700,7 +8641,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6830,7 +8771,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6954,7 +8895,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -7078,7 +9019,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -7204,7 +9145,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -7334,7 +9275,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -7460,7 +9401,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -7592,7 +9533,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -7725,7 +9666,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -7876,7 +9817,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -8016,7 +9957,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -8145,7 +10086,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -8279,7 +10220,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -8415,7 +10356,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -8549,7 +10490,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.2.4");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.3.5");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -8685,7 +10626,7 @@ static class ApiClient {
         json = new JSON();
 
         // Set default User-Agent.
-        setUserAgent("OpenAPI-Generator/4.2.4/java");
+        setUserAgent("OpenAPI-Generator/4.3.5/java");
 
         authentications = new HashMap<String, Authentication>();
     }

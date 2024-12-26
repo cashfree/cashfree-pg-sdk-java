@@ -22,7 +22,9 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -52,7 +54,7 @@ import com.cashfree.JSON;
 /**
  * CreateSubscriptionRequestAuthorizationDetails
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-07T11:53:02.829012Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-26T12:56:23.887789Z[Etc/UTC]")
 public class CreateSubscriptionRequestAuthorizationDetails {
   public static final String SERIALIZED_NAME_AUTHORIZATION_AMOUNT = "authorization_amount";
   @SerializedName(SERIALIZED_NAME_AUTHORIZATION_AMOUNT)
@@ -61,6 +63,10 @@ public class CreateSubscriptionRequestAuthorizationDetails {
   public static final String SERIALIZED_NAME_AUTHORIZATION_AMOUNT_REFUND = "authorization_amount_refund";
   @SerializedName(SERIALIZED_NAME_AUTHORIZATION_AMOUNT_REFUND)
   private Boolean authorizationAmountRefund;
+
+  public static final String SERIALIZED_NAME_PAYMENT_METHODS = "payment_methods";
+  @SerializedName(SERIALIZED_NAME_PAYMENT_METHODS)
+  private List<String> paymentMethods;
 
   public CreateSubscriptionRequestAuthorizationDetails() {
   }
@@ -109,6 +115,36 @@ public class CreateSubscriptionRequestAuthorizationDetails {
   }
 
 
+  public CreateSubscriptionRequestAuthorizationDetails paymentMethods(List<String> paymentMethods) {
+    
+    this.paymentMethods = paymentMethods;
+    return this;
+  }
+
+  public CreateSubscriptionRequestAuthorizationDetails addPaymentMethodsItem(String paymentMethodsItem) {
+    if (this.paymentMethods == null) {
+      this.paymentMethods = new ArrayList<>();
+    }
+    this.paymentMethods.add(paymentMethodsItem);
+    return this;
+  }
+
+   /**
+   * Payment methods for the subscription. enach, pnach, upi, card are possible values.
+   * @return paymentMethods
+  **/
+  @javax.annotation.Nullable
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Payment methods for the subscription. enach, pnach, upi, card are possible values.")
+  public List<String> getPaymentMethods() {
+    return paymentMethods;
+  }
+
+
+  public void setPaymentMethods(List<String> paymentMethods) {
+    this.paymentMethods = paymentMethods;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -120,12 +156,13 @@ public class CreateSubscriptionRequestAuthorizationDetails {
     }
     CreateSubscriptionRequestAuthorizationDetails createSubscriptionRequestAuthorizationDetails = (CreateSubscriptionRequestAuthorizationDetails) o;
     return Objects.equals(this.authorizationAmount, createSubscriptionRequestAuthorizationDetails.authorizationAmount) &&
-        Objects.equals(this.authorizationAmountRefund, createSubscriptionRequestAuthorizationDetails.authorizationAmountRefund);
+        Objects.equals(this.authorizationAmountRefund, createSubscriptionRequestAuthorizationDetails.authorizationAmountRefund) &&
+        Objects.equals(this.paymentMethods, createSubscriptionRequestAuthorizationDetails.paymentMethods);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(authorizationAmount, authorizationAmountRefund);
+    return Objects.hash(authorizationAmount, authorizationAmountRefund, paymentMethods);
   }
 
   @Override
@@ -134,6 +171,7 @@ public class CreateSubscriptionRequestAuthorizationDetails {
     sb.append("class CreateSubscriptionRequestAuthorizationDetails {\n");
     sb.append("    authorizationAmount: ").append(toIndentedString(authorizationAmount)).append("\n");
     sb.append("    authorizationAmountRefund: ").append(toIndentedString(authorizationAmountRefund)).append("\n");
+    sb.append("    paymentMethods: ").append(toIndentedString(paymentMethods)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -158,6 +196,7 @@ public class CreateSubscriptionRequestAuthorizationDetails {
     openapiFields = new HashSet<String>();
     openapiFields.add("authorization_amount");
     openapiFields.add("authorization_amount_refund");
+    openapiFields.add("payment_methods");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -172,6 +211,10 @@ public class CreateSubscriptionRequestAuthorizationDetails {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("payment_methods") != null && !jsonObj.get("payment_methods").isJsonNull() && !jsonObj.get("payment_methods").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `payment_methods` to be an array in the JSON string but got `%s`", jsonObj.get("payment_methods").toString()));
+      }
   }
 
 
@@ -184,6 +227,10 @@ public class CreateSubscriptionRequestAuthorizationDetails {
   public static boolean validateJsonElementForOneOf(JsonElement jsonElement) throws IOException {
 
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("payment_methods") != null && !jsonObj.get("payment_methods").isJsonNull() && !jsonObj.get("payment_methods").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `payment_methods` to be an array in the JSON string but got `%s`", jsonObj.get("payment_methods").toString()));
+      }
       return false;
   }
 
