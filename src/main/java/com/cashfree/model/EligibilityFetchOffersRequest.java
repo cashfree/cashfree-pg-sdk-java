@@ -54,7 +54,7 @@ import com.cashfree.JSON;
  * Eligiblty API request
  */
 @Schema(description = "Eligiblty API request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-09T12:02:51.543385Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-09T12:19:40.477106Z[Etc/UTC]")
 public class EligibilityFetchOffersRequest {
   public static final String SERIALIZED_NAME_QUERIES = "queries";
   @SerializedName(SERIALIZED_NAME_QUERIES)

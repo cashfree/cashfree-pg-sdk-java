@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * Vendor Balance Transfer Charges entity object
  */
 @Schema(description = "Vendor Balance Transfer Charges entity object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-09T12:02:51.543385Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-09T12:19:40.477106Z[Etc/UTC]")
 public class VendorBalanceTransferCharges {
   public static final String SERIALIZED_NAME_SERVICE_CHARGES = "service_charges";
   @SerializedName(SERIALIZED_NAME_SERVICE_CHARGES)

@@ -54,7 +54,7 @@ import com.cashfree.JSON;
  * The response returned is Create Subscription Auth or Charge APIs.
  */
 @Schema(description = "The response returned is Create Subscription Auth or Charge APIs.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-09T12:02:51.543385Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-09T12:19:40.477106Z[Etc/UTC]")
 public class CreateSubscriptionPaymentResponse {
   public static final String SERIALIZED_NAME_CF_PAYMENT_ID = "cf_payment_id";
   @SerializedName(SERIALIZED_NAME_CF_PAYMENT_ID)

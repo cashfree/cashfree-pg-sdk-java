@@ -53,7 +53,7 @@ import com.cashfree.JSON;
  * simulate payment request object
  */
 @Schema(description = "simulate payment request object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-09T12:02:51.543385Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-09T12:19:40.477106Z[Etc/UTC]")
 public class SimulateRequest {
   /**
    * Entity type should be PAYMENTS or SUBS_PAYMENTS only.
