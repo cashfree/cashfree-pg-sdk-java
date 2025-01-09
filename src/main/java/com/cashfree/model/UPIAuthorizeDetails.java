@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * object when you are using preauth in UPI in order pay
  */
 @Schema(description = "object when you are using preauth in UPI in order pay")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-09T12:02:51.543385Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-09T12:52:07.742309Z[Etc/UTC]")
 public class UPIAuthorizeDetails {
   public static final String SERIALIZED_NAME_APPROVE_BY = "approve_by";
   @SerializedName(SERIALIZED_NAME_APPROVE_BY)

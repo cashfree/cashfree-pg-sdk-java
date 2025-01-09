@@ -56,7 +56,7 @@ import com.cashfree.JSON;
  * Split Order Reconciliation Request Body
  */
 @Schema(description = "Split Order Reconciliation Request Body")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-09T12:02:51.543385Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-09T12:52:07.742309Z[Etc/UTC]")
 public class SplitOrderReconSuccessResponse {
   public static final String SERIALIZED_NAME_SETTLEMENT = "settlement";
   @SerializedName(SERIALIZED_NAME_SETTLEMENT)
