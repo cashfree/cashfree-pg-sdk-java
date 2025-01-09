@@ -52,7 +52,7 @@ import com.cashfree.JSON;
  * Subscription metadata.
  */
 @Schema(description = "Subscription metadata.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-09T12:02:51.543385Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-09T12:52:07.742309Z[Etc/UTC]")
 public class SubscriptionEntitySubscriptionMeta {
   public static final String SERIALIZED_NAME_RETURN_URL = "return_url";
   @SerializedName(SERIALIZED_NAME_RETURN_URL)
