@@ -74,7 +74,6 @@ docs/CustomersApi.md
 docs/DefaultApi.md
 docs/DemapSoundboxVpaRequest.md
 docs/DiscountDetails.md
-docs/DisputeEvidence.md
 docs/DisputesApi.md
 docs/DisputesEntity.md
 docs/DisputesEntityMerchantAccepted.md
@@ -201,7 +200,6 @@ docs/PaymentWebhookOrderEntity.md
 docs/PaymentsApi.md
 docs/PgReconciliationApi.md
 docs/PlanEntity.md
-docs/PreferredEvidence.md
 docs/RateLimitError.md
 docs/ReconEntity.md
 docs/ReconEntityDataInner.md
@@ -395,7 +393,6 @@ src/main/java/com/cashfree/model/CustomerDetailsResponse.java
 src/main/java/com/cashfree/model/CustomerEntity.java
 src/main/java/com/cashfree/model/DemapSoundboxVpaRequest.java
 src/main/java/com/cashfree/model/DiscountDetails.java
-src/main/java/com/cashfree/model/DisputeEvidence.java
 src/main/java/com/cashfree/model/DisputesEntity.java
 src/main/java/com/cashfree/model/DisputesEntityMerchantAccepted.java
 src/main/java/com/cashfree/model/EMIOffer.java
@@ -514,7 +511,6 @@ src/main/java/com/cashfree/model/PaymentWebhookErrorEntity.java
 src/main/java/com/cashfree/model/PaymentWebhookGatewayDetailsEntity.java
 src/main/java/com/cashfree/model/PaymentWebhookOrderEntity.java
 src/main/java/com/cashfree/model/PlanEntity.java
-src/main/java/com/cashfree/model/PreferredEvidence.java
 src/main/java/com/cashfree/model/RateLimitError.java
 src/main/java/com/cashfree/model/ReconEntity.java
 src/main/java/com/cashfree/model/ReconEntityDataInner.java
@@ -674,7 +670,6 @@ src/test/java/com/cashfree/model/CustomerDetailsTest.java
 src/test/java/com/cashfree/model/CustomerEntityTest.java
 src/test/java/com/cashfree/model/DemapSoundboxVpaRequestTest.java
 src/test/java/com/cashfree/model/DiscountDetailsTest.java
-src/test/java/com/cashfree/model/DisputeEvidenceTest.java
 src/test/java/com/cashfree/model/DisputesEntityMerchantAcceptedTest.java
 src/test/java/com/cashfree/model/DisputesEntityTest.java
 src/test/java/com/cashfree/model/EMIOfferTest.java
@@ -793,7 +788,6 @@ src/test/java/com/cashfree/model/PaymentWebhookGatewayDetailsEntityTest.java
 src/test/java/com/cashfree/model/PaymentWebhookOrderEntityTest.java
 src/test/java/com/cashfree/model/PaymentWebhookTest.java
 src/test/java/com/cashfree/model/PlanEntityTest.java
-src/test/java/com/cashfree/model/PreferredEvidenceTest.java
 src/test/java/com/cashfree/model/RateLimitErrorTest.java
 src/test/java/com/cashfree/model/ReconEntityDataInnerTest.java
 src/test/java/com/cashfree/model/ReconEntityTest.java

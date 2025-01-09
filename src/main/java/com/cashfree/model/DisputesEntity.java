@@ -58,7 +58,7 @@ import com.cashfree.JSON;
 /**
  * DisputesEntity
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-26T13:33:59.432802Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-09T12:02:51.543385Z[Etc/UTC]")
 public class DisputesEntity {
   public static final String SERIALIZED_NAME_DISPUTE_ID = "dispute_id";
   @SerializedName(SERIALIZED_NAME_DISPUTE_ID)
@@ -541,6 +541,14 @@ public class DisputesEntity {
     return this;
   }
 
+  public DisputesEntity addPreferredEvidenceItem(EvidencesToContestDispute preferredEvidenceItem) {
+    if (this.preferredEvidence == null) {
+      this.preferredEvidence = new ArrayList<>();
+    }
+    this.preferredEvidence.add(preferredEvidenceItem);
+    return this;
+  }
+
    /**
    * Get preferredEvidence
    * @return preferredEvidence
@@ -560,6 +568,14 @@ public class DisputesEntity {
   public DisputesEntity disputeEvidence(List<Evidence> disputeEvidence) {
     
     this.disputeEvidence = disputeEvidence;
+    return this;
+  }
+
+  public DisputesEntity addDisputeEvidenceItem(Evidence disputeEvidenceItem) {
+    if (this.disputeEvidence == null) {
+      this.disputeEvidence = new ArrayList<>();
+    }
+    this.disputeEvidence.add(disputeEvidenceItem);
     return this;
   }
 
@@ -752,6 +768,34 @@ public class DisputesEntity {
       if ((jsonObj.get("cf_dispute_remarks") != null && !jsonObj.get("cf_dispute_remarks").isJsonNull()) && !jsonObj.get("cf_dispute_remarks").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `cf_dispute_remarks` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cf_dispute_remarks").toString()));
       }
+      if (jsonObj.get("preferred_evidence") != null && !jsonObj.get("preferred_evidence").isJsonNull()) {
+        JsonArray jsonArraypreferredEvidence = jsonObj.getAsJsonArray("preferred_evidence");
+        if (jsonArraypreferredEvidence != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("preferred_evidence").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `preferred_evidence` to be an array in the JSON string but got `%s`", jsonObj.get("preferred_evidence").toString()));
+          }
+
+          // validate the optional field `preferred_evidence` (array)
+          for (int i = 0; i < jsonArraypreferredEvidence.size(); i++) {
+            EvidencesToContestDispute.validateJsonElement(jsonArraypreferredEvidence.get(i));
+          };
+        }
+      }
+      if (jsonObj.get("dispute_evidence") != null && !jsonObj.get("dispute_evidence").isJsonNull()) {
+        JsonArray jsonArraydisputeEvidence = jsonObj.getAsJsonArray("dispute_evidence");
+        if (jsonArraydisputeEvidence != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("dispute_evidence").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `dispute_evidence` to be an array in the JSON string but got `%s`", jsonObj.get("dispute_evidence").toString()));
+          }
+
+          // validate the optional field `dispute_evidence` (array)
+          for (int i = 0; i < jsonArraydisputeEvidence.size(); i++) {
+            Evidence.validateJsonElement(jsonArraydisputeEvidence.get(i));
+          };
+        }
+      }
       // validate the optional field `order_details`
       if (jsonObj.get("order_details") != null && !jsonObj.get("order_details").isJsonNull()) {
         OrderDetailsInDisputesEntity.validateJsonElement(jsonObj.get("order_details"));
@@ -798,6 +842,34 @@ public class DisputesEntity {
       }
       if ((jsonObj.get("cf_dispute_remarks") != null && !jsonObj.get("cf_dispute_remarks").isJsonNull()) && !jsonObj.get("cf_dispute_remarks").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `cf_dispute_remarks` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cf_dispute_remarks").toString()));
+      }
+      if (jsonObj.get("preferred_evidence") != null && !jsonObj.get("preferred_evidence").isJsonNull()) {
+        JsonArray jsonArraypreferredEvidence = jsonObj.getAsJsonArray("preferred_evidence");
+        if (jsonArraypreferredEvidence != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("preferred_evidence").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `preferred_evidence` to be an array in the JSON string but got `%s`", jsonObj.get("preferred_evidence").toString()));
+          }
+
+          // validate the optional field `preferred_evidence` (array)
+          for (int i = 0; i < jsonArraypreferredEvidence.size(); i++) {
+            EvidencesToContestDispute.validateJsonElement(jsonArraypreferredEvidence.get(i));
+          };
+        }
+      }
+      if (jsonObj.get("dispute_evidence") != null && !jsonObj.get("dispute_evidence").isJsonNull()) {
+        JsonArray jsonArraydisputeEvidence = jsonObj.getAsJsonArray("dispute_evidence");
+        if (jsonArraydisputeEvidence != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("dispute_evidence").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `dispute_evidence` to be an array in the JSON string but got `%s`", jsonObj.get("dispute_evidence").toString()));
+          }
+
+          // validate the optional field `dispute_evidence` (array)
+          for (int i = 0; i < jsonArraydisputeEvidence.size(); i++) {
+            Evidence.validateJsonElement(jsonArraydisputeEvidence.get(i));
+          };
+        }
       }
       // validate the optional field `order_details`
       if (jsonObj.get("order_details") != null && !jsonObj.get("order_details").isJsonNull()) {
