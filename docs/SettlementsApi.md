@@ -21,8 +21,8 @@ Use this API to pass the CBRICS ID to Cashfree and mark an order for settlement.
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {
@@ -98,8 +98,8 @@ Use this API to view all the settlements of a particular order.
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {

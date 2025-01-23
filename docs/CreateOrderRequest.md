@@ -19,6 +19,7 @@ Request body to create an order at cashfree
 |**orderNote** | **String** | Order note for reference. |  [optional] |
 |**orderTags** | **Map&lt;String, String&gt;** | Custom Tags in thr form of {\&quot;key\&quot;:\&quot;value\&quot;} which can be passed for an order. A maximum of 10 tags can be added |  [optional] |
 |**orderSplits** | [**List&lt;VendorSplit&gt;**](VendorSplit.md) | If you have Easy split enabled in your Cashfree account then you can use this option to split the order amount. |  [optional] |
+|**products** | [**Products**](Products.md) |  |  [optional] |
 
 
 

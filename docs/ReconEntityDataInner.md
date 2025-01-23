@@ -54,6 +54,9 @@
 |**settlementCharge** | **BigDecimal** | Settlement charges applicable on the settlement. |  [optional] |
 |**settlementTax** | **BigDecimal** | Settlement tax applicable on the settlement. |  [optional] |
 |**remarks** | **String** | Remarks on the settlement. |  [optional] |
+|**forexConversionHandlingCharge** | **BigDecimal** | Cashfree forex conversion charges for processing transaction |  [optional] |
+|**forexConversionHandlingTax** | **BigDecimal** | Cashfree forex conversion tax for processing transaction |  [optional] |
+|**chargesCurrency** | **String** | Cashfree charges currency for a event type |  [optional] |
 
 
 

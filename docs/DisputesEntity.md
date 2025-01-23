@@ -12,13 +12,14 @@
 |**reasonCode** | **String** |  |  [optional] |
 |**reasonDescription** | **String** |  |  [optional] |
 |**disputeAmount** | **BigDecimal** | Dispute amount may differ from transaction amount for partial cases. |  [optional] |
+|**disputeAmountCurrency** | **String** | Dispute amount currency for a dispute |  [optional] |
 |**createdAt** | **String** | This is the time when the dispute was created. |  [optional] |
 |**respondBy** | **String** | This is the time by which evidence should be submitted to contest the dispute. |  [optional] |
 |**updatedAt** | **String** | This is the time when the dispute case was updated. |  [optional] |
 |**resolvedAt** | **String** | This is the time when the dispute case was closed. |  [optional] |
 |**disputeStatus** | [**DisputeStatusEnum**](#DisputeStatusEnum) |  |  [optional] |
 |**cfDisputeRemarks** | **String** |  |  [optional] |
-|**preferredEvidence** | [**List&lt;EvidencesToContestDispute&gt;**](EvidencesToContestDispute.md) |  |  [optional] |
+|**preferredEvidence** | **List** |  |  [optional] |
 |**disputeEvidence** | [**List&lt;Evidence&gt;**](Evidence.md) |  |  [optional] |
 |**orderDetails** | [**OrderDetailsInDisputesEntity**](OrderDetailsInDisputesEntity.md) |  |  [optional] |
 |**customerDetails** | [**CustomerDetailsInDisputesEntity**](CustomerDetailsInDisputesEntity.md) |  |  [optional] |
