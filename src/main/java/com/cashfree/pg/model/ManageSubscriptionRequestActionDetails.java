@@ -52,7 +52,7 @@ import com.cashfree.pg.JSON;
  * Details of the action to be performed.
  */
 @Schema(description = "Details of the action to be performed.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-23T14:00:34.323462Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-23T14:04:19.914397Z[Etc/UTC]")
 public class ManageSubscriptionRequestActionDetails {
   public static final String SERIALIZED_NAME_NEXT_SCHEDULED_TIME = "next_scheduled_time";
   @SerializedName(SERIALIZED_NAME_NEXT_SCHEDULED_TIME)
