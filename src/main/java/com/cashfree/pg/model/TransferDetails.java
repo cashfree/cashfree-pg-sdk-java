@@ -55,7 +55,7 @@ import com.cashfree.pg.JSON;
 /**
  * TransferDetails
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-23T13:20:08.871845Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-23T13:50:37.026342Z[Etc/UTC]")
 public class TransferDetails {
   public static final String SERIALIZED_NAME_VENDOR_ID = "vendor_id";
   @SerializedName(SERIALIZED_NAME_VENDOR_ID)

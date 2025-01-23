@@ -57,7 +57,7 @@ import com.cashfree.pg.JSON;
 /**
  * DisputesEntity
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-23T13:20:08.871845Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-23T13:50:37.026342Z[Etc/UTC]")
 public class DisputesEntity {
   public static final String SERIALIZED_NAME_DISPUTE_ID = "dispute_id";
   @SerializedName(SERIALIZED_NAME_DISPUTE_ID)

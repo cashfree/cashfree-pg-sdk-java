@@ -64,7 +64,7 @@ import com.cashfree.pg.JSON;
  * The complete order entity
  */
 @Schema(description = "The complete order entity")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-23T13:20:08.871845Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-23T13:50:37.026342Z[Etc/UTC]")
 public class OrderEntity {
   public static final String SERIALIZED_NAME_CF_ORDER_ID = "cf_order_id";
   @SerializedName(SERIALIZED_NAME_CF_ORDER_ID)
@@ -128,7 +128,7 @@ public class OrderEntity {
 
   public static final String SERIALIZED_NAME_TERMINAL_DATA = "terminal_data";
   @SerializedName(SERIALIZED_NAME_TERMINAL_DATA)
-  private TerminalData terminalData = null;
+  private TerminalData terminalData;
 
   public static final String SERIALIZED_NAME_PRODUCTS = "products";
   @SerializedName(SERIALIZED_NAME_PRODUCTS)
@@ -682,6 +682,10 @@ public class OrderEntity {
       if (jsonObj.get("cart_details") != null && !jsonObj.get("cart_details").isJsonNull()) {
         CartDetailsEntity.validateJsonElement(jsonObj.get("cart_details"));
       }
+      // validate the optional field `terminal_data`
+      if (jsonObj.get("terminal_data") != null && !jsonObj.get("terminal_data").isJsonNull()) {
+        TerminalData.validateJsonElement(jsonObj.get("terminal_data"));
+      }
       // validate the optional field `products`
       if (jsonObj.get("products") != null && !jsonObj.get("products").isJsonNull()) {
         OrderEntityProducts.validateJsonElement(jsonObj.get("products"));
@@ -746,6 +750,11 @@ public class OrderEntity {
       // validate the optional field `cart_details`
       if (jsonObj.get("cart_details") != null && !jsonObj.get("cart_details").isJsonNull()) {
         CartDetailsEntity.validateJsonElement(jsonObj.get("cart_details"));
+        return true;
+      }
+      // validate the optional field `terminal_data`
+      if (jsonObj.get("terminal_data") != null && !jsonObj.get("terminal_data").isJsonNull()) {
+        TerminalData.validateJsonElement(jsonObj.get("terminal_data"));
         return true;
       }
       // validate the optional field `products`

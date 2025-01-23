@@ -53,7 +53,7 @@ import com.cashfree.pg.JSON;
  * detils of the discount object of offer
  */
 @Schema(description = "detils of the discount object of offer")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-23T13:20:08.871845Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-23T13:50:37.026342Z[Etc/UTC]")
 public class DiscountDetails {
   /**
    * Type of discount
