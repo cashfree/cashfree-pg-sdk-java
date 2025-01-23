@@ -25,6 +25,8 @@ payment entity full object
 |**authId** | **String** |  |  [optional] |
 |**authorization** | [**AuthorizationInPaymentsEntity**](AuthorizationInPaymentsEntity.md) |  |  [optional] |
 |**paymentMethod** | [**PaymentEntityPaymentMethod**](PaymentEntityPaymentMethod.md) |  |  [optional] |
+|**internationalPayment** | [**InternationalPaymentEntity**](InternationalPaymentEntity.md) |  |  [optional] |
+|**paymentGatewayDetails** | [**PaymentGatewayDetails**](PaymentGatewayDetails.md) |  |  [optional] |
 
 
 

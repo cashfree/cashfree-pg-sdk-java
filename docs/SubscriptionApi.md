@@ -32,8 +32,8 @@ Use this API to create an auth or to raise a charge.
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {
@@ -111,8 +111,8 @@ A plan allows your customer to identify the features you offer along with your p
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {
@@ -190,8 +190,8 @@ This API allows you to create refund on a successful payment. Refund amount can 
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {
@@ -271,8 +271,8 @@ Use this API to create a new subscription.
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {
@@ -350,8 +350,8 @@ Use this API to fetch plan details.
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {
@@ -428,8 +428,8 @@ Use this API to fetch subscription details.
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {
@@ -506,8 +506,8 @@ Use this API to fetch details of a single payment of a subscription.
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {
@@ -586,8 +586,8 @@ Use this API to fetch all payments of a subscription.
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {
@@ -665,8 +665,8 @@ Use this API to fetch details of a refund of a subscription payment.
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {
@@ -745,8 +745,8 @@ Use this API to manage a subscription. You can cancel, pause, activate or change
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {
@@ -826,8 +826,8 @@ Use this API to manage a payment of a subscription. A payment can be cancelled o
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {
@@ -908,8 +908,8 @@ Use this API to upload file for Physical Nach Authorization.
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {
@@ -993,8 +993,8 @@ Use this API to check if a payment method is enabled for your account.
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {

@@ -23,8 +23,8 @@ Use this API to delete a saved card instrument for a customer_id and instrument_
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {
@@ -106,8 +106,8 @@ Use this API to fetch a single specific saved card for a customer_id by it&#39;s
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {
@@ -189,8 +189,8 @@ Use this API to fetch saved cards for a customer_id
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {
@@ -271,8 +271,8 @@ Use this API To get the card network token, token expiry and cryptogram for a sa
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {

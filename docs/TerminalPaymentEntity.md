@@ -26,6 +26,7 @@ terminal payment entity full object
 |**authorization** | [**AuthorizationInPaymentsEntity**](AuthorizationInPaymentsEntity.md) |  |  [optional] |
 |**customerDetails** | [**CustomerDetails**](CustomerDetails.md) |  |  [optional] |
 |**paymentMethod** | [**PaymentEntityPaymentMethod**](PaymentEntityPaymentMethod.md) |  |  [optional] |
+|**paymentGatewayDetails** | [**PaymentGatewayDetails**](PaymentGatewayDetails.md) |  |  [optional] |
 
 
 

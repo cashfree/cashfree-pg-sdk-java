@@ -23,10 +23,14 @@ The refund entity
 |**metadata** | **Object** | Key-value pair that can be used to store additional information about the entity. Maximum 5 key-value pairs |  [optional] |
 |**refundSplits** | [**List&lt;VendorSplit&gt;**](VendorSplit.md) |  |  [optional] |
 |**refundType** | [**RefundTypeEnum**](#RefundTypeEnum) | This can be one of [\&quot;PAYMENT_AUTO_REFUND\&quot;, \&quot;MERCHANT_INITIATED\&quot;, \&quot;UNRECONCILED_AUTO_REFUND\&quot;] |  [optional] |
-|**refundMode** | **String** | Method or speed of processing refund |  [optional] |
+|**refundMode** | [**RefundModeEnum**](#RefundModeEnum) | Method or speed of processing refund |  [optional] |
 |**createdAt** | **String** | Time of refund creation |  [optional] |
 |**processedAt** | **String** | Time when refund was processed successfully |  [optional] |
 |**refundSpeed** | [**RefundSpeed**](RefundSpeed.md) |  |  [optional] |
+|**forexConversionHandlingCharge** | **BigDecimal** | Cashfree forex conversion charges for refund processing |  [optional] |
+|**forexConversionHandlingTax** | **BigDecimal** | Cashfree forex conversion tax for refund processing |  [optional] |
+|**forexConversionRate** | **BigDecimal** | Cashfree forex conversion rate for refund processing |  [optional] |
+|**chargesCurrency** | **String** | Cashfree refund charges currency for a refund |  [optional] |
 
 
 
@@ -58,6 +62,16 @@ The refund entity
 | PAYMENT_AUTO_REFUND | &quot;PAYMENT_AUTO_REFUND&quot; |
 | MERCHANT_INITIATED | &quot;MERCHANT_INITIATED&quot; |
 | UNRECONCILED_AUTO_REFUND | &quot;UNRECONCILED_AUTO_REFUND&quot; |
+| UNKNOWN_DEFAULT_OPEN_API | &quot;unknown_default_open_api&quot; |
+
+
+
+## Enum: RefundModeEnum
+
+| Name | Value |
+|---- | -----|
+| STANDARD | &quot;STANDARD&quot; |
+| INSTANT | &quot;INSTANT&quot; |
 | UNKNOWN_DEFAULT_OPEN_API | &quot;unknown_default_open_api&quot; |
 
 

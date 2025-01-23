@@ -33,8 +33,8 @@ The Create Adjustment API will create a adjustment request either from vendor to
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {
@@ -109,8 +109,8 @@ The Create On Demand Transfer API will create a new on-demand request either fro
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {
@@ -185,8 +185,8 @@ Use this API to create a new vendor to your EasySplit account along with the KYC
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {
@@ -259,8 +259,8 @@ Use this API to download the uploaded KYC documents of that particular vendor. P
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {
@@ -334,8 +334,8 @@ Use this API to get the details of a specific vendor associated with your Easy S
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {
@@ -408,8 +408,8 @@ This API fetches the available amount with the merchant, vendor, and the unsettl
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {
@@ -482,8 +482,8 @@ This API returns the applicable service charge and service tax for a vendor bala
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {
@@ -558,8 +558,8 @@ Use this API to fetch the details of all the KYC details of a particular vendor.
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {
@@ -632,8 +632,8 @@ Use this API to get all the split details, settled and unsettled transactions de
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {
@@ -708,8 +708,8 @@ Use this API to edit the existing vendor details added to your EasySplit account
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {
@@ -784,8 +784,8 @@ Use this API to upload KYC documents of a specific vendor.
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {
@@ -864,8 +864,8 @@ Split After Payment API splits the payments to vendors after successful payment 
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {
@@ -942,8 +942,8 @@ This API will create a static split scheme wherein you can define the split type
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {
@@ -1016,8 +1016,8 @@ Use this API to get all the split details, settled and unsettled transactions de
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {

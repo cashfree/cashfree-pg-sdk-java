@@ -22,8 +22,8 @@ Use this API to initiate refunds.
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {
@@ -105,8 +105,8 @@ Use this API to fetch a specific refund processed on your Cashfree Account.
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {
@@ -188,8 +188,8 @@ Use this API to fetch all refunds processed against an order.
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {
