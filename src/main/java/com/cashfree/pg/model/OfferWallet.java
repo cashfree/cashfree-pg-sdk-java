@@ -53,7 +53,7 @@ import com.cashfree.pg.JSON;
  * Offer object for wallet payment method
  */
 @Schema(description = "Offer object for wallet payment method")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-23T14:00:34.323462Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-23T14:04:19.914397Z[Etc/UTC]")
 public class OfferWallet {
   public static final String SERIALIZED_NAME_APP = "app";
   @SerializedName(SERIALIZED_NAME_APP)

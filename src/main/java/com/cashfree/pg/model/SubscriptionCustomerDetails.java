@@ -52,7 +52,7 @@ import com.cashfree.pg.JSON;
  * Subscription customer details.
  */
 @Schema(description = "Subscription customer details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-23T14:00:34.323462Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-23T14:04:19.914397Z[Etc/UTC]")
 public class SubscriptionCustomerDetails {
   public static final String SERIALIZED_NAME_CUSTOMER_NAME = "customer_name";
   @SerializedName(SERIALIZED_NAME_CUSTOMER_NAME)
