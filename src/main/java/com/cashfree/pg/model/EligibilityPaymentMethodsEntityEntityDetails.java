@@ -54,7 +54,7 @@ import com.cashfree.pg.JSON;
 /**
  * EligibilityPaymentMethodsEntityEntityDetails
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-23T13:50:37.026342Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-23T14:00:34.323462Z[Etc/UTC]")
 public class EligibilityPaymentMethodsEntityEntityDetails {
   public static final String SERIALIZED_NAME_PAYMENT_METHOD_DETAILS = "payment_method_details";
   @SerializedName(SERIALIZED_NAME_PAYMENT_METHOD_DETAILS)

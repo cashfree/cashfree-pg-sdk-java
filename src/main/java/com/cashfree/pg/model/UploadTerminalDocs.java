@@ -52,7 +52,7 @@ import com.cashfree.pg.JSON;
  * Request body to upload terminal documents.
  */
 @Schema(description = "Request body to upload terminal documents.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-23T13:50:37.026342Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-23T14:00:34.323462Z[Etc/UTC]")
 public class UploadTerminalDocs {
   public static final String SERIALIZED_NAME_DOC_TYPE = "doc_type";
   @SerializedName(SERIALIZED_NAME_DOC_TYPE)
