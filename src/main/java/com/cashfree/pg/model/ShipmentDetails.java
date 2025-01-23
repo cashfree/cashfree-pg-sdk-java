@@ -54,7 +54,7 @@ import com.cashfree.pg.JSON;
  * Shipment details associated with shipping of order like tracking company, tracking number,tracking urls etc.
  */
 @Schema(description = "Shipment details associated with shipping of order like tracking company, tracking number,tracking urls etc.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-23T13:50:37.026342Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-23T14:00:34.323462Z[Etc/UTC]")
 public class ShipmentDetails {
   public static final String SERIALIZED_NAME_TRACKING_COMPANY = "tracking_company";
   @SerializedName(SERIALIZED_NAME_TRACKING_COMPANY)
