@@ -14,7 +14,18 @@
 package com.cashfree.pg.model;
 
 import java.util.Objects;
+import com.cashfree.pg.model.CreateSubscriptionPaymentRequestCard;
+import com.cashfree.pg.model.CreateSubscriptionPaymentRequestEnack;
+import com.cashfree.pg.model.CreateSubscriptionPaymentRequestPnach;
+import com.cashfree.pg.model.CreateSubscriptonPaymentRequestUpi;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.IOException;
+import java.util.Arrays;
 
 
 
@@ -51,7 +62,7 @@ import com.google.gson.JsonParseException;
 
 import com.cashfree.pg.JSON;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-23T13:20:08.871845Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-23T13:50:37.026342Z[Etc/UTC]")
 public class CreateSubscriptionPaymentRequestPaymentMethod extends AbstractOpenApiSchema {
     private static final Logger log = Logger.getLogger(CreateSubscriptionPaymentRequestPaymentMethod.class.getName());
 

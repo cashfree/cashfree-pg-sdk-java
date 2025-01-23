@@ -85,29 +85,29 @@ public class Cashfree {
 
   private ApiClient localVarApiClient = new ApiClient();
 
-  public Cashfree(CFEnvironment XEnvironment, String XClientId, String XClientSecret, String XPartnerAPIKey, String XPartnerMerchantID, String XClientSignature) {
-    if(XClientID != null && XClientID != "") {
-        this.XClientID = XClientID;
+  public Cashfree(CFEnvironment environment, String clientId, String clientSecret, String partnerApiKey, String partnerMerchantId, String clientSignature) {
+    if(clientId != null && clientId != "") {
+        XClientID = clientId;
     }
-    if(XClientSecret != null && XClientSecret != "") {
-        this.XClientSecret = XClientSecret;
+    if(clientSecret != null && clientSecret != "") {
+        XClientSecret = clientSecret;
     }
-    if(XPartnerAPIKey != null && XPartnerAPIKey != "") {
-        this.XPartnerAPIKey = XPartnerAPIKey;
+    if(partnerApiKey != null && partnerApiKey != "") {
+        XPartnerAPIKey = partnerApiKey;
     }
-    if(XPartnerMerchantID != null && XPartnerMerchantID != "") {
-        this.XPartnerMerchantID = XPartnerMerchantID;
+    if(partnerMerchantId != null && partnerMerchantId != "") {
+        XPartnerMerchantID = partnerMerchantId;
     }
-    if(XClientSignature != null && XClientSignature != "") {
-        this.XClientSignature = XClientSignature;
+    if(clientSignature != null && clientSignature != "") {
+        XClientSignature = clientSignature;
     }
-    this.XEnvironment = XEnvironment;
+    XEnvironment = environment;
   }
 
   public PGWebhookEvent PGVerifyWebhookSignature(String signature, String rawBody, String timestamp) throws Exception {
         try {
             String data = timestamp + rawBody;
-            String secretKey = this.XClientSecret;
+            String secretKey = XClientSecret;
             Mac sha256_HMAC = Mac.getInstance("HmacSHA256");
             SecretKeySpec secret_key_spec = new SecretKeySpec(secretKey.getBytes(), "HmacSHA256");
             sha256_HMAC.init(secret_key_spec);
@@ -149,7 +149,7 @@ public class Cashfree {
     public okhttp3.Call pGCreateCustomerCall(String xApiVersion, CreateCustomerRequest createCustomerRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -177,29 +177,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -218,7 +218,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -240,8 +240,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<CustomerEntity> PGCreateCustomer(String xApiVersion, CreateCustomerRequest createCustomerRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<CustomerEntity> PGCreateCustomer(CreateCustomerRequest createCustomerRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -276,7 +276,7 @@ public class Cashfree {
     public okhttp3.Call pGAcceptDisputeByIDCall(String xApiVersion, Integer disputeId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -305,29 +305,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -345,7 +345,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -367,8 +367,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<DisputesEntityMerchantAccepted> PGAcceptDisputeByID(String xApiVersion, Integer disputeId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<DisputesEntityMerchantAccepted> PGAcceptDisputeByID(Integer disputeId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -403,7 +403,7 @@ public class Cashfree {
     public okhttp3.Call pGFetchDisputeByIDCall(String xApiVersion, Integer disputeId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -432,29 +432,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -472,7 +472,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -494,8 +494,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<DisputesEntity> PGFetchDisputeByID(String xApiVersion, Integer disputeId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<DisputesEntity> PGFetchDisputeByID(Integer disputeId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -530,7 +530,7 @@ public class Cashfree {
     public okhttp3.Call pGFetchOrderDisputesCall(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -559,29 +559,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -599,7 +599,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -621,8 +621,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<List<DisputesEntity>> PGFetchOrderDisputes(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<List<DisputesEntity>> PGFetchOrderDisputes(String orderId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -657,7 +657,7 @@ public class Cashfree {
     public okhttp3.Call pGFetchPaymentDisputesCall(String xApiVersion, Integer cfPaymentId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -686,29 +686,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -726,7 +726,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -748,8 +748,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<List<DisputesEntity>> PGFetchPaymentDisputes(String xApiVersion, Integer cfPaymentId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<List<DisputesEntity>> PGFetchPaymentDisputes(Integer cfPaymentId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -787,7 +787,7 @@ public class Cashfree {
     public okhttp3.Call pGUploadDisputesDocumentsCall(String xApiVersion, Integer disputeId, String _file, String docType, String xRequestId, UUID xIdempotencyKey, String note, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -828,29 +828,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -869,7 +869,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -901,8 +901,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<List<DisputesEntity>> PGUploadDisputesDocuments(String xApiVersion, Integer disputeId, String _file, String docType, String xRequestId, UUID xIdempotencyKey, String note, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<List<DisputesEntity>> PGUploadDisputesDocuments(Integer disputeId, String _file, String docType, String xRequestId, UUID xIdempotencyKey, String note, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -932,7 +932,7 @@ public class Cashfree {
     public okhttp3.Call pGESCreateAdjustmentCall(String xApiVersion, String vendorId, String xRequestId, UUID xIdempotencyKey, VendorAdjustmentRequest vendorAdjustmentRequest, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -961,29 +961,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -1002,7 +1002,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1024,8 +1024,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<VendorAdjustmentSuccessResponse> PGESCreateAdjustment(String xApiVersion, String vendorId, String xRequestId, UUID xIdempotencyKey, VendorAdjustmentRequest vendorAdjustmentRequest, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<VendorAdjustmentSuccessResponse> PGESCreateAdjustment(String vendorId, String xRequestId, UUID xIdempotencyKey, VendorAdjustmentRequest vendorAdjustmentRequest, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -1055,7 +1055,7 @@ public class Cashfree {
     public okhttp3.Call pGESCreateOnDemandTransferCall(String xApiVersion, String vendorId, String xRequestId, UUID xIdempotencyKey, AdjustVendorBalanceRequest adjustVendorBalanceRequest, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -1084,29 +1084,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -1125,7 +1125,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1147,8 +1147,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<AdjustVendorBalanceResponse> PGESCreateOnDemandTransfer(String xApiVersion, String vendorId, String xRequestId, UUID xIdempotencyKey, AdjustVendorBalanceRequest adjustVendorBalanceRequest, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<AdjustVendorBalanceResponse> PGESCreateOnDemandTransfer(String vendorId, String xRequestId, UUID xIdempotencyKey, AdjustVendorBalanceRequest adjustVendorBalanceRequest, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -1177,7 +1177,7 @@ public class Cashfree {
     public okhttp3.Call pGESCreateVendorsCall(String xApiVersion, String xRequestId, UUID xIdempotencyKey, CreateVendorRequest createVendorRequest, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -1205,29 +1205,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -1246,7 +1246,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1263,8 +1263,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<CreateVendorResponse> PGESCreateVendors(String xApiVersion, String xRequestId, UUID xIdempotencyKey, CreateVendorRequest createVendorRequest, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<CreateVendorResponse> PGESCreateVendors(String xRequestId, UUID xIdempotencyKey, CreateVendorRequest createVendorRequest, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -1293,7 +1293,7 @@ public class Cashfree {
     public okhttp3.Call pGESDownloadVendorsDocsCall(String xApiVersion, String docType, String vendorId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -1323,29 +1323,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -1363,7 +1363,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1390,8 +1390,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<VendorDocumentDownloadResponse> PGESDownloadVendorsDocs(String xApiVersion, String docType, String vendorId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<VendorDocumentDownloadResponse> PGESDownloadVendorsDocs(String docType, String vendorId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -1420,7 +1420,7 @@ public class Cashfree {
     public okhttp3.Call pGESFetchVendorsCall(String xApiVersion, String vendorId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -1449,29 +1449,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -1489,7 +1489,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1511,8 +1511,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<VendorEntity> PGESFetchVendors(String xApiVersion, String vendorId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<VendorEntity> PGESFetchVendors(String vendorId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -1541,7 +1541,7 @@ public class Cashfree {
     public okhttp3.Call pGESGetVendorBalanceCall(String xApiVersion, String vendorId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -1570,29 +1570,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -1610,7 +1610,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1632,8 +1632,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<VendorBalance> PGESGetVendorBalance(String xApiVersion, String vendorId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<VendorBalance> PGESGetVendorBalance(String vendorId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -1663,7 +1663,7 @@ public class Cashfree {
     public okhttp3.Call pGESGetVendorBalanceTransferChargesCall(String xApiVersion, BigDecimal amount, String rateType, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -1696,29 +1696,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -1736,7 +1736,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1763,8 +1763,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<VendorBalanceTransferCharges> PGESGetVendorBalanceTransferCharges(String xApiVersion, BigDecimal amount, String rateType, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<VendorBalanceTransferCharges> PGESGetVendorBalanceTransferCharges(BigDecimal amount, String rateType, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -1793,7 +1793,7 @@ public class Cashfree {
     public okhttp3.Call pGESGetVendorsDocsCall(String xApiVersion, String vendorId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -1822,29 +1822,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -1862,7 +1862,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1884,8 +1884,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<VendorDocumentsResponse> PGESGetVendorsDocs(String xApiVersion, String vendorId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<VendorDocumentsResponse> PGESGetVendorsDocs(String vendorId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -1916,7 +1916,7 @@ public class Cashfree {
     public okhttp3.Call pGESOrderReconCall(String xApiVersion, String xRequestId, UUID xIdempotencyKey, ESOrderReconRequest esOrderReconRequest, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -1944,29 +1944,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -1985,7 +1985,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2002,8 +2002,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<ESOrderReconResponse> PGESOrderRecon(String xApiVersion, String xRequestId, UUID xIdempotencyKey, ESOrderReconRequest esOrderReconRequest, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<ESOrderReconResponse> PGESOrderRecon(String xRequestId, UUID xIdempotencyKey, ESOrderReconRequest esOrderReconRequest, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -2033,7 +2033,7 @@ public class Cashfree {
     public okhttp3.Call pGESUpdateVendorsCall(String xApiVersion, String vendorId, String xRequestId, UUID xIdempotencyKey, UpdateVendorRequest updateVendorRequest, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -2062,29 +2062,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -2103,7 +2103,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2125,8 +2125,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<UpdateVendorResponse> PGESUpdateVendors(String xApiVersion, String vendorId, String xRequestId, UUID xIdempotencyKey, UpdateVendorRequest updateVendorRequest, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<UpdateVendorResponse> PGESUpdateVendors(String vendorId, String xRequestId, UUID xIdempotencyKey, UpdateVendorRequest updateVendorRequest, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -2158,7 +2158,7 @@ public class Cashfree {
     public okhttp3.Call pGESUploadVendorsDocsCall(String xApiVersion, String vendorId, String xRequestId, UUID xIdempotencyKey, String docType, String docValue, File _file, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -2199,29 +2199,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -2240,7 +2240,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2262,8 +2262,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<UploadVendorDocumentsResponse> PGESUploadVendorsDocs(String xApiVersion, String vendorId, String xRequestId, UUID xIdempotencyKey, String docType, String docValue, File _file, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<UploadVendorDocumentsResponse> PGESUploadVendorsDocs(String vendorId, String xRequestId, UUID xIdempotencyKey, String docType, String docValue, File _file, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -2295,7 +2295,7 @@ public class Cashfree {
     public okhttp3.Call pGOrderSplitAfterPaymentCall(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, SplitAfterPaymentRequest splitAfterPaymentRequest, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -2324,29 +2324,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -2365,7 +2365,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2387,8 +2387,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<SplitAfterPaymentResponse> PGOrderSplitAfterPayment(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, SplitAfterPaymentRequest splitAfterPaymentRequest, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<SplitAfterPaymentResponse> PGOrderSplitAfterPayment(String orderId, String xRequestId, UUID xIdempotencyKey, SplitAfterPaymentRequest splitAfterPaymentRequest, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -2417,7 +2417,7 @@ public class Cashfree {
     public okhttp3.Call pGOrderStaticSplitCall(String xApiVersion, String xRequestId, UUID xIdempotencyKey, StaticSplitRequest staticSplitRequest, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -2445,29 +2445,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -2486,7 +2486,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2503,8 +2503,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<StaticSplitResponse> PGOrderStaticSplit(String xApiVersion, String xRequestId, UUID xIdempotencyKey, StaticSplitRequest staticSplitRequest, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<StaticSplitResponse> PGOrderStaticSplit(String xRequestId, UUID xIdempotencyKey, StaticSplitRequest staticSplitRequest, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -2533,7 +2533,7 @@ public class Cashfree {
     public okhttp3.Call pGSplitOrderReconCall(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -2562,29 +2562,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -2602,7 +2602,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2624,8 +2624,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<SplitOrderReconSuccessResponse> PGSplitOrderRecon(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<SplitOrderReconSuccessResponse> PGSplitOrderRecon(String orderId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -2661,7 +2661,7 @@ public class Cashfree {
     public okhttp3.Call pGEligibilityFetchCardlessEMICall(String xApiVersion, EligibilityFetchCardlessEMIRequest eligibilityFetchCardlessEMIRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -2689,29 +2689,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -2730,7 +2730,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2752,8 +2752,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<List<EligibilityCardlessEMIEntity>> PGEligibilityFetchCardlessEMI(String xApiVersion, EligibilityFetchCardlessEMIRequest eligibilityFetchCardlessEMIRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<List<EligibilityCardlessEMIEntity>> PGEligibilityFetchCardlessEMI(EligibilityFetchCardlessEMIRequest eligibilityFetchCardlessEMIRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -2788,7 +2788,7 @@ public class Cashfree {
     public okhttp3.Call pGEligibilityFetchOffersCall(String xApiVersion, EligibilityFetchOffersRequest eligibilityFetchOffersRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -2816,29 +2816,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -2857,7 +2857,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2879,8 +2879,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<List<EligibilityOfferEntity>> PGEligibilityFetchOffers(String xApiVersion, EligibilityFetchOffersRequest eligibilityFetchOffersRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<List<EligibilityOfferEntity>> PGEligibilityFetchOffers(EligibilityFetchOffersRequest eligibilityFetchOffersRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -2916,7 +2916,7 @@ public class Cashfree {
     public okhttp3.Call pGEligibilityFetchPaylaterCall(String xApiVersion, EligibilityFetchPaylaterRequest eligibilityFetchPaylaterRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -2944,29 +2944,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -2985,7 +2985,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3007,8 +3007,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<List<EligibilityPaylaterEntity>> PGEligibilityFetchPaylater(String xApiVersion, EligibilityFetchPaylaterRequest eligibilityFetchPaylaterRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<List<EligibilityPaylaterEntity>> PGEligibilityFetchPaylater(EligibilityFetchPaylaterRequest eligibilityFetchPaylaterRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -3044,7 +3044,7 @@ public class Cashfree {
     public okhttp3.Call pGEligibilityFetchPaymentMethodsCall(String xApiVersion, EligibilityFetchPaymentMethodsRequest eligibilityFetchPaymentMethodsRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -3072,29 +3072,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -3113,7 +3113,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3135,8 +3135,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<List<EligibilityPaymentMethodsEntity>> PGEligibilityFetchPaymentMethods(String xApiVersion, EligibilityFetchPaymentMethodsRequest eligibilityFetchPaymentMethodsRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<List<EligibilityPaymentMethodsEntity>> PGEligibilityFetchPaymentMethods(EligibilityFetchPaymentMethodsRequest eligibilityFetchPaymentMethodsRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -3171,7 +3171,7 @@ public class Cashfree {
     public okhttp3.Call pGCreateOfferCall(String xApiVersion, CreateOfferRequest createOfferRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -3199,29 +3199,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -3240,7 +3240,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3262,8 +3262,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<OfferEntity> PGCreateOffer(String xApiVersion, CreateOfferRequest createOfferRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<OfferEntity> PGCreateOffer(CreateOfferRequest createOfferRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -3298,7 +3298,7 @@ public class Cashfree {
     public okhttp3.Call pGFetchOfferCall(String xApiVersion, String offerId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -3327,29 +3327,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -3367,7 +3367,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3389,8 +3389,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<OfferEntity> PGFetchOffer(String xApiVersion, String offerId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<OfferEntity> PGFetchOffer(String offerId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -3425,7 +3425,7 @@ public class Cashfree {
     public okhttp3.Call pGCreateOrderCall(String xApiVersion, CreateOrderRequest createOrderRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -3453,29 +3453,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -3494,7 +3494,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3516,8 +3516,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<OrderEntity> PGCreateOrder(String xApiVersion, CreateOrderRequest createOrderRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<OrderEntity> PGCreateOrder(CreateOrderRequest createOrderRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -3552,7 +3552,7 @@ public class Cashfree {
     public okhttp3.Call pGFetchOrderCall(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -3581,29 +3581,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -3621,7 +3621,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3643,8 +3643,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<OrderEntity> PGFetchOrder(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<OrderEntity> PGFetchOrder(String orderId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -3679,7 +3679,7 @@ public class Cashfree {
     public okhttp3.Call pGFetchOrderExtendedDataCall(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -3708,29 +3708,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -3748,7 +3748,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3770,8 +3770,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<OrderExtendedDataEntity> PGFetchOrderExtendedData(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<OrderExtendedDataEntity> PGFetchOrderExtendedData(String orderId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -3807,7 +3807,7 @@ public class Cashfree {
     public okhttp3.Call pGTerminateOrderCall(String xApiVersion, String orderId, TerminateOrderRequest terminateOrderRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -3836,29 +3836,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -3877,7 +3877,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3904,8 +3904,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<OrderEntity> PGTerminateOrder(String xApiVersion, String orderId, TerminateOrderRequest terminateOrderRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<OrderEntity> PGTerminateOrder(String orderId, TerminateOrderRequest terminateOrderRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -3941,7 +3941,7 @@ public class Cashfree {
     public okhttp3.Call pGUpdateOrderExtendedDataCall(String xApiVersion, String orderId, UpdateOrderExtendedRequest updateOrderExtendedRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -3970,29 +3970,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -4011,7 +4011,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4038,8 +4038,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<UpdateOrderExtendedDataEntity> PGUpdateOrderExtendedData(String xApiVersion, String orderId, UpdateOrderExtendedRequest updateOrderExtendedRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<UpdateOrderExtendedDataEntity> PGUpdateOrderExtendedData(String orderId, UpdateOrderExtendedRequest updateOrderExtendedRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -4074,7 +4074,7 @@ public class Cashfree {
     public okhttp3.Call pGCancelLinkCall(String xApiVersion, String linkId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -4103,29 +4103,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -4143,7 +4143,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4165,8 +4165,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<LinkEntity> PGCancelLink(String xApiVersion, String linkId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<LinkEntity> PGCancelLink(String linkId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -4201,7 +4201,7 @@ public class Cashfree {
     public okhttp3.Call pGCreateLinkCall(String xApiVersion, CreateLinkRequest createLinkRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -4229,29 +4229,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -4270,7 +4270,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4292,8 +4292,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<LinkEntity> PGCreateLink(String xApiVersion, CreateLinkRequest createLinkRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<LinkEntity> PGCreateLink(CreateLinkRequest createLinkRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -4329,7 +4329,7 @@ public class Cashfree {
     public okhttp3.Call pGFetchLinkCall(String xApiVersion, String linkId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -4358,29 +4358,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -4398,7 +4398,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4420,8 +4420,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<LinkEntity> PGFetchLink(String xApiVersion, String linkId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<LinkEntity> PGFetchLink(String linkId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -4457,7 +4457,7 @@ public class Cashfree {
     public okhttp3.Call pGLinkFetchOrdersCall(String xApiVersion, String linkId, String xRequestId, UUID xIdempotencyKey, String status, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -4490,29 +4490,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -4530,7 +4530,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4552,8 +4552,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<List<PaymentLinkOrderEntity>> PGLinkFetchOrders(String xApiVersion, String linkId, String xRequestId, UUID xIdempotencyKey, String status, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<List<PaymentLinkOrderEntity>> PGLinkFetchOrders(String linkId, String xRequestId, UUID xIdempotencyKey, String status, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -4590,7 +4590,7 @@ public class Cashfree {
     public okhttp3.Call pGAuthorizeOrderCall(String xApiVersion, String orderId, AuthorizeOrderRequest authorizeOrderRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -4619,29 +4619,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -4660,7 +4660,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4687,8 +4687,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<PaymentEntity> PGAuthorizeOrder(String xApiVersion, String orderId, AuthorizeOrderRequest authorizeOrderRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<PaymentEntity> PGAuthorizeOrder(String orderId, AuthorizeOrderRequest authorizeOrderRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -4725,7 +4725,7 @@ public class Cashfree {
     public okhttp3.Call pGOrderAuthenticatePaymentCall(String xApiVersion, String cfPaymentId, OrderAuthenticatePaymentRequest orderAuthenticatePaymentRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -4754,29 +4754,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -4795,7 +4795,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] {  };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4822,8 +4822,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<OrderAuthenticateEntity> PGOrderAuthenticatePayment(String xApiVersion, String cfPaymentId, OrderAuthenticatePaymentRequest orderAuthenticatePaymentRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<OrderAuthenticateEntity> PGOrderAuthenticatePayment(String cfPaymentId, OrderAuthenticatePaymentRequest orderAuthenticatePaymentRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -4860,7 +4860,7 @@ public class Cashfree {
     public okhttp3.Call pGOrderFetchPaymentCall(String xApiVersion, String orderId, String cfPaymentId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -4890,29 +4890,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -4930,7 +4930,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4957,8 +4957,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<PaymentEntity> PGOrderFetchPayment(String xApiVersion, String orderId, String cfPaymentId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<PaymentEntity> PGOrderFetchPayment(String orderId, String cfPaymentId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -4994,7 +4994,7 @@ public class Cashfree {
     public okhttp3.Call pGOrderFetchPaymentsCall(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -5023,29 +5023,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -5063,7 +5063,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5085,8 +5085,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<List<PaymentEntity>> PGOrderFetchPayments(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<List<PaymentEntity>> PGOrderFetchPayments(String orderId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -5122,7 +5122,7 @@ public class Cashfree {
     public okhttp3.Call pGPayOrderCall(String xApiVersion, PayOrderRequest payOrderRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -5150,29 +5150,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -5191,7 +5191,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] {  };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5213,8 +5213,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<PayOrderEntity> PGPayOrder(String xApiVersion, PayOrderRequest payOrderRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<PayOrderEntity> PGPayOrder(PayOrderRequest payOrderRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -5251,7 +5251,7 @@ public class Cashfree {
     public okhttp3.Call pGFetchReconCall(String xApiVersion, FetchReconRequest fetchReconRequest, String contentType, String xRequestId, UUID xIdempotencyKey, String accept, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -5287,29 +5287,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -5328,7 +5328,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5350,8 +5350,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<ReconEntity> PGFetchRecon(String xApiVersion, FetchReconRequest fetchReconRequest, String contentType, String xRequestId, UUID xIdempotencyKey, String accept, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<ReconEntity> PGFetchRecon(FetchReconRequest fetchReconRequest, String contentType, String xRequestId, UUID xIdempotencyKey, String accept, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -5388,7 +5388,7 @@ public class Cashfree {
     public okhttp3.Call pGOrderCreateRefundCall(String xApiVersion, String orderId, OrderCreateRefundRequest orderCreateRefundRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -5417,29 +5417,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -5458,7 +5458,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5485,8 +5485,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<RefundEntity> PGOrderCreateRefund(String xApiVersion, String orderId, OrderCreateRefundRequest orderCreateRefundRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<RefundEntity> PGOrderCreateRefund(String orderId, OrderCreateRefundRequest orderCreateRefundRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -5523,7 +5523,7 @@ public class Cashfree {
     public okhttp3.Call pGOrderFetchRefundCall(String xApiVersion, String orderId, String refundId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -5553,29 +5553,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -5593,7 +5593,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5620,8 +5620,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<RefundEntity> PGOrderFetchRefund(String xApiVersion, String orderId, String refundId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<RefundEntity> PGOrderFetchRefund(String orderId, String refundId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -5656,7 +5656,7 @@ public class Cashfree {
     public okhttp3.Call pGOrderFetchRefundsCall(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -5685,29 +5685,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -5725,7 +5725,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5747,8 +5747,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<List<RefundEntity>> PGOrderFetchRefunds(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<List<RefundEntity>> PGOrderFetchRefunds(String orderId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -5785,7 +5785,7 @@ public class Cashfree {
     public okhttp3.Call pGFetchSettlementsCall(String xApiVersion, FetchSettlementsRequest fetchSettlementsRequest, String contentType, String xRequestId, UUID xIdempotencyKey, String accept, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -5821,29 +5821,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -5862,7 +5862,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5884,8 +5884,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<SettlementEntity> PGFetchSettlements(String xApiVersion, FetchSettlementsRequest fetchSettlementsRequest, String contentType, String xRequestId, UUID xIdempotencyKey, String accept, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<SettlementEntity> PGFetchSettlements(FetchSettlementsRequest fetchSettlementsRequest, String contentType, String xRequestId, UUID xIdempotencyKey, String accept, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -5922,7 +5922,7 @@ public class Cashfree {
     public okhttp3.Call pGSettlementFetchReconCall(String xApiVersion, SettlementFetchReconRequest settlementFetchReconRequest, String contentType, String xRequestId, UUID xIdempotencyKey, String accept, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -5958,29 +5958,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -5999,7 +5999,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6021,8 +6021,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<SettlementReconEntity> PGSettlementFetchRecon(String xApiVersion, SettlementFetchReconRequest settlementFetchReconRequest, String contentType, String xRequestId, UUID xIdempotencyKey, String accept, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<SettlementReconEntity> PGSettlementFetchRecon(SettlementFetchReconRequest settlementFetchReconRequest, String contentType, String xRequestId, UUID xIdempotencyKey, String accept, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -6054,7 +6054,7 @@ public class Cashfree {
     public okhttp3.Call markForSettlementCall(String xApiVersion, String xRequestId, UUID xIdempotencyKey, CreateOrderSettlementRequestBody createOrderSettlementRequestBody, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -6082,29 +6082,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -6123,7 +6123,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6140,8 +6140,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<Object> MarkForSettlement(String xApiVersion, String xRequestId, UUID xIdempotencyKey, CreateOrderSettlementRequestBody createOrderSettlementRequestBody, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<Object> MarkForSettlement(String xRequestId, UUID xIdempotencyKey, CreateOrderSettlementRequestBody createOrderSettlementRequestBody, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -6177,7 +6177,7 @@ public class Cashfree {
     public okhttp3.Call pGOrderFetchSettlementCall(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -6206,29 +6206,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -6246,7 +6246,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6268,8 +6268,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<SettlementEntity> PGOrderFetchSettlement(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<SettlementEntity> PGOrderFetchSettlement(String orderId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -6302,7 +6302,7 @@ public class Cashfree {
     public okhttp3.Call pGFetchSimulationCall(String xApiVersion, String simulationId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -6331,29 +6331,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -6371,7 +6371,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6393,8 +6393,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<SimulationResponse> PGFetchSimulation(String xApiVersion, String simulationId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<SimulationResponse> PGFetchSimulation(String simulationId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -6427,7 +6427,7 @@ public class Cashfree {
     public okhttp3.Call pGSimulatePaymentCall(String xApiVersion, SimulateRequest simulateRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -6455,29 +6455,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -6496,7 +6496,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6518,8 +6518,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<SimulationResponse> PGSimulatePayment(String xApiVersion, SimulateRequest simulateRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<SimulationResponse> PGSimulatePayment(SimulateRequest simulateRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -6554,7 +6554,7 @@ public class Cashfree {
     public okhttp3.Call sposCreateTerminalCall(String xApiVersion, CreateTerminalRequest createTerminalRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -6582,29 +6582,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -6623,7 +6623,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6645,8 +6645,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<TerminalEntity> SposCreateTerminal(String xApiVersion, CreateTerminalRequest createTerminalRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<TerminalEntity> SposCreateTerminal(CreateTerminalRequest createTerminalRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -6681,7 +6681,7 @@ public class Cashfree {
     public okhttp3.Call sposCreateTerminalTransactionCall(String xApiVersion, CreateTerminalTransactionRequest createTerminalTransactionRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -6709,29 +6709,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -6750,7 +6750,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6772,8 +6772,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<TerminalTransactionEntity> SposCreateTerminalTransaction(String xApiVersion, CreateTerminalTransactionRequest createTerminalTransactionRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<TerminalTransactionEntity> SposCreateTerminalTransaction(CreateTerminalTransactionRequest createTerminalTransactionRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -6808,7 +6808,7 @@ public class Cashfree {
     public okhttp3.Call sposDemapSoundboxVpaCall(String xApiVersion, DemapSoundboxVpaRequest demapSoundboxVpaRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -6836,29 +6836,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -6877,7 +6877,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6899,8 +6899,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<List<SoundboxVpaEntity>> SposDemapSoundboxVpa(String xApiVersion, DemapSoundboxVpaRequest demapSoundboxVpaRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<List<SoundboxVpaEntity>> SposDemapSoundboxVpa(DemapSoundboxVpaRequest demapSoundboxVpaRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -6935,7 +6935,7 @@ public class Cashfree {
     public okhttp3.Call sposFetchTerminalCall(String xApiVersion, String terminalPhoneNo, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -6964,29 +6964,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -7004,7 +7004,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -7026,8 +7026,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<TerminalEntity> SposFetchTerminal(String xApiVersion, String terminalPhoneNo, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<TerminalEntity> SposFetchTerminal(String terminalPhoneNo, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -7063,7 +7063,7 @@ public class Cashfree {
     public okhttp3.Call sposFetchTerminalQRCodesCall(String xApiVersion, String terminalPhoneNo, String cfTerminalId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -7099,29 +7099,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -7139,7 +7139,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -7166,8 +7166,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<List<FetchTerminalQRCodesEntity>> SposFetchTerminalQRCodes(String xApiVersion, String terminalPhoneNo, String cfTerminalId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<List<FetchTerminalQRCodesEntity>> SposFetchTerminalQRCodes(String terminalPhoneNo, String cfTerminalId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -7203,7 +7203,7 @@ public class Cashfree {
     public okhttp3.Call sposFetchTerminalSoundboxVpaCall(String xApiVersion, String deviceSerialNo, String cfTerminalId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -7239,29 +7239,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -7279,7 +7279,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -7306,8 +7306,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<List<SoundboxVpaEntity>> SposFetchTerminalSoundboxVpa(String xApiVersion, String deviceSerialNo, String cfTerminalId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<List<SoundboxVpaEntity>> SposFetchTerminalSoundboxVpa(String deviceSerialNo, String cfTerminalId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -7343,7 +7343,7 @@ public class Cashfree {
     public okhttp3.Call sposFetchTerminalTransactionCall(String xApiVersion, String utr, String cfTerminalId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -7376,29 +7376,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -7416,7 +7416,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -7443,8 +7443,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<TerminalPaymentEntity> SposFetchTerminalTransaction(String xApiVersion, String utr, String cfTerminalId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<TerminalPaymentEntity> SposFetchTerminalTransaction(String utr, String cfTerminalId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -7479,7 +7479,7 @@ public class Cashfree {
     public okhttp3.Call sposOnboardSoundboxVpaCall(String xApiVersion, OnboardSoundboxVpaRequest onboardSoundboxVpaRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -7507,29 +7507,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -7548,7 +7548,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -7570,8 +7570,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<SoundboxVpaEntity> SposOnboardSoundboxVpa(String xApiVersion, OnboardSoundboxVpaRequest onboardSoundboxVpaRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<SoundboxVpaEntity> SposOnboardSoundboxVpa(OnboardSoundboxVpaRequest onboardSoundboxVpaRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -7607,7 +7607,7 @@ public class Cashfree {
     public okhttp3.Call sposUpdateSoundboxVpaCall(String xApiVersion, String cfTerminalId, UpdateSoundboxVpaRequest updateSoundboxVpaRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -7636,29 +7636,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -7677,7 +7677,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -7704,8 +7704,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<SoundboxVpaEntity> SposUpdateSoundboxVpa(String xApiVersion, String cfTerminalId, UpdateSoundboxVpaRequest updateSoundboxVpaRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<SoundboxVpaEntity> SposUpdateSoundboxVpa(String cfTerminalId, UpdateSoundboxVpaRequest updateSoundboxVpaRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -7741,7 +7741,7 @@ public class Cashfree {
     public okhttp3.Call sposUpdateTerminalCall(String xApiVersion, String cfTerminalId, UpdateTerminalRequest updateTerminalRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -7770,29 +7770,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -7811,7 +7811,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -7838,8 +7838,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<List<UpdateTerminalEntity>> SposUpdateTerminal(String xApiVersion, String cfTerminalId, UpdateTerminalRequest updateTerminalRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<List<UpdateTerminalEntity>> SposUpdateTerminal(String cfTerminalId, UpdateTerminalRequest updateTerminalRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -7875,7 +7875,7 @@ public class Cashfree {
     public okhttp3.Call sposUpdateTerminalStatusCall(String xApiVersion, String cfTerminalId, UpdateTerminalStatusRequest updateTerminalStatusRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -7904,29 +7904,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -7945,7 +7945,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -7972,8 +7972,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<List<UpdateTerminalEntity>> SposUpdateTerminalStatus(String xApiVersion, String cfTerminalId, UpdateTerminalStatusRequest updateTerminalStatusRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<List<UpdateTerminalEntity>> SposUpdateTerminalStatus(String cfTerminalId, UpdateTerminalStatusRequest updateTerminalStatusRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -8009,7 +8009,7 @@ public class Cashfree {
     public okhttp3.Call sposUploadTerminalDocsCall(String xApiVersion, String cfTerminalId, UploadTerminalDocs uploadTerminalDocs, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -8038,29 +8038,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -8079,7 +8079,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -8106,8 +8106,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<List<UploadTerminalDocsEntity>> SposUploadTerminalDocs(String xApiVersion, String cfTerminalId, UploadTerminalDocs uploadTerminalDocs, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<List<UploadTerminalDocsEntity>> SposUploadTerminalDocs(String cfTerminalId, UploadTerminalDocs uploadTerminalDocs, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -8141,7 +8141,7 @@ public class Cashfree {
     public okhttp3.Call subsCreatePaymentCall(String xApiVersion, CreateSubscriptionPaymentRequest createSubscriptionPaymentRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -8169,29 +8169,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -8210,7 +8210,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -8232,8 +8232,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<CreateSubscriptionPaymentResponse> SubsCreatePayment(String xApiVersion, CreateSubscriptionPaymentRequest createSubscriptionPaymentRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<CreateSubscriptionPaymentResponse> SubsCreatePayment(CreateSubscriptionPaymentRequest createSubscriptionPaymentRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -8267,7 +8267,7 @@ public class Cashfree {
     public okhttp3.Call subsCreatePlanCall(String xApiVersion, CreatePlanRequest createPlanRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -8295,29 +8295,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -8336,7 +8336,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -8358,8 +8358,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<PlanEntity> SubsCreatePlan(String xApiVersion, CreatePlanRequest createPlanRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<PlanEntity> SubsCreatePlan(CreatePlanRequest createPlanRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -8394,7 +8394,7 @@ public class Cashfree {
     public okhttp3.Call subsCreateRefundCall(String xApiVersion, String subscriptionId, CreateSubscriptionRefundRequest createSubscriptionRefundRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -8423,29 +8423,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -8464,7 +8464,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -8491,8 +8491,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<SubscriptionPaymentRefundEntity> SubsCreateRefund(String xApiVersion, String subscriptionId, CreateSubscriptionRefundRequest createSubscriptionRefundRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<SubscriptionPaymentRefundEntity> SubsCreateRefund(String subscriptionId, CreateSubscriptionRefundRequest createSubscriptionRefundRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -8526,7 +8526,7 @@ public class Cashfree {
     public okhttp3.Call subsCreateSubscriptionCall(String xApiVersion, CreateSubscriptionRequest createSubscriptionRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -8554,29 +8554,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -8595,7 +8595,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -8617,8 +8617,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<SubscriptionEntity> SubsCreateSubscription(String xApiVersion, CreateSubscriptionRequest createSubscriptionRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<SubscriptionEntity> SubsCreateSubscription(CreateSubscriptionRequest createSubscriptionRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -8651,7 +8651,7 @@ public class Cashfree {
     public okhttp3.Call subsFetchPlanCall(String xApiVersion, String planId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -8680,29 +8680,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -8720,7 +8720,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -8742,8 +8742,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<PlanEntity> SubsFetchPlan(String xApiVersion, String planId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<PlanEntity> SubsFetchPlan(String planId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -8776,7 +8776,7 @@ public class Cashfree {
     public okhttp3.Call subsFetchSubscriptionCall(String xApiVersion, String subscriptionId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -8805,29 +8805,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -8845,7 +8845,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -8867,8 +8867,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<SubscriptionEntity> SubsFetchSubscription(String xApiVersion, String subscriptionId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<SubscriptionEntity> SubsFetchSubscription(String subscriptionId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -8902,7 +8902,7 @@ public class Cashfree {
     public okhttp3.Call subsFetchSubscriptionPaymentCall(String xApiVersion, String subscriptionId, String paymentId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -8932,29 +8932,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -8972,7 +8972,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -8999,8 +8999,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<SubscriptionPaymentEntity> SubsFetchSubscriptionPayment(String xApiVersion, String subscriptionId, String paymentId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<SubscriptionPaymentEntity> SubsFetchSubscriptionPayment(String subscriptionId, String paymentId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -9034,7 +9034,7 @@ public class Cashfree {
     public okhttp3.Call subsFetchSubscriptionPaymentsCall(String xApiVersion, String subscriptionId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -9063,29 +9063,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -9103,7 +9103,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -9125,8 +9125,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<List<SubscriptionPaymentEntity>> SubsFetchSubscriptionPayments(String xApiVersion, String subscriptionId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<List<SubscriptionPaymentEntity>> SubsFetchSubscriptionPayments(String subscriptionId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -9160,7 +9160,7 @@ public class Cashfree {
     public okhttp3.Call subsFetchSubscriptionRefundCall(String xApiVersion, String subscriptionId, String refundId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -9190,29 +9190,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -9230,7 +9230,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -9257,8 +9257,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<SubscriptionPaymentRefundEntity> SubsFetchSubscriptionRefund(String xApiVersion, String subscriptionId, String refundId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<SubscriptionPaymentRefundEntity> SubsFetchSubscriptionRefund(String subscriptionId, String refundId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -9293,7 +9293,7 @@ public class Cashfree {
     public okhttp3.Call subsManageSubscriptionCall(String xApiVersion, String subscriptionId, ManageSubscriptionRequest manageSubscriptionRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -9322,29 +9322,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -9363,7 +9363,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -9390,8 +9390,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<SubscriptionEntity> SubsManageSubscription(String xApiVersion, String subscriptionId, ManageSubscriptionRequest manageSubscriptionRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<SubscriptionEntity> SubsManageSubscription(String subscriptionId, ManageSubscriptionRequest manageSubscriptionRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -9426,7 +9426,7 @@ public class Cashfree {
     public okhttp3.Call subsManageSubscriptionPaymentCall(String xApiVersion, String subscriptionId, String paymentId, ManageSubscriptionPaymentRequest manageSubscriptionPaymentRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -9456,29 +9456,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -9497,7 +9497,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -9529,8 +9529,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<SubscriptionPaymentEntity> SubsManageSubscriptionPayment(String xApiVersion, String subscriptionId, String paymentId, ManageSubscriptionPaymentRequest manageSubscriptionPaymentRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<SubscriptionPaymentEntity> SubsManageSubscriptionPayment(String subscriptionId, String paymentId, ManageSubscriptionPaymentRequest manageSubscriptionPaymentRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -9567,7 +9567,7 @@ public class Cashfree {
     public okhttp3.Call subscriptionDocumentUploadCall(String xApiVersion, String paymentId, File _file, String paymentId2, String action, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -9608,29 +9608,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -9649,7 +9649,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -9686,8 +9686,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<UploadPnachImageResponse> SubscriptionDocumentUpload(String xApiVersion, String paymentId, File _file, String paymentId2, String action, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<UploadPnachImageResponse> SubscriptionDocumentUpload(String paymentId, File _file, String paymentId2, String action, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -9721,7 +9721,7 @@ public class Cashfree {
     public okhttp3.Call subscriptionEligibilityCall(String xApiVersion, SubscriptionEligibilityRequest subscriptionEligibilityRequest, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -9749,29 +9749,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -9790,7 +9790,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -9812,8 +9812,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<SubscriptionEligibilityResponse> SubscriptionEligibility(String xApiVersion, SubscriptionEligibilityRequest subscriptionEligibilityRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<SubscriptionEligibilityResponse> SubscriptionEligibility(SubscriptionEligibilityRequest subscriptionEligibilityRequest, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -9850,7 +9850,7 @@ public class Cashfree {
     public okhttp3.Call pGCustomerDeleteInstrumentCall(String xApiVersion, String customerId, String instrumentId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -9880,29 +9880,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -9920,7 +9920,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -9947,8 +9947,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<InstrumentEntity> PGCustomerDeleteInstrument(String xApiVersion, String customerId, String instrumentId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<InstrumentEntity> PGCustomerDeleteInstrument(String customerId, String instrumentId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -9985,7 +9985,7 @@ public class Cashfree {
     public okhttp3.Call pGCustomerFetchInstrumentCall(String xApiVersion, String customerId, String instrumentId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -10015,29 +10015,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -10055,7 +10055,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -10082,8 +10082,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<InstrumentEntity> PGCustomerFetchInstrument(String xApiVersion, String customerId, String instrumentId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<InstrumentEntity> PGCustomerFetchInstrument(String customerId, String instrumentId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -10119,7 +10119,7 @@ public class Cashfree {
     public okhttp3.Call pGCustomerFetchInstrumentsCall(String xApiVersion, String customerId, String instrumentType, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -10152,29 +10152,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -10192,7 +10192,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -10219,8 +10219,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<List<InstrumentEntity>> PGCustomerFetchInstruments(String xApiVersion, String customerId, String instrumentType, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<List<InstrumentEntity>> PGCustomerFetchInstruments(String customerId, String instrumentType, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -10257,7 +10257,7 @@ public class Cashfree {
     public okhttp3.Call pGCustomerInstrumentsFetchCryptogramCall(String xApiVersion, String customerId, String instrumentId, String xRequestId, UUID xIdempotencyKey, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
+        if(XEnvironment == CFEnvironment.PRODUCTION) {
             basePath = "https://api.cashfree.com/pg";
         }
 
@@ -10287,29 +10287,29 @@ public class Cashfree {
         }
 
 
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
+        if(XClientSecret != null && !XClientSecret.isEmpty()) {
             ApiKeyAuth XClientSecret = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            XClientSecret.setApiKey(this.XClientSecret);
+            XClientSecret.setApiKey(XClientSecret);
         }
 
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
+        if(XClientId != null && !XClientId.isEmpty()) {
             ApiKeyAuth XClientID = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            XClientID.setApiKey(this.XClientId);
+            XClientID.setApiKey(XClientId);
         }
 
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
+        if(XClientSignature != null && !XClientSignature.isEmpty()) {
             ApiKeyAuth XClientSignature = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            XClientSignature.setApiKey(this.XClientSignature);
+            XClientSignature.setApiKey(XClientSignature);
         }
 
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
+        if(XPartnerAPIKey != null && !XPartnerAPIKey.isEmpty()) {
             ApiKeyAuth XPartnerAPIKey = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            XPartnerAPIKey.setApiKey(this.XPartnerAPIKey);
+            XPartnerAPIKey.setApiKey(XPartnerAPIKey);
         }
 
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
+        if(XPartnerMerchantID != null && !XPartnerMerchantID.isEmpty()) {
             ApiKeyAuth XPartnerMerchantID = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            XPartnerMerchantID.setApiKey(this.XPartnerMerchantID);
+            XPartnerMerchantID.setApiKey(XPartnerMerchantID);
         }
 
         final String[] localVarAccepts = {
@@ -10327,7 +10327,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -10354,8 +10354,8 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<CryptogramEntity> PGCustomerInstrumentsFetchCryptogram(String xApiVersion, String customerId, String instrumentId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
+    public ApiResponse<CryptogramEntity> PGCustomerInstrumentsFetchCryptogram(String customerId, String instrumentId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+        String xApiVersion = XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
@@ -10464,7 +10464,7 @@ static class ApiClient {
         json = new JSON();
 
         // Set default User-Agent.
-        setUserAgent("OpenAPI-Generator/5.0.0-beta-1/java");
+        setUserAgent("OpenAPI-Generator/5.0.0-beta-2/java");
 
         authentications = new HashMap<String, Authentication>();
     }

@@ -53,7 +53,7 @@ import com.cashfree.pg.JSON;
  * Configurations for the products like One Click Checkout, Verify and Pay, if they are enabled for your account
  */
 @Schema(description = "Configurations for the products like One Click Checkout, Verify and Pay, if they are enabled for your account")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-23T13:20:08.871845Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-23T13:50:37.026342Z[Etc/UTC]")
 public class OrderEntityProducts {
   public static final String SERIALIZED_NAME_ONE_CLICK_CHECKOUT = "one_click_checkout";
   @SerializedName(SERIALIZED_NAME_ONE_CLICK_CHECKOUT)

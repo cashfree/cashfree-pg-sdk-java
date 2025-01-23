@@ -36,7 +36,7 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
         String customerId = "your-customer-id"; // String | Your Customer ID that you had sent during create order API `POST/orders`
         String instrumentId = "some-instrument-id"; // String | The instrument_id which needs to be deleted
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
@@ -60,7 +60,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
 | **customerId** | **String**| Your Customer ID that you had sent during create order API &#x60;POST/orders&#x60; | |
 | **instrumentId** | **String**| The instrument_id which needs to be deleted | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
@@ -119,7 +119,7 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
         String customerId = "your-customer-id"; // String | Your Customer ID that you had sent during create order API `POST/orders`
         String instrumentId = "some-instrument-id"; // String | The instrument_id of the saved instrument which needs to be queried
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
@@ -143,7 +143,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
 | **customerId** | **String**| Your Customer ID that you had sent during create order API &#x60;POST/orders&#x60; | |
 | **instrumentId** | **String**| The instrument_id of the saved instrument which needs to be queried | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
@@ -202,7 +202,7 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
         String customerId = "your-customer-id"; // String | Your Customer ID that you had sent during create order API `POST/orders`
         String instrumentType = "card"; // String | Payment mode or type of saved instrument 
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
@@ -226,7 +226,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
 | **customerId** | **String**| Your Customer ID that you had sent during create order API &#x60;POST/orders&#x60; | |
 | **instrumentType** | **String**| Payment mode or type of saved instrument  | [enum: card] |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
@@ -284,7 +284,7 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
         String customerId = "your-customer-id"; // String | Your Customer ID that you had sent during create order API `POST/orders`
         String instrumentId = "some-instrument-id"; // String | The instrument_id of the saved card instrument which needs to be queried
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
@@ -308,7 +308,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
 | **customerId** | **String**| Your Customer ID that you had sent during create order API &#x60;POST/orders&#x60; | |
 | **instrumentId** | **String**| The instrument_id of the saved card instrument which needs to be queried | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |

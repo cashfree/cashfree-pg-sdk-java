@@ -53,7 +53,7 @@ import com.cashfree.pg.JSON;
  * data entity in webhook
  */
 @Schema(description = "data entity in webhook")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-23T13:20:08.871845Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-23T13:50:37.026342Z[Etc/UTC]")
 public class SettlementWebhookDataEntity {
   public static final String SERIALIZED_NAME_SETTLEMENT = "settlement";
   @SerializedName(SERIALIZED_NAME_SETTLEMENT)
