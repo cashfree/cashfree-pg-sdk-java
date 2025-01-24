@@ -51,7 +51,7 @@ import com.cashfree.pg.JSON;
 /**
  * PaymentMethodBankTransferInPaymentsEntityBanktransfer
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-23T14:04:19.914397Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-24T05:12:29.162122Z[Etc/UTC]")
 public class PaymentMethodBankTransferInPaymentsEntityBanktransfer {
   public static final String SERIALIZED_NAME_CHANNEL = "channel";
   @SerializedName(SERIALIZED_NAME_CHANNEL)
