@@ -24,8 +24,8 @@ Use this API to get accept the Dispute by specifying the Dispute ID.
 
 ```java
 // Import classes:
-import com.cashfree.pg.*;
-import com.cashfree.pg.models.*;
+import com.cashfree.*;
+import com.cashfree.models.*;
 
 
 public class Example {
@@ -37,7 +37,7 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
         Integer disputeId = 56; // Integer | 
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
         UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
@@ -60,7 +60,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
 | **disputeId** | **Integer**|  | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
 | **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
@@ -104,8 +104,8 @@ Use this API to get Dispute details by specifying the Dispute ID.
 
 ```java
 // Import classes:
-import com.cashfree.pg.*;
-import com.cashfree.pg.models.*;
+import com.cashfree.*;
+import com.cashfree.models.*;
 
 
 public class Example {
@@ -117,7 +117,7 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
         Integer disputeId = 56; // Integer | 
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
         UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
@@ -140,7 +140,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
 | **disputeId** | **Integer**|  | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
 | **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
@@ -184,8 +184,8 @@ Use this API to get all Dispute details by specifying the Order ID.
 
 ```java
 // Import classes:
-import com.cashfree.pg.*;
-import com.cashfree.pg.models.*;
+import com.cashfree.*;
+import com.cashfree.models.*;
 
 
 public class Example {
@@ -197,7 +197,7 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
         String orderId = "orderId_example"; // String | 
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
         UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
@@ -220,7 +220,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
 | **orderId** | **String**|  | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
 | **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
@@ -264,8 +264,8 @@ Use this API to get all Dispute details by specifying the Payment ID.
 
 ```java
 // Import classes:
-import com.cashfree.pg.*;
-import com.cashfree.pg.models.*;
+import com.cashfree.*;
+import com.cashfree.models.*;
 
 
 public class Example {
@@ -277,7 +277,7 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
         Integer cfPaymentId = 56; // Integer | 
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
         UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
@@ -300,7 +300,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
 | **cfPaymentId** | **Integer**|  | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
 | **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
@@ -344,8 +344,8 @@ Use this API to Submit the Evidences to contest the Dispute by specifying the Di
 
 ```java
 // Import classes:
-import com.cashfree.pg.*;
-import com.cashfree.pg.models.*;
+import com.cashfree.*;
+import com.cashfree.models.*;
 
 
 public class Example {
@@ -357,7 +357,7 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
         Integer disputeId = 56; // Integer | 
         String _file = "_file_example"; // String | File types supported are jpeg, jpg, png, pdf and maximum file size allowed is 20 MB.
         String docType = "docType_example"; // String | Mention the type of the document you are uploading. Possible values :- Delivery/Service Proof, Shipping Proof, Statement of Service, Proof of Service Used, Cancellation of Service Proof, Refund Proof, Business model explanation, Extra Charges Declaration, Terms & Conditions, Customer Withdrawal Letter, Certificate of Authenticity, Reseller Agreement. You can use get evidences to contest dispute API to fetch set of documents required to contest particular dispute.
@@ -383,7 +383,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
 | **disputeId** | **Integer**|  | |
 | **_file** | **String**| File types supported are jpeg, jpg, png, pdf and maximum file size allowed is 20 MB. | |
 | **docType** | **String**| Mention the type of the document you are uploading. Possible values :- Delivery/Service Proof, Shipping Proof, Statement of Service, Proof of Service Used, Cancellation of Service Proof, Refund Proof, Business model explanation, Extra Charges Declaration, Terms &amp; Conditions, Customer Withdrawal Letter, Certificate of Authenticity, Reseller Agreement. You can use get evidences to contest dispute API to fetch set of documents required to contest particular dispute. | |

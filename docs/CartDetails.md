@@ -8,12 +8,8 @@ The cart details that are necessary like shipping address, billing address and m
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**billingAddress** | **String** |  |  [optional] |
-|**shippingCharge** | **Double** |  |  [optional] |
+|**shippingCharge** | **BigDecimal** |  |  [optional] |
 |**cartName** | **String** | Name of the cart. |  [optional] |
-|**customerNote** | **String** |  |  [optional] |
-|**pincode** | **String** |  |  [optional] |
-|**shippingAddress** | **String** |  |  [optional] |
 |**cartItems** | [**List&lt;CartItem&gt;**](CartItem.md) |  |  [optional] |
 
 

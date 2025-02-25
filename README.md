@@ -18,14 +18,14 @@ Try out our interactive guides at [Cashfree Dev Studio](https://www.cashfree.com
 ### Installation
 * Gradle Project
 ```bash
-implementation `com.cashfree.pg.java:cashfree_pg:5.0.0-beta-5`
+implementation `com.cashfree.pg.java:cashfree_pg:4.5.0`
 ```
 * Maven Project
 ```bash
 <dependency>
   <groupId>com.cashfree.pg.java</groupId>
   <artifactId>cashfree_pg</artifactId>
-  <version>5.0.0-beta-5</version>
+  <version>4.5.0</version>
   <scope>compile</scope>
 </dependency>
 <dependency>

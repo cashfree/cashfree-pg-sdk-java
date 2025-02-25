@@ -24,9 +24,7 @@ payment entity full object
 |**bankReference** | **String** |  |  [optional] |
 |**authId** | **String** |  |  [optional] |
 |**authorization** | [**AuthorizationInPaymentsEntity**](AuthorizationInPaymentsEntity.md) |  |  [optional] |
-|**paymentMethod** | [**PaymentEntityPaymentMethod**](PaymentEntityPaymentMethod.md) |  |  [optional] |
-|**internationalPayment** | [**InternationalPaymentEntity**](InternationalPaymentEntity.md) |  |  [optional] |
-|**paymentGatewayDetails** | [**PaymentGatewayDetails**](PaymentGatewayDetails.md) |  |  [optional] |
+|**paymentMethod** | **Object** |  |  [optional] |
 
 
 

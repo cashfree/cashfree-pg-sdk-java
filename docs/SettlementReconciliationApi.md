@@ -21,8 +21,8 @@ Use this API to get all settlement details by specifying the settlement ID, sett
 
 ```java
 // Import classes:
-import com.cashfree.pg.*;
-import com.cashfree.pg.models.*;
+import com.cashfree.*;
+import com.cashfree.models.*;
 
 
 public class Example {
@@ -34,7 +34,7 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
         FetchSettlementsRequest fetchSettlementsRequest = new FetchSettlementsRequest(); // FetchSettlementsRequest | Request Body to get the settlements
         String contentType = "application/json"; // String | application/json
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
@@ -59,7 +59,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
 | **fetchSettlementsRequest** | [**FetchSettlementsRequest**](FetchSettlementsRequest.md)| Request Body to get the settlements | |
 | **contentType** | **String**| application/json | [optional] |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
@@ -105,8 +105,8 @@ Settlement Reconciliation
 
 ```java
 // Import classes:
-import com.cashfree.pg.*;
-import com.cashfree.pg.models.*;
+import com.cashfree.*;
+import com.cashfree.models.*;
 
 
 public class Example {
@@ -118,7 +118,7 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
         SettlementFetchReconRequest settlementFetchReconRequest = new SettlementFetchReconRequest(); // SettlementFetchReconRequest | Request Body for the settlement reconciliation
         String contentType = "application/json"; // String | application/json
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
@@ -143,7 +143,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
 | **settlementFetchReconRequest** | [**SettlementFetchReconRequest**](SettlementFetchReconRequest.md)| Request Body for the settlement reconciliation | |
 | **contentType** | **String**| application/json | [optional] |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |

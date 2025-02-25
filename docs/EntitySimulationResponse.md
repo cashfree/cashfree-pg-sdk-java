@@ -8,7 +8,7 @@ Entity Simulation it contains payment_status and payment_error_code
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**paymentStatus** | **String** | Payment Status |  [optional] |
+|**paymentStatus** | **String** | Payment Status |  |
 |**paymentErrorCode** | **String** | Payment Error Code |  [optional] |
 
 
