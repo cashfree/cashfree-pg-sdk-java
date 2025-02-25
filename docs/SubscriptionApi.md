@@ -32,8 +32,8 @@ Use this API to create an auth or to raise a charge.
 
 ```java
 // Import classes:
-import com.cashfree.pg.*;
-import com.cashfree.pg.models.*;
+import com.cashfree.*;
+import com.cashfree.models.*;
 
 
 public class Example {
@@ -45,7 +45,7 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
         CreateSubscriptionPaymentRequest createSubscriptionPaymentRequest = new CreateSubscriptionPaymentRequest(); // CreateSubscriptionPaymentRequest | Request body to create a subscription payment.
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
         UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
@@ -68,7 +68,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
 | **createSubscriptionPaymentRequest** | [**CreateSubscriptionPaymentRequest**](CreateSubscriptionPaymentRequest.md)| Request body to create a subscription payment. | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
 | **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
@@ -111,8 +111,8 @@ A plan allows your customer to identify the features you offer along with your p
 
 ```java
 // Import classes:
-import com.cashfree.pg.*;
-import com.cashfree.pg.models.*;
+import com.cashfree.*;
+import com.cashfree.models.*;
 
 
 public class Example {
@@ -124,7 +124,7 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
         CreatePlanRequest createPlanRequest = new CreatePlanRequest(); // CreatePlanRequest | Request body to create a plan.
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
         UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
@@ -147,7 +147,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
 | **createPlanRequest** | [**CreatePlanRequest**](CreatePlanRequest.md)| Request body to create a plan. | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
 | **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
@@ -190,8 +190,8 @@ This API allows you to create refund on a successful payment. Refund amount can 
 
 ```java
 // Import classes:
-import com.cashfree.pg.*;
-import com.cashfree.pg.models.*;
+import com.cashfree.*;
+import com.cashfree.models.*;
 
 
 public class Example {
@@ -203,7 +203,7 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
         String subscriptionId = "subscription-id-123"; // String | Provide the SubscriptionId using which the subscription was created.
         CreateSubscriptionRefundRequest createSubscriptionRefundRequest = new CreateSubscriptionRefundRequest(); // CreateSubscriptionRefundRequest | Request body to create a subscription refund.
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
@@ -227,7 +227,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
 | **subscriptionId** | **String**| Provide the SubscriptionId using which the subscription was created. | |
 | **createSubscriptionRefundRequest** | [**CreateSubscriptionRefundRequest**](CreateSubscriptionRefundRequest.md)| Request body to create a subscription refund. | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
@@ -271,8 +271,8 @@ Use this API to create a new subscription.
 
 ```java
 // Import classes:
-import com.cashfree.pg.*;
-import com.cashfree.pg.models.*;
+import com.cashfree.*;
+import com.cashfree.models.*;
 
 
 public class Example {
@@ -284,7 +284,7 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
         CreateSubscriptionRequest createSubscriptionRequest = new CreateSubscriptionRequest(); // CreateSubscriptionRequest | Request body to create a subscription.
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
         UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
@@ -307,7 +307,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
 | **createSubscriptionRequest** | [**CreateSubscriptionRequest**](CreateSubscriptionRequest.md)| Request body to create a subscription. | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
 | **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
@@ -350,8 +350,8 @@ Use this API to fetch plan details.
 
 ```java
 // Import classes:
-import com.cashfree.pg.*;
-import com.cashfree.pg.models.*;
+import com.cashfree.*;
+import com.cashfree.models.*;
 
 
 public class Example {
@@ -363,7 +363,7 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
         String planId = "plan-id-123"; // String | Provide the PlanId for which the details have to be fetched.
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
         UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
@@ -386,7 +386,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
 | **planId** | **String**| Provide the PlanId for which the details have to be fetched. | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
 | **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
@@ -428,8 +428,8 @@ Use this API to fetch subscription details.
 
 ```java
 // Import classes:
-import com.cashfree.pg.*;
-import com.cashfree.pg.models.*;
+import com.cashfree.*;
+import com.cashfree.models.*;
 
 
 public class Example {
@@ -441,7 +441,7 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
         String subscriptionId = "subscription-id-123"; // String | Provide the SubscriptionId using which the subscription was created.
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
         UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
@@ -464,7 +464,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
 | **subscriptionId** | **String**| Provide the SubscriptionId using which the subscription was created. | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
 | **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
@@ -506,8 +506,8 @@ Use this API to fetch details of a single payment of a subscription.
 
 ```java
 // Import classes:
-import com.cashfree.pg.*;
-import com.cashfree.pg.models.*;
+import com.cashfree.*;
+import com.cashfree.models.*;
 
 
 public class Example {
@@ -519,7 +519,7 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
         String subscriptionId = "subscription-id-123"; // String | Provide the SubscriptionId using which the subscription was created.
         String paymentId = "payment-id-123"; // String | Provide the PaymentId using which the payment was created.
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
@@ -543,7 +543,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
 | **subscriptionId** | **String**| Provide the SubscriptionId using which the subscription was created. | |
 | **paymentId** | **String**| Provide the PaymentId using which the payment was created. | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
@@ -586,8 +586,8 @@ Use this API to fetch all payments of a subscription.
 
 ```java
 // Import classes:
-import com.cashfree.pg.*;
-import com.cashfree.pg.models.*;
+import com.cashfree.*;
+import com.cashfree.models.*;
 
 
 public class Example {
@@ -599,7 +599,7 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
         String subscriptionId = "subscription-id-123"; // String | Provide the SubscriptionId using which the subscription was created.
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
         UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
@@ -622,7 +622,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
 | **subscriptionId** | **String**| Provide the SubscriptionId using which the subscription was created. | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
 | **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
@@ -665,8 +665,8 @@ Use this API to fetch details of a refund of a subscription payment.
 
 ```java
 // Import classes:
-import com.cashfree.pg.*;
-import com.cashfree.pg.models.*;
+import com.cashfree.*;
+import com.cashfree.models.*;
 
 
 public class Example {
@@ -678,7 +678,7 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
         String subscriptionId = "subscription-id-123"; // String | Provide the SubscriptionId using which the subscription was created.
         String refundId = "refund-id-123"; // String | Provide the PaymentId for which the details have to be fetched.
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
@@ -702,7 +702,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
 | **subscriptionId** | **String**| Provide the SubscriptionId using which the subscription was created. | |
 | **refundId** | **String**| Provide the PaymentId for which the details have to be fetched. | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
@@ -745,8 +745,8 @@ Use this API to manage a subscription. You can cancel, pause, activate or change
 
 ```java
 // Import classes:
-import com.cashfree.pg.*;
-import com.cashfree.pg.models.*;
+import com.cashfree.*;
+import com.cashfree.models.*;
 
 
 public class Example {
@@ -758,7 +758,7 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
         String subscriptionId = "subscription-id-123"; // String | Provide the SubscriptionId using which the subscription was created.
         ManageSubscriptionRequest manageSubscriptionRequest = new ManageSubscriptionRequest(); // ManageSubscriptionRequest | Request body to manage a subscription.
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
@@ -782,7 +782,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
 | **subscriptionId** | **String**| Provide the SubscriptionId using which the subscription was created. | |
 | **manageSubscriptionRequest** | [**ManageSubscriptionRequest**](ManageSubscriptionRequest.md)| Request body to manage a subscription. | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
@@ -826,8 +826,8 @@ Use this API to manage a payment of a subscription. A payment can be cancelled o
 
 ```java
 // Import classes:
-import com.cashfree.pg.*;
-import com.cashfree.pg.models.*;
+import com.cashfree.*;
+import com.cashfree.models.*;
 
 
 public class Example {
@@ -839,7 +839,7 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
         String subscriptionId = "subscription-id-123"; // String | Provide the SubscriptionId using which the subscription was created.
         String paymentId = "payment-id-123"; // String | Provide the PaymentId using which the payment was created.
         ManageSubscriptionPaymentRequest manageSubscriptionPaymentRequest = new ManageSubscriptionPaymentRequest(); // ManageSubscriptionPaymentRequest | Request body to manage a subscription payment.
@@ -864,7 +864,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
 | **subscriptionId** | **String**| Provide the SubscriptionId using which the subscription was created. | |
 | **paymentId** | **String**| Provide the PaymentId using which the payment was created. | |
 | **manageSubscriptionPaymentRequest** | [**ManageSubscriptionPaymentRequest**](ManageSubscriptionPaymentRequest.md)| Request body to manage a subscription payment. | |
@@ -908,8 +908,8 @@ Use this API to upload file for Physical Nach Authorization.
 
 ```java
 // Import classes:
-import com.cashfree.pg.*;
-import com.cashfree.pg.models.*;
+import com.cashfree.*;
+import com.cashfree.models.*;
 
 
 public class Example {
@@ -921,7 +921,7 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
         String paymentId = "payment-id-123"; // String | Provide the PaymentId using which the payment was created.
         File _file = new File("/path/to/file"); // File | Select the .jpg file that should be uploaded or provide the path of that file. You cannot upload a file that is more than 1MB in size.
         String paymentId2 = "paymentId_example"; // String | Authorization Payment Id for physical nach authorization
@@ -947,7 +947,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
 | **paymentId** | **String**| Provide the PaymentId using which the payment was created. | |
 | **_file** | **File**| Select the .jpg file that should be uploaded or provide the path of that file. You cannot upload a file that is more than 1MB in size. | |
 | **paymentId2** | **String**| Authorization Payment Id for physical nach authorization | |
@@ -993,8 +993,8 @@ Use this API to check if a payment method is enabled for your account.
 
 ```java
 // Import classes:
-import com.cashfree.pg.*;
-import com.cashfree.pg.models.*;
+import com.cashfree.*;
+import com.cashfree.models.*;
 
 
 public class Example {
@@ -1006,7 +1006,7 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
         SubscriptionEligibilityRequest subscriptionEligibilityRequest = new SubscriptionEligibilityRequest(); // SubscriptionEligibilityRequest | Request body to fetch subscription eligibile payment method details.
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
         UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
@@ -1029,7 +1029,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
 | **subscriptionEligibilityRequest** | [**SubscriptionEligibilityRequest**](SubscriptionEligibilityRequest.md)| Request body to fetch subscription eligibile payment method details. | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
 | **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
