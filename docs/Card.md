@@ -22,6 +22,14 @@ Card Payment method
 |**cardDisplay** | **String** | last 4 digits of original card number. Required only for tokenized card transactions. |  [optional] |
 |**cardAlias** | **String** | Card alias as returned by Cashfree Vault API. |  [optional] |
 |**cardBankName** | [**CardBankNameEnum**](#CardBankNameEnum) | One of [\&quot;Kotak\&quot;, \&quot;ICICI\&quot;, \&quot;RBL\&quot;, \&quot;BOB\&quot;, \&quot;Standard Chartered\&quot;]. Card bank name, required for EMI payments. This is the bank user has selected for EMI |  [optional] |
+|**addressLineOne** | **String** | First line of the address. |  [optional] |
+|**addressLineTwo** | **String** | Second line of the address. |  [optional] |
+|**city** | **String** | City Name. |  [optional] |
+|**zipCode** | **String** | Pin Code/Zip Code. |  [optional] |
+|**country** | **String** | Country Name. |  [optional] |
+|**countryCode** | **String** | Country Code. Should be in ISO 2 format (ie. US for United States) |  [optional] |
+|**state** | **String** | State Name. |  [optional] |
+|**stateCode** | **String** | State Code. Should be in ISO 2 format (ie. FL for Florida) |  [optional] |
 |**emiTenure** | **Integer** | EMI tenure selected by the user |  [optional] |
 
 

@@ -8,9 +8,9 @@ Terminal Data in the create order response
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
+|**agentMobileNumber** | **String** |  |  [optional] |
 |**cfTerminalId** | **Integer** |  |  [optional] |
 |**merchantTerminalId** | **String** |  |  [optional] |
-|**agentMobileNumber** | **String** |  |  [optional] |
 |**terminalType** | **String** |  |  [optional] |
 
 

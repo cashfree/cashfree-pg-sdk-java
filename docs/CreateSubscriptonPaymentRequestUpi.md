@@ -8,8 +8,8 @@ payment method upi.
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**upiId** | **String** |  |  [optional] |
 |**channel** | **String** | Channel. can be link, qrcode, or collect |  [optional] |
+|**upiId** | **String** |  |  [optional] |
 
 
 

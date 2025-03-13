@@ -2,7 +2,7 @@
 
 # PaymentWebhookGatewayDetailsEntity
 
-payment gatewat details present in the webhook response
+payment gateway details present in the webhook response
 
 ## Properties
 
@@ -10,9 +10,11 @@ payment gatewat details present in the webhook response
 |------------ | ------------- | ------------- | -------------|
 |**gatewayName** | **String** |  |  [optional] |
 |**gatewayOrderId** | **String** |  |  [optional] |
+|**gatewayOrderReferenceId** | **String** |  |  [optional] |
 |**gatewayPaymentId** | **String** |  |  [optional] |
 |**gatewayStatusCode** | **String** |  |  [optional] |
 |**gatewaySettlement** | **String** |  |  [optional] |
+|**gatewayReferenceName** | **String** |  |  [optional] |
 
 
 

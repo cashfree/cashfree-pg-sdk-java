@@ -8,14 +8,14 @@ payment method card.
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**channel** | **String** | Channel. can be link |  [optional] |
-|**cardNumber** | **String** | Card number |  [optional] |
-|**cardHolderName** | **String** | Card holder name |  [optional] |
+|**cardCvv** | **String** | Card CVV |  [optional] |
 |**cardExpiryMm** | **String** | Card expiry month |  [optional] |
 |**cardExpiryYy** | **String** | Card expiry year |  [optional] |
-|**cardCvv** | **String** | Card CVV |  [optional] |
+|**cardHolderName** | **String** | Card holder name |  [optional] |
 |**cardNetwork** | **String** | Card network |  [optional] |
+|**cardNumber** | **String** | Card number |  [optional] |
 |**cardType** | **String** | Card type |  [optional] |
+|**channel** | **String** | Channel. can be link |  [optional] |
 
 
 

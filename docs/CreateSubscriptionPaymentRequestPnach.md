@@ -8,12 +8,12 @@ payment method pnach.
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**channel** | **String** | Channel. can be post |  [optional] |
-|**accountHolderName** | **String** | Account holder name |  [optional] |
-|**accountNumber** | **String** | Account number |  [optional] |
 |**accountBankCode** | **String** | Account bank code |  [optional] |
-|**accountType** | **String** | Account type |  [optional] |
+|**accountHolderName** | **String** | Account holder name |  [optional] |
 |**accountIfsc** | **String** | Account IFSC |  [optional] |
+|**accountNumber** | **String** | Account number |  [optional] |
+|**accountType** | **String** | Account type |  [optional] |
+|**channel** | **String** | Channel. can be post |  [optional] |
 |**mandateCreationDate** | **String** | Mandate creation date |  [optional] |
 |**mandateStartDate** | **String** | Mandate start date |  [optional] |
 
