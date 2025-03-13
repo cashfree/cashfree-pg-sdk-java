@@ -14,6 +14,7 @@
 |**cardCountry** | **String** |  |  [optional] |
 |**cardBankName** | **String** |  |  [optional] |
 |**cardNetworkReferenceId** | **String** |  |  [optional] |
+|**instrumentId** | **String** |  |  [optional] |
 
 
 

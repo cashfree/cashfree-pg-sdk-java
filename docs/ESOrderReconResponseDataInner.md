@@ -9,6 +9,7 @@
 |------------ | ------------- | ------------- | -------------|
 |**amount** | **BigDecimal** |  |  [optional] |
 |**settlementEligibilityTime** | **String** |  |  [optional] |
+|**status** | **String** |  |  [optional] |
 |**merchantOrderId** | **String** |  |  [optional] |
 |**txTime** | **String** |  |  [optional] |
 |**settled** | **String** |  |  [optional] |

@@ -12,6 +12,7 @@ the data object pay api
 |**payload** | **Object** |  |  [optional] |
 |**contentType** | **String** |  |  [optional] |
 |**method** | **String** |  |  [optional] |
+|**redirectToBank** | **String** |  |  [optional] |
 
 
 

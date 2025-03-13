@@ -20,8 +20,8 @@ Details of the settlement information.
 |**settlementAmount** | **BigDecimal** | Amount to be settled after charges and tax. |  [optional] |
 |**settlementCurrency** | **String** | Currency of the settlement. Example: \&quot;INR\&quot;. |  [optional] |
 |**transferUtr** | **String** | UTR (Unique Transaction Reference) for the transfer if available, otherwise null. |  [optional] |
-|**transferTime** | **String** | Time of transfer if available, otherwise null. |  [optional] |
-|**paymentTime** | **String** | Timestamp when payment was made. |  [optional] |
+|**transferTime** | **OffsetDateTime** | Time of transfer if available, otherwise null. |  [optional] |
+|**paymentTime** | **OffsetDateTime** | Timestamp when payment was made. |  [optional] |
 
 
 

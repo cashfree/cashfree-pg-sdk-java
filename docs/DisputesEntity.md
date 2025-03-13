@@ -12,6 +12,7 @@
 |**reasonCode** | **String** |  |  [optional] |
 |**reasonDescription** | **String** |  |  [optional] |
 |**disputeAmount** | **BigDecimal** | Dispute amount may differ from transaction amount for partial cases. |  [optional] |
+|**disputeAmountCurrency** | **String** | Dispute amount currency for a dispute |  [optional] |
 |**createdAt** | **String** | This is the time when the dispute was created. |  [optional] |
 |**respondBy** | **String** | This is the time by which evidence should be submitted to contest the dispute. |  [optional] |
 |**updatedAt** | **String** | This is the time when the dispute case was updated. |  [optional] |

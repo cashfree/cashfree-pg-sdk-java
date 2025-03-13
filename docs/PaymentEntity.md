@@ -23,8 +23,12 @@ payment entity full object
 |**paymentMessage** | **String** |  |  [optional] |
 |**bankReference** | **String** |  |  [optional] |
 |**authId** | **String** |  |  [optional] |
+|**orderCurrency** | **String** |  |  [optional] |
 |**authorization** | [**AuthorizationInPaymentsEntity**](AuthorizationInPaymentsEntity.md) |  |  [optional] |
-|**paymentMethod** | **Object** |  |  [optional] |
+|**paymentMethod** | [**PaymentEntityPaymentMethod**](PaymentEntityPaymentMethod.md) |  |  [optional] |
+|**internationalPayment** | [**InternationalPaymentEntity**](InternationalPaymentEntity.md) |  |  [optional] |
+|**paymentGatewayDetails** | [**PaymentGatewayDetails**](PaymentGatewayDetails.md) |  |  [optional] |
+|**paymentSurcharge** | [**PaymentEntityPaymentSurcharge**](PaymentEntityPaymentSurcharge.md) |  |  [optional] |
 
 
 

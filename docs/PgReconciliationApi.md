@@ -20,8 +20,8 @@ PG Reconciliation
 
 ```java
 // Import classes:
-import com.cashfree.*;
-import com.cashfree.models.*;
+import com.cashfree.pg.*;
+import com.cashfree.pg.models.*;
 
 
 public class Example {
@@ -33,7 +33,7 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2023-08-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
         FetchReconRequest fetchReconRequest = new FetchReconRequest(); // FetchReconRequest | Request Body for the reconciliation
         String contentType = "application/json"; // String | application/json
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
@@ -58,7 +58,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2023-08-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
 | **fetchReconRequest** | [**FetchReconRequest**](FetchReconRequest.md)| Request Body for the reconciliation | |
 | **contentType** | **String**| application/json | [optional] |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
