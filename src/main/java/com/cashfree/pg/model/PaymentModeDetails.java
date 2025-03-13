@@ -53,7 +53,7 @@ import com.cashfree.pg.JSON;
  * payment mode eligiblity object
  */
 @Schema(description = "payment mode eligiblity object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-13T09:38:52.601894Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-13T09:56:44.464357Z[Etc/UTC]")
 public class PaymentModeDetails {
   public static final String SERIALIZED_NAME_NICK = "nick";
   @SerializedName(SERIALIZED_NAME_NICK)

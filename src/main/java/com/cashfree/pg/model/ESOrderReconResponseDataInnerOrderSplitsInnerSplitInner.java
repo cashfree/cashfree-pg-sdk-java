@@ -52,7 +52,7 @@ import com.cashfree.pg.JSON;
 /**
  * ESOrderReconResponseDataInnerOrderSplitsInnerSplitInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-13T09:38:52.601894Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-13T09:56:44.464357Z[Etc/UTC]")
 public class ESOrderReconResponseDataInnerOrderSplitsInnerSplitInner {
   public static final String SERIALIZED_NAME_MERCHANT_VENDOR_ID = "merchant_vendor_id";
   @SerializedName(SERIALIZED_NAME_MERCHANT_VENDOR_ID)

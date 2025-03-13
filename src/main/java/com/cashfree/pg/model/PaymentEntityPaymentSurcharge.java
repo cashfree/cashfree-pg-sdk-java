@@ -51,7 +51,7 @@ import com.cashfree.pg.JSON;
 /**
  * PaymentEntityPaymentSurcharge
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-13T09:38:52.601894Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-13T09:56:44.464357Z[Etc/UTC]")
 public class PaymentEntityPaymentSurcharge {
   public static final String SERIALIZED_NAME_PAYMENT_SURCHARGE_SERVICE_CHARGE = "payment_surcharge_service_charge";
   @SerializedName(SERIALIZED_NAME_PAYMENT_SURCHARGE_SERVICE_CHARGE)
