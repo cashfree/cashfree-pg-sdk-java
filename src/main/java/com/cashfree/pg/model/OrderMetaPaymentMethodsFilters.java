@@ -54,7 +54,7 @@ import com.cashfree.pg.JSON;
  * Allowed payment modes for this order. Along with multiple filters for cards can be added to this key. And this filtering will be honoured during transaction creation.
  */
 @Schema(description = "Allowed payment modes for this order. Along with multiple filters for cards can be added to this key. And this filtering will be honoured during transaction creation.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-13T09:38:52.601894Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-13T09:56:44.464357Z[Etc/UTC]")
 public class OrderMetaPaymentMethodsFilters {
   public static final String SERIALIZED_NAME_METHODS = "methods";
   @SerializedName(SERIALIZED_NAME_METHODS)

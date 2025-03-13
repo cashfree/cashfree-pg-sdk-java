@@ -52,7 +52,7 @@ import com.cashfree.pg.JSON;
  * Offer meta details object
  */
 @Schema(description = "Offer meta details object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-13T09:38:52.601894Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-13T09:56:44.464357Z[Etc/UTC]")
 public class OfferMeta {
   public static final String SERIALIZED_NAME_OFFER_TITLE = "offer_title";
   @SerializedName(SERIALIZED_NAME_OFFER_TITLE)

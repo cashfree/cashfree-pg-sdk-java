@@ -53,7 +53,7 @@ import com.cashfree.pg.JSON;
  * Allowed card issuing bank for the order
  */
 @Schema(description = "Allowed card issuing bank for the order")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-13T09:38:52.601894Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-13T09:56:44.464357Z[Etc/UTC]")
 public class OrderMetaPaymentMethodsFiltersFiltersCardIssuingBank {
   public static final String SERIALIZED_NAME_ACTION = "action";
   @SerializedName(SERIALIZED_NAME_ACTION)
