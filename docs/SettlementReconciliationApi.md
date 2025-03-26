@@ -38,7 +38,7 @@ public class Example {
         FetchSettlementsRequest fetchSettlementsRequest = new FetchSettlementsRequest(); // FetchSettlementsRequest | Request Body to get the settlements
         String contentType = "application/json"; // String | application/json
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. 
         String accept = "application/json"; // String | application/json
         try {
             SettlementEntity result = cashfree.PGFetchSettlements(xApiVersion, fetchSettlementsRequest, contentType, xRequestId, xIdempotencyKey, acceptOkHttpClient httpClient);
@@ -63,7 +63,7 @@ public class Example {
 | **fetchSettlementsRequest** | [**FetchSettlementsRequest**](FetchSettlementsRequest.md)| Request Body to get the settlements | |
 | **contentType** | **String**| application/json | [optional] |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  | [optional] |
 | **accept** | **String**| application/json | [optional] |
 
 ### Return type
@@ -122,7 +122,7 @@ public class Example {
         SettlementFetchReconRequest settlementFetchReconRequest = new SettlementFetchReconRequest(); // SettlementFetchReconRequest | Request Body for the settlement reconciliation
         String contentType = "application/json"; // String | application/json
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. 
         String accept = "application/json"; // String | application/json
         try {
             SettlementReconEntity result = cashfree.PGSettlementFetchRecon(xApiVersion, settlementFetchReconRequest, contentType, xRequestId, xIdempotencyKey, acceptOkHttpClient httpClient);
@@ -147,7 +147,7 @@ public class Example {
 | **settlementFetchReconRequest** | [**SettlementFetchReconRequest**](SettlementFetchReconRequest.md)| Request Body for the settlement reconciliation | |
 | **contentType** | **String**| application/json | [optional] |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  | [optional] |
 | **accept** | **String**| application/json | [optional] |
 
 ### Return type

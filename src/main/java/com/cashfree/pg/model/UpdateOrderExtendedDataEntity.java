@@ -56,7 +56,7 @@ import com.cashfree.pg.JSON;
  * The complete update order extended data entity
  */
 @Schema(description = "The complete update order extended data entity")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-13T09:56:44.464357Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-26T12:53:05.189649Z[Etc/UTC]")
 public class UpdateOrderExtendedDataEntity {
   public static final String SERIALIZED_NAME_CF_ORDER_ID = "cf_order_id";
   @SerializedName(SERIALIZED_NAME_CF_ORDER_ID)

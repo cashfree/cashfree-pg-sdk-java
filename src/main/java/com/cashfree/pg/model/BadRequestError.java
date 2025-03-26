@@ -52,7 +52,7 @@ import com.cashfree.pg.JSON;
  * Invalid request received from client
  */
 @Schema(description = "Invalid request received from client")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-13T09:56:44.464357Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-26T12:53:05.189649Z[Etc/UTC]")
 public class BadRequestError {
   public static final String SERIALIZED_NAME_MESSAGE = "message";
   @SerializedName(SERIALIZED_NAME_MESSAGE)
@@ -61,6 +61,10 @@ public class BadRequestError {
   public static final String SERIALIZED_NAME_CODE = "code";
   @SerializedName(SERIALIZED_NAME_CODE)
   private String code;
+
+  public static final String SERIALIZED_NAME_HELP = "help";
+  @SerializedName(SERIALIZED_NAME_HELP)
+  private String help;
 
   /**
    * Gets or Sets type
@@ -160,6 +164,28 @@ public class BadRequestError {
   }
 
 
+  public BadRequestError help(String help) {
+    
+    this.help = help;
+    return this;
+  }
+
+   /**
+   * Get help
+   * @return help
+  **/
+  @javax.annotation.Nullable
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
+  public String getHelp() {
+    return help;
+  }
+
+
+  public void setHelp(String help) {
+    this.help = help;
+  }
+
+
   public BadRequestError type(TypeEnum type) {
     
     this.type = type;
@@ -194,12 +220,13 @@ public class BadRequestError {
     BadRequestError badRequestError = (BadRequestError) o;
     return Objects.equals(this.message, badRequestError.message) &&
         Objects.equals(this.code, badRequestError.code) &&
+        Objects.equals(this.help, badRequestError.help) &&
         Objects.equals(this.type, badRequestError.type);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(message, code, type);
+    return Objects.hash(message, code, help, type);
   }
 
   @Override
@@ -208,6 +235,7 @@ public class BadRequestError {
     sb.append("class BadRequestError {\n");
     sb.append("    message: ").append(toIndentedString(message)).append("\n");
     sb.append("    code: ").append(toIndentedString(code)).append("\n");
+    sb.append("    help: ").append(toIndentedString(help)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -233,6 +261,7 @@ public class BadRequestError {
     openapiFields = new HashSet<String>();
     openapiFields.add("message");
     openapiFields.add("code");
+    openapiFields.add("help");
     openapiFields.add("type");
 
     // a set of required properties/fields (JSON key names)
@@ -254,6 +283,9 @@ public class BadRequestError {
       if ((jsonObj.get("code") != null && !jsonObj.get("code").isJsonNull()) && !jsonObj.get("code").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("code").toString()));
       }
+      if ((jsonObj.get("help") != null && !jsonObj.get("help").isJsonNull()) && !jsonObj.get("help").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `help` to be a primitive type in the JSON string but got `%s`", jsonObj.get("help").toString()));
+      }
       if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) && !jsonObj.get("type").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
       }
@@ -274,6 +306,9 @@ public class BadRequestError {
       }
       if ((jsonObj.get("code") != null && !jsonObj.get("code").isJsonNull()) && !jsonObj.get("code").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("code").toString()));
+      }
+      if ((jsonObj.get("help") != null && !jsonObj.get("help").isJsonNull()) && !jsonObj.get("help").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `help` to be a primitive type in the JSON string but got `%s`", jsonObj.get("help").toString()));
       }
       if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) && !jsonObj.get("type").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));

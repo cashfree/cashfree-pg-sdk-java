@@ -10,6 +10,7 @@ Error when resource requested is not found
 |------------ | ------------- | ------------- | -------------|
 |**message** | **String** |  |  [optional] |
 |**code** | **String** |  |  [optional] |
+|**help** | **String** |  |  [optional] |
 |**type** | [**TypeEnum**](#TypeEnum) | invalid_request_error |  [optional] |
 
 

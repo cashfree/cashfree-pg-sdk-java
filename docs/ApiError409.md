@@ -9,6 +9,7 @@ duplicate request
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**message** | **String** |  |  [optional] |
+|**help** | **String** |  |  [optional] |
 |**code** | **String** |  |  [optional] |
 |**type** | [**TypeEnum**](#TypeEnum) | invalid_request_error |  [optional] |
 
