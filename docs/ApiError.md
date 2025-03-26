@@ -10,6 +10,7 @@ Error at cashfree's server
 |------------ | ------------- | ------------- | -------------|
 |**message** | **String** |  |  [optional] |
 |**code** | **String** |  |  [optional] |
+|**help** | **String** |  |  [optional] |
 |**type** | [**TypeEnum**](#TypeEnum) | api_error |  [optional] |
 
 

@@ -10,6 +10,7 @@ Invalid request received from client
 |------------ | ------------- | ------------- | -------------|
 |**message** | **String** |  |  [optional] |
 |**code** | **String** |  |  [optional] |
+|**help** | **String** |  |  [optional] |
 |**type** | [**TypeEnum**](#TypeEnum) |  |  [optional] |
 
 

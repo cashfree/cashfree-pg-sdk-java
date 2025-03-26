@@ -56,7 +56,7 @@ import com.cashfree.pg.JSON;
  * Details of the offer which got applied to the paid order.
  */
 @Schema(description = "Details of the offer which got applied to the paid order.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-13T09:56:44.464357Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-26T12:53:05.189649Z[Etc/UTC]")
 public class OfferExtendedDetails {
   public static final String SERIALIZED_NAME_OFFER_ID = "offer_id";
   @SerializedName(SERIALIZED_NAME_OFFER_ID)

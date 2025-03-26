@@ -17,8 +17,8 @@ import java.util.Objects;
 import com.cashfree.pg.model.AuthorizationInPaymentsEntity;
 import com.cashfree.pg.model.ErrorDetailsInPaymentsEntity;
 import com.cashfree.pg.model.InternationalPaymentEntity;
+import com.cashfree.pg.model.PayOrderRequestPaymentSurcharge;
 import com.cashfree.pg.model.PaymentEntityPaymentMethod;
-import com.cashfree.pg.model.PaymentEntityPaymentSurcharge;
 import com.cashfree.pg.model.PaymentGatewayDetails;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -59,7 +59,7 @@ import com.cashfree.pg.JSON;
  * payment entity full object
  */
 @Schema(description = "payment entity full object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-13T09:56:44.464357Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-26T12:53:05.189649Z[Etc/UTC]")
 public class PaymentEntity {
   public static final String SERIALIZED_NAME_CF_PAYMENT_ID = "cf_payment_id";
   @SerializedName(SERIALIZED_NAME_CF_PAYMENT_ID)
@@ -202,7 +202,7 @@ public class PaymentEntity {
 
   public static final String SERIALIZED_NAME_PAYMENT_SURCHARGE = "payment_surcharge";
   @SerializedName(SERIALIZED_NAME_PAYMENT_SURCHARGE)
-  private PaymentEntityPaymentSurcharge paymentSurcharge;
+  private PayOrderRequestPaymentSurcharge paymentSurcharge;
 
   public PaymentEntity() {
   }
@@ -647,7 +647,7 @@ public class PaymentEntity {
   }
 
 
-  public PaymentEntity paymentSurcharge(PaymentEntityPaymentSurcharge paymentSurcharge) {
+  public PaymentEntity paymentSurcharge(PayOrderRequestPaymentSurcharge paymentSurcharge) {
     
     this.paymentSurcharge = paymentSurcharge;
     return this;
@@ -659,12 +659,12 @@ public class PaymentEntity {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public PaymentEntityPaymentSurcharge getPaymentSurcharge() {
+  public PayOrderRequestPaymentSurcharge getPaymentSurcharge() {
     return paymentSurcharge;
   }
 
 
-  public void setPaymentSurcharge(PaymentEntityPaymentSurcharge paymentSurcharge) {
+  public void setPaymentSurcharge(PayOrderRequestPaymentSurcharge paymentSurcharge) {
     this.paymentSurcharge = paymentSurcharge;
   }
 
@@ -847,7 +847,7 @@ public class PaymentEntity {
       }
       // validate the optional field `payment_surcharge`
       if (jsonObj.get("payment_surcharge") != null && !jsonObj.get("payment_surcharge").isJsonNull()) {
-        PaymentEntityPaymentSurcharge.validateJsonElement(jsonObj.get("payment_surcharge"));
+        PayOrderRequestPaymentSurcharge.validateJsonElement(jsonObj.get("payment_surcharge"));
       }
   }
 
@@ -924,7 +924,7 @@ public class PaymentEntity {
       }
       // validate the optional field `payment_surcharge`
       if (jsonObj.get("payment_surcharge") != null && !jsonObj.get("payment_surcharge").isJsonNull()) {
-        PaymentEntityPaymentSurcharge.validateJsonElement(jsonObj.get("payment_surcharge"));
+        PayOrderRequestPaymentSurcharge.validateJsonElement(jsonObj.get("payment_surcharge"));
         return true;
       }
       return false;

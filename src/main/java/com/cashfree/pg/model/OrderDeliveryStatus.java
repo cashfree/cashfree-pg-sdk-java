@@ -52,7 +52,7 @@ import com.cashfree.pg.JSON;
  * Order delivery Status associated with order.
  */
 @Schema(description = "Order delivery Status associated with order.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-13T09:56:44.464357Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-26T12:53:05.189649Z[Etc/UTC]")
 public class OrderDeliveryStatus {
   /**
    * Delivery status of order

@@ -52,7 +52,7 @@ import com.cashfree.pg.JSON;
  * Necessary parameters to fetch eligible payment methods.
  */
 @Schema(description = "Necessary parameters to fetch eligible payment methods.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-13T09:56:44.464357Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-26T12:53:05.189649Z[Etc/UTC]")
 public class SubscriptionEligibilityRequestQueries {
   public static final String SERIALIZED_NAME_SUBSCRIPTION_ID = "subscription_id";
   @SerializedName(SERIALIZED_NAME_SUBSCRIPTION_ID)

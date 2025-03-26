@@ -9,6 +9,7 @@ Error when idempotency fails. Different request body with the same idempotent ke
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**message** | **String** |  |  [optional] |
+|**help** | **String** |  |  [optional] |
 |**code** | **String** |  |  [optional] |
 |**type** | [**TypeEnum**](#TypeEnum) | idempotency_error |  [optional] |
 
