@@ -15,7 +15,6 @@ package com.cashfree.pg.model;
 
 import java.util.Objects;
 import com.cashfree.pg.model.PayOrderRequestPaymentMethod;
-import com.cashfree.pg.model.PayOrderRequestPaymentSurcharge;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -54,7 +53,7 @@ import com.cashfree.pg.JSON;
  * Complete object for the pay api that uses payment method objects
  */
 @Schema(description = "Complete object for the pay api that uses payment method objects")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-26T12:53:05.189649Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:00:02.685522Z[Etc/UTC]")
 public class PayOrderRequest {
   public static final String SERIALIZED_NAME_PAYMENT_SESSION_ID = "payment_session_id";
   @SerializedName(SERIALIZED_NAME_PAYMENT_SESSION_ID)
@@ -71,10 +70,6 @@ public class PayOrderRequest {
   public static final String SERIALIZED_NAME_OFFER_ID = "offer_id";
   @SerializedName(SERIALIZED_NAME_OFFER_ID)
   private String offerId;
-
-  public static final String SERIALIZED_NAME_PAYMENT_SURCHARGE = "payment_surcharge";
-  @SerializedName(SERIALIZED_NAME_PAYMENT_SURCHARGE)
-  private PayOrderRequestPaymentSurcharge paymentSurcharge;
 
   public PayOrderRequest() {
   }
@@ -167,28 +162,6 @@ public class PayOrderRequest {
   }
 
 
-  public PayOrderRequest paymentSurcharge(PayOrderRequestPaymentSurcharge paymentSurcharge) {
-    
-    this.paymentSurcharge = paymentSurcharge;
-    return this;
-  }
-
-   /**
-   * Get paymentSurcharge
-   * @return paymentSurcharge
-  **/
-  @javax.annotation.Nullable
-  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public PayOrderRequestPaymentSurcharge getPaymentSurcharge() {
-    return paymentSurcharge;
-  }
-
-
-  public void setPaymentSurcharge(PayOrderRequestPaymentSurcharge paymentSurcharge) {
-    this.paymentSurcharge = paymentSurcharge;
-  }
-
-
 
   @Override
   public boolean equals(Object o) {
@@ -202,13 +175,12 @@ public class PayOrderRequest {
     return Objects.equals(this.paymentSessionId, payOrderRequest.paymentSessionId) &&
         Objects.equals(this.paymentMethod, payOrderRequest.paymentMethod) &&
         Objects.equals(this.saveInstrument, payOrderRequest.saveInstrument) &&
-        Objects.equals(this.offerId, payOrderRequest.offerId) &&
-        Objects.equals(this.paymentSurcharge, payOrderRequest.paymentSurcharge);
+        Objects.equals(this.offerId, payOrderRequest.offerId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(paymentSessionId, paymentMethod, saveInstrument, offerId, paymentSurcharge);
+    return Objects.hash(paymentSessionId, paymentMethod, saveInstrument, offerId);
   }
 
   @Override
@@ -219,7 +191,6 @@ public class PayOrderRequest {
     sb.append("    paymentMethod: ").append(toIndentedString(paymentMethod)).append("\n");
     sb.append("    saveInstrument: ").append(toIndentedString(saveInstrument)).append("\n");
     sb.append("    offerId: ").append(toIndentedString(offerId)).append("\n");
-    sb.append("    paymentSurcharge: ").append(toIndentedString(paymentSurcharge)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -246,7 +217,6 @@ public class PayOrderRequest {
     openapiFields.add("payment_method");
     openapiFields.add("save_instrument");
     openapiFields.add("offer_id");
-    openapiFields.add("payment_surcharge");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -278,10 +248,6 @@ public class PayOrderRequest {
       if ((jsonObj.get("offer_id") != null && !jsonObj.get("offer_id").isJsonNull()) && !jsonObj.get("offer_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `offer_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("offer_id").toString()));
       }
-      // validate the optional field `payment_surcharge`
-      if (jsonObj.get("payment_surcharge") != null && !jsonObj.get("payment_surcharge").isJsonNull()) {
-        PayOrderRequestPaymentSurcharge.validateJsonElement(jsonObj.get("payment_surcharge"));
-      }
   }
 
 
@@ -308,11 +274,6 @@ public class PayOrderRequest {
       PayOrderRequestPaymentMethod.validateJsonElement(jsonObj.get("payment_method"));
       if ((jsonObj.get("offer_id") != null && !jsonObj.get("offer_id").isJsonNull()) && !jsonObj.get("offer_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `offer_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("offer_id").toString()));
-      }
-      // validate the optional field `payment_surcharge`
-      if (jsonObj.get("payment_surcharge") != null && !jsonObj.get("payment_surcharge").isJsonNull()) {
-        PayOrderRequestPaymentSurcharge.validateJsonElement(jsonObj.get("payment_surcharge"));
-        return true;
       }
       return false;
   }

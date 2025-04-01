@@ -18,14 +18,14 @@ Try out our interactive guides at [Cashfree Dev Studio](https://www.cashfree.com
 ### Installation
 * Gradle Project
 ```bash
-implementation `com.cashfree.pg.java:cashfree_pg:5.0.0-beta-20`
+implementation `com.cashfree.pg.java:cashfree_pg:5.0.0`
 ```
 * Maven Project
 ```bash
 <dependency>
   <groupId>com.cashfree.pg.java</groupId>
   <artifactId>cashfree_pg</artifactId>
-  <version>5.0.0-beta-20</version>
+  <version>5.0.0</version>
   <scope>compile</scope>
 </dependency>
 <dependency>
@@ -36,20 +36,18 @@ implementation `com.cashfree.pg.java:cashfree_pg:5.0.0-beta-20`
 ```
 ### Configuration
 
+### Version >= 5
+
 ```java 
 import com.cashfree.pg.*;
 
-Cashfree cashfree = new Cashfree(Cashfree.CFEnvironment.SANDBOX, 
-                "<client-id>", 
-                "<client-secret>", 
-                null, 
-                null, 
-                null);
+Cashfree cashfree = new Cashfree("x-client-id", "x-client-secret", null, null, null);
 ```
 
 Generate your API keys (x-client-id , x-client-secret) from [Cashfree Merchant Dashboard](https://merchant.cashfree.com/merchants/login)
 
 ### Basic Usage
+
 Create Order
 ```java
 CustomerDetails customerDetails = new CustomerDetails();
@@ -72,6 +70,50 @@ Get Order
 ```java
 try {
     ApiResponse<OrderEntity> responseFetchOrder = cashfree.PGFetchOrder("<order_id>", null, null, null);
+    System.out.println(response.getData().getOrderId());
+} catch (ApiException e) {
+    throw new RuntimeException(e);
+}
+```
+
+### Version < 5
+
+```java 
+import com.cashfree.*;
+
+Cashfree.XClientId = "<x-client-id>";
+Cashfree.XClientSecret = "<x-client-secret>";
+Cashfree.XEnvironment = Cashfree.SANDBOX;
+
+Cashfree cashfree = new Cashfree();
+String xApiVersion = "2022-09-01";
+```
+
+Generate your API keys (x-client-id , x-client-secret) from [Cashfree Merchant Dashboard](https://merchant.cashfree.com/merchants/login)
+
+### Basic Usage
+Create Order
+```java
+CustomerDetails customerDetails = new CustomerDetails();
+customerDetails.setCustomerId("walterwNrcMi");
+customerDetails.setCustomerPhone("9999999999");
+
+CreateOrderRequest request = new CreateOrderRequest();
+request.setOrderAmount(1.0);
+request.setOrderCurrency("INR");
+request.setCustomerDetails(customerDetails);
+try {
+    ApiResponse<OrderEntity> response = cashfree.PGCreateOrder(xApiVersion, request, null, null, null);
+    System.out.println(response.getData().getOrderId());
+} catch (ApiException e) {
+    throw new RuntimeException(e);
+}
+```
+
+Get Order
+```java
+try {
+    ApiResponse<OrderEntity> responseFetchOrder = cashfree.PGFetchOrder(xApiVersion, "<order_id>", null, null, null);
     System.out.println(response.getData().getOrderId());
 } catch (ApiException e) {
     throw new RuntimeException(e);

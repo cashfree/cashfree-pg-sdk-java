@@ -2,7 +2,7 @@
 
 # CardPaymentMethod
 
-The card payment object is used to make payment using either plain card number, saved card instrument id or using cryptogram
+The card payment object is used to make payment using either plain card number, saved card instrument id or using cryptogram 
 
 ## Properties
 

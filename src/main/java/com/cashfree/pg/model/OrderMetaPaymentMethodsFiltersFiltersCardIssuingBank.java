@@ -21,7 +21,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -54,7 +53,7 @@ import com.cashfree.pg.JSON;
  * Allowed card issuing bank for the order
  */
 @Schema(description = "Allowed card issuing bank for the order")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-26T12:53:05.189649Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:00:02.685522Z[Etc/UTC]")
 public class OrderMetaPaymentMethodsFiltersFiltersCardIssuingBank {
   public static final String SERIALIZED_NAME_ACTION = "action";
   @SerializedName(SERIALIZED_NAME_ACTION)
@@ -62,7 +61,7 @@ public class OrderMetaPaymentMethodsFiltersFiltersCardIssuingBank {
 
   public static final String SERIALIZED_NAME_VALUES = "values";
   @SerializedName(SERIALIZED_NAME_VALUES)
-  private List<String> values;
+  private List values = null;
 
   public OrderMetaPaymentMethodsFiltersFiltersCardIssuingBank() {
   }
@@ -89,17 +88,9 @@ public class OrderMetaPaymentMethodsFiltersFiltersCardIssuingBank {
   }
 
 
-  public OrderMetaPaymentMethodsFiltersFiltersCardIssuingBank values(List<String> values) {
+  public OrderMetaPaymentMethodsFiltersFiltersCardIssuingBank values(List values) {
     
     this.values = values;
-    return this;
-  }
-
-  public OrderMetaPaymentMethodsFiltersFiltersCardIssuingBank addValuesItem(String valuesItem) {
-    if (this.values == null) {
-      this.values = new ArrayList<>();
-    }
-    this.values.add(valuesItem);
     return this;
   }
 
@@ -109,12 +100,12 @@ public class OrderMetaPaymentMethodsFiltersFiltersCardIssuingBank {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "List of card issuing bank to be allowed for the order")
-  public List<String> getValues() {
+  public List getValues() {
     return values;
   }
 
 
-  public void setValues(List<String> values) {
+  public void setValues(List values) {
     this.values = values;
   }
 
@@ -185,10 +176,6 @@ public class OrderMetaPaymentMethodsFiltersFiltersCardIssuingBank {
       if ((jsonObj.get("action") != null && !jsonObj.get("action").isJsonNull()) && !jsonObj.get("action").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `action` to be a primitive type in the JSON string but got `%s`", jsonObj.get("action").toString()));
       }
-      // ensure the optional json data is an array if present
-      if (jsonObj.get("values") != null && !jsonObj.get("values").isJsonNull() && !jsonObj.get("values").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `values` to be an array in the JSON string but got `%s`", jsonObj.get("values").toString()));
-      }
   }
 
 
@@ -203,10 +190,6 @@ public class OrderMetaPaymentMethodsFiltersFiltersCardIssuingBank {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("action") != null && !jsonObj.get("action").isJsonNull()) && !jsonObj.get("action").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `action` to be a primitive type in the JSON string but got `%s`", jsonObj.get("action").toString()));
-      }
-      // ensure the optional json data is an array if present
-      if (jsonObj.get("values") != null && !jsonObj.get("values").isJsonNull() && !jsonObj.get("values").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `values` to be an array in the JSON string but got `%s`", jsonObj.get("values").toString()));
       }
       return false;
   }

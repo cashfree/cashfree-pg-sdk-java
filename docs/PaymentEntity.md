@@ -28,7 +28,7 @@ payment entity full object
 |**paymentMethod** | [**PaymentEntityPaymentMethod**](PaymentEntityPaymentMethod.md) |  |  [optional] |
 |**internationalPayment** | [**InternationalPaymentEntity**](InternationalPaymentEntity.md) |  |  [optional] |
 |**paymentGatewayDetails** | [**PaymentGatewayDetails**](PaymentGatewayDetails.md) |  |  [optional] |
-|**paymentSurcharge** | [**PayOrderRequestPaymentSurcharge**](PayOrderRequestPaymentSurcharge.md) |  |  [optional] |
+|**paymentSurcharge** | [**PaymentEntityPaymentSurcharge**](PaymentEntityPaymentSurcharge.md) |  |  [optional] |
 
 
 
