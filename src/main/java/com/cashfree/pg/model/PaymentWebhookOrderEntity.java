@@ -21,6 +21,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -54,7 +55,7 @@ import com.cashfree.pg.JSON;
  * order entity in webhook
  */
 @Schema(description = "order entity in webhook")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:00:02.685522Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:33:46.250709Z[Etc/UTC]")
 public class PaymentWebhookOrderEntity {
   public static final String SERIALIZED_NAME_ORDER_ID = "order_id";
   @SerializedName(SERIALIZED_NAME_ORDER_ID)
@@ -62,7 +63,7 @@ public class PaymentWebhookOrderEntity {
 
   public static final String SERIALIZED_NAME_ORDER_AMOUNT = "order_amount";
   @SerializedName(SERIALIZED_NAME_ORDER_AMOUNT)
-  private Double orderAmount;
+  private BigDecimal orderAmount;
 
   public static final String SERIALIZED_NAME_ORDER_CURRENCY = "order_currency";
   @SerializedName(SERIALIZED_NAME_ORDER_CURRENCY)
@@ -97,7 +98,7 @@ public class PaymentWebhookOrderEntity {
   }
 
 
-  public PaymentWebhookOrderEntity orderAmount(Double orderAmount) {
+  public PaymentWebhookOrderEntity orderAmount(BigDecimal orderAmount) {
     
     this.orderAmount = orderAmount;
     return this;
@@ -109,12 +110,12 @@ public class PaymentWebhookOrderEntity {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public Double getOrderAmount() {
+  public BigDecimal getOrderAmount() {
     return orderAmount;
   }
 
 
-  public void setOrderAmount(Double orderAmount) {
+  public void setOrderAmount(BigDecimal orderAmount) {
     this.orderAmount = orderAmount;
   }
 

@@ -9,7 +9,7 @@ Request body to create an order at cashfree
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**orderId** | **String** | Order identifier present in your system. Alphanumeric, &#39;_&#39; and &#39;-&#39; only |  [optional] |
-|**orderAmount** | **Double** | Bill amount for the order. Provide upto two decimals. 10.15 means Rs 10 and 15 paisa |  |
+|**orderAmount** | **BigDecimal** | Bill amount for the order. Provide upto two decimals. 10.15 means Rs 10 and 15 paisa |  |
 |**orderCurrency** | **String** | Currency for the order. INR if left empty. Contact care@cashfree.com to enable new currencies. |  |
 |**cartDetails** | [**CartDetails**](CartDetails.md) |  |  [optional] |
 |**customerDetails** | [**CustomerDetails**](CustomerDetails.md) |  |  |

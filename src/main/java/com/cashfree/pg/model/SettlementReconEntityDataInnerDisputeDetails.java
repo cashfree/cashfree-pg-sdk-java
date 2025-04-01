@@ -51,7 +51,7 @@ import com.cashfree.pg.JSON;
 /**
  * SettlementReconEntityDataInnerDisputeDetails
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:00:02.685522Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:33:46.250709Z[Etc/UTC]")
 public class SettlementReconEntityDataInnerDisputeDetails {
   public static final String SERIALIZED_NAME_CLOSED_IN_FAVOR_OF = "closed_in_favor_of";
   @SerializedName(SERIALIZED_NAME_CLOSED_IN_FAVOR_OF)

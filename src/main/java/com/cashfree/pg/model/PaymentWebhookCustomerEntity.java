@@ -52,7 +52,7 @@ import com.cashfree.pg.JSON;
  * customer details object in webhook
  */
 @Schema(description = "customer details object in webhook")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:00:02.685522Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:33:46.250709Z[Etc/UTC]")
 public class PaymentWebhookCustomerEntity {
   public static final String SERIALIZED_NAME_CUSTOMER_NAME = "customer_name";
   @SerializedName(SERIALIZED_NAME_CUSTOMER_NAME)

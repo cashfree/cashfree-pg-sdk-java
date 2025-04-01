@@ -53,7 +53,7 @@ import com.cashfree.pg.JSON;
  * Payment method for netbanking object
  */
 @Schema(description = "Payment method for netbanking object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:00:02.685522Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:33:46.250709Z[Etc/UTC]")
 public class NetBankingPaymentMethod {
   public static final String SERIALIZED_NAME_NETBANKING = "netbanking";
   @SerializedName(SERIALIZED_NAME_NETBANKING)

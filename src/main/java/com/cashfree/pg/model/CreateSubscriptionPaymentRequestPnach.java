@@ -52,7 +52,7 @@ import com.cashfree.pg.JSON;
  * payment method pnach.
  */
 @Schema(description = "payment method pnach.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:00:02.685522Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:33:46.250709Z[Etc/UTC]")
 public class CreateSubscriptionPaymentRequestPnach {
   public static final String SERIALIZED_NAME_ACCOUNT_BANK_CODE = "account_bank_code";
   @SerializedName(SERIALIZED_NAME_ACCOUNT_BANK_CODE)

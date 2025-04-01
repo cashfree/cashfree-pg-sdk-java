@@ -25,6 +25,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -60,7 +61,7 @@ import com.cashfree.pg.JSON;
  * Request paramenters for link creation
  */
 @Schema(description = "Request paramenters for link creation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:00:02.685522Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:33:46.250709Z[Etc/UTC]")
 public class CreateLinkRequest {
   public static final String SERIALIZED_NAME_LINK_ID = "link_id";
   @SerializedName(SERIALIZED_NAME_LINK_ID)
@@ -68,7 +69,7 @@ public class CreateLinkRequest {
 
   public static final String SERIALIZED_NAME_LINK_AMOUNT = "link_amount";
   @SerializedName(SERIALIZED_NAME_LINK_AMOUNT)
-  private Double linkAmount;
+  private BigDecimal linkAmount;
 
   public static final String SERIALIZED_NAME_LINK_CURRENCY = "link_currency";
   @SerializedName(SERIALIZED_NAME_LINK_CURRENCY)
@@ -88,7 +89,7 @@ public class CreateLinkRequest {
 
   public static final String SERIALIZED_NAME_LINK_MINIMUM_PARTIAL_AMOUNT = "link_minimum_partial_amount";
   @SerializedName(SERIALIZED_NAME_LINK_MINIMUM_PARTIAL_AMOUNT)
-  private Double linkMinimumPartialAmount;
+  private BigDecimal linkMinimumPartialAmount;
 
   public static final String SERIALIZED_NAME_LINK_EXPIRY_TIME = "link_expiry_time";
   @SerializedName(SERIALIZED_NAME_LINK_EXPIRY_TIME)
@@ -139,7 +140,7 @@ public class CreateLinkRequest {
   }
 
 
-  public CreateLinkRequest linkAmount(Double linkAmount) {
+  public CreateLinkRequest linkAmount(BigDecimal linkAmount) {
     
     this.linkAmount = linkAmount;
     return this;
@@ -151,12 +152,12 @@ public class CreateLinkRequest {
   **/
   @javax.annotation.Nonnull
   @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "Amount to be collected using this link. Provide upto two decimals for paise.")
-  public Double getLinkAmount() {
+  public BigDecimal getLinkAmount() {
     return linkAmount;
   }
 
 
-  public void setLinkAmount(Double linkAmount) {
+  public void setLinkAmount(BigDecimal linkAmount) {
     this.linkAmount = linkAmount;
   }
 
@@ -249,7 +250,7 @@ public class CreateLinkRequest {
   }
 
 
-  public CreateLinkRequest linkMinimumPartialAmount(Double linkMinimumPartialAmount) {
+  public CreateLinkRequest linkMinimumPartialAmount(BigDecimal linkMinimumPartialAmount) {
     
     this.linkMinimumPartialAmount = linkMinimumPartialAmount;
     return this;
@@ -261,12 +262,12 @@ public class CreateLinkRequest {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Minimum amount in first installment that needs to be paid by the customer if partial payments are enabled. This should be less than the link_amount.")
-  public Double getLinkMinimumPartialAmount() {
+  public BigDecimal getLinkMinimumPartialAmount() {
     return linkMinimumPartialAmount;
   }
 
 
-  public void setLinkMinimumPartialAmount(Double linkMinimumPartialAmount) {
+  public void setLinkMinimumPartialAmount(BigDecimal linkMinimumPartialAmount) {
     this.linkMinimumPartialAmount = linkMinimumPartialAmount;
   }
 

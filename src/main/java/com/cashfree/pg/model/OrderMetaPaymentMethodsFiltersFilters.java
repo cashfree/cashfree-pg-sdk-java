@@ -56,7 +56,7 @@ import com.cashfree.pg.JSON;
  * This object takes details of all the filtering that has to be done for this order. Filters on card bins, card schemes, card issuing bank and card suffixes
  */
 @Schema(description = "This object takes details of all the filtering that has to be done for this order. Filters on card bins, card schemes, card issuing bank and card suffixes")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:00:02.685522Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:33:46.250709Z[Etc/UTC]")
 public class OrderMetaPaymentMethodsFiltersFilters {
   public static final String SERIALIZED_NAME_CARD_BINS = "card_bins";
   @SerializedName(SERIALIZED_NAME_CARD_BINS)
