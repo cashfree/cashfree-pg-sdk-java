@@ -22,6 +22,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -55,11 +56,11 @@ import com.cashfree.pg.JSON;
  * create refund request object
  */
 @Schema(description = "create refund request object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:00:02.685522Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:33:46.250709Z[Etc/UTC]")
 public class OrderCreateRefundRequest {
   public static final String SERIALIZED_NAME_REFUND_AMOUNT = "refund_amount";
   @SerializedName(SERIALIZED_NAME_REFUND_AMOUNT)
-  private Double refundAmount;
+  private BigDecimal refundAmount;
 
   public static final String SERIALIZED_NAME_REFUND_ID = "refund_id";
   @SerializedName(SERIALIZED_NAME_REFUND_ID)
@@ -129,7 +130,7 @@ public class OrderCreateRefundRequest {
   public OrderCreateRefundRequest() {
   }
 
-  public OrderCreateRefundRequest refundAmount(Double refundAmount) {
+  public OrderCreateRefundRequest refundAmount(BigDecimal refundAmount) {
     
     this.refundAmount = refundAmount;
     return this;
@@ -141,12 +142,12 @@ public class OrderCreateRefundRequest {
   **/
   @javax.annotation.Nonnull
   @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "Amount to be refunded. Should be lesser than or equal to the transaction amount. (Decimals allowed)")
-  public Double getRefundAmount() {
+  public BigDecimal getRefundAmount() {
     return refundAmount;
   }
 
 
-  public void setRefundAmount(Double refundAmount) {
+  public void setRefundAmount(BigDecimal refundAmount) {
     this.refundAmount = refundAmount;
   }
 

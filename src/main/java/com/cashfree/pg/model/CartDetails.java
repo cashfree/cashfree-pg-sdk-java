@@ -23,6 +23,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -56,7 +57,7 @@ import com.cashfree.pg.JSON;
  * The cart details that are necessary like shipping address, billing address and more.
  */
 @Schema(description = "The cart details that are necessary like shipping address, billing address and more.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:00:02.685522Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:33:46.250709Z[Etc/UTC]")
 public class CartDetails {
   public static final String SERIALIZED_NAME_CUSTOMER_NOTE = "customer_note";
   @SerializedName(SERIALIZED_NAME_CUSTOMER_NOTE)
@@ -64,7 +65,7 @@ public class CartDetails {
 
   public static final String SERIALIZED_NAME_SHIPPING_CHARGE = "shipping_charge";
   @SerializedName(SERIALIZED_NAME_SHIPPING_CHARGE)
-  private Double shippingCharge;
+  private BigDecimal shippingCharge;
 
   public static final String SERIALIZED_NAME_CART_NAME = "cart_name";
   @SerializedName(SERIALIZED_NAME_CART_NAME)
@@ -107,7 +108,7 @@ public class CartDetails {
   }
 
 
-  public CartDetails shippingCharge(Double shippingCharge) {
+  public CartDetails shippingCharge(BigDecimal shippingCharge) {
     
     this.shippingCharge = shippingCharge;
     return this;
@@ -119,12 +120,12 @@ public class CartDetails {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public Double getShippingCharge() {
+  public BigDecimal getShippingCharge() {
     return shippingCharge;
   }
 
 
-  public void setShippingCharge(Double shippingCharge) {
+  public void setShippingCharge(BigDecimal shippingCharge) {
     this.shippingCharge = shippingCharge;
   }
 

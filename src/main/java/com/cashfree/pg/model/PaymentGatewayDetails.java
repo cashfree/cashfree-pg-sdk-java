@@ -52,7 +52,7 @@ import com.cashfree.pg.JSON;
  * payment gateway details present in the webhook response
  */
 @Schema(description = "payment gateway details present in the webhook response")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:00:02.685522Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:33:46.250709Z[Etc/UTC]")
 public class PaymentGatewayDetails {
   public static final String SERIALIZED_NAME_GATEWAY_NAME = "gateway_name";
   @SerializedName(SERIALIZED_NAME_GATEWAY_NAME)

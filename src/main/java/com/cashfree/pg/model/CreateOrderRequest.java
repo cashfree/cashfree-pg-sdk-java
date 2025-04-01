@@ -27,6 +27,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -62,7 +63,7 @@ import com.cashfree.pg.JSON;
  * Request body to create an order at cashfree
  */
 @Schema(description = "Request body to create an order at cashfree")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:00:02.685522Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:33:46.250709Z[Etc/UTC]")
 public class CreateOrderRequest {
   public static final String SERIALIZED_NAME_ORDER_ID = "order_id";
   @SerializedName(SERIALIZED_NAME_ORDER_ID)
@@ -70,7 +71,7 @@ public class CreateOrderRequest {
 
   public static final String SERIALIZED_NAME_ORDER_AMOUNT = "order_amount";
   @SerializedName(SERIALIZED_NAME_ORDER_AMOUNT)
-  private Double orderAmount;
+  private BigDecimal orderAmount;
 
   public static final String SERIALIZED_NAME_ORDER_CURRENCY = "order_currency";
   @SerializedName(SERIALIZED_NAME_ORDER_CURRENCY)
@@ -137,7 +138,7 @@ public class CreateOrderRequest {
   }
 
 
-  public CreateOrderRequest orderAmount(Double orderAmount) {
+  public CreateOrderRequest orderAmount(BigDecimal orderAmount) {
     
     this.orderAmount = orderAmount;
     return this;
@@ -150,12 +151,12 @@ public class CreateOrderRequest {
   **/
   @javax.annotation.Nonnull
   @Schema(example = "10.15", requiredMode = Schema.RequiredMode.REQUIRED, description = "Bill amount for the order. Provide upto two decimals. 10.15 means Rs 10 and 15 paisa")
-  public Double getOrderAmount() {
+  public BigDecimal getOrderAmount() {
     return orderAmount;
   }
 
 
-  public void setOrderAmount(Double orderAmount) {
+  public void setOrderAmount(BigDecimal orderAmount) {
     this.orderAmount = orderAmount;
   }
 

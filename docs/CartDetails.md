@@ -9,7 +9,7 @@ The cart details that are necessary like shipping address, billing address and m
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**customerNote** | **String** |  |  [optional] |
-|**shippingCharge** | **Double** |  |  [optional] |
+|**shippingCharge** | **BigDecimal** |  |  [optional] |
 |**cartName** | **String** | Name of the cart. |  [optional] |
 |**customerShippingAddress** | [**CartAddress**](CartAddress.md) |  |  [optional] |
 |**customerBillingAddress** | [**CartAddress**](CartAddress.md) |  |  [optional] |

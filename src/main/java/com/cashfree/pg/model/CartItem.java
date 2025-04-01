@@ -55,7 +55,7 @@ import com.cashfree.pg.JSON;
  * Each item in the cart.
  */
 @Schema(description = "Each item in the cart.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:00:02.685522Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:33:46.250709Z[Etc/UTC]")
 public class CartItem {
   public static final String SERIALIZED_NAME_ITEM_ID = "item_id";
   @SerializedName(SERIALIZED_NAME_ITEM_ID)
@@ -83,11 +83,11 @@ public class CartItem {
 
   public static final String SERIALIZED_NAME_ITEM_ORIGINAL_UNIT_PRICE = "item_original_unit_price";
   @SerializedName(SERIALIZED_NAME_ITEM_ORIGINAL_UNIT_PRICE)
-  private Double itemOriginalUnitPrice;
+  private BigDecimal itemOriginalUnitPrice;
 
   public static final String SERIALIZED_NAME_ITEM_DISCOUNTED_UNIT_PRICE = "item_discounted_unit_price";
   @SerializedName(SERIALIZED_NAME_ITEM_DISCOUNTED_UNIT_PRICE)
-  private Double itemDiscountedUnitPrice;
+  private BigDecimal itemDiscountedUnitPrice;
 
   public static final String SERIALIZED_NAME_ITEM_CURRENCY = "item_currency";
   @SerializedName(SERIALIZED_NAME_ITEM_CURRENCY)
@@ -240,7 +240,7 @@ public class CartItem {
   }
 
 
-  public CartItem itemOriginalUnitPrice(Double itemOriginalUnitPrice) {
+  public CartItem itemOriginalUnitPrice(BigDecimal itemOriginalUnitPrice) {
     
     this.itemOriginalUnitPrice = itemOriginalUnitPrice;
     return this;
@@ -252,17 +252,17 @@ public class CartItem {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Original price")
-  public Double getItemOriginalUnitPrice() {
+  public BigDecimal getItemOriginalUnitPrice() {
     return itemOriginalUnitPrice;
   }
 
 
-  public void setItemOriginalUnitPrice(Double itemOriginalUnitPrice) {
+  public void setItemOriginalUnitPrice(BigDecimal itemOriginalUnitPrice) {
     this.itemOriginalUnitPrice = itemOriginalUnitPrice;
   }
 
 
-  public CartItem itemDiscountedUnitPrice(Double itemDiscountedUnitPrice) {
+  public CartItem itemDiscountedUnitPrice(BigDecimal itemDiscountedUnitPrice) {
     
     this.itemDiscountedUnitPrice = itemDiscountedUnitPrice;
     return this;
@@ -274,12 +274,12 @@ public class CartItem {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Discounted Price")
-  public Double getItemDiscountedUnitPrice() {
+  public BigDecimal getItemDiscountedUnitPrice() {
     return itemDiscountedUnitPrice;
   }
 
 
-  public void setItemDiscountedUnitPrice(Double itemDiscountedUnitPrice) {
+  public void setItemDiscountedUnitPrice(BigDecimal itemDiscountedUnitPrice) {
     this.itemDiscountedUnitPrice = itemDiscountedUnitPrice;
   }
 
