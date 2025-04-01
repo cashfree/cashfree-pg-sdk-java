@@ -41,7 +41,7 @@ public class Example {
         String orderId = "your-order-id"; // String | The id which uniquely identifies your order
         AuthorizeOrderRequest authorizeOrderRequest = new AuthorizeOrderRequest(); // AuthorizeOrderRequest | Request to Capture or Void Transactions
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. 
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
         try {
             PaymentEntity result = cashfree.PGAuthorizeOrder(xApiVersion, orderId, authorizeOrderRequest, xRequestId, xIdempotencyKeyOkHttpClient httpClient);
             System.out.println(result);
@@ -65,7 +65,7 @@ public class Example {
 | **orderId** | **String**| The id which uniquely identifies your order | |
 | **authorizeOrderRequest** | [**AuthorizeOrderRequest**](AuthorizeOrderRequest.md)| Request to Capture or Void Transactions | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
 
 ### Return type
 
@@ -124,7 +124,7 @@ public class Example {
         String cfPaymentId = "121224562"; // String | The Cashfree payment or transaction ID.
         OrderAuthenticatePaymentRequest orderAuthenticatePaymentRequest = new OrderAuthenticatePaymentRequest(); // OrderAuthenticatePaymentRequest | Request body to submit/resend headless OTP. To use this API make sure you have headless OTP enabled for your account
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. 
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
         try {
             OrderAuthenticateEntity result = cashfree.PGOrderAuthenticatePayment(xApiVersion, cfPaymentId, orderAuthenticatePaymentRequest, xRequestId, xIdempotencyKeyOkHttpClient httpClient);
             System.out.println(result);
@@ -148,7 +148,7 @@ public class Example {
 | **cfPaymentId** | **String**| The Cashfree payment or transaction ID. | |
 | **orderAuthenticatePaymentRequest** | [**OrderAuthenticatePaymentRequest**](OrderAuthenticatePaymentRequest.md)| Request body to submit/resend headless OTP. To use this API make sure you have headless OTP enabled for your account | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
 
 ### Return type
 
@@ -207,7 +207,7 @@ public class Example {
         String orderId = "your-order-id"; // String | The id which uniquely identifies your order
         String cfPaymentId = "121224562"; // String | The Cashfree payment or transaction ID.
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. 
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
         try {
             PaymentEntity result = cashfree.PGOrderFetchPayment(xApiVersion, orderId, cfPaymentId, xRequestId, xIdempotencyKeyOkHttpClient httpClient);
             System.out.println(result);
@@ -231,7 +231,7 @@ public class Example {
 | **orderId** | **String**| The id which uniquely identifies your order | |
 | **cfPaymentId** | **String**| The Cashfree payment or transaction ID. | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
 
 ### Return type
 
@@ -289,7 +289,7 @@ public class Example {
         String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
         String orderId = "your-order-id"; // String | The id which uniquely identifies your order
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. 
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
         try {
             List<PaymentEntity> result = cashfree.PGOrderFetchPayments(xApiVersion, orderId, xRequestId, xIdempotencyKeyOkHttpClient httpClient);
             System.out.println(result);
@@ -312,7 +312,7 @@ public class Example {
 | **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
 | **orderId** | **String**| The id which uniquely identifies your order | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
 
 ### Return type
 
@@ -370,7 +370,7 @@ public class Example {
         String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
         PayOrderRequest payOrderRequest = new PayOrderRequest(); // PayOrderRequest | Request body to create a transaction at cashfree using `payment_session_id`
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. 
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
         try {
             PayOrderEntity result = cashfree.PGPayOrder(xApiVersion, payOrderRequest, xRequestId, xIdempotencyKeyOkHttpClient httpClient);
             System.out.println(result);
@@ -393,7 +393,7 @@ public class Example {
 | **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
 | **payOrderRequest** | [**PayOrderRequest**](PayOrderRequest.md)| Request body to create a transaction at cashfree using &#x60;payment_session_id&#x60; | |
 | **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
 
 ### Return type
 

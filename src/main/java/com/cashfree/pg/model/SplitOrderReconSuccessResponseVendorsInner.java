@@ -53,7 +53,7 @@ import com.cashfree.pg.JSON;
 /**
  * SplitOrderReconSuccessResponseVendorsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-26T12:53:05.189649Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:00:02.685522Z[Etc/UTC]")
 public class SplitOrderReconSuccessResponseVendorsInner {
   public static final String SERIALIZED_NAME_VENDOR_ID = "vendor_id";
   @SerializedName(SERIALIZED_NAME_VENDOR_ID)

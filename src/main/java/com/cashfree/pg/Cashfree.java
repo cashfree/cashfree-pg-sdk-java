@@ -129,7 +129,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param createCustomerRequest Request to create a new customer at Cashfree (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -218,7 +218,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -256,7 +256,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param disputeId  (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -345,7 +345,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -383,7 +383,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param disputeId  (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -472,7 +472,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -510,7 +510,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param orderId  (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -599,7 +599,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -637,7 +637,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param cfPaymentId  (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -726,7 +726,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -766,7 +766,7 @@ public class Cashfree {
      * @param _file File types supported are jpeg, jpg, png, pdf and maximum file size allowed is 20 MB. (required)
      * @param docType Mention the type of the document you are uploading. Possible values :- Delivery/Service Proof, Shipping Proof, Statement of Service, Proof of Service Used, Cancellation of Service Proof, Refund Proof, Business model explanation, Extra Charges Declaration, Terms &amp; Conditions, Customer Withdrawal Letter, Certificate of Authenticity, Reseller Agreement. You can use get evidences to contest dispute API to fetch set of documents required to contest particular dispute. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param note  (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -869,7 +869,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -917,7 +917,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param vendorId The id which uniquely identifies your vendor. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param vendorAdjustmentRequest Vendor Adjustment Request Body. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -1002,7 +1002,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1040,7 +1040,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param vendorId The id which uniquely identifies your vendor. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param adjustVendorBalanceRequest Adjust Vendor Balance Request Body. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -1125,7 +1125,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1162,7 +1162,7 @@ public class Cashfree {
      * Build call for pGESCreateVendors
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param createVendorRequest Create Vendor Request Body. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -1246,7 +1246,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1280,7 +1280,7 @@ public class Cashfree {
      * @param docType Mention the document type that has to be downloaded. Only an uploaded document can be downloaded. (required)
      * @param vendorId The id which uniquely identifies your vendor. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -1363,7 +1363,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1406,7 +1406,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param vendorId The id which uniquely identifies your vendor. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -1489,7 +1489,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1527,7 +1527,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param vendorId The id which uniquely identifies your vendor. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -1610,7 +1610,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1649,7 +1649,7 @@ public class Cashfree {
      * @param amount Specify the amount for which you want to view the service charges and service taxes in the response. (required)
      * @param rateType Mention the type of rate for which you want to check the charges. Possible value: VENDOR_ON_DEMAND (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -1736,7 +1736,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1779,7 +1779,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param vendorId The id which uniquely identifies your vendor. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -1862,7 +1862,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1899,7 +1899,7 @@ public class Cashfree {
      * Build call for pGESOrderRecon
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param esOrderReconRequest Get Split and Settlement Details by OrderID v2.0 (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -1985,7 +1985,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2018,7 +2018,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param vendorId The id which uniquely identifies your vendor. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param updateVendorRequest Create Vendor Request Body. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -2103,7 +2103,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2141,7 +2141,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param vendorId The id which uniquely identifies your vendor. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param docType Mention the type of the document you are uploading. Possible values: UIDAI_FRONT, UIDAI_BACK, UIDAI_NUMBER, DL, DL_NUMBER, PASSPORT_FRONT, PASSPORT_BACK, PASSPORT_NUMBER, VOTER_ID, VOTER_ID_NUMBER, PAN, PAN_NUMBER, GST, GSTIN_NUMBER, CIN, CIN_NUMBER, NBFC_CERTIFICATE. If the doc type ends with a number you should add the doc value else upload the doc file. (optional)
      * @param docValue Enter the display name of the uploaded file. (optional)
      * @param _file Select the document that should be uploaded or provide the path of that file. You cannot upload a file that is more than 2MB in size. (optional)
@@ -2240,7 +2240,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2278,7 +2278,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param orderId The id which uniquely identifies your order (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param splitAfterPaymentRequest Request Body to Create Split for an order. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -2365,7 +2365,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2402,7 +2402,7 @@ public class Cashfree {
      * Build call for pGOrderStaticSplit
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param staticSplitRequest Static Split (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -2486,7 +2486,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2519,7 +2519,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param orderId The id which uniquely identifies your order (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -2602,7 +2602,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2640,7 +2640,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param eligibilityFetchCardlessEMIRequest Request Body to get eligible cardless emi options for a customer and order (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -2730,7 +2730,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2768,7 +2768,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param eligibilityFetchOffersRequest Request Body to get eligible offers for a customer and order (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -2857,7 +2857,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2895,7 +2895,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param eligibilityFetchPaylaterRequest Request Body to get eligible paylater options for a customer and order (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -2985,7 +2985,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3023,7 +3023,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param eligibilityFetchPaymentMethodsRequest Request Body to get eligible payment methods for an account and order (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -3113,7 +3113,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3151,7 +3151,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param createOfferRequest Request body to create an offer at Cashfree (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -3240,7 +3240,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3278,7 +3278,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param offerId The offer ID for which you want to view the offer details. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -3367,7 +3367,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3405,7 +3405,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param createOrderRequest Request body to create an order at cashfree (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -3494,7 +3494,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3532,7 +3532,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param orderId The id which uniquely identifies your order (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -3621,7 +3621,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3659,7 +3659,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param orderId The id which uniquely identifies your order (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -3748,7 +3748,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3787,7 +3787,7 @@ public class Cashfree {
      * @param orderId The id which uniquely identifies your order (required)
      * @param terminateOrderRequest Request body to terminate an order at cashfree (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -3877,7 +3877,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3921,7 +3921,7 @@ public class Cashfree {
      * @param orderId The id which uniquely identifies your order (required)
      * @param updateOrderExtendedRequest Request Body to Update extended data related to order (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -4011,7 +4011,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4054,7 +4054,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param linkId The payment link ID for which you want to view the details. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -4143,7 +4143,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4181,7 +4181,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param createLinkRequest Request Body to Create Payment Links (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -4270,7 +4270,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4308,7 +4308,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param linkId The payment link ID for which you want to view the details. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -4398,7 +4398,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4436,7 +4436,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param linkId The payment link ID for which you want to view the details. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param status Mention What is status of orders you want to fetch, default is PAID. Possible value: ALL, PAID (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -4530,7 +4530,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4569,7 +4569,7 @@ public class Cashfree {
      * @param orderId The id which uniquely identifies your order (required)
      * @param authorizeOrderRequest Request to Capture or Void Transactions (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -4660,7 +4660,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4704,7 +4704,7 @@ public class Cashfree {
      * @param cfPaymentId The Cashfree payment or transaction ID. (required)
      * @param orderAuthenticatePaymentRequest Request body to submit/resend headless OTP. To use this API make sure you have headless OTP enabled for your account (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -4795,7 +4795,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] {  };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4839,7 +4839,7 @@ public class Cashfree {
      * @param orderId The id which uniquely identifies your order (required)
      * @param cfPaymentId The Cashfree payment or transaction ID. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -4930,7 +4930,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4973,7 +4973,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param orderId The id which uniquely identifies your order (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -5063,7 +5063,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5101,7 +5101,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param payOrderRequest Request body to create a transaction at cashfree using &#x60;payment_session_id&#x60; (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -5191,7 +5191,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] {  };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5230,7 +5230,7 @@ public class Cashfree {
      * @param fetchReconRequest Request Body for the reconciliation (required)
      * @param contentType application/json (optional)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param accept application/json (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -5328,7 +5328,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5362,128 +5362,12 @@ public class Cashfree {
 
 
     /**
-     * Build call for pGESReconVendor
-     * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
-     * @param vendorReconRequest Vendor Recon Request body. (required)
-     * @param contentType application/json (optional)
-     * @param _callback Callback for upload/download progress
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Terminal created </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Vendor Recon Failure Response. </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call pGESReconVendorCall(String xApiVersion, VendorReconRequest vendorReconRequest, String contentType, final ApiCallback _callback) throws ApiException {
-        String basePath = "https://sandbox.cashfree.com/pg";
-
-        if(this.XEnvironment == CFEnvironment.PRODUCTION) {
-            basePath = "https://api.cashfree.com/pg";
-        }
-
-        Object localVarPostBody = vendorReconRequest;
-
-        // create path and map variables
-        String localVarPath = "/recon/vendor";
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        if (xApiVersion != null) {
-            localVarHeaderParams.put("x-api-version", localVarApiClient.parameterToString(xApiVersion));
-        }
-
-        if (contentType != null) {
-            localVarHeaderParams.put("Content-Type", localVarApiClient.parameterToString(contentType));
-        }
-
-
-        if(this.XClientSecret != null && !this.XClientSecret.isEmpty()) {
-            ApiKeyAuth xcs = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSecret");
-            xcs.setApiKey(this.XClientSecret);
-        }
-
-        if(this.XClientId != null && !this.XClientId.isEmpty()) {
-            ApiKeyAuth xcid = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientID");
-            xcid.setApiKey(this.XClientId);
-        }
-
-        if(this.XClientSignature != null && !this.XClientSignature.isEmpty()) {
-            ApiKeyAuth xcs = (ApiKeyAuth) localVarApiClient.getAuthentication("XClientSignatureHeader");
-            xcs.setApiKey(this.XClientSignature);
-        }
-
-        if(this.XPartnerAPIKey != null && !this.XPartnerAPIKey.isEmpty()) {
-            ApiKeyAuth xpa = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerAPIKey");
-            xpa.setApiKey(this.XPartnerAPIKey);
-        }
-
-        if(this.XPartnerMerchantID != null && !this.XPartnerMerchantID.isEmpty()) {
-            ApiKeyAuth xmid = (ApiKeyAuth) localVarApiClient.getAuthentication("XPartnerMerchantID");
-            xmid.setApiKey(this.XPartnerMerchantID);
-        }
-
-        final String[] localVarAccepts = {
-            "application/json"
-        };
-        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) {
-            localVarHeaderParams.put("Accept", localVarAccept);
-        }
-
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarContentType != null) {
-            localVarHeaderParams.put("Content-Type", localVarContentType);
-        }
-
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
-
-        String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private okhttp3.Call pGESReconVendorValidateBeforeCall(String xApiVersion, VendorReconRequest vendorReconRequest, String contentType, final ApiCallback _callback) throws ApiException {
-        // verify the required parameter 'xApiVersion' is set
-        if (xApiVersion == null) {
-            throw new ApiException("Missing the required parameter 'xApiVersion' when calling PGESReconVendor(Async)");
-        }
-
-        // verify the required parameter 'vendorReconRequest' is set
-        if (vendorReconRequest == null) {
-            throw new ApiException("Missing the required parameter 'vendorReconRequest' when calling PGESReconVendor(Async)");
-        }
-
-        return pGESReconVendorCall(xApiVersion, vendorReconRequest, contentType, _callback);
-
-    }
-
-    public ApiResponse<VendorRecon200Response> PGESReconVendor(VendorReconRequest vendorReconRequest, String contentType, OkHttpClient httpClient) throws ApiException {
-        String xApiVersion = this.XApiVersion;
-        if(httpClient != null) {
-            localVarApiClient.httpClient = httpClient;
-        }
-        okhttp3.Call localVarCall = pGESReconVendorValidateBeforeCall(xApiVersion, vendorReconRequest, contentType, null);
-        Type localVarReturnType = new TypeToken<VendorRecon200Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
-    }
-
-
-    /**
      * Build call for pGOrderCreateRefund
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param orderId The id which uniquely identifies your order (required)
      * @param orderCreateRefundRequest Request Body to Create Refunds (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -5574,7 +5458,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5618,7 +5502,7 @@ public class Cashfree {
      * @param orderId The id which uniquely identifies your order (required)
      * @param refundId Refund Id of the refund you want to fetch. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -5709,7 +5593,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5752,7 +5636,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param orderId The id which uniquely identifies your order (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -5841,7 +5725,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5880,7 +5764,7 @@ public class Cashfree {
      * @param fetchSettlementsRequest Request Body to get the settlements (required)
      * @param contentType application/json (optional)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param accept application/json (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -5978,7 +5862,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6017,7 +5901,7 @@ public class Cashfree {
      * @param settlementFetchReconRequest Request Body for the settlement reconciliation (required)
      * @param contentType application/json (optional)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param accept application/json (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -6115,7 +5999,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6152,7 +6036,7 @@ public class Cashfree {
      * Build call for markForSettlement
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param createOrderSettlementRequestBody Create Order Settlement Request Body. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -6239,7 +6123,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6272,7 +6156,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param orderId The id which uniquely identifies your order (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -6362,7 +6246,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6400,7 +6284,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param simulationId Provide the SimulationId for which the details have to be fetched. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -6487,7 +6371,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6525,7 +6409,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param simulateRequest Request Body to Make Simulation (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -6612,7 +6496,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6650,7 +6534,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param createTerminalRequest Request Body to Create Terminal for SPOS (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -6739,7 +6623,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6777,7 +6661,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param createTerminalTransactionRequest Request body to create a terminal transaction (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -6866,7 +6750,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6904,7 +6788,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param demapSoundboxVpaRequest Request body to demap soundbox vpa (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -6993,7 +6877,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -7031,7 +6915,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param terminalPhoneNo The terminal for which you want to view the order details. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -7120,7 +7004,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -7159,7 +7043,7 @@ public class Cashfree {
      * @param terminalPhoneNo Phone number assigned to the terminal. Required if you are not providing the cf_terminal_id in the request. (required)
      * @param cfTerminalId Cashfree terminal id for which you want to get staticQRs. Required if you are not providing the terminal_phone_number in the request. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -7255,7 +7139,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -7299,7 +7183,7 @@ public class Cashfree {
      * @param deviceSerialNo Device Serial No assinged. Required if you are not providing the cf_terminal_id in the request. (required)
      * @param cfTerminalId Cashfree terminal id for which you want to get Soundbox Vpa. Required if you are not providing the device_serial_no in the request. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -7395,7 +7279,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -7439,7 +7323,7 @@ public class Cashfree {
      * @param utr Utr of the transaction. (required)
      * @param cfTerminalId Provide the Cashfree terminal ID for which the details have to be updated. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -7532,7 +7416,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -7575,7 +7459,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param onboardSoundboxVpaRequest Request body to onboard soundbox vpa (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -7664,7 +7548,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -7703,7 +7587,7 @@ public class Cashfree {
      * @param cfTerminalId Provide the Cashfree terminal ID for which the details have to be updated. (required)
      * @param updateSoundboxVpaRequest Request body to update soundbox vpa (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -7793,7 +7677,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -7837,7 +7721,7 @@ public class Cashfree {
      * @param cfTerminalId Provide the Cashfree terminal ID for which the details have to be updated. (required)
      * @param updateTerminalRequest Request Body to update terminal for SPOS. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -7927,7 +7811,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -7971,7 +7855,7 @@ public class Cashfree {
      * @param cfTerminalId Provide the Cashfree terminal ID for which the details have to be updated. (required)
      * @param updateTerminalStatusRequest Request Body to update terminal status for SPOS. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -8061,7 +7945,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -8105,7 +7989,7 @@ public class Cashfree {
      * @param cfTerminalId Provide the Cashfree terminal ID for which the details have to be updated. (required)
      * @param uploadTerminalDocs Request Body to update terminal documents for SPOS. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -8195,7 +8079,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -8238,7 +8122,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param createSubscriptionPaymentRequest Request body to create a subscription payment. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -8326,7 +8210,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -8364,7 +8248,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param createPlanRequest Request body to create a plan. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -8452,7 +8336,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -8491,7 +8375,7 @@ public class Cashfree {
      * @param subscriptionId Provide the SubscriptionId using which the subscription was created. (required)
      * @param createSubscriptionRefundRequest Request body to create a subscription refund. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -8580,7 +8464,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -8623,7 +8507,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param createSubscriptionRequest Request body to create a subscription. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -8711,7 +8595,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -8749,7 +8633,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param planId Provide the PlanId for which the details have to be fetched. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -8836,7 +8720,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -8874,7 +8758,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param subscriptionId Provide the SubscriptionId using which the subscription was created. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -8961,7 +8845,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -9000,7 +8884,7 @@ public class Cashfree {
      * @param subscriptionId Provide the SubscriptionId using which the subscription was created. (required)
      * @param paymentId Provide the PaymentId using which the payment was created. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -9088,7 +8972,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -9131,7 +9015,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param subscriptionId Provide the SubscriptionId using which the subscription was created. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -9219,7 +9103,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -9258,7 +9142,7 @@ public class Cashfree {
      * @param subscriptionId Provide the SubscriptionId using which the subscription was created. (required)
      * @param refundId Provide the PaymentId for which the details have to be fetched. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -9346,7 +9230,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -9390,7 +9274,7 @@ public class Cashfree {
      * @param subscriptionId Provide the SubscriptionId using which the subscription was created. (required)
      * @param manageSubscriptionRequest Request body to manage a subscription. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -9479,7 +9363,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -9524,7 +9408,7 @@ public class Cashfree {
      * @param paymentId Provide the PaymentId using which the payment was created. (required)
      * @param manageSubscriptionPaymentRequest Request body to manage a subscription payment. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -9613,7 +9497,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -9664,7 +9548,7 @@ public class Cashfree {
      * @param paymentId2 Authorization Payment Id for physical nach authorization (required)
      * @param action Action to be performed on the file. Can be SUBMIT_DOCUMENT (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -9765,7 +9649,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -9818,7 +9702,7 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param subscriptionEligibilityRequest Request body to fetch subscription eligibile payment method details. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -9906,7 +9790,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -9945,7 +9829,7 @@ public class Cashfree {
      * @param customerId Your Customer ID that you had sent during create order API &#x60;POST/orders&#x60; (required)
      * @param instrumentId The instrument_id which needs to be deleted (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -10036,7 +9920,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -10080,7 +9964,7 @@ public class Cashfree {
      * @param customerId Your Customer ID that you had sent during create order API &#x60;POST/orders&#x60; (required)
      * @param instrumentId The instrument_id of the saved instrument which needs to be queried (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -10171,7 +10055,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -10215,7 +10099,7 @@ public class Cashfree {
      * @param customerId Your Customer ID that you had sent during create order API &#x60;POST/orders&#x60; (required)
      * @param instrumentType Payment mode or type of saved instrument  (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -10308,7 +10192,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -10352,7 +10236,7 @@ public class Cashfree {
      * @param customerId Your Customer ID that you had sent during create order API &#x60;POST/orders&#x60; (required)
      * @param instrumentId The instrument_id of the saved card instrument which needs to be queried (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -10443,7 +10327,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -10486,14 +10370,14 @@ public class Cashfree {
      * @param xApiVersion API version to be used. Format is in YYYY-MM-DD (required)
      * @param paRRequest Request payload for creating PAR. (required)
      * @param xRequestId Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree (optional)
-     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  (optional)
+     * @param xIdempotencyKey An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * X-Api-Version -  <br>  * X-Ratelimit-Limit -  <br>  * X-Ratelimit-Remaining -  <br>  * X-Ratelimit-Retry -  <br>  * X-Ratelimit-Type -  <br>  * X-Request-Id -  <br>  </td></tr>
         <tr><td> 400 </td><td> Bad request error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
         <tr><td> 401 </td><td> Authentication Error </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
         <tr><td> 404 </td><td> Resource Not found </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
@@ -10575,7 +10459,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0-beta-20");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-5.0.0");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -10707,7 +10591,7 @@ static class ApiClient {
         json = new JSON();
 
         // Set default User-Agent.
-        setUserAgent("OpenAPI-Generator/5.0.0-beta-20/java");
+        setUserAgent("OpenAPI-Generator/5.0.0/java");
 
         authentications = new HashMap<String, Authentication>();
     }
