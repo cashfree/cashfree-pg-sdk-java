@@ -159,6 +159,7 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.CustomerEntity.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.DemapSoundboxVpaRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.DiscountDetails.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.DisputeEvidenceInner.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.DisputesEntity.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.DisputesEntityMerchantAccepted.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.EMIOffer.CustomTypeAdapterFactory());
@@ -292,6 +293,7 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.PaymentWebhookGatewayDetailsEntity.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.PaymentWebhookOrderEntity.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.PlanEntity.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.PreferredEvidenceInner.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.ProductConditions.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.ProductConditionsEntity.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.ProductDetails.CustomTypeAdapterFactory());

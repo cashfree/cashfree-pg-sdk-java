@@ -12,7 +12,7 @@ The complete order extended data entity
 |**orderId** | **String** | order_id sent during the api request |  [optional] |
 |**orderAmount** | **BigDecimal** |  |  [optional] |
 |**orderCurrency** | **String** | Currency of the order. Example INR |  [optional] |
-|**createdAt** | **OffsetDateTime** | When the order was created at cashfree&#39;s server |  [optional] |
+|**createdAt** | **String** | When the order was created at cashfree&#39;s server |  [optional] |
 |**charges** | [**ChargesEntity**](ChargesEntity.md) |  |  [optional] |
 |**customerDetails** | [**ExtendedCustomerDetails**](ExtendedCustomerDetails.md) |  |  [optional] |
 |**shippingAddress** | [**AddressDetails**](AddressDetails.md) |  |  [optional] |

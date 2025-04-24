@@ -15,9 +15,9 @@ package com.cashfree.pg.model;
 
 import java.util.Objects;
 import com.cashfree.pg.model.CustomerDetailsInDisputesEntity;
-import com.cashfree.pg.model.Evidence;
-import com.cashfree.pg.model.EvidencesToContestDispute;
+import com.cashfree.pg.model.DisputeEvidenceInner;
 import com.cashfree.pg.model.OrderDetailsInDisputesEntity;
+import com.cashfree.pg.model.PreferredEvidenceInner;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -58,7 +58,7 @@ import com.cashfree.pg.JSON;
 /**
  * DisputesEntityMerchantAccepted
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:33:46.250709Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-24T12:25:27.382365Z[Etc/UTC]")
 public class DisputesEntityMerchantAccepted {
   public static final String SERIALIZED_NAME_DISPUTE_ID = "dispute_id";
   @SerializedName(SERIALIZED_NAME_DISPUTE_ID)
@@ -276,11 +276,11 @@ public class DisputesEntityMerchantAccepted {
 
   public static final String SERIALIZED_NAME_PREFERRED_EVIDENCE = "preferred_evidence";
   @SerializedName(SERIALIZED_NAME_PREFERRED_EVIDENCE)
-  private List<EvidencesToContestDispute> preferredEvidence;
+  private List<PreferredEvidenceInner> preferredEvidence;
 
   public static final String SERIALIZED_NAME_DISPUTE_EVIDENCE = "dispute_evidence";
   @SerializedName(SERIALIZED_NAME_DISPUTE_EVIDENCE)
-  private List<Evidence> disputeEvidence;
+  private List<DisputeEvidenceInner> disputeEvidence;
 
   public static final String SERIALIZED_NAME_ORDER_DETAILS = "order_details";
   @SerializedName(SERIALIZED_NAME_ORDER_DETAILS)
@@ -535,13 +535,13 @@ public class DisputesEntityMerchantAccepted {
   }
 
 
-  public DisputesEntityMerchantAccepted preferredEvidence(List<EvidencesToContestDispute> preferredEvidence) {
+  public DisputesEntityMerchantAccepted preferredEvidence(List<PreferredEvidenceInner> preferredEvidence) {
     
     this.preferredEvidence = preferredEvidence;
     return this;
   }
 
-  public DisputesEntityMerchantAccepted addPreferredEvidenceItem(EvidencesToContestDispute preferredEvidenceItem) {
+  public DisputesEntityMerchantAccepted addPreferredEvidenceItem(PreferredEvidenceInner preferredEvidenceItem) {
     if (this.preferredEvidence == null) {
       this.preferredEvidence = new ArrayList<>();
     }
@@ -555,23 +555,23 @@ public class DisputesEntityMerchantAccepted {
   **/
   @javax.annotation.Nullable
   @Schema(example = "{\"preferred_evidence\":[{\"document_type\":\"Delivery/Service Proof\",\"document_description\":\"Proof that the cardholder/customer received the goods or services.\"},{\"document_type\":\"Statement of Service\",\"document_description\":\"Account Statement of wallet where funds were loaded by customer.\"}]}", requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public List<EvidencesToContestDispute> getPreferredEvidence() {
+  public List<PreferredEvidenceInner> getPreferredEvidence() {
     return preferredEvidence;
   }
 
 
-  public void setPreferredEvidence(List<EvidencesToContestDispute> preferredEvidence) {
+  public void setPreferredEvidence(List<PreferredEvidenceInner> preferredEvidence) {
     this.preferredEvidence = preferredEvidence;
   }
 
 
-  public DisputesEntityMerchantAccepted disputeEvidence(List<Evidence> disputeEvidence) {
+  public DisputesEntityMerchantAccepted disputeEvidence(List<DisputeEvidenceInner> disputeEvidence) {
     
     this.disputeEvidence = disputeEvidence;
     return this;
   }
 
-  public DisputesEntityMerchantAccepted addDisputeEvidenceItem(Evidence disputeEvidenceItem) {
+  public DisputesEntityMerchantAccepted addDisputeEvidenceItem(DisputeEvidenceInner disputeEvidenceItem) {
     if (this.disputeEvidence == null) {
       this.disputeEvidence = new ArrayList<>();
     }
@@ -585,12 +585,12 @@ public class DisputesEntityMerchantAccepted {
   **/
   @javax.annotation.Nullable
   @Schema(example = "[{\"document_id\":18150,\"document_name\":\"disputeSampleFile.pdf\",\"document_type\":\"DeliveryProof\"}]", requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public List<Evidence> getDisputeEvidence() {
+  public List<DisputeEvidenceInner> getDisputeEvidence() {
     return disputeEvidence;
   }
 
 
-  public void setDisputeEvidence(List<Evidence> disputeEvidence) {
+  public void setDisputeEvidence(List<DisputeEvidenceInner> disputeEvidence) {
     this.disputeEvidence = disputeEvidence;
   }
 
@@ -778,7 +778,7 @@ public class DisputesEntityMerchantAccepted {
 
           // validate the optional field `preferred_evidence` (array)
           for (int i = 0; i < jsonArraypreferredEvidence.size(); i++) {
-            EvidencesToContestDispute.validateJsonElement(jsonArraypreferredEvidence.get(i));
+            PreferredEvidenceInner.validateJsonElement(jsonArraypreferredEvidence.get(i));
           };
         }
       }
@@ -792,7 +792,7 @@ public class DisputesEntityMerchantAccepted {
 
           // validate the optional field `dispute_evidence` (array)
           for (int i = 0; i < jsonArraydisputeEvidence.size(); i++) {
-            Evidence.validateJsonElement(jsonArraydisputeEvidence.get(i));
+            DisputeEvidenceInner.validateJsonElement(jsonArraydisputeEvidence.get(i));
           };
         }
       }
@@ -853,7 +853,7 @@ public class DisputesEntityMerchantAccepted {
 
           // validate the optional field `preferred_evidence` (array)
           for (int i = 0; i < jsonArraypreferredEvidence.size(); i++) {
-            EvidencesToContestDispute.validateJsonElement(jsonArraypreferredEvidence.get(i));
+            PreferredEvidenceInner.validateJsonElement(jsonArraypreferredEvidence.get(i));
           };
         }
       }
@@ -867,7 +867,7 @@ public class DisputesEntityMerchantAccepted {
 
           // validate the optional field `dispute_evidence` (array)
           for (int i = 0; i < jsonArraydisputeEvidence.size(); i++) {
-            Evidence.validateJsonElement(jsonArraydisputeEvidence.get(i));
+            DisputeEvidenceInner.validateJsonElement(jsonArraydisputeEvidence.get(i));
           };
         }
       }

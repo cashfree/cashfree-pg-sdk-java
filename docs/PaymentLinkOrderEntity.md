@@ -16,9 +16,9 @@ The complete order entity
 |**orderAmount** | **BigDecimal** |  |  [optional] |
 |**orderStatus** | **String** | Possible values are  - &#x60;ACTIVE&#x60;: Order does not have a sucessful transaction yet - &#x60;PAID&#x60;: Order is PAID with one successful transaction - &#x60;EXPIRED&#x60;: Order was not PAID and not it has expired. No transaction can be initiated for an EXPIRED order.  |  [optional] |
 |**paymentSessionId** | **String** |  |  [optional] |
-|**orderExpiryTime** | **OffsetDateTime** |  |  [optional] |
+|**orderExpiryTime** | **String** |  |  [optional] |
 |**orderNote** | **String** | Additional note for order |  [optional] |
-|**createdAt** | **OffsetDateTime** | When the order was created at cashfree&#39;s server |  [optional] |
+|**createdAt** | **String** | When the order was created at cashfree&#39;s server |  [optional] |
 |**orderSplits** | [**List&lt;VendorSplit&gt;**](VendorSplit.md) |  |  [optional] |
 |**customerDetails** | [**PaymentLinkCustomerDetails**](PaymentLinkCustomerDetails.md) |  |  [optional] |
 |**orderMeta** | [**OrderMeta**](OrderMeta.md) |  |  [optional] |
