@@ -59,7 +59,7 @@ import com.cashfree.pg.JSON;
  * The response returned for Get, Create or Manage Subscription APIs.
  */
 @Schema(description = "The response returned for Get, Create or Manage Subscription APIs.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:33:46.250709Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-24T11:05:00.475310Z[Etc/UTC]")
 public class SubscriptionEntity {
   public static final String SERIALIZED_NAME_AUTHORISATION_DETAILS = "authorisation_details";
   @SerializedName(SERIALIZED_NAME_AUTHORISATION_DETAILS)

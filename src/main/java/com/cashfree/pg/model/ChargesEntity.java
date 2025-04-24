@@ -53,7 +53,7 @@ import com.cashfree.pg.JSON;
  * Charges accociated with the order
  */
 @Schema(description = "Charges accociated with the order")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:33:46.250709Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-24T11:05:00.475310Z[Etc/UTC]")
 public class ChargesEntity {
   public static final String SERIALIZED_NAME_SHIPPING_CHARGES = "shipping_charges";
   @SerializedName(SERIALIZED_NAME_SHIPPING_CHARGES)

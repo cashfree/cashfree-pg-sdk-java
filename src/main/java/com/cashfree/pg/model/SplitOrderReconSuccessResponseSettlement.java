@@ -22,7 +22,6 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.math.BigDecimal;
-import java.time.OffsetDateTime;
 import java.util.Arrays;
 import org.openapitools.jackson.nullable.JsonNullable;
 
@@ -55,7 +54,7 @@ import com.cashfree.pg.JSON;
  * Details of the settlement information.
  */
 @Schema(description = "Details of the settlement information.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:33:46.250709Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-24T11:05:00.475310Z[Etc/UTC]")
 public class SplitOrderReconSuccessResponseSettlement {
   public static final String SERIALIZED_NAME_ENTITY = "entity";
   @SerializedName(SERIALIZED_NAME_ENTITY)
@@ -107,11 +106,11 @@ public class SplitOrderReconSuccessResponseSettlement {
 
   public static final String SERIALIZED_NAME_TRANSFER_TIME = "transfer_time";
   @SerializedName(SERIALIZED_NAME_TRANSFER_TIME)
-  private OffsetDateTime transferTime;
+  private String transferTime;
 
   public static final String SERIALIZED_NAME_PAYMENT_TIME = "payment_time";
   @SerializedName(SERIALIZED_NAME_PAYMENT_TIME)
-  private OffsetDateTime paymentTime;
+  private String paymentTime;
 
   public SplitOrderReconSuccessResponseSettlement() {
   }
@@ -380,7 +379,7 @@ public class SplitOrderReconSuccessResponseSettlement {
   }
 
 
-  public SplitOrderReconSuccessResponseSettlement transferTime(OffsetDateTime transferTime) {
+  public SplitOrderReconSuccessResponseSettlement transferTime(String transferTime) {
     
     this.transferTime = transferTime;
     return this;
@@ -392,17 +391,17 @@ public class SplitOrderReconSuccessResponseSettlement {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Time of transfer if available, otherwise null.")
-  public OffsetDateTime getTransferTime() {
+  public String getTransferTime() {
     return transferTime;
   }
 
 
-  public void setTransferTime(OffsetDateTime transferTime) {
+  public void setTransferTime(String transferTime) {
     this.transferTime = transferTime;
   }
 
 
-  public SplitOrderReconSuccessResponseSettlement paymentTime(OffsetDateTime paymentTime) {
+  public SplitOrderReconSuccessResponseSettlement paymentTime(String paymentTime) {
     
     this.paymentTime = paymentTime;
     return this;
@@ -414,12 +413,12 @@ public class SplitOrderReconSuccessResponseSettlement {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Timestamp when payment was made.")
-  public OffsetDateTime getPaymentTime() {
+  public String getPaymentTime() {
     return paymentTime;
   }
 
 
-  public void setPaymentTime(OffsetDateTime paymentTime) {
+  public void setPaymentTime(String paymentTime) {
     this.paymentTime = paymentTime;
   }
 
@@ -552,6 +551,12 @@ public class SplitOrderReconSuccessResponseSettlement {
       if ((jsonObj.get("transfer_utr") != null && !jsonObj.get("transfer_utr").isJsonNull()) && !jsonObj.get("transfer_utr").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `transfer_utr` to be a primitive type in the JSON string but got `%s`", jsonObj.get("transfer_utr").toString()));
       }
+      if ((jsonObj.get("transfer_time") != null && !jsonObj.get("transfer_time").isJsonNull()) && !jsonObj.get("transfer_time").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `transfer_time` to be a primitive type in the JSON string but got `%s`", jsonObj.get("transfer_time").toString()));
+      }
+      if ((jsonObj.get("payment_time") != null && !jsonObj.get("payment_time").isJsonNull()) && !jsonObj.get("payment_time").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `payment_time` to be a primitive type in the JSON string but got `%s`", jsonObj.get("payment_time").toString()));
+      }
   }
 
 
@@ -581,6 +586,12 @@ public class SplitOrderReconSuccessResponseSettlement {
       }
       if ((jsonObj.get("transfer_utr") != null && !jsonObj.get("transfer_utr").isJsonNull()) && !jsonObj.get("transfer_utr").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `transfer_utr` to be a primitive type in the JSON string but got `%s`", jsonObj.get("transfer_utr").toString()));
+      }
+      if ((jsonObj.get("transfer_time") != null && !jsonObj.get("transfer_time").isJsonNull()) && !jsonObj.get("transfer_time").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `transfer_time` to be a primitive type in the JSON string but got `%s`", jsonObj.get("transfer_time").toString()));
+      }
+      if ((jsonObj.get("payment_time") != null && !jsonObj.get("payment_time").isJsonNull()) && !jsonObj.get("payment_time").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `payment_time` to be a primitive type in the JSON string but got `%s`", jsonObj.get("payment_time").toString()));
       }
       return false;
   }

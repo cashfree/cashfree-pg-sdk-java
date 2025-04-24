@@ -28,7 +28,6 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.math.BigDecimal;
-import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -64,7 +63,7 @@ import com.cashfree.pg.JSON;
  * The complete order entity
  */
 @Schema(description = "The complete order entity")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:33:46.250709Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-24T11:05:00.475310Z[Etc/UTC]")
 public class OrderEntity {
   public static final String SERIALIZED_NAME_CF_ORDER_ID = "cf_order_id";
   @SerializedName(SERIALIZED_NAME_CF_ORDER_ID)
@@ -96,7 +95,7 @@ public class OrderEntity {
 
   public static final String SERIALIZED_NAME_ORDER_EXPIRY_TIME = "order_expiry_time";
   @SerializedName(SERIALIZED_NAME_ORDER_EXPIRY_TIME)
-  private OffsetDateTime orderExpiryTime;
+  private String orderExpiryTime;
 
   public static final String SERIALIZED_NAME_ORDER_NOTE = "order_note";
   @SerializedName(SERIALIZED_NAME_ORDER_NOTE)
@@ -104,7 +103,7 @@ public class OrderEntity {
 
   public static final String SERIALIZED_NAME_CREATED_AT = "created_at";
   @SerializedName(SERIALIZED_NAME_CREATED_AT)
-  private OffsetDateTime createdAt;
+  private String createdAt;
 
   public static final String SERIALIZED_NAME_ORDER_SPLITS = "order_splits";
   @SerializedName(SERIALIZED_NAME_ORDER_SPLITS)
@@ -291,7 +290,7 @@ public class OrderEntity {
   }
 
 
-  public OrderEntity orderExpiryTime(OffsetDateTime orderExpiryTime) {
+  public OrderEntity orderExpiryTime(String orderExpiryTime) {
     
     this.orderExpiryTime = orderExpiryTime;
     return this;
@@ -303,12 +302,12 @@ public class OrderEntity {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public OffsetDateTime getOrderExpiryTime() {
+  public String getOrderExpiryTime() {
     return orderExpiryTime;
   }
 
 
-  public void setOrderExpiryTime(OffsetDateTime orderExpiryTime) {
+  public void setOrderExpiryTime(String orderExpiryTime) {
     this.orderExpiryTime = orderExpiryTime;
   }
 
@@ -335,7 +334,7 @@ public class OrderEntity {
   }
 
 
-  public OrderEntity createdAt(OffsetDateTime createdAt) {
+  public OrderEntity createdAt(String createdAt) {
     
     this.createdAt = createdAt;
     return this;
@@ -347,12 +346,12 @@ public class OrderEntity {
   **/
   @javax.annotation.Nullable
   @Schema(example = "2022-08-16T14:45:38+05:30", requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "When the order was created at cashfree's server")
-  public OffsetDateTime getCreatedAt() {
+  public String getCreatedAt() {
     return createdAt;
   }
 
 
-  public void setCreatedAt(OffsetDateTime createdAt) {
+  public void setCreatedAt(String createdAt) {
     this.createdAt = createdAt;
   }
 
@@ -653,8 +652,14 @@ public class OrderEntity {
       if ((jsonObj.get("payment_session_id") != null && !jsonObj.get("payment_session_id").isJsonNull()) && !jsonObj.get("payment_session_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `payment_session_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("payment_session_id").toString()));
       }
+      if ((jsonObj.get("order_expiry_time") != null && !jsonObj.get("order_expiry_time").isJsonNull()) && !jsonObj.get("order_expiry_time").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `order_expiry_time` to be a primitive type in the JSON string but got `%s`", jsonObj.get("order_expiry_time").toString()));
+      }
       if ((jsonObj.get("order_note") != null && !jsonObj.get("order_note").isJsonNull()) && !jsonObj.get("order_note").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `order_note` to be a primitive type in the JSON string but got `%s`", jsonObj.get("order_note").toString()));
+      }
+      if ((jsonObj.get("created_at") != null && !jsonObj.get("created_at").isJsonNull()) && !jsonObj.get("created_at").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `created_at` to be a primitive type in the JSON string but got `%s`", jsonObj.get("created_at").toString()));
       }
       if (jsonObj.get("order_splits") != null && !jsonObj.get("order_splits").isJsonNull()) {
         JsonArray jsonArrayorderSplits = jsonObj.getAsJsonArray("order_splits");
@@ -720,8 +725,14 @@ public class OrderEntity {
       if ((jsonObj.get("payment_session_id") != null && !jsonObj.get("payment_session_id").isJsonNull()) && !jsonObj.get("payment_session_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `payment_session_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("payment_session_id").toString()));
       }
+      if ((jsonObj.get("order_expiry_time") != null && !jsonObj.get("order_expiry_time").isJsonNull()) && !jsonObj.get("order_expiry_time").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `order_expiry_time` to be a primitive type in the JSON string but got `%s`", jsonObj.get("order_expiry_time").toString()));
+      }
       if ((jsonObj.get("order_note") != null && !jsonObj.get("order_note").isJsonNull()) && !jsonObj.get("order_note").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `order_note` to be a primitive type in the JSON string but got `%s`", jsonObj.get("order_note").toString()));
+      }
+      if ((jsonObj.get("created_at") != null && !jsonObj.get("created_at").isJsonNull()) && !jsonObj.get("created_at").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `created_at` to be a primitive type in the JSON string but got `%s`", jsonObj.get("created_at").toString()));
       }
       if (jsonObj.get("order_splits") != null && !jsonObj.get("order_splits").isJsonNull()) {
         JsonArray jsonArrayorderSplits = jsonObj.getAsJsonArray("order_splits");

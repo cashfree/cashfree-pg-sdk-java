@@ -51,7 +51,7 @@ import com.cashfree.pg.JSON;
 /**
  * SubscriptionPaymentEntityFailureDetails
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:33:46.250709Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-24T11:05:00.475310Z[Etc/UTC]")
 public class SubscriptionPaymentEntityFailureDetails {
   public static final String SERIALIZED_NAME_FAILURE_REASON = "failure_reason";
   @SerializedName(SERIALIZED_NAME_FAILURE_REASON)

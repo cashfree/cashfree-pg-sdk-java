@@ -51,7 +51,7 @@ import com.cashfree.pg.JSON;
 /**
  * SettlementReconEntityDataInnerRefundDetails
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:33:46.250709Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-24T11:05:00.475310Z[Etc/UTC]")
 public class SettlementReconEntityDataInnerRefundDetails {
   public static final String SERIALIZED_NAME_REFUND_PROCESSED_AT = "refund_processed_at";
   @SerializedName(SERIALIZED_NAME_REFUND_PROCESSED_AT)

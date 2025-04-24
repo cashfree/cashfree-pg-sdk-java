@@ -22,7 +22,6 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.math.BigDecimal;
-import java.time.OffsetDateTime;
 import java.util.Arrays;
 
 import com.google.gson.Gson;
@@ -53,7 +52,7 @@ import com.cashfree.pg.JSON;
 /**
  * SplitOrderReconSuccessResponseVendorsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:33:46.250709Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-24T11:05:00.475310Z[Etc/UTC]")
 public class SplitOrderReconSuccessResponseVendorsInner {
   public static final String SERIALIZED_NAME_VENDOR_ID = "vendor_id";
   @SerializedName(SERIALIZED_NAME_VENDOR_ID)
@@ -69,7 +68,7 @@ public class SplitOrderReconSuccessResponseVendorsInner {
 
   public static final String SERIALIZED_NAME_SETTLEMENT_ELIGIBILITY_DATE = "settlement_eligibility_date";
   @SerializedName(SERIALIZED_NAME_SETTLEMENT_ELIGIBILITY_DATE)
-  private OffsetDateTime settlementEligibilityDate;
+  private String settlementEligibilityDate;
 
   public SplitOrderReconSuccessResponseVendorsInner() {
   }
@@ -140,7 +139,7 @@ public class SplitOrderReconSuccessResponseVendorsInner {
   }
 
 
-  public SplitOrderReconSuccessResponseVendorsInner settlementEligibilityDate(OffsetDateTime settlementEligibilityDate) {
+  public SplitOrderReconSuccessResponseVendorsInner settlementEligibilityDate(String settlementEligibilityDate) {
     
     this.settlementEligibilityDate = settlementEligibilityDate;
     return this;
@@ -152,12 +151,12 @@ public class SplitOrderReconSuccessResponseVendorsInner {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Date and time when the vendor is eligible for the settlement.")
-  public OffsetDateTime getSettlementEligibilityDate() {
+  public String getSettlementEligibilityDate() {
     return settlementEligibilityDate;
   }
 
 
-  public void setSettlementEligibilityDate(OffsetDateTime settlementEligibilityDate) {
+  public void setSettlementEligibilityDate(String settlementEligibilityDate) {
     this.settlementEligibilityDate = settlementEligibilityDate;
   }
 
@@ -234,6 +233,9 @@ public class SplitOrderReconSuccessResponseVendorsInner {
       if ((jsonObj.get("vendor_id") != null && !jsonObj.get("vendor_id").isJsonNull()) && !jsonObj.get("vendor_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `vendor_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vendor_id").toString()));
       }
+      if ((jsonObj.get("settlement_eligibility_date") != null && !jsonObj.get("settlement_eligibility_date").isJsonNull()) && !jsonObj.get("settlement_eligibility_date").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `settlement_eligibility_date` to be a primitive type in the JSON string but got `%s`", jsonObj.get("settlement_eligibility_date").toString()));
+      }
   }
 
 
@@ -248,6 +250,9 @@ public class SplitOrderReconSuccessResponseVendorsInner {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("vendor_id") != null && !jsonObj.get("vendor_id").isJsonNull()) && !jsonObj.get("vendor_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `vendor_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vendor_id").toString()));
+      }
+      if ((jsonObj.get("settlement_eligibility_date") != null && !jsonObj.get("settlement_eligibility_date").isJsonNull()) && !jsonObj.get("settlement_eligibility_date").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `settlement_eligibility_date` to be a primitive type in the JSON string but got `%s`", jsonObj.get("settlement_eligibility_date").toString()));
       }
       return false;
   }

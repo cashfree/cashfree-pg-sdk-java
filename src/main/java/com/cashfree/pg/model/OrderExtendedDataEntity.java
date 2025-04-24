@@ -27,7 +27,6 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.math.BigDecimal;
-import java.time.OffsetDateTime;
 import java.util.Arrays;
 
 import com.google.gson.Gson;
@@ -59,7 +58,7 @@ import com.cashfree.pg.JSON;
  * The complete order extended data entity
  */
 @Schema(description = "The complete order extended data entity")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:33:46.250709Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-24T11:05:00.475310Z[Etc/UTC]")
 public class OrderExtendedDataEntity {
   public static final String SERIALIZED_NAME_CF_ORDER_ID = "cf_order_id";
   @SerializedName(SERIALIZED_NAME_CF_ORDER_ID)
@@ -79,7 +78,7 @@ public class OrderExtendedDataEntity {
 
   public static final String SERIALIZED_NAME_CREATED_AT = "created_at";
   @SerializedName(SERIALIZED_NAME_CREATED_AT)
-  private OffsetDateTime createdAt;
+  private String createdAt;
 
   public static final String SERIALIZED_NAME_CHARGES = "charges";
   @SerializedName(SERIALIZED_NAME_CHARGES)
@@ -196,7 +195,7 @@ public class OrderExtendedDataEntity {
   }
 
 
-  public OrderExtendedDataEntity createdAt(OffsetDateTime createdAt) {
+  public OrderExtendedDataEntity createdAt(String createdAt) {
     
     this.createdAt = createdAt;
     return this;
@@ -208,12 +207,12 @@ public class OrderExtendedDataEntity {
   **/
   @javax.annotation.Nullable
   @Schema(example = "2022-08-16T14:45:38+05:30", requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "When the order was created at cashfree's server")
-  public OffsetDateTime getCreatedAt() {
+  public String getCreatedAt() {
     return createdAt;
   }
 
 
-  public void setCreatedAt(OffsetDateTime createdAt) {
+  public void setCreatedAt(String createdAt) {
     this.createdAt = createdAt;
   }
 
@@ -449,6 +448,9 @@ public class OrderExtendedDataEntity {
       if ((jsonObj.get("order_currency") != null && !jsonObj.get("order_currency").isJsonNull()) && !jsonObj.get("order_currency").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `order_currency` to be a primitive type in the JSON string but got `%s`", jsonObj.get("order_currency").toString()));
       }
+      if ((jsonObj.get("created_at") != null && !jsonObj.get("created_at").isJsonNull()) && !jsonObj.get("created_at").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `created_at` to be a primitive type in the JSON string but got `%s`", jsonObj.get("created_at").toString()));
+      }
       // validate the optional field `charges`
       if (jsonObj.get("charges") != null && !jsonObj.get("charges").isJsonNull()) {
         ChargesEntity.validateJsonElement(jsonObj.get("charges"));
@@ -493,6 +495,9 @@ public class OrderExtendedDataEntity {
       }
       if ((jsonObj.get("order_currency") != null && !jsonObj.get("order_currency").isJsonNull()) && !jsonObj.get("order_currency").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `order_currency` to be a primitive type in the JSON string but got `%s`", jsonObj.get("order_currency").toString()));
+      }
+      if ((jsonObj.get("created_at") != null && !jsonObj.get("created_at").isJsonNull()) && !jsonObj.get("created_at").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `created_at` to be a primitive type in the JSON string but got `%s`", jsonObj.get("created_at").toString()));
       }
       // validate the optional field `charges`
       if (jsonObj.get("charges") != null && !jsonObj.get("charges").isJsonNull()) {

@@ -21,6 +21,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.Arrays;
 
 import com.google.gson.Gson;
@@ -51,20 +52,20 @@ import com.cashfree.pg.JSON;
 /**
  * PaymentEntityPaymentSurcharge
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:33:46.250709Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-24T11:05:00.475310Z[Etc/UTC]")
 public class PaymentEntityPaymentSurcharge {
   public static final String SERIALIZED_NAME_PAYMENT_SURCHARGE_SERVICE_CHARGE = "payment_surcharge_service_charge";
   @SerializedName(SERIALIZED_NAME_PAYMENT_SURCHARGE_SERVICE_CHARGE)
-  private Float paymentSurchargeServiceCharge = null;
+  private BigDecimal paymentSurchargeServiceCharge;
 
   public static final String SERIALIZED_NAME_PAYMENT_SURCHARGE_SERVICE_TAX = "payment_surcharge_service_tax";
   @SerializedName(SERIALIZED_NAME_PAYMENT_SURCHARGE_SERVICE_TAX)
-  private Float paymentSurchargeServiceTax = null;
+  private BigDecimal paymentSurchargeServiceTax;
 
   public PaymentEntityPaymentSurcharge() {
   }
 
-  public PaymentEntityPaymentSurcharge paymentSurchargeServiceCharge(Float paymentSurchargeServiceCharge) {
+  public PaymentEntityPaymentSurcharge paymentSurchargeServiceCharge(BigDecimal paymentSurchargeServiceCharge) {
     
     this.paymentSurchargeServiceCharge = paymentSurchargeServiceCharge;
     return this;
@@ -76,17 +77,17 @@ public class PaymentEntityPaymentSurcharge {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public Float getPaymentSurchargeServiceCharge() {
+  public BigDecimal getPaymentSurchargeServiceCharge() {
     return paymentSurchargeServiceCharge;
   }
 
 
-  public void setPaymentSurchargeServiceCharge(Float paymentSurchargeServiceCharge) {
+  public void setPaymentSurchargeServiceCharge(BigDecimal paymentSurchargeServiceCharge) {
     this.paymentSurchargeServiceCharge = paymentSurchargeServiceCharge;
   }
 
 
-  public PaymentEntityPaymentSurcharge paymentSurchargeServiceTax(Float paymentSurchargeServiceTax) {
+  public PaymentEntityPaymentSurcharge paymentSurchargeServiceTax(BigDecimal paymentSurchargeServiceTax) {
     
     this.paymentSurchargeServiceTax = paymentSurchargeServiceTax;
     return this;
@@ -98,12 +99,12 @@ public class PaymentEntityPaymentSurcharge {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public Float getPaymentSurchargeServiceTax() {
+  public BigDecimal getPaymentSurchargeServiceTax() {
     return paymentSurchargeServiceTax;
   }
 
 
-  public void setPaymentSurchargeServiceTax(Float paymentSurchargeServiceTax) {
+  public void setPaymentSurchargeServiceTax(BigDecimal paymentSurchargeServiceTax) {
     this.paymentSurchargeServiceTax = paymentSurchargeServiceTax;
   }
 
