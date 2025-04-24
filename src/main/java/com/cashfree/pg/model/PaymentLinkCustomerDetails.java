@@ -53,7 +53,7 @@ import com.cashfree.pg.JSON;
  * The customer details that are necessary. Note that you can pass dummy details if your use case does not require the customer details.
  */
 @Schema(description = "The customer details that are necessary. Note that you can pass dummy details if your use case does not require the customer details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:33:46.250709Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-24T12:25:27.382365Z[Etc/UTC]")
 public class PaymentLinkCustomerDetails {
   public static final String SERIALIZED_NAME_CUSTOMER_ID = "customer_id";
   @SerializedName(SERIALIZED_NAME_CUSTOMER_ID)

@@ -18,14 +18,14 @@ Try out our interactive guides at [Cashfree Dev Studio](https://www.cashfree.com
 ### Installation
 * Gradle Project
 ```bash
-implementation `com.cashfree.pg.java:cashfree_pg:5.0.1`
+implementation `com.cashfree.pg.java:cashfree_pg:5.0.8`
 ```
 * Maven Project
 ```bash
 <dependency>
   <groupId>com.cashfree.pg.java</groupId>
   <artifactId>cashfree_pg</artifactId>
-  <version>5.0.1</version>
+  <version>5.0.8</version>
   <scope>compile</scope>
 </dependency>
 <dependency>
@@ -86,7 +86,7 @@ Cashfree.XClientSecret = "<x-client-secret>";
 Cashfree.XEnvironment = Cashfree.SANDBOX;
 
 Cashfree cashfree = new Cashfree();
-String xApiVersion = "2022-09-01";
+String xApiVersion = "2023-08-01";
 ```
 
 Generate your API keys (x-client-id , x-client-secret) from [Cashfree Merchant Dashboard](https://merchant.cashfree.com/merchants/login)

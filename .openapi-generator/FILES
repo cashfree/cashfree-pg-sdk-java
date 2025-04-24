@@ -73,6 +73,7 @@ docs/CustomerEntity.md
 docs/CustomersApi.md
 docs/DemapSoundboxVpaRequest.md
 docs/DiscountDetails.md
+docs/DisputeEvidenceInner.md
 docs/DisputesApi.md
 docs/DisputesEntity.md
 docs/DisputesEntityMerchantAccepted.md
@@ -215,6 +216,7 @@ docs/PaymentWebhookOrderEntity.md
 docs/PaymentsApi.md
 docs/PgReconciliationApi.md
 docs/PlanEntity.md
+docs/PreferredEvidenceInner.md
 docs/ProductConditions.md
 docs/ProductConditionsEntity.md
 docs/ProductDetails.md
@@ -422,6 +424,7 @@ src/main/java/com/cashfree/pg/model/CustomerDetailsResponse.java
 src/main/java/com/cashfree/pg/model/CustomerEntity.java
 src/main/java/com/cashfree/pg/model/DemapSoundboxVpaRequest.java
 src/main/java/com/cashfree/pg/model/DiscountDetails.java
+src/main/java/com/cashfree/pg/model/DisputeEvidenceInner.java
 src/main/java/com/cashfree/pg/model/DisputesEntity.java
 src/main/java/com/cashfree/pg/model/DisputesEntityMerchantAccepted.java
 src/main/java/com/cashfree/pg/model/EMIOffer.java
@@ -556,6 +559,7 @@ src/main/java/com/cashfree/pg/model/PaymentWebhookErrorEntity.java
 src/main/java/com/cashfree/pg/model/PaymentWebhookGatewayDetailsEntity.java
 src/main/java/com/cashfree/pg/model/PaymentWebhookOrderEntity.java
 src/main/java/com/cashfree/pg/model/PlanEntity.java
+src/main/java/com/cashfree/pg/model/PreferredEvidenceInner.java
 src/main/java/com/cashfree/pg/model/ProductConditions.java
 src/main/java/com/cashfree/pg/model/ProductConditionsEntity.java
 src/main/java/com/cashfree/pg/model/ProductDetails.java
@@ -728,6 +732,7 @@ src/test/java/com/cashfree/pg/model/CustomerDetailsTest.java
 src/test/java/com/cashfree/pg/model/CustomerEntityTest.java
 src/test/java/com/cashfree/pg/model/DemapSoundboxVpaRequestTest.java
 src/test/java/com/cashfree/pg/model/DiscountDetailsTest.java
+src/test/java/com/cashfree/pg/model/DisputeEvidenceInnerTest.java
 src/test/java/com/cashfree/pg/model/DisputesEntityMerchantAcceptedTest.java
 src/test/java/com/cashfree/pg/model/DisputesEntityTest.java
 src/test/java/com/cashfree/pg/model/EMIOfferTest.java
@@ -862,6 +867,7 @@ src/test/java/com/cashfree/pg/model/PaymentWebhookGatewayDetailsEntityTest.java
 src/test/java/com/cashfree/pg/model/PaymentWebhookOrderEntityTest.java
 src/test/java/com/cashfree/pg/model/PaymentWebhookTest.java
 src/test/java/com/cashfree/pg/model/PlanEntityTest.java
+src/test/java/com/cashfree/pg/model/PreferredEvidenceInnerTest.java
 src/test/java/com/cashfree/pg/model/ProductConditionsEntityTest.java
 src/test/java/com/cashfree/pg/model/ProductConditionsTest.java
 src/test/java/com/cashfree/pg/model/ProductDetailsEntityTest.java

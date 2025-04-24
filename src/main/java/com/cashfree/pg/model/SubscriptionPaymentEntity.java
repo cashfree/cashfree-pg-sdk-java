@@ -55,7 +55,7 @@ import com.cashfree.pg.JSON;
  * The response returned in Get, Create or Manage Subscription Payment APIs.
  */
 @Schema(description = "The response returned in Get, Create or Manage Subscription Payment APIs.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-01T11:33:46.250709Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-04-24T12:25:27.382365Z[Etc/UTC]")
 public class SubscriptionPaymentEntity {
   public static final String SERIALIZED_NAME_AUTHORIZATION_DETAILS = "authorization_details";
   @SerializedName(SERIALIZED_NAME_AUTHORIZATION_DETAILS)

@@ -4,9 +4,11 @@ apply plugin: 'java'
 apply plugin: 'com.diffplug.spotless'
 apply plugin: 'maven-publish'
 apply plugin: 'signing'
+apply plugin: 'jacoco'
+apply plugin: 'com.github.kt3k.coveralls'
 
 group = 'com.cashfree.pg.java'
-version = '5.0.1'
+version = '5.0.8'
 
 buildscript {
     repositories {
@@ -20,6 +22,7 @@ buildscript {
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
         classpath 'com.diffplug.spotless:spotless-plugin-gradle:6.11.0'
         classpath 'io.github.gradle-nexus:publish-plugin:1.1.0'
+        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.8.3'
     }
 }
 apply plugin: 'io.github.gradle-nexus.publish-plugin'
@@ -116,7 +119,7 @@ if(hasProperty('target') && target == 'android') {
 
                 groupId 'com.cashfree.pg.java'
                 artifactId 'cashfree_pg'
-                version '5.0.1'
+                version '5.0.8'
 
                 from components.java
 
@@ -243,8 +246,31 @@ test {
     // Show test results.
     testLogging {
         events "passed", "skipped", "failed"
+        showStandardStreams = true
     }
 
+}
+
+test.finalizedBy jacocoTestReport
+    jacoco {
+        toolVersion = "0.8.8"
+    }
+
+    tasks.named('jacocoTestReport', JacocoReport) {
+    dependsOn test
+    reports {
+        xml.required.set(true)
+        html.required.set(true)
+        html.outputLocation.set(file("$buildDir/reports/jacoco/test/html"))
+    }
+
+    sourceDirectories.setFrom files(sourceSets.main.allSource.srcDirs)
+    classDirectories.setFrom files(sourceSets.main.output)
+    executionData.setFrom fileTree(buildDir).include("/jacoco/test.exec")
+}
+
+coveralls {
+    sourceDirs = sourceSets.main.allSource.srcDirs.toList()
 }
 
 nexusPublishing {
