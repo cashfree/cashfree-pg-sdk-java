@@ -237,19 +237,19 @@ spotless {
 }
 
 test {
-    // Enable JUnit 5 (Gradle 4.6+).
     useJUnitPlatform()
+    // Remove for now to test logging behavior
+    // dependsOn 'cleanTest'
 
-    // Always run tests, even when nothing changed.
-    dependsOn 'cleanTest'
-
-    // Show test results.
     testLogging {
-        events "passed", "skipped", "failed"
+        events "passed", "skipped", "failed", "standard_out", "standard_error"
         showStandardStreams = true
+        exceptionFormat "full"
     }
 
+    outputs.upToDateWhen { false }  // Prevents task skipping
 }
+
 
 test.finalizedBy jacocoTestReport
     jacoco {
