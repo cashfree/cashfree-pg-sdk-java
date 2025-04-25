@@ -238,16 +238,18 @@ spotless {
 
 test {
     useJUnitPlatform()
-    // Remove for now to test logging behavior
-    // dependsOn 'cleanTest'
 
     testLogging {
-        events "passed", "skipped", "failed", "standard_out", "standard_error"
+        events "started", "passed", "skipped", "failed", "standard_out", "standard_error"
         showStandardStreams = true
         exceptionFormat "full"
     }
 
-    outputs.upToDateWhen { false }  // Prevents task skipping
+    outputs.upToDateWhen { false }
+
+    afterTest { desc, result ->
+        println "Test '${desc.name}' [${desc.className}] => ${result.resultType}"
+    }
 }
 
 
