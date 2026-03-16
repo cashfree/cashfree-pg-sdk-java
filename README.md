@@ -3,6 +3,10 @@
 
 The Cashfree PG Java SDK offers a convenient solution to access [Cashfree PG APIs](https://docs.cashfree.com/reference/pg-new-apis-endpoint) from a server-side Java  applications. 
 
+Minimum Java version               Java 8 (JDK 1.8)
+Recommended version                Java 11 or Java 17 (LTS)
+Latest Cashfree SDK version        5.0.1
+
 
 
 ## Documentation
@@ -36,7 +40,7 @@ implementation `com.cashfree.pg.java:cashfree_pg:5.0.1`
 ```
 ### Configuration
 
-### Version >= 5
+### SDK Version >= 5
 
 ```java 
 import com.cashfree.pg.*;
@@ -76,7 +80,7 @@ try {
 }
 ```
 
-### Version < 5
+### SDK Version < 5
 
 ```java 
 import com.cashfree.*;
