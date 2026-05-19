@@ -2,7 +2,7 @@
 
 # VendorAdjustmentSuccessResponse
 
-Vendor Adjustment Success Response
+Vendor Adjustment Success Response.
 
 ## Properties
 

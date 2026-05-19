@@ -2,7 +2,7 @@
 
 # AuthenticationError
 
-Error if api keys are wrong
+Error if api keys are wrong.
 
 ## Properties
 
@@ -10,7 +10,7 @@ Error if api keys are wrong
 |------------ | ------------- | ------------- | -------------|
 |**message** | **String** |  |  [optional] |
 |**code** | **String** |  |  [optional] |
-|**type** | **String** | authentication_error |  [optional] |
+|**type** | **String** | authentication_error. |  [optional] |
 
 
 

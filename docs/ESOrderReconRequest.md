@@ -2,7 +2,7 @@
 
 # ESOrderReconRequest
 
-ES Order Recon Request
+ES Order Recon Request.
 
 ## Properties
 

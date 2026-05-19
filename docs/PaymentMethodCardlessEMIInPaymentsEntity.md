@@ -2,7 +2,7 @@
 
 # PaymentMethodCardlessEMIInPaymentsEntity
 
-payment method carless object in payment entity
+payment method carless object in payment entity.
 
 ## Properties
 

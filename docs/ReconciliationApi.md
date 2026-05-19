@@ -10,11 +10,11 @@ All URIs are relative to *https://sandbox.cashfree.com/pg*
 
 ## PGESReconVendor
 
-> VendorRecon200Response PGESReconVendor(xApiVersion, vendorReconRequest, contentType)
+> VendorRecon200Response PGESReconVendor(xApiVersion, vendorReconRequest, xRequestId, xIdempotencyKey, contentType)
 
 Vendor Reconciliation API
 
-This API allows users to fetch vendor reconciliation details using different filters. Use the appropriate filters based on your requirements. - **View Split Order Details Using Settlement ID**: Retrieve details of split orders within a settlement by Settlement ID. - **Vendor Recon for a Time Period**: Fetch reconciliation details for all vendors within a specific time interval. - **Vendor Recon Using Vendor ID &amp; Time Interval**: Get reconciliation details for a specific vendor within a given time interval. 
+This API allows you to fetch vendor reconciliation details by using different filters. Use the appropriate filters based on your requirements. After you receive a VENDOR_SETTLEMENT_SUCCESS webhook confirmation, wait 15 minutes before you call this API endpoint.  - **View Split Order Details Using Settlement ID**: Retrieve details of split orders within a settlement by Settlement ID.  - **Vendor Recon for a Time Period**: Fetch reconciliation details for all vendors within a specific time interval.  - **Vendor Recon Using Vendor ID &amp; Time Interval**: Get reconciliation details for a specific vendor within a given time interval. 
 
 ### Example
 
@@ -33,11 +33,13 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2026-01-01"; // String | API version to be used. Format is in YYYY-MM-DD.
         VendorReconRequest vendorReconRequest = new VendorReconRequest(); // VendorReconRequest | Vendor Recon Request body.
-        String contentType = "application/json"; // String | application/json
+        String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request ID for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to Cashfree.
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. 
+        String contentType = "application/json"; // String | application/json.
         try {
-            VendorRecon200Response result = cashfree.PGESReconVendor(xApiVersion, vendorReconRequest, contentTypeOkHttpClient httpClient);
+            VendorRecon200Response result = cashfree.PGESReconVendor(xApiVersion, vendorReconRequest, xRequestId, xIdempotencyKey, contentTypeOkHttpClient httpClient);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReconciliationApi#PGESReconVendor");
@@ -55,9 +57,11 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD. | [default to 2026-01-01] |
 | **vendorReconRequest** | [**VendorReconRequest**](VendorReconRequest.md)| Vendor Recon Request body. | |
-| **contentType** | **String**| application/json | [optional] |
+| **xRequestId** | **String**| Request ID for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to Cashfree. | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  | [optional] |
+| **contentType** | **String**| application/json. | [optional] |
 
 ### Return type
 
@@ -76,6 +80,6 @@ public class Example {
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Terminal created |  -  |
+| **200** | Terminal created. |  -  |
 | **400** | Vendor Recon Failure Response. |  -  |
 

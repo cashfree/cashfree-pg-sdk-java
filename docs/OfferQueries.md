@@ -2,7 +2,7 @@
 
 # OfferQueries
 
-Offer Query Object
+Offer Query Object.
 
 ## Properties
 

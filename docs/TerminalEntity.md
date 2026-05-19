@@ -2,7 +2,7 @@
 
 # TerminalEntity
 
-Create terminal response object
+Create terminal response object.
 
 ## Properties
 
@@ -20,6 +20,7 @@ Create terminal response object
 |**terminalPhoneNo** | **String** |  |  [optional] |
 |**terminalStatus** | **String** |  |  [optional] |
 |**terminalMeta** | [**TerminalEntityTerminalMeta**](TerminalEntityTerminalMeta.md) |  |  [optional] |
+|**terminalVpas** | **String** |  |  [optional] |
 
 
 

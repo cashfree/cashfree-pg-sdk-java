@@ -2,7 +2,7 @@
 
 # CardlessEMIEntity
 
-cardless EMI object
+cardless EMI object.
 
 ## Properties
 

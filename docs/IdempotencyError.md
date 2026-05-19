@@ -2,7 +2,7 @@
 
 # IdempotencyError
 
-Error when idempotency fails. Different request body with the same idempotent key
+Error when idempotency fails. Different request body with the same idempotent key.
 
 ## Properties
 
@@ -11,7 +11,7 @@ Error when idempotency fails. Different request body with the same idempotent ke
 |**message** | **String** |  |  [optional] |
 |**help** | **String** |  |  [optional] |
 |**code** | **String** |  |  [optional] |
-|**type** | [**TypeEnum**](#TypeEnum) | idempotency_error |  [optional] |
+|**type** | [**TypeEnum**](#TypeEnum) | idempotency_error. |  [optional] |
 
 
 

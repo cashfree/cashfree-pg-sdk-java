@@ -9,7 +9,7 @@ Allowed payment modes for this order. Along with multiple filters for cards can 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**methods** | [**OrderMetaPaymentMethodsFiltersMethods**](OrderMetaPaymentMethodsFiltersMethods.md) |  |  [optional] |
-|**filters** | [**OrderMetaPaymentMethodsFiltersFilters**](OrderMetaPaymentMethodsFiltersFilters.md) |  |  [optional] |
+|**filters** | [**OrderPaymentMethodFilters**](OrderPaymentMethodFilters.md) |  |  [optional] |
 
 
 

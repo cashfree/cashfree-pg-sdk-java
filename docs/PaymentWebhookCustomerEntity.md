@@ -2,7 +2,7 @@
 
 # PaymentWebhookCustomerEntity
 
-customer details object in webhook
+customer details object in webhook.
 
 ## Properties
 

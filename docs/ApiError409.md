@@ -2,7 +2,7 @@
 
 # ApiError409
 
-duplicate request
+duplicate request.
 
 ## Properties
 
@@ -11,7 +11,7 @@ duplicate request
 |**message** | **String** |  |  [optional] |
 |**help** | **String** |  |  [optional] |
 |**code** | **String** |  |  [optional] |
-|**type** | [**TypeEnum**](#TypeEnum) | invalid_request_error |  [optional] |
+|**type** | [**TypeEnum**](#TypeEnum) | invalid_request_error. |  [optional] |
 
 
 

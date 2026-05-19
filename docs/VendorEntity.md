@@ -2,7 +2,7 @@
 
 # VendorEntity
 
-Vendor entity object
+Vendor entity object.
 
 ## Properties
 
