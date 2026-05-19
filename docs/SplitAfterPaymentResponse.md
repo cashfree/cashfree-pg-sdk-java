@@ -2,7 +2,7 @@
 
 # SplitAfterPaymentResponse
 
-Split After Payment Response
+Split After Payment Response.
 
 ## Properties
 

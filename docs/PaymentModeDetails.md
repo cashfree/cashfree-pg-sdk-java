@@ -2,7 +2,7 @@
 
 # PaymentModeDetails
 
-payment mode eligiblity object
+payment mode eligiblity object.
 
 ## Properties
 

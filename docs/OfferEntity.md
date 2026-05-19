@@ -2,7 +2,7 @@
 
 # OfferEntity
 
-Offer entity object
+Offer entity object.
 
 ## Properties
 
@@ -16,6 +16,8 @@ Offer entity object
 |**offerTnc** | [**OfferTncResponse**](OfferTncResponse.md) |  |  [optional] |
 |**offerDetails** | [**OfferDetailsResponse**](OfferDetailsResponse.md) |  |  [optional] |
 |**offerValidations** | [**OfferValidationsResponse**](OfferValidationsResponse.md) |  |  [optional] |
+|**redemptionAmount** | **BigDecimal** |  |  [optional] |
+|**platform** | **String** |  |  [optional] |
 
 
 

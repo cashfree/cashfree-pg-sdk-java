@@ -2,7 +2,7 @@
 
 # UpdateVendorResponse
 
-Update Vendor Response
+Update Vendor Response.
 
 ## Properties
 

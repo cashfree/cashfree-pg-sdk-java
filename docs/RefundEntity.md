@@ -2,35 +2,35 @@
 
 # RefundEntity
 
-The refund entity
+The refund entity.
 
 ## Properties
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**cfPaymentId** | **String** | Cashfree Payments ID of the payment for which refund is initiated |  [optional] |
-|**cfRefundId** | **String** | Cashfree Payments ID for a refund |  [optional] |
-|**orderId** | **String** | Merchant’s order Id of the order for which refund is initiated |  [optional] |
-|**refundId** | **String** | Merchant’s refund ID of the refund |  [optional] |
-|**entity** | [**EntityEnum**](#EntityEnum) | Type of object |  [optional] |
-|**refundAmount** | **BigDecimal** | Amount that is refunded |  [optional] |
-|**refundCurrency** | **String** | Currency of the refund amount |  [optional] |
-|**refundNote** | **String** | Note added by merchant for the refund |  [optional] |
-|**refundStatus** | [**RefundStatusEnum**](#RefundStatusEnum) | This can be one of [\&quot;SUCCESS\&quot;, \&quot;PENDING\&quot;, \&quot;CANCELLED\&quot;, \&quot;ONHOLD\&quot;, \&quot;FAILED\&quot;] |  [optional] |
-|**refundArn** | **String** | The bank reference number for refund |  [optional] |
-|**refundCharge** | **BigDecimal** | Charges in INR for processing refund |  [optional] |
-|**statusDescription** | **String** | Description of refund status |  [optional] |
-|**metadata** | **Object** | Key-value pair that can be used to store additional information about the entity. Maximum 5 key-value pairs |  [optional] |
+|**cfPaymentId** | **String** | Cashfree Payments ID of the payment for which refund is initiated. |  [optional] |
+|**cfRefundId** | **String** | Cashfree Payments ID for a refund. |  [optional] |
+|**orderId** | **String** | Merchant’s order Id of the order for which refund is initiated. |  [optional] |
+|**refundId** | **String** | Merchant’s refund ID of the refund. |  [optional] |
+|**entity** | [**EntityEnum**](#EntityEnum) | Type of object. |  [optional] |
+|**refundAmount** | **BigDecimal** | Amount that is refunded. |  [optional] |
+|**refundCurrency** | **String** | Currency of the refund amount. |  [optional] |
+|**refundNote** | **String** | Note added by merchant for the refund. |  [optional] |
+|**refundStatus** | [**RefundStatusEnum**](#RefundStatusEnum) | This can be one of [\&quot;SUCCESS\&quot;, \&quot;PENDING\&quot;, \&quot;CANCELLED\&quot;, \&quot;ONHOLD\&quot;, \&quot;FAILED\&quot;]. |  [optional] |
+|**refundArn** | **String** | The bank reference number for refund. |  [optional] |
+|**refundCharge** | **BigDecimal** | Charges in INR for processing refund. |  [optional] |
+|**statusDescription** | **String** | Description of refund status. |  [optional] |
+|**metadata** | **Object** | Key-value pair that can be used to store additional information about the entity. Maximum 5 key-value pairs. |  [optional] |
 |**refundSplits** | [**List&lt;VendorSplit&gt;**](VendorSplit.md) |  |  [optional] |
-|**refundType** | [**RefundTypeEnum**](#RefundTypeEnum) | This can be one of [\&quot;PAYMENT_AUTO_REFUND\&quot;, \&quot;MERCHANT_INITIATED\&quot;, \&quot;UNRECONCILED_AUTO_REFUND\&quot;] |  [optional] |
-|**refundMode** | **String** | Method or speed of processing refund |  [optional] |
-|**createdAt** | **String** | Time of refund creation |  [optional] |
-|**processedAt** | **String** | Time when refund was processed successfully |  [optional] |
+|**refundType** | [**RefundTypeEnum**](#RefundTypeEnum) | This can be one of [\&quot;PAYMENT_AUTO_REFUND\&quot;, \&quot;MERCHANT_INITIATED\&quot;, \&quot;UNRECONCILED_AUTO_REFUND\&quot;]. |  [optional] |
+|**refundMode** | **String** | Method or speed of processing refund. |  [optional] |
+|**createdAt** | **String** | Time of refund creation. |  [optional] |
+|**processedAt** | **String** | Time when refund was processed successfully. |  [optional] |
 |**refundSpeed** | [**RefundSpeed**](RefundSpeed.md) |  |  [optional] |
-|**forexConversionHandlingCharge** | **BigDecimal** | Cashfree forex conversion charges for refund processing |  [optional] |
-|**forexConversionHandlingTax** | **BigDecimal** | Cashfree forex conversion tax for refund processing |  [optional] |
-|**forexConversionRate** | **BigDecimal** | Cashfree forex conversion rate for refund processing |  [optional] |
-|**chargesCurrency** | **String** | Cashfree refund charges currency for a refund |  [optional] |
+|**forexConversionHandlingCharge** | **BigDecimal** | Cashfree forex conversion charges for refund processing. |  [optional] |
+|**forexConversionHandlingTax** | **BigDecimal** | Cashfree forex conversion tax for refund processing. |  [optional] |
+|**forexConversionRate** | **BigDecimal** | Cashfree forex conversion rate for refund processing. |  [optional] |
+|**chargesCurrency** | **String** | Cashfree refund charges currency for a refund. |  [optional] |
 
 
 

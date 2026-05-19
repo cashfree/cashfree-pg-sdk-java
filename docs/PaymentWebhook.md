@@ -2,7 +2,7 @@
 
 # PaymentWebhook
 
-payment webhook object
+payment webhook object.
 
 ## Properties
 

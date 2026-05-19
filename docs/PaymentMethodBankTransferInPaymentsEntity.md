@@ -2,7 +2,7 @@
 
 # PaymentMethodBankTransferInPaymentsEntity
 
-payment method bank transfer object in payment entity
+payment method bank transfer object in payment entity.
 
 ## Properties
 

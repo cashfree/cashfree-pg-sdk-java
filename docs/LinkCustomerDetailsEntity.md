@@ -2,18 +2,19 @@
 
 # LinkCustomerDetailsEntity
 
-Payment link customer entity
+Payment link customer entity.
 
 ## Properties
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**customerPhone** | **String** | Customer phone number |  |
-|**customerEmail** | **String** | Customer email address |  [optional] |
-|**customerName** | **String** | Customer name |  [optional] |
-|**customerBankAccountNumber** | **String** | Customer Bank Account Number |  [optional] |
-|**customerBankIfsc** | **String** | Customer Bank Ifsc |  [optional] |
-|**customerBankCode** | [**CustomerBankCodeEnum**](#CustomerBankCodeEnum) | Customer Bank Code |  [optional] |
+|**customerPhone** | **String** | Customer phone number. |  |
+|**customerEmail** | **String** | Customer email address. |  [optional] |
+|**customerName** | **String** | Customer name. |  [optional] |
+|**customerBankAccountNumber** | **String** | Customer Bank Account Number. |  [optional] |
+|**customerBankIfsc** | **String** | Customer Bank Ifsc. |  [optional] |
+|**customerBankCode** | [**CustomerBankCodeEnum**](#CustomerBankCodeEnum) | Customer Bank Code. |  [optional] |
+|**customerBankAcoountHolderName** | **String** | Customer Bank Account Holder Name. |  [optional] |
 
 
 

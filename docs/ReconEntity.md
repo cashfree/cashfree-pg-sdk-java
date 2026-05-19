@@ -2,7 +2,7 @@
 
 # ReconEntity
 
-Settlement detailed recon response
+Settlement detailed recon response.
 
 ## Properties
 

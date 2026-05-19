@@ -2,7 +2,6 @@
 
 # PlanEntity
 
-The response returned for Get, Create and Manage Plan APIs
 
 ## Properties
 
