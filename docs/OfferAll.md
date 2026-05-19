@@ -2,13 +2,13 @@
 
 # OfferAll
 
-returns all offers
+returns all offers.
 
 ## Properties
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**all** | **Object** | All offers applicable |  |
+|**all** | **Object** | All offers applicable. |  |
 
 
 

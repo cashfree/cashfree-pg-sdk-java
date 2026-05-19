@@ -2,7 +2,7 @@
 
 # VendorBalanceTransferCharges
 
-Vendor Balance Transfer Charges entity object
+Vendor Balance Transfer Charges entity object.
 
 ## Properties
 

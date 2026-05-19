@@ -2,7 +2,7 @@
 
 # EligibilityCardlessEMIEntity
 
-Carless EMI eligible entity
+Carless EMI eligible entity.
 
 ## Properties
 

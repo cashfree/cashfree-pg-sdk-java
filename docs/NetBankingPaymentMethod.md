@@ -2,7 +2,7 @@
 
 # NetBankingPaymentMethod
 
-Payment method for netbanking object
+Payment method for netbanking object.
 
 ## Properties
 

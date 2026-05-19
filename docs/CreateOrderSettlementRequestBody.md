@@ -2,7 +2,7 @@
 
 # CreateOrderSettlementRequestBody
 
-Create Order Settlement Object
+Create Order Settlement Object.
 
 ## Properties
 

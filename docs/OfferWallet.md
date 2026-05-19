@@ -2,7 +2,7 @@
 
 # OfferWallet
 
-Offer object for wallet payment method
+Offer object for wallet payment method.
 
 ## Properties
 

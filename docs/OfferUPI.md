@@ -2,7 +2,7 @@
 
 # OfferUPI
 
-Offer object for UPI
+Offer object for UPI.
 
 ## Properties
 

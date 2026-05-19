@@ -2,7 +2,7 @@
 
 # UPIPaymentMethod
 
-Complete payment method for UPI collect
+Complete payment method for UPI collect.
 
 ## Properties
 
