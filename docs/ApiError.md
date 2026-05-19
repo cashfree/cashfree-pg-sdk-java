@@ -2,7 +2,7 @@
 
 # ApiError
 
-Error at cashfree's server
+Error at Cashfree's server.
 
 ## Properties
 
@@ -11,7 +11,7 @@ Error at cashfree's server
 |**message** | **String** |  |  [optional] |
 |**code** | **String** |  |  [optional] |
 |**help** | **String** |  |  [optional] |
-|**type** | [**TypeEnum**](#TypeEnum) | api_error |  [optional] |
+|**type** | [**TypeEnum**](#TypeEnum) | api_error. |  [optional] |
 
 
 

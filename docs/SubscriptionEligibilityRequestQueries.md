@@ -8,7 +8,7 @@ Necessary parameters to fetch eligible payment methods.
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**subscriptionId** | **String** | A unique ID passed by merchant for identifying the subscription |  |
+|**subscriptionId** | **String** | A unique ID passed by merchant for identifying the subscription. |  |
 
 
 

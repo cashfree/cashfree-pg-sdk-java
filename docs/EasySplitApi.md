@@ -46,10 +46,10 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2026-01-01"; // String | API version to be used. Format is in YYYY-MM-DD.
         String vendorId = "your-vendor-id"; // String | The id which uniquely identifies your vendor.
-        String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
+        String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request ID for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to Cashfree.
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. 
         VendorAdjustmentRequest vendorAdjustmentRequest = new VendorAdjustmentRequest(); // VendorAdjustmentRequest | Vendor Adjustment Request Body.
         try {
             VendorAdjustmentSuccessResponse result = cashfree.PGESCreateAdjustment(xApiVersion, vendorId, xRequestId, xIdempotencyKey, vendorAdjustmentRequestOkHttpClient httpClient);
@@ -70,10 +70,10 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD. | [default to 2026-01-01] |
 | **vendorId** | **String**| The id which uniquely identifies your vendor. | |
-| **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
+| **xRequestId** | **String**| Request ID for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to Cashfree. | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  | [optional] |
 | **vendorAdjustmentRequest** | [**VendorAdjustmentRequest**](VendorAdjustmentRequest.md)| Vendor Adjustment Request Body. | [optional] |
 
 ### Return type
@@ -122,10 +122,10 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2026-01-01"; // String | API version to be used. Format is in YYYY-MM-DD.
         String vendorId = "your-vendor-id"; // String | The id which uniquely identifies your vendor.
-        String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
+        String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request ID for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to Cashfree.
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. 
         AdjustVendorBalanceRequest adjustVendorBalanceRequest = new AdjustVendorBalanceRequest(); // AdjustVendorBalanceRequest | Adjust Vendor Balance Request Body.
         try {
             AdjustVendorBalanceResponse result = cashfree.PGESCreateOnDemandTransfer(xApiVersion, vendorId, xRequestId, xIdempotencyKey, adjustVendorBalanceRequestOkHttpClient httpClient);
@@ -146,10 +146,10 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD. | [default to 2026-01-01] |
 | **vendorId** | **String**| The id which uniquely identifies your vendor. | |
-| **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
+| **xRequestId** | **String**| Request ID for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to Cashfree. | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  | [optional] |
 | **adjustVendorBalanceRequest** | [**AdjustVendorBalanceRequest**](AdjustVendorBalanceRequest.md)| Adjust Vendor Balance Request Body. | [optional] |
 
 ### Return type
@@ -198,9 +198,9 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
-        String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
+        String xApiVersion = "2026-01-01"; // String | API version to be used. Format is in YYYY-MM-DD.
+        String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request ID for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to Cashfree.
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. 
         CreateVendorRequest createVendorRequest = new CreateVendorRequest(); // CreateVendorRequest | Create Vendor Request Body.
         try {
             CreateVendorResponse result = cashfree.PGESCreateVendors(xApiVersion, xRequestId, xIdempotencyKey, createVendorRequestOkHttpClient httpClient);
@@ -221,9 +221,9 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
-| **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD. | [default to 2026-01-01] |
+| **xRequestId** | **String**| Request ID for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to Cashfree. | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  | [optional] |
 | **createVendorRequest** | [**CreateVendorRequest**](CreateVendorRequest.md)| Create Vendor Request Body. | [optional] |
 
 ### Return type
@@ -272,11 +272,11 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2026-01-01"; // String | API version to be used. Format is in YYYY-MM-DD.
         String docType = "docType_example"; // String | Mention the document type that has to be downloaded. Only an uploaded document can be downloaded.
         String vendorId = "your-vendor-id"; // String | The id which uniquely identifies your vendor.
-        String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
+        String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request ID for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to Cashfree.
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. 
         try {
             VendorDocumentDownloadResponse result = cashfree.PGESDownloadVendorsDocs(xApiVersion, docType, vendorId, xRequestId, xIdempotencyKeyOkHttpClient httpClient);
             System.out.println(result);
@@ -296,11 +296,11 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD. | [default to 2026-01-01] |
 | **docType** | **String**| Mention the document type that has to be downloaded. Only an uploaded document can be downloaded. | |
 | **vendorId** | **String**| The id which uniquely identifies your vendor. | |
-| **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
+| **xRequestId** | **String**| Request ID for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to Cashfree. | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  | [optional] |
 
 ### Return type
 
@@ -347,10 +347,10 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2026-01-01"; // String | API version to be used. Format is in YYYY-MM-DD.
         String vendorId = "your-vendor-id"; // String | The id which uniquely identifies your vendor.
-        String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
+        String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request ID for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to Cashfree.
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. 
         try {
             VendorEntity result = cashfree.PGESFetchVendors(xApiVersion, vendorId, xRequestId, xIdempotencyKeyOkHttpClient httpClient);
             System.out.println(result);
@@ -370,10 +370,10 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD. | [default to 2026-01-01] |
 | **vendorId** | **String**| The id which uniquely identifies your vendor. | |
-| **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
+| **xRequestId** | **String**| Request ID for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to Cashfree. | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  | [optional] |
 
 ### Return type
 
@@ -421,10 +421,10 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2026-01-01"; // String | API version to be used. Format is in YYYY-MM-DD.
         String vendorId = "your-vendor-id"; // String | The id which uniquely identifies your vendor.
-        String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
+        String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request ID for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to Cashfree.
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. 
         try {
             VendorBalance result = cashfree.PGESGetVendorBalance(xApiVersion, vendorId, xRequestId, xIdempotencyKeyOkHttpClient httpClient);
             System.out.println(result);
@@ -444,10 +444,10 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD. | [default to 2026-01-01] |
 | **vendorId** | **String**| The id which uniquely identifies your vendor. | |
-| **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
+| **xRequestId** | **String**| Request ID for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to Cashfree. | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  | [optional] |
 
 ### Return type
 
@@ -495,11 +495,11 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2026-01-01"; // String | API version to be used. Format is in YYYY-MM-DD.
         BigDecimal amount = new BigDecimal("1000"); // BigDecimal | Specify the amount for which you want to view the service charges and service taxes in the response.
-        String rateType = "VENDOR_ON_DEMAND"; // String | Mention the type of rate for which you want to check the charges. Possible value: VENDOR_ON_DEMAND
-        String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
+        String rateType = "VENDOR_ON_DEMAND"; // String | Mention the type of rate for which you want to check the charges. Possible value: VENDOR_ON_DEMAND.
+        String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request ID for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to Cashfree.
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. 
         try {
             VendorBalanceTransferCharges result = cashfree.PGESGetVendorBalanceTransferCharges(xApiVersion, amount, rateType, xRequestId, xIdempotencyKeyOkHttpClient httpClient);
             System.out.println(result);
@@ -519,11 +519,11 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD. | [default to 2026-01-01] |
 | **amount** | **BigDecimal**| Specify the amount for which you want to view the service charges and service taxes in the response. | |
-| **rateType** | **String**| Mention the type of rate for which you want to check the charges. Possible value: VENDOR_ON_DEMAND | |
-| **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
+| **rateType** | **String**| Mention the type of rate for which you want to check the charges. Possible value: VENDOR_ON_DEMAND. | |
+| **xRequestId** | **String**| Request ID for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to Cashfree. | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  | [optional] |
 
 ### Return type
 
@@ -571,10 +571,10 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2026-01-01"; // String | API version to be used. Format is in YYYY-MM-DD.
         String vendorId = "your-vendor-id"; // String | The id which uniquely identifies your vendor.
-        String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
+        String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request ID for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to Cashfree.
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. 
         try {
             VendorDocumentsResponse result = cashfree.PGESGetVendorsDocs(xApiVersion, vendorId, xRequestId, xIdempotencyKeyOkHttpClient httpClient);
             System.out.println(result);
@@ -594,10 +594,10 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD. | [default to 2026-01-01] |
 | **vendorId** | **String**| The id which uniquely identifies your vendor. | |
-| **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
+| **xRequestId** | **String**| Request ID for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to Cashfree. | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  | [optional] |
 
 ### Return type
 
@@ -645,10 +645,10 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
-        String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
-        ESOrderReconRequest esOrderReconRequest = new ESOrderReconRequest(); // ESOrderReconRequest | Get Split and Settlement Details by OrderID v2.0
+        String xApiVersion = "2026-01-01"; // String | API version to be used. Format is in YYYY-MM-DD.
+        String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request ID for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to Cashfree.
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. 
+        ESOrderReconRequest esOrderReconRequest = new ESOrderReconRequest(); // ESOrderReconRequest | Get Split and Settlement Details by OrderID v2.0.
         try {
             ESOrderReconResponse result = cashfree.PGESOrderRecon(xApiVersion, xRequestId, xIdempotencyKey, esOrderReconRequestOkHttpClient httpClient);
             System.out.println(result);
@@ -668,10 +668,10 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
-| **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
-| **esOrderReconRequest** | [**ESOrderReconRequest**](ESOrderReconRequest.md)| Get Split and Settlement Details by OrderID v2.0 | [optional] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD. | [default to 2026-01-01] |
+| **xRequestId** | **String**| Request ID for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to Cashfree. | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  | [optional] |
+| **esOrderReconRequest** | [**ESOrderReconRequest**](ESOrderReconRequest.md)| Get Split and Settlement Details by OrderID v2.0. | [optional] |
 
 ### Return type
 
@@ -721,10 +721,10 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2026-01-01"; // String | API version to be used. Format is in YYYY-MM-DD.
         String vendorId = "your-vendor-id"; // String | The id which uniquely identifies your vendor.
-        String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
+        String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request ID for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to Cashfree.
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. 
         UpdateVendorRequest updateVendorRequest = new UpdateVendorRequest(); // UpdateVendorRequest | Create Vendor Request Body.
         try {
             UpdateVendorResponse result = cashfree.PGESUpdateVendors(xApiVersion, vendorId, xRequestId, xIdempotencyKey, updateVendorRequestOkHttpClient httpClient);
@@ -745,10 +745,10 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD. | [default to 2026-01-01] |
 | **vendorId** | **String**| The id which uniquely identifies your vendor. | |
-| **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
+| **xRequestId** | **String**| Request ID for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to Cashfree. | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  | [optional] |
 | **updateVendorRequest** | [**UpdateVendorRequest**](UpdateVendorRequest.md)| Create Vendor Request Body. | [optional] |
 
 ### Return type
@@ -797,10 +797,10 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
+        String xApiVersion = "2026-01-01"; // String | API version to be used. Format is in YYYY-MM-DD.
         String vendorId = "your-vendor-id"; // String | The id which uniquely identifies your vendor.
-        String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
+        String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request ID for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to Cashfree.
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. 
         String docType = "docType_example"; // String | Mention the type of the document you are uploading. Possible values: UIDAI_FRONT, UIDAI_BACK, UIDAI_NUMBER, DL, DL_NUMBER, PASSPORT_FRONT, PASSPORT_BACK, PASSPORT_NUMBER, VOTER_ID, VOTER_ID_NUMBER, PAN, PAN_NUMBER, GST, GSTIN_NUMBER, CIN, CIN_NUMBER, NBFC_CERTIFICATE. If the doc type ends with a number you should add the doc value else upload the doc file.
         String docValue = "docValue_example"; // String | Enter the display name of the uploaded file.
         File _file = new File("/path/to/file"); // File | Select the document that should be uploaded or provide the path of that file. You cannot upload a file that is more than 2MB in size.
@@ -823,10 +823,10 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD. | [default to 2026-01-01] |
 | **vendorId** | **String**| The id which uniquely identifies your vendor. | |
-| **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
+| **xRequestId** | **String**| Request ID for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to Cashfree. | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  | [optional] |
 | **docType** | **String**| Mention the type of the document you are uploading. Possible values: UIDAI_FRONT, UIDAI_BACK, UIDAI_NUMBER, DL, DL_NUMBER, PASSPORT_FRONT, PASSPORT_BACK, PASSPORT_NUMBER, VOTER_ID, VOTER_ID_NUMBER, PAN, PAN_NUMBER, GST, GSTIN_NUMBER, CIN, CIN_NUMBER, NBFC_CERTIFICATE. If the doc type ends with a number you should add the doc value else upload the doc file. | [optional] |
 | **docValue** | **String**| Enter the display name of the uploaded file. | [optional] |
 | **_file** | **File**| Select the document that should be uploaded or provide the path of that file. You cannot upload a file that is more than 2MB in size. | [optional] |
@@ -858,7 +858,7 @@ public class Example {
 
 Split After Payment
 
-Split After Payment API splits the payments to vendors after successful payment from the customers.
+The Split After Payment API splits payments to vendors after customers successfully complete a payment. After you receive a successful payment confirmation, wait 2 minutes before you call this API endpoint.
 
 ### Example
 
@@ -877,10 +877,10 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
-        String orderId = "your-order-id"; // String | The id which uniquely identifies your order
-        String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
+        String xApiVersion = "2026-01-01"; // String | API version to be used. Format is in YYYY-MM-DD.
+        String orderId = "your-order-id"; // String | The ID which uniquely identifies your order.
+        String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request ID for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to Cashfree.
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. 
         SplitAfterPaymentRequest splitAfterPaymentRequest = new SplitAfterPaymentRequest(); // SplitAfterPaymentRequest | Request Body to Create Split for an order.
         try {
             SplitAfterPaymentResponse result = cashfree.PGOrderSplitAfterPayment(xApiVersion, orderId, xRequestId, xIdempotencyKey, splitAfterPaymentRequestOkHttpClient httpClient);
@@ -901,10 +901,10 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
-| **orderId** | **String**| The id which uniquely identifies your order | |
-| **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD. | [default to 2026-01-01] |
+| **orderId** | **String**| The ID which uniquely identifies your order. | |
+| **xRequestId** | **String**| Request ID for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to Cashfree. | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  | [optional] |
 | **splitAfterPaymentRequest** | [**SplitAfterPaymentRequest**](SplitAfterPaymentRequest.md)| Request Body to Create Split for an order. | [optional] |
 
 ### Return type
@@ -955,10 +955,10 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
-        String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
-        StaticSplitRequest staticSplitRequest = new StaticSplitRequest(); // StaticSplitRequest | Static Split
+        String xApiVersion = "2026-01-01"; // String | API version to be used. Format is in YYYY-MM-DD.
+        String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request ID for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to Cashfree.
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. 
+        StaticSplitRequest staticSplitRequest = new StaticSplitRequest(); // StaticSplitRequest | Static Split.
         try {
             StaticSplitResponse result = cashfree.PGOrderStaticSplit(xApiVersion, xRequestId, xIdempotencyKey, staticSplitRequestOkHttpClient httpClient);
             System.out.println(result);
@@ -978,10 +978,10 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
-| **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
-| **staticSplitRequest** | [**StaticSplitRequest**](StaticSplitRequest.md)| Static Split | [optional] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD. | [default to 2026-01-01] |
+| **xRequestId** | **String**| Request ID for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to Cashfree. | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  | [optional] |
+| **staticSplitRequest** | [**StaticSplitRequest**](StaticSplitRequest.md)| Static Split. | [optional] |
 
 ### Return type
 
@@ -1029,10 +1029,10 @@ public class Example {
 
         Cashfree cashfree = new Cashfree();
 
-        String xApiVersion = "2025-01-01"; // String | API version to be used. Format is in YYYY-MM-DD
-        String orderId = "your-order-id"; // String | The id which uniquely identifies your order
-        String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree
-        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  
+        String xApiVersion = "2026-01-01"; // String | API version to be used. Format is in YYYY-MM-DD.
+        String orderId = "your-order-id"; // String | The ID which uniquely identifies your order.
+        String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request ID for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to Cashfree.
+        UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. 
         try {
             SplitOrderReconSuccessResponse result = cashfree.PGSplitOrderRecon(xApiVersion, orderId, xRequestId, xIdempotencyKeyOkHttpClient httpClient);
             System.out.println(result);
@@ -1052,10 +1052,10 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD | [default to 2025-01-01] |
-| **orderId** | **String**| The id which uniquely identifies your order | |
-| **xRequestId** | **String**| Request id for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to cashfree | [optional] |
-| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.   | [optional] |
+| **xApiVersion** | **String**| API version to be used. Format is in YYYY-MM-DD. | [default to 2026-01-01] |
+| **orderId** | **String**| The ID which uniquely identifies your order. | |
+| **xRequestId** | **String**| Request ID for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to Cashfree. | [optional] |
+| **xIdempotencyKey** | **UUID**| An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions.  | [optional] |
 
 ### Return type
 
@@ -1074,6 +1074,6 @@ public class Example {
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Get Split and Settlement Details by OrderID |  -  |
+| **200** | Get Split and Settlement Details by OrderID. |  -  |
 | **404** | Split Order Recon Failure Response. |  -  |
 

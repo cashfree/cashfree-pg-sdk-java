@@ -2,7 +2,7 @@
 
 # CreateOfferRequest
 
-create offer backend request object
+create offer backend request object.
 
 ## Properties
 

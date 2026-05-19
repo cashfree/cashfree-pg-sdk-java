@@ -2,7 +2,7 @@
 
 # EligibilityPaymentMethodsEntity
 
-Eligible payment methods details
+Eligible payment methods details.
 
 ## Properties
 

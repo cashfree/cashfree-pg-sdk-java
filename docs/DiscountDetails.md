@@ -2,13 +2,13 @@
 
 # DiscountDetails
 
-detils of the discount object of offer
+detils of the discount object of offer.
 
 ## Properties
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**discountType** | [**DiscountTypeEnum**](#DiscountTypeEnum) | Type of discount |  |
+|**discountType** | [**DiscountTypeEnum**](#DiscountTypeEnum) | Type of discount. |  |
 |**discountValue** | **BigDecimal** | Value of Discount. |  |
 |**maxDiscountAmount** | **BigDecimal** | Maximum Value of Discount allowed. |  |
 

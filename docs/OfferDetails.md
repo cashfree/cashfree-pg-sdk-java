@@ -2,7 +2,7 @@
 
 # OfferDetails
 
-Offer details and type
+Offer details and type.
 
 ## Properties
 
