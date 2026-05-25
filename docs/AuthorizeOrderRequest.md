@@ -2,24 +2,14 @@
 
 # AuthorizeOrderRequest
 
-Request to capture or void transaction
+Request to capture or void transaction.
 
 ## Properties
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**action** | [**ActionEnum**](#ActionEnum) | Type of authorization to run. Can be one of &#39;CAPTURE&#39; , &#39;VOID&#39; |  [optional] |
-|**amount** | **BigDecimal** | The amount if you are running a &#39;CAPTURE&#39; |  [optional] |
-
-
-
-## Enum: ActionEnum
-
-| Name | Value |
-|---- | -----|
-| CAPTURE | &quot;CAPTURE&quot; |
-| VOID | &quot;VOID&quot; |
-| UNKNOWN_DEFAULT_OPEN_API | &quot;unknown_default_open_api&quot; |
+|**action** | **String** | Type of authorisation to run. Available options are &#x60;CAPTURE&#x60;, &#x60;VOID&#x60;. |  |
+|**amount** | **BigDecimal** | The amount you want to capture. This is required only when action is &#x60;CAPTURE&#x60;. |  [optional] |
 
 
 

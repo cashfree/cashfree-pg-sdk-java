@@ -2,7 +2,7 @@
 
 # PaymentWebhookDataEntity
 
-data entity in webhook
+data entity in webhook.
 
 ## Properties
 

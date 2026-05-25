@@ -2,7 +2,7 @@
 
 # SubscriptionPaymentRefundEntity
 
-Get/Create Subscription Payment Refund Response
+Get/Create Subscription Payment Refund Response.
 
 ## Properties
 
@@ -13,9 +13,9 @@ Get/Create Subscription Payment Refund Response
 |**refundId** | **String** | A unique ID passed by merchant for identifying the refund. |  [optional] |
 |**cfRefundId** | **String** | Cashfree subscription payment refund reference number. |  [optional] |
 |**refundAmount** | **BigDecimal** | The refund amount. |  [optional] |
-|**refundNote** | **String** | Refund note. |  [optional] |
+|**refundNote** | **String** | Refund note for merchant reference. |  [optional] |
 |**refundSpeed** | **String** | Refund speed. Can be INSTANT or NORMAL. |  [optional] |
-|**refundStatus** | **String** | Status of the refund. |  [optional] |
+|**refundStatus** | **String** | Status of the refund. Can be INITIALIZED, SUCCESS, CANCEL, PENDING or FAILED. |  [optional] |
 
 
 

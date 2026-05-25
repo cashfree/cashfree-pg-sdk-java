@@ -2,7 +2,7 @@
 
 # RefundWebhook
 
-refund webhook object
+refund webhook object.
 
 ## Properties
 

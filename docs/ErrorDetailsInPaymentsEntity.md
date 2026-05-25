@@ -2,7 +2,7 @@
 
 # ErrorDetailsInPaymentsEntity
 
-The error details are present only for failed payments
+The error details are present only for failed payments.
 
 ## Properties
 

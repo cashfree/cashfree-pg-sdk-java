@@ -2,7 +2,7 @@
 
 # AdjustVendorBalanceRequest
 
-Adjust Vendor Balance Request
+Adjust Vendor Balance Request.
 
 ## Properties
 

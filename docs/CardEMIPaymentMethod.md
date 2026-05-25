@@ -2,7 +2,7 @@
 
 # CardEMIPaymentMethod
 
-Complete card emi payment method
+Complete card emi payment method.
 
 ## Properties
 

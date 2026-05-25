@@ -21,4 +21,4 @@ target
 build
 api/
 src/main/java/com/cashfree/client/
-local.properties
+src/test/

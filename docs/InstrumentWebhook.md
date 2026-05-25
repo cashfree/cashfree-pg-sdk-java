@@ -2,7 +2,7 @@
 
 # InstrumentWebhook
 
-Instrument webhook object
+Instrument webhook object.
 
 ## Properties
 

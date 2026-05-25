@@ -2,7 +2,7 @@
 
 # OfferNB
 
-Offer object ofr NetBanking
+Offer object ofr NetBanking.
 
 ## Properties
 
