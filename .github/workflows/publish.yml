@@ -38,6 +38,8 @@ jobs:
         SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
         SIGNING_PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
         SONATYPE_STAGING_PROFILE_ID: ${{ secrets.SONATYPE_STAGING_PROFILE_ID }}
+        PG_CLIENT_ID: ${{ secrets.XCLIENTIDSANDBOX }}
+        PG_CLIENT_SECRET: ${{ secrets.XCLIENTSECRETSANDBOX }}
 
     - name: Release
       run: |
@@ -55,4 +57,3 @@ jobs:
               "prerelease": false,
               "generate_release_notes": false
           }'
-
