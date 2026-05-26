@@ -2,13 +2,13 @@
 
 # CashbackDetails
 
-Cashback detail boject
+Cashback detail boject.
 
 ## Properties
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**cashbackType** | [**CashbackTypeEnum**](#CashbackTypeEnum) | Type of discount |  |
+|**cashbackType** | [**CashbackTypeEnum**](#CashbackTypeEnum) | Type of discount. |  |
 |**cashbackValue** | **BigDecimal** | Value of Discount. |  |
 |**maxCashbackAmount** | **BigDecimal** | Maximum Value of Cashback allowed. |  |
 

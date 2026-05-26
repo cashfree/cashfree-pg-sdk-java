@@ -6,6 +6,7 @@ on:
   pull_request:
     branches: [ "main" ]
 
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,10 +25,8 @@ jobs:
         run: chmod +x gradlew
 
       - name: Run Tests and Send code coverage report to coveralls.io
+        run: ./gradlew test jacocoTestReport coveralls
         env:
           PG_CLIENT_ID: ${{ secrets.XCLIENTIDSANDBOX }}
           PG_CLIENT_SECRET: ${{ secrets.XCLIENTSECRETSANDBOX }}
-          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLSREPOTOKEN }}
-        run: |
-          CLIENT_ID=$PG_CLIENT_ID SECRET_KEY=$PG_CLIENT_SECRET
-          ./gradlew test --info jacocoTestReport
+          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}

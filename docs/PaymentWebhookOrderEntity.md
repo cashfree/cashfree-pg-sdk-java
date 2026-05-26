@@ -2,7 +2,7 @@
 
 # PaymentWebhookOrderEntity
 
-order entity in webhook
+order entity in webhook.
 
 ## Properties
 
@@ -11,7 +11,7 @@ order entity in webhook
 |**orderId** | **String** |  |  [optional] |
 |**orderAmount** | **BigDecimal** |  |  [optional] |
 |**orderCurrency** | **String** |  |  [optional] |
-|**orderTags** | **Map&lt;String, String&gt;** | Custom Tags in thr form of {\&quot;key\&quot;:\&quot;value\&quot;} which can be passed for an order. A maximum of 10 tags can be added |  [optional] |
+|**orderTags** | **Map&lt;String, String&gt;** | Custom Tags in the form of {\&quot;key\&quot;:\&quot;value\&quot;} which can be passed for an order. A maximum of 10 tags can be added. |  [optional] |
 
 
 
