@@ -19,6 +19,7 @@ ext["signing.key"] = System.getenv('SIGNING_KEY')
 nexusPublishing {
     repositories {
         sonatype {
+            nexusUrl = uri("https://ossrh-staging-api.central.sonatype.com/service/local/")
             stagingProfileId = sonatypeStagingProfileId
             username = ossrhUsername
             password = ossrhPassword
