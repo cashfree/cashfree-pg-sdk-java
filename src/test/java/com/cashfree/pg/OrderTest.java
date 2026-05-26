@@ -163,7 +163,7 @@ public class OrderTest {
     PayOrderRequest request = new PayOrderRequest()
         .paymentSessionId(session.getData().getPaymentSessionId())
         .paymentMethod(paymentMethod);
-    ApiResponse<PayOrderEntity> payOrderResponse = cashfree.PGPayOrder(request, null, null, null);
+    ApiResponse<PayOrderEntity> payOrderResponse = cashfree.PGPayOrder(request, null, null, null, null, null, null, null);
     assertEquals(200, payOrderResponse.getStatusCode(), "Status code mismatching");
 
     ApiResponse<PaymentEntity> response = cashfree.PGOrderFetchPayment(session.getData().getOrderId(),
@@ -237,7 +237,7 @@ public class OrderTest {
 
   private ApiResponse<PayOrderEntity> payOrder(String sessionId, PayOrderRequestPaymentMethod paymentMethod) throws ApiException {
     PayOrderRequest request = buildPayOrderRequest(sessionId, paymentMethod);
-    return cashfree.PGPayOrder(request, null, null, null);
+    return cashfree.PGPayOrder(request, null, null, null, null, null, null, null);
   }
 
 }
