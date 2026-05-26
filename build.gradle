@@ -160,7 +160,7 @@ if(hasProperty('target') && target == 'android') {
         repositories {
                 maven {
                     name = "OSSRH"
-                    url = "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+                    url = "https://ossrh-staging-api.central.sonatype.com/service/local/staging/deploy/maven2/"
                     credentials {
                         username = System.getenv("MAVEN_USERNAME")
                         password = System.getenv("MAVEN_PASSWORD")
@@ -276,6 +276,7 @@ coveralls {
 nexusPublishing {
     repositories {
         sonatype {
+            nexusUrl = uri("https://ossrh-staging-api.central.sonatype.com/service/local/")
             stagingProfileId = System.getenv("SONATYPE_STAGING_PROFILE_ID")
             username = System.getenv("MAVEN_USERNAME")
             password = System.getenv("MAVEN_PASSWORD")
