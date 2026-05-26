@@ -8,7 +8,7 @@ Order delivery Status associated with order.
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**status** | [**StatusEnum**](#StatusEnum) | Delivery status of order |  |
+|**status** | [**StatusEnum**](#StatusEnum) | Delivery status of order. |  [optional] |
 |**reason** | **String** | Reason of provided order delivery status. This is optional field. |  [optional] |
 
 

@@ -2,7 +2,7 @@
 
 # CardlessEMIQueries
 
-cardless EMI query object
+cardless EMI query object.
 
 ## Properties
 

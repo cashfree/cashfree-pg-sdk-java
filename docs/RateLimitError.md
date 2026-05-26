@@ -2,7 +2,7 @@
 
 # RateLimitError
 
-Error when rate limit is breached for your api
+Error when rate limit is breached for your api.
 
 ## Properties
 
@@ -10,7 +10,7 @@ Error when rate limit is breached for your api
 |------------ | ------------- | ------------- | -------------|
 |**message** | **String** |  |  [optional] |
 |**code** | **String** |  |  [optional] |
-|**type** | [**TypeEnum**](#TypeEnum) | rate_limit_error |  [optional] |
+|**type** | [**TypeEnum**](#TypeEnum) | rate_limit_error. |  [optional] |
 
 
 

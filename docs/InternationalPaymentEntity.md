@@ -2,7 +2,7 @@
 
 # InternationalPaymentEntity
 
-International payment details
+International payment details.
 
 ## Properties
 

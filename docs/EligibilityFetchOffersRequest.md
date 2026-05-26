@@ -2,7 +2,7 @@
 
 # EligibilityFetchOffersRequest
 
-Eligiblty API request
+Eligiblty API request.
 
 ## Properties
 

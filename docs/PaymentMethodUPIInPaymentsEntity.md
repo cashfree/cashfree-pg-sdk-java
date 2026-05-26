@@ -2,7 +2,7 @@
 
 # PaymentMethodUPIInPaymentsEntity
 
-UPI payment method for pay api
+UPI payment method for pay api.
 
 ## Properties
 

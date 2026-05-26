@@ -2,13 +2,13 @@
 
 # OfferEMI
 
-EMI offer object
+EMI offer object.
 
 ## Properties
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**emi** | [**EMIOffer**](EMIOffer.md) |  |  |
+|**emi** | [**EMIOffer**](EMIOffer.md) |  |  [optional] |
 
 
 

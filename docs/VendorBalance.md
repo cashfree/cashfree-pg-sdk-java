@@ -2,7 +2,7 @@
 
 # VendorBalance
 
-Vendor Balance entity object
+Vendor Balance entity object.
 
 ## Properties
 
