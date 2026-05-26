@@ -1,6 +1,8 @@
 package com.cashfree.pg;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -30,6 +32,8 @@ import com.cashfree.pg.model.PaymentEntity;
 
 public class OrderTest {
   private static final Logger logger = Logger.getLogger(OrderTest.class.getName());
+  private static final DateTimeFormatter CARD_EXPIRY_MONTH_FORMAT = DateTimeFormatter.ofPattern("MM");
+  private static final DateTimeFormatter CARD_EXPIRY_YEAR_FORMAT = DateTimeFormatter.ofPattern("yy");
 
   Cashfree cashfree = new Cashfree(
       CFEnvironment.SANDBOX,
@@ -152,8 +156,8 @@ public class OrderTest {
         .channel(Card.ChannelEnum.LINK)
         .cardNumber("4838305610460100")
         .cardHolderName("Tushar Gupta")
-        .cardExpiryMm("06")
-        .cardExpiryYy("25")
+        .cardExpiryMm(getFutureCardExpiryMonth())
+        .cardExpiryYy(getFutureCardExpiryYear())
         .cardCvv("123");
 
     CardPaymentMethod cardMethod = new CardPaymentMethod()
@@ -205,8 +209,8 @@ public class OrderTest {
         .channel(Card.ChannelEnum.LINK)
         .cardNumber("4838305610460100")
         .cardHolderName("Tushar Gupta")
-        .cardExpiryMm("06")
-        .cardExpiryYy("25")
+        .cardExpiryMm(getFutureCardExpiryMonth())
+        .cardExpiryYy(getFutureCardExpiryYear())
         .cardCvv(cvv);
 
     return new PayOrderRequestPaymentMethod(
@@ -238,6 +242,14 @@ public class OrderTest {
   private ApiResponse<PayOrderEntity> payOrder(String sessionId, PayOrderRequestPaymentMethod paymentMethod) throws ApiException {
     PayOrderRequest request = buildPayOrderRequest(sessionId, paymentMethod);
     return cashfree.PGPayOrder(request, null, null, null, null, null, null, null);
+  }
+
+  private String getFutureCardExpiryMonth() {
+    return LocalDate.now().plusYears(2).format(CARD_EXPIRY_MONTH_FORMAT);
+  }
+
+  private String getFutureCardExpiryYear() {
+    return LocalDate.now().plusYears(2).format(CARD_EXPIRY_YEAR_FORMAT);
   }
 
 }
