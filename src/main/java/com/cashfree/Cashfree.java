@@ -85,6 +85,16 @@ public class Cashfree {
 
   private ApiClient localVarApiClient = new ApiClient();
 
+  /**
+   * Dedicated default client for PGOrderSplitAfterPayment. maxIdleConnections=0 guarantees
+   * synchronous eviction of a connection the instant it goes idle (OkHttp RealConnectionPool#connectionBecameIdle),
+   * so no pooled connection can go stale across a serverless freeze/thaw boundary (e.g. AWS Lambda)
+   * and be reused after the remote side has already closed it.
+   */
+  private static final OkHttpClient splitAfterPaymentDefaultClient = new OkHttpClient.Builder()
+          .connectionPool(new ConnectionPool(0, 1, TimeUnit.SECONDS))
+          .build();
+
   public PGWebhookEvent PGVerifyWebhookSignature(String signature, String rawBody, String timestamp) throws Exception {
         try {
             String data = timestamp + rawBody;
@@ -2589,7 +2599,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.5.0");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.5.1");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2612,12 +2622,15 @@ public class Cashfree {
     }
 
     public ApiResponse<SplitAfterPaymentResponse> PGOrderSplitAfterPayment(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, SplitAfterPaymentRequest splitAfterPaymentRequest, OkHttpClient httpClient) throws ApiException {
-        if(httpClient != null) {
-            localVarApiClient.httpClient = httpClient;
+        OkHttpClient localVarPreviousHttpClient = localVarApiClient.httpClient;
+        localVarApiClient.httpClient = httpClient != null ? httpClient : splitAfterPaymentDefaultClient;
+        try {
+            okhttp3.Call localVarCall = pGOrderSplitAfterPaymentValidateBeforeCall(xApiVersion, orderId, xRequestId, xIdempotencyKey, splitAfterPaymentRequest, null);
+            Type localVarReturnType = new TypeToken<SplitAfterPaymentResponse>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } finally {
+            localVarApiClient.httpClient = localVarPreviousHttpClient;
         }
-        okhttp3.Call localVarCall = pGOrderSplitAfterPaymentValidateBeforeCall(xApiVersion, orderId, xRequestId, xIdempotencyKey, splitAfterPaymentRequest, null);
-        Type localVarReturnType = new TypeToken<SplitAfterPaymentResponse>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
 
