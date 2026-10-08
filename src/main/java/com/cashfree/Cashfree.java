@@ -2527,6 +2527,10 @@ public class Cashfree {
      </table>
      */
     public okhttp3.Call pGOrderSplitAfterPaymentCall(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, SplitAfterPaymentRequest splitAfterPaymentRequest, final ApiCallback _callback) throws ApiException {
+        return pGOrderSplitAfterPaymentCall(xApiVersion, orderId, xRequestId, xIdempotencyKey, splitAfterPaymentRequest, null, _callback);
+    }
+
+    private okhttp3.Call pGOrderSplitAfterPaymentCall(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, SplitAfterPaymentRequest splitAfterPaymentRequest, OkHttpClient httpClientOverride, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
         if(Cashfree.XEnvironment == CFEnvironment.PRODUCTION) {
@@ -2602,11 +2606,11 @@ public class Cashfree {
         localVarHeaderParams.put("x-sdk-platform", "javasdk-4.5.1");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback, httpClientOverride);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call pGOrderSplitAfterPaymentValidateBeforeCall(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, SplitAfterPaymentRequest splitAfterPaymentRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call pGOrderSplitAfterPaymentValidateBeforeCall(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, SplitAfterPaymentRequest splitAfterPaymentRequest, OkHttpClient httpClientOverride, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'xApiVersion' is set
         if (xApiVersion == null) {
             throw new ApiException("Missing the required parameter 'xApiVersion' when calling PGOrderSplitAfterPayment(Async)");
@@ -2617,20 +2621,15 @@ public class Cashfree {
             throw new ApiException("Missing the required parameter 'orderId' when calling PGOrderSplitAfterPayment(Async)");
         }
 
-        return pGOrderSplitAfterPaymentCall(xApiVersion, orderId, xRequestId, xIdempotencyKey, splitAfterPaymentRequest, _callback);
+        return pGOrderSplitAfterPaymentCall(xApiVersion, orderId, xRequestId, xIdempotencyKey, splitAfterPaymentRequest, httpClientOverride, _callback);
 
     }
 
     public ApiResponse<SplitAfterPaymentResponse> PGOrderSplitAfterPayment(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, SplitAfterPaymentRequest splitAfterPaymentRequest, OkHttpClient httpClient) throws ApiException {
-        OkHttpClient localVarPreviousHttpClient = localVarApiClient.httpClient;
-        localVarApiClient.httpClient = httpClient != null ? httpClient : splitAfterPaymentDefaultClient;
-        try {
-            okhttp3.Call localVarCall = pGOrderSplitAfterPaymentValidateBeforeCall(xApiVersion, orderId, xRequestId, xIdempotencyKey, splitAfterPaymentRequest, null);
-            Type localVarReturnType = new TypeToken<SplitAfterPaymentResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } finally {
-            localVarApiClient.httpClient = localVarPreviousHttpClient;
-        }
+        OkHttpClient effectiveHttpClient = httpClient != null ? httpClient : splitAfterPaymentDefaultClient;
+        okhttp3.Call localVarCall = pGOrderSplitAfterPaymentValidateBeforeCall(xApiVersion, orderId, xRequestId, xIdempotencyKey, splitAfterPaymentRequest, effectiveHttpClient, null);
+        Type localVarReturnType = new TypeToken<SplitAfterPaymentResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
 
@@ -11635,9 +11634,25 @@ static class ApiClient {
      * @throws com.cashfree.ApiException If fail to serialize the request body object
      */
     public Call buildCall(String baseUrl, String path, String method, List<Pair> queryParams, List<Pair> collectionQueryParams, Object body, Map<String, String> headerParams, Map<String, String> cookieParams, Map<String, Object> formParams, String[] authNames, ApiCallback callback) throws ApiException {
+        return buildCall(baseUrl, path, method, queryParams, collectionQueryParams, body, headerParams, cookieParams, formParams, authNames, callback, null);
+    }
+
+    /**
+     * Build HTTP call with the given options, executing it on a specific {@link OkHttpClient}
+     * instead of this {@code ApiClient}'s shared one. Unlike swapping the shared {@code httpClient}
+     * field, this does not mutate any state visible to other calls, so it is safe to use
+     * concurrently from multiple threads on the same {@code ApiClient} instance.
+     *
+     * @param httpClientOverride The client to bind this call to, or {@code null} to use this
+     *                           {@code ApiClient}'s shared client
+     * @return The HTTP call
+     * @throws com.cashfree.ApiException If fail to serialize the request body object
+     */
+    public Call buildCall(String baseUrl, String path, String method, List<Pair> queryParams, List<Pair> collectionQueryParams, Object body, Map<String, String> headerParams, Map<String, String> cookieParams, Map<String, Object> formParams, String[] authNames, ApiCallback callback, OkHttpClient httpClientOverride) throws ApiException {
         Request request = buildRequest(baseUrl, path, method, queryParams, collectionQueryParams, body, headerParams, cookieParams, formParams, authNames, callback);
 
-        return httpClient.newCall(request);
+        OkHttpClient callClient = httpClientOverride != null ? httpClientOverride : httpClient;
+        return callClient.newCall(request);
     }
 
     /**
