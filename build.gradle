@@ -6,7 +6,7 @@ apply plugin: 'maven-publish'
 apply plugin: 'signing'
 
 group = 'com.cashfree.pg.java'
-version = '4.5.0'
+version = '4.5.1'
 
 buildscript {
     repositories {
@@ -116,7 +116,7 @@ if(hasProperty('target') && target == 'android') {
 
                 groupId 'com.cashfree.pg.java'
                 artifactId 'cashfree_pg'
-                version '4.5.0'
+                version '4.5.1'
 
                 from components.java
 
@@ -157,7 +157,7 @@ if(hasProperty('target') && target == 'android') {
         repositories {
                 maven {
                     name = "OSSRH"
-                    url = "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+                    url = "https://ossrh-staging-api.central.sonatype.com/service/local/staging/deploy/maven2/"
                     credentials {
                         username = System.getenv("MAVEN_USERNAME")
                         password = System.getenv("MAVEN_PASSWORD")
@@ -250,6 +250,8 @@ test {
 nexusPublishing {
     repositories {
         sonatype {
+            nexusUrl.set(uri("https://ossrh-staging-api.central.sonatype.com/service/local/"))
+            snapshotRepositoryUrl.set(uri("https://central.sonatype.com/repository/maven-snapshots/"))
             stagingProfileId = System.getenv("SONATYPE_STAGING_PROFILE_ID")
             username = System.getenv("MAVEN_USERNAME")
             password = System.getenv("MAVEN_PASSWORD")
