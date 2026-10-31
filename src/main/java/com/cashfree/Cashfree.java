@@ -2527,6 +2527,11 @@ public class Cashfree {
      </table>
      */
     public okhttp3.Call pGOrderSplitAfterPaymentCall(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, SplitAfterPaymentRequest splitAfterPaymentRequest, final ApiCallback _callback) throws ApiException {
+        return pGOrderSplitAfterPaymentCall(localVarApiClient.httpClient, xApiVersion, orderId, xRequestId, xIdempotencyKey, splitAfterPaymentRequest, _callback);
+    }
+
+    // Same as pGOrderSplitAfterPaymentCall, but builds the Call against an explicit client instead of the shared ApiClient.httpClient field (PA-23188).
+    private okhttp3.Call pGOrderSplitAfterPaymentCall(OkHttpClient localVarHttpClient, String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, SplitAfterPaymentRequest splitAfterPaymentRequest, final ApiCallback _callback) throws ApiException {
         String basePath = "https://sandbox.cashfree.com/pg";
 
         if(Cashfree.XEnvironment == CFEnvironment.PRODUCTION) {
@@ -2599,14 +2604,20 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.5.1");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-4.5.2");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        Request localVarRequest = localVarApiClient.buildRequest(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarHttpClient.newCall(localVarRequest);
     }
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call pGOrderSplitAfterPaymentValidateBeforeCall(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, SplitAfterPaymentRequest splitAfterPaymentRequest, final ApiCallback _callback) throws ApiException {
+        return pGOrderSplitAfterPaymentValidateBeforeCall(localVarApiClient.httpClient, xApiVersion, orderId, xRequestId, xIdempotencyKey, splitAfterPaymentRequest, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call pGOrderSplitAfterPaymentValidateBeforeCall(OkHttpClient localVarHttpClient, String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, SplitAfterPaymentRequest splitAfterPaymentRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'xApiVersion' is set
         if (xApiVersion == null) {
             throw new ApiException("Missing the required parameter 'xApiVersion' when calling PGOrderSplitAfterPayment(Async)");
@@ -2617,20 +2628,16 @@ public class Cashfree {
             throw new ApiException("Missing the required parameter 'orderId' when calling PGOrderSplitAfterPayment(Async)");
         }
 
-        return pGOrderSplitAfterPaymentCall(xApiVersion, orderId, xRequestId, xIdempotencyKey, splitAfterPaymentRequest, _callback);
+        return pGOrderSplitAfterPaymentCall(localVarHttpClient, xApiVersion, orderId, xRequestId, xIdempotencyKey, splitAfterPaymentRequest, _callback);
 
     }
 
+    // Thread-safe by construction: client is bound to the Call at build time, never written to the shared ApiClient.httpClient field (PA-23188).
     public ApiResponse<SplitAfterPaymentResponse> PGOrderSplitAfterPayment(String xApiVersion, String orderId, String xRequestId, UUID xIdempotencyKey, SplitAfterPaymentRequest splitAfterPaymentRequest, OkHttpClient httpClient) throws ApiException {
-        OkHttpClient localVarPreviousHttpClient = localVarApiClient.httpClient;
-        localVarApiClient.httpClient = httpClient != null ? httpClient : splitAfterPaymentDefaultClient;
-        try {
-            okhttp3.Call localVarCall = pGOrderSplitAfterPaymentValidateBeforeCall(xApiVersion, orderId, xRequestId, xIdempotencyKey, splitAfterPaymentRequest, null);
-            Type localVarReturnType = new TypeToken<SplitAfterPaymentResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } finally {
-            localVarApiClient.httpClient = localVarPreviousHttpClient;
-        }
+        OkHttpClient localVarEffectiveHttpClient = httpClient != null ? httpClient : splitAfterPaymentDefaultClient;
+        okhttp3.Call localVarCall = pGOrderSplitAfterPaymentValidateBeforeCall(localVarEffectiveHttpClient, xApiVersion, orderId, xRequestId, xIdempotencyKey, splitAfterPaymentRequest, null);
+        Type localVarReturnType = new TypeToken<SplitAfterPaymentResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
 
