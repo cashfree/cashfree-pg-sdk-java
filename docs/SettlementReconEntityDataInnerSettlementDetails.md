@@ -9,7 +9,7 @@
 |------------ | ------------- | ------------- | -------------|
 |**cfSettlementId** | **String** | Unique ID to identify the settlement. |  [optional] |
 |**settlementDate** | **String** | Date and time when the settlement was processed. |  [optional] |
-|**utr** | **String** | Unique transaction reference number of the settlement. |  [optional] |
+|**settlementUtr** | **String** | Unique transaction reference number of the settlement. |  [optional] |
 |**splitServiceCharge** | **BigDecimal** | Service charge that is applicable for splitting the payment. |  [optional] |
 |**splitServiceTax** | **BigDecimal** | Service tax applicable for splitting the amount to vendors. |  [optional] |
 |**vendorCommission** | **BigDecimal** | Vendor commission applicable for this transaction. |  [optional] |

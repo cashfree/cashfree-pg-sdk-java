@@ -25,9 +25,8 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -58,7 +57,7 @@ import com.cashfree.pg.JSON;
  * Create Vendor Response.
  */
 @Schema(description = "Create Vendor Response.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-26T07:19:12.713912673Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-17T08:40:22.581020108Z[GMT]")
 public class CreateVendorResponse {
   public static final String SERIALIZED_NAME_EMAIL = "email";
   @SerializedName(SERIALIZED_NAME_EMAIL)
@@ -70,7 +69,7 @@ public class CreateVendorResponse {
 
   public static final String SERIALIZED_NAME_BANK = "bank";
   @SerializedName(SERIALIZED_NAME_BANK)
-  private List<BankDetails> bank = new ArrayList<>();
+  private BankDetails bank;
 
   public static final String SERIALIZED_NAME_UPI = "upi";
   @SerializedName(SERIALIZED_NAME_UPI)
@@ -90,11 +89,11 @@ public class CreateVendorResponse {
 
   public static final String SERIALIZED_NAME_SCHEDULE_OPTION = "schedule_option";
   @SerializedName(SERIALIZED_NAME_SCHEDULE_OPTION)
-  private List<ScheduleOption> scheduleOption = new ArrayList<>();
+  private ScheduleOption scheduleOption;
 
   public static final String SERIALIZED_NAME_KYC_DETAILS = "kyc_details";
   @SerializedName(SERIALIZED_NAME_KYC_DETAILS)
-  private List<KycDetails> kycDetails = new ArrayList<>();
+  private KycDetails kycDetails;
 
   public static final String SERIALIZED_NAME_DASHBOARD_ACCESS = "dashboard_access";
   @SerializedName(SERIALIZED_NAME_DASHBOARD_ACCESS)
@@ -151,17 +150,9 @@ public class CreateVendorResponse {
   }
 
 
-  public CreateVendorResponse bank(List<BankDetails> bank) {
+  public CreateVendorResponse bank(BankDetails bank) {
     
     this.bank = bank;
-    return this;
-  }
-
-  public CreateVendorResponse addbankItem(BankDetails bankItem) {
-    if (this.bank == null) {
-      this.bank = new ArrayList<>();
-    }
-    this.bank.add(bankItem);
     return this;
   }
 
@@ -171,12 +162,12 @@ public class CreateVendorResponse {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public List<BankDetails> getBank() {
+  public BankDetails getBank() {
     return bank;
   }
 
 
-  public void setBank(List<BankDetails> bank) {
+  public void setBank(BankDetails bank) {
     this.bank = bank;
   }
 
@@ -269,17 +260,9 @@ public class CreateVendorResponse {
   }
 
 
-  public CreateVendorResponse scheduleOption(List<ScheduleOption> scheduleOption) {
+  public CreateVendorResponse scheduleOption(ScheduleOption scheduleOption) {
     
     this.scheduleOption = scheduleOption;
-    return this;
-  }
-
-  public CreateVendorResponse addscheduleOptionItem(ScheduleOption scheduleOptionItem) {
-    if (this.scheduleOption == null) {
-      this.scheduleOption = new ArrayList<>();
-    }
-    this.scheduleOption.add(scheduleOptionItem);
     return this;
   }
 
@@ -289,27 +272,19 @@ public class CreateVendorResponse {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public List<ScheduleOption> getScheduleOption() {
+  public ScheduleOption getScheduleOption() {
     return scheduleOption;
   }
 
 
-  public void setScheduleOption(List<ScheduleOption> scheduleOption) {
+  public void setScheduleOption(ScheduleOption scheduleOption) {
     this.scheduleOption = scheduleOption;
   }
 
 
-  public CreateVendorResponse kycDetails(List<KycDetails> kycDetails) {
+  public CreateVendorResponse kycDetails(KycDetails kycDetails) {
     
     this.kycDetails = kycDetails;
-    return this;
-  }
-
-  public CreateVendorResponse addkycDetailsItem(KycDetails kycDetailsItem) {
-    if (this.kycDetails == null) {
-      this.kycDetails = new ArrayList<>();
-    }
-    this.kycDetails.add(kycDetailsItem);
     return this;
   }
 
@@ -319,12 +294,12 @@ public class CreateVendorResponse {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public List<KycDetails> getKycDetails() {
+  public KycDetails getKycDetails() {
     return kycDetails;
   }
 
 
-  public void setKycDetails(List<KycDetails> kycDetails) {
+  public void setKycDetails(KycDetails kycDetails) {
     this.kycDetails = kycDetails;
   }
 
@@ -395,9 +370,20 @@ public class CreateVendorResponse {
         Objects.equals(this.bankDetails, createVendorResponse.bankDetails);
   }
 
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
+  }
+
   @Override
   public int hashCode() {
     return Objects.hash(email, status, bank, upi, phone, name, vendorId, scheduleOption, kycDetails, dashboardAccess, bankDetails);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
+    }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -468,19 +454,9 @@ public class CreateVendorResponse {
       if ((jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) && !jsonObj.get("status").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
       }
+      // validate the optional field `bank`
       if (jsonObj.get("bank") != null && !jsonObj.get("bank").isJsonNull()) {
-        JsonArray jsonArraybank = jsonObj.getAsJsonArray("bank");
-        if (jsonArraybank != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("bank").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `bank` to be an array in the JSON string but got `%s`", jsonObj.get("bank").toString()));
-          }
-
-          // validate the optional field `bank` (array)
-          for (int i = 0; i < jsonArraybank.size(); i++) {
-            BankDetails.validateJsonElement(jsonArraybank.get(i));
-          };
-        }
+        BankDetails.validateJsonElement(jsonObj.get("bank"));
       }
       if ((jsonObj.get("upi") != null && !jsonObj.get("upi").isJsonNull()) && !jsonObj.get("upi").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `upi` to be a primitive type in the JSON string but got `%s`", jsonObj.get("upi").toString()));
@@ -491,33 +467,13 @@ public class CreateVendorResponse {
       if ((jsonObj.get("vendor_id") != null && !jsonObj.get("vendor_id").isJsonNull()) && !jsonObj.get("vendor_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `vendor_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vendor_id").toString()));
       }
+      // validate the optional field `schedule_option`
       if (jsonObj.get("schedule_option") != null && !jsonObj.get("schedule_option").isJsonNull()) {
-        JsonArray jsonArrayscheduleOption = jsonObj.getAsJsonArray("schedule_option");
-        if (jsonArrayscheduleOption != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("schedule_option").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `schedule_option` to be an array in the JSON string but got `%s`", jsonObj.get("schedule_option").toString()));
-          }
-
-          // validate the optional field `schedule_option` (array)
-          for (int i = 0; i < jsonArrayscheduleOption.size(); i++) {
-            ScheduleOption.validateJsonElement(jsonArrayscheduleOption.get(i));
-          };
-        }
+        ScheduleOption.validateJsonElement(jsonObj.get("schedule_option"));
       }
+      // validate the optional field `kyc_details`
       if (jsonObj.get("kyc_details") != null && !jsonObj.get("kyc_details").isJsonNull()) {
-        JsonArray jsonArraykycDetails = jsonObj.getAsJsonArray("kyc_details");
-        if (jsonArraykycDetails != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("kyc_details").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `kyc_details` to be an array in the JSON string but got `%s`", jsonObj.get("kyc_details").toString()));
-          }
-
-          // validate the optional field `kyc_details` (array)
-          for (int i = 0; i < jsonArraykycDetails.size(); i++) {
-            KycDetails.validateJsonElement(jsonArraykycDetails.get(i));
-          };
-        }
+        KycDetails.validateJsonElement(jsonObj.get("kyc_details"));
       }
       if ((jsonObj.get("bank_details") != null && !jsonObj.get("bank_details").isJsonNull()) && !jsonObj.get("bank_details").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `bank_details` to be a primitive type in the JSON string but got `%s`", jsonObj.get("bank_details").toString()));
@@ -540,19 +496,10 @@ public class CreateVendorResponse {
       if ((jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) && !jsonObj.get("status").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
       }
+      // validate the optional field `bank`
       if (jsonObj.get("bank") != null && !jsonObj.get("bank").isJsonNull()) {
-        JsonArray jsonArraybank = jsonObj.getAsJsonArray("bank");
-        if (jsonArraybank != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("bank").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `bank` to be an array in the JSON string but got `%s`", jsonObj.get("bank").toString()));
-          }
-
-          // validate the optional field `bank` (array)
-          for (int i = 0; i < jsonArraybank.size(); i++) {
-            BankDetails.validateJsonElement(jsonArraybank.get(i));
-          };
-        }
+        BankDetails.validateJsonElement(jsonObj.get("bank"));
+        return true;
       }
       if ((jsonObj.get("upi") != null && !jsonObj.get("upi").isJsonNull()) && !jsonObj.get("upi").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `upi` to be a primitive type in the JSON string but got `%s`", jsonObj.get("upi").toString()));
@@ -563,33 +510,15 @@ public class CreateVendorResponse {
       if ((jsonObj.get("vendor_id") != null && !jsonObj.get("vendor_id").isJsonNull()) && !jsonObj.get("vendor_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `vendor_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vendor_id").toString()));
       }
+      // validate the optional field `schedule_option`
       if (jsonObj.get("schedule_option") != null && !jsonObj.get("schedule_option").isJsonNull()) {
-        JsonArray jsonArrayscheduleOption = jsonObj.getAsJsonArray("schedule_option");
-        if (jsonArrayscheduleOption != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("schedule_option").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `schedule_option` to be an array in the JSON string but got `%s`", jsonObj.get("schedule_option").toString()));
-          }
-
-          // validate the optional field `schedule_option` (array)
-          for (int i = 0; i < jsonArrayscheduleOption.size(); i++) {
-            ScheduleOption.validateJsonElement(jsonArrayscheduleOption.get(i));
-          };
-        }
+        ScheduleOption.validateJsonElement(jsonObj.get("schedule_option"));
+        return true;
       }
+      // validate the optional field `kyc_details`
       if (jsonObj.get("kyc_details") != null && !jsonObj.get("kyc_details").isJsonNull()) {
-        JsonArray jsonArraykycDetails = jsonObj.getAsJsonArray("kyc_details");
-        if (jsonArraykycDetails != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("kyc_details").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `kyc_details` to be an array in the JSON string but got `%s`", jsonObj.get("kyc_details").toString()));
-          }
-
-          // validate the optional field `kyc_details` (array)
-          for (int i = 0; i < jsonArraykycDetails.size(); i++) {
-            KycDetails.validateJsonElement(jsonArraykycDetails.get(i));
-          };
-        }
+        KycDetails.validateJsonElement(jsonObj.get("kyc_details"));
+        return true;
       }
       if ((jsonObj.get("bank_details") != null && !jsonObj.get("bank_details").isJsonNull()) && !jsonObj.get("bank_details").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `bank_details` to be a primitive type in the JSON string but got `%s`", jsonObj.get("bank_details").toString()));

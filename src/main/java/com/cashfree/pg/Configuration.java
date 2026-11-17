@@ -13,8 +13,8 @@
 
 package com.cashfree.pg;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-26T07:19:12.713912673Z[Etc/UTC]")class Configuration {
-    public static final String VERSION = "6.0.2";
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-17T08:40:22.581020108Z[GMT]")class Configuration {
+    public static final String VERSION = "6.0.9";
 
     private static Cashfree.ApiClient defaultApiClient = new Cashfree.ApiClient();
 

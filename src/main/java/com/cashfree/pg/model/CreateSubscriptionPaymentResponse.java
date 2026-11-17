@@ -54,7 +54,7 @@ import com.cashfree.pg.JSON;
  * The response returned is Create Subscription Auth or Charge APIs.
  */
 @Schema(description = "The response returned is Create Subscription Auth or Charge APIs.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-26T07:19:12.713912673Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-17T08:40:22.581020108Z[GMT]")
 public class CreateSubscriptionPaymentResponse {
   public static final String SERIALIZED_NAME_CF_PAYMENT_ID = "cf_payment_id";
   @SerializedName(SERIALIZED_NAME_CF_PAYMENT_ID)
@@ -464,6 +464,10 @@ public class CreateSubscriptionPaymentResponse {
       }
       if ((jsonObj.get("subscription_id") != null && !jsonObj.get("subscription_id").isJsonNull()) && !jsonObj.get("subscription_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `subscription_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("subscription_id").toString()));
+      }
+      // free-form object field `data`: match when the key is present as a JSON object
+      if (jsonObj.get("data") != null && !jsonObj.get("data").isJsonNull() && jsonObj.get("data").isJsonObject()) {
+        return true;
       }
       if ((jsonObj.get("payment_method") != null && !jsonObj.get("payment_method").isJsonNull()) && !jsonObj.get("payment_method").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `payment_method` to be a primitive type in the JSON string but got `%s`", jsonObj.get("payment_method").toString()));
