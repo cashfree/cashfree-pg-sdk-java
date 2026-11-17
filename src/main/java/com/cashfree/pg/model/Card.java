@@ -52,7 +52,7 @@ import com.cashfree.pg.JSON;
  * The card payment object can be used to make payments using a plain card, a card saved with Cashfree, an externally saved card, or an external Alt ID for guest checkout transactions. Refer to the examples in the Sample Request section for different payloads, and refer [Token Vault](https://www.cashfree.com/docs/payments/features/token-vault#token-vault) for more details on tokenisation.
  */
 @Schema(description = "The card payment object can be used to make payments using a plain card, a card saved with Cashfree, an externally saved card, or an external Alt ID for guest checkout transactions. Refer to the examples in the Sample Request section for different payloads, and refer [Token Vault](https://www.cashfree.com/docs/payments/features/token-vault#token-vault) for more details on tokenisation.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-26T07:19:12.713912673Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-17T07:54:27.618696671Z[GMT]")
 public class Card {
   /**
    * The channel for card payments can be \&quot;link\&quot; or \&quot;post\&quot;. Use \&quot;post\&quot; to request [Native OTP](https://www.cashfree.com/docs/payments/features/native-otp) authentication, where the merchant must render the Native OTP UI to collect the OTP. Otherwise, use link for the redirection flow.

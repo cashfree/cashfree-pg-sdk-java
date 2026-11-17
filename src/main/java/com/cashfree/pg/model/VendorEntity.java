@@ -27,6 +27,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -57,7 +58,7 @@ import com.cashfree.pg.JSON;
  * Vendor entity object.
  */
 @Schema(description = "Vendor entity object.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-26T07:19:12.713912673Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-17T07:54:27.618696671Z[GMT]")
 public class VendorEntity {
   public static final String SERIALIZED_NAME_EMAIL = "email";
   @SerializedName(SERIALIZED_NAME_EMAIL)
@@ -89,7 +90,7 @@ public class VendorEntity {
 
   public static final String SERIALIZED_NAME_BANK = "bank";
   @SerializedName(SERIALIZED_NAME_BANK)
-  private List<BankDetails> bank = new ArrayList<>();
+  private BankDetails bank;
 
   public static final String SERIALIZED_NAME_UPI = "upi";
   @SerializedName(SERIALIZED_NAME_UPI)
@@ -97,7 +98,7 @@ public class VendorEntity {
 
   public static final String SERIALIZED_NAME_SCHEDULE_OPTION = "schedule_option";
   @SerializedName(SERIALIZED_NAME_SCHEDULE_OPTION)
-  private List<ScheduleOption> scheduleOption = new ArrayList<>();
+  private ScheduleOption scheduleOption;
 
   public static final String SERIALIZED_NAME_VENDOR_TYPE = "vendor_type";
   @SerializedName(SERIALIZED_NAME_VENDOR_TYPE)
@@ -276,17 +277,9 @@ public class VendorEntity {
   }
 
 
-  public VendorEntity bank(List<BankDetails> bank) {
+  public VendorEntity bank(BankDetails bank) {
     
     this.bank = bank;
-    return this;
-  }
-
-  public VendorEntity addbankItem(BankDetails bankItem) {
-    if (this.bank == null) {
-      this.bank = new ArrayList<>();
-    }
-    this.bank.add(bankItem);
     return this;
   }
 
@@ -296,12 +289,12 @@ public class VendorEntity {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public List<BankDetails> getBank() {
+  public BankDetails getBank() {
     return bank;
   }
 
 
-  public void setBank(List<BankDetails> bank) {
+  public void setBank(BankDetails bank) {
     this.bank = bank;
   }
 
@@ -328,17 +321,9 @@ public class VendorEntity {
   }
 
 
-  public VendorEntity scheduleOption(List<ScheduleOption> scheduleOption) {
+  public VendorEntity scheduleOption(ScheduleOption scheduleOption) {
     
     this.scheduleOption = scheduleOption;
-    return this;
-  }
-
-  public VendorEntity addscheduleOptionItem(ScheduleOption scheduleOptionItem) {
-    if (this.scheduleOption == null) {
-      this.scheduleOption = new ArrayList<>();
-    }
-    this.scheduleOption.add(scheduleOptionItem);
     return this;
   }
 
@@ -348,12 +333,12 @@ public class VendorEntity {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public List<ScheduleOption> getScheduleOption() {
+  public ScheduleOption getScheduleOption() {
     return scheduleOption;
   }
 
 
-  public void setScheduleOption(List<ScheduleOption> scheduleOption) {
+  public void setScheduleOption(ScheduleOption scheduleOption) {
     this.scheduleOption = scheduleOption;
   }
 
@@ -502,9 +487,20 @@ public class VendorEntity {
         Objects.equals(this.relatedDocs, vendorEntity.relatedDocs);
   }
 
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
+  }
+
   @Override
   public int hashCode() {
     return Objects.hash(email, status, phone, name, vendorId, addedOn, updatedOn, bank, upi, scheduleOption, vendorType, accountType, businessType, remarks, relatedDocs);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
+    }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -598,36 +594,16 @@ public class VendorEntity {
       if ((jsonObj.get("updated_on") != null && !jsonObj.get("updated_on").isJsonNull()) && !jsonObj.get("updated_on").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `updated_on` to be a primitive type in the JSON string but got `%s`", jsonObj.get("updated_on").toString()));
       }
+      // validate the optional field `bank`
       if (jsonObj.get("bank") != null && !jsonObj.get("bank").isJsonNull()) {
-        JsonArray jsonArraybank = jsonObj.getAsJsonArray("bank");
-        if (jsonArraybank != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("bank").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `bank` to be an array in the JSON string but got `%s`", jsonObj.get("bank").toString()));
-          }
-
-          // validate the optional field `bank` (array)
-          for (int i = 0; i < jsonArraybank.size(); i++) {
-            BankDetails.validateJsonElement(jsonArraybank.get(i));
-          };
-        }
+        BankDetails.validateJsonElement(jsonObj.get("bank"));
       }
       if ((jsonObj.get("upi") != null && !jsonObj.get("upi").isJsonNull()) && !jsonObj.get("upi").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `upi` to be a primitive type in the JSON string but got `%s`", jsonObj.get("upi").toString()));
       }
+      // validate the optional field `schedule_option`
       if (jsonObj.get("schedule_option") != null && !jsonObj.get("schedule_option").isJsonNull()) {
-        JsonArray jsonArrayscheduleOption = jsonObj.getAsJsonArray("schedule_option");
-        if (jsonArrayscheduleOption != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("schedule_option").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `schedule_option` to be an array in the JSON string but got `%s`", jsonObj.get("schedule_option").toString()));
-          }
-
-          // validate the optional field `schedule_option` (array)
-          for (int i = 0; i < jsonArrayscheduleOption.size(); i++) {
-            ScheduleOption.validateJsonElement(jsonArrayscheduleOption.get(i));
-          };
-        }
+        ScheduleOption.validateJsonElement(jsonObj.get("schedule_option"));
       }
       if ((jsonObj.get("vendor_type") != null && !jsonObj.get("vendor_type").isJsonNull()) && !jsonObj.get("vendor_type").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `vendor_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vendor_type").toString()));
@@ -688,36 +664,18 @@ public class VendorEntity {
       if ((jsonObj.get("updated_on") != null && !jsonObj.get("updated_on").isJsonNull()) && !jsonObj.get("updated_on").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `updated_on` to be a primitive type in the JSON string but got `%s`", jsonObj.get("updated_on").toString()));
       }
+      // validate the optional field `bank`
       if (jsonObj.get("bank") != null && !jsonObj.get("bank").isJsonNull()) {
-        JsonArray jsonArraybank = jsonObj.getAsJsonArray("bank");
-        if (jsonArraybank != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("bank").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `bank` to be an array in the JSON string but got `%s`", jsonObj.get("bank").toString()));
-          }
-
-          // validate the optional field `bank` (array)
-          for (int i = 0; i < jsonArraybank.size(); i++) {
-            BankDetails.validateJsonElement(jsonArraybank.get(i));
-          };
-        }
+        BankDetails.validateJsonElement(jsonObj.get("bank"));
+        return true;
       }
       if ((jsonObj.get("upi") != null && !jsonObj.get("upi").isJsonNull()) && !jsonObj.get("upi").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `upi` to be a primitive type in the JSON string but got `%s`", jsonObj.get("upi").toString()));
       }
+      // validate the optional field `schedule_option`
       if (jsonObj.get("schedule_option") != null && !jsonObj.get("schedule_option").isJsonNull()) {
-        JsonArray jsonArrayscheduleOption = jsonObj.getAsJsonArray("schedule_option");
-        if (jsonArrayscheduleOption != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("schedule_option").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `schedule_option` to be an array in the JSON string but got `%s`", jsonObj.get("schedule_option").toString()));
-          }
-
-          // validate the optional field `schedule_option` (array)
-          for (int i = 0; i < jsonArrayscheduleOption.size(); i++) {
-            ScheduleOption.validateJsonElement(jsonArrayscheduleOption.get(i));
-          };
-        }
+        ScheduleOption.validateJsonElement(jsonObj.get("schedule_option"));
+        return true;
       }
       if ((jsonObj.get("vendor_type") != null && !jsonObj.get("vendor_type").isJsonNull()) && !jsonObj.get("vendor_type").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `vendor_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vendor_type").toString()));

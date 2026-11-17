@@ -51,10 +51,10 @@ import java.util.Set;
 import com.cashfree.pg.JSON;
 
 /**
- * Specify either the Settlement ID, Settlement UTR, or start date and end date to fetch the settlement details.
+ * Specify either the Settlement ID, Settlement UTR, settlement status, or start date and end date to fetch the settlement details.
  */
-@Schema(description = "Specify either the Settlement ID, Settlement UTR, or start date and end date to fetch the settlement details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-26T07:19:12.713912673Z[Etc/UTC]")
+@Schema(description = "Specify either the Settlement ID, Settlement UTR, settlement status, or start date and end date to fetch the settlement details.")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-17T07:54:27.618696671Z[GMT]")
 public class FetchSettlementsRequestFilters {
   public static final String SERIALIZED_NAME_CF_SETTLEMENT_IDS = "cf_settlement_ids";
   @SerializedName(SERIALIZED_NAME_CF_SETTLEMENT_IDS)
@@ -63,6 +63,64 @@ public class FetchSettlementsRequestFilters {
   public static final String SERIALIZED_NAME_SETTLEMENT_UTRS = "settlement_utrs";
   @SerializedName(SERIALIZED_NAME_SETTLEMENT_UTRS)
   private List<String> settlementUtrs = new ArrayList<>();
+
+  /**
+   * Gets or Sets settlementStatus
+   */
+  @JsonAdapter(SettlementStatusEnum.Adapter.class)
+  public enum SettlementStatusEnum {
+    SUCCESS("SUCCESS"),
+    
+    PENDING("PENDING"),
+    
+    PENDING_WITH_CASHFREE("PENDING_WITH_CASHFREE"),
+    
+    PENDING_WITH_BANK("PENDING_WITH_BANK"),
+    
+    FAILED("FAILED"),
+    
+    UNKNOWN_DEFAULT_OPEN_API("unknown_default_open_api");
+
+    private String value;
+
+    SettlementStatusEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static SettlementStatusEnum fromValue(String value) {
+      for (SettlementStatusEnum b : SettlementStatusEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return UNKNOWN_DEFAULT_OPEN_API;
+    }
+
+    public static class Adapter extends TypeAdapter<SettlementStatusEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final SettlementStatusEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public SettlementStatusEnum read(final JsonReader jsonReader) throws IOException {
+        String value =  jsonReader.nextString();
+        return SettlementStatusEnum.fromValue(value);
+      }
+    }
+  }
+  public static final String SERIALIZED_NAME_SETTLEMENT_STATUS = "settlement_status";
+  @SerializedName(SERIALIZED_NAME_SETTLEMENT_STATUS)
+  private List<SettlementStatusEnum> settlementStatus = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_START_DATE = "start_date";
   @SerializedName(SERIALIZED_NAME_START_DATE)
@@ -135,6 +193,36 @@ public class FetchSettlementsRequestFilters {
   }
 
 
+  public FetchSettlementsRequestFilters settlementStatus(List<SettlementStatusEnum> settlementStatus) {
+    
+    this.settlementStatus = settlementStatus;
+    return this;
+  }
+
+  public FetchSettlementsRequestFilters addsettlementStatusItem(SettlementStatusEnum settlementStatusItem) {
+    if (this.settlementStatus == null) {
+      this.settlementStatus = new ArrayList<>();
+    }
+    this.settlementStatus.add(settlementStatusItem);
+    return this;
+  }
+
+   /**
+   * List of settlement statuses to filter by. Possible values are SUCCESS, PENDING, PENDING_WITH_CASHFREE, PENDING_WITH_BANK, FAILED.
+   * @return settlementStatus
+  **/
+  @javax.annotation.Nullable
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "List of settlement statuses to filter by. Possible values are SUCCESS, PENDING, PENDING_WITH_CASHFREE, PENDING_WITH_BANK, FAILED.")
+  public List<SettlementStatusEnum> getSettlementStatus() {
+    return settlementStatus;
+  }
+
+
+  public void setSettlementStatus(List<SettlementStatusEnum> settlementStatus) {
+    this.settlementStatus = settlementStatus;
+  }
+
+
   public FetchSettlementsRequestFilters startDate(String startDate) {
     
     this.startDate = startDate;
@@ -190,13 +278,14 @@ public class FetchSettlementsRequestFilters {
     FetchSettlementsRequestFilters fetchSettlementsRequestFilters = (FetchSettlementsRequestFilters) o;
     return Objects.equals(this.cfSettlementIds, fetchSettlementsRequestFilters.cfSettlementIds) &&
         Objects.equals(this.settlementUtrs, fetchSettlementsRequestFilters.settlementUtrs) &&
+        Objects.equals(this.settlementStatus, fetchSettlementsRequestFilters.settlementStatus) &&
         Objects.equals(this.startDate, fetchSettlementsRequestFilters.startDate) &&
         Objects.equals(this.endDate, fetchSettlementsRequestFilters.endDate);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(cfSettlementIds, settlementUtrs, startDate, endDate);
+    return Objects.hash(cfSettlementIds, settlementUtrs, settlementStatus, startDate, endDate);
   }
 
   @Override
@@ -205,6 +294,7 @@ public class FetchSettlementsRequestFilters {
     sb.append("class FetchSettlementsRequestFilters {\n");
     sb.append("    cfSettlementIds: ").append(toIndentedString(cfSettlementIds)).append("\n");
     sb.append("    settlementUtrs: ").append(toIndentedString(settlementUtrs)).append("\n");
+    sb.append("    settlementStatus: ").append(toIndentedString(settlementStatus)).append("\n");
     sb.append("    startDate: ").append(toIndentedString(startDate)).append("\n");
     sb.append("    endDate: ").append(toIndentedString(endDate)).append("\n");
     sb.append("}");
@@ -231,6 +321,7 @@ public class FetchSettlementsRequestFilters {
     openapiFields = new HashSet<String>();
     openapiFields.add("cf_settlement_ids");
     openapiFields.add("settlement_utrs");
+    openapiFields.add("settlement_status");
     openapiFields.add("start_date");
     openapiFields.add("end_date");
 
@@ -254,6 +345,10 @@ public class FetchSettlementsRequestFilters {
       // ensure the optional json data is an array if present
       if (jsonObj.get("settlement_utrs") != null && !jsonObj.get("settlement_utrs").isJsonNull() && !jsonObj.get("settlement_utrs").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `settlement_utrs` to be an array in the JSON string but got `%s`", jsonObj.get("settlement_utrs").toString()));
+      }
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("settlement_status") != null && !jsonObj.get("settlement_status").isJsonNull() && !jsonObj.get("settlement_status").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `settlement_status` to be an array in the JSON string but got `%s`", jsonObj.get("settlement_status").toString()));
       }
       if ((jsonObj.get("start_date") != null && !jsonObj.get("start_date").isJsonNull()) && !jsonObj.get("start_date").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `start_date` to be a primitive type in the JSON string but got `%s`", jsonObj.get("start_date").toString()));
@@ -280,6 +375,10 @@ public class FetchSettlementsRequestFilters {
       // ensure the optional json data is an array if present
       if (jsonObj.get("settlement_utrs") != null && !jsonObj.get("settlement_utrs").isJsonNull() && !jsonObj.get("settlement_utrs").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `settlement_utrs` to be an array in the JSON string but got `%s`", jsonObj.get("settlement_utrs").toString()));
+      }
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("settlement_status") != null && !jsonObj.get("settlement_status").isJsonNull() && !jsonObj.get("settlement_status").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `settlement_status` to be an array in the JSON string but got `%s`", jsonObj.get("settlement_status").toString()));
       }
       if ((jsonObj.get("start_date") != null && !jsonObj.get("start_date").isJsonNull()) && !jsonObj.get("start_date").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `start_date` to be a primitive type in the JSON string but got `%s`", jsonObj.get("start_date").toString()));

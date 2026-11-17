@@ -52,7 +52,7 @@ import com.cashfree.pg.JSON;
  * International payment details.
  */
 @Schema(description = "International payment details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-26T07:19:12.713912673Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-17T07:54:27.618696671Z[GMT]")
 public class InternationalPaymentEntity {
   public static final String SERIALIZED_NAME_INTERNATIONAL = "international";
   @SerializedName(SERIALIZED_NAME_INTERNATIONAL)

@@ -14,13 +14,13 @@
 package com.cashfree.pg.model;
 
 import java.util.Objects;
-import com.cashfree.pg.model.ReconEntityDataInnerCustomerDetails;
-import com.cashfree.pg.model.ReconEntityDataInnerDisputeDetails;
-import com.cashfree.pg.model.ReconEntityDataInnerEventDetails;
-import com.cashfree.pg.model.ReconEntityDataInnerOrderDetails;
 import com.cashfree.pg.model.ReconEntityDataInnerRefundDetails;
-import com.cashfree.pg.model.ReconEntityDataInnerSettlementDetails;
+import com.cashfree.pg.model.SettlementReconEntityDataInnerCustomerDetails;
+import com.cashfree.pg.model.SettlementReconEntityDataInnerDisputeDetailsInner;
+import com.cashfree.pg.model.SettlementReconEntityDataInnerEventDetails;
+import com.cashfree.pg.model.SettlementReconEntityDataInnerOrderDetails;
 import com.cashfree.pg.model.SettlementReconEntityDataInnerPaymentDetails;
+import com.cashfree.pg.model.SettlementReconEntityDataInnerSettlementDetails;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -28,7 +28,9 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -58,19 +60,19 @@ import com.cashfree.pg.JSON;
 /**
  * SettlementReconEntityDataInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-26T07:19:12.713912673Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-17T07:54:27.618696671Z[GMT]")
 public class SettlementReconEntityDataInner {
   public static final String SERIALIZED_NAME_EVENT_DETAILS = "event_details";
   @SerializedName(SERIALIZED_NAME_EVENT_DETAILS)
-  private ReconEntityDataInnerEventDetails eventDetails;
+  private SettlementReconEntityDataInnerEventDetails eventDetails;
 
   public static final String SERIALIZED_NAME_ORDER_DETAILS = "order_details";
   @SerializedName(SERIALIZED_NAME_ORDER_DETAILS)
-  private ReconEntityDataInnerOrderDetails orderDetails;
+  private SettlementReconEntityDataInnerOrderDetails orderDetails;
 
   public static final String SERIALIZED_NAME_CUSTOMER_DETAILS = "customer_details";
   @SerializedName(SERIALIZED_NAME_CUSTOMER_DETAILS)
-  private ReconEntityDataInnerCustomerDetails customerDetails;
+  private SettlementReconEntityDataInnerCustomerDetails customerDetails;
 
   public static final String SERIALIZED_NAME_PAYMENT_DETAILS = "payment_details";
   @SerializedName(SERIALIZED_NAME_PAYMENT_DETAILS)
@@ -78,20 +80,20 @@ public class SettlementReconEntityDataInner {
 
   public static final String SERIALIZED_NAME_SETTLEMENT_DETAILS = "settlement_details";
   @SerializedName(SERIALIZED_NAME_SETTLEMENT_DETAILS)
-  private ReconEntityDataInnerSettlementDetails settlementDetails;
+  private SettlementReconEntityDataInnerSettlementDetails settlementDetails;
 
   public static final String SERIALIZED_NAME_DISPUTE_DETAILS = "dispute_details";
   @SerializedName(SERIALIZED_NAME_DISPUTE_DETAILS)
-  private ReconEntityDataInnerDisputeDetails disputeDetails;
+  private List<SettlementReconEntityDataInnerDisputeDetailsInner> disputeDetails = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_REFUND_DETAILS = "refund_details";
   @SerializedName(SERIALIZED_NAME_REFUND_DETAILS)
-  private ReconEntityDataInnerRefundDetails refundDetails;
+  private List<ReconEntityDataInnerRefundDetails> refundDetails = new ArrayList<>();
 
   public SettlementReconEntityDataInner() {
   }
 
-  public SettlementReconEntityDataInner eventDetails(ReconEntityDataInnerEventDetails eventDetails) {
+  public SettlementReconEntityDataInner eventDetails(SettlementReconEntityDataInnerEventDetails eventDetails) {
     
     this.eventDetails = eventDetails;
     return this;
@@ -103,17 +105,17 @@ public class SettlementReconEntityDataInner {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public ReconEntityDataInnerEventDetails getEventDetails() {
+  public SettlementReconEntityDataInnerEventDetails getEventDetails() {
     return eventDetails;
   }
 
 
-  public void setEventDetails(ReconEntityDataInnerEventDetails eventDetails) {
+  public void setEventDetails(SettlementReconEntityDataInnerEventDetails eventDetails) {
     this.eventDetails = eventDetails;
   }
 
 
-  public SettlementReconEntityDataInner orderDetails(ReconEntityDataInnerOrderDetails orderDetails) {
+  public SettlementReconEntityDataInner orderDetails(SettlementReconEntityDataInnerOrderDetails orderDetails) {
     
     this.orderDetails = orderDetails;
     return this;
@@ -125,17 +127,17 @@ public class SettlementReconEntityDataInner {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public ReconEntityDataInnerOrderDetails getOrderDetails() {
+  public SettlementReconEntityDataInnerOrderDetails getOrderDetails() {
     return orderDetails;
   }
 
 
-  public void setOrderDetails(ReconEntityDataInnerOrderDetails orderDetails) {
+  public void setOrderDetails(SettlementReconEntityDataInnerOrderDetails orderDetails) {
     this.orderDetails = orderDetails;
   }
 
 
-  public SettlementReconEntityDataInner customerDetails(ReconEntityDataInnerCustomerDetails customerDetails) {
+  public SettlementReconEntityDataInner customerDetails(SettlementReconEntityDataInnerCustomerDetails customerDetails) {
     
     this.customerDetails = customerDetails;
     return this;
@@ -147,12 +149,12 @@ public class SettlementReconEntityDataInner {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public ReconEntityDataInnerCustomerDetails getCustomerDetails() {
+  public SettlementReconEntityDataInnerCustomerDetails getCustomerDetails() {
     return customerDetails;
   }
 
 
-  public void setCustomerDetails(ReconEntityDataInnerCustomerDetails customerDetails) {
+  public void setCustomerDetails(SettlementReconEntityDataInnerCustomerDetails customerDetails) {
     this.customerDetails = customerDetails;
   }
 
@@ -179,7 +181,7 @@ public class SettlementReconEntityDataInner {
   }
 
 
-  public SettlementReconEntityDataInner settlementDetails(ReconEntityDataInnerSettlementDetails settlementDetails) {
+  public SettlementReconEntityDataInner settlementDetails(SettlementReconEntityDataInnerSettlementDetails settlementDetails) {
     
     this.settlementDetails = settlementDetails;
     return this;
@@ -191,56 +193,72 @@ public class SettlementReconEntityDataInner {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public ReconEntityDataInnerSettlementDetails getSettlementDetails() {
+  public SettlementReconEntityDataInnerSettlementDetails getSettlementDetails() {
     return settlementDetails;
   }
 
 
-  public void setSettlementDetails(ReconEntityDataInnerSettlementDetails settlementDetails) {
+  public void setSettlementDetails(SettlementReconEntityDataInnerSettlementDetails settlementDetails) {
     this.settlementDetails = settlementDetails;
   }
 
 
-  public SettlementReconEntityDataInner disputeDetails(ReconEntityDataInnerDisputeDetails disputeDetails) {
+  public SettlementReconEntityDataInner disputeDetails(List<SettlementReconEntityDataInnerDisputeDetailsInner> disputeDetails) {
     
     this.disputeDetails = disputeDetails;
     return this;
   }
 
+  public SettlementReconEntityDataInner adddisputeDetailsItem(SettlementReconEntityDataInnerDisputeDetailsInner disputeDetailsItem) {
+    if (this.disputeDetails == null) {
+      this.disputeDetails = new ArrayList<>();
+    }
+    this.disputeDetails.add(disputeDetailsItem);
+    return this;
+  }
+
    /**
-   * Get disputeDetails
+   * List of disputes linked to this event.
    * @return disputeDetails
   **/
   @javax.annotation.Nullable
-  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public ReconEntityDataInnerDisputeDetails getDisputeDetails() {
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "List of disputes linked to this event.")
+  public List<SettlementReconEntityDataInnerDisputeDetailsInner> getDisputeDetails() {
     return disputeDetails;
   }
 
 
-  public void setDisputeDetails(ReconEntityDataInnerDisputeDetails disputeDetails) {
+  public void setDisputeDetails(List<SettlementReconEntityDataInnerDisputeDetailsInner> disputeDetails) {
     this.disputeDetails = disputeDetails;
   }
 
 
-  public SettlementReconEntityDataInner refundDetails(ReconEntityDataInnerRefundDetails refundDetails) {
+  public SettlementReconEntityDataInner refundDetails(List<ReconEntityDataInnerRefundDetails> refundDetails) {
     
     this.refundDetails = refundDetails;
     return this;
   }
 
+  public SettlementReconEntityDataInner addrefundDetailsItem(ReconEntityDataInnerRefundDetails refundDetailsItem) {
+    if (this.refundDetails == null) {
+      this.refundDetails = new ArrayList<>();
+    }
+    this.refundDetails.add(refundDetailsItem);
+    return this;
+  }
+
    /**
-   * Get refundDetails
+   * List of refunds linked to this event.
    * @return refundDetails
   **/
   @javax.annotation.Nullable
-  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
-  public ReconEntityDataInnerRefundDetails getRefundDetails() {
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "List of refunds linked to this event.")
+  public List<ReconEntityDataInnerRefundDetails> getRefundDetails() {
     return refundDetails;
   }
 
 
-  public void setRefundDetails(ReconEntityDataInnerRefundDetails refundDetails) {
+  public void setRefundDetails(List<ReconEntityDataInnerRefundDetails> refundDetails) {
     this.refundDetails = refundDetails;
   }
 
@@ -324,15 +342,15 @@ public class SettlementReconEntityDataInner {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the optional field `event_details`
       if (jsonObj.get("event_details") != null && !jsonObj.get("event_details").isJsonNull()) {
-        ReconEntityDataInnerEventDetails.validateJsonElement(jsonObj.get("event_details"));
+        SettlementReconEntityDataInnerEventDetails.validateJsonElement(jsonObj.get("event_details"));
       }
       // validate the optional field `order_details`
       if (jsonObj.get("order_details") != null && !jsonObj.get("order_details").isJsonNull()) {
-        ReconEntityDataInnerOrderDetails.validateJsonElement(jsonObj.get("order_details"));
+        SettlementReconEntityDataInnerOrderDetails.validateJsonElement(jsonObj.get("order_details"));
       }
       // validate the optional field `customer_details`
       if (jsonObj.get("customer_details") != null && !jsonObj.get("customer_details").isJsonNull()) {
-        ReconEntityDataInnerCustomerDetails.validateJsonElement(jsonObj.get("customer_details"));
+        SettlementReconEntityDataInnerCustomerDetails.validateJsonElement(jsonObj.get("customer_details"));
       }
       // validate the optional field `payment_details`
       if (jsonObj.get("payment_details") != null && !jsonObj.get("payment_details").isJsonNull()) {
@@ -340,15 +358,35 @@ public class SettlementReconEntityDataInner {
       }
       // validate the optional field `settlement_details`
       if (jsonObj.get("settlement_details") != null && !jsonObj.get("settlement_details").isJsonNull()) {
-        ReconEntityDataInnerSettlementDetails.validateJsonElement(jsonObj.get("settlement_details"));
+        SettlementReconEntityDataInnerSettlementDetails.validateJsonElement(jsonObj.get("settlement_details"));
       }
-      // validate the optional field `dispute_details`
       if (jsonObj.get("dispute_details") != null && !jsonObj.get("dispute_details").isJsonNull()) {
-        ReconEntityDataInnerDisputeDetails.validateJsonElement(jsonObj.get("dispute_details"));
+        JsonArray jsonArraydisputeDetails = jsonObj.getAsJsonArray("dispute_details");
+        if (jsonArraydisputeDetails != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("dispute_details").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `dispute_details` to be an array in the JSON string but got `%s`", jsonObj.get("dispute_details").toString()));
+          }
+
+          // validate the optional field `dispute_details` (array)
+          for (int i = 0; i < jsonArraydisputeDetails.size(); i++) {
+            SettlementReconEntityDataInnerDisputeDetailsInner.validateJsonElement(jsonArraydisputeDetails.get(i));
+          };
+        }
       }
-      // validate the optional field `refund_details`
       if (jsonObj.get("refund_details") != null && !jsonObj.get("refund_details").isJsonNull()) {
-        ReconEntityDataInnerRefundDetails.validateJsonElement(jsonObj.get("refund_details"));
+        JsonArray jsonArrayrefundDetails = jsonObj.getAsJsonArray("refund_details");
+        if (jsonArrayrefundDetails != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("refund_details").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `refund_details` to be an array in the JSON string but got `%s`", jsonObj.get("refund_details").toString()));
+          }
+
+          // validate the optional field `refund_details` (array)
+          for (int i = 0; i < jsonArrayrefundDetails.size(); i++) {
+            ReconEntityDataInnerRefundDetails.validateJsonElement(jsonArrayrefundDetails.get(i));
+          };
+        }
       }
   }
 
@@ -364,17 +402,17 @@ public class SettlementReconEntityDataInner {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the optional field `event_details`
       if (jsonObj.get("event_details") != null && !jsonObj.get("event_details").isJsonNull()) {
-        ReconEntityDataInnerEventDetails.validateJsonElement(jsonObj.get("event_details"));
+        SettlementReconEntityDataInnerEventDetails.validateJsonElement(jsonObj.get("event_details"));
         return true;
       }
       // validate the optional field `order_details`
       if (jsonObj.get("order_details") != null && !jsonObj.get("order_details").isJsonNull()) {
-        ReconEntityDataInnerOrderDetails.validateJsonElement(jsonObj.get("order_details"));
+        SettlementReconEntityDataInnerOrderDetails.validateJsonElement(jsonObj.get("order_details"));
         return true;
       }
       // validate the optional field `customer_details`
       if (jsonObj.get("customer_details") != null && !jsonObj.get("customer_details").isJsonNull()) {
-        ReconEntityDataInnerCustomerDetails.validateJsonElement(jsonObj.get("customer_details"));
+        SettlementReconEntityDataInnerCustomerDetails.validateJsonElement(jsonObj.get("customer_details"));
         return true;
       }
       // validate the optional field `payment_details`
@@ -384,18 +422,36 @@ public class SettlementReconEntityDataInner {
       }
       // validate the optional field `settlement_details`
       if (jsonObj.get("settlement_details") != null && !jsonObj.get("settlement_details").isJsonNull()) {
-        ReconEntityDataInnerSettlementDetails.validateJsonElement(jsonObj.get("settlement_details"));
+        SettlementReconEntityDataInnerSettlementDetails.validateJsonElement(jsonObj.get("settlement_details"));
         return true;
       }
-      // validate the optional field `dispute_details`
       if (jsonObj.get("dispute_details") != null && !jsonObj.get("dispute_details").isJsonNull()) {
-        ReconEntityDataInnerDisputeDetails.validateJsonElement(jsonObj.get("dispute_details"));
-        return true;
+        JsonArray jsonArraydisputeDetails = jsonObj.getAsJsonArray("dispute_details");
+        if (jsonArraydisputeDetails != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("dispute_details").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `dispute_details` to be an array in the JSON string but got `%s`", jsonObj.get("dispute_details").toString()));
+          }
+
+          // validate the optional field `dispute_details` (array)
+          for (int i = 0; i < jsonArraydisputeDetails.size(); i++) {
+            SettlementReconEntityDataInnerDisputeDetailsInner.validateJsonElement(jsonArraydisputeDetails.get(i));
+          };
+        }
       }
-      // validate the optional field `refund_details`
       if (jsonObj.get("refund_details") != null && !jsonObj.get("refund_details").isJsonNull()) {
-        ReconEntityDataInnerRefundDetails.validateJsonElement(jsonObj.get("refund_details"));
-        return true;
+        JsonArray jsonArrayrefundDetails = jsonObj.getAsJsonArray("refund_details");
+        if (jsonArrayrefundDetails != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("refund_details").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `refund_details` to be an array in the JSON string but got `%s`", jsonObj.get("refund_details").toString()));
+          }
+
+          // validate the optional field `refund_details` (array)
+          for (int i = 0; i < jsonArrayrefundDetails.size(); i++) {
+            ReconEntityDataInnerRefundDetails.validateJsonElement(jsonArrayrefundDetails.get(i));
+          };
+        }
       }
       return false;
   }
