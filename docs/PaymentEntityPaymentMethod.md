@@ -15,6 +15,7 @@
 |**paylater** | [**PaymentMethodAppInPaymentsEntityApp**](PaymentMethodAppInPaymentsEntityApp.md) |  |  [optional] |
 |**emi** | [**PaymentMethodCardEMIInPaymentsEntityEmi**](PaymentMethodCardEMIInPaymentsEntityEmi.md) |  |  [optional] |
 |**banktransfer** | [**PaymentMethodBankTransferInPaymentsEntityBanktransfer**](PaymentMethodBankTransferInPaymentsEntityBanktransfer.md) |  |  [optional] |
+|**others** | **Object** |  |  [optional] |
 
 
 

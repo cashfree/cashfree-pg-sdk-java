@@ -54,7 +54,7 @@ import com.cashfree.pg.JSON;
  * Recon Request Object.
  */
 @Schema(description = "Recon Request Object.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-26T07:19:12.713912673Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-17T07:54:27.618696671Z[GMT]")
 public class SettlementFetchReconRequest {
   public static final String SERIALIZED_NAME_PAGINATION = "pagination";
   @SerializedName(SERIALIZED_NAME_PAGINATION)
@@ -99,8 +99,8 @@ public class SettlementFetchReconRequest {
    * Get filters
    * @return filters
   **/
-  @javax.annotation.Nullable
-  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "")
+  @javax.annotation.Nonnull
+  @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "")
   public SettlementFetchReconRequestFilters getFilters() {
     return filters;
   }
@@ -163,6 +163,7 @@ public class SettlementFetchReconRequest {
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("pagination");
+    openapiRequiredFields.add("filters");
   }
 
  /**
@@ -183,10 +184,8 @@ public class SettlementFetchReconRequest {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `pagination`
       FetchSettlementsRequestPagination.validateJsonElement(jsonObj.get("pagination"));
-      // validate the optional field `filters`
-      if (jsonObj.get("filters") != null && !jsonObj.get("filters").isJsonNull()) {
-        SettlementFetchReconRequestFilters.validateJsonElement(jsonObj.get("filters"));
-      }
+      // validate the required field `filters`
+      SettlementFetchReconRequestFilters.validateJsonElement(jsonObj.get("filters"));
   }
 
 
@@ -208,11 +207,8 @@ public class SettlementFetchReconRequest {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `pagination`
       FetchSettlementsRequestPagination.validateJsonElement(jsonObj.get("pagination"));
-      // validate the optional field `filters`
-      if (jsonObj.get("filters") != null && !jsonObj.get("filters").isJsonNull()) {
-        SettlementFetchReconRequestFilters.validateJsonElement(jsonObj.get("filters"));
-        return true;
-      }
+      // validate the required field `filters`
+      SettlementFetchReconRequestFilters.validateJsonElement(jsonObj.get("filters"));
       return false;
   }
 

@@ -218,7 +218,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -345,7 +345,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -472,7 +472,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -599,7 +599,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -726,7 +726,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -869,7 +869,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1034,7 +1034,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XClientSecret", "XClientID" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1152,7 +1152,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1275,7 +1275,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1396,7 +1396,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1513,7 +1513,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1639,7 +1639,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1760,7 +1760,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1886,7 +1886,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2012,7 +2012,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2135,7 +2135,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2253,7 +2253,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2390,7 +2390,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2515,7 +2515,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2636,7 +2636,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2752,7 +2752,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2880,7 +2880,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3007,7 +3007,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3135,7 +3135,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3283,7 +3283,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3406,7 +3406,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XClientSecret", "XClientID" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3533,7 +3533,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3660,7 +3660,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3787,7 +3787,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3914,7 +3914,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4041,7 +4041,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4170,7 +4170,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4304,7 +4304,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4436,7 +4436,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4563,7 +4563,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4691,7 +4691,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4823,7 +4823,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4953,7 +4953,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5088,7 +5088,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] {  };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5223,7 +5223,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5356,7 +5356,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5504,7 +5504,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] {  };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5632,7 +5632,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] {  };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5769,7 +5769,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5895,7 +5895,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6025,7 +6025,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6160,7 +6160,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6292,7 +6292,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6424,7 +6424,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6571,7 +6571,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6593,13 +6593,13 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<SettlementEntity> PGFetchSettlements(FetchSettlementsRequest fetchSettlementsRequest, String contentType, String xRequestId, UUID xIdempotencyKey, String accept, OkHttpClient httpClient) throws ApiException {
+    public ApiResponse<GetAllSettlementsResponse> PGFetchSettlements(FetchSettlementsRequest fetchSettlementsRequest, String contentType, String xRequestId, UUID xIdempotencyKey, String accept, OkHttpClient httpClient) throws ApiException {
         String xApiVersion = this.XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
         okhttp3.Call localVarCall = pGFetchSettlementsValidateBeforeCall(xApiVersion, fetchSettlementsRequest, contentType, xRequestId, xIdempotencyKey, accept, null);
-        Type localVarReturnType = new TypeToken<SettlementEntity>(){}.getType();
+        Type localVarReturnType = new TypeToken<GetAllSettlementsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -6708,7 +6708,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6753,7 +6753,7 @@ public class Cashfree {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
         <tr><td> 400 </td><td> Create Settlement Failure Response. </td><td>  -  </td></tr>
         <tr><td> 401 </td><td> Authentication Error. </td><td>  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  </td></tr>
         <tr><td> 404 </td><td> Create Settlement Failure Response. </td><td>  -  </td></tr>
@@ -6832,7 +6832,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6849,13 +6849,13 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<Object> MarkForSettlement(String xRequestId, UUID xIdempotencyKey, CreateOrderSettlementRequestBody createOrderSettlementRequestBody, OkHttpClient httpClient) throws ApiException {
+    public ApiResponse<MarkOrderSettlementResponse> MarkForSettlement(String xRequestId, UUID xIdempotencyKey, CreateOrderSettlementRequestBody createOrderSettlementRequestBody, OkHttpClient httpClient) throws ApiException {
         String xApiVersion = this.XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
         okhttp3.Call localVarCall = markForSettlementValidateBeforeCall(xApiVersion, xRequestId, xIdempotencyKey, createOrderSettlementRequestBody, null);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        Type localVarReturnType = new TypeToken<MarkOrderSettlementResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -6955,7 +6955,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6977,13 +6977,13 @@ public class Cashfree {
 
     }
 
-    public ApiResponse<SettlementEntity> PGOrderFetchSettlement(String orderId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
+    public ApiResponse<OrderSettlementEntity> PGOrderFetchSettlement(String orderId, String xRequestId, UUID xIdempotencyKey, OkHttpClient httpClient) throws ApiException {
         String xApiVersion = this.XApiVersion;
         if(httpClient != null) {
             localVarApiClient.httpClient = httpClient;
         }
         okhttp3.Call localVarCall = pGOrderFetchSettlementValidateBeforeCall(xApiVersion, orderId, xRequestId, xIdempotencyKey, null);
-        Type localVarReturnType = new TypeToken<SettlementEntity>(){}.getType();
+        Type localVarReturnType = new TypeToken<OrderSettlementEntity>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -7080,7 +7080,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -7205,7 +7205,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -7330,7 +7330,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -7455,7 +7455,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -7582,7 +7582,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -7709,7 +7709,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -7836,7 +7836,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -7963,7 +7963,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -8098,7 +8098,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -8238,7 +8238,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -8375,7 +8375,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -8508,7 +8508,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -8630,7 +8630,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -8759,7 +8759,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -8893,7 +8893,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -9027,7 +9027,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -9161,7 +9161,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -9292,7 +9292,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -9418,7 +9418,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -9546,7 +9546,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -9677,7 +9677,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -9802,7 +9802,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -9927,7 +9927,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -10054,7 +10054,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -10185,7 +10185,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -10312,7 +10312,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -10442,7 +10442,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -10570,7 +10570,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -10704,7 +10704,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -10856,7 +10856,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -10997,7 +10997,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -11127,7 +11127,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -11262,7 +11262,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -11399,7 +11399,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -11534,7 +11534,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -11666,7 +11666,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -11793,7 +11793,7 @@ public class Cashfree {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.2");
+        localVarHeaderParams.put("x-sdk-platform", "javasdk-6.0.8");
 
         String[] localVarAuthNames = new String[] { "XPartnerAPIKey", "XClientSecret", "XPartnerMerchantID", "XClientID", "XClientSignatureHeader" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -11925,7 +11925,7 @@ static class ApiClient {
         json = new JSON();
 
         // Set default User-Agent.
-        setUserAgent("OpenAPI-Generator/6.0.2/java");
+        setUserAgent("OpenAPI-Generator/6.0.8/java");
 
         authentications = new HashMap<String, Authentication>();
     }

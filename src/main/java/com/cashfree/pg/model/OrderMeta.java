@@ -55,7 +55,7 @@ import com.cashfree.pg.JSON;
  * Optional meta details to control how the customer pays and how payment journey completes.
  */
 @Schema(description = "Optional meta details to control how the customer pays and how payment journey completes.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-26T07:19:12.713912673Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-17T07:54:27.618696671Z[GMT]")
 public class OrderMeta {
   public static final String SERIALIZED_NAME_RETURN_URL = "return_url";
   @SerializedName(SERIALIZED_NAME_RETURN_URL)

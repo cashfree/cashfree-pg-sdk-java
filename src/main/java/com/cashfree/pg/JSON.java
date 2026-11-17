@@ -210,6 +210,8 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.FetchSettlementsRequestFilters.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.FetchSettlementsRequestPagination.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.FetchTerminalQRCodesEntity.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.GetAllSettlementsResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.GetAllSettlementsResponseDataInner.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.GetAllTerminalPaymentEntity.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.GetAllTerminalTransactionRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.GetCardBinRequest.CustomTypeAdapterFactory());
@@ -235,6 +237,8 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.ManageSubscriptionPaymentRequestActionDetails.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.ManageSubscriptionRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.ManageSubscriptionRequestActionDetails.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.MarkOrderSettlementResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.MarkOrderSettlementResponseMetaData.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.NetBankingDowntime.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.NetBankingDowntimeNetBanking.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.NetBankingPaymentMethod.CustomTypeAdapterFactory());
@@ -276,6 +280,11 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.OrderMetaPaymentMethodsFiltersMethods.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.OrderPayData.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.OrderPaymentMethodFilters.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.OrderSettlementEntity.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.OrderSettlementEntityCustomerDetails.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.OrderSettlementEntityOrderDetails.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.OrderSettlementEntityPaymentDetails.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.OrderSettlementEntitySettlementDetails.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.OrderUpdateRefundRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.PARRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.PGCreatePAR200Response.CustomTypeAdapterFactory());
@@ -306,6 +315,7 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.PaymentMethodCardlessEMIInPaymentsEntity.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.PaymentMethodNetBankingInPaymentsEntity.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.PaymentMethodNetBankingInPaymentsEntityNetbanking.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.PaymentMethodOthersInPaymentsEntity.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.PaymentMethodPaylaterInPaymentsEntity.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.PaymentMethodUPIInPaymentsEntity.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.PaymentMethodUPIInPaymentsEntityUpi.CustomTypeAdapterFactory());
@@ -346,7 +356,12 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.SettlementFetchReconRequestFilters.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.SettlementReconEntity.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.SettlementReconEntityDataInner.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.SettlementReconEntityDataInnerCustomerDetails.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.SettlementReconEntityDataInnerDisputeDetailsInner.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.SettlementReconEntityDataInnerEventDetails.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.SettlementReconEntityDataInnerOrderDetails.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.SettlementReconEntityDataInnerPaymentDetails.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.SettlementReconEntityDataInnerSettlementDetails.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.SettlementSimulationResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.SettlementWebhook.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.cashfree.pg.model.SettlementWebhookDataEntity.CustomTypeAdapterFactory());
