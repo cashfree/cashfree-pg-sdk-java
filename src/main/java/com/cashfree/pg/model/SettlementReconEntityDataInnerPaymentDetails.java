@@ -52,7 +52,7 @@ import com.cashfree.pg.JSON;
 /**
  * SettlementReconEntityDataInnerPaymentDetails
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-26T07:19:12.713912673Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-17T08:40:22.581020108Z[GMT]")
 public class SettlementReconEntityDataInnerPaymentDetails {
   public static final String SERIALIZED_NAME_PAYMENT_AMOUNT = "payment_amount";
   @SerializedName(SERIALIZED_NAME_PAYMENT_AMOUNT)
@@ -70,9 +70,9 @@ public class SettlementReconEntityDataInnerPaymentDetails {
   @SerializedName(SERIALIZED_NAME_PAYMENT_TIME)
   private String paymentTime;
 
-  public static final String SERIALIZED_NAME_PAYMENT_MODE = "payment_mode";
-  @SerializedName(SERIALIZED_NAME_PAYMENT_MODE)
-  private String paymentMode;
+  public static final String SERIALIZED_NAME_PAYMENT_GROUP = "payment_group";
+  @SerializedName(SERIALIZED_NAME_PAYMENT_GROUP)
+  private String paymentGroup;
 
   public static final String SERIALIZED_NAME_PAYMENT_SERVICE_CHARGE = "payment_service_charge";
   @SerializedName(SERIALIZED_NAME_PAYMENT_SERVICE_CHARGE)
@@ -92,11 +92,11 @@ public class SettlementReconEntityDataInnerPaymentDetails {
 
   public static final String SERIALIZED_NAME_FOREX_CONVERSION_HANDLING_CHARGE = "forex_conversion_handling_charge";
   @SerializedName(SERIALIZED_NAME_FOREX_CONVERSION_HANDLING_CHARGE)
-  private String forexConversionHandlingCharge;
+  private BigDecimal forexConversionHandlingCharge;
 
   public static final String SERIALIZED_NAME_FOREX_CONVERSION_HANDLING_TAX = "forex_conversion_handling_tax";
   @SerializedName(SERIALIZED_NAME_FOREX_CONVERSION_HANDLING_TAX)
-  private String forexConversionHandlingTax;
+  private BigDecimal forexConversionHandlingTax;
 
   public static final String SERIALIZED_NAME_CHARGES_CURRENCY = "charges_currency";
   @SerializedName(SERIALIZED_NAME_CHARGES_CURRENCY)
@@ -134,11 +134,11 @@ public class SettlementReconEntityDataInnerPaymentDetails {
   }
 
    /**
-   * Payment Curreny type - INR.
+   * Payment Currency type - INR.
    * @return paymentCurrency
   **/
   @javax.annotation.Nullable
-  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Payment Curreny type - INR.")
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Payment Currency type - INR.")
   public String getPaymentCurrency() {
     return paymentCurrency;
   }
@@ -193,25 +193,25 @@ public class SettlementReconEntityDataInnerPaymentDetails {
   }
 
 
-  public SettlementReconEntityDataInnerPaymentDetails paymentMode(String paymentMode) {
+  public SettlementReconEntityDataInnerPaymentDetails paymentGroup(String paymentGroup) {
     
-    this.paymentMode = paymentMode;
+    this.paymentGroup = paymentGroup;
     return this;
   }
 
    /**
-   * Mode of the payment.
-   * @return paymentMode
+   * Payment group/mode of the payment. Example - UPI, CREDIT_CARD.
+   * @return paymentGroup
   **/
   @javax.annotation.Nullable
-  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Mode of the payment.")
-  public String getPaymentMode() {
-    return paymentMode;
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Payment group/mode of the payment. Example - UPI, CREDIT_CARD.")
+  public String getPaymentGroup() {
+    return paymentGroup;
   }
 
 
-  public void setPaymentMode(String paymentMode) {
-    this.paymentMode = paymentMode;
+  public void setPaymentGroup(String paymentGroup) {
+    this.paymentGroup = paymentGroup;
   }
 
 
@@ -303,7 +303,7 @@ public class SettlementReconEntityDataInnerPaymentDetails {
   }
 
 
-  public SettlementReconEntityDataInnerPaymentDetails forexConversionHandlingCharge(String forexConversionHandlingCharge) {
+  public SettlementReconEntityDataInnerPaymentDetails forexConversionHandlingCharge(BigDecimal forexConversionHandlingCharge) {
     
     this.forexConversionHandlingCharge = forexConversionHandlingCharge;
     return this;
@@ -315,17 +315,17 @@ public class SettlementReconEntityDataInnerPaymentDetails {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Forex Conversion Service Charge.")
-  public String getForexConversionHandlingCharge() {
+  public BigDecimal getForexConversionHandlingCharge() {
     return forexConversionHandlingCharge;
   }
 
 
-  public void setForexConversionHandlingCharge(String forexConversionHandlingCharge) {
+  public void setForexConversionHandlingCharge(BigDecimal forexConversionHandlingCharge) {
     this.forexConversionHandlingCharge = forexConversionHandlingCharge;
   }
 
 
-  public SettlementReconEntityDataInnerPaymentDetails forexConversionHandlingTax(String forexConversionHandlingTax) {
+  public SettlementReconEntityDataInnerPaymentDetails forexConversionHandlingTax(BigDecimal forexConversionHandlingTax) {
     
     this.forexConversionHandlingTax = forexConversionHandlingTax;
     return this;
@@ -337,12 +337,12 @@ public class SettlementReconEntityDataInnerPaymentDetails {
   **/
   @javax.annotation.Nullable
   @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Forex Conversion Service Tax.")
-  public String getForexConversionHandlingTax() {
+  public BigDecimal getForexConversionHandlingTax() {
     return forexConversionHandlingTax;
   }
 
 
-  public void setForexConversionHandlingTax(String forexConversionHandlingTax) {
+  public void setForexConversionHandlingTax(BigDecimal forexConversionHandlingTax) {
     this.forexConversionHandlingTax = forexConversionHandlingTax;
   }
 
@@ -354,11 +354,11 @@ public class SettlementReconEntityDataInnerPaymentDetails {
   }
 
    /**
-   * Forex Charges Curreny type - INR.
+   * Forex Charges Currency type - INR.
    * @return chargesCurrency
   **/
   @javax.annotation.Nullable
-  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Forex Charges Curreny type - INR.")
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Forex Charges Currency type - INR.")
   public String getChargesCurrency() {
     return chargesCurrency;
   }
@@ -382,7 +382,7 @@ public class SettlementReconEntityDataInnerPaymentDetails {
         Objects.equals(this.paymentCurrency, settlementReconEntityDataInnerPaymentDetails.paymentCurrency) &&
         Objects.equals(this.bankReference, settlementReconEntityDataInnerPaymentDetails.bankReference) &&
         Objects.equals(this.paymentTime, settlementReconEntityDataInnerPaymentDetails.paymentTime) &&
-        Objects.equals(this.paymentMode, settlementReconEntityDataInnerPaymentDetails.paymentMode) &&
+        Objects.equals(this.paymentGroup, settlementReconEntityDataInnerPaymentDetails.paymentGroup) &&
         Objects.equals(this.paymentServiceCharge, settlementReconEntityDataInnerPaymentDetails.paymentServiceCharge) &&
         Objects.equals(this.paymentServiceTax, settlementReconEntityDataInnerPaymentDetails.paymentServiceTax) &&
         Objects.equals(this.cfPaymentId, settlementReconEntityDataInnerPaymentDetails.cfPaymentId) &&
@@ -394,7 +394,7 @@ public class SettlementReconEntityDataInnerPaymentDetails {
 
   @Override
   public int hashCode() {
-    return Objects.hash(paymentAmount, paymentCurrency, bankReference, paymentTime, paymentMode, paymentServiceCharge, paymentServiceTax, cfPaymentId, status, forexConversionHandlingCharge, forexConversionHandlingTax, chargesCurrency);
+    return Objects.hash(paymentAmount, paymentCurrency, bankReference, paymentTime, paymentGroup, paymentServiceCharge, paymentServiceTax, cfPaymentId, status, forexConversionHandlingCharge, forexConversionHandlingTax, chargesCurrency);
   }
 
   @Override
@@ -405,7 +405,7 @@ public class SettlementReconEntityDataInnerPaymentDetails {
     sb.append("    paymentCurrency: ").append(toIndentedString(paymentCurrency)).append("\n");
     sb.append("    bankReference: ").append(toIndentedString(bankReference)).append("\n");
     sb.append("    paymentTime: ").append(toIndentedString(paymentTime)).append("\n");
-    sb.append("    paymentMode: ").append(toIndentedString(paymentMode)).append("\n");
+    sb.append("    paymentGroup: ").append(toIndentedString(paymentGroup)).append("\n");
     sb.append("    paymentServiceCharge: ").append(toIndentedString(paymentServiceCharge)).append("\n");
     sb.append("    paymentServiceTax: ").append(toIndentedString(paymentServiceTax)).append("\n");
     sb.append("    cfPaymentId: ").append(toIndentedString(cfPaymentId)).append("\n");
@@ -439,7 +439,7 @@ public class SettlementReconEntityDataInnerPaymentDetails {
     openapiFields.add("payment_currency");
     openapiFields.add("bank_reference");
     openapiFields.add("payment_time");
-    openapiFields.add("payment_mode");
+    openapiFields.add("payment_group");
     openapiFields.add("payment_service_charge");
     openapiFields.add("payment_service_tax");
     openapiFields.add("cf_payment_id");
@@ -470,20 +470,14 @@ public class SettlementReconEntityDataInnerPaymentDetails {
       if ((jsonObj.get("payment_time") != null && !jsonObj.get("payment_time").isJsonNull()) && !jsonObj.get("payment_time").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `payment_time` to be a primitive type in the JSON string but got `%s`", jsonObj.get("payment_time").toString()));
       }
-      if ((jsonObj.get("payment_mode") != null && !jsonObj.get("payment_mode").isJsonNull()) && !jsonObj.get("payment_mode").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `payment_mode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("payment_mode").toString()));
+      if ((jsonObj.get("payment_group") != null && !jsonObj.get("payment_group").isJsonNull()) && !jsonObj.get("payment_group").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `payment_group` to be a primitive type in the JSON string but got `%s`", jsonObj.get("payment_group").toString()));
       }
       if ((jsonObj.get("cf_payment_id") != null && !jsonObj.get("cf_payment_id").isJsonNull()) && !jsonObj.get("cf_payment_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `cf_payment_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cf_payment_id").toString()));
       }
       if ((jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) && !jsonObj.get("status").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
-      }
-      if ((jsonObj.get("forex_conversion_handling_charge") != null && !jsonObj.get("forex_conversion_handling_charge").isJsonNull()) && !jsonObj.get("forex_conversion_handling_charge").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `forex_conversion_handling_charge` to be a primitive type in the JSON string but got `%s`", jsonObj.get("forex_conversion_handling_charge").toString()));
-      }
-      if ((jsonObj.get("forex_conversion_handling_tax") != null && !jsonObj.get("forex_conversion_handling_tax").isJsonNull()) && !jsonObj.get("forex_conversion_handling_tax").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `forex_conversion_handling_tax` to be a primitive type in the JSON string but got `%s`", jsonObj.get("forex_conversion_handling_tax").toString()));
       }
       if ((jsonObj.get("charges_currency") != null && !jsonObj.get("charges_currency").isJsonNull()) && !jsonObj.get("charges_currency").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `charges_currency` to be a primitive type in the JSON string but got `%s`", jsonObj.get("charges_currency").toString()));
@@ -509,20 +503,14 @@ public class SettlementReconEntityDataInnerPaymentDetails {
       if ((jsonObj.get("payment_time") != null && !jsonObj.get("payment_time").isJsonNull()) && !jsonObj.get("payment_time").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `payment_time` to be a primitive type in the JSON string but got `%s`", jsonObj.get("payment_time").toString()));
       }
-      if ((jsonObj.get("payment_mode") != null && !jsonObj.get("payment_mode").isJsonNull()) && !jsonObj.get("payment_mode").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `payment_mode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("payment_mode").toString()));
+      if ((jsonObj.get("payment_group") != null && !jsonObj.get("payment_group").isJsonNull()) && !jsonObj.get("payment_group").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `payment_group` to be a primitive type in the JSON string but got `%s`", jsonObj.get("payment_group").toString()));
       }
       if ((jsonObj.get("cf_payment_id") != null && !jsonObj.get("cf_payment_id").isJsonNull()) && !jsonObj.get("cf_payment_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `cf_payment_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cf_payment_id").toString()));
       }
       if ((jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) && !jsonObj.get("status").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
-      }
-      if ((jsonObj.get("forex_conversion_handling_charge") != null && !jsonObj.get("forex_conversion_handling_charge").isJsonNull()) && !jsonObj.get("forex_conversion_handling_charge").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `forex_conversion_handling_charge` to be a primitive type in the JSON string but got `%s`", jsonObj.get("forex_conversion_handling_charge").toString()));
-      }
-      if ((jsonObj.get("forex_conversion_handling_tax") != null && !jsonObj.get("forex_conversion_handling_tax").isJsonNull()) && !jsonObj.get("forex_conversion_handling_tax").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `forex_conversion_handling_tax` to be a primitive type in the JSON string but got `%s`", jsonObj.get("forex_conversion_handling_tax").toString()));
       }
       if ((jsonObj.get("charges_currency") != null && !jsonObj.get("charges_currency").isJsonNull()) && !jsonObj.get("charges_currency").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `charges_currency` to be a primitive type in the JSON string but got `%s`", jsonObj.get("charges_currency").toString()));

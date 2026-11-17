@@ -7,13 +7,13 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**eventDetails** | [**ReconEntityDataInnerEventDetails**](ReconEntityDataInnerEventDetails.md) |  |  [optional] |
-|**orderDetails** | [**ReconEntityDataInnerOrderDetails**](ReconEntityDataInnerOrderDetails.md) |  |  [optional] |
-|**customerDetails** | [**ReconEntityDataInnerCustomerDetails**](ReconEntityDataInnerCustomerDetails.md) |  |  [optional] |
+|**eventDetails** | [**SettlementReconEntityDataInnerEventDetails**](SettlementReconEntityDataInnerEventDetails.md) |  |  [optional] |
+|**orderDetails** | [**SettlementReconEntityDataInnerOrderDetails**](SettlementReconEntityDataInnerOrderDetails.md) |  |  [optional] |
+|**customerDetails** | [**SettlementReconEntityDataInnerCustomerDetails**](SettlementReconEntityDataInnerCustomerDetails.md) |  |  [optional] |
 |**paymentDetails** | [**SettlementReconEntityDataInnerPaymentDetails**](SettlementReconEntityDataInnerPaymentDetails.md) |  |  [optional] |
-|**settlementDetails** | [**ReconEntityDataInnerSettlementDetails**](ReconEntityDataInnerSettlementDetails.md) |  |  [optional] |
-|**disputeDetails** | [**ReconEntityDataInnerDisputeDetails**](ReconEntityDataInnerDisputeDetails.md) |  |  [optional] |
-|**refundDetails** | [**ReconEntityDataInnerRefundDetails**](ReconEntityDataInnerRefundDetails.md) |  |  [optional] |
+|**settlementDetails** | [**SettlementReconEntityDataInnerSettlementDetails**](SettlementReconEntityDataInnerSettlementDetails.md) |  |  [optional] |
+|**disputeDetails** | [**List&lt;SettlementReconEntityDataInnerDisputeDetailsInner&gt;**](SettlementReconEntityDataInnerDisputeDetailsInner.md) | List of disputes linked to this event. |  [optional] |
+|**refundDetails** | [**List&lt;ReconEntityDataInnerRefundDetails&gt;**](ReconEntityDataInnerRefundDetails.md) | List of refunds linked to this event. |  [optional] |
 
 
 

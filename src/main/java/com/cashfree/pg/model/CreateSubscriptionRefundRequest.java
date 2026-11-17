@@ -53,7 +53,7 @@ import com.cashfree.pg.JSON;
  * Request body to create a subscription refund.
  */
 @Schema(description = "Request body to create a subscription refund.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-26T07:19:12.713912673Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-17T08:40:22.581020108Z[GMT]")
 public class CreateSubscriptionRefundRequest {
   public static final String SERIALIZED_NAME_CF_PAYMENT_ID = "cf_payment_id";
   @SerializedName(SERIALIZED_NAME_CF_PAYMENT_ID)

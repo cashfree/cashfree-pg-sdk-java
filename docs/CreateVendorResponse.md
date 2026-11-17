@@ -10,13 +10,13 @@ Create Vendor Response.
 |------------ | ------------- | ------------- | -------------|
 |**email** | **String** |  |  [optional] |
 |**status** | **String** |  |  [optional] |
-|**bank** | [**List&lt;BankDetails&gt;**](BankDetails.md) |  |  [optional] |
+|**bank** | [**BankDetails**](BankDetails.md) |  |  [optional] |
 |**upi** | **String** |  |  [optional] |
 |**phone** | **BigDecimal** |  |  [optional] |
 |**name** | **String** |  |  [optional] |
 |**vendorId** | **String** |  |  [optional] |
-|**scheduleOption** | [**List&lt;ScheduleOption&gt;**](ScheduleOption.md) |  |  [optional] |
-|**kycDetails** | [**List&lt;KycDetails&gt;**](KycDetails.md) |  |  [optional] |
+|**scheduleOption** | [**ScheduleOption**](ScheduleOption.md) |  |  [optional] |
+|**kycDetails** | [**KycDetails**](KycDetails.md) |  |  [optional] |
 |**dashboardAccess** | **Boolean** |  |  [optional] |
 |**bankDetails** | **String** |  |  [optional] |
 

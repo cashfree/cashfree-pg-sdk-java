@@ -53,7 +53,7 @@ import com.cashfree.pg.JSON;
  * If preauth enabled for account you will get this body.
  */
 @Schema(description = "If preauth enabled for account you will get this body.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-26T07:19:12.713912673Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-17T08:40:22.581020108Z[GMT]")
 public class AuthorizationInPaymentsEntity {
   /**
    * One of CAPTURE or VOID.

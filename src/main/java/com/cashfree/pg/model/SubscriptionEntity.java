@@ -58,7 +58,7 @@ import com.cashfree.pg.JSON;
 /**
  * SubscriptionEntity
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-26T07:19:12.713912673Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-17T08:40:22.581020108Z[GMT]")
 public class SubscriptionEntity {
   public static final String SERIALIZED_NAME_AUTHORISATION_DETAILS = "authorisation_details";
   @SerializedName(SERIALIZED_NAME_AUTHORISATION_DETAILS)
@@ -653,6 +653,10 @@ public class SubscriptionEntity {
       }
       if ((jsonObj.get("subscription_status") != null && !jsonObj.get("subscription_status").isJsonNull()) && !jsonObj.get("subscription_status").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `subscription_status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("subscription_status").toString()));
+      }
+      // free-form object field `subscription_tags`: match when the key is present as a JSON object
+      if (jsonObj.get("subscription_tags") != null && !jsonObj.get("subscription_tags").isJsonNull() && jsonObj.get("subscription_tags").isJsonObject()) {
+        return true;
       }
       if ((jsonObj.get("next_schedule_date") != null && !jsonObj.get("next_schedule_date").isJsonNull()) && !jsonObj.get("next_schedule_date").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `next_schedule_date` to be a primitive type in the JSON string but got `%s`", jsonObj.get("next_schedule_date").toString()));

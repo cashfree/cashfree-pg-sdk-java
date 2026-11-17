@@ -57,7 +57,7 @@ import com.cashfree.pg.JSON;
  * The refund entity.
  */
 @Schema(description = "The refund entity.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-26T07:19:12.713912673Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-17T08:40:22.581020108Z[GMT]")
 public class RefundEntity {
   public static final String SERIALIZED_NAME_CF_PAYMENT_ID = "cf_payment_id";
   @SerializedName(SERIALIZED_NAME_CF_PAYMENT_ID)
@@ -1045,6 +1045,10 @@ public class RefundEntity {
       }
       if ((jsonObj.get("status_description") != null && !jsonObj.get("status_description").isJsonNull()) && !jsonObj.get("status_description").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `status_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status_description").toString()));
+      }
+      // free-form object field `metadata`: match when the key is present as a JSON object
+      if (jsonObj.get("metadata") != null && !jsonObj.get("metadata").isJsonNull() && jsonObj.get("metadata").isJsonObject()) {
+        return true;
       }
       if (jsonObj.get("refund_splits") != null && !jsonObj.get("refund_splits").isJsonNull()) {
         JsonArray jsonArrayrefundSplits = jsonObj.getAsJsonArray("refund_splits");

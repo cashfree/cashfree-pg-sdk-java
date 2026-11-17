@@ -51,10 +51,10 @@ import java.util.Set;
 import com.cashfree.pg.JSON;
 
 /**
- * Specify either the Settlement ID, Settlement UTR, or start date and end date to fetch the settlement details.
+ * Specify either the Settlement ID, Settlement UTR, or date range filters to fetch the settlement details.
  */
-@Schema(description = "Specify either the Settlement ID, Settlement UTR, or start date and end date to fetch the settlement details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-26T07:19:12.713912673Z[Etc/UTC]")
+@Schema(description = "Specify either the Settlement ID, Settlement UTR, or date range filters to fetch the settlement details.")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-17T08:40:22.581020108Z[GMT]")
 public class SettlementFetchReconRequestFilters {
   public static final String SERIALIZED_NAME_CF_SETTLEMENT_IDS = "cf_settlement_ids";
   @SerializedName(SERIALIZED_NAME_CF_SETTLEMENT_IDS)
@@ -64,11 +64,29 @@ public class SettlementFetchReconRequestFilters {
   @SerializedName(SERIALIZED_NAME_SETTLEMENT_UTRS)
   private List<String> settlementUtrs = new ArrayList<>();
 
+  public static final String SERIALIZED_NAME_START_DATE_INITIATED_ON = "start_date_initiated_on";
+  @SerializedName(SERIALIZED_NAME_START_DATE_INITIATED_ON)
+  private String startDateInitiatedOn;
+
+  public static final String SERIALIZED_NAME_END_DATE_INITIATED_ON = "end_date_initiated_on";
+  @SerializedName(SERIALIZED_NAME_END_DATE_INITIATED_ON)
+  private String endDateInitiatedOn;
+
+  public static final String SERIALIZED_NAME_START_DATE_PROCESSED_ON = "start_date_processed_on";
+  @SerializedName(SERIALIZED_NAME_START_DATE_PROCESSED_ON)
+  private String startDateProcessedOn;
+
+  public static final String SERIALIZED_NAME_END_DATE_PROCESSED_ON = "end_date_processed_on";
+  @SerializedName(SERIALIZED_NAME_END_DATE_PROCESSED_ON)
+  private String endDateProcessedOn;
+
   public static final String SERIALIZED_NAME_START_DATE = "start_date";
+  @Deprecated
   @SerializedName(SERIALIZED_NAME_START_DATE)
   private String startDate;
 
   public static final String SERIALIZED_NAME_END_DATE = "end_date";
+  @Deprecated
   @SerializedName(SERIALIZED_NAME_END_DATE)
   private String endDate;
 
@@ -135,6 +153,95 @@ public class SettlementFetchReconRequestFilters {
   }
 
 
+  public SettlementFetchReconRequestFilters startDateInitiatedOn(String startDateInitiatedOn) {
+    
+    this.startDateInitiatedOn = startDateInitiatedOn;
+    return this;
+  }
+
+   /**
+   * Filter events by settlement initiation start date. Use ISO8601 format.
+   * @return startDateInitiatedOn
+  **/
+  @javax.annotation.Nullable
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Filter events by settlement initiation start date. Use ISO8601 format.")
+  public String getStartDateInitiatedOn() {
+    return startDateInitiatedOn;
+  }
+
+
+  public void setStartDateInitiatedOn(String startDateInitiatedOn) {
+    this.startDateInitiatedOn = startDateInitiatedOn;
+  }
+
+
+  public SettlementFetchReconRequestFilters endDateInitiatedOn(String endDateInitiatedOn) {
+    
+    this.endDateInitiatedOn = endDateInitiatedOn;
+    return this;
+  }
+
+   /**
+   * Filter events by settlement initiation end date. Use ISO8601 format.
+   * @return endDateInitiatedOn
+  **/
+  @javax.annotation.Nullable
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Filter events by settlement initiation end date. Use ISO8601 format.")
+  public String getEndDateInitiatedOn() {
+    return endDateInitiatedOn;
+  }
+
+
+  public void setEndDateInitiatedOn(String endDateInitiatedOn) {
+    this.endDateInitiatedOn = endDateInitiatedOn;
+  }
+
+
+  public SettlementFetchReconRequestFilters startDateProcessedOn(String startDateProcessedOn) {
+    
+    this.startDateProcessedOn = startDateProcessedOn;
+    return this;
+  }
+
+   /**
+   * Filter events by settlement processed start date. Use ISO8601 format.
+   * @return startDateProcessedOn
+  **/
+  @javax.annotation.Nullable
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Filter events by settlement processed start date. Use ISO8601 format.")
+  public String getStartDateProcessedOn() {
+    return startDateProcessedOn;
+  }
+
+
+  public void setStartDateProcessedOn(String startDateProcessedOn) {
+    this.startDateProcessedOn = startDateProcessedOn;
+  }
+
+
+  public SettlementFetchReconRequestFilters endDateProcessedOn(String endDateProcessedOn) {
+    
+    this.endDateProcessedOn = endDateProcessedOn;
+    return this;
+  }
+
+   /**
+   * Filter events by settlement processed end date. Use ISO8601 format.
+   * @return endDateProcessedOn
+  **/
+  @javax.annotation.Nullable
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Filter events by settlement processed end date. Use ISO8601 format.")
+  public String getEndDateProcessedOn() {
+    return endDateProcessedOn;
+  }
+
+
+  public void setEndDateProcessedOn(String endDateProcessedOn) {
+    this.endDateProcessedOn = endDateProcessedOn;
+  }
+
+
+  @Deprecated
   public SettlementFetchReconRequestFilters startDate(String startDate) {
     
     this.startDate = startDate;
@@ -142,21 +249,25 @@ public class SettlementFetchReconRequestFilters {
   }
 
    /**
-   * Specify the start date from when you want the settlement reconciliation details.
+   * Deprecated: Use start_date_initiated_on or start_date_processed_on instead. Specify the start date from when you want the settlement reconciliation details.
    * @return startDate
+   * @deprecated
   **/
+  @Deprecated
   @javax.annotation.Nullable
-  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Specify the start date from when you want the settlement reconciliation details.")
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Deprecated: Use start_date_initiated_on or start_date_processed_on instead. Specify the start date from when you want the settlement reconciliation details.")
   public String getStartDate() {
     return startDate;
   }
 
 
+  @Deprecated
   public void setStartDate(String startDate) {
     this.startDate = startDate;
   }
 
 
+  @Deprecated
   public SettlementFetchReconRequestFilters endDate(String endDate) {
     
     this.endDate = endDate;
@@ -164,16 +275,19 @@ public class SettlementFetchReconRequestFilters {
   }
 
    /**
-   * Specify the end date till when you want the settlement reconciliation details.
+   * Deprecated: Use end_date_initiated_on or end_date_processed_on instead. Specify the end date till when you want the settlement reconciliation details.
    * @return endDate
+   * @deprecated
   **/
+  @Deprecated
   @javax.annotation.Nullable
-  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Specify the end date till when you want the settlement reconciliation details.")
+  @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED, description = "Deprecated: Use end_date_initiated_on or end_date_processed_on instead. Specify the end date till when you want the settlement reconciliation details.")
   public String getEndDate() {
     return endDate;
   }
 
 
+  @Deprecated
   public void setEndDate(String endDate) {
     this.endDate = endDate;
   }
@@ -190,13 +304,17 @@ public class SettlementFetchReconRequestFilters {
     SettlementFetchReconRequestFilters settlementFetchReconRequestFilters = (SettlementFetchReconRequestFilters) o;
     return Objects.equals(this.cfSettlementIds, settlementFetchReconRequestFilters.cfSettlementIds) &&
         Objects.equals(this.settlementUtrs, settlementFetchReconRequestFilters.settlementUtrs) &&
+        Objects.equals(this.startDateInitiatedOn, settlementFetchReconRequestFilters.startDateInitiatedOn) &&
+        Objects.equals(this.endDateInitiatedOn, settlementFetchReconRequestFilters.endDateInitiatedOn) &&
+        Objects.equals(this.startDateProcessedOn, settlementFetchReconRequestFilters.startDateProcessedOn) &&
+        Objects.equals(this.endDateProcessedOn, settlementFetchReconRequestFilters.endDateProcessedOn) &&
         Objects.equals(this.startDate, settlementFetchReconRequestFilters.startDate) &&
         Objects.equals(this.endDate, settlementFetchReconRequestFilters.endDate);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(cfSettlementIds, settlementUtrs, startDate, endDate);
+    return Objects.hash(cfSettlementIds, settlementUtrs, startDateInitiatedOn, endDateInitiatedOn, startDateProcessedOn, endDateProcessedOn, startDate, endDate);
   }
 
   @Override
@@ -205,6 +323,10 @@ public class SettlementFetchReconRequestFilters {
     sb.append("class SettlementFetchReconRequestFilters {\n");
     sb.append("    cfSettlementIds: ").append(toIndentedString(cfSettlementIds)).append("\n");
     sb.append("    settlementUtrs: ").append(toIndentedString(settlementUtrs)).append("\n");
+    sb.append("    startDateInitiatedOn: ").append(toIndentedString(startDateInitiatedOn)).append("\n");
+    sb.append("    endDateInitiatedOn: ").append(toIndentedString(endDateInitiatedOn)).append("\n");
+    sb.append("    startDateProcessedOn: ").append(toIndentedString(startDateProcessedOn)).append("\n");
+    sb.append("    endDateProcessedOn: ").append(toIndentedString(endDateProcessedOn)).append("\n");
     sb.append("    startDate: ").append(toIndentedString(startDate)).append("\n");
     sb.append("    endDate: ").append(toIndentedString(endDate)).append("\n");
     sb.append("}");
@@ -231,6 +353,10 @@ public class SettlementFetchReconRequestFilters {
     openapiFields = new HashSet<String>();
     openapiFields.add("cf_settlement_ids");
     openapiFields.add("settlement_utrs");
+    openapiFields.add("start_date_initiated_on");
+    openapiFields.add("end_date_initiated_on");
+    openapiFields.add("start_date_processed_on");
+    openapiFields.add("end_date_processed_on");
     openapiFields.add("start_date");
     openapiFields.add("end_date");
 
@@ -254,6 +380,18 @@ public class SettlementFetchReconRequestFilters {
       // ensure the optional json data is an array if present
       if (jsonObj.get("settlement_utrs") != null && !jsonObj.get("settlement_utrs").isJsonNull() && !jsonObj.get("settlement_utrs").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `settlement_utrs` to be an array in the JSON string but got `%s`", jsonObj.get("settlement_utrs").toString()));
+      }
+      if ((jsonObj.get("start_date_initiated_on") != null && !jsonObj.get("start_date_initiated_on").isJsonNull()) && !jsonObj.get("start_date_initiated_on").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `start_date_initiated_on` to be a primitive type in the JSON string but got `%s`", jsonObj.get("start_date_initiated_on").toString()));
+      }
+      if ((jsonObj.get("end_date_initiated_on") != null && !jsonObj.get("end_date_initiated_on").isJsonNull()) && !jsonObj.get("end_date_initiated_on").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `end_date_initiated_on` to be a primitive type in the JSON string but got `%s`", jsonObj.get("end_date_initiated_on").toString()));
+      }
+      if ((jsonObj.get("start_date_processed_on") != null && !jsonObj.get("start_date_processed_on").isJsonNull()) && !jsonObj.get("start_date_processed_on").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `start_date_processed_on` to be a primitive type in the JSON string but got `%s`", jsonObj.get("start_date_processed_on").toString()));
+      }
+      if ((jsonObj.get("end_date_processed_on") != null && !jsonObj.get("end_date_processed_on").isJsonNull()) && !jsonObj.get("end_date_processed_on").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `end_date_processed_on` to be a primitive type in the JSON string but got `%s`", jsonObj.get("end_date_processed_on").toString()));
       }
       if ((jsonObj.get("start_date") != null && !jsonObj.get("start_date").isJsonNull()) && !jsonObj.get("start_date").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `start_date` to be a primitive type in the JSON string but got `%s`", jsonObj.get("start_date").toString()));
@@ -280,6 +418,18 @@ public class SettlementFetchReconRequestFilters {
       // ensure the optional json data is an array if present
       if (jsonObj.get("settlement_utrs") != null && !jsonObj.get("settlement_utrs").isJsonNull() && !jsonObj.get("settlement_utrs").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `settlement_utrs` to be an array in the JSON string but got `%s`", jsonObj.get("settlement_utrs").toString()));
+      }
+      if ((jsonObj.get("start_date_initiated_on") != null && !jsonObj.get("start_date_initiated_on").isJsonNull()) && !jsonObj.get("start_date_initiated_on").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `start_date_initiated_on` to be a primitive type in the JSON string but got `%s`", jsonObj.get("start_date_initiated_on").toString()));
+      }
+      if ((jsonObj.get("end_date_initiated_on") != null && !jsonObj.get("end_date_initiated_on").isJsonNull()) && !jsonObj.get("end_date_initiated_on").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `end_date_initiated_on` to be a primitive type in the JSON string but got `%s`", jsonObj.get("end_date_initiated_on").toString()));
+      }
+      if ((jsonObj.get("start_date_processed_on") != null && !jsonObj.get("start_date_processed_on").isJsonNull()) && !jsonObj.get("start_date_processed_on").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `start_date_processed_on` to be a primitive type in the JSON string but got `%s`", jsonObj.get("start_date_processed_on").toString()));
+      }
+      if ((jsonObj.get("end_date_processed_on") != null && !jsonObj.get("end_date_processed_on").isJsonNull()) && !jsonObj.get("end_date_processed_on").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `end_date_processed_on` to be a primitive type in the JSON string but got `%s`", jsonObj.get("end_date_processed_on").toString()));
       }
       if ((jsonObj.get("start_date") != null && !jsonObj.get("start_date").isJsonNull()) && !jsonObj.get("start_date").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `start_date` to be a primitive type in the JSON string but got `%s`", jsonObj.get("start_date").toString()));

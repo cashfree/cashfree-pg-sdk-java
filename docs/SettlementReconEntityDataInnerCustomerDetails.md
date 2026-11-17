@@ -13,7 +13,7 @@
 |**customerId** | **String** | Customer&#39;s id. |  [optional] |
 |**customerBankAccountNumber** | **String** | Customer bank account number. |  [optional] |
 |**customerBankCode** | **String** | Customer bank code. |  [optional] |
-|**customerBankIfsc** | **String** | Customer bank ifsc\&quot; |  [optional] |
+|**customerBankIfsc** | **String** | Customer bank IFSC. |  [optional] |
 
 
 

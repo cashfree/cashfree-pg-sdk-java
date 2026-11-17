@@ -11,11 +11,11 @@ All URIs are relative to *https://sandbox.cashfree.com/pg*
 
 ## PGFetchSettlements
 
-> SettlementEntity PGFetchSettlements(xApiVersion, fetchSettlementsRequest, contentType, xRequestId, xIdempotencyKey, accept)
+> GetAllSettlementsResponse PGFetchSettlements(xApiVersion, fetchSettlementsRequest, contentType, xRequestId, xIdempotencyKey, accept)
 
 Get All Settlements
 
-Use this API to get all settlement details by specifying the settlement ID, settlement UTR or date range.
+Use this API to get all settlement details by specifying the settlement ID, settlement UTR, settlement status or date range. Returns settlements of all statuses including SUCCESS, PENDING, PENDING_WITH_CASHFREE, PENDING_WITH_BANK and FAILED.
 
 ### Example
 
@@ -41,7 +41,7 @@ public class Example {
         UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. 
         String accept = "application/json"; // String | application/json.
         try {
-            SettlementEntity result = cashfree.PGFetchSettlements(xApiVersion, fetchSettlementsRequest, contentType, xRequestId, xIdempotencyKey, acceptOkHttpClient httpClient);
+            GetAllSettlementsResponse result = cashfree.PGFetchSettlements(xApiVersion, fetchSettlementsRequest, contentType, xRequestId, xIdempotencyKey, acceptOkHttpClient httpClient);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SettlementReconciliationApi#PGFetchSettlements");
@@ -68,7 +68,7 @@ public class Example {
 
 ### Return type
 
-[**SettlementEntity**](SettlementEntity.md)
+[**GetAllSettlementsResponse**](GetAllSettlementsResponse.md)
 
 ### Authorization
 

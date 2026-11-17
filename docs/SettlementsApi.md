@@ -11,11 +11,11 @@ All URIs are relative to *https://sandbox.cashfree.com/pg*
 
 ## MarkForSettlement
 
-> Object MarkForSettlement(xApiVersion, xRequestId, xIdempotencyKey, createOrderSettlementRequestBody)
+> MarkOrderSettlementResponse MarkForSettlement(xApiVersion, xRequestId, xIdempotencyKey, createOrderSettlementRequestBody)
 
 Mark Order For Settlement
 
-Use this API to pass the CBRICS ID to Cashfree and mark an order for settlement.
+Use this API to pass the CBRIKS ID to Cashfree and mark an order for settlement.
 
 ### Example
 
@@ -39,7 +39,7 @@ public class Example {
         UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. 
         CreateOrderSettlementRequestBody createOrderSettlementRequestBody = new CreateOrderSettlementRequestBody(); // CreateOrderSettlementRequestBody | Create Order Settlement Request Body.
         try {
-            Object result = cashfree.MarkForSettlement(xApiVersion, xRequestId, xIdempotencyKey, createOrderSettlementRequestBodyOkHttpClient httpClient);
+            MarkOrderSettlementResponse result = cashfree.MarkForSettlement(xApiVersion, xRequestId, xIdempotencyKey, createOrderSettlementRequestBodyOkHttpClient httpClient);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SettlementsApi#MarkForSettlement");
@@ -64,7 +64,7 @@ public class Example {
 
 ### Return type
 
-**Object**
+[**MarkOrderSettlementResponse**](MarkOrderSettlementResponse.md)
 
 ### Authorization
 
@@ -79,7 +79,7 @@ public class Example {
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **202** | OK |  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  |
+| **200** | OK |  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  |
 | **400** | Create Settlement Failure Response. |  -  |
 | **401** | Authentication Error. |  * x-api-version -  <br>  * x-ratelimit-limit -  <br>  * x-ratelimit-remaining -  <br>  * x-ratelimit-retry -  <br>  * x-ratelimit-type -  <br>  * x-request-id -  <br>  * x-idempotency-key -  <br>  * x-idempotency-replayed -  <br>  |
 | **404** | Create Settlement Failure Response. |  -  |
@@ -88,11 +88,11 @@ public class Example {
 
 ## PGOrderFetchSettlement
 
-> SettlementEntity PGOrderFetchSettlement(xApiVersion, orderId, xRequestId, xIdempotencyKey)
+> OrderSettlementEntity PGOrderFetchSettlement(xApiVersion, orderId, xRequestId, xIdempotencyKey)
 
 Get Settlements by Order ID
 
-Use this API to view all the settlements of a particular order.
+Use this API to view the latest linked settlement details for a particular order, including pending and failed settlements.
 
 ### Example
 
@@ -116,7 +116,7 @@ public class Example {
         String xRequestId = "4dfb9780-46fe-11ee-be56-0242ac120002"; // String | Request ID for the API call. Can be used to resolve tech issues. Communicate this in your tech related queries to Cashfree.
         UUID xIdempotencyKey = UUID.fromString("47bf8872-46fe-11ee-be56-0242ac120002"); // UUID | An idempotency key is a unique identifier you include with your API call. If the request fails or times out, you can safely retry it using the same key to avoid duplicate actions. 
         try {
-            SettlementEntity result = cashfree.PGOrderFetchSettlement(xApiVersion, orderId, xRequestId, xIdempotencyKeyOkHttpClient httpClient);
+            OrderSettlementEntity result = cashfree.PGOrderFetchSettlement(xApiVersion, orderId, xRequestId, xIdempotencyKeyOkHttpClient httpClient);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling SettlementsApi#PGOrderFetchSettlement");
@@ -141,7 +141,7 @@ public class Example {
 
 ### Return type
 
-[**SettlementEntity**](SettlementEntity.md)
+[**OrderSettlementEntity**](OrderSettlementEntity.md)
 
 ### Authorization
 

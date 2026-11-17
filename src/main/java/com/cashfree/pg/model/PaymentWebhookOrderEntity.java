@@ -55,7 +55,7 @@ import com.cashfree.pg.JSON;
  * order entity in webhook.
  */
 @Schema(description = "order entity in webhook.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-26T07:19:12.713912673Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-17T08:40:22.581020108Z[GMT]")
 public class PaymentWebhookOrderEntity {
   public static final String SERIALIZED_NAME_ORDER_ID = "order_id";
   @SerializedName(SERIALIZED_NAME_ORDER_ID)

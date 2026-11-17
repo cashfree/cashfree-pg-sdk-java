@@ -52,7 +52,7 @@ import com.cashfree.pg.JSON;
 /**
  * ReconEntityDataInnerOrderDetails
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-26T07:19:12.713912673Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-17T08:40:22.581020108Z[GMT]")
 public class ReconEntityDataInnerOrderDetails {
   public static final String SERIALIZED_NAME_ORDER_ID = "order_id";
   @SerializedName(SERIALIZED_NAME_ORDER_ID)
@@ -252,6 +252,10 @@ public class ReconEntityDataInnerOrderDetails {
       }
       if ((jsonObj.get("order_currency") != null && !jsonObj.get("order_currency").isJsonNull()) && !jsonObj.get("order_currency").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `order_currency` to be a primitive type in the JSON string but got `%s`", jsonObj.get("order_currency").toString()));
+      }
+      // free-form object field `order_tags`: match when the key is present as a JSON object
+      if (jsonObj.get("order_tags") != null && !jsonObj.get("order_tags").isJsonNull() && jsonObj.get("order_tags").isJsonObject()) {
+        return true;
       }
       return false;
   }
