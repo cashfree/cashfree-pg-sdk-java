@@ -130,6 +130,8 @@ docs/FetchSettlementsRequest.md
 docs/FetchSettlementsRequestFilters.md
 docs/FetchSettlementsRequestPagination.md
 docs/FetchTerminalQRCodesEntity.md
+docs/GetAllSettlementsResponse.md
+docs/GetAllSettlementsResponseDataInner.md
 docs/GetAllTerminalPaymentEntity.md
 docs/GetAllTerminalTransactionRequest.md
 docs/GetCardBinRequest.md
@@ -156,6 +158,8 @@ docs/ManageSubscriptionPaymentRequest.md
 docs/ManageSubscriptionPaymentRequestActionDetails.md
 docs/ManageSubscriptionRequest.md
 docs/ManageSubscriptionRequestActionDetails.md
+docs/MarkOrderSettlementResponse.md
+docs/MarkOrderSettlementResponseMetaData.md
 docs/NetBankingDowntime.md
 docs/NetBankingDowntimeNetBanking.md
 docs/NetBankingPaymentMethod.md
@@ -199,6 +203,11 @@ docs/OrderMetaPaymentMethodsFilters.md
 docs/OrderMetaPaymentMethodsFiltersMethods.md
 docs/OrderPayData.md
 docs/OrderPaymentMethodFilters.md
+docs/OrderSettlementEntity.md
+docs/OrderSettlementEntityCustomerDetails.md
+docs/OrderSettlementEntityOrderDetails.md
+docs/OrderSettlementEntityPaymentDetails.md
+docs/OrderSettlementEntitySettlementDetails.md
 docs/OrderUpdateRefundRequest.md
 docs/OrdersApi.md
 docs/PARRequest.md
@@ -231,6 +240,7 @@ docs/PaymentMethodCardInPaymentsEntityCard.md
 docs/PaymentMethodCardlessEMIInPaymentsEntity.md
 docs/PaymentMethodNetBankingInPaymentsEntity.md
 docs/PaymentMethodNetBankingInPaymentsEntityNetbanking.md
+docs/PaymentMethodOthersInPaymentsEntity.md
 docs/PaymentMethodPaylaterInPaymentsEntity.md
 docs/PaymentMethodUPIInPaymentsEntity.md
 docs/PaymentMethodUPIInPaymentsEntityUpi.md
@@ -275,7 +285,12 @@ docs/SettlementFetchReconRequest.md
 docs/SettlementFetchReconRequestFilters.md
 docs/SettlementReconEntity.md
 docs/SettlementReconEntityDataInner.md
+docs/SettlementReconEntityDataInnerCustomerDetails.md
+docs/SettlementReconEntityDataInnerDisputeDetailsInner.md
+docs/SettlementReconEntityDataInnerEventDetails.md
+docs/SettlementReconEntityDataInnerOrderDetails.md
 docs/SettlementReconEntityDataInnerPaymentDetails.md
+docs/SettlementReconEntityDataInnerSettlementDetails.md
 docs/SettlementReconciliationApi.md
 docs/SettlementSimulationResponse.md
 docs/SettlementWebhook.md
@@ -530,6 +545,8 @@ src/main/java/com/cashfree/pg/model/FetchSettlementsRequest.java
 src/main/java/com/cashfree/pg/model/FetchSettlementsRequestFilters.java
 src/main/java/com/cashfree/pg/model/FetchSettlementsRequestPagination.java
 src/main/java/com/cashfree/pg/model/FetchTerminalQRCodesEntity.java
+src/main/java/com/cashfree/pg/model/GetAllSettlementsResponse.java
+src/main/java/com/cashfree/pg/model/GetAllSettlementsResponseDataInner.java
 src/main/java/com/cashfree/pg/model/GetAllTerminalPaymentEntity.java
 src/main/java/com/cashfree/pg/model/GetAllTerminalTransactionRequest.java
 src/main/java/com/cashfree/pg/model/GetCardBinRequest.java
@@ -555,6 +572,8 @@ src/main/java/com/cashfree/pg/model/ManageSubscriptionPaymentRequest.java
 src/main/java/com/cashfree/pg/model/ManageSubscriptionPaymentRequestActionDetails.java
 src/main/java/com/cashfree/pg/model/ManageSubscriptionRequest.java
 src/main/java/com/cashfree/pg/model/ManageSubscriptionRequestActionDetails.java
+src/main/java/com/cashfree/pg/model/MarkOrderSettlementResponse.java
+src/main/java/com/cashfree/pg/model/MarkOrderSettlementResponseMetaData.java
 src/main/java/com/cashfree/pg/model/NetBankingDowntime.java
 src/main/java/com/cashfree/pg/model/NetBankingDowntimeNetBanking.java
 src/main/java/com/cashfree/pg/model/NetBankingPaymentMethod.java
@@ -597,6 +616,11 @@ src/main/java/com/cashfree/pg/model/OrderMetaPaymentMethodsFilters.java
 src/main/java/com/cashfree/pg/model/OrderMetaPaymentMethodsFiltersMethods.java
 src/main/java/com/cashfree/pg/model/OrderPayData.java
 src/main/java/com/cashfree/pg/model/OrderPaymentMethodFilters.java
+src/main/java/com/cashfree/pg/model/OrderSettlementEntity.java
+src/main/java/com/cashfree/pg/model/OrderSettlementEntityCustomerDetails.java
+src/main/java/com/cashfree/pg/model/OrderSettlementEntityOrderDetails.java
+src/main/java/com/cashfree/pg/model/OrderSettlementEntityPaymentDetails.java
+src/main/java/com/cashfree/pg/model/OrderSettlementEntitySettlementDetails.java
 src/main/java/com/cashfree/pg/model/OrderUpdateRefundRequest.java
 src/main/java/com/cashfree/pg/model/PARRequest.java
 src/main/java/com/cashfree/pg/model/PGCreatePAR200Response.java
@@ -627,6 +651,7 @@ src/main/java/com/cashfree/pg/model/PaymentMethodCardInPaymentsEntityCard.java
 src/main/java/com/cashfree/pg/model/PaymentMethodCardlessEMIInPaymentsEntity.java
 src/main/java/com/cashfree/pg/model/PaymentMethodNetBankingInPaymentsEntity.java
 src/main/java/com/cashfree/pg/model/PaymentMethodNetBankingInPaymentsEntityNetbanking.java
+src/main/java/com/cashfree/pg/model/PaymentMethodOthersInPaymentsEntity.java
 src/main/java/com/cashfree/pg/model/PaymentMethodPaylaterInPaymentsEntity.java
 src/main/java/com/cashfree/pg/model/PaymentMethodUPIInPaymentsEntity.java
 src/main/java/com/cashfree/pg/model/PaymentMethodUPIInPaymentsEntityUpi.java
@@ -667,7 +692,12 @@ src/main/java/com/cashfree/pg/model/SettlementFetchReconRequest.java
 src/main/java/com/cashfree/pg/model/SettlementFetchReconRequestFilters.java
 src/main/java/com/cashfree/pg/model/SettlementReconEntity.java
 src/main/java/com/cashfree/pg/model/SettlementReconEntityDataInner.java
+src/main/java/com/cashfree/pg/model/SettlementReconEntityDataInnerCustomerDetails.java
+src/main/java/com/cashfree/pg/model/SettlementReconEntityDataInnerDisputeDetailsInner.java
+src/main/java/com/cashfree/pg/model/SettlementReconEntityDataInnerEventDetails.java
+src/main/java/com/cashfree/pg/model/SettlementReconEntityDataInnerOrderDetails.java
 src/main/java/com/cashfree/pg/model/SettlementReconEntityDataInnerPaymentDetails.java
+src/main/java/com/cashfree/pg/model/SettlementReconEntityDataInnerSettlementDetails.java
 src/main/java/com/cashfree/pg/model/SettlementSimulationResponse.java
 src/main/java/com/cashfree/pg/model/SettlementWebhook.java
 src/main/java/com/cashfree/pg/model/SettlementWebhookDataEntity.java
@@ -888,6 +918,8 @@ src/test/java/com/cashfree/pg/model/FetchSettlementsRequestFiltersTest.java
 src/test/java/com/cashfree/pg/model/FetchSettlementsRequestPaginationTest.java
 src/test/java/com/cashfree/pg/model/FetchSettlementsRequestTest.java
 src/test/java/com/cashfree/pg/model/FetchTerminalQRCodesEntityTest.java
+src/test/java/com/cashfree/pg/model/GetAllSettlementsResponseDataInnerTest.java
+src/test/java/com/cashfree/pg/model/GetAllSettlementsResponseTest.java
 src/test/java/com/cashfree/pg/model/GetAllTerminalPaymentEntityTest.java
 src/test/java/com/cashfree/pg/model/GetAllTerminalTransactionRequestTest.java
 src/test/java/com/cashfree/pg/model/GetCardBinRequestTest.java
@@ -913,6 +945,8 @@ src/test/java/com/cashfree/pg/model/ManageSubscriptionPaymentRequestActionDetail
 src/test/java/com/cashfree/pg/model/ManageSubscriptionPaymentRequestTest.java
 src/test/java/com/cashfree/pg/model/ManageSubscriptionRequestActionDetailsTest.java
 src/test/java/com/cashfree/pg/model/ManageSubscriptionRequestTest.java
+src/test/java/com/cashfree/pg/model/MarkOrderSettlementResponseMetaDataTest.java
+src/test/java/com/cashfree/pg/model/MarkOrderSettlementResponseTest.java
 src/test/java/com/cashfree/pg/model/NetBankingDowntimeNetBankingTest.java
 src/test/java/com/cashfree/pg/model/NetBankingDowntimeTest.java
 src/test/java/com/cashfree/pg/model/NetBankingPaymentMethodTest.java
@@ -955,6 +989,11 @@ src/test/java/com/cashfree/pg/model/OrderMetaPaymentMethodsFiltersTest.java
 src/test/java/com/cashfree/pg/model/OrderMetaTest.java
 src/test/java/com/cashfree/pg/model/OrderPayDataTest.java
 src/test/java/com/cashfree/pg/model/OrderPaymentMethodFiltersTest.java
+src/test/java/com/cashfree/pg/model/OrderSettlementEntityCustomerDetailsTest.java
+src/test/java/com/cashfree/pg/model/OrderSettlementEntityOrderDetailsTest.java
+src/test/java/com/cashfree/pg/model/OrderSettlementEntityPaymentDetailsTest.java
+src/test/java/com/cashfree/pg/model/OrderSettlementEntitySettlementDetailsTest.java
+src/test/java/com/cashfree/pg/model/OrderSettlementEntityTest.java
 src/test/java/com/cashfree/pg/model/OrderUpdateRefundRequestTest.java
 src/test/java/com/cashfree/pg/model/PARRequestTest.java
 src/test/java/com/cashfree/pg/model/PGCreatePAR200ResponseTest.java
@@ -985,6 +1024,7 @@ src/test/java/com/cashfree/pg/model/PaymentMethodCardInPaymentsEntityTest.java
 src/test/java/com/cashfree/pg/model/PaymentMethodCardlessEMIInPaymentsEntityTest.java
 src/test/java/com/cashfree/pg/model/PaymentMethodNetBankingInPaymentsEntityNetbankingTest.java
 src/test/java/com/cashfree/pg/model/PaymentMethodNetBankingInPaymentsEntityTest.java
+src/test/java/com/cashfree/pg/model/PaymentMethodOthersInPaymentsEntityTest.java
 src/test/java/com/cashfree/pg/model/PaymentMethodPaylaterInPaymentsEntityTest.java
 src/test/java/com/cashfree/pg/model/PaymentMethodUPIInPaymentsEntityTest.java
 src/test/java/com/cashfree/pg/model/PaymentMethodUPIInPaymentsEntityUpiTest.java
@@ -1023,7 +1063,12 @@ src/test/java/com/cashfree/pg/model/ScheduleOptionTest.java
 src/test/java/com/cashfree/pg/model/SettlementEntityTest.java
 src/test/java/com/cashfree/pg/model/SettlementFetchReconRequestFiltersTest.java
 src/test/java/com/cashfree/pg/model/SettlementFetchReconRequestTest.java
+src/test/java/com/cashfree/pg/model/SettlementReconEntityDataInnerCustomerDetailsTest.java
+src/test/java/com/cashfree/pg/model/SettlementReconEntityDataInnerDisputeDetailsInnerTest.java
+src/test/java/com/cashfree/pg/model/SettlementReconEntityDataInnerEventDetailsTest.java
+src/test/java/com/cashfree/pg/model/SettlementReconEntityDataInnerOrderDetailsTest.java
 src/test/java/com/cashfree/pg/model/SettlementReconEntityDataInnerPaymentDetailsTest.java
+src/test/java/com/cashfree/pg/model/SettlementReconEntityDataInnerSettlementDetailsTest.java
 src/test/java/com/cashfree/pg/model/SettlementReconEntityDataInnerTest.java
 src/test/java/com/cashfree/pg/model/SettlementReconEntityTest.java
 src/test/java/com/cashfree/pg/model/SettlementSimulationResponseTest.java

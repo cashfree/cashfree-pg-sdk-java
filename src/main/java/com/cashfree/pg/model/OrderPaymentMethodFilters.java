@@ -54,7 +54,7 @@ import com.cashfree.pg.JSON;
  * Filters for this order. Card bins, card schemes, card issuing bank and card suffixes.
  */
 @Schema(description = "Filters for this order. Card bins, card schemes, card issuing bank and card suffixes.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-26T07:19:12.713912673Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-17T08:40:22.581020108Z[GMT]")
 public class OrderPaymentMethodFilters {
   public static final String SERIALIZED_NAME_CARD_EMI_TENURE = "card_emi_tenure";
   @SerializedName(SERIALIZED_NAME_CARD_EMI_TENURE)

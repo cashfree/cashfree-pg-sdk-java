@@ -52,7 +52,7 @@ import com.cashfree.pg.JSON;
 /**
  * ESOrderReconResponseDataInnerOrderSplitsInnerSplitInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-05-26T07:19:12.713912673Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-17T08:40:22.581020108Z[GMT]")
 public class ESOrderReconResponseDataInnerOrderSplitsInnerSplitInner {
   public static final String SERIALIZED_NAME_MERCHANT_VENDOR_ID = "merchant_vendor_id";
   @SerializedName(SERIALIZED_NAME_MERCHANT_VENDOR_ID)
@@ -217,6 +217,10 @@ public class ESOrderReconResponseDataInnerOrderSplitsInnerSplitInner {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("merchant_vendor_id") != null && !jsonObj.get("merchant_vendor_id").isJsonNull()) && !jsonObj.get("merchant_vendor_id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `merchant_vendor_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("merchant_vendor_id").toString()));
+      }
+      // free-form object field `tags`: match when the key is present as a JSON object
+      if (jsonObj.get("tags") != null && !jsonObj.get("tags").isJsonNull() && jsonObj.get("tags").isJsonObject()) {
+        return true;
       }
       return false;
   }
