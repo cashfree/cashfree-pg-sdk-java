@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - fix/4.5.2-thread-safe-split-client
 
 jobs:
   build:
